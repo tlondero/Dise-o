@@ -1,0 +1,52 @@
+Datos del nido:
+	Pared trasera de 4 a 10 cm (corteza + lo interior)[Sirve para dimensionar caso bobinas externas]
+	Nidos: arriba de los 4 mts de altura
+		Usuarios de huecos primarios: arman su nido(Porque tiene que ser en un nido existente)
+		Usuarios secundairos: agarran lo que hay si les sirve
+	Los machos (con crias) pasan la noche en los nidos (desde 21 a 7 aprox) o sea horas que no hay luz
+	Las hembras duermen en otro lado
+	Cuando incuban: 2 o 3 hs (los dos, se alternan)
+	Altitudes: de 1100 a 1500 metros sobre el nivel del mar
+	dijeron qu ela carga maxima del pajaro es 5% de 250gr, no se si el pajaro pesa 250gr
+		Hembra minimo: 227g
+		Macho minimo: 290g
+	Cuando colocan los huevos, hacen mantenimiento del nido. Los pichones que defecan y los padres pican madera para cubrir la cacona.
+	El piso lo tapan con de todo. En el techo (la bóveda) puede ser, que no es mayor a 6 cm de diametro
+		Adentro no se puede poner nada, hacen mantenimiento en el nido, las crias picotean todo, se tiene que poner las cosas afuera o en la bóveda (techo)
+	No entra agua cuando llueve, no se inundan
+	El sustrato con el que trabajamos es madera
+	Localizaciónd el panel: 
+							libre de follaje
+							puntal medio muerto
+	en chile se hicieron con esta misma especie se usaron arnes y GPS o UHF no está publicado
+	[Antecedentes]	
+	
+Requerimientos mínimos.
+	Determinar si es realizable un dispositivo de carga inalámbrica .
+	
+
+
+Requerimientos máximos.
+	Desarrollar un dispositivo de carga inalámbrica.
+	Sistema con capacidad de Traslado.
+
+Requerimientos TBD
+	"Suficientemente" camuflado-> (no sea de un color o material llamativo)
+	Momento exacto que entra y sale del nido, identidad (quien entro)
+	Adquisición de Temperatura dentro del Nido.(importante)
+	Adquisición de Luz dentro del nido (importante)
+	// imagen interna (no interesa) es más importante ver la entrada desde afuera
+	Robusto ante cambios de temperatura [-5 C° ~ 20 C°]
+	Lo que pongamos en el nido tiene que ser tranquilo o camuflado y resistente a los picotazos del pájaro
+	Toma de datos indirectos para medir esporas de un hongo(Esas variables TBD Biologas)
+	Carga de batería en 6-7 horas.
+	Sonido y  Video (camara de 1cm de diametro con vidrio de alto impacto,Mientras haya movimiento tomar video en horas de luz)capaz dos camaras para ver cuando comen
+	Capacidad de almacenar datos   [7,15] minimo máximo
+	Distancia para obtener datos-> base del arbol
+	-Wifi
+	-BT
+	-Volumenes de datos a transportar? Miguel y pablo Nos dicen las mediciones.  De ahi estimamos la cantidad de datos
+
+		
+	
+	
