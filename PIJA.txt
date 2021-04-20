@@ -47,6 +47,10 @@ Requerimientos TBD
 	-BT
 	-Volumenes de datos a transportar? Miguel y pablo Nos dicen las mediciones.  De ahi estimamos la cantidad de datos
 
-		
+
+-------------
+Resistencia a los elementos
+		polvo, agua
+Distancia máxima de alcance.
 	
 	
