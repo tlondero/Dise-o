@@ -2,8 +2,18 @@
 \usepackage[utf8]{inputenc}
 \usepackage[spanish, es-tabla, es-noshorthands]{babel}
 \usepackage[table,xcdraw]{xcolor}
-\usepackage[a4paper, footnotesep = 1cm, width=20cm, top=2.5cm, height=25cm, textwidth=18cm, textheight=25cm]{geometry}
+\usepackage[a4paper, footnotesep=1.25cm, headheight=1.25cm, top=2.54cm, left=2.54cm, bottom=2.54cm, right=2.54cm]{geometry}
 %\geometry{showframe}
+%https://ctan.dcc.uchile.cl/macros/latex/contrib/geometry/geometry.pdf
+%VERIFICAR EL HEAD Y EL FOOT
+
+%\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{wrapfig}
+
+\usepackage[export]{adjustbox}
+
+
+\usepackage{lipsum}
 
 \usepackage{tikz}
 \usepackage{amsmath}
@@ -21,10 +31,16 @@
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
-    linkcolor=blue,
+    linkcolor=black,
     filecolor=magenta,      
     urlcolor=blue,
     citecolor=blue,    
+}
+
+\newcommand{\note}[1]{
+	\begin{center}
+		\huge{ \textcolor{red}{#1} }
+	\end{center}
 }
 
 \newcommand{\quotes}[1]{``#1''}
@@ -37,8 +53,27 @@
 
 \graphicspath{}
 
+%COLORES
+\usepackage{xcolor}
+\definecolor{AzulFoot}{rgb}{0.682,0.809,0.926}	%RGB	%{174,206,235}
+\definecolor{AzulInfo}{rgb}{0.180,0.455,0.710}	%RGB	%{174,206,235}
+
+\definecolor{PName}{rgb}{0.353,0.353,0.353}	%RGB	%{90,90,90}
+
+
+\usepackage{xcolor}
+\usepackage{sectsty}
+\chapterfont{\color{AzulInfo}}  % sets colour of chapters
+\sectionfont{\color{AzulInfo}}  % sets colour of sections
+\subsectionfont{\color{AzulInfo}}
+\subsubsectionfont{\color{AzulInfo}}
+
+%Header y footer
+\usepackage{etoolbox}
+
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{22.05 ASSD}
-\rhead{Mechoulam, Lambertucci, Rodriguez, Londero}
-\rfoot{Página \thepage}
+\rfoot{\thepage}
+\renewcommand{\footrulewidth}{4pt}
+\renewcommand{\headrulewidth}{0pt}
+\patchcmd{\footrule}{\hrule}{\color{AzulFoot}\hrule}{}{}
