@@ -9,12 +9,13 @@
 
 %\renewcommand{\familydefault}{\sfdefault}		%change font
 %\usepackage{wrapfig}		%Wrap figure in text
+\usepackage{lipsum}			%LOREM IPSUM
 
 \usepackage[export]{adjustbox}	%Move images
 \usepackage{changepage}			%Move tables
 
-
-\usepackage{lipsum}
+\usepackage{fontspec}	%Compilar en XeLaTex o LuaLatexTuve y si sigue sin andar
+\setmainfont{Calibri}	%comentar \usepackage[utf8]{inputenc} 
 
 \usepackage{tikz}
 \usepackage{amsmath}
@@ -55,7 +56,6 @@
 \graphicspath{}
 
 %COLORES
-\usepackage{xcolor}
 \definecolor{AzulFoot}{rgb}{0.682,0.809,0.926}	%RGB	%{174,206,235}
 \definecolor{AzulInfo}{rgb}{0.180,0.455,0.710}	%RGB	%{174,206,235}
 
