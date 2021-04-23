@@ -14,6 +14,12 @@
 \usepackage[export]{adjustbox}	%Move images
 \usepackage{changepage}			%Move tables
 
+%Font
+\usepackage{anyfontsize}	%Font size
+% #1 = size, #2 = text
+\newcommand{\setparagraphsize}[2]{{\fontsize{#1}{6}\selectfont#2 \par}}
+\newcommand{\setlinesize}[2]{{\fontsize{#1}{6}\selectfont#2}}
+
 \usepackage{fontspec}	%Compilar en XeLaTex o LuaLatexTuve y si sigue sin andar
 %comentar \usepackage[utf8]{inputenc} 
 %https://ctan.dcc.uchile.cl/macros/unicodetex/latex/fontspec/fontspec.pdf
