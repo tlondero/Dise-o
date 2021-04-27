@@ -21,30 +21,74 @@ Datos del nido:
 	en chile se hicieron con esta misma especie se usaron arnes y GPS o UHF no está publicado
 	[Antecedentes]	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 Requerimientos mínimos.
-	Determinar si es realizable un dispositivo de carga inalámbrica .
+	Autonomía del sistema de tres meses.
+	Determinar si es realizable un dispositivo de carga inalámbrica en las condiciones impuestas por el nido.
+	El sistema no debe llamar la atención de humanos desde el nivel del piso.
+	Adquisición de Temperatura dentro del Nido.
+	Adquisición de Luz dentro del nido.
+	Sistema robusto ante cambios de temperatura [-5 C° ~ 20 C°]
+	Capacidad de transferencia de datos inalámbrica almacenados desde base del arbol.
+	Capacidad de almacenar datos por siete dias.
+	Costo máximo 300 U$D
 	
 
 
 Requerimientos máximos.
-	Desarrollar un dispositivo de carga inalámbrica.
-	Sistema con capacidad de Traslado.
+	Autonomía del sistema de tres meses.
+	Desarrollar un dispositivo de carga inalámbrica en las condiciones impuestas por el nido.
+	Carga inalámbrica completa en 6-7 horas.
+	El sistema no debe llamar la atención de humanos desde el nivel del piso.
+	Adquisición de horario de entrada y salida del nido.
+	Adquisición de identidad de quien entra o sale del nido.
+	Adquisición de temperatura dentro del Nido.
+	Adquisición de luz dentro del nido.
+	Adquisición de sonido.
+	Adquisición de video.
+	Sistema robusto ante cambios de temperatura [-5 C° ~ 20 C°]
+	Sistema con capacidad de traslado.
+	Capacidad de transferencia de datos inalámbrica almacenados desde base del arbol.
+	Capacidad de almacenar datos por quince dias.
+	Costo máximo 300 U$D
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Requerimientos TBD
-	"Suficientemente" camuflado-> (no sea de un color o material llamativo)
-	Momento exacto que entra y sale del nido, identidad (quien entro)
-	Adquisición de Temperatura dentro del Nido.(importante)
-	Adquisición de Luz dentro del nido (importante)
+
 	// imagen interna (no interesa) es más importante ver la entrada desde afuera
-	Robusto ante cambios de temperatura [-5 C° ~ 20 C°]
-	Lo que pongamos en el nido tiene que ser tranquilo o camuflado y resistente a los picotazos del pájaro
-	Toma de datos indirectos para medir esporas de un hongo(Esas variables TBD Biologas)
+	// Toma de datos indirectos para medir esporas de un hongo(Esas variables TBD Biologas)
 	Carga de batería en 6-7 horas.
 	Sonido y  Video (camara de 1cm de diametro con vidrio de alto impacto,Mientras haya movimiento tomar video en horas de luz)capaz dos camaras para ver cuando comen
 	Capacidad de almacenar datos   [7,15] minimo máximo
 	Distancia para obtener datos-> base del arbol
-	-Wifi
-	-BT
+
 	-Volumenes de datos a transportar? Miguel y pablo Nos dicen las mediciones.  De ahi estimamos la cantidad de datos
 
 
