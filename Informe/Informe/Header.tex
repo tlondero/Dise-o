@@ -4,25 +4,25 @@
 \usepackage[table,xcdraw]{xcolor}
 \usepackage[a4paper, footnotesep=1.25cm, headheight=1.25cm, top=2.54cm, left=2.54cm, bottom=2.54cm, right=2.54cm]{geometry}
 %\geometry{showframe}
+%VERIFICAR EL HEAD Y EL FOOT EN
 %https://ctan.dcc.uchile.cl/macros/latex/contrib/geometry/geometry.pdf
-%VERIFICAR EL HEAD Y EL FOOT
 
-%\renewcommand{\familydefault}{\sfdefault}		%change font
+%\usepackage{lipsum}			%LOREM IPSUM
+
 %\usepackage{wrapfig}		%Wrap figure in text
-\usepackage{lipsum}			%LOREM IPSUM
-
 \usepackage[export]{adjustbox}	%Move images
 \usepackage{changepage}			%Move tables
 
 %Font
 \usepackage{anyfontsize}	%Font size
 % #1 = size, #2 = text
-\newcommand{\setparagraphsize}[2]{{\fontsize{#1}{6}\selectfont#2 \par}}
-\newcommand{\setlinesize}[2]{{\fontsize{#1}{6}\selectfont#2}}
-\newcommand{\lnote}[1]{{\fontsize{20}{6}\selectfont\textcolor{green}{#1}}}
+\newcommand{\setparagraphsize}[2]{{\fontsize{#1}{6}\selectfont#2 \par}}		%Cambia el size de todo el parrafo
+\newcommand{\setlinesize}[2]{{\fontsize{#1}{6}\selectfont#2}}				%Cambia el font de una oración
 
-\usepackage{fontspec}	%Compilar en XeLaTex o LuaLatexTuve y si sigue sin andar
-%comentar \usepackage[utf8]{inputenc} 
+
+%FONTS (IMPORTANTE): Compilar en XeLaTex o LuaLaTeX
+\usepackage{fontspec}
+%Si sigue sin andar comentar \usepackage[utf8]{inputenc}
 %https://ctan.dcc.uchile.cl/macros/unicodetex/latex/fontspec/fontspec.pdf
 %https://www.overleaf.com/learn/latex/XeLaTeX
 
@@ -48,11 +48,25 @@
     citecolor=blue,    
 }
 
+\newcommand{\captionsection}{\setcounter{figure}{0} \renewcommand{\thetable}{\arabic{section}.\arabic{table}} \renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}}
+
+\newcommand{\captionsubsection}{\setcounter{figure}{0} \renewcommand{\thetable}{\arabic{section}.\arabic{subsection}.\arabic{table}} \renewcommand{\thefigure}{\arabic{section}.\arabic{subsection}.\arabic{figure}}}
+
+\newcommand{\captionsubsubsection}{\setcounter{figure}{0} \renewcommand{\thetable}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.\arabic{table}} \renewcommand{\thefigure}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.\arabic{figure}}}
+
+%PICTURES AND TABLE INDEX:
+\newcommand{\Section}[1]{ \section{#1}\captionsection }
+\newcommand{\Subsection}[1]{ \subsection{#1}\captionsubsection }
+\newcommand{\Subsubsection}[1]{ \subsubsection{#1}\captionsubsubsection }
+
+%NOTAS GRANDES
 \newcommand{\note}[1]{
 	\begin{center}
 		\huge{ \textcolor{red}{#1} }
 	\end{center}
 }
+%Notas pequeñas
+\newcommand{\lnote}[1]{{\fontsize{20}{6}\selectfont\textcolor{green}{#1}}}
 
 \newcommand{\quotes}[1]{``#1''}
 \usepackage{array}
@@ -68,7 +82,6 @@
 \definecolor{AzulFoot}{rgb}{0.682,0.809,0.926}	%RGB	%{174,206,235}
 \definecolor{AzulInfo}{rgb}{0.180,0.455,0.710}	%RGB	%{46,116,181}
 \definecolor{AzulTable}{rgb}{0.302,0.507,0.871}	%RGB	%{68,114,196}
-
 \definecolor{PName}{rgb}{0.353,0.353,0.353}	%RGB	%{90,90,90}
 
 \usepackage{xcolor}
