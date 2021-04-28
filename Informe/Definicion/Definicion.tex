@@ -1,67 +1,13 @@
 \input{../Informe/Header.tex}
 
 \begin{document}
-Se tiene un único cliente principal el cual expresa requisitos de mínima y máxima. Los requisitos de mínima engloban una autonomía del producto de por lo menos 3 meses, el sistema no debe llamar la atención de humanos desde el nivel del piso, adquisición de temperatura y luz dentro del nido, robusto ante cambios de temperatura (-5 C$^{\circ}$ $\sim$ 20 C$^{\circ}$), capacidad de almacenamiento de datos por 7 dias, costo máximo por unidad de 300 USD, capacidad de transferencia de datos inalámbrica desde la base del arbol (4 $\sim$ 14 m) y determinar si es realizable un dispositivo de carga inalámbrica en las condiciones impuestas por el nido. Mientras que los requisitos de máxima son 
-desarrollar un equipo de carga inalámbrica multi-axial en las condiciones impuestas por el nido, carga inalambrica en 6-7 horas, autonomía del producto de por lo menos 3 meses, el sistema no debe llamar la atención de humanos desde el nivel del piso, adquisición de temperatura y luz dentro del nido, robusto ante cambios de temperatura (-5 C$^{\circ}$ $\sim$ 20 C$^{\circ}$), capacidad de almacenamiento de datos por 15 dias, costo máximo por unidad de 300 USD, capacidad de transferencia de datos inalámbrica desde la base del   (4 $\sim$ 14 m), sistema con capacidad de traslado, adquisición de video y sonido, adquisición de horario de entrada y salida de pajaro del nido y su identificación.
- 
 
-\subsection{Requerimientos de Cliente}
-\subsubsection{Casa de calidad}
-
-\subsection{Requerimientos finales para trazabilidad}
-\begin{table}[]
-\centering
-\begin{tabular}{|l|c|c|}
-\hline
-\multicolumn{1}{|c|}{\textbf{ID}} & \textbf{Descripción}                                                                                                                                & \textbf{Origen} \\ \hline
-REQ-MIN-01                        & Autonomía del sistema de por lo menos 3 meses                                                                                                       & Cliente         \\ \hline
-REQ-MIN-02                        & \begin{tabular}[c]{@{}c@{}}El sistema no debe llamar la atención de humanos \\ desde el nivel del piso.\end{tabular}                                & Cliente         \\ \hline
-REQ-MIN-03                        & Adquisición de Temperatura dentro del Nido.                                                                                                         & Cliente         \\ \hline
-REQ-MIN-04                        & Adquisición de Luz dentro del nido.                                                                                                                 & Cliente         \\ \hline
-REQ-MIN-05                        & Sistema robusto ante cambios de temperatura {[}-5 C° $\sim$20 C°{]}                                                                                 & Cliente         \\ \hline
-REQ-MIN-06                        & \begin{tabular}[c]{@{}c@{}}Capacidad de transferencia de datos\\  inalámbrica almacenados desde base del arbol.\end{tabular}                        & Cliente         \\ \hline
-REQ-MIN-07                        & Costo máximo 300 USD                                                                                                                               & Cliente         \\ \hline
-REQ-MIN-08                        & Capacidad de almacenar datos por siete dias.                                                                                                        & Cliente         \\ \hline
-\multicolumn{1}{|c|}{REQ-MIN-09}  & \begin{tabular}[c]{@{}c@{}}Determinar si es realizable un dispositivo de carga\\ inalámbrica en las condiciones impuestas por el nido.\end{tabular} & Cliente         \\ \hline
-\multicolumn{1}{|c|}{REQ-MIN-10}  & Elementos expuestos a los elementos resistente al agua                                                                                              & Tácito          \\ \hline
-\end{tabular}
-\label{tab:req_min}
-\caption{Requerimientos de mínima}
-
-\end{table}
-
-
-\begin{table}[]
-\centering
-\begin{tabular}{|l|c|c|}
-\hline
-\multicolumn{1}{|c|}{\textbf{ID}} & \textbf{Descripción}                                                                                                                 & \textbf{Origen} \\ \hline
-REQ-MAX-01                        & Autonomía del sistema de por lo menos 3 meses                                                                                        & Cliente         \\ \hline
-REQ-MAX-02                        & \begin{tabular}[c]{@{}c@{}}El sistema no debe llamar la atención de humanos \\ desde el nivel del piso.\end{tabular}                 & Cliente         \\ \hline
-REQ-MAX-03                        & Adquisición de Temperatura dentro del Nido.                                                                                          & Cliente         \\ \hline
-REQ-MAX-04                        & Adquisición de Luz dentro del nido.                                                                                                  & Cliente         \\ \hline
-REQ-MAX-05                        & Sistema robusto ante cambios de temperatura {[}-5 C° $\sim$20 C°{]}                                                                  & Cliente         \\ \hline
-REQ-MAX-06                        & \begin{tabular}[c]{@{}c@{}}Capacidad de transferencia de datos\\  inalámbrica almacenados desde base del arbol.\end{tabular}         & Cliente         \\ \hline
-REQ-MAX-07                        & Costo máximo 300 USD                                                                                                                & Cliente         \\ \hline
-REQ-MAX-08                        & Capacidad de almacenar datos por quince dias.                                                                                        & Cliente         \\ \hline
-REQ-MAX-09                        & \begin{tabular}[c]{@{}c@{}}Desarrollar un dispositivo de carga inalámbrica\\  en las condiciones impuestas por el nido.\end{tabular} & Cliente         \\ \hline
-REQ-MAX-10                        & Carga inalámbrica completa en 6-7 horas.                                                                                             & Cliente         \\ \hline
-REQ-MAX-11                        & Adquisición de horario de entrada y salida del nido.                                                                                 & Cliente         \\ \hline
-REQ-MAX-12                        & Adquisición de identidad de quien entra o sale del nido.                                                                             & Cliente         \\ \hline
-REQ-MAX-13                        & Adquisición de video.                                                                                                                & Cliente         \\ \hline
-REQ-MAX-14                        & Adquisición de sonido.                                                                                                               & Cliente         \\ \hline
-REQ-MAX-15                        & Sistema con capacidad de traslado.                                                                                                   & Cliente         \\ \hline
-REQ-MAX-16                        & Elementos expuestos a los elementos resistente al agua                                                                               & Tácito          \\ \hline
-\end{tabular}
-\label{tab:req_max}
-\caption{Requerimientos de máxima}
-\end{table}
-
-
-
+\subsection{RequerimientosCliente}
+\label{sec:RequerimientosCliente}
+\input{RequerimientosCliente/RequerimientosCliente.tex}
 
 \subsection{Diagrama Funcional de Interfaces}
-
+\label{sec:DiagramaInterfaces}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{ImagenesDefinicion/func}
@@ -69,35 +15,8 @@ REQ-MAX-16                        & Elementos expuestos a los elementos resisten
 	\caption{Diagrama Funcional de Interfaces.}
 \end{figure}
 
-\subsection{Especificaciones de Diseño}
-\subsubsection{Especificaciones Funcionales}
-% Please add the following required packages to your document preamble:
-% \usepackage{multirow}
-\begin{table}[H]
-\centering
-\begin{tabular}{|c|c|}
-\hline
-\multicolumn{2}{|c|}{\textbf{Leyenda para especificaciones}}    \\ \hline
-\textbf{Aplicabilidad}             & \textbf{Validación}        \\ \hline
-\multirow{2}{*}{P: Prototipo}      & I: Inspección Visual       \\ \cline{2-2} 
-                                   & D: Documentación de Diseño \\ \hline
-\multirow{2}{*}{F: Producto Final} & S: Simulación              \\ \cline{2-2} 
-                                   & T: Test                    \\ \hline
-\end{tabular}
-\end{table}
-\note{Tabla Especificaciones Funcionales}
-
-\note{Tabla 3.5: Especificaciones de Interfaz VOU}
-\note{Tabla 3.6: Especificaciones de Interfaz MEC}
-\note{Tabla 3.7: Especificaciones de Performance}
-\note{Tabla 3.8: Especificaciones de Operación}
-\note{Tabla 3.9: Especificaciones de Almacenamiento y Transporte}
-\note{Tabla 3.11: Especificaciones Dimensionales y de Peso}
-\note{Tabla 3.12: Especificaciones de costos}
-\note{Tabla 3.13: Especificaciones de Confiabilidad}
-\note{Tabla 3.14: Especificaciones de Disponibilidad}
-\note{Tabla 3.15: Especificaciones de Mantenibilidad}
-\note{Tabla 3.16: Especificaciones de Seguridad}
-
+\subsection{EspecificacionesDiseño}
+\label{sec:EspecificacionesDiseño}
+\input{EspecificacionesDiseño/EspecificacionesDiseño.tex}
 
 \end{document}
