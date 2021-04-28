@@ -13,15 +13,9 @@
 \usepackage[export]{adjustbox}	%Move images
 \usepackage{changepage}			%Move tables
 
-%Font
-\usepackage{anyfontsize}	%Font size
-% #1 = size, #2 = text
-\newcommand{\setparagraphsize}[2]{{\fontsize{#1}{6}\selectfont#2 \par}}		%Cambia el size de todo el parrafo
-\newcommand{\setlinesize}[2]{{\fontsize{#1}{6}\selectfont#2}}				%Cambia el font de una oración
-
-
 %FONTS (IMPORTANTE): Compilar en XeLaTex o LuaLaTeX
-\usepackage{fontspec}
+\usepackage{anyfontsize}	%Font size
+\usepackage{fontspec}		%Font type
 %Si sigue sin andar comentar \usepackage[utf8]{inputenc}
 %https://ctan.dcc.uchile.cl/macros/unicodetex/latex/fontspec/fontspec.pdf
 %https://www.overleaf.com/learn/latex/XeLaTeX
@@ -48,27 +42,6 @@
     citecolor=blue,    
 }
 
-\newcommand{\captionsection}{\setcounter{figure}{0} \renewcommand{\thetable}{\arabic{section}.\arabic{table}} \renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}}
-
-\newcommand{\captionsubsection}{\setcounter{figure}{0} \renewcommand{\thetable}{\arabic{section}.\arabic{subsection}.\arabic{table}} \renewcommand{\thefigure}{\arabic{section}.\arabic{subsection}.\arabic{figure}}}
-
-\newcommand{\captionsubsubsection}{\setcounter{figure}{0} \renewcommand{\thetable}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.\arabic{table}} \renewcommand{\thefigure}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.\arabic{figure}}}
-
-%PICTURES AND TABLE INDEX:
-\newcommand{\Section}[1]{ \section{#1}\captionsection }
-\newcommand{\Subsection}[1]{ \subsection{#1}\captionsubsection }
-\newcommand{\Subsubsection}[1]{ \subsubsection{#1}\captionsubsubsection }
-
-%NOTAS GRANDES
-\newcommand{\note}[1]{
-	\begin{center}
-		\huge{ \textcolor{red}{#1} }
-	\end{center}
-}
-%Notas pequeñas
-\newcommand{\lnote}[1]{{\fontsize{20}{6}\selectfont\textcolor{green}{#1}}}
-
-\newcommand{\quotes}[1]{``#1''}
 \usepackage{array}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \usepackage[american]{circuitikz}
@@ -76,24 +49,21 @@
 \usepackage{fancyhdr}
 \usepackage{units} 
 
-\graphicspath{{../Prefacio/}{../Acronimos/}{../Introduccion/}{../Objetivos/}{../Definicion/}{../Plan de validacion/}{../Resumen/}}
-
-%COLORES
-\definecolor{AzulFoot}{rgb}{0.682,0.809,0.926}	%RGB	%{174,206,235}
-\definecolor{AzulInfo}{rgb}{0.180,0.455,0.710}	%RGB	%{46,116,181}
-\definecolor{AzulTable}{rgb}{0.302,0.507,0.871}	%RGB	%{68,114,196}
-\definecolor{PName}{rgb}{0.353,0.353,0.353}	%RGB	%{90,90,90}
-
 \usepackage{xcolor}
 \usepackage{sectsty}
+
+\graphicspath{{../Prefacio/}{../Acronimos/}{../Introduccion/}{../Objetivos/}{../Definicion/}{../Plan de validacion/}{../Resumen/}}
+
+\input{New-Definitions.tex}
+
+%Colroes de secciones:
 \chapterfont{\color{AzulInfo}}  % sets colour of chapters
 \sectionfont{\color{AzulInfo}}  % sets colour of sections
 \subsectionfont{\color{AzulInfo}}
 \subsubsectionfont{\color{AzulInfo}}
 
-%Header y footer
+%Header y footer:
 \usepackage{etoolbox}
-
 \pagestyle{fancy}
 \fancyhf{}
 \rfoot{\thepage}
