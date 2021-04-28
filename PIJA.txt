@@ -46,7 +46,7 @@ Requerimientos mínimos.
 	Sistema robusto ante cambios de temperatura [-5 C° ~ 20 C°]
 	Capacidad de transferencia de datos inalámbrica almacenados desde base del arbol.
 	Capacidad de almacenar datos por siete dias.
-	Costo máximo 300 U$D
+	Costo máximo 300 USD
 	
 
 
@@ -65,7 +65,7 @@ Requerimientos máximos.
 	Sistema con capacidad de traslado.
 	Capacidad de transferencia de datos inalámbrica almacenados desde base del arbol.
 	Capacidad de almacenar datos por quince dias.
-	Costo máximo 300 U$D
+	Costo máximo 300 USD
 
 
 
