@@ -12,7 +12,54 @@
 \end{tabular}
 \caption{Leyendas para las especificaciones.}
 \end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+ID         & Descripción                                                                                                                         & Origen & \begin{tabular}[c]{@{}l@{}}Aplicabilidad\\ Validación\end{tabular} \\ \hline
+INT-FUN-01 & \begin{tabular}[c]{@{}l@{}}El producto debe poder adquirir valores de temperatura cada\\ 20 minutos\end{tabular}                    & REQ-03 & P F - I D T                                                        \\ \hline
+INT-FUN-02 & \begin{tabular}[c]{@{}l@{}}El producto debe poder adquirir valores de luminocidad cada\\ 20 minutos\end{tabular}                    & REQ-04 & P F - I D T                                                        \\ \hline
+INT-FUN-03 & El producto debe poder comunicarse con WIFI                                                                                         & REQ-06 & P F - I D T                                                        \\ \hline
+INT-FUN-04 & El producto debe poder comunicarse con BLUETOOTH                                                                                    & REQ-12 & P F - I D T                                                        \\ \hline
+INT-FUN-05 & \begin{tabular}[c]{@{}l@{}}El producto debe poder almacenar por lo menos TBD GBy de\\ datos estando energizado o no\end{tabular}    & REQ-13 & P F - I D T                                                        \\ \hline
+INT-FUN-06 & \begin{tabular}[c]{@{}l@{}}El producto debe poder usar un panel solar para abastecer de\\ energía la bateria principal\end{tabular} & REQ-01 & P F - I D T                                                        \\ \hline
+\end{tabular}
+\caption{Especificaciones funcionales.}
+\end{table}
+
 \Subsubsection{Especificaciones de Interfaz}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+ID        & Descripción                                                                                                                     & Origen & \begin{tabular}[c]{@{}l@{}}Aplicabilidad\\ Validación\end{tabular} \\ \hline
+INT-MEC-1 & \begin{tabular}[c]{@{}l@{}}El equipo deberá poder sujetarse con TBD tornillos\\ tipo TBD distanciados entre sí TBD\end{tabular} & REQ-10 & F - I                                                              \\ \hline
+INT-MEC-2 & El equipo deberá tolerar vibraciones mecánicas del siguiente modo:                                                              & REQ-10 & F - I                                                              \\ \hline
+\end{tabular}
+\caption{Especificaciones de interfaz MEC.}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|c|c|}
+\hline
+\multicolumn{1}{|c|}{\textbf{ID}} & \multicolumn{1}{c|}{\textbf{Descripción}}             & \textbf{Origen} & \textbf{\begin{tabular}[c]{@{}c@{}}Aplicabilidad\\ Validación\end{tabular}} \\ \hline
+INT-COM1-1                        & Se utilizará Bluetooth para comunicarse con el pájaro & REQ-12          & P F - I D T                                                                 \\ \hline
+\end{tabular}
+\caption{Especificaciones de interfaz COM1.}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+ID         & Descripción                                                                                                                             & Origen & \begin{tabular}[c]{@{}l@{}}Aplicabilidad\\ Validación\end{tabular} \\ \hline
+INT-COM2-1 & \begin{tabular}[c]{@{}l@{}}Se utilizará WIFI para la comunicacion de la base con\\ un tercero para la recolección de datos\end{tabular} & REQ-06 & P F - I D T                                                        \\ \hline
+\end{tabular}
+\caption{Especificaciones de interfaz COM2.}
+\end{table}
 
 \Subsubsection{Especificaciones de Performance}
 
