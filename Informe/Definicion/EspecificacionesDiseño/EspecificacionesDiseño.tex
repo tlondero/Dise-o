@@ -72,6 +72,107 @@ IMP-EMC-01 & \begin{tabular}[c]{@{}l@{}}El dispositivo deberá poder operar norm
 \caption{Especificaciones de performance.}
 \end{table}
 
+\begin{table}[H]
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{ID}         & \textbf{Descripción}                                                                                                                                                                                  & \textbf{Origen} & \begin{tabular}[c]{@{}l@{}}Aplicabilidad\\ Validación\end{tabular} \\ \hline
+IMP-DIM-01 & \begin{tabular}[c]{@{}l@{}}El equipo dentro del nido no deberá exceder las siguientes dimensiones:\\ Largo \textless 26 cm \\ Ancho \textless 8,79 cm \\ Alto \textless 4,55 cm\end{tabular} & REQ-10 & P F - I D                                                          \\ \hline
+IMP-DIM-02 & \begin{tabular}[c]{@{}l@{}}El equipo fuera del nido no deberá exceder las siguientes dimensiones:\\ Largo \textless TBD \\ Ancho \textless TBD \\ Alto \textless TBD\end{tabular}            & REQ-10 & P F - I D                                                          \\ \hline
+IMP-DIM-03 & \begin{tabular}[c]{@{}l@{}}Los paneles solares no deberán exceder las siguientes dimensiones:\\ Largo \textless TBD \\ Ancho \textless TBD \\ Alto \textless TBD\end{tabular}                & REQ-10 & P F - I D                                                          \\ \hline
+IMP-DIM-04 & El equipo dentro del nido no deberá exceder los TBD gramos                                                                                                                                   & REQ-10 & P F - I D                                                          \\ \hline
+IMP-DIM-05 & El equipo fuera del nido no deberá exceder los TBD gramos                                                                                                                                    & REQ-10 & P F - I D                                                          \\ \hline
+IMP-DIM-06 & Los paneles solares no deberan exceder los TBD gramos                                                                                                                                        & REQ-10 & P F - I D                                                          \\ \hline
+\end{tabular}
+\caption{Especificaciones de dimensionales y de peso.}
+\end{table}
+
 \Subsubsection{Especificaciones de Implementación}
 
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+ID         & Descripción                                                                                                                                                                                                                                                                                                                                                                                             & Origen & \begin{tabular}[c]{@{}l@{}}Aplicabilidad\\ Validación\end{tabular} \\ \hline
+IMP-OPE-01 & \begin{tabular}[c]{@{}l@{}}El dispositivo deberá poder operar normalmente cuando la\\ temperatura ambiente sea -5°C \textless TAMB \textless 30°C. Si bien la\\ temperatura más baja observada en el territorio argentino es\\ de -25°C, se acepta que son circunstancias excepcionales.\\ Si bien la temperatura máxima histórica de la zona\\ observada fue de 34.6°C la media es menor.\end{tabular} & REQ-05 & P F - I D                                                          \\ \hline
+IMP-OPE-02 & \begin{tabular}[c]{@{}l@{}}El dispositivo deberá poder operar normalmente cuando la\\ humedad sea: 0\% \textless RH \textless 100\%, valores normales de humedad\\ relativa ambiente. Si bien puede ser superior al 100\%, esto no\\ es común y sólo puede suceder en aire extremadamente limpio,\\ donde la condensación no se adhiere a partículas de polvo.\end{tabular}                             & REQ-05 & P FP F - I D                                                       \\ \hline
+IMP-OPE-03 & \begin{tabular}[c]{@{}l@{}}El dispositivo deberá poder operar normalmente cuando\\ la presión atmosférica sea: 84 kPa \textless PATM \textless 90 kPa.\\ Esto equivale a 1500m de altura para el mínimo de\\ presión, y un máximo de 1100 m.\end{tabular}                                                                                                                                               & REQ-05 & P FP F - I D                                                       \\ \hline
+IMP-OPE-04 & El dispositivo deberá tener un grado de protección IPXX (TBD)                                                                                                                                                                                                                                                                                                                                           & REQ-05 & P(TBD) F - I D                                                     \\ \hline
+\end{tabular}
+\caption{Especificaciones de operación.}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{llll}
+ID         & Descripción                                                                                                                                                                   & Origen                                                      & \begin{tabular}[c]{@{}l@{}}Aplicabilidad\\ Validación\end{tabular} \\
+IMP-AYT-01 & \begin{tabular}[c]{@{}l@{}}El dispositivo no deberá sufrir daños cuando, estando desenergizado,\\ la temperatura ambiente sea -5°C \textless TAMB \textless 30°C\end{tabular} & \begin{tabular}[c]{@{}l@{}}REQ-05\\ REQ-MAX-19\end{tabular} & P F - I D                                                          \\
+IMP-AYT-02 & \begin{tabular}[c]{@{}l@{}}El dispositivo no deberá sufrir daños cuando, estando desenergizado,\\ la humedad sea 0\% \textless RH \textless 100\%\end{tabular}                & \begin{tabular}[c]{@{}l@{}}REQ-05\\ REQ-MAX-19\end{tabular} & P(TBD) F - I D                                                     \\
+IMP-AYT-03 & \begin{tabular}[c]{@{}l@{}}El dispositivo no deberá sufrir daños cuando, estando desenergizado,\\ la presión atmosférica sea 84 kPa \textless PATM  101kPa\end{tabular}       & \begin{tabular}[c]{@{}l@{}}REQ-05\\ REQ-MAX-19\end{tabular} & P(TBD) F - I D                                                    
+\end{tabular}
+\caption{Especificaciones de almacenamiento y transporte.}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|c|c|}
+\hline
+\multicolumn{1}{|c|}{\textbf{ID}} & \multicolumn{1}{c|}{\textbf{Descripción}}                                                                                    & \textbf{Origen} & \textbf{\begin{tabular}[c]{@{}c@{}}Aplicabilidad\\ Validación\end{tabular}} \\ \hline
+IMP-COS-01                        & \begin{tabular}[c]{@{}l@{}}El costo de las partes que conforman el producto no deberá\\ ser superior a 300 USD\end{tabular}  & REQ-07          & F - D                                                                       \\ \hline
+IMP-COS-02                        & \begin{tabular}[c]{@{}l@{}}El costo de las partes que conforman el prototipo no deberá\\ ser superior a TBD USD\end{tabular} & REQ-07          & P - D                                                                       \\ \hline
+\end{tabular}
+\caption{Especificaciones de costos.}
+\end{table}
+
+\begin{table}[H]
+\begin{tabular}{llll}
+\textbf{ID}         & \textbf{Descripción}                                                                                                      & \textbf{Origen} & \begin{tabular}[c]{@{}l@{}}Aplicabilidad\\ Validación\end{tabular} \\
+IMP-EMC-01 & El dispositivo deberá poder operar normalmente con inmunidad al ruido electromagnético de acuerdo a la norma TBD & REQ-09 & F - D T                                                           
+\end{tabular}
+\caption{Especificaciones de compatibilidad electromagnética.}
+\end{table}
+
 \Subsubsection{Especificaciones de Servicio (RAMS)}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+ID         & Descripción                                                                                                                                    & Origen       & \begin{tabular}[c]{@{}l@{}}Aplicabilidad\\ Validación\end{tabular} \\ \hline
+RAM-SEG-01 & La máxima temperatura que podrá tener la carcasa será de TBD C$^o$                                                                             & REQ-05 (TBD) & P F - I D T(TBD)                                                   \\ \hline
+RAM-SEG-02 & \begin{tabular}[c]{@{}l@{}}Si en algún lugar (accesible o no) hay tensiones peligrosas, deberá\\ haber un cartel que lo advierta.\end{tabular} & REQ-08 (TBD) & P(TBD) F - I                                                       \\ \hline
+\end{tabular}
+\caption{Especificaciones de seguridad.}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{ID}         & \textbf{Descripción}                                                                                                                                                            & \textbf{Origen} & \begin{tabular}[c]{@{}l@{}}Aplicabilidad\\ Validación\end{tabular} \\ \hline
+RAM-MAN-01 & \begin{tabular}[c]{@{}l@{}}En caso de utilizar SW o FW, deberá ser posible para técnicos\\ calificados realizar actualizaciones del mismo\end{tabular}                 & (TBC)  & (TBC)                                                              \\ \hline
+RAM-MAN-02 & \begin{tabular}[c]{@{}l@{}}En caso de utilizar SW o FW, no deberá ser posible para el\\ usuario acceder al mismo.\end{tabular}                                         & (TBC)  & (TBC)                                                              \\ \hline
+RAM-MAN-03 & \begin{tabular}[c]{@{}l@{}}El equipo deberá contener la siguiente documentación: Manual\\ de Usuario - Esquemáticos de circuitos - Esquemáticos de placas\end{tabular} & (TBC)  & (TBC)                                                              \\ \hline
+\end{tabular}
+\caption{Especificaciones de mantenibilidad.}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{ID}         & \textbf{Descripción}                                                                                                                                                                                                                                                                                                                                                                                                                                                                               & \textbf{Origen} & \begin{tabular}[c]{@{}l@{}}Aplicabilidad\\ Validación\end{tabular} \\ \hline
+RAM-DIS-01 & \begin{tabular}[c]{@{}l@{}}El equipo deberá tener una disponibilidad no menor al TBD\% a lo largo del\\ total de la vida útil. Nótese que esto implica también el tiempo total que el\\ equipo puede estar en estado de falla/reparación. Con una vida útil de TBD\\ meses, un 99.9\% de disponibilidad implica que el equipo no puede no estar\\ disponible más de TBD minutos. Esto tiene impactos relevantes en las\\ facilidades de diagnóstico y reparación necesarias.\end{tabular} & (TBC)  & (TBC)                                                              \\ \hline
+\end{tabular}
+\caption{Especificaciones de disponibilidad.}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|c|c|}
+\hline
+\multicolumn{1}{|c|}{\textbf{ID}}     & \multicolumn{1}{c|}{\textbf{Descripción}}                                     & \textbf{Origen}                             & \textbf{\begin{tabular}[c]{@{}c@{}}Aplicabilidad\\ Validación\end{tabular}} \\ \hline
+                                      &                                                                               &                         & { (TBC)}                                                   \\ \cline{4-4} 
+\multirow{-2}{*}{RAM-CON-01} & \multirow{-2}{*}{El producto deberá tener una vida útil no menor a TBD meses} & \multirow{-2}{*}{{(TBC)}} & { (TBC)}                                                   \\ \hline
+\end{tabular}
+\caption{Especificaciones de confiabilidad.}
+\end{table}
+
