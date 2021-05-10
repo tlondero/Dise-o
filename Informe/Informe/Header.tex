@@ -75,8 +75,13 @@
 \renewcommand{\headrulewidth}{0pt}
 \patchcmd{\footrule}{\hrule}{\color{AzulFoot}\hrule}{}{}
 
+\newcommand{\nocontentsline}[3]{}
+\newcommand{\tocless}[2]{\bgroup\let\addcontentsline=\nocontentsline#1{#2}\egroup}
+
 \addto\captionsspanish{
 	\renewcommand\contentsname{\textcolor{AzulInfo}{Índice de Contenidos}}
 	\renewcommand\listfigurename{\textcolor{AzulInfo}{Lista de Figuras}}
 	\renewcommand\listtablename{\textcolor{AzulInfo}{Lista de Tablas}}
 }
+
+\usepackage[numbib, nottoc, notlot, notlof]{tocbibind}
