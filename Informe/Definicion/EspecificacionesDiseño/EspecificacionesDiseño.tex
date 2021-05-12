@@ -111,7 +111,7 @@ IMP-DIM-04  & \begin{tabular}[c]{@{}l@{}}La unidad de energía no deberá excede
 IMP-OPE-01  & \begin{tabular}[c]{@{}l@{}}El sistema deberá poder operar normalmente cuando la \\ temperatura  ambiente sea -20°C \textless TAMB \textless 30°C.\end{tabular}                                                                                           & REQ-10          & P F - I D                                                                   \\ \hline
 IMP-OPE-02  & \begin{tabular}[c]{@{}l@{}}Deberá poder operar normalmente cuando la humedad  sea: \\ 0\% \textless RH \textless 100\%, valores normales de humedad relativa ambiente.\end{tabular}                                                                      & REQ-10          & P F - I D                                                                   \\ \hline
 IMP-OPE-03  & \begin{tabular}[c]{@{}l@{}}El dispositivo deberá poder operar normalmente cuando la presión \\ atmosférica sea: 84 kPa \textless PATM \textless 90 kPa. Esto equivale a 1500m \\ de altura para el mínimo de presión, y un máximo de 1100m.\end{tabular} & REQ-10          & P F - I D                                                                   \\ \hline
-IMP-OPE-04  & El dispositivo deberá tener un grado de protección IPXX \TBD & REQ-10          & P(TBD) F - I D                                                              \\ \hline
+IMP-OPE-04  & El dispositivo deberá tener un grado de protección IPXX \TBD & REQ-10          & P \TBD F - I D                                                              \\ \hline
 \end{tabular}
 \caption{Especificaciones de operación.}
 \end{table}
@@ -157,7 +157,7 @@ IMP-EMC-01  & \begin{tabular}[c]{@{}l@{}}El dispositivo deberá poder operar nor
 \hline
 \textbf{ID} & \textbf{Descripción}                                                                                                                                             & \textbf{Origen}                       & \textbf{\begin{tabular}[c]{@{}l@{}}Aplicabilidad\\ Validación\end{tabular}} \\ \hline
 RAM-SEG-01  & \begin{tabular}[c]{@{}l@{}}La máxima temperatura que podrá tener la carcasa\\ será de \TBD °C\end{tabular}                                                        & REQ-12, REQ-16 & P F - I D T \TBD                                                            \\ \hline
-RAM-SEG-02  & \begin{tabular}[c]{@{}l@{}}Si en algún lugar (accesible o no) hay tensiones\\ peligrosas, deberá haber un cartel que lo advierta.\end{tabular}                   & \TBC                                   & P(TBD) F - I                                                                \\ \hline
+RAM-SEG-02  & \begin{tabular}[c]{@{}l@{}}Si en algún lugar (accesible o no) hay tensiones\\ peligrosas, deberá haber un cartel que lo advierta.\end{tabular}                   & \TBC                                   & P \TBD F - I                                                                \\ \hline
 RAM-SEG-03  & \begin{tabular}[c]{@{}l@{}}El dispositivo contará con un sistema de autenticación\\ ante el pedido de transmisión de datos definido\\ por INT-COM2.\end{tabular} & REQ-07         & P F - I D T \TBD                                                            \\ \hline
 RAM-SEG-04  & \TBD según la norma \TBD: seguridad ambiental.                                                                        & REQ-14         &                                                                             \\ \hline
 RAM-SEG-05  & \TBD según la norma \TBD: seguridad eléctrica.                                                                        & REQ-12         &                                                                             \\ \hline
@@ -170,10 +170,10 @@ RAM-SEG-05  & \TBD según la norma \TBD: seguridad eléctrica.                  
 \begin{tabular}{|l|l|l|l|}
 \hline
 \textbf{ID} & \textbf{Descripción}                                                                                                                                                    & \textbf{Origen}           & \textbf{\begin{tabular}[c]{@{}l@{}}Aplicabilidad\\ Validación\end{tabular}} \\ \hline
-RAM-MAN-01  & \begin{tabular}[c]{@{}l@{}}En caso de utilizar software o firmware, deberá ser posible para \\ técnicos calificados realizar actualizaciones del mismo.\end{tabular}    & {\textcolor{red}{(TBC)}} & {\textcolor{red}{(TBC)}}
+RAM-MAN-01  & \begin{tabular}[c]{@{}l@{}}En caso de utilizar software o firmware, deberá ser posible para \\ técnicos calificados realizar actualizaciones del mismo.\end{tabular}    & \TBC & \TBC
   \\ \hline
-RAM-MAN-02  & \begin{tabular}[c]{@{}l@{}}En caso de utilizar software o firmware, no deberá ser posible para el \\ usuario acceder al mismo.\end{tabular}                             & {\textcolor{red}{(TBC)}} & {\textcolor{red}{(TBC)}}                                                   \\ \hline
-RAM-MAN-03  & \begin{tabular}[c]{@{}l@{}}El equipo deberá contener la siguiente documentación: \\ Manual de Usuario\\ Esquemáticos de circuitos\\ Esquemáticos de placas\end{tabular} & {\textcolor{red}{(TBC)}} & {\textcolor{red}{(TBC)}}                                                   \\ \hline
+RAM-MAN-02  & \begin{tabular}[c]{@{}l@{}}En caso de utilizar software o firmware, no deberá ser posible para el \\ usuario acceder al mismo.\end{tabular}                             & \TBC & \TBC \\ \hline
+RAM-MAN-03  & \begin{tabular}[c]{@{}l@{}}El equipo deberá contener la siguiente documentación: \\ Manual de Usuario\\ Esquemáticos de circuitos\\ Esquemáticos de placas\end{tabular} & \TBC & \TBC                                                   \\ \hline
 \end{tabular}
 \caption{Especificaciones de mantenibilidad.}
 \end{table}
@@ -183,7 +183,7 @@ RAM-MAN-03  & \begin{tabular}[c]{@{}l@{}}El equipo deberá contener la siguiente
 \begin{tabular}{|l|l|l|l|}
 \hline
 \textbf{ID} & \textbf{Descripción}      & \textbf{Origen}           & \textbf{\begin{tabular}[c]{@{}l@{}}Aplicabilidad\\ Validación\end{tabular}} \\ \hline
-RAM-DIS-01  & {\textcolor{red}{(TBC)}} & {\textcolor{red}{(TBC)}} & {\textcolor{red}{(TBC)}}                                                   \\ \hline
+RAM-DIS-01  & \TBD & \TBD & \TBD                                                  \\ \hline
 \end{tabular}
 \caption{Especificaciones de disponibilidad.}
 \end{table}
