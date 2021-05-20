@@ -1,13 +1,70 @@
 \input{../Informe/Header.tex}
-
 \begin{document}
 
 \Subsection{Factibilidad tecnológica}
 \Subsubsection{Esquema modular}
 \Subsubsection{Propuesta de alternativas de diseño}
-Para la medición de la temperatura se tuvieron en cuenta las diversas tecnologías que existen, poniendo en la balanza parametros que definen su performance tales como la linealidad de su salida, el costo, el rango de operación, la presición, tipo de salida y aplicación.
+\note{TEMPERATURA}
+Para la medición de la temperatura se tuvieron en cuenta las diversas tecnologías que existen, poniendo en la balanza parámetros que definen su performance tales como la linealidad de su salida, el costo, el rango de operación, la presición, tipo de salida y aplicación.
 También se valoraron las diversas tecnologías que existen tales como la RTD cuyo funcionamiento se basa en el cambio de la resistencia en función de la temperatura bajo al ecuación $R(T)=R_0 + \alpha \cdot \Delta T$ también se consideró la tecnología TC la cual se basa en el \textit{efecto seebek} y finalmente el uso de un IC el cual es basado en propiedades de dispositivos semiconductores extrínsecos.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Aspectos\\ comparativos\end{tabular}} & \textbf{TC-K}                                                                             & \textbf{PT-100}                                                                                                              & \textbf{Ds18b20}                                                 & \textbf{DHT-22}  \\ \hline
+\textbf{Costo}                                                           & 700 ARS                                                                                   & 780 ARS                                                                                                                      & 200 ARS                                                          & 740 ARS          \\ \hline
+\textbf{Tipo de salida}                                                  & Analógico                                                                                 & Analógico                                                                                                                    & Digital                                                          & Digital          \\ \hline
+\textbf{Rango de operación}                                              & -40 $\sim$ 1200 °C                                                                        & -50 $\sim$ 200 °C                                                                                                            & -10 $\sim$ 85 °C                                                 & -40 $\sim$ 80 °C \\ \hline
+\textbf{Aplicación}                                                      & \begin{tabular}[c]{@{}c@{}}Se debe proporcionar \\ un circuito\\ amplificador\end{tabular} & \begin{tabular}[c]{@{}c@{}}Se debe \\ proporcionar\\  un circuito\\  convertidor\\  de resistencia\\  a tensión\end{tabular} & -                                                                & -                \\ \hline
+\textbf{Presición}                                                       & $\pm$ 1.5 °C                                                                              & $\pm$ 0.1 °C                                                                                                                 & $\pm$ 0.5 °C                                                     & $\pm$ 0.5 °C     \\ \hline
+\textbf{Estabilidad}                                                     & Tienden a envejecer                                                                       & -                                                                                                                            & -                                                                & -                \\ \hline
+\textbf{Autocalentamiento}                                               & -                                                                                         & \begin{tabular}[c]{@{}c@{}}Depende de\\  la corriente\\  de medición.\end{tabular}                                           & Bajo                                                             & Bajo             \\ \hline
+\textbf{Imagen}                &  \includeintable{.1}{ImagenesFactibilidad/TC}                                                                                          &  \includeintable{.1}{ImagenesFactibilidad/PT100}                                                                                                                    & \includeintable{.1}{ImagenesFactibilidad/IC1}  &  \includeintable{.1}{ImagenesFactibilidad/DHT-22}                 \\ \hline
+\end{tabular}
+\end{table}
+
+\note{HUMEDAD}
+Existen varias maneras de medir la magnitud física de la temperatura, dentro de estas la mas común, es utilizar la dependencia que existe entre la humedad y la capacidad, por lo que se utilizan capacitores con un dielectrico que cambia constante con la humedad, también existen sensores que se aprovechan de como cambia la resistencia en función de la temperatura pero son menos usados.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Aspectos\\ comparativos\end{tabular}} & \textbf{DHT-11}   & \textbf{AM-2301}  & \textbf{DHT-22}   & \textbf{AM-1001}  \\ \hline
+\textbf{Costo}                                                           & 200 ARS           & 1050 ARS          & 740 ARS           & 840 ARS           \\ \hline
+\textbf{Rango de operación}                                              & 20 $\sim$ 90 \%RH & 0 $\sim$ 100 \%RH & 0 $\sim$ 100 \%RH & 20 $\sim$ 90 \%RH \\ \hline
+\textbf{Presición}                                                       & $\pm$4 \%RH       & $\pm$3 \%RH       & $\pm$2 \%RH       & $\pm$5 \%RH       \\ \hline
+\textbf{Tipo de salida}                                                  & Digital           & Digital           & Digital           & Analógica         \\ \hline
+\textbf{Imagen}                                                          & \includeintable{.1}{ImagenesFactibilidad/DHT-11}                 & \includeintable{.1}{ImagenesFactibilidad/AM-2301}                 & \includeintable{.1}{ImagenesFactibilidad/DHT-22}                 & \includeintable{.1}{ImagenesFactibilidad/AM-1001} \\ \hline
+\end{tabular}
+\end{table}
+\note{LUMINOSIDAD}
+En la medición del nivel de luminosidad se puede optar por diversos caminos. Existen sensores como el BH-1750 y OPT-100 que su funcionamiento se basa en un fotodiodo que conduce cierta corrietne a partir de la luz que le impacta, otros como le TEMT-600 el cual es un fototransistor el cual tiene la base expuesta, en función de la intensidad lumínica en su base hará circular cierta corriente por su colector. Finalmente existen fotoresistores los cuales, como su nombre indica cambian la resistencia en función del nivel de luz. Estas son las opciones que vamos  a comprar a continuación.
+\begin{table}[]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Aspectos\\ comparativos\end{tabular}}              & \textbf{BH-1750}  & \textbf{TEMT-6000}                                                              & \textbf{OPT-101}                                              & \textbf{GL55-LM393} \\ \hline
+\textbf{Costo}                                                                        & 230 ARS           & 340 ARS                                                                         & 330 ARS                                                       & 190 ARS             \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Rango de temperatura\\  de operación\end{tabular}} & -40 $\sim$ 85 °C  & -40 $\sim$ 85 °C                                                                & 0 $\sim$ 70 °C                                                & -30 $\sim$ 70 °C    \\ \hline
+\textbf{Potencia disipada}                                                            & 260 mW            & 100 mW                                                                          & \TBD                                           & 75mW                \\ \hline
+\textbf{Tipo de salida}                                                               & I2C               & \begin{tabular}[c]{@{}c@{}}Analógica\\ (Corriente)\end{tabular}                 & \begin{tabular}[c]{@{}c@{}}Analógica\\ (Tensión)\end{tabular} & Analógica o Digital \\ \hline
+\textbf{Aplicación}                                                                   & -                 & \begin{tabular}[c]{@{}c@{}}Necesita un amplificador\\ de corriente\end{tabular} & -                                                             & -                   \\ \hline
+\textbf{Tensión de alimentación}                                                      & 4. 5 V            & \textless 6V                                                                    & 2.7 $\sim$ 36 V                                               & 3.3 $\sim$ 5 V      \\ \hline
+\textbf{Rango de medición}                                                            & 450 $\sim$ 650 nm & 400 $\sim$ 900 nm                                                               & 450 $\sim$ 1000 nm                                            & 450 $\sim$ 750 nm   \\ \hline
+\textbf{Imagen}                                                                       & \includeintable{.1}{ImagenesFactibilidad/BH-1750} & \includeintable{.1}{ImagenesFactibilidad/TEMT-6000}                                                                               & \includeintable{.1}{ImagenesFactibilidad/OPT-101} & \includeintable{.1}{ImagenesFactibilidad/GL55-LM393}                   \\ \hline
+\end{tabular}
+\end{table}
+
 \Subsubsection{Elección de una solución}
+\note{TEMPERATURA}
+En cuanto al sensor de temperatura la primer opcion a descartar es aquella que no cumple con el rango de temperaturas a medir, por lo que el Ds18b20 queda descartado, si bien su costo es bajo. Luego de las opciones que quedan todas son de un costo similar, sin embargo hay que tener en cuenta que para la termocupla se debe proporcionar una manera de medir la temperatura de referencia, esta puede ser tanto una RTD como un IC, por lo que el costo de la termocupla aumentaría con creces. Tanto la TC como la RTD necesitan un circuito convertidor para poder medir directamente el valor de la temperatura con un micro controlador, mientras que los IC ofrecen directamente una salida digital. La precisión de la medicion es la mejor para la RTD, seguido por los IC y finalmente la TC. Una desventaja de la TC es que tiende a envejecer rápidamente, si bien el estudio no dura mas de 3 meses, el producto podrá ser reutilizado y esto es un problema. El autocalientamiento es un problema en la medición de temperatura debido a que este puede alterar la misma si no es tenido en cuenta, Las TC no cuentan con este problema debido a su principio de funcionamiento, mientras que con las otras opciones si lo es. Con la RTD este efecto depende directamente con la corriente que se suministra para la medición, y con los IC es un aspecto que fue considerado por los diseñadores de los mismos.\\
+Por estas razones los candidatos a terminan siendo DHT-22 y la PT-100, un punto favorable para la DHT-22 es que no necesita un circuito extra y el problema del autocalentamiento ya fue pensado, adicional mente esta unidad cuenta con una medición de humedad la cual podría usarse como sensor de humedad, ya siendo el principal o usado como complemento.
+\note{HUMEDAD}
+De las opciones vistas como primer criterio se busca que pueda medir el rango entero de la humedad relativa, también se busca que cuente con una presición considerable, dadas estas consideraciones se descarta el DHT-11 y AM-1001 luego de los dos restantes se opta por el DHT-22 debido a que por un menor costo se obtienen mejores prestaciones.
+Teniendo en cuenta esto se utilizará tanto para la medición de temperatura y humedad el DHT-22
+\note{LUMINOSIDAD}
 \Subsubsection{DFMEA}
 
 \Subsection{Factibilidad de tiempos}
@@ -25,3 +82,5 @@ También se valoraron las diversas tecnologías que existen tales como la RTD cu
 (regulaciones y licencias)
 
 \end{document}
+%\includeintable{.3}{ImagenesFactibilidad/pend}
+
