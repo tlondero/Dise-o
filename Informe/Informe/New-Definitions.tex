@@ -27,9 +27,11 @@
 
 %IMAGE IN TABLE:			%Ejemplo: \includeintable{.3}{ImagenesFactibilidad/pend}
 \newcommand{\includeintable}[2]{
-    \begin{minipage}{#1\textwidth}
-        \includegraphics[width=\linewidth]{#2}
-    \end{minipage}
+	\addvbuffer[3pt 0pt]{
+    	\begin{minipage}{#1\textwidth}
+        	\includegraphics[width=\linewidth]{#2}
+    	\end{minipage}
+	}
 }
 
 %NOTAS:
