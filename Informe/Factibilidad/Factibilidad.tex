@@ -5,7 +5,16 @@
 
 \Subsubsection{Esquema modular}
 
-\Subsubsection{Propuesta de alternativas de diseño}
+A continuación se presentan los distintos módulos. Luego, en las siguientes subseciones, se presentan las distintas alternativas de evaluadas para la implementación.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{ImagenesFactibilidad/EsquemaModular}
+	\label{fig:esquema_modular}
+	\caption{Diagrama modular del sistema.}
+\end{figure}
+
+\Subsubsection{Propuesta de sensores}
 
 Para las distintas mediciones se tuvieron en cuenta diversas tecnologías que existen, poniendo en la balanza parámetros que definen su performance, tales como la linealidad de su salida, el costo, el rango de operación, la precisión, el tipo de salida, aplicación, entre otras tantas variables.
 
@@ -21,7 +30,7 @@ En el caso de la medición de temperatura, se valoraron diversas tecnologías qu
 \textbf{Tipo de salida}                                                  & Analógico                                                                                 & Analógico                                                                                                                    & Digital                                                          & Digital          \\ \hline
 
 \textbf{\begin{tabular}[c]{@{}c@{}}Rango de\\ operación [°C]\end{tabular}}                                              & -40 $\sim$ 1200                                                                        & -50 $\sim$ 200  & -10 $\sim$ 85 & -40 $\sim$ 80 \\ \hline
-\textbf{Interfaz de conexionado}                                                      & \begin{tabular}[c]{@{}c@{}}Se debe proporcionar \\ un circuito\\ amplificador\end{tabular} & \begin{tabular}[c]{@{}c@{}}Se debe \\ proporcionar\\  un circuito\\  convertidor\\  de resistencia\\  a tensión\end{tabular} & -                                                                & -                \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Interfaz de\\ conexionado\end{tabular}}                                                      & \begin{tabular}[c]{@{}c@{}}Se debe\\ proporcionar\\ un circuito\\ amplificador\end{tabular} & \begin{tabular}[c]{@{}c@{}}Se debe \\ proporcionar\\  un circuito\\  convertidor\\  de resistencia\\  a tensión\end{tabular} & -                                                                & -                \\ \hline
 \textbf{Presición [°C]}                                                       & $\pm$ 1.5	& $\pm$ 0.1	& $\pm$ 0.5	& $\pm$ 0.5	\\ \hline
 
 \textbf{Estabilidad}                                                     & Tienden a envejecer                                                                       & -                                                                                                                            & -                                                                & -                \\ \hline
@@ -85,7 +94,24 @@ En la elección para esta medición, principalmente se deberá asegurar el funci
 
 La comunicación puede ser analógica en corriente para el TEMT-6000, pero este necesitará un amplificador de corriente o un convertidor para esta corriente a un nivel medible. Existen también otros sensores que tienen una salida analógica de tensión como el GL55-LM393 con un rango entre 0 y VCC. Este también provee con una salida digital, pero esta funciona como un schmitt trigger. Finalmente el BJ-1750 cuanta con una salida digital con el protocolo de comunicación I2C.
 
-Teniendo en cuenta esto se opta por utilizar el sensor \TBD. 
+Teniendo en cuenta esto se opta por utilizar el sensor \TBD.
+
+\Subsection{Propuesta de almacenamiento}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Aspectos\\ comparativos\end{tabular}}         & \textbf{\href{https://www.kingston.com/datasheets/sdcs2_es.pdf}{SDCS2}} & \textbf{\href{https://www.kingston.com/datasheets/mlpmr2_es.pdf}{SDCE}} & \textbf{\href{https://www.kingston.com/datasheets/sdce_es.pdf}{MLPMR2}} & \textbf{\href{https://www.kingston.com/datasheets/sdcit_es.pdf}{SDCIT}} \\ \hline
+\textbf{Costo}                                                                   & 10 $\sim$ 29 [USD]                                                      & 7900 $\sim$ 15000 [ARS]                                                 & 10 $\sim$ 29 [USD]                                                      & 10 $\sim$ 29 [USD]                                                      \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Temperatura de\\ operación [°C]\end{tabular}} & -25 $\sim$ 85                                                           & -25 $\sim$ 85                                                           & -25 $\sim$ 85                                                           & -40 $\sim$ 85                                                           \\ \hline
+\textbf{Almacenamiento [GB]}                                                     & 32 $\sim$ 512                                                           & 64 $\sim$ 256                                                           & 32 $\sim$ 128                                                           & 8 $\sim$ 32                                                             \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Velocidad\\ R/W [MB/s]\end{tabular}}          & 100 / 85                                                                & 285 / 165                                                               & 95 / 45                                                                 & 90 / 45                                                                 \\ \hline
+\textbf{Dimensiones [mm]}                                                        & 11 x 15 x 1                                                             & 11 x 15 x 1                                                             & 11 x 15 x 1                                                             & 11 x 15 x 1                                                             \\ \hline
+\textbf{Imagen}                                                                  & \includeintable{.1}{ImagenesFactibilidad/SDCS2}                         & \includeintable{.1}{ImagenesFactibilidad/SDCE}                          & \includeintable{.1}{ImagenesFactibilidad/MLPMR2}                        & \includeintable{.1}{ImagenesFactibilidad/SDCIT}                         \\ \hline
+\end{tabular}
+\caption{Comparación entre memorias SD.}
+\end{table}
 
 \Subsubsection{DFMEA}
 
@@ -97,8 +123,8 @@ Teniendo en cuenta esto se opta por utilizar el sensor \TBD.
 \Subsubsection{Programación}
 (Gantt)
 
-\Subsection{Factibilidad económica}
-(Mercado, costos, ciclo de vida, VAN, TIR)
+%\Subsection{Factibilidad económica}
+%(Mercado, costos, ciclo de vida, VAN, TIR)
 
 \Subsection{Factibilidad legal y responsabilidad civil}
 (regulaciones y licencias)
