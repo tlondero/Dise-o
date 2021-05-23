@@ -100,18 +100,44 @@ Teniendo en cuenta esto se opta por utilizar el sensor \TBD.
 
 \begin{table}[H]
 \centering
-\begin{tabular}{|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Aspectos\\ comparativos\end{tabular}}         & \textbf{\href{https://www.kingston.com/datasheets/sdcs2_es.pdf}{SDCS2}} & \textbf{\href{https://www.kingston.com/datasheets/mlpmr2_es.pdf}{SDCE}} & \textbf{\href{https://www.kingston.com/datasheets/sdce_es.pdf}{MLPMR2}} & \textbf{\href{https://www.kingston.com/datasheets/sdcit_es.pdf}{SDCIT}} \\ \hline
-\textbf{Costo}                                                                   & 10 $\sim$ 29 [USD]                                                      & 7900 $\sim$ 15000 [ARS]                                                 & 10 $\sim$ 29 [USD]                                                      & 10 $\sim$ 29 [USD]                                                      \\ \hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Temperatura de\\ operación [°C]\end{tabular}} & -25 $\sim$ 85                                                           & -25 $\sim$ 85                                                           & -25 $\sim$ 85                                                           & -40 $\sim$ 85                                                           \\ \hline
-\textbf{Almacenamiento [GB]}                                                     & 32 $\sim$ 512                                                           & 64 $\sim$ 256                                                           & 32 $\sim$ 128                                                           & 8 $\sim$ 32                                                             \\ \hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Velocidad\\ R/W [MB/s]\end{tabular}}          & 100 / 85                                                                & 285 / 165                                                               & 95 / 45                                                                 & 90 / 45                                                                 \\ \hline
-\textbf{Dimensiones [mm]}                                                        & 11 x 15 x 1                                                             & 11 x 15 x 1                                                             & 11 x 15 x 1                                                             & 11 x 15 x 1                                                             \\ \hline
-\textbf{Imagen}                                                                  & \includeintable{.1}{ImagenesFactibilidad/SDCS2}                         & \includeintable{.1}{ImagenesFactibilidad/SDCE}                          & \includeintable{.1}{ImagenesFactibilidad/MLPMR2}                        & \includeintable{.1}{ImagenesFactibilidad/SDCIT}                         \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Aspectos\\ comparativos\end{tabular}}         & \textbf{\href{https://www.kingston.com/datasheets/sdcg3_es.pdf}{SDCG3}} & \textbf{\href{https://www.kingston.com/datasheets/mlpmr2_es.pdf}{SDCE}} & \textbf{\href{https://ar.mouser.com/datasheet/2/669/SanDisk_02052018_SDSDAF3_SDSDQAF3-1285144.pdf}{SDSDQAF3-XI}} \\ \hline
+\textbf{Costo [ARS]}                                                             & 2100 $\sim$ 3900                                                        & 7900 $\sim$ 15000                                                       & 7600 $\sim$ 17000                                                                                                 \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Temperatura de\\ operación [°C]\end{tabular}} & -25 $\sim$ 85                                                           & -25 $\sim$ 85                                                           & -40 $\sim$ 85                                                                                                    \\ \hline
+\textbf{Almacenamiento [GB]}                                                     & 64 $\sim$ 512                                                           & 64 $\sim$ 256                                                           & 8 $\sim$ 128                                                                                                     \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Velocidad\\ R/W [MB/s]\end{tabular}}          & 170 / 90                                                                & 285 / 165                                                               & 50 / 80                                                                                                          \\ \hline
+\textbf{Alimentación [V]}                                                        & 3.3                                                                     & 3.3                                                                     & 2.7 $\sim$ 3.6                                                                                                   \\ \hline
+\textbf{Imagen}                                                                  & \includeintable{.1}{ImagenesFactibilidad/SDCG3}                         & \includeintable{.1}{ImagenesFactibilidad/SDCE}                          & \includeintable{.1}{ImagenesFactibilidad/SDSDQAF3}                                                               \\ \hline
 \end{tabular}
 \caption{Comparación entre memorias SD.}
 \end{table}
+
+\Subsection{Propuesta de comunicación}
+
+\Subsection{Propuesta de microprocesador}
+
+\Subsection{Propuesta de batería}
+
+\Subsection{Propuesta de cargador}
+
+\Subsection{Propuesta de alimentación}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Aspectos\\ comparativos\end{tabular}}                   & \textbf{DSP-20P} & \textbf{DSP-30M} \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Temperatura de\\ operación [°C]\end{tabular}}           & -45 $\sim$ 85    & -45 $\sim$ 85    \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Potencia\\ máxima [W]\end{tabular}}                     & 20 $\pm$ 3\%     & 30 $\pm$ 3\%     \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Tensión a\\ potencia\\ máxima [V]\end{tabular}}         & 17.6             & 18               \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Corriente\\ a potencia\\ máxima [A]\end{tabular}}       & 1.14             & 1.67             \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Tensión a\\ circuito abierto\\ máxima [V]\end{tabular}} & 22.0             & 21.5             \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Corriente a\\ corto circuito\\ máxima [A]\end{tabular}} & 1.39             & 1.86             \\ \hline
+\end{tabular}
+\caption{Comparación entre paneles solares.}
+\end{table}
+
 
 \Subsubsection{DFMEA}
 
