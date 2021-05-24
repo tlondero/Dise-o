@@ -1,11 +1,11 @@
-\input{../Informe/Header.tex}
-\begin{document}
+%\input{../Informe/Header.tex}
+%\begin{document}
 
 \Subsection{Factibilidad tecnológica}
 
 \Subsubsection{Esquema modular}
 
-A continuación se presentan los distintos módulos. Luego, en las siguientes subseciones, se presentan las distintas alternativas de evaluadas para la implementación.
+A continuación se presentan los distintos módulos. Luego, en las siguientes subseciones, se presentan las distintas alternativas evaluadas para la implementación.
 
 \begin{figure}[H]
 	\centering
@@ -15,174 +15,40 @@ A continuación se presentan los distintos módulos. Luego, en las siguientes su
 \end{figure}
 
 \Subsubsection{Propuesta de sensores}
+\input{../Factibilidad/Tecnologica/Sensores.tex}
 
-Para las distintas mediciones se tuvieron en cuenta diversas tecnologías que existen, poniendo en la balanza parámetros que definen su performance, tales como la linealidad de su salida, el costo, el rango de operación, la precisión, el tipo de salida, aplicación, entre otras tantas variables.
+\Subsubsection{Propuesta de almacenamiento}
+\input{../Factibilidad/Tecnologica/Almacenamiento.tex}
 
-\Subsubsubsection{Temperatura}
-En el caso de la medición de temperatura, se valoraron diversas tecnologías que existen, siendo por ejemplo la RTD cuyo funcionamiento se basa en el cambio de la resistencia en función de la temperatura bajo al ecuación $R(T)=R_0 + \alpha \cdot \Delta T$. También se consideró la tecnología TC, cuyo funcionamiento se basa en el \textit{efecto seebek}. Finalmente, el uso de un IC, el cual se basa en propiedades de dispositivos semiconductores extrínsecos.
+\Subsubsection{Propuesta de comunicación}
+\input{../Factibilidad/Tecnologica/Comunicacion.tex}
 
-\begin{table}[H]
-\centering
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Aspectos\\ comparativos\end{tabular}} & \textbf{\href{https://www.thermocoupleinfo.com/type-k-thermocouple.htm}{TC-K}}                                                                             & \textbf{\href{http://www.datasheet.es/PDF/900325/Pt100-pdf.html}{PT-100}}                                                                                                              & \textbf{\href{https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf}{Ds18b20}}                                                 & \textbf{\href{https://www.sparkfun.com/datasheets/Sensors/Temperature/DHT22.pdf}{DHT-22}}  \\ \hline
-\textbf{Costo [ARS]}                                                           & 700	& 780	& 200	& 740	\\ \hline
-\textbf{Tipo de salida}                                                  & Analógico                                                                                 & Analógico                                                                                                                    & Digital                                                          & Digital          \\ \hline
+\Subsubsection{Propuesta de microprocesador}
+\input{../Factibilidad/Tecnologica/Micro.tex}
 
-\textbf{\begin{tabular}[c]{@{}c@{}}Rango de\\ operación [°C]\end{tabular}}                                              & -40 $\sim$ 1200                                                                        & -50 $\sim$ 200  & -10 $\sim$ 85 & -40 $\sim$ 80 \\ \hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Interfaz de\\ conexionado\end{tabular}}                                                      & \begin{tabular}[c]{@{}c@{}}Se debe\\ proporcionar\\ un circuito\\ amplificador\end{tabular} & \begin{tabular}[c]{@{}c@{}}Se debe \\ proporcionar\\  un circuito\\  convertidor\\  de resistencia\\  a tensión\end{tabular} & -                                                                & -                \\ \hline
-\textbf{Presición [°C]}                                                       & $\pm$ 1.5	& $\pm$ 0.1	& $\pm$ 0.5	& $\pm$ 0.5	\\ \hline
+\Subsubsection{Propuesta de batería}
+\input{../Factibilidad/Tecnologica/Bateria.tex}
 
-\textbf{Estabilidad}                                                     & Tienden a envejecer                                                                       & -                                                                                                                            & -                                                                & -                \\ \hline
-\textbf{Autocalentamiento}                                               & -                                                                                         & \begin{tabular}[c]{@{}c@{}}Depende de\\  la corriente\\  de medición.\end{tabular}                                           & Bajo                                                             & Bajo             \\ \hline
-\textbf{Imagen}                &  \includeintable{.1}{ImagenesFactibilidad/TC}                                                                                          &  \includeintable{.1}{ImagenesFactibilidad/PT100}                                                                                                                    & \includeintable{.1}{ImagenesFactibilidad/IC1}  &  \includeintable{.1}{ImagenesFactibilidad/DHT-22}                 \\ \hline
-\end{tabular}
-\caption{Comparación entre sensores de temperatura.}
-\end{table}
+\Subsubsection{Propuesta de cargador}
+\input{../Factibilidad/Tecnologica/Cargador.tex}
 
-\Subsubsubsection{Humedad}
-Existen varias maneras de medir la magnitud física de la humedad, dentro de estas la mas común se basa en utilizar la dependencia que existe entre la humedad y la capacidad. Es por esto que se utilizan capacitores con un dieléctrico, el cual cambia constante con la humedad. Además existen sensores que se aprovechan de como cambia la resistencia en función de la temperatura, pero estas tecnologías son menos frecuentes.
-
-\begin{table}[H]
-\centering
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Aspectos\\ comparativos\end{tabular}} & \textbf{\href{https://www.mouser.com/datasheet/2/758/DHT11-Technical-Data-Sheet-Translated-Version-1143054.pdf}{DHT-11}}   & \textbf{\href{http://codigoelectronica.com/blog/am2301-datasheet}{AM-2301}}  & \textbf{\href{https://www.sparkfun.com/datasheets/Sensors/Temperature/DHT22.pdf}{DHT-22}}   & \textbf{\href{https://datasheetspdf.com/pdf/1298922/AOSONG/AM1001/1}{AM-1001}}  \\ \hline
-\textbf{Costo [ARS]}                                                           & 200           & 1050 & 740 & 840	\\ \hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Rango de\\ operación [\%RH]\end{tabular}}                                              & 20 $\sim$ 90 & 0 $\sim$ 100 & 0 $\sim$ 100 & 20 $\sim$ 90 \\ \hline
-\textbf{Presición [\%RH]}                                                       & $\pm$4	& $\pm$3	 & $\pm$2	& $\pm$5	\\ \hline
-\textbf{Tipo de salida}                                                  & Digital           & Digital           & Digital           & Analógica         \\ \hline
-\textbf{Imagen}                                                          & \includeintable{.1}{ImagenesFactibilidad/DHT-11}                 & \includeintable{.1}{ImagenesFactibilidad/AM-2301}                 & \includeintable{.1}{ImagenesFactibilidad/DHT-22}                 & \includeintable{.1}{ImagenesFactibilidad/AM-1001} \\ \hline
-\end{tabular}
-\caption{Comparación de sensores de humedad.}
-\end{table}
-
-\Subsubsubsection{Luminosidad}
-En la medición del nivel de luminosidad se puede optar por diversos caminos. Existen sensores como el BH-1750 y OPT-100 que su funcionamiento se basa en un fotodiodo que conduce cierta corriente a partir de la luz que le impacta. Otros sensores, tales como el TEMT-600, emplean un fototransistor, cuya base se encuentra expuesta. En función de la intensidad lumínica en dicha zona, circulará cierta corriente por el colector. Finalmente existen fotoresistores, los cuales, tal como su nombre indica, cambian la resistencia en función del nivel de luz.
-\begin{table}[H]
-\centering
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Aspectos\\ comparativos\end{tabular}}              & \textbf{\href{https://www.mouser.com/datasheet/2/348/bh1750fvi-e-186247.pdf}{BH-1750}}  & \textbf{\href{https://www.vishay.com/docs/81579/temt6000.pdf}{TEMT-6000}}	& \textbf{\href{https://www.ti.com/lit/ds/symlink/opt101.pdf}{OPT-101}}                                              & \textbf{\href{https://www.alldatasheet.es/view.jsp?Searchword=GL55}{GL55-LM393}} \\ \hline
-\textbf{Costo [ARS]}	& 230 	& 340	& 330	& 190	\\ \hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Rango de \\ temperatura\\  de operación [°C]\end{tabular}} & -40 $\sim$ 85  & -40 $\sim$ 85 & 0 $\sim$ 70 & -30 $\sim$ 70 \\ \hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Potencia\\ disipada [mW]\end{tabular}}                                                            & 260 	& 100 	& \TBD 	& 75 	\\ \hline
-\textbf{Tipo de salida}                                                               & I2C               & \begin{tabular}[c]{@{}c@{}}Analógica\\ (Corriente)\end{tabular}                 & \begin{tabular}[c]{@{}c@{}}Analógica\\ (Tensión)\end{tabular} &\begin{tabular}[c]{@{}c@{}}Analógica \\ Digital\end{tabular}  \\ \hline
-\textbf{Aplicación}                                                                   & -                 & \begin{tabular}[c]{@{}c@{}}Necesita un\\amplificador\\ de corriente\end{tabular} & -                                                             & -                   \\ \hline
-\begin{tabular}[c]{@{}c@{}}\textbf{Tensión de} \\ \textbf{alimentación [V]} \end{tabular}                                                      & 4.5 	& \textless \ 6 	& 2.7 $\sim$ 36.0 	& 3.3 $\sim$ 5.0 	\\ \hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Rango de\\ medición [nm]\end{tabular}}                                                            & 450 $\sim$ 650 & 400 $\sim$ 900 & 450 $\sim$ 1000 & 450 $\sim$ 750 \\ \hline
-\textbf{Imagen}                                                                       & \includeintable{.1}{ImagenesFactibilidad/BH-1750} & \includeintable{.1}{ImagenesFactibilidad/TEMT-6000}                                                                               & \includeintable{.1}{ImagenesFactibilidad/OPT-101} & \includeintable{.1}{ImagenesFactibilidad/GL55-LM393}                   \\ \hline
-\end{tabular}
-\caption{Comparación de sensores de luminosidad.}
-\end{table}
+\Subsubsection{Propuesta de alimentación}
+\input{../Factibilidad/Tecnologica/Alimentación.tex}
 
 \Subsubsection{Elección de una solución}
-
-\Subsubsubsection{Temperatura}
-
-En cuanto al sensor de temperatura la primer opción a descartar es aquella que no cumple con el rango de temperaturas a medir, por lo que el Ds18b20 queda descartado a pesar de su bajo costo. Luego de las opciones que quedan todas son de un costo similar, sin embargo hay que tener en cuenta que para la termocupla se debe proporcionar una manera de medir la temperatura de referencia, la cual puede ser tanto una RTD como un IC. Es por esto que el costo de la termocupla aumentaría con creces. Tanto la TC como la RTD necesitan un circuito convertidor para poder medir directamente el valor de la temperatura con un micro controlador, mientras que los IC ofrecen directamente una salida digital. La mejor precisión de la medición se da con una RTD, seguido por los IC y finalmente la TC.
-
-Una desventaja de la TC es que tiende a envejecer rápidamente. Si bien el estudio no dura mas de 3 meses, el producto podrá ser reutilizado, siendo dicho envejecimiento un problema. El autocalientamiento también es contraproductivo en la medición de temperatura debido a que este puede alterar la misma si no es tenido en cuenta. Las TC no cuentan con este inconveniente debido a su principio de funcionamiento, mientras que con las otras opciones si lo es. Con la RTD este efecto depende directamente con la corriente que se suministra para la medición, y con los IC es un aspecto que es considerado por los diseñadores de los mismos.
-
-Por estas razones los candidatos a terminan siendo DHT-22 y la PT-100. Un punto favorable para la DHT-22 es que no necesita un circuito extra y el problema del autocalentamiento ya fue pensado. Adicionalmente esta unidad cuenta con una medición de humedad la cual podría usarse como sensor de humedad, ya siendo el principal o usado como complemento.
-
-\Subsubsubsection{Humedad}
-De las opciones vistas, como primer criterio, se busca que pueda medir el rango entero de la humedad relativa y que cuente con una precisión considerable. Dadas estas consideraciones, se descarta el DHT-11 y AM-1001. Es así que de los dos restantes, se opta por el DHT-22 debido a que por un menor costo se obtienen mejores prestaciones. Teniendo en cuenta esto se utilizará tanto para la medición de temperatura y humedad el DHT-22.
-
-\Subsubsubsection{Luminosidad}
-En la elección para esta medición, principalmente se deberá asegurar el funcionamiento en el rango de temperatura en el cual operará el dispositivo, por lo cual el OPT-101 queda descartado. Luego se tendrá en cuenta la potencia utilizada, el rango de medición de los sensores y el tipo de alimentación.
-
-La comunicación puede ser analógica en corriente para el TEMT-6000, pero este necesitará un amplificador de corriente o un convertidor para esta corriente a un nivel medible. Existen también otros sensores que tienen una salida analógica de tensión como el GL55-LM393 con un rango entre 0 y VCC. Este también provee con una salida digital, pero esta funciona como un schmitt trigger. Finalmente el BJ-1750 cuanta con una salida digital con el protocolo de comunicación I2C.
-
-Teniendo en cuenta esto se opta por utilizar el sensor \TBD.
-
-\Subsection{Propuesta de almacenamiento}
-
-\begin{table}[H]
-\centering
-\begin{tabular}{|c|c|c|c|}
-\hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Aspectos\\ comparativos\end{tabular}}         & \textbf{\href{https://www.kingston.com/datasheets/sdcg3_es.pdf}{SDCG3}} & \textbf{\href{https://www.kingston.com/datasheets/mlpmr2_es.pdf}{SDCE}} & \textbf{\href{https://ar.mouser.com/datasheet/2/669/SanDisk_02052018_SDSDAF3_SDSDQAF3-1285144.pdf}{SDSDQAF3-XI}} \\ \hline
-\textbf{Costo [ARS]}                                                             & 2100 $\sim$ 3900                                                        & 7900 $\sim$ 15000                                                       & 7600 $\sim$ 17000                                                                                                 \\ \hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Temperatura de\\ operación [°C]\end{tabular}} & -25 $\sim$ 85                                                           & -25 $\sim$ 85                                                           & -40 $\sim$ 85                                                                                                    \\ \hline
-\textbf{Almacenamiento [GB]}                                                     & 64 $\sim$ 512                                                           & 64 $\sim$ 256                                                           & 8 $\sim$ 128                                                                                                     \\ \hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Velocidad\\ R/W [MB/s]\end{tabular}}          & 170 / 90                                                                & 285 / 165                                                               & 50 / 80                                                                                                          \\ \hline
-\textbf{Alimentación [V]}                                                        & 3.3                                                                     & 3.3                                                                     & 2.7 $\sim$ 3.6                                                                                                   \\ \hline
-\textbf{Imagen}                                                                  & \includeintable{.1}{ImagenesFactibilidad/SDCG3}                         & \includeintable{.1}{ImagenesFactibilidad/SDCE}                          & \includeintable{.1}{ImagenesFactibilidad/SDSDQAF3}                                                               \\ \hline
-\end{tabular}
-\caption{Comparación entre memorias SD.}
-\end{table}
-
-\Subsection{Propuesta de comunicación}
-
-\Subsection{Propuesta de microprocesador}
-
-\begin{table}[H]
-\centering
-\begin{tabular}{|c|c|c|c|}
-\hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Aspectos\\ comparativos\end{tabular}}         & \textbf{\href{https://datasheets.raspberrypi.org/rpi4/raspberry-pi-4-product-brief.pdf}{R-Pi 4}} & \textbf{\href{https://www.raspberrypi.org/products/raspberry-pi-zero/}{R-Pi Zero W}}            & \textbf{\begin{tabular}[c]{@{}c@{}}\href{https://datasheets.raspberrypi.org/cm4/cm4-product-brief.pdf}{R-Pi Compute}\\ \href{https://datasheets.raspberrypi.org/cm4/cm4-product-brief.pdf}{Module 4}\end{tabular}} \\ \hline
-\textbf{Costo [ARS]}                                                                   & 10400 $\sim$ 17000                                                                               & 6000 $\sim$ 7500                                                                                & 12440 $\sim$ 14310                                                                                                                                                                                                 \\ \hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Temperatura de\\ operación [°C]\end{tabular}} & 0 $\sim$ 50                                                                                      & -                                                                                               & -20 $\sim$ 85                                                                                                                                                                                                      \\ \hline
-\textbf{Memoria [GB]}                                                            & 1 $\sim$ 8                                                                                       & 512                                                                                             & 1 $\sim$ 8                                                                                                                                                                                                         \\ \hline
-\textbf{Conexiones}                                                              & \begin{tabular}[c]{@{}c@{}}Wireless LAN,\\ Bluetooth,\\ Ethernet, USB\end{tabular}               & \begin{tabular}[c]{@{}c@{}}Wireless LAN,\\ Bluetooth (BLE),\\ Micro USB, mini HDMI\end{tabular} & \begin{tabular}[c]{@{}c@{}}Wireless LAN,\\ Bluetooth,\\ Ethernet, USB,\\ antena externa\end{tabular}                                                                                                               \\ \hline
-\textbf{Sonido y video}                                                          & \begin{tabular}[c]{@{}c@{}}Micro HDMI,\\ MIPI DSI y CSI\end{tabular}                             & \begin{tabular}[c]{@{}c@{}}Mini HDMI, HDMI,\\ CSI, PAL/NTSC pads\end{tabular}                   & \begin{tabular}[c]{@{}c@{}}HDMI, MIPI DSI\\ y CSI, SDIO\end{tabular}                                                                                                                                               \\ \hline
-\textbf{Soporte SD}                                                              & \begin{tabular}[c]{@{}c@{}}Almacenamiento y\\ carga de SO\end{tabular}                           & Micro SD                                                                                        & \begin{tabular}[c]{@{}c@{}}Entrada SD para tarjeta\\ o eMMC externo\end{tabular}                                                                                                                                   \\ \hline
-\textbf{Dimensiones [mm]}                                                        & 85.6 x 56.5                                                                                      & 65 x 30                                                                                         & 40 x 55 x 1.2                                                                                                                                                                                                      \\ \hline
-\textbf{Alimentación}                                                            & 5 V (3 A)                                                                                        & 5 (1.2 A)                                                                                       & 5 V (1.4 A)                                                                                                                                                                                                        \\ \hline
-\textbf{Imagen}                                                                  & \includeintable{.1}{ImagenesFactibilidad/RPI4}                                                   & \includeintable{.1}{ImagenesFactibilidad/RPIZero}                                               & \includeintable{.1}{ImagenesFactibilidad/RPICM}                                                                                                                                                                    \\ \hline
-\end{tabular}
-\caption{Comparación entre palcas Raspberry Pi.}
-\end{table}
-
-\Subsection{Propuesta de batería}
-
-\begin{table}[H]
-\centering
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Aspectos\\ comparativos\end{tabular}}                          & \textbf{\begin{tabular}[c]{@{}c@{}}\href{https://www.kijo-battery.com/products/jdg-series-agm-gel-deep-cycle-battery.html}{Kijo Serie}\\ \href{https://www.kijo-battery.com/products/jdg-series-agm-gel-deep-cycle-battery.html}{JDG}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\href{https://www.kijo-battery.com/products/jlg-series-pure-gel-deep-cycle-battery.html}{Kijo Serie}\\ \href{https://www.kijo-battery.com/products/jlg-series-pure-gel-deep-cycle-battery.html}{JLG}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\href{http://www.fenk.com.ar/wp-content/uploads/2020/01/JS12-20-1.pdf}{Fenk}\\ \href{http://www.fenk.com.ar/wp-content/uploads/2020/01/JS12-20-1.pdf}{JS12-20}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\href{http://www.fenk.com.ar/productos/energias-renovables/baterias-solares/}{Fenk Serie}\\ \href{http://www.fenk.com.ar/productos/energias-renovables/baterias-solares/}{JM12}\end{tabular}} \\ \hline
-\textbf{Costo [ARS]}                                                                              & 30500 $\sim$ X                                                                                                                                                                                                                                      & X $\sim$ X                                                                                                                                                                                                                                            & 6365 $\sim$ 8744                                                                                                                                                                                                & 20332 $\sim$ 76110                                                                                                                                                                                                               \\ \hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Temperatura de\\ operación [°C]\end{tabular}}                  & -20 $\sim$ 50                                                                                                                                                                                                                                       & -20 $\sim$ 50                                                                                                                                                                                                                                         & -20 $\sim$ 50                                                                                                                                                                                                   & -20 $\sim$ 50                                                                                                                                                                                                                    \\ \hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Tensión\\ nominal [V]\end{tabular}}                            & 12                                                                                                                                                                                                                                                  & 12                                                                                                                                                                                                                                                    & 12                                                                                                                                                                                                              & 12                                                                                                                                                                                                                               \\ \hline
-\textbf{Capacidad [Ah]}                                                                           & 33 $\sim$ 250                                                                                                                                                                                                                                       & 100 $\sim$ 200                                                                                                                                                                                                                                        & 13.2 $\sim$ 20.0                                                                                                                                                                                                & 32.7 $\sim$ 200.0                                                                                                                                                                                                                \\ \hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Dimensiones\\ (máximas) [mm]\end{tabular}}                     & 52 x 268 x 220                                                                                                                                                                                                                                      & 499 x 259 x 219                                                                                                                                                                                                                                       & 181 x 77 x 167                                                                                                                                                                                                  & 522 x 240 x 219                                                                                                                                                                                                                  \\ \hline
-\textbf{Peso [kg]}                                                                                & 10 $\sim$ 61                                                                                                                                                                                                                                        & 30 $\sim$ 74                                                                                                                                                                                                                                          & 5.45                                                                                                                                                                                                            & 15.5 $\sim$ 57.0                                                                                                                                                                                                                 \\ \hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Porcentaje de\\ autodescarga\\ (mensual a 25 °C)\end{tabular}} & 3\%                                                                                                                                                                                                                                                 & 3\%                                                                                                                                                                                                                                                   & 3\%                                                                                                                                                                                                             & 3\%                                                                                                                                                                                                                              \\ \hline
-\textbf{Imagen}                                                                                   & \includeintable{.1}{ImagenesFactibilidad/Kijo-JDG}                                                                                                                                                                                                  & \includeintable{.1}{ImagenesFactibilidad/Kijo-JLG}                                                                                                                                                                                                    & \includeintable{.1}{ImagenesFactibilidad/Fenk-JS12-20}                                                                                                                                                          & \includeintable{.1}{ImagenesFactibilidad/Fenk-JM12}                                                                                                                                                                              \\ \hline
-\end{tabular}
-\caption{Comparación entre baterías gel de carga profunda.}
-\end{table}
-
-\Subsection{Propuesta de cargador}
-
-\Subsection{Propuesta de alimentación}
-
-\begin{table}[H]
-\centering
-\begin{tabular}{|c|c|c|}
-\hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Aspectos\\ comparativos\end{tabular}}                   & \textbf{DSP-20P} & \textbf{DSP-30M} \\ \hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Temperatura de\\ operación [°C]\end{tabular}}           & -45 $\sim$ 85    & -45 $\sim$ 85    \\ \hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Potencia\\ máxima [W]\end{tabular}}                     & 20 $\pm$ 3\%     & 30 $\pm$ 3\%     \\ \hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Tensión a\\ potencia\\ máxima [V]\end{tabular}}         & 17.6             & 18               \\ \hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Corriente\\ a potencia\\ máxima [A]\end{tabular}}       & 1.14             & 1.67             \\ \hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Tensión a\\ circuito abierto\\ máxima [V]\end{tabular}} & 22.0             & 21.5             \\ \hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Corriente a\\ corto circuito\\ máxima [A]\end{tabular}} & 1.39             & 1.86             \\ \hline
-\end{tabular}
-\caption{Comparación entre paneles solares.}
-\end{table}
-
+\input{../Factibilidad/Tecnologica/Solucion.tex}
 
 \Subsubsection{DFMEA}
+\input{../Factibilidad/Tecnologica/DFMEA.tex}
 
 \Subsection{Factibilidad de tiempos}
 
 \Subsubsection{Planificación}
-(PERT y simulación de Montecarlo)
+\input{../Factibilidad/Tiempos/Planificacion.tex}
 
 \Subsubsection{Programación}
-(Gantt)
+\input{../Factibilidad/Tiempos/Programacion.tex}
+
 
 %\Subsection{Factibilidad económica}
 %(Mercado, costos, ciclo de vida, VAN, TIR)
@@ -190,4 +56,4 @@ Teniendo en cuenta esto se opta por utilizar el sensor \TBD.
 \Subsection{Factibilidad legal y responsabilidad civil}
 (regulaciones y licencias)
 
-\end{document}
+%\end{document}
