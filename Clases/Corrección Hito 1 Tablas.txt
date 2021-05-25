@@ -1,0 +1,13 @@
+ESPECIFICACIONES DE DISEÑO
+Eliminé:
+	Especificaciones funcionales:
+	- INT-FUN-07
+	- INT-FUN-12
+
+	Especificaciones de compatibilidad electromagnética:
+	- IMP-EMC-01
+
+	Especificaciones de seguridad:
+	- RAM-SEG-02
+	- RAM-SEG-04
+
