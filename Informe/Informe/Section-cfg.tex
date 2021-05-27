@@ -1,10 +1,26 @@
+\usepackage{titlesec}		%Para hacer las subsubsubsections
+
+%PICTURES AND TABLE INDEX:
+\newcommand{\Section}[1]{ \section{#1} 
+	\setcounter{figure}{0} \setcounter{table}{0} \renewcommand{\thetable}{\arabic{section}.\arabic{table}} \renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+}
+
+\newcommand{\Subsection}[1]{ \subsection{#1}
+	\setcounter{figure}{0} \setcounter{table}{0} \renewcommand{\thetable}{\arabic{section}.\arabic{subsection}.\arabic{table}} \renewcommand{\thefigure}{\arabic{section}.\arabic{subsection}.\arabic{figure}}
+}
+
+\newcommand{\Subsubsection}[1]{ \subsubsection{#1} 
+	\setcounter{figure}{0} \setcounter{table}{0} \renewcommand{\thetable}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.\arabic{table}} \renewcommand{\thefigure}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.\arabic{figure}}
+}
+
+%Definición de subsubsubsection:
 \titleclass{\subsubsubsection}{straight}[\subsection]
 
 \newcounter{subsubsubsection}[subsubsection]
 \renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
 
 \titleformat{\subsubsubsection}
-  {\normalfont\normalsize\bfseries\color{AzulInfo}}{\thesubsubsubsection}{1em}{}
+  {\normalfont\normalsize\bfseries\color{AzulInfo}}{\thesubsubsubsection}{1em}{}	%Color de subsubsubsection
 \titlespacing*{\subsubsubsection}
 {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
@@ -28,6 +44,13 @@
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{4}
 
+%Subsubsubsection:
 \newcommand{\Subsubsubsection}[1]{ \subsubsubsection{#1} 
 	\setcounter{figure}{0} \setcounter{table}{0} \renewcommand{\thetable}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.\arabic{subsubsubsection}.\arabic{table}} \renewcommand{\thefigure}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.\arabic{subsubsubsection}.\arabic{figure}}
 }
+
+%Colores a los nombres de las secciones:
+\chapterfont{\color{AzulInfo}}  % sets color of chapters
+\sectionfont{\color{AzulInfo}}  % sets color of sections
+\subsectionfont{\color{AzulInfo}}
+\subsubsectionfont{\color{AzulInfo}}

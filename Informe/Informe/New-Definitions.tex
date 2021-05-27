@@ -10,21 +10,6 @@
 \newcommand{\setparagraphsize}[2]{{\fontsize{#1}{6}\selectfont#2 \par}}		%Cambia el size de todo el parrafo
 \newcommand{\setlinesize}[2]{{\fontsize{#1}{6}\selectfont#2}}				%Cambia el font de una oración
 
-%PICTURES AND TABLE INDEX:
-\newcommand{\Section}[1]{ \section{#1} 
-	\setcounter{figure}{0} \setcounter{table}{0} \renewcommand{\thetable}{\arabic{section}.\arabic{table}} \renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
-}
-
-\newcommand{\Subsection}[1]{ \subsection{#1}
-	\setcounter{figure}{0} \setcounter{table}{0} \renewcommand{\thetable}{\arabic{section}.\arabic{subsection}.\arabic{table}} \renewcommand{\thefigure}{\arabic{section}.\arabic{subsection}.\arabic{figure}}
-}
-
-\newcommand{\Subsubsection}[1]{ \subsubsection{#1} 
-	\setcounter{figure}{0} \setcounter{table}{0} \renewcommand{\thetable}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.\arabic{table}} \renewcommand{\thefigure}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.\arabic{figure}}
-}
-
-\input{../Informe/Subsubsubsection.tex}
-
 %IMAGE IN TABLE:			%Ejemplo: \includeintable{.3}{ImagenesFactibilidad/pend}
 \newcommand{\includeintable}[2]{
 	\addvbuffer[2pt 2pt]{

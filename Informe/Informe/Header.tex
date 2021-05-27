@@ -8,7 +8,6 @@
 %https://ctan.dcc.uchile.cl/macros/latex/contrib/geometry/geometry.pdf
 
 %Paquetes varios:
-\usepackage{titlesec}		%Para hacer las subsubsubsections
 \usepackage{verbatimbox}
 
 %\usepackage{lipsum}			%LOREM IPSUM
@@ -63,7 +62,7 @@
     citecolor=AzulInfo,    
 }
 
-%Configuro el header y el footer:
+%Configuración del header y del footer:
 \usepackage{etoolbox}
 \pagestyle{fancy}
 \fancyhf{}
@@ -72,13 +71,9 @@
 \renewcommand{\headrulewidth}{0pt}
 \patchcmd{\footrule}{\hrule}{\color{AzulFoot}\hrule}{}{}
 
-\input{../Informe/Index-cgf.tex}
+\input{../Informe/Section-cfg.tex}
 
-%Pongo los colores a los nombres de las secciones:
-\chapterfont{\color{AzulInfo}}  % sets color of chapters
-\sectionfont{\color{AzulInfo}}  % sets color of sections
-\subsectionfont{\color{AzulInfo}}
-\subsubsectionfont{\color{AzulInfo}}
+\input{../Informe/Index-cgf.tex}
 
 %Items con bullets y no cuadrados
 \renewcommand{\labelitemi}{\textbullet }
