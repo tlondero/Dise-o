@@ -1,0 +1,41 @@
+%Pone las refrencias en el indice
+\usepackage[numbib, nottoc, notlot, notlof]{tocbibind}
+
+%Pone toc, lof y lot en colores y elijo el titulo de estos
+\addto\captionsspanish{
+	\renewcommand\contentsname{Contenidos}
+	\renewcommand\listfigurename{Lista de Figuras}
+	\renewcommand\listtablename{Lista de Tablas}
+}
+
+%Agrega TOC al indice
+\renewcommand{\tableofcontents}{
+	\stepcounter{section}
+	\addcontentsline{toc}{section}{\protect\numberline{\thesection}\textbf{Contenidos}}
+	\tableofcontents
+}
+
+%Agrega LOF al indice
+\renewcommand{\listoffigures}{
+	\stepcounter{section}
+	\addcontentsline{toc}{section}{\protect\numberline{\thesection}\textbf{Lista de Figuras}}
+	\listoffigures
+}
+
+%Agrega LOT al indice
+\renewcommand{\listoftables}{
+	\stepcounter{section}
+	\addcontentsline{toc}{section}{\protect\numberline{\thesection}\textbf{Lista de Tablas}}
+	\listoftables
+}
+
+%Indices: cambio la separación de los numeros para que entren tablas y fotos
+\usepackage{tocloft}
+\setlength{\cftfignumwidth}{1.35cm}  % change numwidth from figures in lof
+\setlength{\cfttabnumwidth}{1.35cm}  % change numwidth from tables in lot
+\renewcommand{\cfttoctitlefont}{\Large\bfseries\color{AzulInfo}}
+\renewcommand{\cftloftitlefont}{\Large\bfseries\color{AzulInfo}}
+\renewcommand{\cftlottitlefont}{\Large\bfseries\color{AzulInfo}}
+
+%Coloca lineas punteadas a las seciones en el TOC
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
