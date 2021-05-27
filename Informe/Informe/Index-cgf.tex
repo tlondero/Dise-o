@@ -8,22 +8,18 @@
 	\renewcommand\listtablename{Lista de Tablas}
 }
 
-%Agrega TOC al indice
-\renewcommand{\tableofcontents}{
+\newcommand{\MyIndex}{
+	%Agrega TOC al indice
 	\stepcounter{section}
 	\addcontentsline{toc}{section}{\protect\numberline{\thesection}\textbf{Contenidos}}
 	\tableofcontents
-}
 
-%Agrega LOF al indice
-\renewcommand{\listoffigures}{
+	%Agrega LOF al indice
 	\stepcounter{section}
 	\addcontentsline{toc}{section}{\protect\numberline{\thesection}\textbf{Lista de Figuras}}
 	\listoffigures
-}
 
-%Agrega LOT al indice
-\renewcommand{\listoftables}{
+	%Agrega LOT al indice
 	\stepcounter{section}
 	\addcontentsline{toc}{section}{\protect\numberline{\thesection}\textbf{Lista de Tablas}}
 	\listoftables
