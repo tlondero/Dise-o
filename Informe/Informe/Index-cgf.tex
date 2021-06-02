@@ -3,27 +3,27 @@
 
 %Pone toc, lof y lot en colores y elijo el titulo de estos
 \addto\captionsspanish{
-	\renewcommand\contentsname{\large \arabic{section}.\arabic{subsection}.\hspace{5mm}Contenidos}
-	\renewcommand\listfigurename{\large \arabic{section}.\arabic{subsection}.\hspace{5mm}Lista de Figuras}
-	\renewcommand\listtablename{\large \arabic{section}.\arabic{subsection}.\hspace{5mm}Lista de Tablas}
+	\renewcommand\contentsname{\hspace{2.5em}\fontsize{13}{6} \arabic{section}.\arabic{subsection}.\hspace{5mm}Contenidos}
+	\renewcommand\listfigurename{\hspace{2.5em}\fontsize{13}{6} \arabic{section}.\arabic{subsection}.\hspace{5mm}Lista de Figuras}
+	\renewcommand\listtablename{\hspace{2.5em}\fontsize{13}{6} \arabic{section}.\arabic{subsection}.\hspace{5mm}Lista de Tablas}
 }
 
 \newcommand{\MyIndex}{
 	\Section{Indice}
 
 	%Agrega TOC al indice
-	\stepcounter{subsection}
-	\addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}\textbf{Contenidos}}
+	\stepcounter{subsection}	
+	\addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}{Contenidos}}
 	\tableofcontents
 
 	%Agrega LOF al indice
 	\stepcounter{subsection}
-	\addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}\textbf{Lista de Figuras}}
+	\addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}{Lista de Figuras}}
 	\listoffigures
 
 	%Agrega LOT al indice
 	\stepcounter{subsection}
-	\addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}\textbf{Lista de Tablas}}
+	\addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}{Lista de Tablas}}
 	\listoftables
 }
 

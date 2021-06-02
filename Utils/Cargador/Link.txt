@@ -1,0 +1,14 @@
+Productos:
+com/en/parametricsearch/11503#/
+https://www.analog.com/en/products/adp5091.html
+https://www.analog.com/media/en/technical-documentation/data-sheets/3331fc.pdf
+
+https://e-peas.com/product/aem10941/
+
+https://ar.mouser.com/new/mide-technology/mide-ppa-piezoelectric-products/
+
+Data:
+https://www.analog.com/en/education/education-library/videos/4915391064001.html
+https://ar.mouser.com/applications/rf_energy_harvesting/
+https://www.digikey.com/en/articles/energy-harvesting-and-bluetooth-low-energy-designing-a-batteryless-beacon
+https://hackaday.com/2021/04/28/winners-of-hackadays-earth-day-contest-solar-lic-auto-return-parafoil-water-flowmeter/
