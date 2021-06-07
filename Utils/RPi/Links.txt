@@ -1,0 +1,8 @@
+RPi 4
+https://www.raspberrypi.org/products/raspberry-pi-4-model-b/specifications/
+
+RPi Zero
+https://www.raspberrypi.org/products/raspberry-pi-zero/
+
+RPi Compute Module
+https://www.raspberrypi.org/products/compute-module-4/?variant=raspberry-pi-cm4001000

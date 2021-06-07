@@ -1,0 +1,40 @@
+\Subsubsubsection{Sensores}
+
+Para el sensor de temperatura la primer opción a descartar es aquella que no cumple con el rango de temperaturas a medir, por lo que el Ds18b20 queda descartado a pesar de su bajo costo. Luego, de las opciones que quedan, todas son de un costo similar, sin embargo hay que tener en cuenta que para la termocupla se debe proporcionar una manera de medir la temperatura de referencia, la cual puede ser tanto una RTD como un IC, aumentando el costo de la termocupla. Tanto la TC como la RTD necesitan un circuito convertidor para poder medir directamente el valor de la temperatura con un micro controlador, mientras que los IC ofrecen directamente una salida digital.% La mejor precisión de la medición se da con una RTD, seguido por los IC y finalmente la TC.
+
+Una desventaja de la TC es que tiende a envejecer rápidamente. Si bien el dispositivo no se usará más de 3 meses seguidos, este podrá ser reutilizado, dandole mayor peso al factor del envejecimiento. El autocalientamiento también es contraproductivo en la medición de temperatura debido a que este puede alterar la misma si no es tenido en cuenta. Las TC no cuentan con este inconveniente debido a su principio de funcionamiento, mientras que con las otras opciones si lo es. Con la RTD este efecto depende directamente con la corriente que se suministra para la medición, y con los IC es un aspecto que es considerado por los diseñadores de los mismos.
+
+Por estas razones los candidatos a terminan siendo DHT-22 y la PT-100. Un punto favorable para la DHT-22 es que no necesita un circuito extra. Adicionalmente esta unidad cuenta con una medición de humedad, lo que brinda la posibilidad de usarlo también para dicha variable o como un complemento de otro sensor.
+
+En la elección para la medición de humedad, como primer criterio, se busca que pueda medir el rango entero de la humedad relativa y que cuente con una precisión considerable. Dadas estas consideraciones, se descarta el DHT-11 y AM-1001. Es así que de los dos restantes, se opta por el DHT-22 debido a que por un menor costo se obtienen mejores prestaciones. Teniendo en cuenta esto se utilizará tanto para la medición de temperatura y humedad el DHT-22.
+
+En cuanto a la luminosidad, principalmente se deberá asegurar el funcionamiento en el rango de temperatura en el cual operará el dispositivo, por lo cual el OPT-101 queda descartado. Además, se tiene en cuenta la potencia utilizada, el rango de medición de los sensores y el tipo de alimentación.
+
+La comunicación puede ser analógica en corriente para el TEMT-6000, pero este necesitará un amplificador de corriente o un convertidor para esta corriente a un nivel medible. Existen también otros sensores que tienen una salida analógica de tensión como el GL55-LM393 con un rango entre 0 y VCC. Este también provee con una salida digital, pero esta funciona como un schmitt trigger. Finalmente el BJ-1750 cuanta con una salida digital con el protocolo de comunicación I2C.
+
+Teniendo en cuenta esto se opta por utilizar el sensor \TBD.
+
+\Subsubsubsection{Almacenamiento}
+
+El factor principal para seleccionar la memoria SD a utilizar es el rango de temperaturas de operación. Es por este factor que se elije la SDSDQAF3-XI, ya que esta se encuentra en un rango seguro (mayor a las demás).
+
+Dado que se recolectará \TBD datos, se requiere emplear \TBD memorias, cuyas capacidades de almacenamiento de sean de \TBD GB.
+
+\Subsubsubsection{Comunicación}
+
+\Subsubsubsection{Microprocesadores}
+
+Para este módulo se opta por la Raspberry Pi Zero W, ya que posee Bluetooth BLE (Bluetooth Low Energy), es el dispositivo más económico y cuenta con soporte para micro SD.
+
+En cuanto las temperaturas de funcionamiento, este dispositivo se encuentra dentro del rango necesario. Además, los módulos Raspberry Pi trabajan entre 20 °C y 30 °C por encima de la temperatura ambiente debido a su autocalentamiento. También es sabido que los integrados R-Pi pueden llegar a soportar temperaturas extremas, tales como las que se dan en la Antártida \cite{ref:Penguin}.
+
+\Subsubsubsection{Batería}
+
+Para alimentar tanto a los sensores como a la R-Pi se requieren \TBD. Con la batería \TBD se consigue la especificación mencionada.
+
+\Subsubsubsection{Cargador}
+
+
+\Subsubsubsection{Alimentación}
+
+Para poder abastecer a la batería seleccionada, con un panel \TBD se puede proveer la potencia requerida.

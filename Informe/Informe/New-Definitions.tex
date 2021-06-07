@@ -10,24 +10,9 @@
 \newcommand{\setparagraphsize}[2]{{\fontsize{#1}{6}\selectfont#2 \par}}		%Cambia el size de todo el parrafo
 \newcommand{\setlinesize}[2]{{\fontsize{#1}{6}\selectfont#2}}				%Cambia el font de una oración
 
-%PICTURES AND TABLE INDEX:
-\newcommand{\Section}[1]{ \section{#1} 
-	\setcounter{figure}{0} \setcounter{table}{0} \renewcommand{\thetable}{\arabic{section}.\arabic{table}} \renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
-}
-
-\newcommand{\Subsection}[1]{ \subsection{#1}
-	\setcounter{figure}{0} \setcounter{table}{0} \renewcommand{\thetable}{\arabic{section}.\arabic{subsection}.\arabic{table}} \renewcommand{\thefigure}{\arabic{section}.\arabic{subsection}.\arabic{figure}}
-}
-
-\newcommand{\Subsubsection}[1]{ \subsubsection{#1} 
-	\setcounter{figure}{0} \setcounter{table}{0} \renewcommand{\thetable}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.\arabic{table}} \renewcommand{\thefigure}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.\arabic{figure}}
-}
-
-\input{../Informe/Subsubsubsection.tex}
-
 %IMAGE IN TABLE:			%Ejemplo: \includeintable{.3}{ImagenesFactibilidad/pend}
 \newcommand{\includeintable}[2]{
-	\addvbuffer[3pt 0pt]{
+	\addvbuffer[2pt 2pt]{
     	\begin{minipage}{#1\textwidth}
         	\includegraphics[width=\linewidth]{#2}
     	\end{minipage}
@@ -41,7 +26,13 @@
 	\end{center}
 }
 
-\newcommand{\lnote}[1]{{\fontsize{20}{6}\selectfont\textcolor{green}{#1}}}	%Notas pequeñas
+\newcommand{\lnote}[1]{{\fontsize{14}{6}\selectfont\textcolor{green}{#1}}}	%Notas pequeñas
+
+\newcommand{\observacion}[2]{  \ifnumequal{1}{#1}{\fontsize{14}{6}\selectfont\textcolor{orange}{\textbf{Observación: #2}} \newline}{  }  }
+
+\newcommand{\correction}[2]{ \colorbox{green}{\parbox{15cm}{#1}} \\ \colorbox{red}{\parbox{15cm}{#2}} }
+
+\newcommand{\cbox}[1]{ \colorbox{green}{\parbox{15cm}{#1}} }
 
 \newcommand{\TBD}{\textcolor{red}{(TBD) }}
 \newcommand{\tbd}{\textcolor{red}{(TBD) }}
