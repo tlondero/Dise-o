@@ -15,3 +15,5 @@ https://www.analog.com/en/education/education-library/videos/4915391064001.html
 https://ar.mouser.com/applications/rf_energy_harvesting/
 https://www.digikey.com/en/articles/energy-harvesting-and-bluetooth-low-energy-designing-a-batteryless-beacon
 https://hackaday.com/2021/04/28/winners-of-hackadays-earth-day-contest-solar-lic-auto-return-parafoil-water-flowmeter/
+
+https://pdfs.semanticscholar.org/4874/979161044cd3ceb3048c20277e67542e1a74.pdf
