@@ -11,7 +11,7 @@ En el caso de la medición de temperatura, se valoraron diversas tecnologías qu
 \textbf{Costo [ARS]}                                                           & 700	& 780	& 200	& 740	\\ \hline
 \textbf{Tipo de salida}                                                  & Analógico                                                                                 & Analógico                                                                                                                    & Digital                                                          & Digital          \\ \hline
 
-\textbf{\begin{tabular}[c]{@{}c@{}}Rango de\\ operación [°C]\end{tabular}}                                              & -40 $\sim$ 1200                                                                        & -50 $\sim$ 200  & -10 $\sim$ 85 & -40 $\sim$ 80 \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Temperatura de\\ operación [°C]\end{tabular}}                                              & -40 $\sim$ 1200                                                                        & -50 $\sim$ 200  & -10 $\sim$ 85 & -40 $\sim$ 80 \\ \hline
 \textbf{\begin{tabular}[c]{@{}c@{}}Interfaz de\\ conexionado\end{tabular}}                                                      & \begin{tabular}[c]{@{}c@{}}Se debe\\ proporcionar\\ un circuito\\ amplificador\end{tabular} & \begin{tabular}[c]{@{}c@{}}Se debe \\ proporcionar\\  un circuito\\  convertidor\\  de resistencia\\  a tensión\end{tabular} & -                                                                & -                \\ \hline
 \textbf{Presición [°C]}                                                       & $\pm$ 1.5	& $\pm$ 0.1	& $\pm$ 0.5	& $\pm$ 0.5	\\ \hline
 
@@ -47,7 +47,7 @@ En la medición del nivel de luminosidad se puede optar por diversos caminos. Ex
 \hline
 \textbf{\begin{tabular}[c]{@{}c@{}}Aspectos\\ comparativos\end{tabular}}              & \textbf{\href{https://www.mouser.com/datasheet/2/348/bh1750fvi-e-186247.pdf}{BH-1750}}  & \textbf{\href{https://www.vishay.com/docs/81579/temt6000.pdf}{TEMT-6000}}	& \textbf{\href{https://www.ti.com/lit/ds/symlink/opt101.pdf}{OPT-101}}                                              & \textbf{\href{https://www.alldatasheet.es/view.jsp?Searchword=GL55}{GL55-LM393}} \\ \hline
 \textbf{Costo [ARS]}	& 230 	& 340	& 330	& 190	\\ \hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Rango de \\ temperatura\\  de operación [°C]\end{tabular}} & -40 $\sim$ 85  & -40 $\sim$ 85 & 0 $\sim$ 70 & -30 $\sim$ 70 \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Temperatura de\\ operación [°C]\end{tabular}} & -40 $\sim$ 85  & -40 $\sim$ 85 & 0 $\sim$ 70 & -30 $\sim$ 70 \\ \hline
 \textbf{\begin{tabular}[c]{@{}c@{}}Potencia\\ disipada [mW]\end{tabular}}                                                            & 260 	& 100 	& \TBD 	& 75 	\\ \hline
 \textbf{Tipo de salida}                                                               & I2C               & \begin{tabular}[c]{@{}c@{}}Analógica\\ (Corriente)\end{tabular}                 & \begin{tabular}[c]{@{}c@{}}Analógica\\ (Tensión)\end{tabular} &\begin{tabular}[c]{@{}c@{}}Analógica \\ Digital\end{tabular}  \\ \hline
 \textbf{Aplicación}                                                                   & -                 & \begin{tabular}[c]{@{}c@{}}Necesita un\\amplificador\\ de corriente\end{tabular} & -                                                             & -                   \\ \hline
@@ -59,24 +59,23 @@ En la medición del nivel de luminosidad se puede optar por diversos caminos. Ex
 \end{table}
 
 
-\Subsubsubsection{Imagenes}
-Para la obtención de imagenes y teniendo en cuenta la tecnología utilizada para la unidad de procesamiento, se encontraron diversos modulos de camara que se pueden usar:
-
-
+\Subsubsubsection{Imágenes}
+Para la obtención de captura imágenes y teniendo en cuenta la tecnología utilizada para la unidad de procesamiento, se encontraron diversos módulos de cámara que se pueden usar:
 
 \begin{table}[]
 \centering
 \begin{tabular}{|c|c|c|c|}
 \hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Aspectos\\ comparativos\end{tabular}} & \textbf{RPi-CMOD-V1}             & \textbf{RPi-CMOD-V2}             & \textbf{Rpi-HQC}                 \\ \hline
-\textbf{Costo}                                                           & 25 USD                           & 25 USD                           & 50 USD                           \\ \hline
-\textbf{Tamaño {[}mm{]}}                                                 & 25x24x9                          & 25x24x9                          & 38x38x18.4                       \\ \hline
-\textbf{Resolución camara}                                               & 5MP                              & 8MP                              & 12.3MP                           \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Aspectos\\ comparativos\end{tabular}} & \textbf{\href{https://cdn.sparkfun.com/datasheets/Dev/RaspberryPi/ov5647_full.pdf}{RPi-CMOD-V1}}             & \textbf{\href{https://www.arducam.com/sony/imx477/}{RPi-CMOD-V2}}             & \textbf{\href{http://www.opensourceinstruments.com/Electronics/Data/IMX219PQ.pdf}{RPi-HQC}}                 \\ \hline
+\textbf{Costo [USD]}                                                     & 25		                        & 25 	                           & 50 	                          \\ \hline
+\textbf{Tamaño [mm]}                                                 	 & 25 x 24 x 9                      & 25 x 24 x 9                      & 38 x 38 x 18.4                   \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Resolución de la\\ cámara [MP]\end{tabular}}                                          & 5	                            & 8	                               & 12.3                             \\ \hline
 \textbf{Integración Linux}                                               & V4L2 driver                      & V4L2 driver                      & V4L2 driver                      \\ \hline
 \textbf{C API}                                                           & OpenMAX IL y otras               & OpenMAX IL y otras               & -                                \\ \hline
-\textbf{Peso {[}g{]}}                                                    & 3                                & 3.4                              & 53                               \\ \hline
+\textbf{Peso [g]}                                                        & 3                                & 3.4                              & 53                               \\ \hline
 \textbf{Sensor}                                                          & OmniVision OV5647                & Sony IMX219                      & Sony IMX477                      \\ \hline
-\multicolumn{1}{|l|}{\textbf{Rango de temperaturas °C}}                  & \multicolumn{1}{l|}{-25$\sim$80} & \multicolumn{1}{l|}{-25$\sim$80} & \multicolumn{1}{l|}{-25$\sim$80} \\ \hline
-\textbf{Imagen}                                                          &  \includeintable{.1}{ImagenesFactibilidad/RPICAMV1}                    & \includeintable{.1}{ImagenesFactibilidad/RPICAMV2}                     & \includeintable{.1}{ImagenesFactibilidad/RPIHQCAM}                \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Temperatura de\\ operación [°C]\end{tabular}}                & \multicolumn{1}{c|}{-25$\sim$80} & \multicolumn{1}{c|}{-25$\sim$80} & \multicolumn{1}{c|}{-25$\sim$80} \\ \hline
+\textbf{Imagen}                                                          & \includeintable{.1}{ImagenesFactibilidad/RPICAMV1}                  & \includeintable{.1}{ImagenesFactibilidad/RPICAMV2}                     & \includeintable{.1}{ImagenesFactibilidad/RPIHQCAM}                \\ \hline
 \end{tabular}
+\caption{Comparación entre cámaras.}
 \end{table}
