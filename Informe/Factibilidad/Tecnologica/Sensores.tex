@@ -64,18 +64,19 @@ Para la obtención de captura imágenes y teniendo en cuenta la tecnología util
 
 \begin{table}[]
 \centering
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|}
 \hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Aspectos\\ comparativos\end{tabular}} & \textbf{\href{https://cdn.sparkfun.com/datasheets/Dev/RaspberryPi/ov5647_full.pdf}{RPi-CMOD-V1}}             & \textbf{\href{https://www.arducam.com/sony/imx477/}{RPi-CMOD-V2}}             & \textbf{\href{http://www.opensourceinstruments.com/Electronics/Data/IMX219PQ.pdf}{RPi-HQC}}                 \\ \hline
-\textbf{Costo [USD]}                                                     & 25		                        & 25 	                           & 50 	                          \\ \hline
-\textbf{Tamaño [mm]}                                                 	 & 25 x 24 x 9                      & 25 x 24 x 9                      & 38 x 38 x 18.4                   \\ \hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Resolución de la\\ cámara [MP]\end{tabular}}                                          & 5	                            & 8	                               & 12.3                             \\ \hline
-\textbf{Integración Linux}                                               & V4L2 driver                      & V4L2 driver                      & V4L2 driver                      \\ \hline
-\textbf{C API}                                                           & OpenMAX IL y otras               & OpenMAX IL y otras               & -                                \\ \hline
-\textbf{Peso [g]}                                                        & 3                                & 3.4                              & 53                               \\ \hline
-\textbf{Sensor}                                                          & OmniVision OV5647                & Sony IMX219                      & Sony IMX477                      \\ \hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Temperatura de\\ operación [°C]\end{tabular}}                & \multicolumn{1}{c|}{-25$\sim$80} & \multicolumn{1}{c|}{-25$\sim$80} & \multicolumn{1}{c|}{-25$\sim$80} \\ \hline
-\textbf{Imagen}                                                          & \includeintable{.1}{ImagenesFactibilidad/RPICAMV1}                  & \includeintable{.1}{ImagenesFactibilidad/RPICAMV2}                     & \includeintable{.1}{ImagenesFactibilidad/RPIHQCAM}                \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Aspectos\\ comparativos\end{tabular}} & \textbf{\href{https://cdn.sparkfun.com/datasheets/Dev/RaspberryPi/ov5647_full.pdf}{RPi-CMOD-V1}}             & \textbf{\href{https://www.arducam.com/sony/imx477/}{RPi-CMOD-V2}}             & \textbf{\href{http://www.opensourceinstruments.com/Electronics/Data/IMX219PQ.pdf}{RPi-HQC}}  & \textbf{\href{https://www.digikey.com/catalog/es/partgroup/zero-spy-camera-for-raspberry-pi-zero-board/70309}{RPi-ZEROC}                \\ \hline
+\textbf{Costo [USD]}                                                     & 25		                        & 25 	                           & 50 	& 20                          \\ \hline
+\textbf{Tamaño [mm]}                                                 	 & 25 x 24 x 9                      & 25 x 24 x 9                      & 38 x 38 x 18.4     &  8.6 x 8.6 x 5.2            \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Resolución de la\\ cámara [MP]\end{tabular}}                                          & 5	                            & 8	                               & 12.3   & 5                          \\ \hline
+\textbf{Integración Linux}                                               & V4L2 driver                      & V4L2 driver                      & V4L2 driver& V4L2 driver                      \\ \hline
+\textbf{C API}                                                           & OpenMAX IL y otras               & OpenMAX IL y otras               & -         &-                       \\ \hline
+\textbf{Peso [g]}                                                        & 3                                & 3.4                              & 53                           &1.1    \\ \hline
+\textbf{Sensor}                                                          & OmniVision OV5647                & Sony IMX219                      & Sony IMX477  &OV5647                    \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Temperatura de\\ operación [°C]\end{tabular}}                & \multicolumn{1}{c|}{-25$\sim$80} & \multicolumn{1}{c|}{-25$\sim$80} & \multicolumn{1}{c|}{-25$\sim$80} & \multicolumn{1}{c|}{-25$\sim$80} \\ \hline
+\textbf{Imagen}                                                          & \includeintable{.1}{ImagenesFactibilidad/RPICAMV1}                  & \includeintable{.1}{ImagenesFactibilidad/RPICAMV2}                     & \includeintable{.1}{ImagenesFactibilidad/RPIHQCAM}         &
+\includeintable{.1}{ImagenesFactibilidad/RPIZEROCAM}       \\ \hline
 \end{tabular}
 \caption{Comparación entre cámaras.}
 \end{table}
