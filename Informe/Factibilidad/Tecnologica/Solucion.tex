@@ -2,7 +2,7 @@
 
 Para el sensor de temperatura la primer opción a descartar es aquella que no cumple con el rango de temperaturas a medir, por lo que el Ds18b20 queda descartado a pesar de su bajo costo. Luego, de las opciones que quedan, todas son de un costo similar, sin embargo hay que tener en cuenta que para la termocupla se debe proporcionar una manera de medir la temperatura de referencia, la cual puede ser tanto una RTD como un IC, aumentando el costo de la termocupla. Tanto la TC como la RTD necesitan un circuito convertidor para poder medir directamente el valor de la temperatura con un micro controlador, mientras que los IC ofrecen directamente una salida digital.% La mejor precisión de la medición se da con una RTD, seguido por los IC y finalmente la TC.
 
-Una desventaja de la TC es que tiende a envejecer rápidamente. Si bien el dispositivo no se usará más de 3 meses seguidos, este podrá ser reutilizado, dandole mayor peso al factor del envejecimiento. El autocalientamiento también es contraproductivo en la medición de temperatura debido a que este puede alterar la misma si no es tenido en cuenta. Las TC no cuentan con este inconveniente debido a su principio de funcionamiento, mientras que con las otras opciones si lo es. Con la RTD este efecto depende directamente con la corriente que se suministra para la medición, y con los IC es un aspecto que es considerado por los diseñadores de los mismos.
+Una desventaja de la TC es que tiende a envejecer rápidamente. Si bien el dispositivo no se usará más de 3 meses seguidos, este podrá ser reutilizado, dándole mayor peso al factor del envejecimiento. El autocalientamiento también es contraproductivo en la medición de temperatura debido a que este puede alterar la misma si no es tenido en cuenta. Las TC no cuentan con este inconveniente debido a su principio de funcionamiento, mientras que con las otras opciones si lo es. Con la RTD este efecto depende directamente con la corriente que se suministra para la medición, y con los IC es un aspecto que es considerado por los diseñadores de los mismos.
 
 Por estas razones los candidatos a terminan siendo DHT-22 y la PT-100. Un punto favorable para la DHT-22 es que no necesita un circuito extra. Adicionalmente esta unidad cuenta con una medición de humedad, lo que brinda la posibilidad de usarlo también para dicha variable o como un complemento de otro sensor.
 
@@ -14,7 +14,8 @@ La comunicación puede ser analógica en corriente para el TEMT-6000, pero este 
 
 Teniendo en cuenta esto se opta por utilizar el sensor \TBD.
 
-Para la cámara que obtendrá las imagenes se tuvo en cuenta fundamentalmente la relación precio-resolución de la cámara,  al igual que la integración con Linux y el factor de contar con una API para el lenguaje C. Por lo que la RPi-CMOD-V2 fue el seleccionado
+Finalmente, para la cámara que obtendrá las imágenes, se tuvo en cuenta fundamentalmente la relación precio-resolución de la cámara, al igual que la integración con Linux y el factor de contar con una API para el lenguaje C. Por lo que la RPi-CMOD-V2 fue el seleccionado.
+
 \Subsubsubsection{Almacenamiento}
 
 El factor principal para seleccionar la memoria SD a utilizar es el rango de temperaturas de operación. Es por este factor que se elije la SDSDQAF3-XI, ya que esta se encuentra en un rango seguro (mayor a las demás).

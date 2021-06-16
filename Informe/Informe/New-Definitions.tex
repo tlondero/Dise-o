@@ -28,11 +28,7 @@
 
 \newcommand{\lnote}[1]{{\fontsize{14}{6}\selectfont\textcolor{green}{#1}}}	%Notas pequeñas
 
-\newcommand{\observacion}[2]{  \ifnumequal{1}{#1}{\fontsize{14}{6}{\selectfont\textcolor{orange}{\textbf{Observación: #2}} \newline}}{  }  }
-
-\newcommand{\correction}[2]{ \colorbox{green}{\parbox{15cm}{#1}} \\ \colorbox{red}{\parbox{15cm}{#2}} }
-
-\newcommand{\cbox}[1]{ \colorbox{green}{\parbox{15cm}{#1}} }
+\newcommand{\observacion}[2]{  \ifnumequal{1}{#1}{ { \todo[inline,backgroundcolor=red!25,bordercolor=red!100]{\textbf{Observación: #2}} } }{  }  }
 
 \newcommand{\TBD}{\textcolor{red}{(TBD) }}
 \newcommand{\tbd}{\textcolor{red}{(TBD) }}
