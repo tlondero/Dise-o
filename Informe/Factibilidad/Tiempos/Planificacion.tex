@@ -1,14 +1,17 @@
-Se procede a presentar un cuadro con las tareas a realizar. Donde se observa tanto el tiempo mas probable como el optimista, y el pesimista.Donde en la tabla la duración se encuentra en \textit{días} de 8 horas cada uno.
+Se procede a presentar un cuadro con las tareas a realizar. En la siguiente tabla se observa el tiempo mas probable, el optimista y el pesimista, para tener un análisis más real de la duración.
+
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline
-\textbf{N°} & \textbf{Nombre de tarea}                & \textbf{Duracion Optimista} & \textbf{Duración} & \textbf{Duración pesimista} & \multicolumn{1}{l|}{\textbf{Predecesora}} \\ \hline
-1           & Detectar Necesidad                      & 1                           & 3           & 4                           & -                                         \\ \hline
+\textbf{N°} & \textbf{Nombre de tarea}                & \textbf{\begin{tabular}[c]{@{}c@{}}Duracion\\ Optimista\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Duración\\ Media\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Duración\\ Pesimista\end{tabular}} & \textbf{Predecesora} \\ \hline
+1           & Detectar Necesidad                      & 1                           & 3           		& 4                           & -                                         \\ \hline
 2           & Definir el alcance                      & 2                           & 3                 & 4                           & 1                                         \\ \hline
 3           & Antecedentes y Contexto                 & 1                           & 2                 & 3                           & 1                                         \\ \hline
-4           &  Reuniones con cliente             & 0.25                        & 0.25              & 0.25                        & 1                                         \\ \hline
-5           & definir objetivos de diseño             & 1                           & 2                 & 5                           & 2,3                                       \\ \hline
+
+4           & Reuniones con cliente             	  & 0.25                        & 0.25              & 0.25                        & 1                                         \\ \hline
+5           & Definir objetivos de diseño             & 1                           & 2                 & 5                           & 2,3                                       \\ \hline
+
 6           & Definir requerimientos                  & 4                           & 5                 & 8                           & 4,5                                       \\ \hline
 7           & Definir Especificaciones                & 3                           & 5                 & 8                           & 5                                         \\ \hline
 8           & Planes de validacion                    & 3                           & 5                 & 8                           & 11                                        \\ \hline
@@ -30,6 +33,8 @@ Se procede a presentar un cuadro con las tareas a realizar. Donde se observa tan
 24          & Validación de prototipo                 & 19                          & 20                & 21                          & 23                                        \\ \hline
 25          & Estudio de confiabilidad                & 6                           & 10                & 13                          & 24                                        \\ \hline
 \end{tabular}
+\caption{Actividades a realizar en el proyecto.}
+\label{tab:tareas}
 \end{table}
 
 
