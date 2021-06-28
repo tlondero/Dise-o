@@ -1,6 +1,4 @@
-
-
-Se produjo el diagrama de Gantt acorde a la tabla recién mostrada, y se marcó el camino crítico en rojo.
+Se realizo un diagrama de Gantt acorde a la Tabla (\ref{tab:tareas}). En este se marcó el camino crítico en rojo.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\linewidth]{ImagenesFactibilidad/project}
@@ -8,20 +6,24 @@ Se produjo el diagrama de Gantt acorde a la tabla recién mostrada, y se marcó 
 	\caption{Diagrama de Gantt del proyecto.}
 \end{figure}
 
-Luego se realizó una simulación de montecarlo utilizando la distribución $\beta$ para las variables aleatorias, obteniendo el siguiente gráfico donde se ve la probabilidad de terminar el proyecto en un intervalo de $1461 \ \sim \ 1937 $ horas con una probabilidad del 95$\%$
+Luego se realizó una simulación de Montecarlo utilizando la distribución $\beta$ para las variables aleatorias, obteniendo como resultado el análisis plasmado en la Figura (\ref{fig:montecarlo_tiempos}).
+
+En este gráfico se ve la probabilidad de terminar el proyecto en un intervalo de entre 1461 a 1937 horas, con una probabilidad del 95\%. Esta distribución es el lapso de tiempo entre que se comienza el proyecto y se termina, a través del camino crítico.
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\linewidth]{ImagenesFactibilidad/montecarlo}
+	\caption{Simulación de Montecarlo.}	
 	\label{fig:montecarlo_tiempos}
-	\caption{Simulación de montecarlo.}
 \end{figure}
 
-Esta distribución es el lapso de tiempo entre que se comienza el proyecto y se termina, a travez del camino crítico. 
-La cantidad de horas de ingeniería por ingeniero se muestran a continuación, teniendo en cuenta la paralelización de actividades y que se dispone de 4 trabajadores.
+
+A continuación se muestran la cantidad de horas de ingeniería por ingeniero. Para obtener los resultados de la Figura (\ref{fig:montecarlo_tiempos_ing}), se tuvieron cuenta la paralelización de actividades y la disponibilidad de 4 trabajadores.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.5\linewidth]{ImagenesFactibilidad/montecarlo_tiempo_largo}
+	\includegraphics[width=0.5\linewidth]{ImagenesFactibilidad/montecarlo_tiempo_largo}	
+	\caption{Simulación de Montecarlo para tiempo de ingeniería.}
 	\label{fig:montecarlo_tiempos_ing}
-	\caption{Simulación de montecarlo para tiempo de ingeniería.}
 \end{figure}
-Se puede observar que el timepo total de horas de ingeniería corresponde a un rango entre aproximadamente 6800 $\sim$ 7400 horas.
+
+Se puede observar que el tiempo total de horas de ingeniería corresponde a un rango entre aproximadamente 6800 a 7400 horas.
