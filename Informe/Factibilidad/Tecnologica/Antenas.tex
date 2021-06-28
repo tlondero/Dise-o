@@ -1,3 +1,43 @@
+Si se parte de la ecuación del campo magnético en el eje azimutal de un dipolo de hertz, se tiene que
+\begin{equation}
+E_\theta = -\frac{\eta}{4\pi}I \cdot \Delta L \cdot k^2 \cdot sin\theta \cdot e^{-jkr} \left[ \frac{1}{jkr}+\left( \frac{1}{jkr}\right)^2 + \left(\frac{1}{jkr}\right)^3 \right]
+\end{equation}
+y los últimos tres términos se denominan, en orden de aparición, término de campo lejano, campo cercano y campo reactivo. Como las distancias a la cual se debe transmitir potencia en la solución es de entre 32 y 64cm y el término de campo lejano depende únicamente de la inversa de la distancia, este será el cual más efecto tenga sobre la transmisión de potencia. 
+
+El campo lejano es utilizado para realizar todo tipo de telecomunicaciones hoy en día, por lo que nos centraremos en analizar la factibilidad del uso de antenas como nexo entre el nido, el campo electromagnético y la mochila del ave.
+
+Para analizar la potencia recibida en la antena receptora, la cual estará montada en la mochila, se realiza el balance de potencias del circuito electromagnético.
+
+\begin{equation}
+P_r[dBm] = P_t[dBm] + Gt[dB] + G_r[dB] - L_{bf}[dB] - L_{cab}[dB] - L_{roe}[dB] - L_{r}[dB]
+\end{equation}
+
+donde $P_r$ es la potencia recibida en la antena receptora, $P_t$ la potencia emitida por la antena transmisora, $G_t$ la ganancia de la antena transmisora, $G_r$ la ganancia de la antena receptora, $L_{bf}$ las péridas por espacio libre, $L_{cab}$ las pérdidas en los cables de ambas antenas, $L_{roe}$ las pérdidas por retorno en ambas antenas, y $L_{r}$ las pérdidas por desacople entre las líneas de transmisión y las antenas.
+
+Para el caso de la pérdida por espacio libre, esta se puede calcular como
+
+\begin{equation}
+L_{bf} = 32.5dB + 20log_{10}f[MHz]+20log_{10}R[km]
+\end{equation}
+
+mientras que el resto de los datos se puede obtener por medio de la datasheet o ensayos de las antenas, exceptuando la potencia a ser calculada y las pérdidas por desacople, las cuales dependen constructivamente del diseño de la líneas de transmisión que conectan con las antenas.
+
+Para realizar las comparaciones entre antenas transmisoras, se tuvieron en cuenta las siguientes restricciones:
+\begin{itemize}
+\item \textbf{Dimensiones:} La antena transmisora deberá ser colocada en la bóveda del nido, dado que ese es el único lugar donde se puede colocar electrónica sin que esta sea perturbada por las aves y vice versa. El volumen de la bóveda se puede aproximar a un cilindro macizo chato de diámetro entre 7.9 y 9.7cm y aproximadamente 5cm de altura, por lo que las dimensiones de la antena emisora estarán acotadas por estos valores.
+\item \textbf{Directividad:} Se quiere que la potencia enviada a la antena se transforme en radiación electromagnética que llegue a la mochila del ave, por lo que radiación que no sea dirigida directamente hacia el fondo del nido será potencia desperdiciada. Es por esto que se quiere una alta directividad en la antena emisora.
+\item \textbf{Potencia Máxima:} Como las pérdidas en el circuito electromagnético son grandes, una muy baja parte de la potencia enviada a la antena transmisora formará parte de la potencia entregada a las baterías de la mochila, por lo que para recibir la potencia necesaria, se debe transmitir en el orden de los watts. Es por esto que la potencia máxima es una especificación relevante al momento de decidir entre soluciones.
+\end{itemize}
+mientras que para el caso de las antenas receptoras, se tuvieron en cuenta las siguientes restricciones:
+\begin{itemize}
+\item \textbf{Eficiencia:} Esta será la especificación más importante y es la que determinará la factibilidad de la solución. Se requiere una elevada eficiencia para lograr transmitir a las baterías la potencia recibida por el campo electromagnético.
+\item \textbf{Lóbulo isotrópico:} Como se desconoce cuál será la posición del ave dentro del nido, se requiere que el lóbulo de radiación de la antena receptora sea lo más isotrópico posible, garantizando una recepción de potencia uniforme sin importar la posición del ave.
+\item \textbf{Peso:} El ave no puede cargar con más de un cierto porcentaje de su propio peso, por lo que minimizar esta especificación es crucial.
+\item \textbf{Dimensiones:} Es necesario no perturbar al ave con la mochila. Esto requiere que la antena receptora posea las mínimas dimensiones posibles. Sin embargo, como la banda a utilizar será la de $915MHz$ y un cuarto de onda en esta frecuencia es alrededor de $8cm$, existe una relación de compromiso entre las dimensiones de la antena receptora y la eficiencia de esta.
+\end{itemize}
+
+Finalmente, una restricción a tener en cuenta para ambas antenas será el costo.
+
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|c|}
@@ -49,7 +89,7 @@
 \textbf{ROE}                                                                & $\leq$ 1.2                                                                                           & 1.5                                                                                   & \multicolumn{1}{c|}{1.4}                               		                                                                    \\ \hline
 \textbf{Peso [gr]}                                                          & 13.2                                                                                               & 1.5                                                                                     & \multicolumn{1}{c|}{0.2}                                                  		                                                    \\ \hline
 \textbf{Imagen}                                                             & \includeintable{.1}{ImagenesFactibilidad/ANTR1}                                                    & \includeintable{.1}{ImagenesFactibilidad/ANTR2}                                         & \multicolumn{1}{c|}{\includeintable{.1}{ImagenesFactibilidad/ANTR3}}           		                                            \\ \hline
-\textbf{Lóbulo}                                                             & \includeintable{.1}{ImagenesFactibilidad/LOBR1}                                                    & \includeintable{.1}{ImagenesFactibilidad/LOBR2}                                         & \multicolumn{1}{c|}{"Omnidireccional"}                                                 		                                    \\ \hline
+\textbf{Lóbulo}                                                             & \includeintable{.1}{ImagenesFactibilidad/LOBR1}                                                    & \includeintable{.1}{ImagenesFactibilidad/LOBR2}                                         & \multicolumn{1}{c|}{\quotes{Omnidireccional}}                                                 		                                    \\ \hline
 \end{tabular}
 \caption{Comparación entre antenas receptoras (Parte 1).}
 \end{table}
