@@ -4,6 +4,12 @@
 
 \Subsubsection{Carga por Acoplamiento Magnético}
 
+La transmisión inalámbrica de potencia por acoplamiento magnético se basa en generar un campo magnético al hacer circular corriente por un arreglo de bobinas gracias a la Ley de Ampere. Este campo magnético es captado por una o más bobinas receptoras las cuales generan a causa de este una fuerza electromotriz según la Ley de Faraday. De esta manera, se genera un sistema que actúa como transformador, utilizando como reluctancia al aire que separa ambas bobinas.
+
+La eficiencia en la transmisión de energía de este método es alta, pero depende en gran medida por el factor de acople entre ambas bobinas. Este factor de acople disminuye con el cubo de la inversa de la distancia entre bobinas y es también de suma importancia tener una buena alineación entre ellas.
+
+Como las distancias a las que la transmisión se debe efectuar son de entre 32 y 64cm y no se puede garantizar alineación entre bobinas al estar sujeto al comportamiento impredecible del ave, se descarta este método como solución.
+
 \Subsubsection{Carga por Radiofrecuencia}
 
 Si se parte de la ecuación del campo magnético en el eje azimutal de un dipolo de hertz, se tiene que
@@ -62,7 +68,7 @@ Se puede observar que las pérdidas de espacio libre aumentan mediante crece la 
 Se decidió utilizar la banda de $915MHz$ por las siguientes razones:
 \begin{itemize}
 \item La zona de transición ocurre entre $32.8cm$ y $65.6cm$ que concuerda con las distancias mínimas y máximas entre emisor y receptor. Si bien no estaremos trabajando en campo lejano, esto no acarrea problemas, ya que hay basta cantidad de antecedentes del uso de esta zona por dispositivos de tecnología RFID.
-\item Esta frecuencia pertenece a la banda ISM, la cual está reservada para propósitos industriales, científicos o médicos, excluyendo las aplicaciones de telecomunicaciones\cite{ref:ITUISM}, limitadas a la Región 2 definida por la ITU como las Américas\cite{ref:ITUREGION}.
+\item Esta frecuencia pertenece a la banda ISM, la cual está reservada para propósitos industriales, científicos o médicos, excluyendo las aplicaciones de telecomunicaciones\cite{ref:ITUISM}, limitadas a la Región 2 definida por la ITU como América\cite{ref:ITUREGION}.
 \end{itemize}
  
 \Subsubsection{Condiciones de Borde}
