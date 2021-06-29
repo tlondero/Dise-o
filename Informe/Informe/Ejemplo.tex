@@ -1,0 +1,81 @@
+\input{Header.tex}
+
+\begin{document}
+
+\def\PrimerObs{1}
+\def\SegundaObs{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%		Caratula		%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setmainfont{Avenir LT Std 55 Roman}
+\input{Utils/Caratula_1.tex}
+
+\input{Utils/Caratula_2.tex}
+
+\setmainfont{Calibri}
+\input{Utils/Caratula_3.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%			Indice				%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\MyIndex
+
+\hypersetup{linkcolor=AzulInfo}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%			Informe				%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\note{Este archivo sirve como guía/tutorial:}
+
+Se crearon varios comandos útiles para desarrollar el informe, todos se encuentran en el archivos \quotes{New-Definitions.tex}. En este mismo archivo se muestran ejemplos de como funcionan la mayoría.
+
+Se sigue una estructura donde cada sección es un archivo distinto. Viendo este documento, el \quotes{Header.tex} y las demás carpetas se puede replicar.
+
+\note{PARA PODER COMPILAR:}
+Usar XeLaTex y en la carpeta de Utils instalar el archivo \quotes{AvenirLTStd-Roman.otf}. Actualizar todos los paquetes desde Miktex (si no lo tenés descargalo) y habilitar la instalación automática de los mismos.
+
+\note{Parte del formato:}
+
+USAR \textbackslash Section, \textbackslash Subsection y \textbackslash Subsubsection (existen también las \textbackslash Subsubsubsection) en lugar de \textbackslash section, \textbackslash subsection y \textbackslash subsubsection. De esta forma antes del indice, cada imagen y tabla tendrá el indice de la sección, subsección, subsubsección y subsubsubsección, para identificarlo mejor. Esto se entiende mejor viendo los index de las figuras más abajo.
+
+El paquete de lipsum (linea 13 del header) se puede sacar, es solo para rellenar con texto y probar el formato (borrar también las instancias en este tex).
+
+\observacion{\PrimerObs}{Esto sí se puede ver.}
+
+\observacion{\SegundaObs}{Esto no se puede ver.}
+
+\Section{Acrónimos y definiciones}
+\input{../Acronimos/Acronimos.tex}
+
+\Section{Lorem Ipsum}
+
+\lipsum[1-2]
+																			
+\setparagraphsize{16}{\textcolor{red}{\lipsum[3-4]}}
+
+También se puede \setlinesize{6}{cambiar el tamaño} en el medio de una oración. Pequeñas \lnote{notas verdes} para poner una nota (y que se vea) en el texto \cite{ref:cita1}.
+
+Para la versión del informe que se entregue se puede usar \tbd y \tbc: El producto costará \TBD, ocupará un volumen de \tbd, pesará \TBC y durará \tbc.
+
+\note{Nota más importante para no olvidar.}
+
+\Section{Ejercicico N}
+\input{../Ejercicio-N/Ejercicio-N.tex}
+
+\newpage
+\begin{flushleft}
+\begin{thebibliography}{9}
+\bibitem{ref:cita1}
+T. Bangalter, G. M. de Homem-Christo. \textit{Random Acces Memory}. Vol. 8, 2013.
+
+\end{thebibliography}
+\end{flushleft}
+
+
+\end{document}
