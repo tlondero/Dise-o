@@ -1,8 +1,29 @@
 
 
-\Subsubsection{Planteamiento del Problema}
+\Subsubsubsection{Planteamiento del Problema}
 
-\Subsubsection{Carga por Acoplamiento Magnético}
+La morfología del nido plantea la necesidad de recargar la UBM a distancias de entre 32 y 64cm. Esto es dictado por las mínimas y máximas dimensiones medidas del nido entre la bóveda, donde se puede colocar electrónica, y el fondo, donde duerme el ave\cite{ref:PaperValeriaOjeda}.
+
+En el mejor de los casos, el pájaro carpintero permanece por ocho horas en el nido mientras duerme, y luego cuida a las crías turnándose con la hembra durante el día. Por lo tanto, este permanecería un total de aproximadamente doce horas en el nido.
+
+En el peor de los casos, el ave únicamente permanece seis horas dentro del nido para dormir.
+
+Como la UBM tiene un consumo diario de
+
+\begin{equation}
+2.5V \ 1\cdot 10^{-3}mA \ 24hs = 60 mWh
+\end{equation}
+
+por lo que, tomando ambos casos, se obtiene un requerimiento de transmisión de potencia de
+
+\begin{equation}
+	\begin{cases} 
+       \frac{60mWh}{12hs} = 5mW & \text{Mejor caso} \\
+       \frac{60mWh}{6hs} = 10mW & \text{Peor caso}    
+    \end{cases}
+\end{equation}
+
+\Subsubsubsection{Carga por Acoplamiento Magnético}
 
 La transmisión inalámbrica de potencia por acoplamiento magnético se basa en generar un campo magnético al hacer circular corriente por un arreglo de bobinas gracias a la Ley de Ampere. Este campo magnético es captado por una o más bobinas receptoras las cuales generan a causa de este una fuerza electromotriz según la Ley de Faraday. De esta manera, se genera un sistema que actúa como transformador, utilizando como reluctancia al aire que separa ambas bobinas.
 
@@ -10,7 +31,7 @@ La eficiencia en la transmisión de energía de este método es alta, pero depen
 
 Como las distancias a las que la transmisión se debe efectuar son de entre 32 y 64cm y no se puede garantizar alineación entre bobinas al estar sujeto al comportamiento impredecible del ave, se descarta este método como solución.
 
-\Subsubsection{Carga por Radiofrecuencia}
+\Subsubsubsection{Carga por Radiofrecuencia}
 
 Si se parte de la ecuación del campo magnético en el eje azimutal de un dipolo de hertz, se tiene que
 \begin{equation}
@@ -61,22 +82,22 @@ L_{bf} = 32.5dB + 20log_{10}f[MHz]+20log_{10}R[km]
 
 mientras que el resto de los datos se puede obtener por medio de las hojas de datos o ensayos de las antenas, exceptuando la potencia a ser calculada y las pérdidas por desacople, las cuales dependen constructivamente del diseño de la líneas de transmisión que conectan con las antenas.
 
-\Subsubsection{Banda de Frecuencia Adoptada}
+\Subsubsubsection{Banda de Frecuencia Adoptada}
 
-Se puede observar que las pérdidas de espacio libre aumentan mediante crece la frecuencia de la onda electromagnética emitida. Esto plantea una situación de compromiso. Si la frecuencia es muy alta, las pérdidas por espacio libre serán muy grandes. Mientras que si la frecuencia es muy baja, la longitud de onda será muy grande, por lo que se estaría trabajando en el campo reactivo. Esto no es deseado debido a la imposibilidad de medir con precisión la densidad de potencia.
+Se puede observar que las pérdidas de espacio libre aumentan mediante crece la frecuencia de la onda electromagnética emitida. Esto plantea una situación de compromiso. Si la frecuencia es muy alta, las pérdidas por espacio libre serán muy grandes. Mientras que si la frecuencia es muy baja, la longitud de onda será muy grande, por lo que se estaría trabajando en el campo reactivo. Esto no es deseado debido a la imposibilidad de determinar con precisión la densidad de potencia.
 
 Se decidió utilizar la banda de $915MHz$ por las siguientes razones:
 \begin{itemize}
 \item La zona de transición ocurre entre $32.8cm$ y $65.6cm$ que concuerda con las distancias mínimas y máximas entre emisor y receptor. Si bien no estaremos trabajando en campo lejano, esto no acarrea problemas, ya que hay basta cantidad de antecedentes del uso de esta zona por dispositivos de tecnología RFID.
-\item Esta frecuencia pertenece a la banda ISM, la cual está reservada para propósitos industriales, científicos o médicos, excluyendo las aplicaciones de telecomunicaciones\cite{ref:ITUISM}, limitadas a la Región 2 definida por la ITU como América\cite{ref:ITUREGION}.
+\item Esta frecuencia pertenece a la banda ISM, la cual está reservada para propósitos industriales, científicos o médicos, excluyendo las aplicaciones de telecomunicaciones\cite{ref:ITUISM}, atribuidas a la Región 2 definida por la ITU como América\cite{ref:ITUREGION}.
 \end{itemize}
  
-\Subsubsection{Condiciones de Borde}
+\Subsubsubsection{Condiciones de Borde}
 
 Para realizar las comparaciones entre antenas transmisoras, se tuvieron en cuenta las siguientes restricciones:
 \begin{itemize}
 \item \textbf{Dimensiones:} La antena transmisora deberá ser colocada en la bóveda del nido, dado que ese es el único lugar donde se puede colocar electrónica sin que esta sea perturbada por las aves y vice versa. El volumen de la bóveda se puede aproximar a un cilindro macizo chato de diámetro entre 7.9 y 9.7cm y aproximadamente 5cm de altura, por lo que las dimensiones de la antena emisora estarán acotadas por estos valores.
-\item \textbf{Directividad:} Se quiere que la potencia enviada a la antena se transforme en radiación electromagnética que llegue a la mochila del ave, por lo que radiación que no sea dirigida directamente hacia el fondo del nido será potencia desperdiciada. Es por esto que se quiere una alta directividad en la antena emisora.
+\item \textbf{Directividad:} Se quiere que la potencia enviada a la antena se transforme en radiación electromagnética que llegue a la mochila del ave, por lo que radiación que no sea dirigida directamente hacia el fondo del nido será potencia desperdiciada. Es por esto que se quiere una alta directividad en la antena emisora. También hay un límite máximo en la directividad de la antena. Sin embargo, esta limitación no se alcanzará, dado que la tecnología a utilizar será de antenas del tipo planas, más cortas eléctricamente que media longitud de onda por cuestiones de limitaciones en las dimensiones. 
 \item \textbf{Potencia Máxima:} Como las pérdidas en el circuito electromagnético son grandes, una muy baja parte de la potencia enviada a la antena transmisora formará parte de la potencia entregada a las baterías de la mochila, por lo que para recibir la potencia necesaria, se debe transmitir en el orden de los watts. Es por esto que la potencia máxima es una especificación relevante al momento de decidir entre soluciones.
 \end{itemize}
 mientras que para el caso de las antenas receptoras, se tuvieron en cuenta las siguientes restricciones:
@@ -89,7 +110,7 @@ mientras que para el caso de las antenas receptoras, se tuvieron en cuenta las s
 
 Finalmente, una restricción a tener en cuenta para ambas antenas será el costo.
 
-\Subsubsection{Comparación entre Antenas}
+\Subsubsubsection{Comparación entre Antenas}
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|c|}
