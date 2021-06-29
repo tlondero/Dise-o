@@ -1,0 +1,47 @@
+\input{../../Informe/Header-Circuits.tex}
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%							COMPONENTES								%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%							CIRCUITOS								%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{page}
+\begin{circuitikz}[american voltages]
+
+	\def\xspace{0.75}
+	
+	\ctikzset{multipoles/thickness=3}				%Ancho de las lineas de las cajas
+	\ctikzset{diodes/scale=0.6}	
+	\ctikzset{multipoles/dipchip/width=1.5}			%Ancho del 555
+		
+	\draw
+		(0,0) ++ (2,0) \deco{dec}
+		
+		(dec_c.center) node[circ, label=left:$A_{15}$](){}
+		(dec_b.center) node[circ, label=left:$A_{14}$](){}
+		(dec_a.center) node[circ, label=left:$A_{11}$](){}
+		
+		(dec_y0.center) node[american or port, anchor = in 1](or1){}
+		(dec_y1.center) -| (or1.in 2)
+		(or1.out) -- ++ (0.25,0) node[circ, label=right:$CS0$](){}
+		
+		(dec_y2.center) -- ++ (1.75,0) node[circ, label=right:$CS1$](){}
+		
+		(dec_y5.center) -- ++ (1.75,0) node[circ, label=right:$CS2$](){}
+		
+		(dec_y6.center) node[american or port, anchor = in 1](or2){}
+		(dec_y7.center) -| (or2.in 2)
+		(or2.out) -- ++ (0.25,0) node[circ, label=right:$CS3$](){}			
+	;
+
+\end{circuitikz}
+\end{page}
+
+\end{document}
