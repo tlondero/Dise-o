@@ -2,23 +2,23 @@
 
 %\begin{document}
 
-En este informe se introduce brevemente al estado del arte de la adquisición de datos en la naturaleza y al sistema propuesto que opera en el hábitat particular de aves pequeñas, en este caso diseñado (pero no limitado) a la especie \textit{Campephilus Magellanicus}. 
+%En este informe se introduce brevemente al estado del arte de la adquisición de datos en la naturaleza y al sistema propuesto que opera en el hábitat particular de aves pequeñas, en este caso diseñado (pero no limitado) a la especie \textit{Campephilus Magellanicus}. 
 
-Se detalla el diseño de una plataforma de recolección de información autónoma, que permitirá conocer con profundidad el comportamiento y hábitat de las aves. Esta debe tener la capacidad de almacenar diversos datos del interior del nido.% por la duración de una semana.
+%Se detalla el diseño de una plataforma de recolección de información autónoma, que permitirá conocer con profundidad el comportamiento y hábitat de las aves. Esta debe tener la capacidad de almacenar diversos datos del interior del nido.% por la duración de una semana.
 
-El nivel de autonomía que se busca está ligado no solamente a la recolección de datos, sino también a la alimentación del producto, debido a las condiciones del entrono en el cual habita el ave. 
+%El nivel de autonomía que se busca está ligado no solamente a la recolección de datos, sino también a la alimentación del producto, debido a las condiciones del entrono en el cual habita el ave. 
 
-El sistema debe además ser capaz de transmitir estos datos de manera inalámbrica para no perturbar el comportamiento de la especie estudiada.
+%El sistema debe además ser capaz de transmitir estos datos de manera inalámbrica para no perturbar el comportamiento de la especie estudiada.
 
-Se analizan los requerimientos y especificaciones de producto considerando a los clientes involucrados, entre ellos el equipo de biólogos que realizarán las observaciones, los entes reguladores de vida silvestre, el estado y los fabricantes de circuitos impresos, entre otros.
+%Se analizan los requerimientos y especificaciones de producto considerando a los clientes involucrados, entre ellos el equipo de biólogos que realizarán las observaciones, los entes reguladores de vida silvestre, el estado y los fabricantes de circuitos impresos, entre otros.
 
-Se presentan los procedimientos tomados para las pruebas, los criterios de aceptación, las precondiciones, postcondiciones y el banco de pruebas.
+%Se presentan los procedimientos tomados para las pruebas, los criterios de aceptación, las precondiciones, postcondiciones y el banco de pruebas.
 
-Este proyecto es el complemento a otro donde se diseña una mochila la cual también recolecta datos y se monta sobre el ave. La mayor dificultad de esta solución es la de recargar inalámbricamente las baterías que alimentan a la mochila, por lo que se realiza una investigación sobre diversas maneras de transmitir potencia inalámbricamente.
+%Este proyecto es el complemento a otro donde se diseña una mochila la cual también recolecta datos y se monta sobre el ave. La mayor dificultad de esta solución es la de recargar inalámbricamente las baterías que alimentan a la mochila, por lo que se realiza una investigación sobre diversas maneras de transmitir potencia inalámbricamente.
 
-Además, se comparan diversas tecnologías de sensado y comunicación de datos, eligiendo la más efectiva.
+%Además, se comparan diversas tecnologías de sensado y comunicación de datos, eligiendo la más efectiva.
 
-Finalmente, se valida la solución con la construcción de un prototipo, realizando también un análisis económico y legal del proyecto.
+%Finalmente, se valida la solución con la construcción de un prototipo, realizando también un análisis económico y legal del proyecto.
 
 %Además, se realiza un análisis modal de fallos y efectos, identificando posibles modos de falla, sus consecuencias y maneras de mitigar sean sus efectos, disminuir probabilidad de ocurrencia o aumentar la detectabilidad de los problemas.
 
@@ -26,16 +26,24 @@ Finalmente, se valida la solución con la construcción de un prototipo, realiza
 
 %\
 
-%En este informe se introduce brevemente al estado del arte de la adquisición de datos en la naturaleza y al sistema propuesto que opera en el hábitat particular de aves pequeñas, en este caso diseñado (pero no limitado) a la especie \textit{Campephilus Magellanicus}.  Se detalla el diseño de una plataforma de recolección de información con la capacidad de almacenar diversos datos del interior del nido.
+En este proyecto final de ingeniería se detalla el diseño del S.I.M.F.S, una plataforma de adquisición y almacenamiento de datos que reside dentro del nido de un ave durante la etapa de anidamiento. Esta plataforma es utilizada en un estudio de investigación de la especie \textit{Campephilus Magellanicus} en conjunto a un dispositivo ajeno a este proyecto que se coloca sobre el mismo ave. El S.I.M.F.S, además, recibe mediante el protocolo Bluetooth los datos almacenados en este dispositivo, recarga inalámbricamente mediante el uso de radiofrecuencia las baterías de este, y permite mediante el protocolo de Wi-Fi la descarga de todos los datos almacenados en el sistema. 
+
+Se incurre en una investigación en el área de transmisión de potencia inalámbrica, donde debido a las limitaciones del contexto del proyecto se opta por el uso de radiofrecuencia en la banda de los 915MHz. Se ensayan diversas antenas para encontrar la óptima y se utiliza el integrado P2110 para realizar la conversión de RF a DC.
+
+Se realiza una elección entre diversas tecnologías: para la alimentación del sistema en ausencia de una red eléctrica cercana, se utilizan paneles solares; para el auxilio de los paneles solares al caer la noche, se utiliza una batería de gel de ciclo profundo; para la recolección de datos, distintos tipos de sensores; para el almacenamiento, una tarjeta SD; y finalmente para la unidad de procesamiento, una Raspberry Pi Zero W.
+
+Se lleva a cabo la construcción de un prototipo sobre el cual se aplica el plan de validación, se realiza un estudio económico y legal del proyecto, y se construye continuamente un análisis modal de fallos y efectos.
+
+
 
 %Párrafo que habla de lo que hace el proyecto
 %Párrafo sobre elección de tecnologias e investigación en radiofrecuencia
 %Párrafo acerca de dfmea, factibilidad de tiempos, analisis economico
 %Párrafo sobre prototipo y armado
 
-\observacion{\verObs}{Párrafo que habla de lo que hace el proyecto\
-Párrafo sobre elección de tecnologias e investigación en radiofrecuencia\
-Párrafo acerca de dfmea, factibilidad de tiempos, analisis economico\
-Párrafo sobre prototipo y armado}
+%\observacion{\verObs}{Párrafo que habla de lo que hace el proyecto\
+%Párrafo sobre elección de tecnologias e investigación en radiofrecuencia\
+%Párrafo acerca de dfmea, factibilidad de tiempos, analisis economico\
+%Párrafo sobre prototipo y armado}
 
 %\end{document}
