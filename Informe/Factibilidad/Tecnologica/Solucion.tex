@@ -42,21 +42,26 @@ Para este módulo se opta por la Raspberry Pi Zero W, ya que posee Bluetooth BLE
 
 En cuanto las temperaturas de funcionamiento, este dispositivo se encuentra dentro del rango necesario. Además, los módulos Raspberry Pi trabajan entre 20 °C y 30 °C por encima de la temperatura ambiente debido a su autocalentamiento. También es sabido que los integrados R-Pi pueden llegar a soportar temperaturas extremas, tales como las que se dan en la Antártida \cite{ref:Penguin}.
 
-\Subsubsubsection{Batería}
-
-La batería a emplear queda determinada en función del consumo del sistema y de la energía que se deba almacenar en caso de emergencias. De esta forma, para alimentar tanto a los sensores como a la R-Pi se requieren \TBD. Con la batería \TBD se consigue la especificación mencionada.
-
 \Subsubsubsection{Cargador}
+
 En cuanto a la etapa de carga, para el cargador MPPT de la batería principal se optó por la CN3767 debido a la tecnología de la batería a usar.\\
 Para el integrado de energy harvesting se optó por el P2110 debido a que no se conoce que tecnología de batería será utilizado en el ave, por lo que se opta por la opción mas genérica de energía, un capacitor.
+
+\Subsubsubsection{Batería}
+
+La batería a emplear queda determinada en función del consumo del sistema y de la energía que se deba almacenar en caso de emergencias. 
+
+Los consumos de potencia de las partes del sistema corresponden a:
+\begin{itemize}
+	\item Sensor temperatura y humedad: 1.5 mW
+	\item Sensor luminosidad: 5 mW
+	\item R-pi zero W + Camara: 1.5 W
+	\item Transmisor de potencia: \TBD W
+\end{itemize}
+
+De esta forma, para alimentar tanto a los sensores como a la R-Pi se requieren \TBD. Con la batería \TBD se consigue la especificación mencionada.
 
 \Subsubsubsection{Alimentación}
 
 Para poder abastecer a la batería seleccionada, con un panel \TBD se puede proveer la potencia requerida.
-Los consumos de potencia de las partes del sistema corresponden a:\\
-\begin{itemize}
-\item Sensor temperatura y humedad: 1.5mW
-\item Sensor luminosidad: 5mW
-\item R-pi zero W + Camara: 1.5W
-\item Transmisor de potencia: \TBD W
-\end{itemize}
+
