@@ -1,18 +1,57 @@
+
+
+\Subsubsection{Planteamiento del Problema}
+
+\Subsubsection{Carga por Acoplamiento Magnético}
+
+La transmisión inalámbrica de potencia por acoplamiento magnético se basa en generar un campo magnético al hacer circular corriente por un arreglo de bobinas gracias a la Ley de Ampere. Este campo magnético es captado por una o más bobinas receptoras las cuales generan a causa de este una fuerza electromotriz según la Ley de Faraday. De esta manera, se genera un sistema que actúa como transformador, utilizando como reluctancia al aire que separa ambas bobinas.
+
+La eficiencia en la transmisión de energía de este método es alta, pero depende en gran medida por el factor de acople entre ambas bobinas. Este factor de acople disminuye con el cubo de la inversa de la distancia entre bobinas y es también de suma importancia tener una buena alineación entre ellas.
+
+Como las distancias a las que la transmisión se debe efectuar son de entre 32 y 64cm y no se puede garantizar alineación entre bobinas al estar sujeto al comportamiento impredecible del ave, se descarta este método como solución.
+
+\Subsubsection{Carga por Radiofrecuencia}
+
 Si se parte de la ecuación del campo magnético en el eje azimutal de un dipolo de hertz, se tiene que
 \begin{equation}
 E_\theta = -\frac{\eta}{4\pi}I \cdot \Delta L \cdot k^2 \cdot sin\theta \cdot e^{-jkr} \left[ \frac{1}{jkr}+\left( \frac{1}{jkr}\right)^2 + \left(\frac{1}{jkr}\right)^3 \right]
 \end{equation}
-y los últimos tres términos se denominan, en orden de aparición, término de campo lejano, campo cercano y campo reactivo. Como las distancias a la cual se debe transmitir potencia en la solución es de entre 32 y 64cm y el término de campo lejano depende únicamente de la inversa de la distancia, este será el cual más efecto tenga sobre la transmisión de potencia. 
+donde los últimos tres términos se denominan, en orden de aparición, término de campo lejano, campo cercano radiativo, y campo cercano reactivo. 
 
-El campo lejano es utilizado para realizar todo tipo de telecomunicaciones hoy en día, por lo que nos centraremos en analizar la factibilidad del uso de antenas como nexo entre el nido, el campo electromagnético y la mochila del ave.
+Las fronteras entre estos campos no están estrictamente fijadas, ya que varían con el tipo y tamaño de antena. Para el caso de antenas eléctricamente cortas, es decir, más cortas que media longitud de onda, se adopta el siguiente criterio
 
-Para analizar la potencia recibida en la antena receptora, la cual estará montada en la mochila, se realiza el balance de potencias del circuito electromagnético.
+\begin{equation}
+\begin{cases} 
+          0 < d <\frac{\lambda}{2\pi} & \text{Campo cercano reactivo o inductivo} \\
+          \frac{\lambda}{2\pi} < d \overset{\approx}{<} \lambda & \text{Campo cercano radiativo o de Fresnel} \\
+          \lambda \overset{\approx}{<} d \overset{\approx}{<} 2\lambda & \text{Zona de transición} \\
+          2\lambda \overset{\approx}{<} d < \infty  & \text{Campo lejano o de Fraunhofer} 
+       \end{cases}
+\end{equation}
+
+La zona de campo cercano puede dividirse entre la zona reactiva-inductiva y la zona radiativa o de Fresnel. 
+
+En la zona reactiva la relación entre los campos eléctricos y magnéticos no es predecible. Además, como no solo hay ondas electromagnéticas siendo irradiadas en esta zona, sino que también hay una cierta cantidad de energía siendo almacenada en la cercanía de la antena, la verdadera densidad de potencia se torna difícil de encontrar.
+
+En el caso de la zona radiativa o de Fresnel, toda la energía es radiada. Sin embargo, la relación entre el campo eléctrico y magnético sigue siendo impredecible.
+
+A una distancia entre una y dos longitudes de onda, los efectos de campo cercano comienzan a cesar, mientras que los efectos de campo lejano comienzan a aparecer. Es en esta zona por lo tanto, que ambos efectos están presentes y tienen importancia\cite{ref:NearFieldVsFarField}. Los dispositivos RFID suelen operar en esta zona\cite{ref:NearFieldUHFRFID}.
+
+Por otro lado, el campo lejano es el utilizado para realizar todo tipo de telecomunicaciones hoy en día. En esta zona, el campo eléctrico y campo magnético son ortogonales y la razón entre ambos es la impedancia del medio. Además, el vector de Poynting, definido como $\vec{S} = \vec{E}\times \vec{H}$, provee una medida de la energía electromagnética radiada\cite{ref:PhysicsOscillations}.
+
+Para analizar la potencia recibida en la antena receptora, la cual estará montada en la mochila, se realiza el balance de potencias del circuito electromagnético, por lo que partiendo de la ecuación de transmisión de Friis, se tiene que
+
+\begin{equation}
+\frac{P_r}{P_t} = \left( \frac{A_rA_r}{d^2\lambda ^2} \right)
+\end{equation}
+
+reescribiendo esta fórmula para utilizar las ganancias de las antenas en vez de las áreas efectivas, e incluyendo otras pérdidas del circuito electromagnético, se arriba a
 
 \begin{equation}
 P_r[dBm] = P_t[dBm] + Gt[dB] + G_r[dB] - L_{bf}[dB] - L_{cab}[dB] - L_{roe}[dB] - L_{r}[dB]
 \end{equation}
 
-donde $P_r$ es la potencia recibida en la antena receptora, $P_t$ la potencia emitida por la antena transmisora, $G_t$ la ganancia de la antena transmisora, $G_r$ la ganancia de la antena receptora, $L_{bf}$ las péridas por espacio libre, $L_{cab}$ las pérdidas en los cables de ambas antenas, $L_{roe}$ las pérdidas por retorno en ambas antenas, y $L_{r}$ las pérdidas por desacople entre las líneas de transmisión y las antenas.
+donde $P_r$ es la potencia recibida en la antena receptora, $P_t$ la potencia emitida por la antena transmisora, $G_t$ la ganancia de la antena transmisora, $G_r$ la ganancia de la antena receptora, $L_{bf}$ las pérdidas por espacio libre, $L_{cab}$ las pérdidas en los cables de ambas antenas, $L_{roe}$ las pérdidas por retorno en ambas antenas, y $L_{r}$ las pérdidas por desacople entre las líneas de transmisión y las antenas.
 
 Para el caso de la pérdida por espacio libre, esta se puede calcular como
 
@@ -20,7 +59,19 @@ Para el caso de la pérdida por espacio libre, esta se puede calcular como
 L_{bf} = 32.5dB + 20log_{10}f[MHz]+20log_{10}R[km]
 \end{equation}
 
-mientras que el resto de los datos se puede obtener por medio de la datasheet o ensayos de las antenas, exceptuando la potencia a ser calculada y las pérdidas por desacople, las cuales dependen constructivamente del diseño de la líneas de transmisión que conectan con las antenas.
+mientras que el resto de los datos se puede obtener por medio de las hojas de datos o ensayos de las antenas, exceptuando la potencia a ser calculada y las pérdidas por desacople, las cuales dependen constructivamente del diseño de la líneas de transmisión que conectan con las antenas.
+
+\Subsubsection{Banda de Frecuencia Adoptada}
+
+Se puede observar que las pérdidas de espacio libre aumentan mediante crece la frecuencia de la onda electromagnética emitida. Esto plantea una situación de compromiso. Si la frecuencia es muy alta, las pérdidas por espacio libre serán muy grandes. Mientras que si la frecuencia es muy baja, la longitud de onda será muy grande, por lo que se estaría trabajando en el campo reactivo. Esto no es deseado debido a la imposibilidad de medir con precisión la densidad de potencia.
+
+Se decidió utilizar la banda de $915MHz$ por las siguientes razones:
+\begin{itemize}
+\item La zona de transición ocurre entre $32.8cm$ y $65.6cm$ que concuerda con las distancias mínimas y máximas entre emisor y receptor. Si bien no estaremos trabajando en campo lejano, esto no acarrea problemas, ya que hay basta cantidad de antecedentes del uso de esta zona por dispositivos de tecnología RFID.
+\item Esta frecuencia pertenece a la banda ISM, la cual está reservada para propósitos industriales, científicos o médicos, excluyendo las aplicaciones de telecomunicaciones\cite{ref:ITUISM}, limitadas a la Región 2 definida por la ITU como América\cite{ref:ITUREGION}.
+\end{itemize}
+ 
+\Subsubsection{Condiciones de Borde}
 
 Para realizar las comparaciones entre antenas transmisoras, se tuvieron en cuenta las siguientes restricciones:
 \begin{itemize}
@@ -38,6 +89,7 @@ mientras que para el caso de las antenas receptoras, se tuvieron en cuenta las s
 
 Finalmente, una restricción a tener en cuenta para ambas antenas será el costo.
 
+\Subsubsection{Comparación entre Antenas}
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|c|}
