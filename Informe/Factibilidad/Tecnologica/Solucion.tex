@@ -24,28 +24,30 @@ Por último el BJ-1750 cuanta con una salida digital con el protocolo de comunic
 %%%%%%IAMGENES%%%%%%
 Finalmente, para la cámara que obtendrá las imágenes, se tuvo en cuenta fundamentalmente la relación precio-resolución de la cámara, al igual que la integración con Linux y el factor de contar con una API para el lenguaje C. Por lo que la RPi-ZeroC fue la cámara seleccionada.
 
-Además, este dispositivo cuenta con compatibilidad con la UP seleccioanda sin neceisdad de adaptadores.
-
 \Subsubsubsection{Almacenamiento}
 
 El factor principal para seleccionar la memoria SD a utilizar es el rango de temperaturas de operación. Es por este factor que se elije la SDSDQAF3-XI, ya que esta se encuentra en un rango seguro (mayor a las demás).
 
 Dado que se recolectará un volumen de datos del que no se tiene una gran certeza, debido a que una parte será lo que provenga de la mochila, se estima en función de los datos del nido y del periodo de activación de los sensores, que una memoria de 32GBy es suficiente incluso si aumenta el volumen de datos.
 
-\Subsubsubsection{Comunicación}
-
-En cuanto a la comunicación se utilizará BLE para la conexión con el ave, y WiFi para la comunicación con un tercero.
-Ambos de estos se encuentran disponibles para su uso en el módulo Raspberry Pi Zero W.
 \Subsubsubsection{Unidades de procesamiento}
 
 Para este módulo se opta por la Raspberry Pi Zero W, ya que posee Bluetooth BLE (Bluetooth Low Energy), es el dispositivo más económico, más pequeño y cuenta con soporte para micro SD.
 
 En cuanto las temperaturas de funcionamiento, este dispositivo se encuentra dentro del rango necesario. Además, los módulos Raspberry Pi trabajan entre 20 °C y 30 °C por encima de la temperatura ambiente debido a su autocalentamiento. También es sabido que los integrados R-Pi pueden llegar a soportar temperaturas extremas, tales como las que se dan en la Antártida \cite{ref:Penguin}.
 
+Además, este dispositivo seleccionada se caracteriza por ser compatible con la cámara seleccionada sin  de adaptadores.
+
+\Subsubsubsection{Comunicación}
+
+En cuanto a la comunicación se utilizará BLE para la conexión con el ave, y WiFi para la comunicación con un tercero.
+Ambos de estos se encuentran disponibles para su uso en el módulo Raspberry Pi Zero W.
+
 \Subsubsubsection{Cargador}
 
-En cuanto a la etapa de carga, para el cargador MPPT de la batería principal se optó por la CN3767 debido a la tecnología de la batería a usar.\\
-Para el integrado de energy harvesting se optó por el P2110 debido a que no se conoce que tecnología de batería será utilizado en el ave, por lo que se opta por la opción mas genérica de energía, un capacitor.
+En cuanto a la etapa de carga, para el cargador MPPT de la batería principal se optó por la CN3767 debido a la tecnología de la batería a usar.
+
+Para el integrado de energy harvesting se optó por el P2110 debido a que no se conoce que tecnología será utilizado en la UBM, por lo que se opta por la opción mas genérica de energía, un capacitor.
 
 \Subsubsubsection{Batería}
 
@@ -59,9 +61,22 @@ Los consumos de potencia de las partes del sistema corresponden a:
 	\item Transmisor de potencia: \TBD W
 \end{itemize}
 
-De esta forma, para alimentar tanto a los sensores como a la R-Pi se requieren \TBD. Con la batería \TBD se consigue la especificación mencionada.
+De esta forma, para alimentar tanto a los sensores como a la R-Pi se requieren \TBD W. Con la batería \TBD se consigue la especificación mencionada.
 
 \Subsubsubsection{Alimentación}
 
 Para poder abastecer a la batería seleccionada, con un panel \TBD se puede proveer la potencia requerida.
 
+\Subsubsubsection{Antenas}
+
+Por un lado, para el caso de las antenas transmisoras, se descartan APAE915R2540ABDB1-T, APAES915R80C16-T y ARRKP7059-S915B por su baja ganancia, además de alto costo para las últimas dos. Por lo que restan las antenas \textbf{W3215} y \textbf{ISPC.91A.09.0092E} para la etapa de ensayado.
+
+Por otro lado, para las antenas receptoras, se descarta ANT-915-USP410 y ANT-915-CPA por baja eficiencia, y FXP290.07.0100A por ser muy grande. \textbf{NN01-105}, \textbf{ANT1204F005R0915A} y \textbf{1513156-1} pasan a la etapa de ensayo.
+
+\Subsubsubsection{Ensayos Teóricos de Antenas}
+
+Se tomaron las antenas  
+
+\Subsubsubsection{Ensayos Prácticos de Antenas}
+
+\TBD

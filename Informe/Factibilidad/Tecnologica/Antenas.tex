@@ -2,7 +2,7 @@
 
 \Subsubsubsection{Planteamiento del Problema}
 
-La morfología del nido plantea la necesidad de recargar la UBM a distancias de entre 32 y 64cm. Esto es dictado por las mínimas y máximas dimensiones medidas del nido entre la bóveda, donde se puede colocar electrónica, y el fondo, donde duerme el ave\cite{ref:PaperValeriaOjeda}.
+La morfología del nido plantea la necesidad de recargar la UBM a distancias de entre 32 y 64 cm. Esto es dictado por las mínimas y máximas dimensiones medidas del nido entre la bóveda, donde se puede colocar electrónica, y el fondo, donde duerme el ave \cite{ref:PaperValeriaOjeda}.
 
 En el mejor de los casos, el pájaro carpintero permanece por ocho horas en el nido mientras duerme, y luego cuida a las crías turnándose con la hembra durante el día. Por lo tanto, este permanecería un total de aproximadamente doce horas en el nido.
 
@@ -45,9 +45,9 @@ k = \frac{M}{\sqrt{L_1L_2}}
 
 donde M es el coeficiente de mutua-inductancia entre las bobinas. 
 
-La eficiencia en la transmisión de energía de este método es alta, pero depende en gran medida por el factor de acople entre ambas bobinas. Este factor de acople disminuye considerablemente con la distancia y la desalineación entre bobinas\cite{ref:wirelesschargingkeyelements}\cite{ref:couplingfactor_1}.
+La eficiencia en la transmisión de energía de este método es alta, pero depende en gran medida por el factor de acople entre ambas bobinas \cite{ref:wpteff}. Este factor de acople disminuye considerablemente con la distancia y la desalineación entre bobinas \cite{ref:wirelesschargingkeyelements} \cite{ref:couplingfactor_1}.
 
-Como las distancias a las que la transmisión se debe efectuar son de entre 32 y 64cm y no se puede garantizar alineación entre bobinas al estar sujeto al comportamiento impredecible del ave, se descarta este método como solución.
+Como las distancias a las que la transmisión se debe efectuar son de entre 32 y 64 cm y no se puede garantizar alineación entre bobinas al estar sujeto al comportamiento impredecible del ave, se descarta este método como solución.
 
 \Subsubsubsection{Carga por Radiofrecuencia}
 
@@ -74,7 +74,7 @@ En la zona reactiva la relación entre los campos eléctricos y magnéticos no e
 
 En el caso de la zona radiativa o de Fresnel, toda la energía es radiada. Sin embargo, la relación entre el campo eléctrico y magnético sigue siendo impredecible.
 
-A una distancia entre una y dos longitudes de onda, los efectos de campo cercano comienzan a cesar, mientras que los efectos de campo lejano comienzan a aparecer. Es en esta zona por lo tanto, que ambos efectos están presentes y tienen importancia\cite{ref:NearFieldVsFarField}. Los dispositivos RFID suelen operar en esta zona\cite{ref:NearFieldUHFRFID}.
+A una distancia entre una y dos longitudes de onda, los efectos de campo cercano comienzan a cesar, mientras que los efectos de campo lejano comienzan a aparecer. Es en esta zona por lo tanto, que ambos efectos están presentes y tienen importancia \cite{ref:NearFieldVsFarField}. Los dispositivos RFID suelen operar en esta zona \cite{ref:NearFieldUHFRFID}.
 
 Por otro lado, el campo lejano es el utilizado para realizar todo tipo de telecomunicaciones hoy en día. En esta zona, el campo eléctrico y campo magnético son ortogonales y la razón entre ambos es la impedancia del medio. Además, el vector de Poynting, definido como $\vec{S} = \vec{E}\times \vec{H}$, provee una medida de la energía electromagnética radiada\cite{ref:PhysicsOscillations}.
 
@@ -83,13 +83,11 @@ Para analizar la potencia recibida en la antena receptora, la cual estará monta
 \begin{equation}
 \frac{P_r}{P_t} = \left( \frac{A_rA_r}{d^2\lambda ^2} \right)
 \end{equation}
-
 reescribiendo esta fórmula para utilizar las ganancias de las antenas en vez de las áreas efectivas, e incluyendo otras pérdidas del circuito electromagnético, se arriba a
 
 \begin{equation}
 P_r[dBm] = P_t[dBm] + Gt[dB] + G_r[dB] - L_{bf}[dB] - L_{cab}[dB] - L_{roe}[dB] - L_{r}[dB]
 \end{equation}
-
 donde $P_r$ es la potencia recibida en la antena receptora, $P_t$ la potencia emitida por la antena transmisora, $G_t$ la ganancia de la antena transmisora, $G_r$ la ganancia de la antena receptora, $L_{bf}$ las pérdidas por espacio libre, $L_{cab}$ las pérdidas en los cables de ambas antenas, $L_{roe}$ las pérdidas por retorno en ambas antenas, y $L_{r}$ las pérdidas por desacople entre las líneas de transmisión y las antenas.
 
 Para el caso de la pérdida por espacio libre, esta se puede calcular como
@@ -97,7 +95,6 @@ Para el caso de la pérdida por espacio libre, esta se puede calcular como
 \begin{equation}
 L_{bf} = 32.5dB + 20log_{10}f[MHz]+20log_{10}R[km]
 \end{equation}
-
 mientras que el resto de los datos se puede obtener por medio de las hojas de datos o ensayos de las antenas, exceptuando la potencia a ser calculada y las pérdidas por desacople, las cuales dependen constructivamente del diseño de la líneas de transmisión que conectan con las antenas.
 
 \Subsubsubsection{Banda de Frecuencia Adoptada}
@@ -106,8 +103,8 @@ Se puede observar que las pérdidas de espacio libre aumentan mediante crece la 
 
 Se decidió utilizar la banda de $915MHz$ por las siguientes razones:
 \begin{itemize}
-\item La zona de transición ocurre entre $32.8$ y $65.6cm$ que concuerda con las distancias mínimas y máximas entre emisor y receptor. Si bien no estaremos trabajando en campo lejano, esto no acarrea problemas, ya que hay basta cantidad de antecedentes del uso de los efectos de campo cercano en dispositivos comerciales\cite{ref:Humavox}\cite{ref:NearFieldUHFRFID}.
-\item Esta frecuencia pertenece a la banda ISM, la cual está reservada para propósitos industriales, científicos o médicos, excluyendo las aplicaciones de telecomunicaciones\cite{ref:ITUISM}, atribuidas a la Región 2 definida por la ITU como América\cite{ref:ITUREGION}.
+\item La zona de transición ocurre entre $32.8$ y $65.6cm$ que concuerda con las distancias mínimas y máximas entre emisor y receptor. Si bien no estaremos trabajando en campo lejano, esto no acarrea problemas, ya que hay basta cantidad de antecedentes del uso de los efectos de campo cercano en dispositivos comerciales \cite{ref:Humavox} \cite{ref:NearFieldUHFRFID}.
+\item Esta frecuencia pertenece a la banda ISM, la cual está reservada para propósitos industriales, científicos o médicos, excluyendo las aplicaciones de telecomunicaciones \cite{ref:ITUISM}, atribuidas a la Región 2 definida por la ITU como América \cite{ref:ITUREGION}.
 \end{itemize}
  
 \Subsubsubsection{Condiciones de Borde}
@@ -118,7 +115,8 @@ Para realizar las comparaciones entre antenas transmisoras, se tuvieron en cuent
 \item \textbf{Directividad:} Se quiere que la potencia enviada a la antena se transforme en radiación electromagnética que llegue a la mochila del ave, por lo que radiación que no sea dirigida directamente hacia el fondo del nido será potencia desperdiciada. Es por esto que se quiere una alta directividad en la antena emisora. También hay un límite máximo en la directividad de la antena. Sin embargo, esta limitación no se alcanzará, dado que la tecnología a utilizar será de antenas del tipo planas, más cortas eléctricamente que media longitud de onda por cuestiones de limitaciones en las dimensiones. 
 \item \textbf{Potencia Máxima:} Como las pérdidas en el circuito electromagnético son grandes, una muy baja parte de la potencia enviada a la antena transmisora formará parte de la potencia entregada a las baterías de la mochila, por lo que para recibir la potencia necesaria, se debe transmitir en el orden de los watts. Es por esto que la potencia máxima es una especificación relevante al momento de decidir entre soluciones.
 \end{itemize}
-mientras que para el caso de las antenas receptoras, se tuvieron en cuenta los siguientes criterios:
+
+Mientras que para el caso de las antenas receptoras, se tuvieron en cuenta los siguientes criterios:
 \begin{itemize}
 \item \textbf{Eficiencia:} Esta será la especificación más importante y es la que determinará la factibilidad de la solución. Se buscará la mayor eficiencia posible para lograr transmitir a las baterías la potencia recibida por el campo electromagnético.
 \item \textbf{Lóbulo isotrópico:} Como se desconoce cuál será la posición del ave dentro del nido, se requiere que el lóbulo de radiación de la antena receptora sea lo más isotrópico posible, garantizando una recepción de potencia uniforme sin importar la posición del ave. Se buscará una ganancia menor a $2dBi$.
@@ -204,13 +202,3 @@ Finalmente, una restricción a tener en cuenta para ambas antenas será el costo
 \end{tabular}
 \caption{Comparación entre antenas receptoras (Parte 2).}
 \end{table}
-
-Por un lado, para el caso de las antenas transmisoras, se descartan APAE915R2540ABDB1-T, APAES915R80C16-T y ARRKP7059-S915B por su baja ganancia, además de alto costo para las últimas dos. Por lo que restan las antenas \textbf{W3215} y \textbf{ISPC.91A.09.0092E} para la etapa de ensayado.
-
-Por otro lado, para las antenas receptoras, se descarta ANT-915-USP410 y ANT-915-CPA por baja eficiencia, y FXP290.07.0100A por ser muy grande. \textbf{NN01-105}, \textbf{ANT1204F005R0915A} y \textbf{1513156-1} pasan a la etapa de ensayo.
-
-\Subsubsubsection{Ensayos Teóricos}
-
-Se tomaron las antenas  
-
-\Subsubsubsection{Ensayos Prácticos}

@@ -13,35 +13,34 @@
 \caption{Leyendas para las especificaciones.}
 \end{table}
 
-\observacion{\verObs}{INT-FUN-03: Acá no entiendo, si no pierde alimentación cuál es el problema. Qué quisieron decir??? Creo que va a ser importante que expliquen qué entienden como \quotes{FUENTE DE ENERGÍA PRINCIPAL}. Es un panel solar? Es una Batería externa que se carga con un panel solar? Es otra batería interna del \quotes{Nido}?}
+\observacion{\verObs}{VERIFICAR CORRELACIÓN CON REQUERMIENTOS}
 
 \begin{table}[H]
 \centering
 \begin{tabular}{|l|l|l|c|}
 \hline
-\multicolumn{1}{|c|}{\textbf{ID}} & \multicolumn{1}{c|}{\textbf{Descripción}}                                                                                                                                                                                                                                                                                                                          & \multicolumn{1}{c|}{\textbf{Origen}} & \textbf{\begin{tabular}[c]{@{}c@{}}Aplicabilidad\\ Validación\end{tabular}} \\ \hline
-INT-FUN-01                        & \begin{tabular}[c]{@{}l@{}}El dispositivo deberá tener un espacio de\\ almacenamiento de datos de por lo menos\\ 32 GBy, equivalente a la suma de los\\ datos adquiridos en el nido y por el\\ dispositivo del ave a lo largo de siete días.\end{tabular}                                                                                                        & REQ-06, REQ-04                       & P F - D                                                                     \\ \hline
-INT-FUN-02                        & \begin{tabular}[c]{@{}l@{}}El producto deberá poder recuperarse\\ totalmente de una pérdida de alimentación\\ eléctrica sin intervención humana y sin\\ pérdida de datos almacenados. Se entiende\\ por pérdida de alimentación eléctrica como\\ tensión o corriente de entrada\\ menor a la mínima definida.\end{tabular}                               & REQ-02, REQ-03                       & F - I T                                                                     \\ \hline
-INT-FUN-03                        & \begin{tabular}[c]{@{}l@{}}El producto deberá poder almacenar\\ suficiente energía como para poder seguir\\ funcionando correctamente sin pérdida de\\ alimentación (según lo definido en\\ INT-FUN-02) por \TBD días, cuando la\\ fuente de energía principal se encuentre\\ en condiciones de hasta un \TBD\%\\ inferiores a las mínimas definidas.\end{tabular} & REQ-02, REQ-03                       & P F - D                                                                     \\ \hline
-INT-FUN-04                        & \begin{tabular}[c]{@{}l@{}}El producto debe ser capaz de obtener\\ la temperatura del entorno.\end{tabular}                                                                                                                                                                                                                                         & REQ-04                               & P F - I D T                                                                 \\ \hline
-INT-FUN-05                        & \begin{tabular}[c]{@{}l@{}}El producto debe ser capaz de obtener la\\ humedad del entorno.\end{tabular}                                                                                                                                                                                                                                             & REQ-04                               & P F - I D T                                                                 \\ \hline
+\multicolumn{1}{|c|}{\textbf{ID}} & \multicolumn{1}{c|}{\textbf{Descripción}}                                                                                                                                                                                                                                                                                                                          	& \multicolumn{1}{c|}{\textbf{Origen}} & \textbf{\begin{tabular}[c]{@{}c@{}}Aplicabilidad\\ Validación\end{tabular}} \\ \hline
+INT-FUN-01                        & \begin{tabular}[c]{@{}l@{}}El dispositivo deberá tener un espacio de\\ almacenamiento de datos de por lo menos\\ 32 GBy, equivalente a la suma de los\\ datos adquiridos en el nido y por el\\ dispositivo del ave a lo largo de siete días.\end{tabular}                                                                                                        	& REQ-04, REQ-06                       & P F - D                                                                     \\ \hline
+%INT-FUN-02                        & \begin{tabular}[c]{@{}l@{}}El producto deberá poder recuperarse\\ totalmente de una pérdida de alimentación\\ eléctrica sin intervención humana y sin\\ pérdida de datos almacenados. Se entiende\\ por pérdida de alimentación eléctrica como\\ tensión o corriente de entrada\\ menor a la mínima definida.\end{tabular}                               			& REQ-02, REQ-03                       & F - I T                                                                     \\ \hline
+%INT-FUN-03                        & \begin{tabular}[c]{@{}l@{}}El producto deberá poder almacenar\\ suficiente energía como para poder seguir\\ funcionando correctamente sin pérdida de\\ alimentación (según lo definido en\\ INT-FUN-02) por \TBD días, cuando la\\ fuente de energía principal se encuentre\\ en condiciones de hasta un \TBD\%\\ inferiores a las mínimas definidas.\end{tabular} 	& REQ-02, REQ-03                       & P F - D                                                                     \\ \hline
+INT-FUN-02                        & \begin{tabular}[c]{@{}l@{}}El producto debe ser capaz de obtener\\ la temperatura del entorno.\end{tabular}                                                                                                                                                                                                                                         				& REQ-04                               & P F - I D T                                                                 \\ \hline
+INT-FUN-03                        & \begin{tabular}[c]{@{}l@{}}El producto debe ser capaz de obtener la\\ humedad del entorno.\end{tabular}                                                                                                                                                                                                                                             				& REQ-04                               & P F - I D T                                                                 \\ \hline
+INT-FUN-04                        & \begin{tabular}[c]{@{}l@{}}El producto debe ser capaz de obtener\\ la intensidad lumínica del interior del nido.\end{tabular}                                                                                                                                                                                                                                         & REQ-04                               & P F - I D T                                                                 \\ \hline
+INT-FUN-05                        & \begin{tabular}[c]{@{}l@{}}El producto debe ser capaz de obtener \\ imagenes del interior del nido.\end{tabular}                                                                                                                                                                                                                                             & REQ-04                               & P F - I D T                                                                 \\ \hline
 \end{tabular}
 \caption{Especificaciones funcionales (Parte 1).}
 \end{table}
 
-\observacion{\verObs}{INT-FUN-08: INT-COM2 01 ó 02. Las leí y no me dicen mucho, salvo por la distancia}
-\observacion{\verObs}{INT-FUN-09: Idem anterior.}
-
 \begin{table}[H]
 \centering
 \begin{tabular}{|l|l|l|c|}
 \hline
 \multicolumn{1}{|c|}{\textbf{ID}} & \multicolumn{1}{c|}{\textbf{Descripción}}                                                                                                                                                                                                                                                                                                                          & \multicolumn{1}{c|}{\textbf{Origen}} & \textbf{\begin{tabular}[c]{@{}c@{}}Aplicabilidad\\ Validación\end{tabular}} \\ \hline
-INT-FUN-06                        & \begin{tabular}[c]{@{}l@{}}El producto debe ser capaz de obtener\\ la intensidad lumínica del interior del nido.\end{tabular}                                                                                                                                                                                                                                         & REQ-04                               & P F - I D T                                                                 \\ \hline
-INT-FUN-07                        & \begin{tabular}[c]{@{}l@{}}El producto debe ser capaz de obtener \\ imagenes del interior del nido.\end{tabular}                                                                                                                                                                                                                                             & REQ-04                               & P F - I D T                                                                 \\ \hline
-INT-FUN-08                        & \begin{tabular}[c]{@{}l@{}}El producto debe poder transmitir de\\ manera inalámbrica los datos almacenados\\ en el nido a un dispositivo según todas\\ las especificaciones de la tabla INT-COM2.\end{tabular}                                                                                                                                                                       & REQ-07                               & P F - I D T                                                                 \\ \hline
-INT-FUN-09                        & \begin{tabular}[c]{@{}l@{}}El producto debe poder recibir de manera\\ inalámbrica datos almacenados en un\\ dispositivo ajeno al proyecto que irá sobre\\ el ave según todas las especificaciones\\ de la tabla INT-COM1.\end{tabular}                                                                                                                                                 & REQ-05                               & P F - I D T                                                                 \\ \hline
-INT-FUN-10                        & \begin{tabular}[c]{@{}l@{}}Capacidad de recargar completamente de\\ manera inalámbrica en 6 horas las baterías\\ de un dispositivo ajeno al proyecto que\\ irá sobre el ave.\end{tabular}                                                                                                                                                                          & REQ-14                               & P F - I D T                                                                 \\ \hline
+INT-FUN-06                        & \begin{tabular}[c]{@{}l@{}}El producto debe poder transmitir de\\ manera inalámbrica los datos almacenados\\ en el nido a un dispositivo según todas\\ las especificaciones de la tabla INT-COM2-01.\end{tabular}                                                                                                                                                                       & REQ-07                               & P F - I D T                                                                 \\ \hline
+INT-FUN-07                        & \begin{tabular}[c]{@{}l@{}}El producto debe poder recibir de manera\\ inalámbrica datos almacenados en un\\ dispositivo ajeno al proyecto que irá sobre\\ el ave según todas las especificaciones\\ de la tabla INT-COM1-01.\end{tabular}                                                                                                                                                 & REQ-05                               & P F - I D T                                                                 \\ \hline
+INT-FUN-08                        & \begin{tabular}[c]{@{}l@{}}Capacidad de recargar completamente de\\ manera inalámbrica en 6 horas las baterías\\ de un dispositivo ajeno al proyecto que\\ irá sobre el ave.\end{tabular}                                                                                                                                                                          & REQ-14                               & P F - I D T                                                                 \\ \hline
+INT-FUN-09                        & \begin{tabular}[c]{@{}l@{}}El sistema de carga inalámbrico debe proveer\\ al UBM al menos 7 mW. En caso de no\\ conseguir tal transmisión de potencia, se\\ complementará la transmisión con un sistema de\\ recolección de energía, montado\\ sobre la mochila.\end{tabular}                                                                                                                                                                                                                               & REQ-14                               & P F - I D                                                                   \\ \hline
+INT-FUN-10                        & \begin{tabular}[c]{@{}l@{}}El sistema obtendrá valores del sensor\\ de temperatura cada 20 minutos.\end{tabular}                                                                                                                                                                                                                                                 & REQ-17                               & P F - I D T                                                                 \\ \hline
 \end{tabular}
 \caption{Especificaciones funcionales (Parte 2).}
 \end{table}
@@ -51,28 +50,26 @@ INT-FUN-10                        & \begin{tabular}[c]{@{}l@{}}Capacidad de reca
 \begin{tabular}{|l|l|l|c|}
 \hline
 \multicolumn{1}{|c|}{\textbf{ID}} & \multicolumn{1}{c|}{\textbf{Descripción}}                                                                                                                                                                                                                                                                                                                          & \multicolumn{1}{c|}{\textbf{Origen}} & \textbf{\begin{tabular}[c]{@{}c@{}}Aplicabilidad\\ Validación\end{tabular}} \\ \hline
-INT-FUN-11                        & \begin{tabular}[c]{@{}l@{}}El sistema de carga del dispositivo del\\ ave debe entregar al menos 7.5 mW y\\ hasta 10 mW.\end{tabular}                                                                                                                                                                                                                               & REQ-14                               & P F - I D                                                                   \\ \hline
-INT-FUN-12                        & \begin{tabular}[c]{@{}l@{}}El sistema obtendrá valores del sensor\\ de temperatura cada 20 minutos.\end{tabular}                                                                                                                                                                                                                                                 & REQ-17                               & P F - I D T                                                                 \\ \hline
-INT-FUN-13                        & \begin{tabular}[c]{@{}l@{}}El sistema obtendrá valores del sensor\\ de humedad cada 20 minutos.\end{tabular}                                                                                                                                                                                                                                                     & REQ-17                               & P F - I D T                                                                 \\ \hline
-INT-FUN-14                        & \begin{tabular}[c]{@{}l@{}}El sistema obtendrá valores del sensor\\ de luminosidad cada 20 minutos.\end{tabular}                                                                                                                                                                                                                                                 & REQ-17                               & P F - I D T                                                                 \\ \hline
-INT-FUN-15                        & \begin{tabular}[c]{@{}l@{}}El sistema obtendrá imagenes cada\\ 30 minutos.\end{tabular}                                                                                                                                                                                                                                                     					   & REQ-17                               & P F - I D T                                                                 \\ \hline
-INT-FUN-16                        & \begin{tabular}[c]{@{}l@{}}El sistema utilizará \TBD paneles solares\\ para cargar una batería principal de \\ gel de ciclo profundo de plomo acido.\end{tabular}                                                                                                                                                                                                                         & REQ-02                               & P F - I D T                                                                 \\ \hline
+INT-FUN-11                        & \begin{tabular}[c]{@{}l@{}}El sistema obtendrá valores del sensor\\ de humedad cada 20 minutos.\end{tabular}                                                                                                                                                                                                                                                     & REQ-17                               & P F - I D T                                                                 \\ \hline
+INT-FUN-12                        & \begin{tabular}[c]{@{}l@{}}El sistema obtendrá valores del sensor\\ de luminosidad cada 20 minutos.\end{tabular}                                                                                                                                                                                                                                                 & REQ-17                               & P F - I D T                                                                 \\ \hline
+INT-FUN-13                        & \begin{tabular}[c]{@{}l@{}}El sistema obtendrá imagenes cada\\ 30 minutos.\end{tabular}                                                                                                                                                                                                                                                     					   & REQ-17                               & P F - I D T                                                                 \\ \hline
+INT-FUN-14                        & \begin{tabular}[c]{@{}l@{}}El sistema utilizará \TBD paneles solares\\ para cargar una batería principal de \\ gel de ciclo profundo de plomo acido.\end{tabular}                                                                                                                                                                                                                         & REQ-02                               & P F - I D T                                                                 \\ \hline
 \end{tabular}
 \caption{Especificaciones funcionales (Parte 3).}
 \end{table}
 
 \Subsubsection{Especificaciones de Interfaz}
 
-\begin{table}[H]
-\centering
-\begin{tabular}{|l|l|l|c|}
-\hline
-\multicolumn{1}{|c|}{\textbf{ID}} & \multicolumn{1}{c|}{\textbf{Descripción}}                                                                                            & \multicolumn{1}{c|}{\textbf{Origen}} & \textbf{\begin{tabular}[c]{@{}c@{}}Aplicabilidad\\ Validación\end{tabular}} \\ \hline
-INT-MEC-01                        & \begin{tabular}[c]{@{}l@{}}El equipo deberá poder sujetarse del árbol\\ con \TBD distanciados entre sí \TBD\end{tabular}   & REQ-01, REQ-10                       & F - I D                                                                     \\ \hline
-INT-MEC-02                        & \begin{tabular}[c]{@{}l@{}}El sistema de montaje de la unidad de energía\\ deberá ser capaz de soportar un peso de \TBD\end{tabular} & REQ-01, REQ-10                       & F - D T                                                                     \\ \hline
-\end{tabular}
-\caption{Especificaciones de interfaz MEC.}
-\end{table}
+%\begin{table}[H]
+%\centering
+%\begin{tabular}{|l|l|l|c|}
+%\hline
+%\multicolumn{1}{|c|}{\textbf{ID}} & \multicolumn{1}{c|}{\textbf{Descripción}}                                                                                            & \multicolumn{1}{c|}{\textbf{Origen}} & \textbf{\begin{tabular}[c]{@{}c@{}}Aplicabilidad\\ Validación\end{tabular}} \\ \hline
+%INT-MEC-01                        & \begin{tabular}[c]{@{}l@{}}El equipo deberá poder sujetarse del árbol\\ con \TBD distanciados entre sí \TBD\end{tabular}   & REQ-01, REQ-10                       & F - I D                                                                     \\ \hline
+%INT-MEC-02                        & \begin{tabular}[c]{@{}l@{}}El sistema de montaje de la unidad de energía\\ deberá ser capaz de soportar un peso de \TBD\end{tabular} & REQ-01, REQ-10                       & F - D T                                                                     \\ \hline
+%\end{tabular}
+%\caption{Especificaciones de interfaz MEC.}
+%\end{table}
 
 \begin{table}[H]
 \centering
@@ -209,22 +206,22 @@ RAM-MAN-03  & \begin{tabular}[c]{@{}l@{}}El equipo deberá contener la siguiente
 \caption{Especificaciones de mantenibilidad.}
 \end{table}
 
-\begin{table}[H]
-\centering
-\begin{tabular}{|l|l|l|l|}
-\hline
-\multicolumn{1}{|c|}{\textbf{ID}} & \multicolumn{1}{c|}{\textbf{Descripción}                                                                                                                                                                                } & \multicolumn{1}{c|}{\textbf{Origen}}                       & \textbf{\begin{tabular}[c]{@{}c@{}}Aplicabilidad\\ Validación\end{tabular}} \\ \hline
-RAM-DIS-01  & \TBD & \TBD & \TBD                                                  \\ \hline
-\end{tabular}
-\caption{Especificaciones de disponibilidad.}
-\end{table}
+%\begin{table}[H]
+%\centering
+%\begin{tabular}{|l|l|l|l|}
+%\hline
+%\multicolumn{1}{|c|}{\textbf{ID}} & \multicolumn{1}{c|}{\textbf{Descripción}                                                                                                                                                                                } & \multicolumn{1}{c|}{\textbf{Origen}}                       & \textbf{\begin{tabular}[c]{@{}c@{}}Aplicabilidad\\ Validación\end{tabular}} \\ \hline
+%RAM-DIS-01  & \TBD & \TBD & \TBD                                                  \\ \hline
+%\end{tabular}
+%\caption{Especificaciones de disponibilidad.}
+%\end{table}
 
 \begin{table}[H]
 \centering
 \begin{tabular}{|l|l|l|l|}
 \hline
 \multicolumn{1}{|c|}{\textbf{ID}} & \multicolumn{1}{c|}{\textbf{Descripción}                                                                                                                                                                                } & \multicolumn{1}{c|}{\textbf{Origen}}                       & \textbf{\begin{tabular}[c]{@{}c@{}}Aplicabilidad\\ Validación\end{tabular}} \\ \hline
-RAM-CON-01  & El producto deberá tener una vida útil no menor a 2 años. & REQ-17          & P F - D                                                                     \\ \hline
+RAM-CON-01  & El producto deberá tener una vida útil no menor a 2 años. & REQ-13          & P F - D                                                                     \\ \hline
 \end{tabular}
 \caption{Especificaciones de confiabilidad.}
 \end{table}
