@@ -11,15 +11,15 @@ En el peor de los casos, el ave únicamente permanece seis horas dentro del nido
 Como la UBM tiene un consumo diario de
 
 \begin{equation}
-2.5V \ 1mA \ 24hs = 60 mWh
+2.5 \ V \cdot 1 \ mA \cdot 24 \ hs = 60 \ mWh
 \end{equation}
 
 por lo que, tomando ambos casos, se obtiene un requerimiento de transmisión de potencia de
 
 \begin{equation}
 	\begin{cases} 
-       \frac{60mWh}{12hs} = 5mW & \text{Mejor caso} \\
-       \frac{60mWh}{6hs} = 10mW & \text{Peor caso}    
+       \frac{60 \ mWh}{12 \ hs} = 5 \ mW & \text{Mejor caso} \\
+       \frac{60 \ mWh}{6 \ hs} = 10 \ mW & \text{Peor caso}    
     \end{cases}
 \end{equation}
 
@@ -101,9 +101,9 @@ mientras que el resto de los datos se puede obtener por medio de las hojas de da
 
 Se puede observar que las pérdidas de espacio libre aumentan mediante crece la frecuencia de la onda electromagnética emitida. Esto plantea una situación de compromiso. Si la frecuencia es muy alta, las pérdidas por espacio libre serán muy grandes. Mientras que si la frecuencia es muy baja, la longitud de onda será muy grande, por lo que se estaría trabajando en el campo reactivo. Esto no es deseado debido a la imposibilidad de determinar con precisión la densidad de potencia.
 
-Se decidió utilizar la banda de $915MHz$ por las siguientes razones:
+Se decidió utilizar la banda de 915 MHz por las siguientes razones:
 \begin{itemize}
-\item La zona de transición ocurre entre $32.8$ y $65.6cm$ que concuerda con las distancias mínimas y máximas entre emisor y receptor. Si bien no estaremos trabajando en campo lejano, esto no acarrea problemas, ya que hay basta cantidad de antecedentes del uso de los efectos de campo cercano en dispositivos comerciales \cite{ref:Humavox} \cite{ref:NearFieldUHFRFID}.
+\item La zona de transición ocurre entre 32.8 y 65.6 cm que concuerda con las distancias mínimas y máximas entre emisor y receptor. Si bien no estaremos trabajando en campo lejano, esto no acarrea problemas, ya que hay basta cantidad de antecedentes del uso de los efectos de campo cercano en dispositivos comerciales \cite{ref:Humavox} \cite{ref:NearFieldUHFRFID}.
 \item Esta frecuencia pertenece a la banda ISM, la cual está reservada para propósitos industriales, científicos o médicos, excluyendo las aplicaciones de telecomunicaciones \cite{ref:ITUISM}, atribuidas a la Región 2 definida por la ITU como América \cite{ref:ITUREGION}.
 \end{itemize}
  
@@ -111,7 +111,7 @@ Se decidió utilizar la banda de $915MHz$ por las siguientes razones:
 
 Para realizar las comparaciones entre antenas transmisoras, se tuvieron en cuenta los siguientes criterios:
 \begin{itemize}
-\item \textbf{Dimensiones:} La antena transmisora deberá ser colocada en la bóveda del nido, dado que ese es el único lugar donde se puede colocar electrónica sin que esta sea perturbada por las aves y vice versa. El volumen de la bóveda se puede aproximar a el de un cilindro macizo chato de diámetro entre $7.9$ y $9.7cm$ y aproximadamente $5cm$ de altura, por lo que las dimensiones de la antena emisora estarán acotadas por estos valores.
+\item \textbf{Dimensiones:} La antena transmisora deberá ser colocada en la bóveda del nido, dado que ese es el único lugar donde se puede colocar electrónica sin que esta sea perturbada por las aves y vice versa. El volumen de la bóveda se puede aproximar a el de un cilindro macizo chato de diámetro entre 7.9 y 9.7 cm y aproximadamente 5 cm de altura, por lo que las dimensiones de la antena emisora estarán acotadas por estos valores.
 \item \textbf{Directividad:} Se quiere que la potencia enviada a la antena se transforme en radiación electromagnética que llegue a la mochila del ave, por lo que radiación que no sea dirigida directamente hacia el fondo del nido será potencia desperdiciada. Es por esto que se quiere una alta directividad en la antena emisora. También hay un límite máximo en la directividad de la antena. Sin embargo, esta limitación no se alcanzará, dado que la tecnología a utilizar será de antenas del tipo planas, más cortas eléctricamente que media longitud de onda por cuestiones de limitaciones en las dimensiones. 
 \item \textbf{Potencia Máxima:} Como las pérdidas en el circuito electromagnético son grandes, una muy baja parte de la potencia enviada a la antena transmisora formará parte de la potencia entregada a las baterías de la mochila, por lo que para recibir la potencia necesaria, se debe transmitir en el orden de los watts. Es por esto que la potencia máxima es una especificación relevante al momento de decidir entre soluciones.
 \end{itemize}
@@ -119,9 +119,9 @@ Para realizar las comparaciones entre antenas transmisoras, se tuvieron en cuent
 Mientras que para el caso de las antenas receptoras, se tuvieron en cuenta los siguientes criterios:
 \begin{itemize}
 \item \textbf{Eficiencia:} Esta será la especificación más importante y es la que determinará la factibilidad de la solución. Se buscará la mayor eficiencia posible para lograr transmitir a las baterías la potencia recibida por el campo electromagnético.
-\item \textbf{Lóbulo isotrópico:} Como se desconoce cuál será la posición del ave dentro del nido, se requiere que el lóbulo de radiación de la antena receptora sea lo más isotrópico posible, garantizando una recepción de potencia uniforme sin importar la posición del ave. Se buscará una ganancia menor a $2dBi$.
+\item \textbf{Lóbulo isotrópico:} Como se desconoce cuál será la posición del ave dentro del nido, se requiere que el lóbulo de radiación de la antena receptora sea lo más isotrópico posible, garantizando una recepción de potencia uniforme sin importar la posición del ave. Se buscará una ganancia menor a 2 dBi.
 \item \textbf{Peso:} El ave no puede cargar con más de un cierto porcentaje de su propio peso, por lo que minimizar esta especificación es crucial.
-\item \textbf{Dimensiones:} Es necesario no perturbar al ave con la mochila. Esto requiere que la antena receptora posea las mínimas dimensiones posibles. Sin embargo, como la banda a utilizar será la de $915MHz$ y un cuarto de onda en esta frecuencia es alrededor de $8cm$, existe una relación de compromiso entre las dimensiones de la antena receptora y la eficiencia de esta.
+\item \textbf{Dimensiones:} Es necesario no perturbar al ave con la mochila. Esto requiere que la antena receptora posea las mínimas dimensiones posibles. Sin embargo, como la banda a utilizar será la de 915 MHz y un cuarto de onda en esta frecuencia es alrededor de 8 cm, existe una relación de compromiso entre las dimensiones de la antena receptora y la eficiencia de esta.
 \end{itemize}
 
 Finalmente, una restricción a tener en cuenta para ambas antenas será el costo.
