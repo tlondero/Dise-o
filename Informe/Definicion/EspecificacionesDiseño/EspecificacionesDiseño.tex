@@ -69,18 +69,6 @@ INT-COM2-06                       & \begin{tabular}[c]{@{}l@{}}Se le indicará a
 
 \Subsubsection{Especificaciones de Performance}
 
-%\begin{table}[H]
-%\centering
-%\begin{tabular}{|l|l|l|c|}
-%\hline
-%\multicolumn{1}{|c|}{\textbf{ID}} & \multicolumn{1}{c|}{\textbf{Descripción}}                                                                                                                                 & \multicolumn{1}{c|}{\textbf{Origen}} & \textbf{\begin{tabular}[c]{@{}c@{}}Aplicabilidad\\ Validación\end{tabular}} \\ \hline
-%PER-01                            & \begin{tabular}[c]{@{}l@{}}El equipo no deberá consumir más de \TBD Watts\\ mientras no se esté recargando al dispositivo\\ del ave ni transmitiendo datos.\end{tabular}  & REQ-02                               & F - D T                                                                     \\ \hline
-%PER-02                            & \begin{tabular}[c]{@{}l@{}}El equipo no deberá consumir más de \TBD Watts\\ mientras se está recargando al dispositivo\\ del ave y recibiendo datos de este.\end{tabular} & REQ-02, REQ-14                       & F - D T                                                                     \\ \hline
-%PER-03                            & \begin{tabular}[c]{@{}l@{}}El equipo no deberá consumir más de \TBD Watts\\ mientras se está transmitiendo datos al\\ dispositivo de la persona.\end{tabular}             & REQ-02, REQ-7                        & F - D T                                                                     \\ \hline
-%\end{tabular}
-%\caption{Especificaciones de performance.}
-%\end{table}
-
 \begin{table}[H]
 \centering
 \begin{tabular}{|l|l|l|c|}
@@ -121,30 +109,6 @@ IMP-AYT-03                        & \begin{tabular}[c]{@{}l@{}}No se deberán su
 \caption{Especificaciones de almacenamiento y transporte.}
 \end{table}
 
-%\Subsubsection{Especificaciones de Servicio (RAMS)}
-%\begin{table}[H]
-%\centering
-%\begin{tabular}{|l|l|l|c|}
-%\hline
-%\multicolumn{1}{|c|}{\textbf{ID}} & \multicolumn{1}{c|}{\textbf{Descripción}}                                                                                                                        & \multicolumn{1}{c|}{\textbf{Origen}} & \textbf{\begin{tabular}[c]{@{}c@{}}Aplicabilidad\\ Validación\end{tabular}} \\ \hline
-%RAM-SEG-01                        & \begin{tabular}[c]{@{}l@{}}La máxima temperatura que podrá tener la carcasa\\ será de \textbackslash{}TBD °C\end{tabular}                                        & REQ-09                               & P F - I D T \textbackslash{}TBD                                             \\ \hline
-%RAM-SEG-02                        & \begin{tabular}[c]{@{}l@{}}Si en algún lugar (accesible o no) hay tensiones\\ peligrosas, deberá haber un cartel que lo advierta.\end{tabular}                   & \textbackslash{}TBC                  & P \textbackslash{}TBD F - I                                                 \\ \hline
-%RAM-SEG-03                        & \begin{tabular}[c]{@{}l@{}}El dispositivo contará con un sistema de autenticación\\ ante el pedido de transmisión de datos definido\\ por INT-COM2.\end{tabular} & REQ-07                               & F - I D T \textbackslash{}TBD                                               \\ \hline
-%\end{tabular}
-%\caption{Especificaciones de seguridad.}
-%\end{table}
-
-%\begin{table}[H]
-%\centering
-%\begin{tabular}{|l|l|l|l|}
-%\hline
-%\multicolumn{1}{|c|}{\textbf{ID}} & \multicolumn{1}{c|}{\textbf{Descripción}}                                                                                                                                 & \textbf{Origen} & \textbf{\begin{tabular}[c]{@{}c@{}}Aplicabilidad\\ Validación\end{tabular}} \\ \hline
-%RAM-MAN-01                        & \begin{tabular}[c]{@{}l@{}}En caso de utilizar software o firmware, deberá ser\\ posible para técnicos calificados realizar\\ actualizaciones del mismo.\end{tabular}     & \TBC            & \TBC                                                                        \\ \hline
-%RAM-MAN-02                        & \begin{tabular}[c]{@{}l@{}}En caso de utilizar software o firmware, no deberá\\ ser posible para el usuario acceder al mismo.\end{tabular}                                & \TBC            & \TBC                                                                        \\ \hline
-%RAM-MAN-03                        & \begin{tabular}[c]{@{}l@{}}El equipo deberá contener la siguiente\\ documentación: \\ Manual de Usuario\\ Esquemáticos de circuitos\\ Esquemáticos de placas\end{tabular} & \TBC            & \TBC                                                                        \\ \hline
-%\end{tabular}
-%\caption{Especificaciones de mantenibilidad.}
-%\end{table}
 
 \begin{table}[H]
 \centering
@@ -154,4 +118,14 @@ IMP-AYT-03                        & \begin{tabular}[c]{@{}l@{}}No se deberán su
 RAM-CON-01  & \begin{tabular}[c]{@{}l@{}}El producto deberá tener una vida útil no\\ menor a 2 años.\end{tabular} & REQ-13          & P F - D                                                                     \\ \hline
 \end{tabular}
 \caption{Especificaciones de confiabilidad.}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|c|}
+\hline
+\multicolumn{1}{|c|}{\textbf{ID}} & \multicolumn{1}{c|}{\textbf{Descripción}}                                                                                                                        & \multicolumn{1}{c|}{\textbf{Origen}} & \textbf{\begin{tabular}[c]{@{}c@{}}Aplicabilidad\\ Validación\end{tabular}} \\ \hline
+RAM-SEG-01                        & \begin{tabular}[c]{@{}l@{}}El dispositivo contará con un sistema de autenticación\\ ante el pedido de transmisión de datos definido\\ por INT-COM2.\end{tabular} & REQ-07                               & F - I D T \TBD                                                              \\ \hline
+\end{tabular}
+\caption{Especificaciones de seguridad.}
 \end{table}
