@@ -45,9 +45,8 @@ Ambos de estos se encuentran disponibles para su uso en el módulo Raspberry Pi 
 
 \Subsubsubsection{Cargador}
 
-En cuanto a la etapa de carga, para el cargador MPPT de la batería principal se optó por la CN3767 debido a la tecnología de la batería a usar.
 
-Para el integrado de energy harvesting se optó por el P2110 debido a que no se conoce que tecnología será utilizado en la UBM, por lo que se opta por la opción mas genérica de energía, un capacitor.
+Para el integrado de energy harvesting se optó por el P1110 debido a su elevada eficiencia en la zona donde se transmitirá potencia.
 
 \Subsubsubsection{Batería}
 
@@ -67,16 +66,33 @@ De esta forma, para alimentar tanto a los sensores como a la R-Pi se requieren \
 
 Para poder abastecer a la batería seleccionada, con un panel \TBD se puede proveer la potencia requerida.
 
+
+
+En cuanto a la etapa de carga, para el cargador MPPT de la batería principal se optó por la CN3767 debido a la tecnología de la batería a usar.
 \Subsubsubsection{Antenas}
 
-Por un lado, para el caso de las antenas transmisoras, se descartan APAE915R2540ABDB1-T, APAES915R80C16-T y ARRKP7059-S915B por su baja ganancia, además de alto costo para las últimas dos. Por lo que restan las antenas \textbf{W3215} y \textbf{ISPC.91A.09.0092E} para la etapa de ensayado.
+Por un lado, para el caso de las antenas transmisoras, se descartan APAE915R2540ABDB1-T, APAES915R80C16-T y ARRKP7059-S915B por su baja ganancia, además del alto costo de las últimas dos. Por lo que restan las antenas \textbf{W3215} y \textbf{ISPC.91A.09.0092E} para la etapa de ensayado.
 
 Por otro lado, para las antenas receptoras, se descarta ANT-915-USP410 y ANT-915-CPA por baja eficiencia, y FXP290.07.0100A por ser muy grande. \textbf{NN01-105}, \textbf{ANT1204F005R0915A} y \textbf{1513156-1} pasan a la etapa de ensayo.
 
-\Subsubsubsection{Ensayos Teóricos de Antenas}
+Se tomaron estas antenas, exceptuando la ANT1204F005R0915A por falta de información en la hoja de datos, y se calculó para cada par Tx-Rx la potencia recibida en la antena receptora en función de la distancia.
 
-Se tomaron las antenas  
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{ImagenesFactibilidad/pot_recibida_teorica}
+	\label{fig:pot_recibida_teorica}
+	\caption{Potencia recibida en la antena Rx en función de la distancia entre antena Tx y antena Rx.}
+\end{figure}
 
-\Subsubsubsection{Ensayos Prácticos de Antenas}
+Se puede observar que casi todas las combinaciones de antenas cumplen con la potencia necesaria para el mejor y peor caso. Sin embargo, y tomando el mejor par Rx-Tx, al tener en cuenta la eficiencia de $\approx 70\%$ del P1110, la potencia a la salida de este cae por debajo del peor caso para distancias mayores a $\approx 55cm$.
 
-\TBD
+A una distancia de $64cm$, la carga inalámbrica puede sastisfacer la demanda energética de la mochila solamente si el ave permanece dentro del nido por $\approx 8hs$.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{ImagenesFactibilidad/pot_baterias_teorica}
+	\label{fig:pot_baterias_teorica}
+	\caption{Potencia a la salida del P1110 en función de la distancia entre antena Tx y antena Rx.}
+\end{figure}
+
+\TBD Aguardando compras para los ensayos prácticos de antenas y elección final
