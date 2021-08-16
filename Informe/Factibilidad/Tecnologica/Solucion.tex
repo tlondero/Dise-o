@@ -28,7 +28,7 @@ Finalmente, para la cámara que obtendrá las imágenes, se tuvo en cuenta funda
 
 El factor principal para seleccionar la memoria SD a utilizar es el rango de temperaturas de operación. Es por este factor que se elije la SDSDQAF3-XI, ya que esta se encuentra en un rango seguro (mayor a las demás).
 
-Dado que se recolectará un volumen de datos del que no se tiene una gran certeza, debido a que una parte será lo que provenga de la mochila, se estima en función de los datos del nido y del periodo de activación de los sensores, que una memoria de 32GBy es suficiente incluso si aumenta el volumen de datos.
+Dado que se recolectará un volumen de datos del que no se tiene una gran certeza, debido a que una parte será lo que provenga de la mochila, se estima en función de los datos del nido y del periodo de activación de los sensores, que una memoria de 32 GBy es suficiente incluso si aumenta el volumen de datos.
 
 \Subsubsubsection{Unidades de procesamiento}
 
@@ -45,7 +45,6 @@ Ambos de estos se encuentran disponibles para su uso en el módulo Raspberry Pi 
 
 \Subsubsubsection{Cargador}
 
-
 Para el integrado de energy harvesting se optó por el P1110 debido a su elevada eficiencia en la zona donde se transmitirá potencia.
 
 \Subsubsubsection{Batería}
@@ -54,10 +53,10 @@ La batería a emplear queda determinada en función del consumo del sistema y de
 
 Los consumos de potencia de las partes del sistema corresponden a:
 \begin{itemize}
-	\item Sensor temperatura y humedad: 1.5 mW
-	\item Sensor luminosidad: 5 mW
-	\item R-pi zero W + Camara: 1.5 W
-	\item Transmisor de potencia: \TBD W
+	\item Sensor temperatura y humedad: $1.5 \ mW$.
+	\item Sensor luminosidad: $5 \ mW$.
+	\item R-pi zero W + Camara: $1.5 \ W$.
+	\item Transmisor de potencia: \TBD W.
 \end{itemize}
 
 De esta forma, para alimentar tanto a los sensores como a la R-Pi se requieren \TBD W. Con la batería \TBD se consigue la especificación mencionada.
@@ -65,8 +64,6 @@ De esta forma, para alimentar tanto a los sensores como a la R-Pi se requieren \
 \Subsubsubsection{Alimentación}
 
 Para poder abastecer a la batería seleccionada, con un panel \TBD se puede proveer la potencia requerida.
-
-
 
 En cuanto a la etapa de carga, para el cargador MPPT de la batería principal se optó por la CN3767 debido a la tecnología de la batería a usar.
 \Subsubsubsection{Antenas}
@@ -84,9 +81,9 @@ Se tomaron estas antenas, exceptuando la ANT1204F005R0915A por falta de informac
 	\caption{Potencia recibida en la antena Rx en función de la distancia entre antena Tx y antena Rx.}
 \end{figure}
 
-Se puede observar que casi todas las combinaciones de antenas cumplen con la potencia necesaria para el mejor y peor caso. Sin embargo, y tomando el mejor par Rx-Tx, al tener en cuenta la eficiencia de $\approx 70\%$ del P1110, la potencia a la salida de este cae por debajo del peor caso para distancias mayores a $\approx 55cm$.
+Se puede observar que casi todas las combinaciones de antenas cumplen con la potencia necesaria para el mejor y peor caso. Sin embargo, y tomando el mejor par Rx-Tx, al tener en cuenta la eficiencia de aproximadamente $70\%$ del P1110, la potencia a la salida de este cae por debajo del peor caso para distancias mayores a $55 \ cm$ aproximadamente.
 
-A una distancia de $64cm$, la carga inalámbrica puede sastisfacer la demanda energética de la mochila solamente si el ave permanece dentro del nido por $\approx 8hs$.
+A una distancia de $64 \ cm$, la carga inalámbrica puede sastisfacer la demanda energética de la mochila solamente si el ave permanece dentro del nido por aproximadamente $8 \ hs$.
 
 \begin{figure}[H]
 	\centering
