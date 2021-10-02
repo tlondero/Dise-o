@@ -1,47 +1,46 @@
-En este pasaje se mostrarán los diagramas de estados del sistema.
-Se puede notar que el sistema cuenta con 4 estados distintivos, siendo estos
-\begin{itemize}
-\item Initial
-\item Idle
-\item Charging
-\item Communicating
-\end{itemize}
-Cabe la pena mencionar que en cualquiera de los estados salvando por el incial, el sistema estará realizando mediciones del ambiente, al igual de tener la posibilidad de comunicarse por Bluetooth con la electrónica de la mochila. \footnote{A menos que el nivel de carga de la UBM no sea suficiente.}
+En este pasaje se muestran los diagramas de estados del sistema. Es así que se puede notar que el conjunto cuenta con 4 estados distintivos, siendo estos los llamados \textit{Initial}, \textit{Idle}, \textit{Charging} y \textit{Communicating}.
+
+Vale la pena mencionar que en cualquiera de los estados, a excepción de \textit{Initial}, el sistema esta realizando mediciones del ambiente mientras cuenta también con la posibilidad de comunicarse por Bluetooth con la electrónica de la mochila. Esto se cumple excluyendo el caso en que el nivel de carga de la UBM no sea suficiente.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.9\linewidth]{ImagenesIngenieria de Detalle/Diagrama_de_Estados}
-	\label{fig:Diagrama_de_Estados}
+	\includegraphics[width=0.9\linewidth]{ImagenesIngenieria de Detalle/Diagrama_de_Estados}	
 	\caption{Diagrama de estados.}
+	\label{fig:Diagrama_de_Estados}
 \end{figure}
 
-En el estado ``Initial'' es aquel donde se inicializan todos los drivers, estructuras de datos y configuraciones iniciales, no se volverá a este estado una vez que este haya sido abandonado. 
+En el estado \textit{Initial} es aquel donde se inicializan todos los drivers, estructuras de datos y configuraciones que se encuentren por defecto. No se vuelve a este estado una vez que este haya sido abandonado. 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.4\linewidth]{ImagenesIngenieria de Detalle/diagrama_flujo_initial}
+	\includegraphics[width=0.4\linewidth]{ImagenesIngenieria de Detalle/diagrama_flujo_initial}	
+	\caption{Diagrama de flujo: Estado Initial.}
 	\label{fig:Diagrama_de_flujo_init}
-	\caption{Diagrama de flujo: Estado ``Initial''.}
 \end{figure}
-Luego se encuentra el estado ``IDLE'' en este estado se sensaran las variables fisicas con el periodo de muestreo acorde a cada especificado en \note{PONER LUGAR DONDE ESTE ESPECIFICADO ESTO}
-luego se fijará si es momento de prender el hotspot wifi, si es asi irá al estado ``Communicating''. Si no es as\'i se ver\'a si hay que cargar la bater\'ia, en caso positivo ir\'a a estado ``Charging'', caso contrario se corrobora si hay transmisi\'on Bluetooth, actua acorde  y comienza el ciclo nuevamente.
+
+Luego se encuentra el estado \textit{Idle}. En este se sensan las variables físicas con el periodo de muestreo acorde a cada especificado en \lnote{PONER LUGAR DONDE ESTE ESPECIFICADO ESTO}. Luego se fija si es momento de prender el hotspot wifi. En caso afirmativo se irá al estado \textit{Communicating}. En caso contrario se analiza si hay que cargar la batería. Si se debe realizar dicha acción se irá a estado \textit{Charging}, minetras que en el caso opuesto, si hay transmisión Bluetooth, actua acorde y comienza el ciclo nuevamente.
+
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.9\linewidth]{ImagenesIngenieria de Detalle/diagrama_flujo_idle}
+	\includegraphics[width=0.9\linewidth]{ImagenesIngenieria de Detalle/diagrama_flujo_idle}	
+	\caption{Diagrama de flujo: Estado \textit{Iddle}.}
 	\label{fig:Diagrama_de_flujo_idle}
-	\caption{Diagrama de flujo: Estado ``IDLE''.}
 \end{figure}
-En el estado ``Charging'' su funci\'on principal ser\'a la de cargar la UBM. Lo primero a hacer en este estado es habilitar el cargador, luego si hay un mensaje Bluetooth, se comienza la comunicaci\'on y se recibe hasta que esta haya terminado. A continuaci\'on se encarga del sensado, luego se verifica si la carga termin\'o, si es as\'i se desactiva el cargador, y dependiendo si es momento de habilitar el hotspot o no se ir\'a al estado ``Communicating'' \'o ``IDLE''
+
+La función principal del estado \textit{Charging} es la de cargar la UBM. Lo primero se hace en este estado es habilitar el cargador, luego, en caso de que haya un mensaje Bluetooth, se comienza la comunicación. Posteriormente se encarga del sensado, se verifica si la carga se terminó, para que cuando esto ocurra se desactive el cargador. Dependiendo si es momento de habilitar el hotspot o no se irá al estado \textit{Communicating} o \textit{Idle}.
+
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.9\linewidth]{ImagenesIngenieria de Detalle/diagrama_flujo_charging}
+	\includegraphics[width=0.9\linewidth]{ImagenesIngenieria de Detalle/diagrama_flujo_charging}	
+	\caption{Diagrama de flujo: Estado \textit{Charging}.}
 	\label{fig:Diagrama_de_flujo_charging}
-	\caption{Diagrama de flujo: Estado ``Charging''.}
 \end{figure}
-Finalmente en el estado ``Communicating'' es aquel en el que se habilita el hotspot y se levanta el servidor de Node-red, aqui se comunica el nido con una computadora en al base del nido, esto se mantendr\'a hasta que haya pasado el tiempo especificado en \note{No se deberiamos decirlo en algun lado, probablemente hardware}. Ademas se continuan sensando las variables f\'isicas
+
+Finalmente en el estado \textit{Communicating} es aquel en el que se habilita el hotspot y se levanta el servidor de Node-Red. Aquí se realiza la comunicación entre el nido y una computadora en al base del árbol. Esto se mantendrá hasta que haya pasado el tiempo especificado en \lnote{No se deberíamos decirlo en algún lado, probablemente hardware}. Además, se continua sensando las variables físicas.
+
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.9\linewidth]{ImagenesIngenieria de Detalle/diagrama_flujo_communicating}
+	\includegraphics[width=0.9\linewidth]{ImagenesIngenieria de Detalle/diagrama_flujo_communicating}	
+	\caption{Diagrama de flujo: Estado \textit{Communicating}.}
 	\label{fig:diagrama_flujo_communicating}
-	\caption{Diagrama de flujo: Estado ``Communicating''.}
 \end{figure}
