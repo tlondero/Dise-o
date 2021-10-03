@@ -11,9 +11,12 @@
 \newcommand{\setlinesize}[2]{{\fontsize{#1}{6}\selectfont#2}}				%Cambia el font de una oración
 
 %IMAGE IN TABLE:			%Ejemplo: \includeintable{.3}{ImagenesFactibilidad/pend}
-\newcommand{\includeintable}[2]{
-	\addvbuffer[2pt 2pt]{
-    	\begin{minipage}{#1\textwidth}
+\renewcommand\fbox{\fcolorbox{white}{white}}
+\setlength{\fboxrule}{0pt}	%padding thickness
+\setlength{\fboxsep}{4pt}	%border thickness
+\newcommand{\includeintable}[2]{	
+	\fbox{
+		\begin{minipage}{#1\textwidth}
         	\includegraphics[width=\linewidth]{#2}
     	\end{minipage}
 	}
