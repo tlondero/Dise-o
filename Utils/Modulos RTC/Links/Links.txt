@@ -1,0 +1,12 @@
+DS3231:
+https://pdf1.alldatasheet.com/datasheet-pdf/view/112132/DALLAS/DS3231.html
+https://articulo.mercadolibre.com.ar/MLA-616661237-rtc-ds3231-reloj-tiempo-real-eeprom-at24c32-arduino-pdiy--_JM#position=2&search_layout=grid&type=item&tracking_id=a06872f7-6bb1-4e2f-a4a6-8dc1fd73ae38
+
+Ds1307:
+https://pdf1.alldatasheet.com/datasheet-pdf/view/58481/DALLAS/DS1307.html
+https://articulo.mercadolibre.com.ar/MLA-908544709-modulo-rtc-reloj-clock-tiny-ds1307-eeprom-24c32-arduino-_JM#position=2&search_layout=grid&type=item&tracking_id=8a0cb9f6-8c33-41a4-b709-5aa23e194ea2
+
+DS1302:
+chrome-extension://hmigninkgibhdckiaphhmbgcghochdjc/pdfjs/web/viewer.html?file=https%3A%2F%2Fdatasheets.maximintegrated.com%2Fen%2Fds%2FDS1302.pdf
+https://articulo.mercadolibre.com.ar/MLA-797025183-modulo-rtc-ds1302-real-time-clock-reloj-ptec-_JM#position=3&search_layout=grid&type=item&tracking_id=a06872f7-6bb1-4e2f-a4a6-8dc1fd73ae38
+
