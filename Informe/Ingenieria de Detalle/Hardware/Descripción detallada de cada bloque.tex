@@ -11,9 +11,9 @@ Con estas salidas se alimentarán todos los módulos, a excepción del oscilador
 
 \Subsubsubsection{Cargador}
 
-El bloque del cargador de la UBM consiste en un receptor y un transmisor de potencia. La transmisión inalámbrica consta, por el lado del transmisor, de un oscilador de $915 \ MHz$, el cual está comandado por la R-Pi, y un amplificador de potencia alimentado por otra etapa DC-DC de 12 V a 15 V.
+El bloque del cargador de la UBM consiste en un receptor y un transmisor de potencia. La transmisión inalámbrica consta, por el lado del transmisor, de un oscilador HM-TRPW-RS232 de $915 \ MHz$ el cual está comandado por la R-Pi y se comunica mediante UART; como así también de un amplificador de potencia de $3W$ máximos alimentado por una etapa DC-DC Xl6009 de 12 V a 15 V.
 
-Por el lado del receptor, se encuentra el integrado P1110B, el cual estabiliza la energía para realizar la carga de la UBM.
+Por el lado del receptor, se encuentra el integrado P1110B, el cual almacena energía temporalmente en un capacitor para realizar posteriormente la carga de la UBM.
 
 \begin{figure}[H]
 	\centering
@@ -21,6 +21,8 @@ Por el lado del receptor, se encuentra el integrado P1110B, el cual estabiliza l
 	\caption{Diagrama en bloques cargador.}
 	\label{fig:diagrama_hardware_antenas}
 \end{figure}
+
+Para la transmisión de la señal de $915 \ MHz$ se utilizará cable del tipo $RG-213$ el cual posee bajas pérdidas de $23.054 \ \frac{dB}{100m}$.
 
 \Subsubsubsection{Sensado}
 
