@@ -6,3 +6,4 @@ Dahsed:
  - Potencia: D79B00
  - Cargador: 9673A6
  - Sensado: B85450
+ - Dark bg: 497CAB
