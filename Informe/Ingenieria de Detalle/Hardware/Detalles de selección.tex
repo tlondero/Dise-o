@@ -1,0 +1,24 @@
+\Subsubsubsection{Cálculo potencias}
+
+Para los cálculos se asumen las siguientes variables, obtenidas de estadísticas propias de la zona donde se realiza el estudio \lnote{Referencia a de donde sacamos el dato me imagino en el final de la tesis}.
+\begin{enumerate}
+	\item Duración noche = 8:30 horas.
+	\item Duración día = 15:30 horas.
+	\item Horas de sol  óptimo = 8 horas.
+\end{enumerate}
+
+\note{Esto seguro conviene estructurarlo distinto pero lo dejo asi por ahora}
+\begin{itemize}
+	\item Raspberry Pi: $P_{min} = 2 \ W$ $P_{est} = 2.7 \ W$ Si se multiplica por un  día se obtiene la energía necesaria poro día: $E_{min} = 172.8 \ kJ$ $E_{est} = 233.28 \ kJ$.
+\end{itemize}
+
+Los valores de potencia fueron obtenidos de \lnote{referencia a de donde sacamos el dato me imagino en el final de la tesis}.
+
+\Subsubsubsection{Cálculo resistencias}
+
+Tanto para el Bus de $I^2C$ como para el DHT22, se calcularon las resistencias de pull-up de la siguiente manera:
+\begin{equation}
+	R_p \ = \  \frac{V_{dd}}{I_{R_p}} \ = \ \frac{3.3 \ V}{1 \ mA} \ = \ 3.3 \ k\Omega  
+\end{equation}
+
+\note{Acá van los cálculos de paneles, batería, de la boost si es que la hacemos o si usamos un integrado.}
