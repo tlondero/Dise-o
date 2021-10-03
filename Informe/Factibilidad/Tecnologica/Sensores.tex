@@ -85,5 +85,19 @@ Para la obtención de captura imágenes y teniendo en cuenta la tecnología util
 
 \Subsubsubsection{Modulo RTC}
 Es fundamental contar con un m\'etodo para conocer la fecha y hora de manera confiable. Tanto como para saber en que momento fueron tomadas las mediciones como as\'i tambi\'en saber en que momentos habilitar el hotspot wifi.
-Teniendo ensto en cuenta se proponen los siguientes m\'odulos.
+Teniendo esto en cuenta se proponen los siguientes m\'odulos:
+\begin{table}[]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Aspectos comparativos}                                                & Ds3231         & Ds1302         & Ds1307         \\ \hline
+\textbf{Costo {[}USD{]}}                                                      & 2.33           & 0.81           & 1.37           \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Temperatura \\ de Operación\end{tabular}}  & -40 $\sim$85   & -40 $\sim$85   & -40 $\sim$85   \\ \hline
+\textbf{Rango de tensiones}                                                   & 2.3 $\sim$5.5  & 2 $\sim$5.5    & 4.5$\sim$5.5   \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Protocolo de \\ Comunicación\end{tabular}} & I2C            & SPI            & I2C            \\ \hline
+\textbf{Precisión}                                                            & 3.5ppm         & -              & -              \\ \hline
+\textbf{Imagen}                                                               & Imagen\_ds3231 & Imagen\_ds1302 & Imagen\_ds1307 \\ \hline
+\end{tabular}
+\end{table}
+
 
