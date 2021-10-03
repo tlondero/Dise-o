@@ -1,0 +1,69 @@
+%\documentclass[border={1.25cm 0.5cm 0.5cm 0.5cm}, 11pt, tikz, multi=page]{standalone}
+\documentclass[tikz, multi=page]{standalone}
+%\documentclass[multi=page,class=scrreprt,preview,pagesize=off]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-tabla, es-noshorthands]{babel}
+
+\usepackage{tikz}
+\usepackage{textcomp}
+\usetikzlibrary{shapes,arrows}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage[american]{circuitikz}
+\usepackage{units}
+\usepackage{fontspec}		%Font type
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%		IMPORTANTE: COMPILAR EN LuaLaTeX		%
+%	Así se pueden croppear bien las imágenes	%
+%	y además se puede poner un font diferente	%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\setmainfont{Calibri}
+
+%Diagrama_de_Estados
+\begin{page}
+	\input{./Flows/Diagrama_de_Estados.tex}
+\end{page}
+
+%diagrama_flujo_charging
+\begin{page}
+	\input{./Flows/diagrama_flujo_charging.tex}
+\end{page}
+
+%%diagrama_flujo_communicating
+%\begin{page}
+%	\input{./Flows/diagrama_flujo_communicating.tex}
+%\end{page}
+%
+%%diagrama_flujo_idle
+%\begin{page}
+%	\input{./Flows/diagrama_flujo_idle.tex}
+%\end{page}
+
+%diagrama_flujo_initial
+\begin{page}
+	\input{./Flows/diagrama_flujo_initial.tex}
+\end{page}
+
+%DiagramaHardware
+\begin{page}
+	\input{./Flows/DiagramaHardware.tex}
+\end{page}
+
+%%DiagramaHardwareMarcado
+%\begin{page}
+%	%flow
+%\end{page}
+
+%EsquemaHardwareAntenas
+\begin{page}
+	\input{./Flows/EsquemaHardwareAntenas.tex}
+\end{page}
+
+\end{document}

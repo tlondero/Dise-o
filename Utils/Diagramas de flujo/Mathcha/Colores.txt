@@ -1,0 +1,9 @@
+Background: 5B9BD5
+Arrow:
+ - Energy (green): 82B366
+ - Control (red): B85450
+Dahsed:
+ - Potencia: D79B00
+ - Cargador: 9673A6
+ - Sensado: B85450
+ - Dark bg: 497CAB
