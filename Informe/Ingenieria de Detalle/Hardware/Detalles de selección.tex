@@ -28,10 +28,10 @@ Finalmente, el consumo energético por día es de
 E_{sist} = E_{rpi_{est}} + E_{ant} = 364.17 \ kJ
 \end{equation}
 
-Por lo que, por un lado, teniendo en cuenta que la batería, de $V_{bat} = 12V$, debe tener una capacidad de almacenamiento equivalente a $T_{reserva} = 4 \ \text{días}$ sin recarga \lnote{estadistica del lugar pls} y utilizando un coeficiente de seguridad de $\gamma_{bat} = 1.5$, se obtiene
+Por lo que, por un lado, teniendo en cuenta que la batería, de $V_{bat} = 12 \ V$, debe tener una capacidad de almacenamiento equivalente a $T_{reserva} = 4 \ d\acute{\imath}as$ sin recarga \lnote{estadistica del lugar pls} y utilizando un coeficiente de seguridad de $\gamma_{bat} = 1.5$, se obtiene
 
 \begin{equation}
-Capacidad_{bat} = \frac{E_{sist}\cdot T_{reserva}\cdot 1000}{V_{bat}\cdot 3600}\cdot \gamma_{bat} = 50.58Ah
+Capacidad_{bat} = \frac{E_{sist}\cdot T_{reserva}\cdot 1000}{V_{bat}\cdot 3600}\cdot \gamma_{bat} = 50.58 \ Ah
 \end{equation}
 
 Por otro lado, para los cálculos del panel solar, teniendo en cuenta que se quiere que en un día de sol promedio se logre abastecer al sistema de su consumo energético normal diario y recargar un $\rho = 0.1$ de la capacidad total de la batería, y además teniendo en cuenta un coeficiente de seguridad de $\gamma_{panel} = 1.75$, se tiene que
@@ -46,16 +46,23 @@ Tanto para el Bus de $I^2C$ como para el DHT22, se calcularon las resistencias d
 \begin{equation}
 	R_p \ = \  \frac{V_{dd}}{I_{R_p}} \ = \ \frac{3.3 \ V}{1 \ mA} \ = \ 3.3 \ k\Omega  
 \end{equation}
-\Subsubsubsection{C\'alculo de memoria}
+
+\Subsubsubsection{Cálculo de memoria}
 Se definen los siguientes valores para cada medici\'on:
 \begin{itemize}
-\item Medici\'on temperatura y humedad: 16 Bytes (fecha y hora) + 4 Bytes (humedad) + 4 Bytes (temperatura) = 24 Bytes
-\item Medici\'on luminosidad: 16 Bytes (fecha y hora) + 4 Bytes (luminosidad)= 20 Bytes
-\item Medici\'on c\'amara: Acorde a \cite{ref:rpicam} cada imagen pesa 2.4 MBytes
-\item Informaci\'on BT: $\approx$ 2 KByte
-\item Sistema operativo: 2 GBytes
+	\item Medición temperatura y humedad: 16 Bytes (fecha y hora) + 4 Bytes (humedad) + 4 Bytes (temperatura) = 24 Bytes.
+	\item Medición luminosidad: 16 Bytes (fecha y hora) + 4 Bytes (luminosidad) = 20 Bytes.
+	\item Medición cámara: cada imagen pesa 2.4 MBytes \cite{ref:rpicam}.
+	\item Información BT: aproximadamente 2 KByte.
+	item Sistema operativo: 2 GBytes.
 \end{itemize}
-Por lo que para 14 dias se tiene que:
-Tamaño mediciones: $3 \ \nicefrac{medici\acute{o}n}{hora} \  \cdot \ 24 \ \nicefrac{hora}{d\acute{\imath}a} \  \cdot \ 14 \ d\acute{\imath}a \  \cdot \ ( \ 24 \  \nicefrac{Bytes}{medici\acute{o}n} \  + \ 16 \ \nicefrac{Bytes}{medici\acute{o}n} \ ) $ + $2 \ \nicefrac{medici\acute{o}n}{hora} \  \cdot \ 24 \ \nicefrac{hora}{d\acute{\imath}a} \  \cdot \ 14 \ d\acute{\imath}a \  \cdot \  2.4 \ MBytes \ + 2 \ \nicefrac{KByte}{d\acute{\imath}a} \  \cdot \  14 \ d\acute{\imath}a $ = 1.61 GBy 
-Si a eso se le suma el espacio dedicado al sistema operativo se obtiene $\approx$ 4GBy, ademas se tendr\'a en cuenta el espacio utilizado por el overhead de la base de datos, los diversos paquetes necesarios para el sensado de las variables f\'isicas, as\'i tambi\'en como un espacio por si no se visita al nido en el tiempo pactado. Se obtiene que con una memoria de 16 GBy basta para el proyecto.
+
+De esta forma se tiene el tamaño de las mediciones durante un período de 14 días:
+\begin{multline*}
+	3 \ \nicefrac{medici\acute{o}n}{hora} \  \cdot \ 24 \ \nicefrac{hora}{d\acute{\imath}a} \  \cdot \ 14 \ d\acute{\imath}a \  \cdot \ ( \ 24 \  \nicefrac{Bytes}{medici\acute{o}n} \  + \ 16 \ \nicefrac{Bytes}{medici\acute{o}n} \ ) \\ + 2 \ \nicefrac{medici\acute{o}n}{hora} \  \cdot \ 24 \ \nicefrac{hora}{d\acute{\imath}a} \  \cdot \ 14 \ d\acute{\imath}a \  \cdot \  2.4 \ MBytes \ + 2 \ \nicefrac{KByte}{d\acute{\imath}a} \  \cdot \  14 \ d\acute{\imath}a = 1.61 \ GBy
+\end{multline*}
+
+Si a esto se le suma el espacio dedicado al sistema operativo, se obtiene que el tamaño total de memoria necesaria es de aproximadamente 4 GBy.
+
+Ademas de lo mencionado en las cuentas, se tiene en cuenta el espacio utilizado por el overhead de la base de datos, los diversos paquetes necesarios para el sensado de las variables físicas, así también como un espacio por si no se visita al nido en el tiempo pactado. Es así que con una memoria de 16 GBy basta para el proyecto.
 \note{Acá van los cálculos de la boost si es que la hacemos o si usamos un integrado.}
