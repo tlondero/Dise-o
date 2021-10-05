@@ -20,7 +20,7 @@ En el estado \textit{Initial} es aquel donde se inicializan todos los drivers, e
 	\label{fig:Diagrama_de_flujo_init}
 \end{figure}
 
-Luego se encuentra el estado \textit{Idle}. En este se sensan las variables físicas con el periodo de muestreo acorde a cada especificado en \lnote{PONER LUGAR DONDE ESTE ESPECIFICADO ESTO}. Luego se fija si es momento de prender el hotspot wifi. En caso afirmativo se irá al estado \textit{Communicating}. En caso contrario se analiza si hay que cargar la batería. Si se debe realizar dicha acción se irá a estado \textit{Charging}, minetras que en el caso opuesto, si hay transmisión Bluetooth, actua acorde y comienza el ciclo nuevamente.
+Luego se encuentra el estado \textit{Idle}. En este se sensan las variables físicas con el periodo de muestreo acorde a la especificaciones 10, 11, 12 y 13 de la Tabla (\ref{tab:intFun}). Luego se fija si es momento de prender el hotspot wifi. En caso afirmativo se irá al estado \textit{Communicating}. En caso contrario se analiza si hay que cargar la batería. Si se debe realizar dicha acción se irá a estado \textit{Charging}, minetras que en el caso opuesto, si hay transmisión Bluetooth, actua acorde y comienza el ciclo nuevamente.
 
 \begin{figure}[H]
 	\centering
