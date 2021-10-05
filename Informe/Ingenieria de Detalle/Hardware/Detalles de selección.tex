@@ -46,5 +46,16 @@ Tanto para el Bus de $I^2C$ como para el DHT22, se calcularon las resistencias d
 \begin{equation}
 	R_p \ = \  \frac{V_{dd}}{I_{R_p}} \ = \ \frac{3.3 \ V}{1 \ mA} \ = \ 3.3 \ k\Omega  
 \end{equation}
-
-\note{Acá van los cálculos de paneles, batería, de la boost si es que la hacemos o si usamos un integrado.}
+\Subsubsubsection{C\'alculo de memoria}
+Se definen los siguientes valores para cada medici\'on:
+\begin{itemize}
+\item Medici\'on temperatura y humedad: 16 Bytes (fecha y hora) + 4 Bytes (humedad) + 4 Bytes (temperatura) = 24 Bytes
+\item Medici\'on luminosidad: 16 Bytes (fecha y hora) + 4 Bytes (luminosidad)= 20 Bytes
+\item Medici\'on c\'amara: Acorde a \cite{ref:rpicam} cada imagen pesa 2.4 MBytes
+\item Informaci\'on BT: $\approx$ 2 KByte
+\item Sistema operativo: 2 GBytes
+\end{itemize}
+Por lo que para 14 dias se tiene que:
+Tamaño mediciones: $3 \ \nicefrac{medici\acute{o}n}{hora} \  \cdot \ 24 \ \nicefrac{hora}{d\acute{\imath}a} \  \cdot \ 14 \ d\acute{\imath}a \  \cdot \ ( \ 24 \  \nicefrac{Bytes}{medici\acute{o}n} \  + \ 16 \ \nicefrac{Bytes}{medici\acute{o}n} \ ) $ + $2 \ \nicefrac{medici\acute{o}n}{hora} \  \cdot \ 24 \ \nicefrac{hora}{d\acute{\imath}a} \  \cdot \ 14 \ d\acute{\imath}a \  \cdot \  2.4 \ MBytes \ + 2 \ \nicefrac{KByte}{d\acute{\imath}a} \  \cdot \  14 \ d\acute{\imath}a $ = 1.61 GBy 
+Si a eso se le suma el espacio dedicado al sistema operativo se obtiene $\approx$ 4GBy, ademas se tendr\'a en cuenta el espacio utilizado por el overhead de la base de datos, los diversos paquetes necesarios para el sensado de las variables f\'isicas, as\'i tambi\'en como un espacio por si no se visita al nido en el tiempo pactado. Se obtiene que con una memoria de 16 GBy basta para el proyecto.
+\note{Acá van los cálculos de la boost si es que la hacemos o si usamos un integrado.}
