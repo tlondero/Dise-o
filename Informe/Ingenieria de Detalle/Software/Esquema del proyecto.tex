@@ -1,1 +1,24 @@
 \note{Mi idea para esta parte era explicar que tecnologías íbamos a usar y eso}
+El centro de control, compuesto por una Raspberry-Pi, utiliza una distribución de Linux Server. Esto se debe a que no es de interés contar con una interfaz gráfica y es importante reservar espacio para almacenar los datos obtenidos desde los sensores y la cámara. 
+Prescindir de la interfaz gráfica también permite ahorrar potencia dado que se apaga el puerto HDMI.
+
+
+La configuración de la RPI se realiza de forma remota mediante SSH (secure shell).
+Dado que el proyecto apunta a ser escalable, tener más de un nido operativo, se busco una forma de configurar la RPI manera automática y replicable. Para ello utilizaremos la herramienta  de automatización llamada Ansible. Esta nos permite de volcar sobre archivos de texto las configuraciones que necesita la RPI.
+
+Se desarrollo la lógica de control utilizando el lenguaje de programación Python. Su rico ecosistema de paquetes nos permiten utilizar los diversos sensores y manejar las bases de datos.
+
+Sensado
+
+Para realizar la medición de las magnitudes de interés 
+
+
+
+
+
+
+
+
+
+
+
