@@ -8,9 +8,11 @@ Dado que el proyecto apunta a ser escalable, tener más de un nido operativo, se
 
 Se desarrollo la lógica de control utilizando el lenguaje de programación Python. Su rico ecosistema de paquetes nos permiten utilizar los diversos sensores y manejar las bases de datos.
 
-Sensado
+Metodología de Sensado
 
-Para realizar la medición de las magnitudes de interés 
+Para realizar la medición de las magnitudes de interés se opto por utilizar la utilidad nativa de Linux, los cronjobs. Los cronjobs son tareas programables que el propio OS se encarga de ejecutar según un cronograma pre-establecido en la llamada crontab. Esta una opción mucho más segura ante la alternativa de realizar un polleo continuo mediante un cronograma de sensado programado por nosotros.
+
+Al estar instalado a una altura la cual no es fácil acceder es necesario contar con una forma de descargar la información de forma inalámbrica. Para ello se implemento el acceso remoto mediante un hotspot hosteado por la RPI. Mediante este es posible establecer una conexión y acceder a la interfaz de lo cual se hablara en la siguiente sección. 
 
 
 
