@@ -49,10 +49,26 @@ Para el amplificador de potencia de RF, como las unidades a producir serán muy 
 
 \textbf{DC-DC}
 
-
+\tbc
 
 \textbf{P1110B}
 
+\begin{figure}[H]
+	\centering	
+	\includegraphics[width=0.5\textwidth, page=8]{ImagenesIngenieria de Detalle/p1110b}
+	\caption{Módulo utilizado como power harvester.}
+	\label{fig:p1110b}
+\end{figure}
+
+Para la recepción de la radiofrecuencia se utilizará el power harvester P1110B. Este integrado toma la señal de radiofrecuencia y realiza con esta la carga de un capacitor. Cuando el capacitor llega a un valor de tensión máximo, habilita la salida mediante una etapa DC-DC hasta que el capacitor baja su tensión por debajo de un mínimo para volver a cargarse hasta el máximo.
+
+
+\begin{itemize}
+\item Eficiencia del $70 \ \%$.
+\item Adaptado internamente a $50 \ \Omega$.
+\item Operación por encima de $-5 \ dBm$.
+\item Opción de carga para Li-ion y baterías alcalinas.
+\end{itemize}
 
 \Subsubsubsection{Sensado}
 

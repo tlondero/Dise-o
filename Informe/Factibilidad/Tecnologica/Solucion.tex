@@ -83,13 +83,8 @@ Se tomaron estas antenas y se calculó para cada par Tx-Rx la potencia recibida 
 	\caption{Potencia recibida en la antena Rx en función de la distancia entre antena Tx y antena Rx.}
 \end{figure}
 
-Se puede observar que casi todas las combinaciones de antenas cumplen con la potencia necesaria para el mejor y peor caso. Sin embargo, y tomando el mejor par Rx-Tx, al tener en cuenta la eficiencia de aproximadamente $70\%$ del P1110, la potencia a la salida de este cae por debajo del peor caso para distancias mayores a $55 \ cm$ aproximadamente.
+Se puede observar que con $4 \ W$ en la antena transmisora, todas las combinaciones de antenas cumplen con la potencia necesaria para el mejor y peor caso. Tomando el mejor par Rx-Tx, y al tener en cuenta la eficiencia de aproximadamente $70\%$ del P1110, la potencia a la salida de este permanece por encima del peor caso hasta la máxima distancia de transmisión.
 
-A una distancia de $64 \ cm$, la carga inalámbrica puede sastisfacer la demanda energética de la mochila solamente si el ave permanece dentro del nido por aproximadamente $8 \ hs$.
-
-Por estas razones, se deberá complementar la recarga de la UBM utilizando un panel solar.
-
-\observacion{\verObs}{actualizar foto}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{ImagenesFactibilidad/pot_baterias_teorica}
@@ -97,4 +92,29 @@ Por estas razones, se deberá complementar la recarga de la UBM utilizando un pa
 	\caption{Potencia a la salida del P1110 en función de la distancia entre antena Tx y antena Rx.}
 \end{figure}
 
-\TBD Aguardando compras para los ensayos prácticos de antenas y elección final
+Sin embargo, si se toma en consideración la restricción más estricta de $4.5 \  \frac{W}{m^2}$ impuesta en la Sección (\ref{sec:legal}) dada por la fórmula
+
+\begin{equation}
+	p = \frac{P_TG_T}{4\pi R^2}
+\end{equation}
+
+se observa en la Figura (\ref{fig:densidadradiada}) que para una potencia de $1.6 \ W$ en la antena transmisora esta restricción se cumple a treinta centímetros de la distancia mínima de transmisión.
+
+\observacion{\verObs}{actualizar foto}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{ImagenesFactibilidad/densidadradiada}
+	\caption{Densidad de potencia radiada con $1.6 \ W$ en la antena transmisora según la fórmula de Friis.}
+	\label{fig:densidadradiada}
+\end{figure}
+
+Teniendo esto en cuenta, y recalculando para $1.6 \ W$ se obtiene
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{ImagenesFactibilidad/recalculo}
+	\caption{Potencia a la salida del P1110 en función de la distancia entre antena Tx y antena Rx para $1.6 \ W$ en la antena transmisora.}
+	\label{fig:recalculo}
+\end{figure}
+
+Por estas razones, se deberá complementar la recarga de la UBM utilizando un panel solar.
