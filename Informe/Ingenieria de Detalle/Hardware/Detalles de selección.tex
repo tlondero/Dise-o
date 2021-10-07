@@ -7,17 +7,17 @@ Se asumen las siguientes variables para los cálculos de potencias, obtenidas de
 	\item Horas de sol efectivas = 8 horas.
 \end{enumerate}
 
-Para el caso de la R-Pi, se tiene que su consumo mínimo normal es de $P_{rpi_{min}} = 2 \ W$. Sin embargo, para reducir este consumo, se desactivan los puertos de ethernet y HDMI ya que no se utilizará un entorno gráfico. Esto permite reducir aún más el consumo mínimo. Se estima \lnote{como lo estimamos?} que la R-Pi consumirá alrededor de $P_{rpi_{est}} = 2.7 \ W$ en su funcionamiento normal.
+Para el caso de la R-Pi, se tiene que su consumo mínimo normal es de $P_{rpi_{min}} = 2 \ W$. Sin embargo, para reducir este consumo, se desactivan los puertos de ethernet y HDMI ya que no se utilizará un entorno gráfico. Esto permite reducir aún más el consumo mínimo. Se sabe que la R-Pi consumirá alrededor de $P_{rpi_{est}} = 2.7 \ W$ en su funcionamiento normal.
 Luego, se tiene que
 
 \begin{equation}
 E_{rpi_{est}} = P_{rpi_{est}}\cdot 24 \ hs = 233.28 \ kJ
 \end{equation}
 
-Los valores de potencia fueron obtenidos de \lnote{referencia a de donde sacamos el dato me imagino en el final de la tesis}.
+%Los valores de potencia fueron obtenidos de \lnote{referencia a de donde sacamos el dato me imagino en el final de la tesis}.
 
 Para el caso del cargador de la UBM, se quiere lograr trasmitir $2 \ W$ de potencia a través de la antena transmisora. Teniendo en cuenta la eficiencia de la antena transmisora del $70\%$ \tbc y las pérdidas del cable RG-213 utilizado para transportar la señal, se tiene que la potencia necesaria en el amplificador de potencia es de $2.85 \ W$. Multiplicando por la duración de una noche se tiene que
-\note{CORREGIR CUENTAS}
+\observacion{\verObs}{CORREGIR CUENTAS}
 \begin{equation}
 E_{ant} = P_{ant}\cdot 8.5 \ hs = 130.89 \ kJ
 \end{equation}
@@ -28,7 +28,7 @@ Finalmente, el consumo energético por día es de
 E_{sist} = E_{rpi_{est}} + E_{ant} = 364.17 \ kJ
 \end{equation}
 
-Por lo que, por un lado, teniendo en cuenta que la batería, de $V_{bat} = 12 \ V$, debe tener una capacidad de almacenamiento equivalente a $T_{reserva} = 4 \ d\acute{\imath}as$ sin recarga \lnote{estadistica del lugar pls} y utilizando un coeficiente de seguridad de $\gamma_{bat} = 1.5$, se obtiene
+Por lo que, por un lado, teniendo en cuenta que la batería, de $V_{bat} = 12 \ V$, debe tener una capacidad de almacenamiento equivalente a $T_{reserva} = 4 \ d\acute{\imath}as$ sin recarga \cite{ref:weather_bariloche} y utilizando un coeficiente de seguridad de $\gamma_{bat} = 1.5$, se obtiene
 
 \begin{equation}
 Capacidad_{bat} = \frac{E_{sist}\cdot T_{reserva}\cdot 1000}{V_{bat}\cdot 3600}\cdot \gamma_{bat} = 50.58 \ Ah
@@ -65,4 +65,4 @@ De esta forma se tiene el tamaño de las mediciones durante un período de 14 d�
 Si a esto se le suma el espacio dedicado al sistema operativo, se obtiene que el tamaño total de memoria necesaria es de aproximadamente 4 GBy.
 
 Ademas de lo mencionado en las cuentas, se tiene en cuenta el espacio utilizado por el overhead de la base de datos, los diversos paquetes necesarios para el sensado de las variables físicas, así también como un espacio por si no se visita al nido en el tiempo pactado. Es así que con una memoria de 16 GBy basta para el proyecto.
-\note{Acá van los cálculos de la boost si es que la hacemos o si usamos un integrado.}
+\observacion{\verObs}{Acá van los cálculos de la boost si es que la hacemos o si usamos un integrado.}
