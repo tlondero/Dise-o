@@ -1,7 +1,42 @@
-%\input{../Informe/Header.tex}
+\input{../Informe/Header.tex}
 
-%\begin{document}
+\begin{document}
+
+Un parametró fundamental a definir es el ancho que deben tener las paredes del nido prototipo, si bien el menor ancho que tienen la cavidad real está determinado por (referencia a el paper de la biologa). Si se calcula la profundidad de penetración de la onda electromagnética se obtiene que.
+\begin{equation}
+\delta \ = \ \frac{1}{\alpha} \ =\ \frac{1}{\sqrt{\pi f \mu \sigma}}  
+\end{equation}
+donde ademas se sabe que los valores de las constantes son:
+\begin{itemize}
+\item f = 915 MHz
+\item $\mu$ = 1.25663760  $\mu \frac{ Hy}{m}$ (Permeabilidad magnética de la madera)
+% Fuente
+% https://www.engineeringtoolbox.com/permeability-d_1923.html
+\item $\sigma$ $\approx$   1 m$\frac{S}{m}$ (Conductividad de la madera)
+% Fuente
+% https://www.thoughtco.com/table-of-electrical-resistivity-conductivity-608499
+
+\end{itemize}
+Computando se obtiene que $\delta$ = 526 mm.
 
 
+Ahora se calcula el coeficiente de reflexi\'on de la onda electromagn\'etica.
+Sabiendo que 
+\begin{itemize}
+\item $\varepsilon_{Madera}$ = 17.7 $10^{-12}$ $\frac{F}{m}$
+% Fuente
+% https://www.engineeringtoolbox.com/relative-permittivity-d_1660.html
+\item $\varepsilon_{Aire}$ = 8.8595003 $10^{-12}$ $\frac{F}{m} $
+\item $\mu_{Aire}$ = 1.25663753 $\mu \frac{ Hy}{m}$ 
+\end{itemize}
+y los valores en el vacio. Se obtiene que:
+\begin{equation}
+\eta_{Madera}=\sqrt{\frac{\mu_{Madera}}{\varepsilon_{Madera}}}
+\end{equation}
+El coeficiente de reflexi\'on se define como:
+\begin{equation}
+\Gamma = \frac{\eta_2 - \eta_1  }{\eta_2 + \eta_1} = -0.1714\footnote{El signo negativa implica una inversi\'on de fase en la onda electromagn\'etica.}
+\end{equation}
 
-%\end{document}
+Adem\'as la potencia de la onda reflejada ser\'a $P_{ref}=|\Gamma^2|$ = 0.029. Por lo que menos de un 3\%  de la potencia ser\'a reflejada. Esto es algo bueno debido a que no habr\'a una interferencia significativa con la transmisi\'on original.
+\end{document}
