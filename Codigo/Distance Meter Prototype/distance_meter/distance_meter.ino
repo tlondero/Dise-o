@@ -8,9 +8,9 @@
  * CONSTANT AND MACRO DEFINITIONS USING #DEFINE
  ******************************************************************************/
  
-#define WIDTH 128     // reemplaza ocurrencia de ANCHO por 128
-#define HEIGHT 64       // reemplaza ocurrencia de ALTO por 64
-#define OLED_RESET 4      // necesario por la libreria pero no usado
+#define WIDTH 128     
+#define HEIGHT 64       
+#define OLED_RESET 4      
 
 /*******************************************************************************
  * VARIABLES  WITH FILE LEVEL SCOPE
@@ -19,6 +19,7 @@
 int TRIG = 10;      // trigger en pin 10
 int ECO = 9;      // echo en pin 9
 int LED = 3;      // LED en pin 3
+// Obviamente para la oled son los de i2c
 int DURATION;
 float DISTANCE;
 float  lastvalDist;
@@ -56,15 +57,16 @@ void loop()
   oled.clearDisplay();      // limpia pantalla
 
   oled.setTextColor(WHITE);   // establece color al unico disponible (pantalla monocromo)
-  oled.setCursor(0,0);
+  oled.setCursor(0,0);  //Arriba de TODO
   oled.setTextSize(1);      // establece tamano de texto en 1
   oled.print("SIMFS - - - By MAGT");  // escribe en pantalla el texto
-  oled.setCursor(5, 15);     // ubica cursor en inicio de coordenadas 0,0
-  oled.setTextSize(2);      // establece tamano de texto en 1
-  oled.print("Distancia");  // escribe en pantalla el texto
-  oled.setCursor(25, 45);     // ubica cursor en inicio de coordenadas 0,0
-  oled.print((int)dist_out);  // escribe en pantalla el texto
+  oled.setCursor(5, 15);     // ubica cursor en inicio de coordenadas Centro medio
+  oled.setTextSize(2);      // establece tamano de texto en 2
+  oled.print("Distancia");  
+  oled.setCursor(25, 45);     // ubica cursor en inicio de coordenadas Centro abajo
+  oled.print((int)dist_out);  
   oled.print(" cm");
   oled.display();     // 
   delay(200);
+}
 }
