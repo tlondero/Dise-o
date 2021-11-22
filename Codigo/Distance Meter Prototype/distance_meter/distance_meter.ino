@@ -16,8 +16,8 @@
  * VARIABLES  WITH FILE LEVEL SCOPE
  ******************************************************************************/
   
-int TRIG = 10;      // trigger en pin 10
-int ECO = 9;      // echo en pin 9
+int TRIG = 5;      // trigger en pin 10
+int ECO = 6;      // echo en pin 9 
 int LED = 3;      // LED en pin 3
 // Obviamente para la oled son los de i2c
 int DURATION;
