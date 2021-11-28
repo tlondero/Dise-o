@@ -22,7 +22,7 @@ Por último el BJ-1750 cuanta con una salida digital con el protocolo de comunic
 
 Luego para el modulo RTC se tom\'o un  m\'odulo que tenga I2C, y que cuyo rango de almimentacion se encuentre entre 3.3 y 5 V, por lo que se opta por el DS3231.
 %%%%%%IAMGENES%%%%%%
-Finalmente, para la cámara que obtendrá las imágenes, se tuvo en cuenta fundamentalmente la relación precio-resolución de la cámara, al igual que la integración con Linux y el factor de contar con una API para el lenguaje C. Por lo que la RPi-ZeroC fue la cámara seleccionada.
+Finalmente, para la cámara que obtendrá las imágenes, se tuvo en cuenta fundamentalmente la relación precio-resolución de la cámara, al igual que la integración con Linux y el factor de contar con una API para el lenguaje C. Por lo que la RPi-CMOD-V2 fue la cámara seleccionada.
 
 
 \Subsubsubsection{Almacenamiento}
@@ -33,7 +33,7 @@ Dado que se recolectará un volumen de datos del que no se tiene una gran certez
 
 \Subsubsubsection{Unidades de procesamiento}
 
-Para este módulo se opta por la Raspberry Pi Zero W, ya que posee Bluetooth BLE (Bluetooth Low Energy), es el dispositivo más económico, más pequeño y cuenta con soporte para micro SD.
+Para este módulo se opta por la Raspberry Pi 3B, ya que posee Bluetooth BLE (Bluetooth Low Energy), es el dispositivo más económico, más pequeño y cuenta con soporte para micro SD.
 
 En cuanto las temperaturas de funcionamiento, este dispositivo se encuentra dentro del rango necesario. Además, los módulos Raspberry Pi trabajan entre 20 °C y 30 °C por encima de la temperatura ambiente debido a su autocalentamiento. También es sabido que los integrados R-Pi pueden llegar a soportar temperaturas extremas, tales como las que se dan en la Antártida \cite{ref:Penguin}.
 
@@ -42,7 +42,7 @@ Además, este dispositivo seleccionada se caracteriza por ser compatible con la 
 \Subsubsubsection{Comunicación}
 
 En cuanto a la comunicación se utilizará BLE para la conexión con el ave, y WiFi para la comunicación con un tercero.
-Ambos de estos se encuentran disponibles para su uso en el módulo Raspberry Pi Zero W.
+Ambos de estos se encuentran disponibles para su uso en el módulo Raspberry Pi 3B.
 
 \Subsubsubsection{Cargador}
 
