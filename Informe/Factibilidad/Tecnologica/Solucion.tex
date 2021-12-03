@@ -52,20 +52,13 @@ Para el integrado de energy harvesting se optó por el P1110 debido a su elevada
 
 La batería a emplear queda determinada en función del consumo del sistema y de la energía que se deba almacenar en caso de emergencias. 
 
-Los consumos de potencia de las partes del sistema corresponden a:
-\observacion{\verObs}{VER ESTO DENUEVO POENCIAS RANCIAS}
-\begin{itemize}
-	\item Sensor temperatura y humedad: $1.5 \ mW$.
-	\item Sensor luminosidad: $5 \ mW$.
-	\item R-pi zero W + Camara: $1.5 \ W$.
-	\item Transmisor de potencia: \TBD W.
-\end{itemize}
+Los consumos de potencia de las partes del sistema se detallan en la Sección \ref{sec:calc_potencias}.
 
-De esta forma, para alimentar tanto a los sensores como a la R-Pi se requieren \TBD W. Con la batería \TBD se consigue la especificación mencionada.
+De esta forma, para alimentar tanto a los sensores como a la R-Pi y al sistema de carga inalámbrica en un día se requieren $364.17 \ kJ$. Con una batería de $50.58 \ Ah$ de capacidad se consigue la especificación mencionada, por lo que se opta usar una batería de la serie JDG de Kijo.
 
 \Subsubsubsection{Alimentación}
 
-Para poder abastecer a la batería seleccionada, con un panel \TBD se puede proveer la potencia requerida.
+Para poder abastecer a la batería seleccionada, con un panel $35.41 \ W$ se puede proveer la potencia requerida.
 
 En cuanto a la etapa de carga, para el cargador MPPT de la batería principal se optó por la DFR0580  debido a la tecnología de la batería a usar.
 \Subsubsubsection{Antenas}
