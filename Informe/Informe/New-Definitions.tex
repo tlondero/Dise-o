@@ -3,6 +3,8 @@
 \definecolor{AzulInfo}{rgb}{0.180,0.455,0.710}	%RGB	%{46,116,181}
 \definecolor{AzulTable}{rgb}{0.302,0.507,0.871}	%RGB	%{68,114,196}
 \definecolor{PName}{rgb}{0.353,0.353,0.353}		%RGB	%{90,90,90}
+\definecolor{mygreen}{rgb}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{rgb}{170,55,241}
 
 %Change Font Size
 
@@ -20,6 +22,11 @@
         	\includegraphics[width=\linewidth]{#2}
     	\end{minipage}
 	}
+}
+
+%LINK IN REF
+\newcommand{\reflink}[1]{		%LINK
+	\href{#1}{#1}
 }
 
 %NOTAS:
@@ -40,3 +47,4 @@
 \newcommand{\tbc}{\textcolor{red}{(TBC) }}
 
 \newcommand{\quotes}[1]{``#1''}
+\newcommand{\q}[1]{``#1''}

@@ -1,11 +1,12 @@
 \documentclass[a4paper]{article}
 %\usepackage[utf8]{inputenc}
 \usepackage[spanish, es-tabla, es-noshorthands]{babel}
-\usepackage[table,xcdraw]{xcolor}
-\usepackage[a4paper, footnotesep=1.25cm, headheight=1.25cm, top=2.54cm, left=2.54cm, bottom=2.54cm, right=2.54cm]{geometry}
+\usepackage[table,xcdraw,dvipsnames]{xcolor}
+\usepackage[a4paper, footnotesep=1.25cm, headheight=1.25cm, top=2.54cm, left=2.54cm,
+ bottom=2.54cm, right=2.54cm]{geometry}
 %\geometry{showframe}
-\usepackage[normalem]{ulem}
-\useunder{\uline}{\ul}{}
+ \usepackage[normalem]{ulem}
+ \useunder{\uline}{\ul}{}
 
 %VERIFICAR EL HEAD Y EL FOOT EN
 %https://ctan.dcc.uchile.cl/macros/latex/contrib/geometry/geometry.pdf
@@ -50,7 +51,7 @@
 %https://www.overleaf.com/learn/latex/XeLaTeX
 
 %Path para imagenes para trabajar en subarchivos
-\graphicspath{{../Prefacio/}{../Acronimos/}{../Introduccion/}{../Objetivos/}{../Definicion/}{../Resumen/}{../Referencias/}{../Apendice/}{../Plan de validacion/}{../Factibilidad/}{../Ingenieria de Detalle/}{../Construccion del prototipo/}{../Validacion del prototipo/}{../Estudios/}{../Conclusiones/}{../Ejercicio-N/}}
+\graphicspath{{../Resumen/}{../Referencias/}{../Apendice/}{../Descripción de la Empresa/}{../Tareas del Alumno/}{../Conclusiones/}{../Herramientas Empleadas/}}
 
 %Definiciones de nuevos comandos y colores
 \input{../Informe/New-Definitions.tex}
@@ -73,7 +74,10 @@
 \renewcommand{\headrulewidth}{0pt}
 \patchcmd{\footrule}{\hrule}{\color{AzulFoot}\hrule}{}{}
 
-\input{../Informe/Section-cfg.tex}
+%Código en el informe
+\input{../Informe/listing.tex}
+
+\input{../Informe/Section-cfg-code.tex}
 
 \input{../Informe/Index-cgf.tex}
 
