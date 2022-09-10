@@ -1,4 +1,4 @@
-
+La solución planteada para el análisis de la factibilidad de la transferencia de energía al dispositivo del ave es por medio de radiación electromagnética. A continuación se detallará el análisis realizado y las conclusiones tomadas. \observacion{\verObs}{Aca habría que hablar de que vamos a usar un panel solar chico para complementar los de RF}
 
 \Subsubsubsection{Planteamiento del Problema}
 
@@ -126,6 +126,111 @@ Mientras que para el caso de las antenas receptoras, se tuvieron en cuenta los s
 
 Finalmente, una restricción a tener en cuenta para ambas antenas será el costo.
 
+\Subsubsubsection{Cargador}
+
+El bloque del cargador de la UBM consiste en un receptor y un transmisor de potencia. La transmisión inalámbrica consta, por el lado del transmisor, de un oscilador HM-TRPW-RS232 de $915 \ MHz$ el cual está comandado por la R-Pi y se comunica mediante UART; como así también de un amplificador de potencia de $3 \ W$ máximos alimentado por una etapa DC-DC Xl6009 de $12 \ V$ a $15 \ V$.
+
+Por el lado del receptor, se encuentra el integrado P1110B, el cual almacena energía temporalmente en un capacitor para realizar posteriormente la carga de la UBM.
+
+\begin{figure}[H]
+	\centering	
+	\includegraphics[width=0.9\textwidth, page=8]{ImagenesIngenieria de Detalle/FlowChart.pdf}
+	\caption{Diagrama en bloques cargador.}
+	\label{fig:diagrama_hardware_antenas}
+\end{figure}
+
+Para la transmisión de la señal de $915 \ MHz$ se utilizará cable del tipo \textit{RG-213} el cual posee bajas pérdidas de $23.054 \ \nicefrac{dB}{100m}$.\\
+
+\textbf{Oscilador 915 MHz}
+
+\begin{figure}[H]
+	\centering	
+	\includegraphics[width=0.5\textwidth, page=8]{ImagenesIngenieria de Detalle/hmtrpwrs232}
+	\caption{Módulo utilizado como oscilador HM-TRPW-RS232.}
+	\label{fig:oscilador}
+\end{figure}
+
+Debido a la falta de stock mundial de componentes electrónicos a causa de la pandemia, se utilizó un módulo transciever FSK que opera en la banda de 915MHz. Este módulo HM-TRPW-RS232 puede generar la señal carrier de hasta $20 \ dBm$ y posee interfaz RS-232 para la comunicación UART.
+
+\begin{itemize}
+	\item Potencia máxima de $20 \ dBm$.
+	\item Alimentación $100 \ mA@20 \ dBm$.
+	\item Corriente suspendido $1 \ \mu A$.
+	\item Velocidad de comunicación $1.2 \ kbps - 115.2 \ kbps$.
+	\item Dimensiones $44.1 \times 30  \times 1.2 \ mm$.
+\end{itemize}
+
+\textbf{Amplificador de Potencia}
+
+Para el amplificador de potencia de RF, como las unidades a producir serán muy pocas, no se justifican las horas necesarias para diseñar el circuito y la placa impresa de un amplificador de RF. Por esta razón, se utilizará uno comercial. 
+
+\textbf{DC-DC}
+
+\tbc
+
+\textbf{P1110B}
+
+\begin{figure}[H]
+	\centering	
+	\includegraphics[width=0.5\textwidth, page=8]{ImagenesIngenieria de Detalle/p1110b}
+	\caption{Módulo utilizado como power harvester.}
+	\label{fig:p1110b}
+\end{figure}
+
+Para la recepción de la radiofrecuencia se utilizará el power harvester P1110B. Este integrado toma la señal de radiofrecuencia y realiza con esta la carga de un capacitor. Cuando el capacitor llega a un valor de tensión máximo, habilita la salida mediante una etapa DC-DC hasta que el capacitor baja su tensión por debajo de un mínimo para volver a cargarse hasta el máximo.
+
+
+\begin{itemize}
+\item Eficiencia del $70 \ \%$.
+\item Adaptado internamente a $50 \ \Omega$.
+\item Operación por encima de $-5 \ dBm$.
+\item Opción de carga para Li-ion y baterías alcalinas.
+\end{itemize}
+
+\Subsubsubsection{Amplificador de Potencia}
+
+Para el amplificador de potencia se tuvieron en cuenta distintos módulos armados.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Aspectos\\ comparativos\end{tabular}}         & \textbf{\begin{tabular}[c]{@{}c@{}}\href{https://www.ebay.com/itm/133414335638}{NWDZ RF PA}\\ \href{https://www.ebay.com/itm/133414335638}{V2.0}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\href{https://www.ebay.com/itm/284470793842}{Unbranded Broadband}\\ \href{https://www.ebay.com/itm/284470793842}{RF Amplifier}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\href{https://www.ebay.com/itm/124120749418}{DH-RF}\\ \href{https://www.ebay.com/itm/124120749418}{V2017}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\href{https://www.ebay.com/itm/283538071937}{JP-2Y560895}\\ \href{https://www.ebay.com/itm/283538071937}{RF Amplifier}\end{tabular}} \\ \hline
+\textbf{Costo [USD]}                                                             & 18.59                                                                                                                                                                                                                                               & 9.82                                                                                                                                                                                                                                                  & 23                                                                                                                                                                                                              & 69.31                                                                                                                                                                                                                            \\ \hline
+\textbf{Alimentación [V]}                                                        & 12-15                                                                                                                                                                                                                                               & 12                                                                                                                                                                                                                                                    & 15                                                                                                                                                                                                              & 24-28                                                                                                                                                                                                                            \\ \hline
+\textbf{Frecuencia [MHz]}                                                        & 2-700                                                                                                                                                                                                                                               & 1-930                                                                                                                                                                                                                                                 & 1-1000                                                                                                                                                                                                          & 915 +- 25                                                                                                                                                                                                                        \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Potencia salida\\ máxima [dBm]\end{tabular}}  & 34.8                                                                                                                                                                                                                                                & 29                                                                                                                                                                                                                                                    & 35                                                                                                                                                                                                              & 42                                                                                                                                                                                                                               \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Potencia entrada\\ máxima [dBm]\end{tabular}} & 10                                                                                                                                                                                                                                                  & 0                                                                                                                                                                                                                                                     & 0                                                                                                                                                                                                               & 23                                                                                                                                                                                                                               \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Ganancia de\\ potencia [dB]\end{tabular}}     & 35                                                                                                                                                                                                                                                  & 29                                                                                                                                                                                                                                                    & 32                                                                                                                                                                                                              & Ajustable                                                                                                                                                                                                                        \\ \hline
+\textbf{Dimensiones [cm]}                                                        & 7x3                                                                                                                                                                                                                                                 & 5x5                                                                                                                                                                                                                                                   & 3.7x5.6                                                                                                                                                                                                         & 4x8                                                                                                                                                                                                                              \\ \hline
+\textbf{Imagen}                                                                  & \includeintable{.1}{ImagenesIngenieria de Detalle/nwdz}                                                                                                                                                                                             & \includeintable{.1}{ImagenesIngenieria de Detalle/unbranded}                                                                                                                                                                                          & \includeintable{.1}{ImagenesIngenieria de Detalle/DH-RF-V2017}                                                                                                                                                  & \includeintable{.1}{ImagenesIngenieria de Detalle/s-l1600}                                                                                                                                                                       \\ \hline
+\end{tabular}
+\end{table}
+
+\Subsubsubsection{Integrado de Energy Harvesting}
+
+Se investigaron diversos métodos de transmisión de energía inalámbrica a través de campos electromagnéticos. Dentro de estos se en cuenta el campo cercano y el de radiofrecuencia. El primero se caracteriza por ser puramente imaginario y por poseer una caída proporcional al cuadrado de la distancia, mientras que el segundo (radiación) cae linealmente.
+
+Debido a que la aplicación es de una distancia que cae en el rango del campo lejano, se optó por la radiofrecuencia. Es así que surgieron los integrados IC-P2110 y IC-P1110 de PowerCast, los cuales permiten la recolección de energía de radio frecuencia almacenando esta en capacitores o con la opción de directamente cargar una batería (P1110). A continuación se comparan los dos IC.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Aspectos\\ comparativos\end{tabular}}                          	&  \textbf{\href{https://www.powercastco.com/documentation/p1110-evb-datasheet/}{IC-P1110}}  	&\textbf{\href{https://www.powercastco.com/wp-content/uploads/2016/12/P2110B-Datasheet-Rev-3.pdf}{IC-P2110}}                 \\ \hline
+\textbf{Costo [USD]}                                                                              	& 48.33	                                                                                           				& 32                                                                                              		\\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Funcionalidad\\ principal\end{tabular}}                          & \begin{tabular}[c]{@{}c@{}}Recolección y almacenamiento\\ de energía para uso variado\end{tabular} 			& \begin{tabular}[c]{@{}c@{}}Recolección de energía para carga\\ de baterías/Capacitores\end{tabular} 	\\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Frecuencia de\\ trabajo [MHz]\end{tabular}}                    	& 910 $\sim$ 928                                                                                     			& 910 $\sim$ 928                                                                                        \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Eficiencia del PH\\ para RFin = 11 dBm\end{tabular}}            	& 60 \%                                                                                               			& 45 \%                                                                                                 \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Corriente de salida\\ para RFin = 11 dBm\end{tabular}}           & 3 mA                                                                                                			& -                                                                                                     \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Timepo de carga \\ inicial del capacitor [s]\end{tabular}} 	  	& -                                                                                                   			& < 5                                                                                           		\\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Posee placa\\ de evaluación\end{tabular}}                  		& Sí                                                                                                  			& Sí                                                                                                    \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Impedancia de\\ entrada  [$\Omega$] \end{tabular}}             	& 50                                                                                                  			& 50                                                                                                    \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Temperatura de\\ operación [°C]\end{tabular}}                  	& -40 $\sim$ 85                                                                                       			& -40 $\sim$ 85                                                                                         \\ \hline
+\end{tabular}
+\caption{Comparación entre cargadores.}
+\end{table}
+
 \Subsubsubsection{Comparación entre Antenas}
 \begin{table}[H]
 \centering
@@ -202,3 +307,57 @@ Finalmente, una restricción a tener en cuenta para ambas antenas será el costo
 \end{tabular}
 \caption{Comparación entre antenas receptoras (Parte 2).}
 \end{table}
+
+\Subsubsubsection{Conclusión Factibilidad de la Carga Inalámbrica}
+
+Para el integrado de energy harvesting se optó por el P1110 debido a su elevada eficiencia en la zona donde se transmitirá potencia.
+
+Por un lado, para el caso de las antenas transmisoras, se descartan APAE915R2540ABDB1-T, APAES915R80C16-T y ARRKP7059-S915B por su baja ganancia, además del alto costo de las últimas dos. También se descarta W3215 por ser de polarización lineal. Por lo que restan la antena \textbf{ISPC.91A.09.0092E} para la etapa de ensayo.
+
+Por otro lado, para las antenas receptoras, se descarta ANT-915-USP410 por baja eficiencia, y FXP290.07.0100A por ser muy grande. Además, se descartan 1513156-1 y ANT1204F005R0915A por ser de polarización lineal. \textbf{ANT-915-CPA} y \textbf{NN01-105} pasan a la etapa de ensayo por más que NN01-105 sea de polarización lineal.
+
+Se tomaron estas antenas y se calculó para cada par Tx-Rx la potencia recibida en la antena receptora en función de la distancia.
+
+\observacion{\verObs}{actualizar foto}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{ImagenesFactibilidad/pot_recibida_teorica}
+	\label{fig:pot_recibida_teorica}
+	\caption{Potencia recibida en la antena Rx en función de la distancia entre antena Tx y antena Rx.}
+\end{figure}
+
+Se puede observar que con $4 \ W$ en la antena transmisora, todas las combinaciones de antenas cumplen con la potencia necesaria para el mejor y peor caso. Tomando el mejor par Rx-Tx, y al tener en cuenta la eficiencia de aproximadamente $70\%$ del P1110, la potencia a la salida de este permanece por encima del peor caso hasta la máxima distancia de transmisión.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{ImagenesFactibilidad/pot_baterias_teorica}
+	\label{fig:pot_baterias_teorica}
+	\caption{Potencia a la salida del P1110 en función de la distancia entre antena Tx y antena Rx.}
+\end{figure}
+
+Sin embargo, si se toma en consideración la restricción más estricta de $4.5 \  \frac{W}{m^2}$ impuesta en la Sección (\ref{sec:legal}) dada por la fórmula
+
+\begin{equation}
+	p = \frac{P_TG_T}{4\pi R^2}
+\end{equation}
+
+se observa en la Figura (\ref{fig:densidadradiada}) que para una potencia de $1.6 \ W$ en la antena transmisora esta restricción se cumple a treinta centímetros de la distancia mínima de transmisión.
+
+\observacion{\verObs}{actualizar foto}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{ImagenesFactibilidad/densidadradiada}
+	\caption{Densidad de potencia radiada con $1.6 \ W$ en la antena transmisora según la fórmula de Friis.}
+	\label{fig:densidadradiada}
+\end{figure}
+
+Teniendo esto en cuenta, y recalculando para $1.6 \ W$ se obtiene
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{ImagenesFactibilidad/recalculo}
+	\caption{Potencia a la salida del P1110 en función de la distancia entre antena Tx y antena Rx para $1.6 \ W$ en la antena transmisora.}
+	\label{fig:recalculo}
+\end{figure}
+
+Por estas razones, se descarta la posibilidad de utilizar la carga inalámbrica para recargar la batería de la mochila del ave y se investigará una solución alternativa.

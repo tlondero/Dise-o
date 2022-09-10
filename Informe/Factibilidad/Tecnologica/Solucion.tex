@@ -44,9 +44,6 @@ Además, este dispositivo seleccionada se caracteriza por ser compatible con la 
 En cuanto a la comunicación se utilizará BLE para la conexión con el ave, y WiFi para la comunicación con un tercero.
 Ambos de estos se encuentran disponibles para su uso en el módulo Raspberry Pi 3B.
 
-\Subsubsubsection{Cargador}
-
-Para el integrado de energy harvesting se optó por el P1110 debido a su elevada eficiencia en la zona donde se transmitirá potencia.
 
 \Subsubsubsection{Batería}
 
@@ -61,54 +58,3 @@ De esta forma, para alimentar tanto a los sensores como a la R-Pi y al sistema d
 Para poder abastecer a la batería seleccionada, con un panel $35.41 \ W$ se puede proveer la potencia requerida.
 
 En cuanto a la etapa de carga, para el cargador MPPT de la batería principal se optó por la DFR0580  debido a la tecnología de la batería a usar.
-\Subsubsubsection{Antenas}
-
-Por un lado, para el caso de las antenas transmisoras, se descartan APAE915R2540ABDB1-T, APAES915R80C16-T y ARRKP7059-S915B por su baja ganancia, además del alto costo de las últimas dos. También se descarta W3215 por ser de polarización lineal. Por lo que restan la antena \textbf{ISPC.91A.09.0092E} para la etapa de ensayo.
-
-Por otro lado, para las antenas receptoras, se descarta ANT-915-USP410 por baja eficiencia, y FXP290.07.0100A por ser muy grande. Además, se descartan 1513156-1 y ANT1204F005R0915A por ser de polarización lineal. \textbf{ANT-915-CPA} y \textbf{NN01-105} pasan a la etapa de ensayo por más que NN01-105 sea de polarización lineal.
-
-Se tomaron estas antenas y se calculó para cada par Tx-Rx la potencia recibida en la antena receptora en función de la distancia.
-
-\observacion{\verObs}{actualizar foto}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\linewidth]{ImagenesFactibilidad/pot_recibida_teorica}
-	\label{fig:pot_recibida_teorica}
-	\caption{Potencia recibida en la antena Rx en función de la distancia entre antena Tx y antena Rx.}
-\end{figure}
-
-Se puede observar que con $4 \ W$ en la antena transmisora, todas las combinaciones de antenas cumplen con la potencia necesaria para el mejor y peor caso. Tomando el mejor par Rx-Tx, y al tener en cuenta la eficiencia de aproximadamente $70\%$ del P1110, la potencia a la salida de este permanece por encima del peor caso hasta la máxima distancia de transmisión.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\linewidth]{ImagenesFactibilidad/pot_baterias_teorica}
-	\label{fig:pot_baterias_teorica}
-	\caption{Potencia a la salida del P1110 en función de la distancia entre antena Tx y antena Rx.}
-\end{figure}
-
-Sin embargo, si se toma en consideración la restricción más estricta de $4.5 \  \frac{W}{m^2}$ impuesta en la Sección (\ref{sec:legal}) dada por la fórmula
-
-\begin{equation}
-	p = \frac{P_TG_T}{4\pi R^2}
-\end{equation}
-
-se observa en la Figura (\ref{fig:densidadradiada}) que para una potencia de $1.6 \ W$ en la antena transmisora esta restricción se cumple a treinta centímetros de la distancia mínima de transmisión.
-
-\observacion{\verObs}{actualizar foto}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\linewidth]{ImagenesFactibilidad/densidadradiada}
-	\caption{Densidad de potencia radiada con $1.6 \ W$ en la antena transmisora según la fórmula de Friis.}
-	\label{fig:densidadradiada}
-\end{figure}
-
-Teniendo esto en cuenta, y recalculando para $1.6 \ W$ se obtiene
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\linewidth]{ImagenesFactibilidad/recalculo}
-	\caption{Potencia a la salida del P1110 en función de la distancia entre antena Tx y antena Rx para $1.6 \ W$ en la antena transmisora.}
-	\label{fig:recalculo}
-\end{figure}
-
-Por estas razones, se deberá complementar la recarga de la UBM utilizando un panel solar.
