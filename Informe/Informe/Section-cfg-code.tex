@@ -7,15 +7,24 @@
 
 %PICTURES AND TABLE INDEX:
 \newcommand{\Section}[1]{ \section{#1} 
-	\phantomsection \setcounter{figure}{0} \setcounter{table}{0} \renewcommand{\thetable}{\arabic{section}.\arabic{table}} \renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+	\phantomsection \setcounter{figure}{0} \setcounter{table}{0} \setcounter{lstlisting}{0}
+		\renewcommand{\thetable}{\arabic{section}.\arabic{table}}
+		\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+		\renewcommand{\thelstlisting}{\arabic{section}.\arabic{lstlisting}}
 }
 
 \newcommand{\Subsection}[1]{ \subsection{#1}
-	\phantomsection \setcounter{figure}{0} \setcounter{table}{0} \renewcommand{\thetable}{\arabic{section}.\arabic{subsection}.\arabic{table}} \renewcommand{\thefigure}{\arabic{section}.\arabic{subsection}.\arabic{figure}}
+	\phantomsection \setcounter{figure}{0} \setcounter{table}{0} \setcounter{lstlisting}{0}
+		\renewcommand{\thetable}{\arabic{section}.\arabic{subsection}.\arabic{table}}
+		\renewcommand{\thefigure}{\arabic{section}.\arabic{subsection}.\arabic{figure}}
+		\renewcommand{\thelstlisting}{\arabic{section}.\arabic{subsection}.\arabic{lstlisting}}
 }
 
 \newcommand{\Subsubsection}[1]{ \subsubsection{#1} 
-	\phantomsection \setcounter{figure}{0} \setcounter{table}{0} \renewcommand{\thetable}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.\arabic{table}} \renewcommand{\thefigure}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.\arabic{figure}}
+	\phantomsection \setcounter{figure}{0} \setcounter{table}{0}  \setcounter{lstlisting}{0}
+		\renewcommand{\thetable}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.\arabic{table}}
+		\renewcommand{\thefigure}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.\arabic{figure}}
+		\renewcommand{\thelstlisting}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.\arabic{lstlisting}}
 }
 
 %Definición de subsubsubsection:

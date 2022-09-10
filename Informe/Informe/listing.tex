@@ -1,0 +1,97 @@
+%% IMPORTANTE:
+% Verificar que esté \usepackage[dvipsnames]{xcolor}
+
+%\usepackage{listingsutf8}
+\usepackage{listings}
+
+\renewcommand{\lstlistingname}{Código}
+
+%LSTSET: Pone un recuadro y contador de linea en el codigo
+\newcommand{\boxstyle}{
+	\lstset{
+		basicstyle=\sffamily\color{black},
+		frame=single,
+		numbers=left,
+		numbersep=5pt,
+		numberstyle=\color{gray},
+		showspaces=false,
+		showstringspaces=false
+	}
+}
+
+\newcommand{\defaultstyle}{
+	\lstset{
+		basicstyle=\sffamily\color{white},
+		frame=none,
+		numbers=none,
+		showspaces=true,
+		showstringspaces=true
+	}
+}
+
+\lstdefinelanguage{Kotlin}{
+  captionpos=b,
+  comment=[l]{//},
+  commentstyle={\color{gray}\ttfamily},
+  emph={filter, first, firstOrNull, forEach, lazy, map, mapNotNull, println},
+  emphstyle={\color{OrangeRed}},
+  identifierstyle=\color{black},
+  keywords={!in, !is, abstract, actual, annotation, as, as?, break, by, catch, class, companion, const, constructor, continue, crossinline, data, delegate, do, dynamic, else, enum, expect, external, false, field, file, final, finally, for, fun, get, if, import, in, infix, init, inline, inner, interface, internal, is, lateinit, noinline, null, object, open, operator, out, override, package, param, private, property, protected, public, receiveris, reified, return, return@, sealed, set, setparam, super, suspend, tailrec, this, throw, true, try, typealias, typeof, val, var, vararg, when, where, while},
+  keywordstyle={\color{NavyBlue}\bfseries},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]",
+  morestring=[s]{"""*}{*"""},
+  ndkeywords={@Deprecated, @JvmField, @JvmName, @JvmOverloads, @JvmStatic, @JvmSynthetic, Array, Byte, Double, Float, Int, Integer, Iterable, Long, Runnable, Short, String, Any, Unit, Nothing},
+  ndkeywordstyle={\color{BurntOrange}\bfseries},
+  sensitive=true,
+  stringstyle={\color{ForestGreen}\ttfamily},
+}
+
+\lstdefinelanguage{Swift}
+{
+  morekeywords={
+    open,catch,@escaping,nil,throws,func,if,then,else,for,in,while,do,switch,case,default,where,break,continue,fallthrough,return,
+    typealias,struct,class,enum,protocol,var,func,let,get,set,willSet,didSet,inout,init,deinit,extension,
+    subscript,prefix,operator,infix,postfix,precedence,associativity,left,right,none,convenience,dynamic,
+    final,lazy,mutating,nonmutating,optional,override,required,static,unowned,safe,weak,internal,
+    private,public,is,as,self,unsafe,dynamicType,true,false,nil,Type,Protocol,
+  },
+  morecomment=[l]{//}, % l is for line comment
+  morecomment=[s]{/*}{*/}, % s is for start and end delimiter
+  morestring=[b]", % defines that strings are enclosed in double quotes
+  breaklines=true,
+  escapeinside={\%*}{*)},
+  numbers=left,
+  captionpos=b,
+  breakatwhitespace=true,
+  basicstyle=\linespread{1.0}\ttfamily, % https://tex.stackexchange.com/a/102728/129441
+}
+
+\definecolor{keyword}{HTML}{BA2CA3}
+\definecolor{string}{HTML}{D12F1B}
+\definecolor{comment}{HTML}{008400}
+
+\newcommand{\swiftstyle}{
+	\lstset{
+  		language=Swift,
+  		inputencoding=utf8x,
+		extendedchars=\true,
+	  	basicstyle=\ttfamily,
+	  	showstringspaces=false, % lets spaces in strings appear as real spaces
+  		columns=fixed,
+  		keepspaces=true,
+  		keywordstyle=\color{keyword},
+  		stringstyle=\color{string},
+  		commentstyle=\color{comment}
+	}
+}
+
+
+%Como usarlo:
+
+%\begin{lstlisting}[caption={Simple code listing.}, label={lst:example1}, language=Kotlin]
+%// this is a simple code listing:
+%println("hello kotlin from latex")
+%\end{lstlisting}
+
+%\lstinputlisting[caption={Simple code listing.}, label={lst:example1}, language=Kotlin]{../Carpeta/Simple.kt}
