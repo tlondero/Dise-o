@@ -51,7 +51,30 @@ La batería a emplear queda determinada en función del consumo del sistema y de
 
 Los consumos de potencia de las partes del sistema se detallan en la Sección \ref{sec:calc_potencias}.
 
-De esta forma, para alimentar tanto a los sensores como a la R-Pi en un día se requieren $151.2 \ kJ$. Con una batería de $21 \ Ah$ de capacidad se consigue la especificación mencionada, por lo que se opta por la batería UL24-12 de Ultracell al ser la batería de Probattery mucho más pesada.
+De esta forma, para alimentar tanto a los sensores como a la R-Pi en un día se requieren $151.2 \ kJ$. Con una batería de $21 \ Ah$ de capacidad se consigue la especificación mencionada, por lo que se opta por la batería UL24-12 de Ultracell ya que la batería de Probattery es mucho más pesada.
+
+Cabe notar que los $24 \ Ah$ de la batería seleccionada son nominales, por lo que se debe calcular la capacidad real (la cual será ligeramente menor debido a condiciones del entorno y calidad de esta). Para obtener la capacidad real de la batería se utiliza la información proporcionada en la hoja de datos. En la Figura (\ref{fig:ctemp}) se puede observar como a una temperatura de trabajo de $10°C$ y una razón de descarga de $0.05CA$ (descarga total en $20 \ hs$) la capacidad efectiva restante de la batería es del $90\% $. Por otro lado, en la Figura (\ref{fig:cdod}) se observa como teniendo en cuenta una vida útil de $540$ ciclos (es decir, 2 años de uso ininterrumpido) la capacidad efectiva restante sigue siendo del $100\%$.
+ 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{ImagenesFactibilidad/UL24-12_Ctemp}
+	\label{fig:ctemp}
+	\caption{Efectos de la temperatura en relación a la capacidad de la batería.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{ImagenesFactibilidad/UL24-12_Cdod}
+	\label{fig:cdod}
+	\caption{Ciclos de vida en relación a la profundidad de descarga.}
+\end{figure}
+
+Por ende, la capacidad efectiva, calculada como:
+\begin{equation}
+C_{ef} = C_{nom}*0.9*1 = 21.6 \ Ah
+\end{equation}
+
+por lo que la batería elegída sería apta para el proyecto.
 
 \Subsubsubsection{Alimentación}
 
