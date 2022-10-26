@@ -85,6 +85,7 @@ fabric.properties
 *.cb
 *.cb2
 .*.lb
+Informe.pdf
 
 ## Intermediate documents:
 *.dvi
