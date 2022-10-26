@@ -1,0 +1,193 @@
+[
+    {
+        "id": "c7a9a72a82f07639",
+        "type": "file in",
+        "z": "4bd3f7a138ab9bf8",
+        "d": true,
+        "name": "Read Restart",
+        "filename": "/home/pi/simfs/NidoImagesFrontEnd/restart.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 2370,
+        "y": 2220,
+        "wires": [
+            [
+                "26e34196a0ff9f82"
+            ]
+        ]
+    },
+    {
+        "id": "26e34196a0ff9f82",
+        "type": "json",
+        "z": "4bd3f7a138ab9bf8",
+        "d": true,
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 2290,
+        "y": 2260,
+        "wires": [
+            [
+                "71af43e3522568cc"
+            ]
+        ]
+    },
+    {
+        "id": "71af43e3522568cc",
+        "type": "function",
+        "z": "4bd3f7a138ab9bf8",
+        "d": true,
+        "name": "Toggle",
+        "func": "if (msg != null) {\n\n    var toWrite = { restart: 0 };\n    var restart = { payload: \"restart\" };\n\n    if (msg.payload.restart == 1) {\n        //NOTHING\n    } else if (msg.payload.restart == 0) {\n        toWrite.restart = 1;\n        restart = null;\n    }\n\n    return [ { payload: toWrite} , restart];\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2410,
+        "y": 2260,
+        "wires": [
+            [
+                "05451915db331c72"
+            ],
+            [
+                "5ee31db78c836d93",
+                "2378e976524cb86e"
+            ]
+        ]
+    },
+    {
+        "id": "05451915db331c72",
+        "type": "file",
+        "z": "4bd3f7a138ab9bf8",
+        "d": true,
+        "name": "Save Restart",
+        "filename": "/home/pi/simfs/NidoImagesFrontEnd/restart.json",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 2590,
+        "y": 2240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aeb9f1bf5d3d34c2",
+        "type": "exec",
+        "z": "4bd3f7a138ab9bf8",
+        "d": true,
+        "command": "node-red-restart",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 2720,
+        "y": 2280,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "5ee31db78c836d93",
+        "type": "delay",
+        "z": "4bd3f7a138ab9bf8",
+        "d": true,
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2560,
+        "y": 2280,
+        "wires": [
+            [
+                "aeb9f1bf5d3d34c2"
+            ]
+        ]
+    },
+    {
+        "id": "328df05355a28c92",
+        "type": "inject",
+        "z": "4bd3f7a138ab9bf8",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 2200,
+        "y": 2180,
+        "wires": [
+            [
+                "c7a9a72a82f07639"
+            ]
+        ]
+    },
+    {
+        "id": "2378e976524cb86e",
+        "type": "debug",
+        "z": "4bd3f7a138ab9bf8",
+        "d": true,
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2560,
+        "y": 2320,
+        "wires": []
+    },
+    {
+        "id": "3eb236bbd6ebf2f1",
+        "type": "link in",
+        "z": "4bd3f7a138ab9bf8",
+        "d": true,
+        "name": "Init: Restart",
+        "links": [
+            "c8caecc46da13eb1"
+        ],
+        "x": 2185,
+        "y": 2220,
+        "wires": [
+            [
+                "c7a9a72a82f07639"
+            ]
+        ]
+    }
+]

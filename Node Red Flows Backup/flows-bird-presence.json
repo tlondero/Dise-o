@@ -1,0 +1,44 @@
+[
+    {
+        "id": "428c7be7b578af87",
+        "type": "ui_template",
+        "z": "4bd3f7a138ab9bf8",
+        "g": "0ee206c8ef765709",
+        "group": "5f21bab708c4b0d2",
+        "name": "Chart",
+        "order": 3,
+        "width": 9,
+        "height": 6,
+        "format": "<!DOCTYPE html>\n<html>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js\"></script>\n\n<body>\n  <canvas id=\"myChart\" style=\"width:100%;max-width:600px\"></canvas>\n\n  <script>\n\t(function(scope) {\n\t\tscope.$watch('msg', function(msg) {\n\t\t\tvar data = msg.payload;\n\t\t\tvar xValues = [];\n\t\t\tvar yValues = [];\n\t\t\tvar yValues_n = [];\n\t\t\t\n\t\t\tfor (var i = 0; i < data.length; i++) {\n\t\t\t\tif (msg.calendar==data[i].day ) {\n\t\t\t\t\txValues.push(data[i].hour);\n\t\t\t\t\tyValues.push(data[i].state);\n\t\t\t\t\tyValues_n.push(!data[i].state ? 1 : 0 );\n\t\t\t\t}\n\t\t\t}\n\n\t\t\tnew Chart(\"myChart\", {\n\t\t\t\ttype: \"line\",\n\t\t\t\tdata: {\n\t\t\t\t\tlabels: xValues,\n\t\t\t\t\tdatasets: [{\n\t\t\t\t\t\tlabel: \"Fuera del Nido\",\n\t\t\t\t\t\tfill: true,\n\t\t\t\t\t\tlineTension: 0,\n\t\t\t\t\t\tpointRadius: 0,\n\t\t\t\t\t\tbackgroundColor: \"rgba(255,0,0,0.5)\",\n\t\t\t\t\t\tborderColor: \"rgba(31,119,180,0.0)\",\n\t\t\t\t\t\tdata: yValues,\n\t\t\t\t\t\tsteppedLine: true\n\t\t\t\t\t},{\n\t\t\t\t\t\tlabel: \"Dentro del Nido\",\n\t\t\t\t\t\tfill: true,\n\t\t\t\t\t\tlineTension: 0,\n\t\t\t\t\t\tpointRadius: 0,\n\t\t\t\t\t\tbackgroundColor: \"rgba(0,255,0,0.5)\",\n\t\t\t\t\t\tborderColor: \"rgba(31,119,180,0.0)\",\n\t\t\t\t\t\tdata: yValues_n,\n\t\t\t\t\t\tsteppedLine: true\n\t\t\t\t\t}]\n\t\t\t\t},\n\t\t\t\toptions: {\n\t\t\t\t\tlegend: { display: true },\n\t\t\t\t\tscales: {\n\t\t\t\t\t\tyAxes: [{\n\t\t\t\t\t\t\tticks: {display: false},\n\t\t\t\t\t\t\tgridLines: {color: \"rgba(0, 0, 0, 0)\"}  \n\t\t\t\t\t\t}]\n\t\t\t\t\t},\n\t\t\t\t\tx: {\n\t\t\t\t\t\ttype: 'time'\n\t\t\t\t\t},\n\t\t\t\t\ttooltips: {\n\t\t\t\t\t\tenabled: true,\n\t\t\t\t\t\tintersect: false,\n\t\t\t\t\t\tcustom: function(tooltipModel) {\n\t\t\t\t\t\t\tif (tooltipModel.title == \"\") {\n\t\t\t\t\t\t\t\ttooltipModel.opacity = 0;\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t},\n\t\t\t\t\t\tcallbacks: {\n\t\t\t\t\t\t\ttitle: function (tooltipItem, data) {\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tlet selected = tooltipItem[0].index;\n\t\t\t\t\t\t\t\tlet total = data.labels.length;\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tvar next = selected;\n\t\t\t\t\t\t\t\tvar previous = 0;\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tvar actual_value = data.datasets[0].data[selected]; \n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tfor (var i = selected; i < total; i++) {\n\t\t\t\t\t\t\t\t\tvar next_value = data.datasets[0].data[i];\n\t\t\t\t\t\t\t\t\tif (actual_value != next_value) {\n\t\t\t\t\t\t\t\t\t\tif (next_value != data.datasets[0].data[i-1]) {\n\t\t\t\t\t\t\t\t\t\t\tnext = i;\n\t\t\t\t\t\t\t\t\t\t\tbreak;\n\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tfor (var i = selected; i >= 0; i--) { \n\t\t\t\t\t\t\t\t\tvar prev_value = data.datasets[0].data[i];\n\t\t\t\t\t\t\t\t\tif (actual_value != prev_value) {\n\t\t\t\t\t\t\t\t\t\tif (prev_value != data.datasets[0].data[i+1]) {\n\t\t\t\t\t\t\t\t\t\t\tprevious = i + 1;\n\t\t\t\t\t\t\t\t\t\t\tbreak;\n\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t}\n\n\t\t\t\t\t\t\t\tlet d1 = new Date();\n\t\t\t\t\t\t\t\td1.setHours(data.labels[previous].split(\":\")[0]);\n\t\t\t\t\t\t\t\td1.setMinutes(data.labels[previous].split(\":\")[1]);\n\t\t\t\t\t\t\t\td1.setSeconds(data.labels[previous].split(\":\")[2]);\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tlet d2 = new Date();\n\t\t\t\t\t\t\t\td2.setHours(data.labels[next].split(\":\")[0]);\n\t\t\t\t\t\t\t\td2.setMinutes(data.labels[next].split(\":\")[1]);\n\t\t\t\t\t\t\t\td2.setSeconds(data.labels[next].split(\":\")[2]);\n\n\t\t\t\t\t\t\t\tlet diff = new Date(d2 - d1).toISOString().slice(11, 19);\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tif ( (tooltipItem[0].yLabel == 1) && (selected != (total - 1)) ){\n\t\t\t\t\t\t\t\t\treturn \"Intervalo de tiempo:\" + '\\n' + diff;\n\t\t\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\t\t\treturn \"\";\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\tlabel: function(tooltipItem, data) {\n\t\t\t\t\t\t\t\tif (tooltipItem.yLabel == 1) {\n\t\t\t\t\t\t\t\t\treturn \"Dentro del Nido.\";\n\t\t\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\t\t\treturn \"Fuera del Nido.\";\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\tfooter: function (tooltipItem, data) {\n\t\t\t\t\t\t\t\tif (tooltipItem[0].yLabel == 1) { \n\t\t\t\t\t\t\t\t\t//return \"...\";\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\t\t\t\n\t\t\t});\t\t\n\t\t});\t\t\t\t\n\t})(scope);\n  </script>\n\n</body>\n\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 1310,
+        "y": 1780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5f21bab708c4b0d2",
+        "type": "ui_group",
+        "name": "Presencia del Ave",
+        "tab": "9257b746f7bd67a1",
+        "order": 1,
+        "disp": true,
+        "width": "9",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9257b746f7bd67a1",
+        "type": "ui_tab",
+        "name": "Datos del Ave",
+        "icon": "fa-binoculars",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    }
+]
