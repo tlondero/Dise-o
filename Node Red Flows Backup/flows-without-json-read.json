@@ -1,0 +1,4487 @@
+[
+    {
+        "id": "07cc5fec03514dd1",
+        "type": "tab",
+        "label": "SIMFS",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "f326992ae3cba2a1",
+        "type": "group",
+        "z": "07cc5fec03514dd1",
+        "name": "Generate IMG Zip & CSV",
+        "style": {
+            "stroke": "#000000",
+            "label": true,
+            "fill": "#bfdbef",
+            "fill-opacity": "0.5",
+            "color": "#000000"
+        },
+        "nodes": [
+            "ce4ad0e009d0c1ff",
+            "39880ed7c77076f5",
+            "441f9276485b35a1",
+            "873c2c24d19dc4b7",
+            "11df120bc0c6e775",
+            "aa4e736dfc9b897b",
+            "24a8f875e1d1ee92",
+            "9cf792cd3185d84f",
+            "ece93fdbd24b393e",
+            "6da29e381dc1ffc9",
+            "e05c4b06f5dcfdec",
+            "23b99eb6abca02b1",
+            "44bd606ff07aa20d",
+            "d11a9f9b3242f27c",
+            "02c7b733249dede7",
+            "b0003cab7d1f6a0f",
+            "027c0a6b8995f90a",
+            "f1fad2c507c1a327",
+            "aa8a33a269ec3bbc",
+            "c5c3104ebe626373",
+            "a9c9e8d768e7e462",
+            "b7c258a5f1f490c3",
+            "8c364c718253c46b",
+            "8101189e44e169b8"
+        ],
+        "x": 364,
+        "y": 759,
+        "w": 1082,
+        "h": 442
+    },
+    {
+        "id": "49e43b5bb2843534",
+        "type": "group",
+        "z": "07cc5fec03514dd1",
+        "name": "Estetica del Dashboard",
+        "style": {
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.5",
+            "label": true,
+            "color": "#000000",
+            "stroke": "#000000"
+        },
+        "nodes": [
+            "82188dbcd1ab290d",
+            "4d060be1131de765",
+            "6d798c7d98bf0429",
+            "fc52fa09f41a2453",
+            "860cfc460ecbd5d5",
+            "6de69b4edc83e1b2",
+            "d3b67ca6b78caaa4",
+            "6f907e86d90d8bfc",
+            "6b16ca7797d46c4e"
+        ],
+        "x": 2474,
+        "y": 79,
+        "w": 652,
+        "h": 262
+    },
+    {
+        "id": "f964ee3095828366",
+        "type": "group",
+        "z": "07cc5fec03514dd1",
+        "name": "Current Data Values",
+        "style": {
+            "fill": "#e3f3d3",
+            "fill-opacity": "0.5",
+            "label": true,
+            "color": "#000000",
+            "stroke": "#000000"
+        },
+        "nodes": [
+            "ee688bf3f88265c1",
+            "b1ac0f993cfaf3fa",
+            "bf75c3a6626ca127",
+            "308edf9ac94d04e8",
+            "24fd3a691ac9dda3",
+            "0617f0fde8ae45dc",
+            "3243601cdd687d00",
+            "c53b8cff2dbd761d",
+            "0a867eb754c68a3c"
+        ],
+        "x": 1708,
+        "y": 1213,
+        "w": 898,
+        "h": 348
+    },
+    {
+        "id": "a637090f0433535c",
+        "type": "group",
+        "z": "07cc5fec03514dd1",
+        "name": "",
+        "style": {
+            "fill": "#e3f3d3",
+            "label": true,
+            "fill-opacity": "0.5",
+            "stroke": "#000000"
+        },
+        "nodes": [
+            "141bcf2df50bf35a",
+            "ee8bd91eed126a21",
+            "7fb4a0a8707c72c3",
+            "0071b7b2dc3658a7",
+            "93e752ac0fadecf0",
+            "f3fd3d2987e257b9",
+            "401ca714e9bb82e2",
+            "88c9a4f4eba243db"
+        ],
+        "x": 1754,
+        "y": 79,
+        "w": 692,
+        "h": 262
+    },
+    {
+        "id": "ce348030d202adb0",
+        "type": "group",
+        "z": "07cc5fec03514dd1",
+        "name": "Video Stream",
+        "style": {
+            "fill": "#b797cf",
+            "fill-opacity": "0.5",
+            "label": true,
+            "stroke": "#000000",
+            "color": "#000000"
+        },
+        "nodes": [
+            "90e42e5bfbbdc514",
+            "93d3c5841f590fd8",
+            "03443a8fb0a63a1f",
+            "c2d16134a65e122e",
+            "8632479012075663",
+            "230dc418e7946a11",
+            "30c6f3e5c51c21e2",
+            "8760df62c398ee1b",
+            "5b952e910d36f5d7",
+            "be2f6abf99343be8",
+            "339ee40b65666bc9",
+            "2396bc5eaef2d5de",
+            "12790ef0acc53f13",
+            "cc5664dca5d3111f",
+            "528de17d8e605c88"
+        ],
+        "x": 2614,
+        "y": 859,
+        "w": 1072,
+        "h": 282
+    },
+    {
+        "id": "1c9ec5a2f2cbd859",
+        "type": "group",
+        "z": "07cc5fec03514dd1",
+        "name": "Take Data Periodic",
+        "style": {
+            "fill": "#ffbfbf",
+            "fill-opacity": "0.5",
+            "label": true,
+            "color": "#000000",
+            "stroke": "#000000"
+        },
+        "nodes": [
+            "2f41fd5afd4a9e82",
+            "3f134ac450eb9595",
+            "474fab953052f310",
+            "6812816b513ce7a0",
+            "e434c290d89aa8bc",
+            "3a8e0253c5696b5a",
+            "3a36cc5e736042e9",
+            "c4766fd15674923b"
+        ],
+        "x": 2794,
+        "y": 371.5,
+        "w": 532,
+        "h": 217
+    },
+    {
+        "id": "d97fb92eb69a5cf4",
+        "type": "group",
+        "z": "07cc5fec03514dd1",
+        "name": "File Manager",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#ffefbf",
+            "fill-opacity": "0.5",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "a8439bc08263141c",
+            "ebaffe9445e62a8c",
+            "19f07a9779fca30a",
+            "dc4d0bda6c12e06f"
+        ],
+        "x": 1478,
+        "y": 833,
+        "w": 1114,
+        "h": 334
+    },
+    {
+        "id": "6df687d13111f964",
+        "type": "group",
+        "z": "07cc5fec03514dd1",
+        "name": "Bird Detection",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#addb7b",
+            "fill-opacity": "0.5",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "390562871d15774e",
+            "13854c3cf903b9b5",
+            "1f8410bacd89eeba",
+            "0f58e8e8f3c6253d",
+            "be769abdd7a3cf12",
+            "e551cb0d8a02a436",
+            "c253e6b38e17ca8a",
+            "4d4df9577fb6e414",
+            "fa3cf5a44b6a5f63",
+            "ecf77c5c5364aa9f",
+            "25bbb896e237c2ee",
+            "b38e04bbefa7b513",
+            "fe41c9bf665f4a4c"
+        ],
+        "x": 2214,
+        "y": 599,
+        "w": 1072,
+        "h": 202
+    },
+    {
+        "id": "2bf2c5e6c4a44628",
+        "type": "group",
+        "z": "07cc5fec03514dd1",
+        "name": "On Reload",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.5",
+            "label": true,
+            "color": "#000000",
+            "stroke": "#000000"
+        },
+        "nodes": [
+            "805a8a0267f24bd8",
+            "c116ee25bbe1d4e0",
+            "b14c4725ab5d27d2",
+            "49d8ec21070d9458",
+            "fcb492940c1a1fd5",
+            "b68a428b9e4d277d",
+            "fc0584ae8904919f",
+            "8f101d1a501ade39",
+            "6d84deeba1e93335"
+        ],
+        "x": 1614,
+        "y": 499,
+        "w": 462,
+        "h": 202
+    },
+    {
+        "id": "db70e4e17240d53f",
+        "type": "group",
+        "z": "07cc5fec03514dd1",
+        "name": "Flow Variables And RTC",
+        "style": {
+            "fill": "#ffC000",
+            "fill-opacity": "0.5",
+            "label": true,
+            "color": "#000000",
+            "stroke": "#000000"
+        },
+        "nodes": [
+            "d25e944ffc10888e",
+            "991413e99bb5c623",
+            "154a78135cd35909",
+            "d6b007ef6453fb44",
+            "376de5f1c23daa03"
+        ],
+        "x": 2174,
+        "y": 379,
+        "w": 592,
+        "h": 149.5
+    },
+    {
+        "id": "0808fb3eb75cd641",
+        "type": "group",
+        "z": "07cc5fec03514dd1",
+        "name": "Configuración",
+        "style": {
+            "fill": "#ffcf3f",
+            "fill-opacity": "0.5",
+            "label": true,
+            "color": "#000000",
+            "stroke": "#000000"
+        },
+        "nodes": [
+            "c7d760fe6191866c",
+            "0e7ef6a062c68575",
+            "58b946c1ce936063",
+            "f71ce0ec498cb788",
+            "8c6747db2150f716",
+            "eb211aa6531e42d8",
+            "94856ba06ec827ca",
+            "49155fb313945048",
+            "20854bf1818ffdcc",
+            "4d22b5c1cb8608ab",
+            "00ffcd3684f21a03",
+            "87734d1ea5e4299f",
+            "8870a0c71b837d5b",
+            "ccf3fcbadfb0c9de",
+            "6c3352b624d5ca48",
+            "a6fd35746c2a4006",
+            "0725611bb5d57778",
+            "8016f0f85b117677"
+        ],
+        "x": 2624,
+        "y": 1219,
+        "w": 862,
+        "h": 422
+    },
+    {
+        "id": "4c38ec26726d8cb3",
+        "type": "group",
+        "z": "07cc5fec03514dd1",
+        "name": "TO DO",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#ff0000",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "8a156ca1b541c43a",
+            "46890aeda7dbe1a6",
+            "fc7efc4a09db6818",
+            "ccc63821b64caab1"
+        ],
+        "x": 3614,
+        "y": 99,
+        "w": 412,
+        "h": 222
+    },
+    {
+        "id": "f110f6f24d8e7b8c",
+        "type": "group",
+        "z": "07cc5fec03514dd1",
+        "name": "Date Manager",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#ffbfbf",
+            "fill-opacity": "0.5",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "3acfa0b8d5cc84d2",
+            "35fa28a01aa8b4b3",
+            "92dfdf5fecfdf8f3",
+            "1537303c358b042e",
+            "daa35a51bee49670",
+            "a8d41f188279d76d",
+            "7932982af5bc571c",
+            "c802b7c389b5647e",
+            "fbc349cd92b134fe"
+        ],
+        "x": 444,
+        "y": 1213,
+        "w": 1258,
+        "h": 414
+    },
+    {
+        "id": "3243601cdd687d00",
+        "type": "group",
+        "z": "07cc5fec03514dd1",
+        "g": "f964ee3095828366",
+        "name": "",
+        "style": {
+            "fill": "#b797cf",
+            "fill-opacity": "0.5",
+            "label": true
+        },
+        "nodes": [
+            "5696aa3f66d2b908",
+            "1f4002f1afcdce5e",
+            "a33cb79e3fd77ad6",
+            "ff10b8aafd04df21"
+        ],
+        "x": 1734,
+        "y": 1239,
+        "w": 312,
+        "h": 162
+    },
+    {
+        "id": "a8439bc08263141c",
+        "type": "group",
+        "z": "07cc5fec03514dd1",
+        "g": "d97fb92eb69a5cf4",
+        "name": "",
+        "style": {
+            "fill": "#3f93cf",
+            "fill-opacity": "0.5",
+            "label": true
+        },
+        "nodes": [
+            "4290990e67420de5",
+            "a7d8aa1c6efa0685",
+            "1e770f490ddfcffe",
+            "6ce41e0ba1aa45d5",
+            "f68e08457fa0bb1b",
+            "c4215afb4ab49230"
+        ],
+        "x": 1794,
+        "y": 859,
+        "w": 752,
+        "h": 142
+    },
+    {
+        "id": "ebaffe9445e62a8c",
+        "type": "group",
+        "z": "07cc5fec03514dd1",
+        "g": "d97fb92eb69a5cf4",
+        "name": "",
+        "style": {
+            "fill": "#dbcbe7",
+            "fill-opacity": "0.5",
+            "label": true
+        },
+        "nodes": [
+            "b6052a0cdc0215c4",
+            "bc6869800f692842",
+            "56b08b5385d108f6",
+            "98bed3902d98fb6f",
+            "9c174e12415580a7"
+        ],
+        "x": 1504,
+        "y": 939,
+        "w": 252,
+        "h": 202
+    },
+    {
+        "id": "19f07a9779fca30a",
+        "type": "group",
+        "z": "07cc5fec03514dd1",
+        "g": "d97fb92eb69a5cf4",
+        "name": "",
+        "style": {
+            "stroke": "#777777",
+            "label": true,
+            "fill": "#ff3f3f",
+            "fill-opacity": "0.5"
+        },
+        "nodes": [
+            "70d149baf3e07501",
+            "2662dabdaea00018",
+            "d8627b84d27c0ed8",
+            "96d1168cce3dff22",
+            "89241ac42bde86b7"
+        ],
+        "x": 1794,
+        "y": 1019,
+        "w": 772,
+        "h": 122
+    },
+    {
+        "id": "daa35a51bee49670",
+        "type": "group",
+        "z": "07cc5fec03514dd1",
+        "g": "f110f6f24d8e7b8c",
+        "name": "",
+        "style": {
+            "fill": "#ffff7f",
+            "fill-opacity": "0.5",
+            "label": true
+        },
+        "nodes": [
+            "e9e4351fac6714f9",
+            "79f69431bb83402f",
+            "1e2f7064c05cecae",
+            "701781e78e35578d",
+            "7a05aace584044bf",
+            "eacc071f2e7f5d6a",
+            "3307c360f57e335c"
+        ],
+        "x": 864,
+        "y": 1239,
+        "w": 252,
+        "h": 362
+    },
+    {
+        "id": "a8d41f188279d76d",
+        "type": "group",
+        "z": "07cc5fec03514dd1",
+        "g": "f110f6f24d8e7b8c",
+        "name": "",
+        "style": {
+            "fill": "#addb7b",
+            "fill-opacity": "0.5",
+            "label": true
+        },
+        "nodes": [
+            "463dbcbd3db40393",
+            "e877377c912f70ad",
+            "7eb74c1d474a0bbc",
+            "00f88c4aab37d128",
+            "3290c3d0eb5d0dfd",
+            "ef01f1a122d0ac67"
+        ],
+        "x": 644,
+        "y": 1279,
+        "w": 192,
+        "h": 322
+    },
+    {
+        "id": "7932982af5bc571c",
+        "type": "group",
+        "z": "07cc5fec03514dd1",
+        "g": "f110f6f24d8e7b8c",
+        "name": "",
+        "style": {
+            "fill": "#ff7f7f",
+            "fill-opacity": "0.5",
+            "label": true
+        },
+        "nodes": [
+            "dcd2588ac3ca179a",
+            "cd25a412a9c2f44e",
+            "76bdd3bc0a40b5e4"
+        ],
+        "x": 1424,
+        "y": 1359,
+        "w": 252,
+        "h": 162
+    },
+    {
+        "id": "c802b7c389b5647e",
+        "type": "group",
+        "z": "07cc5fec03514dd1",
+        "g": "f110f6f24d8e7b8c",
+        "name": "",
+        "style": {
+            "fill": "#ffdf7f",
+            "fill-opacity": "0.5",
+            "label": true
+        },
+        "nodes": [
+            "3391a02adcb66cba",
+            "154f740f929c489b",
+            "5181eaa95c3da9f6",
+            "a1899d2102493595"
+        ],
+        "x": 1164,
+        "y": 1259,
+        "w": 232,
+        "h": 322
+    },
+    {
+        "id": "f3fd3d2987e257b9",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "a637090f0433535c",
+        "name": "Set base path",
+        "func": "//restrict to c:\\temp\\\nvar basePath = \"/home/pi/simfs/simfs_export_data/\";\nvar filename = msg.req.params.fn;\n\nif(filename.includes(\"..\\\\\")){\n    msg.payload = \"Illegal file path\";\n    msg.statusCode = 405;//not allowed\n    return [null, msg];//fire output 2\n} else if(filename.includes(\"../\")){\n    msg.payload = \"Illegal file path\";\n    msg.statusCode = 405;//not allowed\n    return [null, msg];//fire output 2\n} \n//TODO: add more checks\n\nmsg.filename = basePath + filename;\nreturn [msg, null];//fire output 1",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2060,
+        "y": 180,
+        "wires": [
+            [
+                "401ca714e9bb82e2"
+            ],
+            [
+                "88c9a4f4eba243db"
+            ]
+        ]
+    },
+    {
+        "id": "88c9a4f4eba243db",
+        "type": "http response",
+        "z": "07cc5fec03514dd1",
+        "g": "a637090f0433535c",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 2370,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "401ca714e9bb82e2",
+        "type": "file in",
+        "z": "07cc5fec03514dd1",
+        "g": "a637090f0433535c",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 2230,
+        "y": 160,
+        "wires": [
+            [
+                "88c9a4f4eba243db"
+            ]
+        ]
+    },
+    {
+        "id": "7fb4a0a8707c72c3",
+        "type": "catch",
+        "z": "07cc5fec03514dd1",
+        "g": "a637090f0433535c",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 1840,
+        "y": 260,
+        "wires": [
+            [
+                "93e752ac0fadecf0",
+                "0071b7b2dc3658a7"
+            ]
+        ]
+    },
+    {
+        "id": "93e752ac0fadecf0",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "a637090f0433535c",
+        "name": "Set 404",
+        "func": "msg.payload = msg.error;\nmsg.statusCode = 404;//resource not found\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2220,
+        "y": 260,
+        "wires": [
+            [
+                "88c9a4f4eba243db"
+            ]
+        ]
+    },
+    {
+        "id": "0071b7b2dc3658a7",
+        "type": "debug",
+        "z": "07cc5fec03514dd1",
+        "g": "a637090f0433535c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1870,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "141bcf2df50bf35a",
+        "type": "comment",
+        "z": "07cc5fec03514dd1",
+        "g": "a637090f0433535c",
+        "name": "Create http endpoint <nodered>/files/xxx  where xxx is the file name to download",
+        "info": "",
+        "x": 2060,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "ee8bd91eed126a21",
+        "type": "http in",
+        "z": "07cc5fec03514dd1",
+        "g": "a637090f0433535c",
+        "name": "",
+        "url": "/files/:fn",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 1850,
+        "y": 180,
+        "wires": [
+            [
+                "f3fd3d2987e257b9"
+            ]
+        ]
+    },
+    {
+        "id": "ee688bf3f88265c1",
+        "type": "ui_gauge",
+        "z": "07cc5fec03514dd1",
+        "g": "f964ee3095828366",
+        "name": "Current Lum",
+        "group": "e09affd1d78f162d",
+        "order": 3,
+        "width": 6,
+        "height": 5,
+        "gtype": "donut",
+        "title": "Luminosidad actual",
+        "label": "Lux",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "300",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "100|",
+        "seg2": "200",
+        "className": "",
+        "x": 2510,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "b1ac0f993cfaf3fa",
+        "type": "ui_gauge",
+        "z": "07cc5fec03514dd1",
+        "g": "f964ee3095828366",
+        "name": "Current Temp",
+        "group": "e09affd1d78f162d",
+        "order": 1,
+        "width": 6,
+        "height": 5,
+        "gtype": "donut",
+        "title": "Temperatura actual",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": "-15",
+        "max": "40",
+        "colors": [
+            "#151ce0",
+            "#bbddf7",
+            "#ed0202"
+        ],
+        "seg1": "0",
+        "seg2": "15",
+        "className": "",
+        "x": 2500,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "bf75c3a6626ca127",
+        "type": "ui_gauge",
+        "z": "07cc5fec03514dd1",
+        "g": "f964ee3095828366",
+        "name": "Current Hum",
+        "group": "e09affd1d78f162d",
+        "order": 2,
+        "width": 6,
+        "height": 5,
+        "gtype": "donut",
+        "title": "Humedad actual",
+        "label": "Humedad Relativa",
+        "format": "{{value}}%",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "33",
+        "seg2": "66",
+        "className": "",
+        "x": 2510,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "308edf9ac94d04e8",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "f964ee3095828366",
+        "name": "Set Actual Values",
+        "func": "var lum_ = { payload: msg.payload.lum };\nflow.set('lastLum', msg.payload.lum);\n\nvar temp_ = { payload: msg.payload.temp };\nif (temp_.payload != 999) {    \n    flow.set('lastTemp', temp_.payload);\n} else {    \n    temp_.payload = flow.get('lastTemp') || 0;\n}\n\nvar hum_ = { payload: msg.payload.hum };\nif (hum_.payload != 999) {\n    flow.set('lastHum', hum_.payload);\n} else {\n    hum_.payload = flow.get('lastHum') || 0;\n}\n\n\nreturn [lum_, temp_, hum_];",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2210,
+        "y": 1480,
+        "wires": [
+            [
+                "ee688bf3f88265c1"
+            ],
+            [
+                "b1ac0f993cfaf3fa"
+            ],
+            [
+                "bf75c3a6626ca127"
+            ]
+        ]
+    },
+    {
+        "id": "24fd3a691ac9dda3",
+        "type": "file in",
+        "z": "07cc5fec03514dd1",
+        "g": "f964ee3095828366",
+        "name": "",
+        "filename": "/home/pi/LastData/last_data.json",
+        "filenameType": "str",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 2340,
+        "y": 1360,
+        "wires": [
+            [
+                "0617f0fde8ae45dc",
+                "c53b8cff2dbd761d"
+            ]
+        ]
+    },
+    {
+        "id": "0617f0fde8ae45dc",
+        "type": "json",
+        "z": "07cc5fec03514dd1",
+        "g": "f964ee3095828366",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": true,
+        "x": 2170,
+        "y": 1420,
+        "wires": [
+            [
+                "308edf9ac94d04e8"
+            ]
+        ]
+    },
+    {
+        "id": "1f4002f1afcdce5e",
+        "type": "comment",
+        "z": "07cc5fec03514dd1",
+        "g": "3243601cdd687d00",
+        "name": "F5",
+        "info": "Chequea cada conexión (cada vez que se refresca o se entra al dashboard), y genera un delay para parsear el archivo.\nTambién está atento a si se actualizan los datos.",
+        "x": 1810,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "5696aa3f66d2b908",
+        "type": "watch",
+        "z": "07cc5fec03514dd1",
+        "g": "3243601cdd687d00",
+        "name": "",
+        "files": "/home/pi/LastData/last_data.json",
+        "recursive": "",
+        "x": 1890,
+        "y": 1360,
+        "wires": [
+            [
+                "24fd3a691ac9dda3"
+            ]
+        ]
+    },
+    {
+        "id": "82188dbcd1ab290d",
+        "type": "ui_template",
+        "z": "07cc5fec03514dd1",
+        "g": "49e43b5bb2843534",
+        "group": "",
+        "name": "Head - Template",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    /*\n    Pre-defined colors\n    */\n    :root {\n        --color-link-text-dark: rgba(241, 153, 226, 1);\n        --color-link-text-light: rgb(243, 44, 44, 1);\n        --color-link-text: var(--color-link-text-light);\n        \n        --color-toolbar-text-dark: rgba(255, 255, 255, 1);\n        --color-toolbar-text-light: rgb(0, 0, 0, 1);\n        --color-toolbar-text: var(--color-toolbar-text-light);\n        \n        --color-main-dark:  rgba(75, 121, 48, 1);\n        --color-main-light:  rgba(250, 253, 144, 1);\n        --color-main: var(--color-main-light);\n        \n        --color-text-light: rgba(104, 107, 0, 1);\n        --color-text-dark: rgba(109, 176, 70, 1);\n        --color-text: var(--color-text-light);\n        \n        --color-card-light: rgba(250, 250, 233, 1);\n        --color-card-dark: rgba(51, 51, 51, 1);\n        --color-card: var(--color-card-light);\n        \n        --color-widget-border: rgb(84, 78, 78);\n        --color-widget-trans: rgba(178, 178, 178, 0.2);\n        \n        --color-button-light: rgba(188, 194, 54, 0.8);\n        --color-button-dark: rgba(75, 121, 48, 0.8);\n        --color-button: var(--color-button-light);\n        \n        --color-button-text-light: rgba(0, 0, 0, 0.8);\n        --color-button-text-dark: rgba(255, 255, 255, 0.8);\n        --color-button-text: var(--color-button-text-light);\n        \n        --color-button-background-light: rgba(155, 158, 24, 1);\n        --color-button-background-dark: rgba(109, 176, 70, 1);\n        --color-button-background: var(--color-button-background-light);\n        \n        --color-selection-light: rgba(100,100,155,1);\n        --color-selection-dark: rgba(154,116,116,0.8);\n        --color-selection: var(--color-selection-light);\n        \n        --color-tint-light: rgba(182, 182, 255,1);\n        --color-tint-dark: rgba(255, 182, 182,1);\n        --color-tint: var(--color-tint-light);\n        \n        --color-gauge-light: rgba(155, 158, 24, 1);/*(182, 187, 9, 0.8);*/\n        --color-gauge-dark: rgba(165, 231, 138, 0.8);\n        --color-gauge: var(--color-gauge-light);\n        \n        --color-background-primary-light: rgba(239, 243, 136, 1);/*rgba(250, 253, 144, 1);*/\n        --color-background-secondary-light: rgba(255, 255, 255, 1);\n        \n        --color-background-primary-dark: rgba(44, 73, 26, 0.5);\n        --color-background-secondary-dark: rgba(82, 159, 35, 0.5);\n        \n        --color-background-primary: var(--color-background-primary-light);\n        --color-background-secondary: var(--color-background-secondary-light);\n\n        --color-toolbar-background-light: rgba(239, 243, 136, 0.7);\n        --color-toolbar-background-dark: rgba(44, 73, 26, 0.7);\n        --color-toolbar-background: var(--color-toolbar-background-light);\n\n        --color-numeric-node-background-light: rgba(255, 255, 255, 1);\n        --color-numeric-node-background-dark: rgba(17, 17, 17, 1);\n        --color-numeric-node-background: var(--color-numeric-node-background-light);\n\n        --color-numeric-node-text-light: rgba(17, 17, 17, 1);\n        --color-numeric-node-text-dark: rgba(255, 255, 255, 1);\n        --color-numeric-node-text: var(--color-numeric-node-text-light);\n        \n    }\n\n    /*Numeric Nodes*/\n    .nr-dashboard-theme .nr-dashboard-numeric .value {\n        background-color: var(--color-numeric-node-background);\n        color: var(--color-numeric-node-text);\n    }\n\n    /*Left Toolbar*/\n    .nr-menu-item-active div button {\n        border-right-color: var(--color-text);\n    }\n    body.nr-dashboard-theme md-sidenav {\n        color: var(--color-text);\n        background-color: var(--color-toolbar-background);\n    }\n    body.nr-dashboard-theme md-sidenav div.md-list-item-inner {\n        color: var(--color-text);\n    }\n    /*Toolbar gradient*/\n    md-toolbar#toolbar{\n        background: var(--color-main);\n        /*linear-gradient(120deg, var(--color-main) 20%, var(--color-background-secondary) 100%);*/ \n    }\n    /*Toolbar text*/\n    body.nr-dashboard-theme md-toolbar .md-toolbar-tools {\n        color: var(--color-toolbar-text);\n    }\n    /*Group name*/\n    .nr-dashboard-theme ui-card-panel p.nr-dashboard-cardtitle {\n        color: var(--color-text);\n    }\n    /*Gauge number and units*/\n    .nr-dashboard-theme .nr-dashboard-gauge text {\n        fill: var(--color-gauge);\n        margin: 8px;\n    }\n    /*Background*/\n    .masonry-container {\n        position: relative;\n        width: 100%;\n        height:100%;\n        margin: 0 auto;\n        background: linear-gradient(180deg,  var(--color-background-primary) 0%, var(--color-background-secondary) 100%); \n    }\n    /*Group color*/\n    .nr-dashboard-theme ui-card-panel {\n        background-color: #333333FF;\n        color:var(--color-text);\n        border-radius: 10px;\n        box-shadow: 0 0 8px 0px #00000080;\n    }\n    .nr-dashboard-theme .nr-dashboard-button .md-button  {\n        background: var(--color-button-background);\n        color:var(--color-button-text);\n    }\n    /*Widget color and text: necesito que el alpha sea 0 así se copia el color del card*/\n    body.nr-dashboard-theme md-content md-card {\n        background-color: #00000000;\n        color: var(--color-text);\n    }\n    /*Widget date text color*/\n    .nr-dashboard-theme .nr-dashboard-date-picker md-input-container .md-input {\n        color: var(--color-text);\n    }\n    /*ol color: necesito que el alpha sea 0 así se copia el color del card*/\n    .nr-dashboard-theme .nr-dashboard-template {\n        background-color: #33333300;\n    }\n    /*Card color*/\n    .nr-dashboard-theme ui-card-panel {\n        background-color: var(--color-card);\n        color: var(--color-text);\n    }\n    /*Date picker original date: necesito que el alpha sea 0*/\n    .md-datepicker-calendar-pane.md-pane-open {\n        background-color: #ffffff00;\n    }\n    /*Date picker header color*/\n    .md-default-theme .md-calendar-day-header, .md-calendar-day-header {\n        color: var(--color-text);\n        background-color: var(--color-background-primary);\n    }\n    /*Date picker day color*/\n    .md-default-theme .md-calendar-date.md-calendar-selected-date .md-calendar-date-selection-indicator, .md-calendar-date.md-calendar-selected-date .md-calendar-date-selection-indicator, .md-default-theme .md-calendar-date.md-focus.md-calendar-selected-date .md-calendar-date-selection-indicator, .md-calendar-date.md-focus.md-calendar-selected-date .md-calendar-date-selection-indicator {\n        background: var(--color-background-primary);\n        color: var(--color-text);\n        border-color: transparent;\n    }\n    /*Date picker actual date border*/\n    .md-default-theme .md-calendar-date.md-calendar-date-today .md-calendar-date-selection-indicator, .md-calendar-date.md-calendar-date-today .md-calendar-date-selection-indicator {\n        border: 1px solid var(--color-background-primary);\n    }\n    /*Date picker icon*/\n    .nr-dashboard-theme .nr-dashboard-date-picker .md-button.md-icon-button md-icon {\n        color: var(--color-text);\n    }\n    /*Date picker underline*/\n    .nr-dashboard-theme md-input-container.md-default-theme .md-input, md-input-container .md-input {\n        border-color: var(--color-text) !important;\n    }\n    \n    /*Button*/\n    .nr-dashboard-theme .nr-dashboard-button .md-button {\n        background: var(--color-button);\n        color: var(--color-button-text);\n    }\n    .nr-dashboard-theme .nr-dashboard-button .md-button {\n        background-color: var(--color-button);\n        color: white;\n    }\n    /*Button shadow*/\n    .nr-dashboard-theme .nr-dashboard-button .md-button:hover {\n        background-color: var(--color-button-background);\n    }\n    a:link{\n        color: var(--color-link-text);\n    }\n</style>\n\n<script id=\"headScript\" type=\"text/javascript\">\n    /*\n    Javascript to inject UI elements into the top of all dashboards (head)\n    */\n    var clockInterval;\n    $(function () {\n        if (clockInterval) return;\n\n        //add logo\n        var div0 = $('<div/>');\n        var logo = new Image();\n        logo.src = \"data:image/gif;base64,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\"\n        logo.height = 45;\n\n        div0[0].style.margin = '10px auto';\n        div0[0].style.width = '100px';\n        div0[0].style.float = 'left';\n\n        div0.append(logo);\n        \n        \n        //add clock\n        var div1 = $('<div/>');\n        var p = $('<p/>');\n\n        div1.append(p);\n        div1[0].style.margin = '5px';\n        div1[0].style.width = '120px';\n        div1[0].style.float = 'right';\n\n        function displayTime() {\n            p.text(new Date().toLocaleTimeString());\n        }\n        \n        //add day/night mode button\n        var div2 = $('<div/>');\n        var button = document.createElement('BUTTON');\n        var html = document.getElementsByTagName('html')[0];\n        var elem = window.getComputedStyle(html);\n        var night_icon = document.createElement(\"night\");\n        var day_icon = document.createElement(\"day\");\n        day_icon.className =\"fa fa-moon-o\";\n        night_icon.className =\"fa fa-sun-o\";\n        button.appendChild(night_icon);\n        button.onclick = function(){\n            button.replaceChild((button.firstChild.nodeName == \"NIGHT\") ? day_icon : night_icon, (button.firstChild.nodeName == \"DAY\") ? day_icon : night_icon);\n            html.style.setProperty(\"--color-main\",(button.firstChild.nodeName == \"NIGHT\") ? elem.getPropertyValue(\"--color-main-light\") : elem.getPropertyValue(\"--color-main-dark\"));\n            html.style.setProperty(\"--color-text\",(button.firstChild.nodeName == \"NIGHT\") ? elem.getPropertyValue(\"--color-text-light\") : elem.getPropertyValue(\"--color-text-dark\"));\n            html.style.setProperty(\"--color-button\",(button.firstChild.nodeName == \"NIGHT\") ? elem.getPropertyValue(\"--color-button-light\") : elem.getPropertyValue(\"--color-button-dark\"));\n            html.style.setProperty(\"--color-gauge\",(button.firstChild.nodeName == \"NIGHT\") ? elem.getPropertyValue(\"--color-gauge-light\") : elem.getPropertyValue(\"--color-gauge-dark\"));\n            html.style.setProperty(\"--color-selection\",(button.firstChild.nodeName == \"NIGHT\") ? elem.getPropertyValue(\"--color-selection-light\") : elem.getPropertyValue(\"--color-selection-dark\"));\n            html.style.setProperty(\"--color-tint\",(button.firstChild.nodeName == \"NIGHT\") ? elem.getPropertyValue(\"--color-tint-light\") : elem.getPropertyValue(\"--color-tint-dark\"));\n            html.style.setProperty(\"--color-background-primary\",(button.firstChild.nodeName == \"NIGHT\") ? elem.getPropertyValue(\"--color-background-primary-light\") : elem.getPropertyValue(\"--color-background-primary-dark\"));\n            html.style.setProperty(\"--color-background-secondary\",(button.firstChild.nodeName == \"NIGHT\") ? elem.getPropertyValue(\"--color-background-secondary-light\") :elem.getPropertyValue(\"--color-background-secondary-dark\"));\n            html.style.setProperty(\"--color-card\",(button.firstChild.nodeName == \"NIGHT\") ? elem.getPropertyValue(\"--color-card-light\") :elem.getPropertyValue(\"--color-card-dark\"));\n            html.style.setProperty(\"--color-button-background\",(button.firstChild.nodeName == \"NIGHT\") ? elem.getPropertyValue(\"--color-button-background-light\") :elem.getPropertyValue(\"--color-button-background-dark\"));\n            html.style.setProperty(\"--color-button-text\",(button.firstChild.nodeName == \"NIGHT\") ? elem.getPropertyValue(\"--color-button-text-light\") :elem.getPropertyValue(\"--color-button-text-dark\"));\n            html.style.setProperty(\"--color-toolbar-text\",(button.firstChild.nodeName == \"NIGHT\") ? elem.getPropertyValue(\"--color-toolbar-text-light\") :elem.getPropertyValue(\"--color-toolbar-text-dark\"));\n            \n            html.style.setProperty(\"--color-link-text\",(button.firstChild.nodeName == \"NIGHT\") ? elem.getPropertyValue(\"--color-link-text-light\") :elem.getPropertyValue(\"--color-link-text-dark\"));\n\n            html.style.setProperty(\"--color-toolbar-background\",(button.firstChild.nodeName == \"NIGHT\") ?\n            elem.getPropertyValue(\"--color-toolbar-background-light\") :elem.getPropertyValue(\"--color-toolbar-background-dark\"));\n\n            html.style.setProperty(\"--color-numeric-node-background\",(button.firstChild.nodeName == \"NIGHT\") ? elem.getPropertyValue(\"--color-numeric-node-background-light\") :elem.getPropertyValue(\"--color-numeric-node-background-dark\"));\n\n            html.style.setProperty(\"--color-numeric-node-text\",(button.firstChild.nodeName == \"NIGHT\") ? elem.getPropertyValue(\"--color-numeric-node-text-light\") :elem.getPropertyValue(\"--color-numeric-node-text-dark\"));\n        }\n\n        div2[0].style.margin = '5px auto';\n        div2[0].style.width = '60px';\n        div2[0].style.float = 'right';\n        button.tooltip = 'Cambia entre los temas oscuro (dark) y claro (light).';\n        button.style.color = elem.getPropertyValue(\"--color-widget\");\n        button.style.background = elem.getPropertyValue(\"--color-widget-trans\");\n        button.style.borderRadius = '20%';\n        div2.append(button);\n        \n        clockInterval = setInterval(displayTime, 1000);\n\n        //add to toolbar when it's available\n        var addToToolbarTimer;\n        \n        function addToToolbar() {\n            var toolbar = $('.md-toolbar-tools');\n            \n            if(!toolbar.length) return;\n            \n            toolbar.append(div0);\n            toolbar.append(div1);\n            toolbar.append(div2);\n            clearInterval(addToToolbarTimer);\n        }\n        addToToolbarTimer = setInterval(addToToolbar, 100);\n    });\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "global",
+        "className": "",
+        "x": 3020,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4d060be1131de765",
+        "type": "http in",
+        "z": "07cc5fec03514dd1",
+        "g": "49e43b5bb2843534",
+        "name": "",
+        "url": "/upload_simfs_ico",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 2600,
+        "y": 180,
+        "wires": [
+            [
+                "6d798c7d98bf0429"
+            ]
+        ]
+    },
+    {
+        "id": "6d798c7d98bf0429",
+        "type": "template",
+        "z": "07cc5fec03514dd1",
+        "g": "49e43b5bb2843534",
+        "name": "html",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<h1>Upload a file here:</h1>\n\n<form action=\"/upload\" method=\"POST\" enctype=\"multipart/form-data\">\n    <input type=\"file\" name=\"myFile\" />\n    <input type=\"submit\" value=\"Submit\">\n</form>",
+        "output": "str",
+        "x": 2890,
+        "y": 180,
+        "wires": [
+            [
+                "fc52fa09f41a2453"
+            ]
+        ]
+    },
+    {
+        "id": "fc52fa09f41a2453",
+        "type": "http response",
+        "z": "07cc5fec03514dd1",
+        "g": "49e43b5bb2843534",
+        "name": "",
+        "x": 3050,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "860cfc460ecbd5d5",
+        "type": "http response",
+        "z": "07cc5fec03514dd1",
+        "g": "49e43b5bb2843534",
+        "name": "",
+        "x": 3050,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "6de69b4edc83e1b2",
+        "type": "http in",
+        "z": "07cc5fec03514dd1",
+        "g": "49e43b5bb2843534",
+        "name": "",
+        "url": "/get_simfs_ico_path",
+        "method": "post",
+        "upload": true,
+        "swaggerDoc": "",
+        "x": 2610,
+        "y": 240,
+        "wires": [
+            [
+                "6f907e86d90d8bfc"
+            ]
+        ]
+    },
+    {
+        "id": "d3b67ca6b78caaa4",
+        "type": "template",
+        "z": "07cc5fec03514dd1",
+        "g": "49e43b5bb2843534",
+        "name": "html",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<p></p>File {{name}} uploaded !</p>\n\n<h2>Contents:</h2>\n\n<pre>\n{{{payload}}}\n</pre>",
+        "output": "str",
+        "x": 2870,
+        "y": 300,
+        "wires": [
+            [
+                "860cfc460ecbd5d5"
+            ]
+        ]
+    },
+    {
+        "id": "6f907e86d90d8bfc",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "49e43b5bb2843534",
+        "name": "toBase64",
+        "func": "msg.name = msg.req.files[0].originalname;\n\nif (msg.req.files[0].mimetype.includes('image')) {\n    msg.payload = `<img src=\"data:image/gif;base64,${msg.req.files[0].buffer.toString('base64')}\">`;\n} else {\n    msg.payload = msg.req.files[0].buffer.toString();\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 2900,
+        "y": 240,
+        "wires": [
+            [
+                "d3b67ca6b78caaa4"
+            ]
+        ]
+    },
+    {
+        "id": "6b16ca7797d46c4e",
+        "type": "comment",
+        "z": "07cc5fec03514dd1",
+        "g": "49e43b5bb2843534",
+        "name": "Colors and Theme",
+        "info": "Head - Tempalte:\nSetea colores de cada tema, icono, hora y botón para switchear el theme.\n\nEl resto de los nodos:\nNo tengo ni idea de como subir la imagen al src, uso estos path para subirla y generar un link. Eso lo coloco en el head template y lo coloco.",
+        "x": 2590,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "ce4ad0e009d0c1ff",
+        "type": "ui_button",
+        "z": "07cc5fec03514dd1",
+        "g": "f326992ae3cba2a1",
+        "name": "Load Data Lum",
+        "group": "6aaf1c6d6ce702b7",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "label": "Refrescar Datos de Luminosidad",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 520,
+        "y": 800,
+        "wires": [
+            [
+                "02c7b733249dede7"
+            ]
+        ]
+    },
+    {
+        "id": "39880ed7c77076f5",
+        "type": "exec",
+        "z": "07cc5fec03514dd1",
+        "g": "f326992ae3cba2a1",
+        "command": "cd /home/pi/simfs/simfs_export_data/ && sudo rm Datos_Fotos.zip && sudo zip -J Datos_Fotos.zip",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "30",
+        "winHide": true,
+        "oldrc": false,
+        "name": "Zip Png",
+        "x": 780,
+        "y": 1120,
+        "wires": [
+            [],
+            [],
+            [
+                "c5c3104ebe626373"
+            ]
+        ]
+    },
+    {
+        "id": "441f9276485b35a1",
+        "type": "ui_toast",
+        "z": "07cc5fec03514dd1",
+        "g": "f326992ae3cba2a1",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "topic": "",
+        "name": "",
+        "x": 1290,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "873c2c24d19dc4b7",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "f326992ae3cba2a1",
+        "name": "Create Files Path Img",
+        "func": "let zipAvailable = flow.get('makingZip') || 0;\nlet png_array = flow.get('png_array') || 0;\n\nif (zipAvailable && png_array.length !=0) {\n    flow.set('makingZip', false);\n    var png_arr = flow.get('png_array');\n    var png_st = \"\";\n\n    for (let i = 0; i < png_arr.length; i++) {\n        png_st = png_st + png_arr[i] + \" \";\n    }\n    png_st = png_st.slice(0, -1);\n    var png_ = { payload: png_st };\n\n    return png_;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 1120,
+        "wires": [
+            [
+                "39880ed7c77076f5",
+                "aa8a33a269ec3bbc"
+            ]
+        ]
+    },
+    {
+        "id": "11df120bc0c6e775",
+        "type": "ui_button",
+        "z": "07cc5fec03514dd1",
+        "g": "f326992ae3cba2a1",
+        "name": "Download Png",
+        "group": "6aaf1c6d6ce702b7",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "Descargar Compilado Imágenes",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 520,
+        "y": 1080,
+        "wires": [
+            [
+                "873c2c24d19dc4b7"
+            ]
+        ]
+    },
+    {
+        "id": "6da29e381dc1ffc9",
+        "type": "ui_button",
+        "z": "07cc5fec03514dd1",
+        "g": "f326992ae3cba2a1",
+        "name": "Load Data TyH",
+        "group": "6aaf1c6d6ce702b7",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "label": "Refrescar Datos de Temp. Y Hum.",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 520,
+        "y": 1020,
+        "wires": [
+            [
+                "b0003cab7d1f6a0f"
+            ]
+        ]
+    },
+    {
+        "id": "c53b8cff2dbd761d",
+        "type": "trigger",
+        "z": "07cc5fec03514dd1",
+        "g": "f964ee3095828366",
+        "name": "",
+        "op1": "dc",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "-11",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 2210,
+        "y": 1280,
+        "wires": [
+            [
+                "0a867eb754c68a3c"
+            ]
+        ]
+    },
+    {
+        "id": "aa4e736dfc9b897b",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "f326992ae3cba2a1",
+        "name": "Generate Lum Update",
+        "func": "var msgfail = {payload: \"Error al generar CSV de Luminosidad.\"};\n\nif(flow.get('lum_valid_date')) {\n    var from_ = flow.get('lum_from_date') || 0;\n    var to_ = flow.get('lum_to_date') || 0;\n    var variable_ = 2;//\"lum\";\n    \n    from_ += \"_00:00\";\n    to_ += \"_23:59\";\n    \n    msg.payload = \"--start_time=\\\"\" + from_ + \"\\\" --end_time=\\\"\" + to_ + \"\\\" --meas_type=\" + variable_;\n    msgfail = { payload: \"\" };\n} else {\n    msg = { payload: \"\" };\n}\n\nreturn [msg, msgfail];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1080,
+        "y": 840,
+        "wires": [
+            [
+                "e05c4b06f5dcfdec"
+            ],
+            [
+                "d11a9f9b3242f27c"
+            ]
+        ]
+    },
+    {
+        "id": "e05c4b06f5dcfdec",
+        "type": "exec",
+        "z": "07cc5fec03514dd1",
+        "g": "f326992ae3cba2a1",
+        "command": "cd /home/pi/simfs/Python_Scripts/Clases/ && python3 make_csv_cli.py",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "30",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Python3 Make CSV",
+        "x": 1330,
+        "y": 840,
+        "wires": [
+            [
+                "dc4d0bda6c12e06f"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "ece93fdbd24b393e",
+        "type": "exec",
+        "z": "07cc5fec03514dd1",
+        "g": "f326992ae3cba2a1",
+        "command": "cd /home/pi/simfs/simfs_export_data/ && rm TemperaturaYHumedad_*",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "5",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Delete Old TyH CSV",
+        "x": 800,
+        "y": 940,
+        "wires": [
+            [
+                "44bd606ff07aa20d"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "9cf792cd3185d84f",
+        "type": "exec",
+        "z": "07cc5fec03514dd1",
+        "g": "f326992ae3cba2a1",
+        "command": "cd /home/pi/simfs/simfs_export_data/ && rm Luminosidad_*",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "5",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Delete Old Lum CSV",
+        "x": 800,
+        "y": 880,
+        "wires": [
+            [
+                "23b99eb6abca02b1"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "24a8f875e1d1ee92",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "f326992ae3cba2a1",
+        "name": "Generate TyH Update",
+        "func": "var msgfail = {payload: \"Error al generar CSV de Temperatura y Humedad.\"};\nif(flow.get('tyh_valid_date')) {\n    var from_ = flow.get('tyh_from_date') || 0;\n    var to_ = flow.get('tyh_to_date') || 0;\n    var variable_ = 1;//\"tyh\";\n    \n    from_ += \"_00:00\";\n    to_ += \"_23:59\";\n    \n    msg.payload = \"--start_time=\\\"\" + from_ + \"\\\" --end_time=\\\"\" + to_ + \"\\\" --meas_type=\" + variable_;\n    msgfail = { payload: \"\" };\n} else {\n    msg = { payload: \"\" };\n}\n\nreturn [msg, msgfail];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1080,
+        "y": 980,
+        "wires": [
+            [
+                "e05c4b06f5dcfdec"
+            ],
+            [
+                "d11a9f9b3242f27c"
+            ]
+        ]
+    },
+    {
+        "id": "8a156ca1b541c43a",
+        "type": "ui_button",
+        "z": "07cc5fec03514dd1",
+        "g": "4c38ec26726d8cb3",
+        "name": "Download Bird",
+        "group": "6aaf1c6d6ce702b7",
+        "order": 4,
+        "width": 9,
+        "height": 1,
+        "passthru": false,
+        "label": "Descargar Datos del Ave",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 3720,
+        "y": 200,
+        "wires": [
+            [
+                "46890aeda7dbe1a6"
+            ]
+        ]
+    },
+    {
+        "id": "46890aeda7dbe1a6",
+        "type": "ui_template",
+        "z": "07cc5fec03514dd1",
+        "g": "4c38ec26726d8cb3",
+        "group": "c63655b8f7450c5c",
+        "name": "Download Ave",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "format": "<script>\n(function(scope) {\n  scope.$watch('msg', function(msg) {\n    if (msg.payload.code == 0) {\n        window.location.href = \"/files/Datos_Ave.zip\";\n    }\n    return msg;\n  });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 3920,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fc7efc4a09db6818",
+        "type": "comment",
+        "z": "07cc5fec03514dd1",
+        "g": "4c38ec26726d8cb3",
+        "name": "Hay que chequear esto",
+        "info": "Hay que chequear que descargue bien y poner notificaciones",
+        "x": 3740,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "23b99eb6abca02b1",
+        "type": "ui_template",
+        "z": "07cc5fec03514dd1",
+        "g": "f326992ae3cba2a1",
+        "group": "c63655b8f7450c5c",
+        "name": "Delete Lum",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "format": "<script>\n(function(scope) {\n  scope.$watch('msg', function(msg) {\n    if (msg) {\n        let menu_lum = document.getElementById('Lum_list');\n        while (menu_lum.firstChild) {\n            menu_lum.removeChild(menu_lum.firstChild);\n        }\n    }\n    \n  });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1050,
+        "y": 880,
+        "wires": [
+            [
+                "aa4e736dfc9b897b"
+            ]
+        ]
+    },
+    {
+        "id": "44bd606ff07aa20d",
+        "type": "ui_template",
+        "z": "07cc5fec03514dd1",
+        "g": "f326992ae3cba2a1",
+        "group": "c63655b8f7450c5c",
+        "name": "Delete TyH",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "format": "<script>\n(function(scope) {\n  scope.$watch('msg', function(msg) {\n    if (msg) {\n        let menu_tyh = document.getElementById('tyh_list');\n        while (menu_tyh.firstChild) {\n            menu_tyh.removeChild(menu_tyh.firstChild);\n        }\n    }\n    \n  });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1050,
+        "y": 940,
+        "wires": [
+            [
+                "24a8f875e1d1ee92"
+            ]
+        ]
+    },
+    {
+        "id": "be2f6abf99343be8",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "ce348030d202adb0",
+        "name": "Set Stream URL",
+        "func": "var new_payload = \"data:image/gif;base64,\" + msg.payload;\nmsg.payload = new_payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3580,
+        "y": 1000,
+        "wires": [
+            [
+                "230dc418e7946a11"
+            ]
+        ]
+    },
+    {
+        "id": "5b952e910d36f5d7",
+        "type": "base64",
+        "z": "07cc5fec03514dd1",
+        "g": "ce348030d202adb0",
+        "name": "",
+        "action": "str",
+        "property": "payload",
+        "x": 3600,
+        "y": 960,
+        "wires": [
+            [
+                "be2f6abf99343be8"
+            ]
+        ]
+    },
+    {
+        "id": "30c6f3e5c51c21e2",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "ce348030d202adb0",
+        "name": "Set Stream URL",
+        "func": "if (msg.payload == \"\") {\n    msg.payload = \"/home/pi/simfs/NidoImagesFrontEnd/end-stream-img.png\";\n    return [msg, null];\n}\nreturn [null, msg];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3280,
+        "y": 900,
+        "wires": [
+            [
+                "8760df62c398ee1b"
+            ],
+            [
+                "230dc418e7946a11"
+            ]
+        ]
+    },
+    {
+        "id": "8760df62c398ee1b",
+        "type": "file in",
+        "z": "07cc5fec03514dd1",
+        "g": "ce348030d202adb0",
+        "name": "",
+        "filename": "payload",
+        "filenameType": "msg",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 3600,
+        "y": 920,
+        "wires": [
+            [
+                "5b952e910d36f5d7"
+            ]
+        ]
+    },
+    {
+        "id": "90e42e5bfbbdc514",
+        "type": "ui_iframe",
+        "z": "07cc5fec03514dd1",
+        "g": "ce348030d202adb0",
+        "group": "e09affd1d78f162d",
+        "name": "",
+        "order": 12,
+        "width": 13,
+        "height": 10,
+        "url": "",
+        "origin": "*",
+        "scale": 100,
+        "x": 3570,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "93d3c5841f590fd8",
+        "type": "ui_button",
+        "z": "07cc5fec03514dd1",
+        "g": "ce348030d202adb0",
+        "name": "",
+        "group": "e09affd1d78f162d",
+        "order": 5,
+        "width": 4,
+        "height": 2,
+        "passthru": false,
+        "label": "Ver el nido en vivo",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "El stream finalizará en 10 segundos.",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 2750,
+        "y": 1000,
+        "wires": [
+            [
+                "cc5664dca5d3111f"
+            ]
+        ]
+    },
+    {
+        "id": "03443a8fb0a63a1f",
+        "type": "exec",
+        "z": "07cc5fec03514dd1",
+        "g": "ce348030d202adb0",
+        "command": "python3 /home/pi/CameraStream/stream.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "10",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Python3 Camera Stream",
+        "x": 3030,
+        "y": 940,
+        "wires": [
+            [
+                "30c6f3e5c51c21e2"
+            ],
+            [],
+            [
+                "12790ef0acc53f13"
+            ]
+        ]
+    },
+    {
+        "id": "c2d16134a65e122e",
+        "type": "ui_toast",
+        "z": "07cc5fec03514dd1",
+        "g": "ce348030d202adb0",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 3010,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "8632479012075663",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "ce348030d202adb0",
+        "name": "Set Stream URL",
+        "func": "msg.payload = \"http://192.168.0.10:8000/\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3000,
+        "y": 1040,
+        "wires": [
+            [
+                "230dc418e7946a11"
+            ]
+        ]
+    },
+    {
+        "id": "230dc418e7946a11",
+        "type": "change",
+        "z": "07cc5fec03514dd1",
+        "g": "ce348030d202adb0",
+        "name": "set URL",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3580,
+        "y": 1040,
+        "wires": [
+            [
+                "90e42e5bfbbdc514"
+            ]
+        ]
+    },
+    {
+        "id": "0a867eb754c68a3c",
+        "type": "exec",
+        "z": "07cc5fec03514dd1",
+        "g": "f964ee3095828366",
+        "command": "cd /home/pi/simfs/Python_Scripts/ && python3 getRTMeasurements.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "10",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Update Python Function",
+        "x": 2450,
+        "y": 1280,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "339ee40b65666bc9",
+        "type": "comment",
+        "z": "07cc5fec03514dd1",
+        "g": "ce348030d202adb0",
+        "name": "Cambiar duración de stream",
+        "info": "",
+        "x": 2780,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "2396bc5eaef2d5de",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "ce348030d202adb0",
+        "name": "Connect",
+        "func": "if (msg.payload == \"connect\") {\n    msg.payload = \"\";\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2840,
+        "y": 900,
+        "wires": [
+            [
+                "30c6f3e5c51c21e2"
+            ]
+        ]
+    },
+    {
+        "id": "d11a9f9b3242f27c",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "f326992ae3cba2a1",
+        "name": "Filter Notification",
+        "func": "var msgFailLum = \"Error al generar CSV de Luminosidad.\";\nvar msgFailTyH =  \"Error al generar CSV de Temperatura y Humedad.\";\n\nif ((msg.payload == msgFailLum) || (msg.payload == msgFailTyH)) {\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1330,
+        "y": 980,
+        "wires": [
+            [
+                "441f9276485b35a1"
+            ]
+        ]
+    },
+    {
+        "id": "02c7b733249dede7",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "f326992ae3cba2a1",
+        "name": "Check Lum Valid Date",
+        "func": "if (flow.get('lum_valid_date') || 0) {\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 840,
+        "wires": [
+            [
+                "8c364c718253c46b"
+            ]
+        ]
+    },
+    {
+        "id": "b0003cab7d1f6a0f",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "f326992ae3cba2a1",
+        "name": "Check TyH Valid Date",
+        "func": "if (flow.get('tyh_valid_date') || 0) {\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 980,
+        "wires": [
+            [
+                "8101189e44e169b8"
+            ]
+        ]
+    },
+    {
+        "id": "4290990e67420de5",
+        "type": "comment",
+        "z": "07cc5fec03514dd1",
+        "g": "a8439bc08263141c",
+        "name": "CSV Parser",
+        "info": "CSV Lister toma todos los *.csv. Lum filter y TyH filter seleccionan las mediciones de cada varialbe para que los ui_templates los coloquen en su adecuado lugar.",
+        "x": 1890,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "a7d8aa1c6efa0685",
+        "type": "fs-file-lister",
+        "z": "07cc5fec03514dd1",
+        "g": "a8439bc08263141c",
+        "name": "CSV Lister",
+        "start": "/home/pi/simfs/simfs_export_data/",
+        "pattern": "*.csv",
+        "folders": "*",
+        "hidden": false,
+        "lstype": "files",
+        "path": false,
+        "single": true,
+        "depth": 0,
+        "stat": false,
+        "showWarnings": false,
+        "x": 1890,
+        "y": 940,
+        "wires": [
+            [
+                "f68e08457fa0bb1b",
+                "c4215afb4ab49230"
+            ]
+        ]
+    },
+    {
+        "id": "1e770f490ddfcffe",
+        "type": "ui_template",
+        "z": "07cc5fec03514dd1",
+        "g": "a8439bc08263141c",
+        "group": "f44b173abdb7e275",
+        "name": "ui_temlplate - Lum",
+        "order": 3,
+        "width": 6,
+        "height": 6,
+        "format": "<ul id='Lum_list'>\n    \n</ul>\n<script>\n(function(scope) {\n  scope.$watch('msg', function(msg) {\n    \n    let newContent = document.createElement(\"li\", style = \"color:red;\");    \n    let list = document.getElementById('Lum_list');   \n\n    while (list.childElementCount) {\n      list.removeChild(list.firstChild);\n    }\n\n    let link = document.createElement(\"a\", style = \"color:red;\");\n    newContent.appendChild(link);\n    \n    if (msg.payload == 'Empty Folder') {\n      link.textContent = \"No hay archivos CSV disponibles para descargar. Refrescar la página.\";\n      list.appendChild(newContent);\n    } else {\n      link.href = \"/files/\" + msg.payload;\n      link.textContent = \"Descargar \" + msg.payload;\n      list.appendChild(newContent);\n    }\n    \n  });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 2430,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6ce41e0ba1aa45d5",
+        "type": "ui_template",
+        "z": "07cc5fec03514dd1",
+        "g": "a8439bc08263141c",
+        "group": "4ad91a62eed23859",
+        "name": "ui_temlplate - TyH",
+        "order": 3,
+        "width": 6,
+        "height": 6,
+        "format": "<ul id='tyh_list'>\n    \n</ul>\n<script>\n(function(scope) {\n  scope.$watch('msg', function(msg) {        \n    let newContent = document.createElement(\"li\", style = \"color:red;\");\n    let list = document.getElementById('tyh_list');\n    \n    while (list.childElementCount) {\n      list.removeChild(list.firstChild);\n    }\n    \n    let link = document.createElement(\"a\", style = \"color:red;\");\n    newContent.appendChild(link);\n    \n    if(msg.payload == 'Empty Folder'){\n      link.textContent = \"No hay archivos CSV disponibles para descargar. Refrescar la página.\";\n      list.appendChild(newContent);\n    } else {\n      link.href = \"/files/\" + msg.payload;\n      link.textContent = \"Descargar \" + msg.payload;\n      list.appendChild(newContent);\n    }\n\n  });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 2430,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f68e08457fa0bb1b",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "a8439bc08263141c",
+        "name": "Filter Lum CSV",
+        "func": "//Luminosidad_2022-09-30_2022-10-01.csv\nvar array = [];\narray = msg.payload;\n\nfor (let i = 0; i < array.length; i++) {\n    var current = array[i];\n    if (current.includes('Lum')) {        \n        var fileFrom = current.split(\"_\")[1];\n        var fileTo = current.split(\"_\")[2];\n        fileTo = fileTo.split(\".\")[0];\n\n        var calendarFrom = flow.get('lum_from_date') || 0;\n        var calendarTo = flow.get('lum_to_date') || 0;\n\n        var checkFrom = checkTimes(calendarFrom, fileFrom);\n        var checkTo = checkTimes(fileTo, calendarTo);\n\n        if (checkFrom && checkTo) {\n            return { payload: current };\n        } else {\n            return { payload: 'Empty Folder' };\n        }\n    }    \n}\n\nreturn { payload: 'Empty Folder' }\n\nfunction checkTimes(first_string, second_string) {\n    //Returns True if second >= first\n\n    var first = new Date(first_string);\n    var second = new Date(second_string);\n\n    var difference = second.getTime() - first.getTime();\n    return difference >= 0;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2120,
+        "y": 920,
+        "wires": [
+            [
+                "1e770f490ddfcffe"
+            ]
+        ]
+    },
+    {
+        "id": "c4215afb4ab49230",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "a8439bc08263141c",
+        "name": "Filter TyH CSV",
+        "func": "var null_msg = { payload: 'Empty Folder' };\n\nvar temp_invalid_date = false;\nvar array = [];\narray = msg.payload;\nfor (let i = 0; i < array.length; i++) {\n    var current = array[i];\n    if (current.includes('Temp')) {\n        var fileFrom = current.split(\"_\")[1];\n        var fileTo = current.split(\"_\")[2];\n        fileTo = fileTo.split(\".\")[0];\n        var calendarFrom = flow.get('lum_from_date') || 0;\n        var calendarTo = flow.get('lum_to_date') || 0;\n        var checkFrom = checkTimes(calendarFrom, fileFrom);\n        var checkTo = checkTimes(fileTo, calendarTo);\n\n        if (checkFrom && checkTo) {\n            return { payload: current };\n        } else {\n            return { payload: 'Empty Folder' };\n        }\n    }\n}\n\nfunction checkTimes(first_string, second_string) {\n    //Returns True if second >= first\n\n    var first = new Date(first_string);\n    var second = new Date(second_string);\n\n    var difference = second.getTime() - first.getTime();\n    return difference >= 0;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2120,
+        "y": 960,
+        "wires": [
+            [
+                "6ce41e0ba1aa45d5"
+            ]
+        ]
+    },
+    {
+        "id": "b6052a0cdc0215c4",
+        "type": "ui_template",
+        "z": "07cc5fec03514dd1",
+        "g": "ebaffe9445e62a8c",
+        "group": "c63655b8f7450c5c",
+        "name": "Delete",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "format": "<script>\n(function(scope) {\n  scope.$watch('msg', function(msg) {\n    if (msg) {\n      if (flow.get('lum_valid_date') || 0) {\n        let menu_lum = document.getElementById('Lum_list');\n        while (menu_lum.firstChild) {\n          menu_lum.removeChild(menu_lum.firstChild);\n        }\n      }\n  \n      if (flow.get('tyh_valid_date') || 0) {\n        let menu_tyh = document.getElementById('tyh_list');\n        while (menu_tyh.firstChild) {\n          menu_tyh.removeChild(menu_tyh.firstChild);\n        }\n      }\n  \n      if (flow.get('png_valid_date') || 0) {\n        let menu_png = document.getElementById('png_list');\n        while (menu_png.firstChild) {\n          menu_png.removeChild(menu_png.firstChild);\n        }\n      }\n    }    \n  });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1640,
+        "y": 1060,
+        "wires": [
+            [
+                "9c174e12415580a7"
+            ]
+        ]
+    },
+    {
+        "id": "bc6869800f692842",
+        "type": "ui_button",
+        "z": "07cc5fec03514dd1",
+        "g": "ebaffe9445e62a8c",
+        "name": "Reload Data",
+        "group": "6aaf1c6d6ce702b7",
+        "order": 5,
+        "width": 9,
+        "height": 1,
+        "passthru": true,
+        "label": "Refrescar Todos Los Datos",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "connect",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1600,
+        "y": 1020,
+        "wires": [
+            [
+                "b6052a0cdc0215c4"
+            ]
+        ]
+    },
+    {
+        "id": "56b08b5385d108f6",
+        "type": "comment",
+        "z": "07cc5fec03514dd1",
+        "g": "ebaffe9445e62a8c",
+        "name": "Button System - F5- Init",
+        "info": "Botón que recarga los datos. Limita los clicks al botón, elimina los archivos que ya están cargados y genera un payload que la siguiente función interprete como mun update",
+        "x": 1630,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "70d149baf3e07501",
+        "type": "fs-file-lister",
+        "z": "07cc5fec03514dd1",
+        "g": "19f07a9779fca30a",
+        "name": "PNG Lister",
+        "start": "/home/pi/simfs/simfs_export_data/",
+        "pattern": "*.png",
+        "folders": "*",
+        "hidden": false,
+        "lstype": "files",
+        "path": false,
+        "single": true,
+        "depth": 0,
+        "stat": false,
+        "showWarnings": false,
+        "x": 2090,
+        "y": 1100,
+        "wires": [
+            [
+                "d8627b84d27c0ed8"
+            ]
+        ]
+    },
+    {
+        "id": "2662dabdaea00018",
+        "type": "comment",
+        "z": "07cc5fec03514dd1",
+        "g": "19f07a9779fca30a",
+        "name": "Image Parser",
+        "info": "Busca archivos *.png y los carga en el grupo de imágenes.",
+        "x": 1890,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "d8627b84d27c0ed8",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "19f07a9779fca30a",
+        "name": "Filter PNG",
+        "func": "//Imagen_2021-10-20_20:35:21.png\nvar current = msg.payload;\nvar fromDate = 'png_from_date';\nvar toDate = 'png_to_date';\n\nvar array = [];\nvar toReturn = [];\narray = msg.payload;\nfor (let i = 0; i < array.length; i++) {\n    if (array[i] != 'Empty Folder' && checkDates(array[i], fromDate, toDate)) {\n        toReturn.push(array[i]);\n    }\n}\n\nflow.set('png_array', toReturn);\nif (toReturn.length == 0){    \n    return { payload: ['Empty Folder'] };\n} else {\n    return { payload: toReturn };\n}\n\nfunction checkDates(current, fromDate, toDate) {\n\n    //take msg date\n    var fileDateYMD = current.split(\"_\")[1];\n    var fileYear = parseInt(fileDateYMD.split(\"-\")[0]);\n    var fileMonth = parseInt(fileDateYMD.split(\"-\")[1]);\n    var fileDay = parseInt(fileDateYMD.split(\"-\")[2]);\n\n    //take calendar dates\n    var calendar_first = flow.get(fromDate) || 0;\n    var minYear = parseInt(calendar_first.split('-')[0]);\n    var minMonth = parseInt(calendar_first.split('-')[1]);\n    var minDay = parseInt(calendar_first.split('-')[2]);\n\n    var calendar_second = flow.get(toDate) || 0;\n    var maxYear = parseInt(calendar_second.split('-')[0]);\n    var maxMonth = parseInt(calendar_second.split('-')[1]);\n    var maxDay = parseInt(calendar_second.split('-')[2]);\n\n    var year_min = minYear < fileYear;\n    var year_min_same = minYear == fileYear;\n    var month_min = minMonth < fileMonth;\n    var month_min_same = minMonth == fileMonth;\n    var day_min = minDay <= fileDay;\n    var min_check = year_min || (year_min_same && month_min) || (year_min_same && month_min_same && day_min);\n\n    var year_max = fileYear < maxYear;\n    var year_max_same = fileYear == maxYear;\n    var month_max = fileMonth < maxMonth;\n    var month_max_same = fileMonth == maxMonth;\n    var day_max = fileDay <= maxDay;\n    var max_check = year_max || (year_max_same && month_max) || (year_max_same && month_max_same && day_max);\n\n    return min_check && max_check;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2270,
+        "y": 1100,
+        "wires": [
+            [
+                "96d1168cce3dff22"
+            ]
+        ]
+    },
+    {
+        "id": "96d1168cce3dff22",
+        "type": "ui_template",
+        "z": "07cc5fec03514dd1",
+        "g": "19f07a9779fca30a",
+        "group": "ed493faf50b74f04",
+        "name": "ui_temlplate - PNG",
+        "order": 3,
+        "width": 6,
+        "height": 6,
+        "format": "<ol id='png_list'>\n    \n</ol>\n<script>\n(function(scope) {\n  scope.$watch('msg', function(msg) {    \n    let array = [];\n    array = msg.payload;\n\n    let list = document.getElementById('png_list');\n    while (list.firstChild) {\n      list.removeChild(list.firstChild);\n    }\n\n    for (let i = 0; i < array.length; i++) {\n      let newContent = document.createElement(\"li\", style = \"color:red;\");\n      let link = document.createElement(\"a\", style = \"color:red;\");\n      newContent.appendChild(link);\n      //let list = document.getElementById('png_list');\n\n      if (array[i] == 'Empty Folder') {\n        link.textContent = \"No hay archivos PNG disponibles para descargar. Refrescar la página.\";\n        list.appendChild(newContent);\n      } else if (array[i] != \"Empty Folder\") {\n        link.href = \"/files/\" + array[i];\n        link.textContent = \"Descargar \" + array[i];\n        list.appendChild(newContent);        \n      }\n      \n    }\n  });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 2450,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "89241ac42bde86b7",
+        "type": "delay",
+        "z": "07cc5fec03514dd1",
+        "g": "19f07a9779fca30a",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1910,
+        "y": 1100,
+        "wires": [
+            [
+                "70d149baf3e07501"
+            ]
+        ]
+    },
+    {
+        "id": "390562871d15774e",
+        "type": "exec",
+        "z": "07cc5fec03514dd1",
+        "g": "6df687d13111f964",
+        "command": "cd /home/pi/BLEdetection/ && sudo python3 presenceDetector.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "30",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Presence Detector Py",
+        "x": 2520,
+        "y": 680,
+        "wires": [
+            [
+                "13854c3cf903b9b5"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "13854c3cf903b9b5",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "6df687d13111f964",
+        "name": "Presence Detector",
+        "func": "var birdInNest = msg.payload.slice(0, -1) === 'True';\n\nvar return_notif = { payload: \"¡Acába de llegar el pájaro!\" };\nvar return_string = { payload: \"¡El pájaro está en el nido!\" };\nvar return_png = { payload: \"/home/pi/simfs/NidoImagesFrontEnd/bird_home.png\" };\n\nif (!birdInNest) {\n    return_notif = { payload: \"El pájaro se fue a pasear :(\" };\n    return_string = { payload: \"El pájaro no está en casa.\" };\n    return_png = { payload: \"/home/pi/simfs/NidoImagesFrontEnd/bird_away.png\" };\n}\n\nif (birdInNest == (flow.get('bird_presence') || 0)) {\n    return_notif = null;\n} else {\n    flow.set('bird_presence', birdInNest);\n}\n\nreturn [return_notif, return_string, return_png];",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2750,
+        "y": 680,
+        "wires": [
+            [
+                "1f8410bacd89eeba"
+            ],
+            [
+                "fe41c9bf665f4a4c"
+            ],
+            [
+                "e551cb0d8a02a436"
+            ]
+        ]
+    },
+    {
+        "id": "1f8410bacd89eeba",
+        "type": "ui_toast",
+        "z": "07cc5fec03514dd1",
+        "g": "6df687d13111f964",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 3010,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "0f58e8e8f3c6253d",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "6df687d13111f964",
+        "name": "Set Stream URL",
+        "func": "var new_payload = \"data:image/gif;base64,\" + msg.payload;\nmsg.payload = new_payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2900,
+        "y": 760,
+        "wires": [
+            [
+                "c253e6b38e17ca8a"
+            ]
+        ]
+    },
+    {
+        "id": "be769abdd7a3cf12",
+        "type": "base64",
+        "z": "07cc5fec03514dd1",
+        "g": "6df687d13111f964",
+        "name": "",
+        "action": "str",
+        "property": "payload",
+        "x": 3120,
+        "y": 720,
+        "wires": [
+            [
+                "0f58e8e8f3c6253d"
+            ]
+        ]
+    },
+    {
+        "id": "e551cb0d8a02a436",
+        "type": "file in",
+        "z": "07cc5fec03514dd1",
+        "g": "6df687d13111f964",
+        "name": "",
+        "filename": "payload",
+        "filenameType": "msg",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 2980,
+        "y": 720,
+        "wires": [
+            [
+                "be769abdd7a3cf12"
+            ]
+        ]
+    },
+    {
+        "id": "c253e6b38e17ca8a",
+        "type": "change",
+        "z": "07cc5fec03514dd1",
+        "g": "6df687d13111f964",
+        "name": "set URL",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3060,
+        "y": 760,
+        "wires": [
+            [
+                "4d4df9577fb6e414"
+            ]
+        ]
+    },
+    {
+        "id": "4d4df9577fb6e414",
+        "type": "ui_iframe",
+        "z": "07cc5fec03514dd1",
+        "g": "6df687d13111f964",
+        "group": "e09affd1d78f162d",
+        "name": "",
+        "order": 7,
+        "width": 2,
+        "height": 2,
+        "url": "",
+        "origin": "*",
+        "scale": "10",
+        "x": 3210,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fa3cf5a44b6a5f63",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "6df687d13111f964",
+        "name": "First Time",
+        "func": "flow.set('bird_presence', false);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2300,
+        "y": 720,
+        "wires": [
+            [
+                "25bbb896e237c2ee"
+            ]
+        ]
+    },
+    {
+        "id": "ecf77c5c5364aa9f",
+        "type": "trigger",
+        "z": "07cc5fec03514dd1",
+        "g": "6df687d13111f964",
+        "name": "",
+        "op1": "",
+        "op2": "0",
+        "op1type": "pay",
+        "op2type": "str",
+        "duration": "-1",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 2630,
+        "y": 740,
+        "wires": [
+            [
+                "390562871d15774e"
+            ]
+        ]
+    },
+    {
+        "id": "b38e04bbefa7b513",
+        "type": "ui_ui_control",
+        "z": "07cc5fec03514dd1",
+        "g": "6df687d13111f964",
+        "name": "",
+        "events": "all",
+        "x": 2300,
+        "y": 760,
+        "wires": [
+            [
+                "25bbb896e237c2ee"
+            ]
+        ]
+    },
+    {
+        "id": "25bbb896e237c2ee",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "6df687d13111f964",
+        "name": "",
+        "func": "if (msg.payload == \"connect\") {\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2460,
+        "y": 740,
+        "wires": [
+            [
+                "ecf77c5c5364aa9f"
+            ]
+        ]
+    },
+    {
+        "id": "12790ef0acc53f13",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "ce348030d202adb0",
+        "name": "Set PyCamera State",
+        "func": "if (msg.payload.code == null) {\n    flow.set('pyCamera', true);\n} else {\n    flow.set('pyCamera', false);\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3280,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cc5664dca5d3111f",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "ce348030d202adb0",
+        "name": "Check PyCamera State",
+        "func": "if (flow.get('pyCamera') || 0) {\n    flow.set('pyCamera', false);\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2750,
+        "y": 1040,
+        "wires": [
+            [
+                "03443a8fb0a63a1f",
+                "c2d16134a65e122e",
+                "8632479012075663"
+            ]
+        ]
+    },
+    {
+        "id": "dc4d0bda6c12e06f",
+        "type": "delay",
+        "z": "07cc5fec03514dd1",
+        "g": "d97fb92eb69a5cf4",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1630,
+        "y": 900,
+        "wires": [
+            [
+                "a7d8aa1c6efa0685"
+            ]
+        ]
+    },
+    {
+        "id": "805a8a0267f24bd8",
+        "type": "inject",
+        "z": "07cc5fec03514dd1",
+        "g": "2bf2c5e6c4a44628",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "connect",
+        "payloadType": "str",
+        "x": 1720,
+        "y": 540,
+        "wires": [
+            [
+                "49d8ec21070d9458",
+                "fcb492940c1a1fd5"
+            ]
+        ]
+    },
+    {
+        "id": "c116ee25bbe1d4e0",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "2bf2c5e6c4a44628",
+        "name": "",
+        "func": "if (msg.payload == \"connect\") {\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1720,
+        "y": 620,
+        "wires": [
+            [
+                "49d8ec21070d9458",
+                "b68a428b9e4d277d"
+            ]
+        ]
+    },
+    {
+        "id": "b14c4725ab5d27d2",
+        "type": "ui_ui_control",
+        "z": "07cc5fec03514dd1",
+        "g": "2bf2c5e6c4a44628",
+        "name": "",
+        "events": "all",
+        "x": 1720,
+        "y": 660,
+        "wires": [
+            [
+                "c116ee25bbe1d4e0"
+            ]
+        ]
+    },
+    {
+        "id": "49d8ec21070d9458",
+        "type": "delay",
+        "z": "07cc5fec03514dd1",
+        "g": "2bf2c5e6c4a44628",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1910,
+        "y": 580,
+        "wires": [
+            [
+                "6d84deeba1e93335",
+                "154a78135cd35909",
+                "fa3cf5a44b6a5f63"
+            ]
+        ]
+    },
+    {
+        "id": "fcb492940c1a1fd5",
+        "type": "delay",
+        "z": "07cc5fec03514dd1",
+        "g": "2bf2c5e6c4a44628",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1910,
+        "y": 540,
+        "wires": [
+            [
+                "fc0584ae8904919f",
+                "376de5f1c23daa03"
+            ]
+        ]
+    },
+    {
+        "id": "b68a428b9e4d277d",
+        "type": "delay",
+        "z": "07cc5fec03514dd1",
+        "g": "2bf2c5e6c4a44628",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1910,
+        "y": 620,
+        "wires": [
+            [
+                "8f101d1a501ade39"
+            ]
+        ]
+    },
+    {
+        "id": "fc0584ae8904919f",
+        "type": "link out",
+        "z": "07cc5fec03514dd1",
+        "g": "2bf2c5e6c4a44628",
+        "name": "Init",
+        "mode": "link",
+        "links": [
+            "9eee04ae48b6b56a",
+            "29ca2b225eb06205",
+            "1537303c358b042e",
+            "1da462f4d442f0f7",
+            "beabbdf9584b6c1e"
+        ],
+        "x": 2035,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "8f101d1a501ade39",
+        "type": "link out",
+        "z": "07cc5fec03514dd1",
+        "g": "2bf2c5e6c4a44628",
+        "name": "F5",
+        "mode": "link",
+        "links": [
+            "82a381ae78aa0945",
+            "4b9951d701dbdeb1",
+            "a33cb79e3fd77ad6"
+        ],
+        "x": 2035,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "98bed3902d98fb6f",
+        "type": "link in",
+        "z": "07cc5fec03514dd1",
+        "g": "ebaffe9445e62a8c",
+        "name": "Init And F5: File Manager",
+        "links": [
+            "6d84deeba1e93335"
+        ],
+        "x": 1545,
+        "y": 1060,
+        "wires": [
+            [
+                "b6052a0cdc0215c4"
+            ]
+        ]
+    },
+    {
+        "id": "9c174e12415580a7",
+        "type": "delay",
+        "z": "07cc5fec03514dd1",
+        "g": "ebaffe9445e62a8c",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1660,
+        "y": 1100,
+        "wires": [
+            [
+                "a7d8aa1c6efa0685",
+                "89241ac42bde86b7"
+            ]
+        ]
+    },
+    {
+        "id": "6d84deeba1e93335",
+        "type": "link out",
+        "z": "07cc5fec03514dd1",
+        "g": "2bf2c5e6c4a44628",
+        "name": "Init and F5",
+        "mode": "link",
+        "links": [
+            "98bed3902d98fb6f",
+            "528de17d8e605c88",
+            "dbf6f22ba6029033",
+            "7817fa4e62459c5e",
+            "c61d761bd60a9b6f",
+            "b0e30bd948caf516",
+            "eb211aa6531e42d8",
+            "ff10b8aafd04df21"
+        ],
+        "x": 2035,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "027c0a6b8995f90a",
+        "type": "link in",
+        "z": "07cc5fec03514dd1",
+        "g": "f326992ae3cba2a1",
+        "name": "Lum Update",
+        "links": [
+            "3acfa0b8d5cc84d2",
+            "c4766fd15674923b"
+        ],
+        "x": 405,
+        "y": 800,
+        "wires": [
+            [
+                "ce4ad0e009d0c1ff"
+            ]
+        ]
+    },
+    {
+        "id": "f1fad2c507c1a327",
+        "type": "link in",
+        "z": "07cc5fec03514dd1",
+        "g": "f326992ae3cba2a1",
+        "name": "TyH Update",
+        "links": [
+            "35fa28a01aa8b4b3",
+            "3a36cc5e736042e9"
+        ],
+        "x": 405,
+        "y": 1020,
+        "wires": [
+            [
+                "6da29e381dc1ffc9"
+            ]
+        ]
+    },
+    {
+        "id": "fe41c9bf665f4a4c",
+        "type": "ui_template",
+        "z": "07cc5fec03514dd1",
+        "g": "6df687d13111f964",
+        "group": "e09affd1d78f162d",
+        "name": "Bird Detection Text",
+        "order": 6,
+        "width": 7,
+        "height": 2,
+        "format": "<strong style=\"overflow:hidden;vertical-align:top;\">\n  <ol id='show_bird_state_text' style=\"color:--color-text;font-size:25px;overflow:hidden;\">\n    Esperando posición...\n  </ol>\n</strong>\n\n<script>\n(function(scope) {\n  scope.$watch('msg', function(msg) {    \n    let element = document.getElementById('show_bird_state_text');\n    element.textContent = msg.payload;    \n  });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 3010,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2f41fd5afd4a9e82",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "1c9ec5a2f2cbd859",
+        "name": "Check Photo Time",
+        "func": "if (flow.get('interval_photo_passed') || 0) {\n\n    flow.set('interval_photo_passed', false);\n    setCurrentTime('lastFotoTaken');\n\n    var file_name = flow.get('timeRTC').replace(/:/g, '-');\n    var toReturn = { payload: '-o Imagen_' + file_name + '.png' };\n\n    var lum = flow.get('lastLum') || 0;\n    var photoNight = flow.get('photoNight') || 0;\n\n    if (photoNight && (lum < 20) ) {\n        toReturn.payload = '-ex night ' + toReturn.payload;\n    }\n\n    return toReturn;\n}\n\nfunction setCurrentTime(data) {   \n    var currentTime = flow.get('timeRTC') || 0;\n    currentTime = currentTime.split('_')[0] + 'T' + currentTime.split('_')[1];\n    flow.set(data, currentTime);\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2910,
+        "y": 420,
+        "wires": [
+            [
+                "3f134ac450eb9595"
+            ]
+        ]
+    },
+    {
+        "id": "3f134ac450eb9595",
+        "type": "exec",
+        "z": "07cc5fec03514dd1",
+        "g": "1c9ec5a2f2cbd859",
+        "command": "cd /home/pi/simfs/simfs_export_data/ && raspistill -w 640 -h 480 -n -q 50 -v ",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "30",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Take Photo",
+        "x": 3170,
+        "y": 420,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "aa8a33a269ec3bbc",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "f326992ae3cba2a1",
+        "name": "Comprimiendo imagenes...",
+        "func": "return { payload: \"Comprimiendo imagenes. Esto puede tardar unos minutos.\" };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 1060,
+        "wires": [
+            [
+                "441f9276485b35a1"
+            ]
+        ]
+    },
+    {
+        "id": "528de17d8e605c88",
+        "type": "link in",
+        "z": "07cc5fec03514dd1",
+        "g": "ce348030d202adb0",
+        "name": "Init And F5: Video Stream",
+        "links": [
+            "6d84deeba1e93335"
+        ],
+        "x": 2715,
+        "y": 900,
+        "wires": [
+            [
+                "2396bc5eaef2d5de"
+            ]
+        ]
+    },
+    {
+        "id": "c5c3104ebe626373",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "f326992ae3cba2a1",
+        "name": "Available Zip Generation",
+        "func": "flow.set('makingZip', true);\nvar returnOk = null;\nvar returnBad = null;\n\nif (msg.payload.code == 0) {\n    returnOk = { payload: msg.payload, url: \"/files/Datos_Fotos.zip\", notification_to_user: \"Iniciando descarga.\" };\n} else {\n    returnBad = { payload: \"Error al descargar las imágenes.\" };\n}\n\nreturn [ returnBad, returnOk ];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 1120,
+        "wires": [
+            [
+                "441f9276485b35a1"
+            ],
+            [
+                "a9c9e8d768e7e462"
+            ]
+        ]
+    },
+    {
+        "id": "a9c9e8d768e7e462",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "f326992ae3cba2a1",
+        "name": "Start Download",
+        "func": "msg.payload = '<!DOCTYPE html><html><head><title>Redirect url to node-red forum</title></head><body>' + msg.notification_to_user + '<script>var url= \"' + msg.url + '\"; window.location = url; </script></body></html>';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 1160,
+        "wires": [
+            [
+                "b7c258a5f1f490c3"
+            ]
+        ]
+    },
+    {
+        "id": "b7c258a5f1f490c3",
+        "type": "ui_toast",
+        "z": "07cc5fec03514dd1",
+        "g": "f326992ae3cba2a1",
+        "position": "top right",
+        "displayTime": "1",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "topic": "",
+        "name": "",
+        "x": 1290,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "8c364c718253c46b",
+        "type": "delay",
+        "z": "07cc5fec03514dd1",
+        "g": "f326992ae3cba2a1",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 520,
+        "y": 880,
+        "wires": [
+            [
+                "9cf792cd3185d84f"
+            ]
+        ]
+    },
+    {
+        "id": "8101189e44e169b8",
+        "type": "delay",
+        "z": "07cc5fec03514dd1",
+        "g": "f326992ae3cba2a1",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 520,
+        "y": 940,
+        "wires": [
+            [
+                "ece93fdbd24b393e"
+            ]
+        ]
+    },
+    {
+        "id": "d25e944ffc10888e",
+        "type": "exec",
+        "z": "07cc5fec03514dd1",
+        "g": "db70e4e17240d53f",
+        "command": "python3 /home/pi//simfs/Python_Scripts/getTime.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "10",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Get Time",
+        "x": 2480,
+        "y": 480,
+        "wires": [
+            [
+                "d6b007ef6453fb44"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "991413e99bb5c623",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "db70e4e17240d53f",
+        "name": "Flow Variables",
+        "func": "//Get RTC Time\nvar timeRTC = flow.get('timeRTC') || 0;\n\n// Video Stream and Make Zip\nflow.set('pyCamera', true);\nflow.set('makingZip', true);\n\n// Take Data Now\nsetCurrentTime('lastFotoTaken');\nsetCurrentTime('lastTyHTaken');\nsetCurrentTime('lastLumTaken');\n\n// Set RTC Calendar Days\nsetRTCCalendar('lum_from_date', timeRTC);\nsetRTCCalendar('lum_to_date', timeRTC);\n\nsetRTCCalendar('tyh_from_date', timeRTC);\nsetRTCCalendar('tyh_to_date', timeRTC);\n\nsetRTCCalendar('png_from_date', timeRTC);\nsetRTCCalendar('png_to_date', timeRTC);\n\n// Calendar Dates\nflow.set('lum_valid_date', true);\nflow.set('tyh_valid_date', true);\nflow.set('png_valid_date', true);\n\n// Update Data \nflow.set('interval_photo', 5 * 60 * 1000);    //In ms\nflow.set('interval_tyh', 5 * 60 * 1000);      //In ms\nflow.set('interval_lum', 5 * 60 * 1000);      //In ms\nflow.set('photoNight', true);\n\nfunction setRTCCalendar(dateString, timeRTC) {\n    var rtcDate = timeRTC.split(\"_\")[0];\n    flow.set(dateString, rtcDate);    \n}\n\nfunction setCurrentTime(data) {\n    var currentTime = flow.get('timeRTC') || 0;\n    currentTime = currentTime.split('_')[0] + 'T' + currentTime.split('_')[1];\n    flow.set(data, currentTime);\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2500,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "154a78135cd35909",
+        "type": "trigger",
+        "z": "07cc5fec03514dd1",
+        "g": "db70e4e17240d53f",
+        "name": "",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "-1",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 2280,
+        "y": 460,
+        "wires": [
+            [
+                "d25e944ffc10888e"
+            ]
+        ]
+    },
+    {
+        "id": "d6b007ef6453fb44",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "db70e4e17240d53f",
+        "name": "Set RTC Time",
+        "func": "//Set RTC Time\nvar timeRTC = msg.payload.slice(0, -1);\nflow.set('timeRTC', timeRTC)\n\nflow.set('interval_photo_passed', timeHasPassed('lastFotoTaken', 'interval_photo'));\nflow.set('interval_tyh_passed', timeHasPassed('lastTyHTaken', 'interval_tyh'));\nflow.set('interval_lum_passed', timeHasPassed('lastLumTaken', 'interval_lum'));\n\nreturn msg;\n\nfunction timeHasPassed(data, interval) {\n    var lastDataTaken = new Date(flow.get(data));\n\n    var timeRTC = flow.get('timeRTC');\n    timeRTC = timeRTC.split('_')[0] + 'T' + timeRTC.split('_')[1];\n    var timeRTCDate = new Date(timeRTC);\n\n    var difference = timeRTCDate.getTime() - lastDataTaken.getTime();\n\n    return difference >= flow.get(interval);\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2660,
+        "y": 480,
+        "wires": [
+            [
+                "2f41fd5afd4a9e82",
+                "e434c290d89aa8bc",
+                "3a8e0253c5696b5a"
+            ]
+        ]
+    },
+    {
+        "id": "376de5f1c23daa03",
+        "type": "delay",
+        "z": "07cc5fec03514dd1",
+        "g": "db70e4e17240d53f",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2280,
+        "y": 420,
+        "wires": [
+            [
+                "991413e99bb5c623"
+            ]
+        ]
+    },
+    {
+        "id": "474fab953052f310",
+        "type": "exec",
+        "z": "07cc5fec03514dd1",
+        "g": "1c9ec5a2f2cbd859",
+        "command": "cd /home/pi/simfs/Python_Scripts/ && python3 DHT_22.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "100",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Update Data DHT_22",
+        "x": 3140,
+        "y": 480,
+        "wires": [
+            [
+                "3a36cc5e736042e9"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "6812816b513ce7a0",
+        "type": "exec",
+        "z": "07cc5fec03514dd1",
+        "g": "1c9ec5a2f2cbd859",
+        "command": "cd /home/pi/simfs/Python_Scripts/ && python3 BH1750.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "10",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Update Data BH1750",
+        "x": 3140,
+        "y": 540,
+        "wires": [
+            [
+                "c4766fd15674923b"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e434c290d89aa8bc",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "1c9ec5a2f2cbd859",
+        "name": "Check TyH Time",
+        "func": "if (flow.get('interval_tyh_passed') || 0) {\n    flow.set('interval_tyh_passed', false);\n    setCurrentTime('lastTyHTaken');\n    return msg;    \n}\n\nfunction setCurrentTime(data) {   \n    var currentTime = flow.get('timeRTC') || 0;\n    currentTime = currentTime.split('_')[0] + 'T' + currentTime.split('_')[1];\n    flow.set(data, currentTime);\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2910,
+        "y": 480,
+        "wires": [
+            [
+                "474fab953052f310"
+            ]
+        ]
+    },
+    {
+        "id": "3a8e0253c5696b5a",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "1c9ec5a2f2cbd859",
+        "name": "Check Lum Time",
+        "func": "if (flow.get('interval_lum_passed') || 0) {\n    flow.set('interval_lum_passed', false);\n    setCurrentTime('lastLumTaken');\n    return msg;    \n}\n\nfunction setCurrentTime(data) {   \n    var currentTime = flow.get('timeRTC') || 0;\n    currentTime = currentTime.split('_')[0] + 'T' + currentTime.split('_')[1];\n    flow.set(data, currentTime);\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2910,
+        "y": 540,
+        "wires": [
+            [
+                "6812816b513ce7a0"
+            ]
+        ]
+    },
+    {
+        "id": "c7d760fe6191866c",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "0808fb3eb75cd641",
+        "name": "Photo Interval",
+        "func": "var toReturn = { payload: flow.get('interval_photo') / (60 * 1000) };\nreturn toReturn;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3080,
+        "y": 1260,
+        "wires": [
+            [
+                "49155fb313945048"
+            ]
+        ]
+    },
+    {
+        "id": "0e7ef6a062c68575",
+        "type": "delay",
+        "z": "07cc5fec03514dd1",
+        "g": "0808fb3eb75cd641",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2800,
+        "y": 1420,
+        "wires": [
+            [
+                "c7d760fe6191866c",
+                "58b946c1ce936063",
+                "f71ce0ec498cb788",
+                "8c6747db2150f716"
+            ]
+        ]
+    },
+    {
+        "id": "58b946c1ce936063",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "0808fb3eb75cd641",
+        "name": "Photo Night",
+        "func": "var toReturn = { payload: flow.get('photoNight') };\nreturn toReturn;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3070,
+        "y": 1360,
+        "wires": [
+            [
+                "94856ba06ec827ca"
+            ]
+        ]
+    },
+    {
+        "id": "f71ce0ec498cb788",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "0808fb3eb75cd641",
+        "name": "TyH Interval",
+        "func": "var toReturn = { payload: flow.get('interval_tyh') / (60 * 1000) };\nreturn toReturn;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3070,
+        "y": 1500,
+        "wires": [
+            [
+                "20854bf1818ffdcc"
+            ]
+        ]
+    },
+    {
+        "id": "8c6747db2150f716",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "0808fb3eb75cd641",
+        "name": "Lum Interval",
+        "func": "var toReturn = { payload: flow.get('interval_lum') / (60 * 1000) };\nreturn toReturn;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3070,
+        "y": 1600,
+        "wires": [
+            [
+                "4d22b5c1cb8608ab"
+            ]
+        ]
+    },
+    {
+        "id": "eb211aa6531e42d8",
+        "type": "link in",
+        "z": "07cc5fec03514dd1",
+        "g": "0808fb3eb75cd641",
+        "name": "Init And F5: Configuration",
+        "links": [
+            "6d84deeba1e93335"
+        ],
+        "x": 2665,
+        "y": 1420,
+        "wires": [
+            [
+                "0e7ef6a062c68575"
+            ]
+        ]
+    },
+    {
+        "id": "94856ba06ec827ca",
+        "type": "ui_switch",
+        "z": "07cc5fec03514dd1",
+        "g": "0808fb3eb75cd641",
+        "name": "",
+        "label": "Usar filtro nocturno",
+        "tooltip": "",
+        "group": "6b5e5887ee54b112",
+        "order": 7,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 3090,
+        "y": 1400,
+        "wires": [
+            [
+                "87734d1ea5e4299f"
+            ]
+        ]
+    },
+    {
+        "id": "49155fb313945048",
+        "type": "ui_numeric",
+        "z": "07cc5fec03514dd1",
+        "g": "0808fb3eb75cd641",
+        "name": "Photo Update",
+        "label": "Tiempo en minutos",
+        "tooltip": "",
+        "group": "6b5e5887ee54b112",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": "5",
+        "max": "60",
+        "step": "1",
+        "className": "",
+        "x": 3080,
+        "y": 1300,
+        "wires": [
+            [
+                "00ffcd3684f21a03"
+            ]
+        ]
+    },
+    {
+        "id": "20854bf1818ffdcc",
+        "type": "ui_numeric",
+        "z": "07cc5fec03514dd1",
+        "g": "0808fb3eb75cd641",
+        "name": "TyH Update",
+        "label": "Tiempo en minutos",
+        "tooltip": "",
+        "group": "74524b4a677dedb8",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": "5",
+        "max": "60",
+        "step": "1",
+        "className": "",
+        "x": 3070,
+        "y": 1460,
+        "wires": [
+            [
+                "8870a0c71b837d5b"
+            ]
+        ]
+    },
+    {
+        "id": "4d22b5c1cb8608ab",
+        "type": "ui_numeric",
+        "z": "07cc5fec03514dd1",
+        "g": "0808fb3eb75cd641",
+        "name": "Lum Update",
+        "label": "Tiempo en minutos",
+        "tooltip": "",
+        "group": "b4be47d1fa09bf5e",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": "5",
+        "max": "60",
+        "step": "1",
+        "className": "",
+        "x": 3070,
+        "y": 1560,
+        "wires": [
+            [
+                "ccf3fcbadfb0c9de"
+            ]
+        ]
+    },
+    {
+        "id": "00ffcd3684f21a03",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "0808fb3eb75cd641",
+        "name": "Set Photo Interval",
+        "func": "var time_in_ms = msg.payload*1000*60;\nflow.set('interval_photo', time_in_ms);\n\nvar text = \"Intervalo de tiempo entre fotos. Tiempo mínimo configurable: 5 minutos. TIempo máximo configurable: 60 minutos.\"\nreturn { payload: text };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3370,
+        "y": 1300,
+        "wires": [
+            [
+                "6c3352b624d5ca48"
+            ]
+        ]
+    },
+    {
+        "id": "87734d1ea5e4299f",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "0808fb3eb75cd641",
+        "name": "Update Photo Night",
+        "func": "// Update Data \nflow.set('photoNight', msg.payload);\n\n//var time = flow.get('interval_photo'); / (60 * 1000);\n//var text = \"Prendido: Se saca una foto cada \" + String(time) + \" verificando el nivel de luminosidad y se emplea un filtro apropiado. Apagado: Se saca una foto cada \" + String(time) + \" minutos sin filtro.\";\nvar text = \"Prendido: Al momento de sacar una foto, si hay un bajo nivel de luminosidad se emplea un filtro apropiado. Apagado: Al momento de sacar una foto no se emplea ningún tipo de filtro.\";\nreturn { payload: text };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3370,
+        "y": 1400,
+        "wires": [
+            [
+                "a6fd35746c2a4006"
+            ]
+        ]
+    },
+    {
+        "id": "8870a0c71b837d5b",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "0808fb3eb75cd641",
+        "name": "Set TyH Interval",
+        "func": "var time_in_ms = msg.payload*1000*60;\nflow.set('interval_tyh', time_in_ms);\n\nvar text = \"Intervalo de tiempo entre mediciones de Tiempo y entre mediciones de Humedad. Tiempo mínimo configurable: 5 minutos. TIempo máximo configurable: 60 minutos.\"\nreturn { payload: text };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3380,
+        "y": 1460,
+        "wires": [
+            [
+                "0725611bb5d57778"
+            ]
+        ]
+    },
+    {
+        "id": "ccf3fcbadfb0c9de",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "0808fb3eb75cd641",
+        "name": "Set Lum Interval",
+        "func": "var time_in_ms = msg.payload*1000*60;\nflow.set('interval_lum', time_in_ms);\n\nvar text = \"Intervalo de tiempo entre mediciones de Luminosidad. Tiempo mínimo configurable: 5 minutos. TIempo máximo configurable: 60 minutos.\"\nreturn { payload: text };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3380,
+        "y": 1560,
+        "wires": [
+            [
+                "8016f0f85b117677"
+            ]
+        ]
+    },
+    {
+        "id": "6c3352b624d5ca48",
+        "type": "ui_text",
+        "z": "07cc5fec03514dd1",
+        "g": "0808fb3eb75cd641",
+        "group": "6b5e5887ee54b112",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Photo Text",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 3390,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "a6fd35746c2a4006",
+        "type": "ui_text",
+        "z": "07cc5fec03514dd1",
+        "g": "0808fb3eb75cd641",
+        "group": "6b5e5887ee54b112",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "Night Text",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 3400,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "0725611bb5d57778",
+        "type": "ui_text",
+        "z": "07cc5fec03514dd1",
+        "g": "0808fb3eb75cd641",
+        "group": "74524b4a677dedb8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "TyH Text",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 3400,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "8016f0f85b117677",
+        "type": "ui_text",
+        "z": "07cc5fec03514dd1",
+        "g": "0808fb3eb75cd641",
+        "group": "b4be47d1fa09bf5e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Lum Text",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 3400,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "ff10b8aafd04df21",
+        "type": "link in",
+        "z": "07cc5fec03514dd1",
+        "g": "3243601cdd687d00",
+        "name": "Init And F5: Current Data",
+        "links": [
+            "6d84deeba1e93335"
+        ],
+        "x": 1995,
+        "y": 1320,
+        "wires": [
+            [
+                "24fd3a691ac9dda3"
+            ]
+        ]
+    },
+    {
+        "id": "a33cb79e3fd77ad6",
+        "type": "link in",
+        "z": "07cc5fec03514dd1",
+        "g": "3243601cdd687d00",
+        "name": "F5: Current Data",
+        "links": [
+            "8f101d1a501ade39"
+        ],
+        "x": 1995,
+        "y": 1280,
+        "wires": [
+            [
+                "c53b8cff2dbd761d",
+                "24fd3a691ac9dda3"
+            ]
+        ]
+    },
+    {
+        "id": "ccc63821b64caab1",
+        "type": "comment",
+        "z": "07cc5fec03514dd1",
+        "g": "4c38ec26726d8cb3",
+        "name": "IMPORTANTE LEER ESTO",
+        "info": "Cambiar IP:\n- Stream de video.\n- Descarga de Zip.\n\nTiempo de Stream:\n- Poner otro valor que no sea 10 segundos.\n- Cambiar la notificación.\n\nUsar pila en el RTC.\n\nBotón Descarga de Pájaro.",
+        "x": 3840,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "e9e4351fac6714f9",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "daa35a51bee49670",
+        "name": "Set Lum Date From",
+        "func": "var aux = new Date(msg.payload);\nvar toSet = aux.toISOString().split('T')[0];\n\nflow.set('lum_from_date', toSet);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 1520,
+        "wires": [
+            [
+                "3391a02adcb66cba"
+            ]
+        ]
+    },
+    {
+        "id": "79f69431bb83402f",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "daa35a51bee49670",
+        "name": "Set Lum Date To",
+        "func": "var aux = new Date(msg.payload);\nvar toSet = aux.toISOString().split('T')[0];\n\nflow.set('lum_to_date', toSet);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 1560,
+        "wires": [
+            [
+                "3391a02adcb66cba"
+            ]
+        ]
+    },
+    {
+        "id": "1e2f7064c05cecae",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "daa35a51bee49670",
+        "name": "Set PNG Date From",
+        "func": "var aux = new Date(msg.payload);\nvar toSet = aux.toISOString().split('T')[0];\n\nflow.set('png_from_date', toSet);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 1320,
+        "wires": [
+            [
+                "154f740f929c489b"
+            ]
+        ]
+    },
+    {
+        "id": "701781e78e35578d",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "daa35a51bee49670",
+        "name": "Set PNG Date To",
+        "func": "var aux = new Date(msg.payload);\nvar toSet = aux.toISOString().split('T')[0];\n\nflow.set('png_to_date', toSet);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 1360,
+        "wires": [
+            [
+                "154f740f929c489b"
+            ]
+        ]
+    },
+    {
+        "id": "7a05aace584044bf",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "daa35a51bee49670",
+        "name": "Set TyH Date From",
+        "func": "var aux = new Date(msg.payload);\nvar toSet = aux.toISOString().split('T')[0];\n\nflow.set('tyh_from_date', toSet);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 1420,
+        "wires": [
+            [
+                "5181eaa95c3da9f6"
+            ]
+        ]
+    },
+    {
+        "id": "eacc071f2e7f5d6a",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "daa35a51bee49670",
+        "name": "Set TyH Date To",
+        "func": "var aux = new Date(msg.payload);\nvar toSet = aux.toISOString().split('T')[0];\n\nflow.set('tyh_to_date', toSet);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 1460,
+        "wires": [
+            [
+                "5181eaa95c3da9f6"
+            ]
+        ]
+    },
+    {
+        "id": "3307c360f57e335c",
+        "type": "comment",
+        "z": "07cc5fec03514dd1",
+        "g": "daa35a51bee49670",
+        "name": "Flow Date Variables",
+        "info": "Setean todas las variables de flow de las fechas",
+        "x": 1000,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "463dbcbd3db40393",
+        "type": "ui_date_picker",
+        "z": "07cc5fec03514dd1",
+        "g": "a8d41f188279d76d",
+        "name": "Lum desde",
+        "label": "Mostrar datos desde:",
+        "group": "f44b173abdb7e275",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 740,
+        "y": 1520,
+        "wires": [
+            [
+                "e9e4351fac6714f9"
+            ]
+        ]
+    },
+    {
+        "id": "e877377c912f70ad",
+        "type": "ui_date_picker",
+        "z": "07cc5fec03514dd1",
+        "g": "a8d41f188279d76d",
+        "name": "Lum hasta",
+        "label": "Mostrar datos hasta:",
+        "group": "f44b173abdb7e275",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 740,
+        "y": 1560,
+        "wires": [
+            [
+                "79f69431bb83402f"
+            ]
+        ]
+    },
+    {
+        "id": "7eb74c1d474a0bbc",
+        "type": "ui_date_picker",
+        "z": "07cc5fec03514dd1",
+        "g": "a8d41f188279d76d",
+        "name": "PNG desde",
+        "label": "Mostrar datos desde:",
+        "group": "ed493faf50b74f04",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 740,
+        "y": 1320,
+        "wires": [
+            [
+                "1e2f7064c05cecae"
+            ]
+        ]
+    },
+    {
+        "id": "00f88c4aab37d128",
+        "type": "ui_date_picker",
+        "z": "07cc5fec03514dd1",
+        "g": "a8d41f188279d76d",
+        "name": "PNG hasta",
+        "label": "Mostrar datos hasta:",
+        "group": "ed493faf50b74f04",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 740,
+        "y": 1360,
+        "wires": [
+            [
+                "701781e78e35578d"
+            ]
+        ]
+    },
+    {
+        "id": "3290c3d0eb5d0dfd",
+        "type": "ui_date_picker",
+        "z": "07cc5fec03514dd1",
+        "g": "a8d41f188279d76d",
+        "name": "TyH desde",
+        "label": "Mostrar datos desde:",
+        "group": "4ad91a62eed23859",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 740,
+        "y": 1420,
+        "wires": [
+            [
+                "7a05aace584044bf"
+            ]
+        ]
+    },
+    {
+        "id": "ef01f1a122d0ac67",
+        "type": "ui_date_picker",
+        "z": "07cc5fec03514dd1",
+        "g": "a8d41f188279d76d",
+        "name": "TyH hasta",
+        "label": "Mostrar datos hasta:",
+        "group": "4ad91a62eed23859",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 730,
+        "y": 1460,
+        "wires": [
+            [
+                "eacc071f2e7f5d6a"
+            ]
+        ]
+    },
+    {
+        "id": "dcd2588ac3ca179a",
+        "type": "ui_toast",
+        "z": "07cc5fec03514dd1",
+        "g": "7932982af5bc571c",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "topic": "",
+        "name": "",
+        "x": 1540,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "cd25a412a9c2f44e",
+        "type": "comment",
+        "z": "07cc5fec03514dd1",
+        "g": "7932982af5bc571c",
+        "name": "Date Fail Notification",
+        "info": "Si las fechas no son correctas se le notifica al usuario",
+        "x": 1540,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "76bdd3bc0a40b5e4",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "7932982af5bc571c",
+        "name": "Check Notification Fail",
+        "func": "if ( msg.payload.error ) {\n    if (msg.payload.var_update == \"Lum_fail\") {\n        msg.payload = \"Las fechas seleccionadas para la Luminosidad son invalidas.\";\n    } else if (msg.payload.var_update == \"Tyh_fail\") {\n        msg.payload = \"Las fechas seleccionadas para la Temperatura y Humedad son invalidas.\";\n    } else if (msg.payload.var_update == \"Png_fail\") {\n        msg.payload = \"Las fechas seleccionadas para las Imágenes son invalidas.\";\n    }\n    \n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1550,
+        "y": 1440,
+        "wires": [
+            [
+                "dcd2588ac3ca179a"
+            ]
+        ]
+    },
+    {
+        "id": "3391a02adcb66cba",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "c802b7c389b5647e",
+        "name": "Check Lum Date",
+        "func": "var lum_from_date = flow.get('lum_from_date') || 0;\nvar lum_to_date = flow.get('lum_to_date') || 0;\n\nvar year_from = parseInt(lum_from_date.substring(0, 4));\nvar month_from = parseInt(lum_from_date.substring(5, 7));\nvar day_from = parseInt(lum_from_date.substring(8, 10));\n\nvar year_to = parseInt(lum_to_date.substring(0, 4));\nvar month_to = parseInt(lum_to_date.substring(5, 7));\nvar day_to = parseInt(lum_to_date.substring(8, 10));\n\nvar year = (year_from < year_to);\nvar same_year = (year_from == year_to);\n\nvar month = (month_from < month_to);\nvar same_month = (month_from == month_to);\n\nvar day = (day_from <= day_to);\n\nif (year || (same_year && month) || (same_year && same_month && day)) {\n    msg.payload = { var_update: \"Lum\", value: msg.payload, error: false };\n    flow.set('lum_valid_date', true);\n} else {\n    msg.payload = { var_update: \"Lum_fail\", error: true };\n    flow.set('lum_valid_date', false);\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1280,
+        "y": 1540,
+        "wires": [
+            [
+                "76bdd3bc0a40b5e4",
+                "3acfa0b8d5cc84d2"
+            ]
+        ]
+    },
+    {
+        "id": "154f740f929c489b",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "c802b7c389b5647e",
+        "name": "Check PNG Date",
+        "func": "var png_from_date = flow.get('png_from_date') || 0;\nvar png_to_date = flow.get('png_to_date') || 0;\n\nvar year_from = parseInt(png_from_date.substring(0, 4));\nvar month_from = parseInt(png_from_date.substring(5, 7));\nvar day_from = parseInt(png_from_date.substring(8, 10));\n\nvar year_to = parseInt(png_to_date.substring(0, 4));\nvar month_to = parseInt(png_to_date.substring(5, 7));\nvar day_to = parseInt(png_to_date.substring(8, 10));\n\nvar year = (year_from < year_to);\nvar same_year = (year_from == year_to);\n\nvar month = (month_from < month_to);\nvar same_month = (month_from == month_to);\n\nvar day = (day_from <= day_to);\n\nif (year || (same_year && month) || (same_year && same_month && day)) {\n    msg.payload = { var_update: \"Png\", value: msg.payload, error: false };\n    flow.set('png_valid_date', true);\n} else {\n    msg.payload = { var_update: \"Png_fail\", error: true };\n    flow.set('png_valid_date', false);\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1280,
+        "y": 1340,
+        "wires": [
+            [
+                "76bdd3bc0a40b5e4",
+                "89241ac42bde86b7"
+            ]
+        ]
+    },
+    {
+        "id": "5181eaa95c3da9f6",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "c802b7c389b5647e",
+        "name": "Check TyH Date",
+        "func": "var tyh_from_date = flow.get('tyh_from_date') || 0;\nvar tyh_to_date = flow.get('tyh_to_date') || 0;\n\nvar year_from = parseInt(tyh_from_date.substring(0, 4));\nvar month_from = parseInt(tyh_from_date.substring(5, 7));\nvar day_from = parseInt(tyh_from_date.substring(8, 10));\n\nvar year_to = parseInt(tyh_to_date.substring(0, 4));\nvar month_to = parseInt(tyh_to_date.substring(5, 7));\nvar day_to = parseInt(tyh_to_date.substring(8, 10));\n\nvar year = (year_from < year_to);\nvar same_year = (year_from == year_to);\n\nvar month = (month_from < month_to);\nvar same_month = (month_from == month_to);\n\nvar day = (day_from <= day_to);\n\nif (year || (same_year && month) || (same_year && same_month && day)) {\n    msg.payload = { var_update: \"Tyh\", value: msg.payload, error: false };\n    flow.set('tyh_valid_date', true);\n} else {\n    msg.payload = { var_update: \"Tyh_fail\", error: true };\n    flow.set('tyh_valid_date', false);    \n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1290,
+        "y": 1440,
+        "wires": [
+            [
+                "76bdd3bc0a40b5e4",
+                "35fa28a01aa8b4b3"
+            ]
+        ]
+    },
+    {
+        "id": "a1899d2102493595",
+        "type": "comment",
+        "z": "07cc5fec03514dd1",
+        "g": "c802b7c389b5647e",
+        "name": "Date Check",
+        "info": "Chequea que las fechas estén correctas",
+        "x": 1280,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "3acfa0b8d5cc84d2",
+        "type": "link out",
+        "z": "07cc5fec03514dd1",
+        "g": "f110f6f24d8e7b8c",
+        "name": "Lum Update",
+        "mode": "link",
+        "links": [
+            "027c0a6b8995f90a"
+        ],
+        "x": 1305,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "35fa28a01aa8b4b3",
+        "type": "link out",
+        "z": "07cc5fec03514dd1",
+        "g": "f110f6f24d8e7b8c",
+        "name": "TyH Calendar Update",
+        "mode": "link",
+        "links": [
+            "f1fad2c507c1a327"
+        ],
+        "x": 1305,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "92dfdf5fecfdf8f3",
+        "type": "function",
+        "z": "07cc5fec03514dd1",
+        "g": "f110f6f24d8e7b8c",
+        "name": "Set Date",
+        "func": "var rtc = flow.get('timeRTC').split(\"_\")[0] + 'T' + flow.get('timeRTC').split(\"_\")[1] + '.000Z';\nvar date = new Date(rtc);\n\nreturn { payload: date.toISOString() };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 1440,
+        "wires": [
+            [
+                "463dbcbd3db40393",
+                "e877377c912f70ad",
+                "7eb74c1d474a0bbc",
+                "00f88c4aab37d128",
+                "3290c3d0eb5d0dfd",
+                "ef01f1a122d0ac67"
+            ]
+        ]
+    },
+    {
+        "id": "1537303c358b042e",
+        "type": "link in",
+        "z": "07cc5fec03514dd1",
+        "g": "f110f6f24d8e7b8c",
+        "name": "link in 6",
+        "links": [
+            "fc0584ae8904919f"
+        ],
+        "x": 535,
+        "y": 1360,
+        "wires": [
+            [
+                "fbc349cd92b134fe"
+            ]
+        ]
+    },
+    {
+        "id": "fbc349cd92b134fe",
+        "type": "delay",
+        "z": "07cc5fec03514dd1",
+        "g": "f110f6f24d8e7b8c",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 530,
+        "y": 1400,
+        "wires": [
+            [
+                "92dfdf5fecfdf8f3"
+            ]
+        ]
+    },
+    {
+        "id": "3a36cc5e736042e9",
+        "type": "link out",
+        "z": "07cc5fec03514dd1",
+        "g": "1c9ec5a2f2cbd859",
+        "name": "TyH Calendar Update",
+        "mode": "link",
+        "links": [
+            "f1fad2c507c1a327"
+        ],
+        "x": 3285,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "c4766fd15674923b",
+        "type": "link out",
+        "z": "07cc5fec03514dd1",
+        "g": "1c9ec5a2f2cbd859",
+        "name": "Lum Update",
+        "mode": "link",
+        "links": [
+            "027c0a6b8995f90a"
+        ],
+        "x": 3285,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "22e00738097bf09a",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "c63655b8f7450c5c",
+        "order": 5,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "0713c8860c0ac4e3",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "e09affd1d78f162d",
+        "order": 4,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "6490504c52b2469c",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "e09affd1d78f162d",
+        "order": 8,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "4d1296532eee2f72",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "e09affd1d78f162d",
+        "order": 9,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "a3c061c6e4aa4ff8",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "e09affd1d78f162d",
+        "order": 10,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "7625353adb9ad3d6",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "e09affd1d78f162d",
+        "order": 11,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "faed813214ac78bc",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "e09affd1d78f162d",
+        "order": 13,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "e897d4bda90a864d",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "e09affd1d78f162d",
+        "order": 14,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "c7f6ce5dc7d6422f",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "e09affd1d78f162d",
+        "order": 15,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "556882afec9ecff4",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "e09affd1d78f162d",
+        "order": 16,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "d994df7684d92a1a",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "e09affd1d78f162d",
+        "order": 17,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "48b917e22b7461a5",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "e09affd1d78f162d",
+        "order": 18,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "833aeea52fd3a76f",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "e09affd1d78f162d",
+        "order": 19,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "ad0444cf5c292994",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "e09affd1d78f162d",
+        "order": 20,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "b4cc484a337bd089",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "e09affd1d78f162d",
+        "order": 21,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "32d99d0fe8e5608f",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "e09affd1d78f162d",
+        "order": 22,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "13844008692ad19c",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "e09affd1d78f162d",
+        "order": 23,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "388fa0f98808c794",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "e09affd1d78f162d",
+        "order": 24,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "685b026c6dfebf85",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "e09affd1d78f162d",
+        "order": 25,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "9ddba43c6b7b76a0",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "e09affd1d78f162d",
+        "order": 26,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "bc2808f429007111",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "e09affd1d78f162d",
+        "order": 27,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "9dc07e451ac6404a",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "e09affd1d78f162d",
+        "order": 28,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "4320df3d3ba6a0e3",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "e09affd1d78f162d",
+        "order": 29,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "65bd6a35501c2b91",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "e09affd1d78f162d",
+        "order": 30,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "f848f7f2a75f3099",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "e09affd1d78f162d",
+        "order": 31,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "ffeeb1b6ff9fa7ed",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "6b5e5887ee54b112",
+        "order": 2,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "eb0cbe8f7ae4c67a",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "6b5e5887ee54b112",
+        "order": 4,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "a7ed38883cd50a42",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "6b5e5887ee54b112",
+        "order": 6,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "9488edf1fd85638d",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "6b5e5887ee54b112",
+        "order": 8,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "cc4c63da4839b511",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "74524b4a677dedb8",
+        "order": 2,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "b8a8f3d6911a0ebf",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "74524b4a677dedb8",
+        "order": 4,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "11e5551b869e6be3",
+        "type": "ui_spacer",
+        "z": "07cc5fec03514dd1",
+        "name": "spacer",
+        "group": "b4be47d1fa09bf5e",
+        "order": 2,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "e09affd1d78f162d",
+        "type": "ui_group",
+        "name": "Data Panel",
+        "tab": "48418b79.0f5834",
+        "order": 4,
+        "disp": false,
+        "width": "18",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6aaf1c6d6ce702b7",
+        "type": "ui_group",
+        "name": "Download Buttons",
+        "tab": "1398b28725890a06",
+        "order": 4,
+        "disp": false,
+        "width": "18",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c63655b8f7450c5c",
+        "type": "ui_group",
+        "name": "Code Templates",
+        "tab": "08c443aaea74f446",
+        "order": 5,
+        "disp": false,
+        "width": "1",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f44b173abdb7e275",
+        "type": "ui_group",
+        "name": "Luminosidad",
+        "tab": "1398b28725890a06",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4ad91a62eed23859",
+        "type": "ui_group",
+        "name": "Temperatura y Humedad",
+        "tab": "1398b28725890a06",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ed493faf50b74f04",
+        "type": "ui_group",
+        "name": "Imágenes",
+        "tab": "1398b28725890a06",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6b5e5887ee54b112",
+        "type": "ui_group",
+        "name": "Configuración de Fotos",
+        "tab": "f4ca2bdf513f0f05",
+        "order": 1,
+        "disp": true,
+        "width": 10,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "74524b4a677dedb8",
+        "type": "ui_group",
+        "name": "Configuración de Temperatra y Humedad",
+        "tab": "f4ca2bdf513f0f05",
+        "order": 2,
+        "disp": true,
+        "width": 10,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b4be47d1fa09bf5e",
+        "type": "ui_group",
+        "name": "Configuración de Luminosidad",
+        "tab": "f4ca2bdf513f0f05",
+        "order": 3,
+        "disp": true,
+        "width": 10,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "48418b79.0f5834",
+        "type": "ui_tab",
+        "name": "Nido en Vivo",
+        "icon": "fa-user-circle-o",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1398b28725890a06",
+        "type": "ui_tab",
+        "name": "Descargar Datos",
+        "icon": "fa-download",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "08c443aaea74f446",
+        "type": "ui_tab",
+        "name": "Code Templates",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": true
+    },
+    {
+        "id": "f4ca2bdf513f0f05",
+        "type": "ui_tab",
+        "name": "Configuración",
+        "icon": "fa-cog",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    }
+]
