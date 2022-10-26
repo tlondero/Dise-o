@@ -86,7 +86,7 @@ fabric.properties
 *.cb2
 .*.lb
 Informe.pdf
-
+*.tks
 ## Intermediate documents:
 *.dvi
 *.xdv
