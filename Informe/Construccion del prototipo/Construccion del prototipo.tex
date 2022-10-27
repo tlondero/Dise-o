@@ -1,60 +1,16 @@
 %\input{../Informe/Header.tex}
 
-\Subsection{Prototipo Nido- Carga Bater\'ia}
-Al momento de comenzar la construcci\'on del prototipo de nido, en el cual se validar\'a la carga inal\'ambrica se propusieron 4 requerimientos que deb\'ia cubrir.
-\begin{enumerate}
-\item Condiciones an\'alogas a las del nido real:
-Para este item el enfoque que se toma es una visi\'on electromagnetica.
-Un parámetro fundamental a definir es el ancho que tienen las paredes del nido prototipo. Se sabe que el menor valor que tiene la cavidad real es de 65mm \cite{ref:PaperValeriaOjeda}.
-
-Mediante el uso de la Equación (\ref{eq:penetracion}) se calcula la profundidad de penetración de la onda electromagnética.
-\begin{equation}
-\delta \ = \ \frac{1}{\alpha} \ =\ \frac{1}{\sqrt{\pi f \mu \sigma}}
-\label{eq:penetracion}
-\end{equation}
-Este valor simboliza la distancia que penetra la onda electromagn\'etica hasta ser atenuada en un 63$\%$
-Para ello se sabe que los valores de las constantes son los siguientes:
-\begin{itemize}
-	\item Frecuencia $f = 915 \ MHz$.
-	\item Permeabilidad magnética de la madera \cite{ref:permeabilidad_madera}: $\mu_{Madera} = 1.25663760 \ \mu \frac{Hy}{m}$.
-	\item Conductividad de la madera \cite{ref:conductividad_madera}:$\sigma \approx 1 \ m\frac{S}{m}$.
-\end{itemize}
-
-Con los valores mencionados, reemplazando en la Ecuación (\ref{eq:penetracion}) se obtiene que $\delta = 526 \ mm$.
-De este resultado se concluye que independientemente del espesor del proptipo, siempre que sea menor al real. La onda electromang\'etica no es atenuada a un 63$\%$ de su amplitud. Por lo que atraviesa tanto el arbol como el proptipo sin problemas.(Pensando en las paredes.)
-
-Luego se procede a calcular el coeficiente de reflexión de la onda electromagnética. Para ello se sabe también que las permitividades de la madera y aire son:
-\begin{itemize}
-	\item $\varepsilon_{Madera} = 17.7 10^{-12} \ \frac{F}{m}$ \cite{ref:varepsilon_madera}.
-	\item $\varepsilon_{Aire} = 8.8595003 10^{-12} \ \frac{F}{m}$
-	\item $\mu_{Aire} = 1.25663753 \ \mu \frac{ Hy}{m}$ 
-\end{itemize}
-
-También se calcula la impedancia de la madera como:
-\begin{equation}
-	\eta_{Madera}=\sqrt{\frac{\mu_{Madera}}{\varepsilon_{Madera}}}
-\end{equation}
-
-Es así que el coeficiente de reflexión se calcula de la siguiente forma:
-\begin{equation}
-	\Gamma = \frac{\eta_2 - \eta_1  }{\eta_2 + \eta_1} = -0.1714
-	\label{eq:reflexion_madera}
-\end{equation}
-
-Se observa en la Ecuación (\ref{eq:reflexion_madera}) que el resultado presenta un valor negativo. Lo que esto implica es una inversión de fase en la onda electromagnética reflejada respecto de la incidente. Esto implica una interferencia destructiva, para determinar las implicancias de esta interferencai se calcula la potencia de la onda reflejada, siendo esta $P_{ref} = |\Gamma|^2 = 0.029$. Es así que se nota que menos de un $3\%$ de la potencia sera reflejada. De esta forma se puede afirmar que no habrá una interferencia significativa con la transmisión original.
-Finalmente cabe notar que el resultado del coeficiente de reflexi\'pm no depende del espesor. \'Unicamente de la impedancia de los medios. Por lo que de aqu\'i se concluye que el espesor de la madera no juega un papel significativo en el prototipo de nido.
-\item Altura regulable:
-La altura entre el receptor de potencia y el transmisor debe ser variable ebntre 30 y 64 cm debido a que no todos los nidos tienen la misma altura y asi se podra simular eso.
-\item Sujeci\'on instrumental:
-El proptipo debe brindar alguna manera de asegurar la electr\'onica al prototipo.
-\item Conicimiento de la distancia entre el receptor y el transmisor de potencia:
-Para ello utilizamos un sensor ultrasónico que estará montado en la parte interior de la tapa, con un display en la parte exterior. las mediciones y control del display se hará con un pequeño microcontrolador.(Cabe mencionar que este modulo de ultrasonido ser\'a utilizada \'unicamente en el prototipo, no con un ave real, debido a que se sabe que las aves son alteradas por dichas ondas de ultrasonido)
-\end{enumerate} 
-Con estos requerimientos cumplidos se diseño el prototipo de nido, con los planos especificados en (\ref{fig:Base_nido_plano}) (\ref{fig:Base_electronica_plano}) (\ref{fig:tapa_nido_plano}) y (\ref{fig:explotado_nido_plano})
-\Subsection{Prototipo Mochila - Carga}
-Para este prototipo se utliza la placa de desarrollo P1110 de energy harvesting. 
+\Subsection{Prototipo Nido-Sustrato}
+Para la construcción del prototipo del nido se tuvo en cuenta que el sustrato sea madera, y que las medidas coincidan con las medias tomadas del paper \cite{ref:varepsilon_madera}, adicionalmente se contemplla un lugar donde apoyar la electrónica en el nido, y el hueco de entrada del carpintero.
+El diseño del prototipo de nido, se puede observar en los planos especificados en (\ref{fig:Base_nido_plano}) (\ref{fig:Base_electronica_plano}) (\ref{fig:tapa_nido_plano}) y (\ref{fig:explotado_nido_plano}) 
+\Subsection{Prototipo Nido-Electrónica}
+\Subsubsection{Raspberry Pi}
 \TBC
-\Subsection{Prototipo Mochila - Comunicaci\'on}
-Para esto se utilizar\'a un m\'odulo BLE para transmitir un set de datos GPS de aproximadamente un peso de 2KBy y un pin l\'ogico que permita activar la recepci\'on de datos del lado del nido.
+\Subsubsection{Sensores}
+\TBC
 
+\Subsection{Prototipo Nido-Potencia}
+Para el prototipo del sistema de potencia del nido, se cuenta con la batería \TBC y la fuente simuladora de paneles solares \TBC 
+\Subsection{Prototipo Nido-Comunicaciones }
+Existen dos comunicaciones en el prototipo, la encargada de node-red para comunicación con usuarios, y la comunicación con la base principal de seguimiento para recolección de datos del ave.
 
