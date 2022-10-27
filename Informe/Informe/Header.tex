@@ -74,6 +74,14 @@
 \renewcommand{\headrulewidth}{0pt}
 \patchcmd{\footrule}{\hrule}{\color{AzulFoot}\hrule}{}{}
 
+%Esto arregla el error del footer del index (junto con \thispagestyle{fancy} en el comando de MyIndex)
+\fancypagestyle{plain}{
+  \fancyhf{}% clear all fields
+  \fancyfoot[LE,RO]{\thepage}%
+  \fancyfoot[C]{}%
+  \renewcommand{\headrulewidth}{0pt}%
+}
+
 %Código en el informe
 \input{../Informe/listing.tex}
 

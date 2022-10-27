@@ -14,17 +14,17 @@
 	%Agrega TOC al indice
 	\stepcounter{subsection}	
 	\addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}{Contenidos}}
-	\tableofcontents
+	\tableofcontents\thispagestyle{fancy}\protect
 
 	%Agrega LOF al indice
 	\stepcounter{subsection}
 	\addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}{Lista de Figuras}}
-	\listoffigures
+	\listoffigures\thispagestyle{fancy}\protect
 
 	%Agrega LOT al indice
 	\stepcounter{subsection}
 	\addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}{Lista de Tablas}}
-	\listoftables
+	\listoftables\thispagestyle{fancy}\protect
 }
 
 %Indices: cambio la separación de los numeros para que entren tablas y fotos
