@@ -1,3 +1,13 @@
-\begin{lstlisting}[language=Kotlin]
-print("Java")
+\begin{lstlisting}[language=Python]
+fun main() {
+  val texto_null: String? = null
+  val texto: String = "abcd1234"
+	
+  printLengthText(texto)
+  printLengthText(texto_null!!)
+}
+
+fun printLengthText(text: String) {
+  println(text.length)
+}
 \end{lstlisting}
