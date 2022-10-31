@@ -18,11 +18,16 @@ La comunicación puede ser analógica en corriente para el TEMT-6000, pero este 
 
 Existen también otros sensores que tienen una salida analógica de tensión como el GL55-LM393 con un rango entre 0 y $V_{dd}$. Este también provee con una salida digital, pero esta funciona como un schmitt trigger.
 
-Por último el BJ-1750 cuanta con una salida digital con el protocolo de comunicación I2C. Teniendo en cuenta esto se opta por utilizar este último sensor. 
+El BJ-1750 cuanta con una salida digital con el protocolo de comunicación I2C. Teniendo en cuenta esto se opta por utilizar este último sensor. 
 
 Luego para el modulo RTC se tom\'o un  m\'odulo que tenga I2C, y que cuyo rango de almimentacion se encuentre entre 3.3 y 5 V, por lo que se opta por el DS3231.
+
+Para la detección de presencia se descarta el uso de la RPi3B y el módulo NRF24L01 por no ser compatible con Bluetooth 5.0. Se decide utilizar el ESP32-S3-WROOM-1 por el menor costo y mayor sensibilidad de recepción de la antena.
+
 %%%%%%IAMGENES%%%%%%
 Finalmente, para la cámara que obtendrá las imágenes, se tuvo en cuenta fundamentalmente la relación precio-resolución de la cámara, al igual que la integración con Linux y el factor de contar con una API para el lenguaje C. Por lo que la RPi-CMOD-V2 fue la cámara seleccionada.
+
+
 
 
 
