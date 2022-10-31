@@ -1,3 +1,485 @@
-\begin{lstlisting}[language=Kotlin]
-print("Java")
+\Subsubsection{BH1750}
+\begin{lstlisting}[language=Java]
+import board
+import adafruit_bh1750
+import Clases.Database_Lum
+
+from RTC import getTime
+
+
+import time
+
+i2c = board.I2C()
+sensor = adafruit_bh1750.BH1750(i2c)
+
+db_Lum = Clases.Database_Lum.Database_Lum(using_file_db=True, foldername='db')
+db_Lum.insert_lum_meas(sensor.lux,getTime())
 \end{lstlisting}
+\Subsubsection{DHT22}
+
+\begin{lstlisting}[language=Java]
+import Adafruit_DHT
+import Clases.Database_TyH
+from RTC import getTime
+
+DHT_SENSOR = Adafruit_DHT.DHT22
+DHT_PIN = 4
+TEMPERATURE_OUTLIER_RANGE = 50
+HUMIDITY_OUTLIER = 101
+
+waiting_measurement = True
+while waiting_measurement:
+    humidity, temperature = Adafruit_DHT.read_retry(DHT_SENSOR, DHT_PIN)
+
+    if humidity is not None and temperature is not None:
+        waiting_measurement = False
+    else:
+        print("Failed to retrieve data from humidity sensor")
+
+db = os.getenv('SIMFS_DATA_DB_PATH', 'db')
+
+print("Temp={0:0.1f}*C  Humidity={1:0.1f}%".format(temperature, humidity))
+
+if((temperature < TEMPERATURE_OUTLIER_RANGE) and (humidity < HUMIDITY_OUTLIER)):
+    db_TyH = Clases.Database_TyH.Database_TyH(using_file_db=True, foldername='db')
+    db_TyH.insert_tyh_meas(temperature, humidity,getTime())
+\end{lstlisting}
+
+\Subsubsection{getRTMeasurement}
+
+\begin{lstlisting}[language=Java]
+import Adafruit_DHT
+
+import board
+import adafruit_bh1750
+import Clases.Database_Lum
+
+import Clases.Database_TyH
+
+import json
+import os
+DHT_SENSOR = Adafruit_DHT.DHT22(4)
+DHT_PIN = 4
+TEMPERATURE_OUTLIER_RANGE = 50
+HUMIDITY_OUTLIER = 101
+
+i2c = board.I2C()
+sensor = adafruit_bh1750.BH1750(i2c)
+
+waiting_measurement=True
+
+while waiting_measurement:
+    humidity, temperature = Adafruit_DHT.read_retry(DHT_SENSOR, DHT_PIN)
+
+    if humidity is not None and temperature is not None:
+        waiting_measurement = False
+    else:
+        print("Failed to retrieve data from humidity sensor")
+        waiting_measurement = False
+        humidity = 999
+        temperature = 999
+# db_TyH = Clases.Database_TyH.Database_TyH(using_file_db=True, foldername='db')#Importante el foldername
+# db_TyH.insert_tyh_meas(temperature, humidity)
+
+
+lum = round(sensor.lux,1)
+temp = round(temperature,1)
+hum = round(humidity,1)
+print("Luminosity = {0:0.1f} lux".format(lum))
+if ((temperature > TEMPERATURE_OUTLIER_RANGE) or (humidity > HUMIDITY_OUTLIER)):
+    temp = 999
+    hum = 999
+# Data to be written
+print("Temp={0:0.1f}*C  Humidity={1:0.1f}%".format(temperature, humidity))
+print("lum={0:0.1f} lux".format(lum))
+
+data = {
+    "lum": lum,
+    "temp": temp,
+    "hum": hum
+}
+
+# Serializing json
+json_data = json.dumps(data)
+# SIMFS_REAL_TIME_DATA_PATH = os.getenv(
+#     "SIMFS_REAL_TIME_DATA_PATH", "../Node-Red/Data/")
+# print(f"data path {SIMFS_REAL_TIME_DATA_PATH}")
+# Writing to last_data.json
+
+with open("../../LastData/last_data.json", "w") as outfile:
+  outfile.write(json_data)
+
+\end{lstlisting}
+\Subsubsection{getTime}
+
+\begin{lstlisting}[language=Java]
+from RTC import getTime
+print(getTime().strip())
+
+\end{lstlisting}
+
+\Subsubsection{RTC}
+
+\begin{lstlisting}[language=Java]
+import board
+import adafruit_ds1307
+import time 
+
+def getTime():
+   i2c = board.I2C()
+   rtc = adafruit_ds1307.DS1307(i2c)
+   t = rtc.datetime
+
+   day = t.tm_mday
+   if day < 10:
+      day = '0' + str(day)
+
+   mon = t.tm_mon
+   if mon < 10:
+      mon = '0' + str(mon)
+
+   year = t.tm_year
+
+   hour = t.tm_hour
+   if hour < 10:
+      hour = '0' + str(hour)
+
+   min = t.tm_min
+   if min < 10:
+      min = '0' + str(min)
+
+   sec = t.tm_sec
+   if sec < 10:
+      sec = '0' + str(sec)
+
+   return f"{year}-{mon}-{day}_{hour}:{min}:{sec}"
+
+   
+def setTime(year,month,day,hour,minute):
+   i2c = board.I2C()
+   rtc = adafruit_ds1307.DS1307(i2c)
+   rtc.datetime = time.struct_time((year,month,day,hour,minute,0,0,9,-1))
+        
+
+\end{lstlisting}
+
+\Subsubsection{DatabaseLum}
+
+\begin{lstlisting}[language=Java]
+import sqlite3
+import os
+
+
+class Database_Lum:
+    """Luminosity database class for sqlite3"""
+
+    def __init__(self, db_dir: str, using_file_db=True) -> None:
+        if using_file_db is True:
+            self.foldername = db_dir
+            self.usingfolder = True
+            if(os.path.isdir(db_dir) == 0):
+                os.makedirs(db_dir)
+            self.conn = sqlite3.connect(db_dir + '\Lum.db')
+
+        else:
+            self.usingfolder = False
+            self.conn = sqlite3.connect(':memory:')
+        self.c = self.conn.cursor()
+
+        # get the count of tables with the name
+        self.c.execute(
+            ''' SELECT count(name) FROM sqlite_master WHERE type='table' AND name='measurements' ''')
+        # if the count is 1, then table exists
+        if self.c.fetchone()[0] == 0:
+            {
+                # TODO cambiar a tipo DATE
+                self.c.execute("""CREATE TABLE measurements ( 
+                        date_meas TEXT,
+                        lum_meas REAL
+                        )""")
+            }
+
+    def insert_lum_meas(self, lum_,date) -> None:
+        if(self.usingfolder):
+            with self.conn:
+                self.c.execute("INSERT INTO measurements VALUES (:date_, :luminosity_meas)", 
+                {'luminosity_meas': lum_, 'date_': date})
+
+    def get_meas_in_range(self, start_time: str, end_time: str):
+        if (self.usingfolder):
+            self.c.execute("SELECT * FROM measurements WHERE date_meas BETWEEN (:start_) AND (:end_)",
+                           {'start_': start_time, 'end_': end_time})
+            return self.c.fetchall()
+
+    def remove_meas_in_range(self, start_time: str, end_time: str):
+        with self.conn:
+            self.c.execute("DELETE FROM measurements WHERE date_meas BETWEEN (:start_) AND (:end_)", {
+                           'start_': start_time, 'end_': end_time})
+    def get_all_meas(self):
+        if (self.usingfolder):
+            self.c.execute("SELECT * FROM measurements "
+                          )
+            return self.c.fetchall()
+            
+    def __del__(self):
+        self.conn.close()
+
+
+\end{lstlisting}
+
+\Subsubsection{DatabaseTyH}
+
+\begin{lstlisting}[language=Java]
+
+import sqlite3
+import os
+
+
+class Database_TyH:
+    """Temperature and Humidity database class for sqlite3"""
+
+    def __init__(self, db_dir: str, using_file_db=True) -> None:
+        if using_file_db is True:
+            self.foldername = db_dir
+            self.usingfolder = True
+            if(os.path.isdir(db_dir) == 0):
+                os.makedirs(db_dir)
+            self.conn_temp_n_hum = sqlite3.connect(
+                db_dir + 'Temp_and_hum.db')
+
+        else:
+            self.usingfolder = False
+            self.conn_temp_n_hum = sqlite3.connect(':memory:')
+        self.ctyh = self.conn_temp_n_hum.cursor()
+
+        # get the count of tables with the name
+        self.ctyh.execute(
+            ''' SELECT count(name) FROM sqlite_master WHERE type='table' AND name='measurements' ''')
+        # if the count is 1, then table exists
+        if self.ctyh.fetchone()[0] == 0:
+            {
+                # TODO cambiar a tipo DATE
+                self.ctyh.execute("""CREATE TABLE measurements (
+                        date_meas TEXT,
+                        temperature_meas REAL,
+                        humidity_meas REAL
+                        )""")
+            }
+
+    def insert_tyh_meas(self, temp_, hum_,date) -> None:
+        if(self.usingfolder):
+
+            with self.conn_temp_n_hum:
+                self.ctyh.execute("INSERT INTO measurements VALUES (:date_, :temperature_meas, :humidity_meas)", {
+                                  'temperature_meas': temp_, 'humidity_meas': hum_, 'date_': date})
+
+    def get_meas_in_range(self, start_time, end_time):
+        if (self.usingfolder):
+            self.ctyh.execute("SELECT * FROM measurements WHERE date_meas BETWEEN (:start_) AND (:end_)", {
+                              'start_': start_time, 'end_': end_time})
+            return self.ctyh.fetchall()
+
+    def get_all_meas(self):
+        if (self.usingfolder):
+            self.ctyh.execute("SELECT * FROM measurements")
+            return self.ctyh.fetchall()
+
+    def remove_meas_in_range(self, start_time: str, end_time: str):
+        with self.conn_temp_n_hum:
+            self.ctyh.execute("DELETE FROM measurements WHERE date_meas BETWEEN (:start_) AND (:end_)", {
+                              'start_': start_time, 'end_': end_time})
+
+    def __del__(self):
+        self.conn_temp_n_hum.close()
+
+\end{lstlisting}
+
+\Subsubsection{FileMakerDB}
+
+\begin{lstlisting}[language=Java]
+import Database_Lum
+import Database_TyH
+import sys
+import csv
+
+# En el open de los CSV le podes cambiar el path a donde se guardan los CSV generados, tambien ahi le podes cambiar el terminador de linea y el separador
+# cuando abro la base de datos el ../db es el path de la carpeta donde estan las bases de datos
+
+
+def write_TyH(start_time: str, end_time: str):
+    db_TyH = Database_TyH.Database_TyH(using_file_db=True, db_dir='../db')
+
+    data = db_TyH.get_meas_in_range(start_time, end_time)
+    csv_name = start_time[0:10] + '_' + end_time[0:10]
+    db_export_path = "/home/pi/simfs_export_data/CSV/TemperaturaYHumedad_"
+    filename = db_export_path + csv_name + '.csv'
+    with open(filename, 'w') as f:
+        writer = csv.writer(f, lineterminator='\n')
+        writer.writerow(['Time',
+                         'Temperature', 'Humidity'])
+        for tup in data:
+            writer.writerow(tup)
+
+
+def write_Lum(start_time: str, end_time: str):
+    db_Lum = Database_Lum.Database_Lum(using_file_db=True, db_dir='../db')
+
+    data = db_Lum.get_meas_in_range(start_time, end_time)
+    csv_name = '../CSV/Luminosidad_' + start_time[0:10] + '_' + end_time[0:10]
+    db_export_path = "/home/pi/simfs_export_data/CSV/TemperaturaYHumedad_"
+    filename = db_export_path + csv_name + '.csv'
+    with open(filename, 'w') as f:
+        writer = csv.writer(f, lineterminator='\n')
+        writer.writerow(['Time',
+                         'Lux'])
+        for tup in data:
+            writer.writerow(tup)
+
+
+if __name__ == "__main__":
+    # SON 3 PARAMETROS EN TOTAL
+    # -Tipo_de_medicion fecha_inicio fecha_fin
+    # se llama con los siguientes parametros:
+    # -l para luminosidad
+    # -tyh para temperatura y luminosidad
+    # los siguientes dos parametros son
+    # fecha inicio y fecha fin con el siguiente formato
+    # 'AAAA-MM-DD HH:MM' Importante mantener el formato
+    argv = sys.argv[1:]
+    if(len(argv) != 3):
+        print('Wrong amount of parameters!')
+    else:
+        if(argv[0].lower() == '-l'):
+            if((len(argv[1]) != 16) or (len(argv[2]) != 16)):
+                print('Bad date formating!')
+            else:
+                write_Lum(argv[1], argv[2])
+                print('Writing CSV')
+        elif(argv[0].lower() == '-tyh'):
+            if((len(argv[1]) != 16) or (len(argv[2]) != 16)):
+                print('Bad date formating!')
+            else:
+                print('Writing CSV')
+                write_TyH(argv[1], argv[2])
+        else:
+            print('Wrong key word!')
+
+
+\end{lstlisting}
+\Subsubsection{makeCsvCli}
+
+\begin{lstlisting}[language=Java]
+import argparse
+from enum import Enum
+from File_maker_DB import write_Lum, write_TyH
+
+
+# Sample Usage
+# python make_csv_cli.py  --start_time="2021/10/21 00:00" --end_time="2021/10/22 00:00" --meas_type=2
+
+class MeasDevices(Enum):
+    TEMP_AND_HUM_DEV = 1
+    LUX_DEV = 2
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Generate csv data')
+    parser.add_argument('--start_time', dest='start_time',
+                        help='csv start_time', type=str)
+    parser.add_argument('--end_time', dest='end_time',
+                        help='csv end_time', type=str)
+
+    parser.add_argument('--meas_type', type=int,
+                        help="""Select information source
+                                1: Temperature and Humidity
+                                2: Luminosity""")
+
+    args = parser.parse_args()
+
+    # TODO type check de la fecha
+    start_time = args.start_time
+    end_time = args.end_time
+    print("Generating CSV ")
+    print(f"from: {start_time}")
+    print(f"to: {end_time}")
+    print(f"for device {MeasDevices.TEMP_AND_HUM_DEV}")
+    try:
+        if args.meas_type == MeasDevices.TEMP_AND_HUM_DEV.value:
+            print("Doing temp")
+            write_TyH(start_time, end_time)
+        elif args.meas_type == MeasDevices.LUX_DEV.value:
+            print("Doing light")
+            print("start_time", start_time)
+            print("end_time", end_time)
+            write_Lum(start_time, end_time)
+    except Exception as e:
+        print("Generating CSV failed")
+        print(e)
+
+
+\end{lstlisting}
+
+\Subsubsection{presenceDetector}
+
+\begin{lstlisting}[language=Java]
+
+from bluepy.btle import Scanner
+import numpy as np
+import os
+RETRIES = 3
+
+def resetBL():
+    os.system("sudo hciconfig hci0 down && sudo hciconfig hci0 up")
+
+def IsInNest(mac, timeout, minDistance = -50):
+    avg = 0
+    scan_time = 0.1
+    iterations = int(timeout/0.1)
+    # print(f"Do {iterations} iterations")
+    for i in range(iterations):
+        try:
+            #10.0 sec scanning
+            # for i in range(COUNT):
+            ble_list = Scanner().scan(0.1)
+            for dev in ble_list:
+                if mac.lower() == dev.addr:
+                    #print("rssi: {} ; mac: {}".format(dev.rssi,dev.addr))
+                    avg = avg + 0.2*(dev.rssi - avg) 
+                    #print("rssi: {} ; mac: {} name: {}".format(dev.rssi,dev.addr, dev['scanData'][8]))
+            # print(f"rssi: {np.round(avg, 3)}")
+        except:
+            continue
+    if 0.0 > avg >= minDistance:
+        return True, avg
+    else:
+        return False, avg
+
+if __name__ == "__main__":
+    devices = []
+    mac = "8C:AA:B5:87:6F:12"
+    # mac = "A8:79:8D:96:F9"
+    isBirdInNest = False
+    secondsToScan = 5
+    for attempt in range(RETRIES):
+        try:
+            isBirdInNest, value = IsInNest(mac, secondsToScan)
+            if value == 0:
+                resetBL()
+                continue
+            else:
+                break
+        except BTLEManagementError:
+           resetBL()
+        except KeyboardInterrupt:
+            # print("Raising SystemExit")
+            Scanner().stop()
+            raise SystemExit
+        except:
+            raise Exception("Error occured")
+    
+    # print(f"Is the bird in the nest: {isBirdInNest} | value: {value}")
+    print(isBirdInNest)
+
+\end{lstlisting}
+
+
