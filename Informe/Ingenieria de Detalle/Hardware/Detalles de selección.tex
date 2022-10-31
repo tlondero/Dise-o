@@ -38,17 +38,22 @@ Se definen los siguientes valores para cada medici\'on:
 \begin{itemize}
 	\item Medición temperatura y humedad: 16 Bytes (fecha y hora) + 4 Bytes (humedad) + 4 Bytes (temperatura) = 24 Bytes.
 	\item Medición luminosidad: 16 Bytes (fecha y hora) + 4 Bytes (luminosidad) = 20 Bytes.
-	\item Medición cámara: cada imagen pesa 2.4 MBytes \cite{ref:rpicam}.
-	\item Información BT: aproximadamente 2 KByte.
+	\item Medición cámara: cada imagen pesa 1.2 MBytes \cite{ref:rpicam} (considerando una calidad alta).
+	\item Información recibida por BT: aproximadamente 2 KByte.
 	\item Sistema operativo: 2 GBytes.
 	\item Programas y librerías: 2.8 GBytes
 \end{itemize}
 
 De esta forma se tiene el tamaño de las mediciones durante un período de 14 días:
 \begin{multline*}
-	12 \ \nicefrac{medici\acute{o}n}{hora} \  \cdot \ 24 \ \nicefrac{hora}{d\acute{\imath}a} \  \cdot \ 14 \ d\acute{\imath}a \  \cdot \ ( \ 24 \  \nicefrac{Bytes}{medici\acute{o}n} \  + \ 16 \ \nicefrac{Bytes}{medici\acute{o}n} \ ) \\
-	+ 12 \ \nicefrac{medici\acute{o}n}{hora} \  \cdot \ 12 \ \nicefrac{hora}{d\acute{\imath}a} \  \cdot \ 14 \ d\acute{\imath}a \  \cdot \   2.4 \ MBytes  + 2 \ \nicefrac{KByte}{d\acute{\imath}a} \  \cdot \  14 \ d\acute{\imath}a = 4.84 \ GBy
+	12 \ \nicefrac{medici\acute{o}n}{hora} \  \cdot \ 24 \ \nicefrac{hora}{d\acute{\imath}a} \  \cdot \ 14 \ d\acute{\imath}a \  \cdot \ \left( \ 24 \  \nicefrac{Bytes}{medici\acute{o}n} \right. \\ \left. + \ 16 \ \nicefrac{Bytes}{medici\acute{o}n} \ + \ 1.2 \ MBytes \right) \ + 2 \ \nicefrac{KByte}{d\acute{\imath}a} \  \cdot \  14 \ d\acute{\imath}a = 4.84 \ GBy
 \end{multline*}
+
+
+%\begin{multline*}
+%	12 \ \nicefrac{medici\acute{o}n}{hora} \  \cdot \ 24 \ \nicefrac{hora}{d\acute{\imath}a} \  \cdot \ 14 \ d\acute{\imath}a \  \cdot \ ( \ 24 \  \nicefrac{Bytes}{medici\acute{o}n} \  + \ 16 \ \nicefrac{Bytes}{medici\acute{o}n} \ ) \\
+%	+ 12 \ \nicefrac{medici\acute{o}n}{hora} \  \cdot \ 24 \ \nicefrac{hora}{d\acute{\imath}a} \  \cdot \ 14 \ d\acute{\imath}a \  \cdot \   1.2 \ MBytes  + 2 \ \nicefrac{KByte}{d\acute{\imath}a} \  \cdot \  14 \ d\acute{\imath}a = 4.84 \ GBy
+%\end{multline*}
 
 Si a esto se le suma el espacio dedicado al sistema operativo, programas y librerías, se obtiene que el tamaño total de memoria necesaria es de aproximadamente 9 GBy.
 
