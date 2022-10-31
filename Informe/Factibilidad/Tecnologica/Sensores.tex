@@ -101,24 +101,36 @@ Teniendo esto en cuenta se proponen los siguientes m\'odulos RTC:
 \end{table}
 
 \Subsubsubsection{Presencia}
-Se desea conocer cuándo está presente el ave dentro del nido. Para esto, se decide utilizar BLE por su baja utilización de recursos energéticos. Una opción es utilizar la R-Pi como receptora. Otras opciones que se exploran involucran utilizar un transceptor.
+Se desea conocer cuándo está presente el ave dentro del nido. Para esto, se decide utilizar BLE por su baja utilización de recursos energéticos. Una opción es utilizar la R-Pi como receptora. Otras opciones que se exploran involucran utilizar un transceptor bluetooth.
 
-\begin{table}[]
+\begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|c|}
 \hline
-\begin{tabular}[c]{@{}c@{}}Aspectos\\ comparativos\end{tabular} &
-  \textbf{R-Pi} &
-  \textbf{NRF24L01} &
-  \textbf{WIM2480\_v1.4} \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Aspectos\\ comparativos\end{tabular}} &
+  \textbf{\textbf{\href{https://static.raspberrypi.org/files/product-briefs/Raspberry-Pi-Model-Bplus-Product-Brief.pdf}{RPi 3B}}} &
+  \textbf{\textbf{\href{https://www.seeedstudio.com/document/pdf/DS\_nRF24L01.pdf}{NRF24L01}}} &
+  \textbf{\textbf{\href{https://cdn.shopify.com/s/files/1/0496/1153/8592/files/WIM2480\_v1.4.pdf?v=1633424704.pdf}{WIM2480}}} \\ \hline
 \textbf{Costo [USD]} &
-   &
-   &
-   \\ \hline
-\textbf{} &
-   &
-  \reflink{https://pdf1.alldatasheet.com/datasheet-pdf/view/1243924/ETC1/NRF24L01.html} &
-   \reflink{https://cdn.shopify.com/s/files/1/0496/1153/8592/files/WIM2480\_v1.4.pdf?v=1633424704.pdf} \\ \hline
+  - &
+  3 &
+  10.77 \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Compatibilidad\\ Bluetooth\end{tabular}} &
+  Bluetooth 4.1 &
+  Bluetooth 4.1 &
+  Bluetooth 5.2 \\ \hline
+\textbf{BLE} &
+  Sí &
+  Sí &
+  Sí \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Sensibilidad\\ Rx [dBm]\end{tabular}} &
+  - &
+  -85 &
+  -92 \\ \hline
+\textbf{Imagen} &
+  \includeintable{.1}{ImagenesFactibilidad/RPICM} &
+  \includeintable{.1}{ImagenesFactibilidad/NRF24L01} &
+  \includeintable{.1}{ImagenesFactibilidad/WIM2480} \\ \hline
 \end{tabular}
 \caption{Comparación de módulos para la detección de presencia.}
 \end{table}
