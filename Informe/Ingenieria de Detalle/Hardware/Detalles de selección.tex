@@ -7,7 +7,7 @@ Se asumen las siguientes variables para los cálculos de potencias, obtenidas de
 	\item Horas de sol efectivas = 8 horas.
 \end{enumerate}
 
-Para el caso de la R-Pi, se tiene que su consumo mínimo normal es de $P_{rpi_{min}} = 1.2 \ W$. Sin embargo, para reducir este consumo, se desactivan los puertos de ethernet y HDMI ya que no se utilizará un entorno gráfico. Esto permite reducir aún más el consumo mínimo. Se estima que la R-Pi consumirá como máximo alrededor de $P_{rpi_{est}} = 1.75 \ W$ en su funcionamiento normal\cite{ref:pot_rpi}.
+Para el caso de la R-Pi, se tiene que su consumo mínimo normal es de $P_{rpi_{min}} = 1.2 \ W$. Sin embargo, para reducir este consumo, se desactivan los puertos de ethernet y HDMI ya que no se utilizará un entorno gráfico. Esto permite reducir aún más el consumo mínimo. Se estima que la R-Pi consumirá como máximo alrededor de $P_{rpi_{est}} = 1.75 \ W$ en su funcionamiento normal \cite{ref:pot_rpi}.
 Luego, se tiene que el consumo energético por día será de
 
 \begin{equation}
@@ -34,14 +34,14 @@ Tanto para el Bus de $I^2C$ como para el DHT22, se calcularon las resistencias d
 \end{equation}
 
 \Subsubsubsection{Cálculo de memoria}
-Se definen los siguientes valores para cada medici\'on:
+Se definen los siguientes valores para cada medici+on:
 \begin{itemize}
-	\item Medición temperatura y humedad: 16 Bytes (fecha y hora) + 4 Bytes (humedad) + 4 Bytes (temperatura) = 24 Bytes.
-	\item Medición luminosidad: 16 Bytes (fecha y hora) + 4 Bytes (luminosidad) = 20 Bytes.
-	\item Medición cámara: cada imagen pesa 1.2 MBytes \cite{ref:rpicam} (considerando una calidad alta).
-	\item Información recibida por BT: aproximadamente 2 KByte.
-	\item Sistema operativo: 2 GBytes.
-	\item Programas y librerías: 2.8 GBytes
+	\item Medición temperatura y humedad: 16 $Bytes$ (fecha y hora) + 4 $Bytes$ (humedad) + 4 $Bytes$ (temperatura) = 24 $Bytes$.
+	\item Medición luminosidad: 16 $Bytes$ (fecha y hora) + 4 $Bytes$ (luminosidad) = 20 $Bytes$.
+	\item Medición cámara: cada imagen pesa 1.2 $MBytes$ \cite{ref:rpicam} (considerando una calidad alta).
+	\item Información recibida por BT: aproximadamente 2 $KByte$.
+	\item Sistema operativo: 2 $GBytes$.
+	\item Programas y librerías: 2.8 $GBytes$.
 \end{itemize}
 
 De esta forma se tiene el tamaño de las mediciones durante un período de 14 días:
