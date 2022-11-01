@@ -1,65 +1,179 @@
 \begin{table}[H]
 \centering
-\begin{tabular}{|l|l|ll|}
+\begin{tabular}{|c|l|c|c|}
 \hline
-\multicolumn{1}{|c|}{\multirow{2}{*}{\textbf{Origen}}} & \multicolumn{1}{c|}{\textbf{REQ ID}}                                                                                                                                                     & \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{ESP ID}}} & \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{TEST ID}}} \\ \cline{2-2}
-\multicolumn{1}{|c|}{}                                 & \multicolumn{1}{c|}{\textbf{Descripción corta}}                                                                                                                                          & \multicolumn{1}{c|}{}                                 & \multicolumn{1}{c|}{}                                  \\ \hline
-\multirow{5}{*}{Cliente}                               & REQ 01                                                                                                                                                                                   &                                                       &                                                        \\ \cline{2-2}
-                                                       & \multirow{4}{*}{\begin{tabular}[c]{@{}l@{}}El producto estará colgado de un árbol\\ a una altura de 4 a 14 metros y se\\ instalará parcialmente dentro del nido\\ del ave.\end{tabular}} & IMP-DIM-01                                            & T-IMP-DIM-01                                           \\
-                                                       &                                                                                                                                                                                          & IMP-DIM-02                                            & T-IMP-DIM-01                                           \\
-                                                       &                                                                                                                                                                                          & IMP-DIM-03                                            & T-IMP-DIM-02                                           \\
-                                                       &                                                                                                                                                                                          & IMP-DIM-04                                            & T-IMP-DIM-02                                           \\ \hline
-Cliente                                                & REQ 02                                                                                                                                                                                   & INT-FUN-14                                            & T-INT-FUN-09                                           \\ \cline{1-2}
-                                                       & \begin{tabular}[c]{@{}l@{}}El producto debe poder mantenerse\\ energizado sin intervención humana.\end{tabular}                                                                          &                                                       & T-INT-FUN-11                                           \\ \hline
-\multirow{2}{*}{Tácito}                                & REQ 03                                                                                                                                                                                   & INT-FUN-14                                            & T-INT-FUN-09                                           \\ \cline{2-2}
-                                                       & \begin{tabular}[c]{@{}l@{}}El producto no debe requerir conexión\\ a la red eléctrica para su funcionamiento\end{tabular}                                                                &                                                       & T-INT-FUN-11                                           \\ \hline
-\multirow{4}{*}{Cliente}                               & REQ 04                                                                                                                                                                                   & INT-FUN-02                                            & T-INT-FUN-01                                           \\ \cline{2-2}
-                                                       & \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}El producto debe ser capaz de adquirir los\\ siguientes datos dentro del nido: temperatura,\\ humedad, luminosidad e imágenes.\end{tabular}}  & INT-FUN-03                                            & T-INT-FUN-02                                           \\
-                                                       &                                                                                                                                                                                          & INT-FUN-04                                            & T-INT-FUN-03                                           \\
-                                                       &                                                                                                                                                                                          & INT-FUN-05                                            & T-INT-FUN-04                                           \\ \hline
-\multirow{5}{*}{Cliente}                               & REQ 05                                                                                                                                                                                   & INT-FUN-06                                            & T-INT-COM1-05                                          \\ \cline{2-2}
-                                                       & \multirow{4}{*}{\begin{tabular}[c]{@{}l@{}}Un dispositivo ajeno al proyecto que irá\\ sobre el ave debe poder transmitirle datos\\ al nido mediante protocolo Bluetooth.\end{tabular}}   & INT-COM1-01                                           & T-INT-COM1-01                                          \\
-                                                       &                                                                                                                                                                                          & INT-COM1-02                                           & T-INT-COM1-02                                          \\
-                                                       &                                                                                                                                                                                          & INT-COM1-03                                           & T-INT-COM1-03                                          \\
-                                                       &                                                                                                                                                                                          & INT-COM1-04                                           & T-INT-COM1-04                                          \\ \hline
+\multirow{2}{*}{\textbf{Origen}} &
+  \multicolumn{1}{c|}{\textbf{REQ ID}} &
+  \textbf{} &
+  \textbf{} \\ \cline{2-4} 
+ &
+  \textbf{Descripción corta} &
+  \textbf{ESP ID} &
+  \textbf{TEST ID} \\ \hline
+\multirow{5}{*}{Cliente} &
+  \multicolumn{1}{c|}{REQ 01} &
+   &
+   \\ \cline{2-4} 
+ &
+  \multirow{4}{*}{\begin{tabular}[c]{@{}l@{}}El producto estará colgado de un árbol a una altura \\ de 4 a 14 metros y se instalará parcialmente dentro \\ del nido del ave.\end{tabular}} &
+  IMP-DIM-01 &
+  T-IMP-DIM-01 \\ \cline{3-4} 
+ &
+   &
+  IMP-DIM-02 &
+  T-IMP-DIM-01 \\ \cline{3-4} 
+ &
+   &
+  IMP-DIM-03 &
+  T-IMP-DIM-02 \\ \cline{3-4} 
+ &
+   &
+  IMP-DIM-04 &
+  T-IMP-DIM-02 \\ \hline
+\multirow{3}{*}{Cliente} &
+  \multicolumn{1}{c|}{REQ 02} &
+   &
+   \\ \cline{2-4} 
+ &
+  \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}El producto debe poder mantenerse energizado sin\\ intervención humana.\end{tabular}} &
+  INT-FUN-18 &
+  T-INT-FUN-10 \\ \cline{3-4} 
+ &
+   &
+   &
+  T-INT-FUN-12 \\ \hline
+\multirow{3}{*}{Tácito} &
+  \multicolumn{1}{c|}{REQ 03} &
+   &
+   \\ \cline{2-4} 
+ &
+  \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}El producto no debe requerir conexión a la red eléctrica \\ para su funcionamiento.\end{tabular}} &
+  INT-FUN-14 &
+  T-INT-FUN-10 \\ \cline{3-4} 
+ &
+   &
+   &
+  T-INT-FUN-12 \\ \hline
+\multirow{14}{*}{Cliente} &
+  \multicolumn{1}{c|}{REQ 04} &
+   &
+   \\ \cline{2-4} 
+ &
+  \multirow{13}{*}{\begin{tabular}[c]{@{}l@{}}El producto debe ser capaz de adquirir los siguientes \\ datos dentro del nido: imágenes, temperatura, humedad, \\ nivel de luz y presencia del ave.\end{tabular}} &
+  INT-FUN-02 &
+  T-INT-FUN-01 \\ \cline{3-4} 
+ &
+   &
+  INT-FUN-03 &
+  T-INT-FUN-02 \\ \cline{3-4} 
+ &
+   &
+  INT-FUN-04 &
+  T-INT-FUN-03 \\ \cline{3-4} 
+ &
+   &
+  INT-FUN-05 &
+  T-INT-FUN-04 \\ \cline{3-4} 
+ &
+   &
+  INT-FUN-06 &
+  T-INT-FUN-05 \\ \cline{3-4} 
+ &
+   &
+  INT-FUN-07 &
+  T-INT-FUN-11 \\ \cline{3-4} 
+ &
+   &
+  INT-FUN-12 &
+  T-INT-FUN-06 \\ \cline{3-4} 
+ &
+   &
+  INT-FUN-13 &
+  T-INT-FUN-07 \\ \cline{3-4} 
+ &
+   &
+  INT-FUN-14 &
+  T-INT-FUN-08 \\ \cline{3-4} 
+ &
+   &
+  INT-FUN-15 &
+  T-INT-FUN-09 \\ \cline{3-4} 
+ &
+   &
+  INT-FUN-16 &
+  T-INT-FUN-13 \\ \cline{3-4} 
+ &
+   &
+  INT-FUN-17 &
+  T-INT-FUN-14 \\ \cline{3-4} 
+ &
+   &
+  INT-FUN-18 &
+  T-INT-FUN-12 \\ \hline
+\multirow{5}{*}{Cliente} &
+  \multicolumn{1}{c|}{REQ 05} &
+   &
+   \\ \cline{2-4} 
+ &
+  \multirow{4}{*}{\begin{tabular}[c]{@{}l@{}}Aquellos datos recolectados por dispositivos ajenos al\\ nido deberán poder ser transmitidos a este por medio\\ de algún protocolo.\end{tabular}} &
+  INT-COM1-01 &
+  T-INT-COM1-02 \\ \cline{3-4} 
+ &
+   &
+  INT-COM1-02 &
+  T-INT-COM1-01 \\ \cline{3-4} 
+ &
+   &
+  INT-COM1-03 &
+  T-INT-COM1-01 \\ \cline{3-4} 
+ &
+   &
+  INT-FUN-09 &
+  T-INT-COM1-01 \\ \hline
+\multirow{2}{*}{Tácito} &
+  \multicolumn{1}{c|}{REQ 06} &
+   &
+   \\ \cline{2-4} 
+ &
+  El producto debe poder almacenar los datos adquiridos. &
+  INT-FUN-01 &
+   \\ \hline
+\multirow{9}{*}{Cliente} &
+  \multicolumn{1}{c|}{REQ 07} &
+   &
+   \\ \cline{2-4} 
+ &
+  \multirow{8}{*}{\begin{tabular}[c]{@{}l@{}}Una persona debe poder recibir los datos almacenados \\ en el nido a la distancia.\end{tabular}} &
+  INT-COM2-01 &
+  T-INT-COM2-01 \\ \cline{3-4} 
+ &
+   &
+  INT-COM2-02 &
+  T-INT-COM2-02 \\ \cline{3-4} 
+ &
+   &
+  INT-COM2-03 &
+  T-INT-COM2-01 \\ \cline{3-4} 
+ &
+   &
+  INT-COM2-04 &
+  T-INT-COM2-01 \\ \cline{3-4} 
+ &
+   &
+  INT-COM2-05 &
+  T-INT-COM2-03 \\ \cline{3-4} 
+ &
+   &
+  INT-COM2-06 &
+  T-INT-COM2-01 \\ \cline{3-4} 
+ &
+   &
+  RAM-SEG-01 &
+  T-RAM-SEG-01 \\ \cline{3-4} 
+ &
+   &
+  INT-FUN-08 &
+  T-INT-COM2-01 \\ \hline
 \end{tabular}
-\caption{Matriz de trazabilidad (Parte 1).}
-\end{table}
-
-\begin{table}[H]
-\centering
-\begin{tabular}{|l|l|ll|}
-\hline
-\multicolumn{1}{|c|}{\multirow{2}{*}{\textbf{Origen}}} & \multicolumn{1}{c|}{\textbf{REQ ID}}                                                                                                                                                                                                                   & \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{ESP ID}}} & \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{TEST ID}}} \\ \cline{2-2}
-\multicolumn{1}{|c|}{}                                 & \multicolumn{1}{c|}{\textbf{Descripción corta}}                                                                                                                                                                                                        & \multicolumn{1}{c|}{}                                 & \multicolumn{1}{c|}{}                                  \\ \hline
-\multirow{8}{*}{Cliente}                               & REQ 07                                                                                                                                                                                                                                                 & INT-FUN-06                                            & T-INT-COM2-07                                          \\ \cline{2-2}
-                                                       & \multirow{7}{*}{\begin{tabular}[c]{@{}l@{}}Una persona debe poder recibir los\\ datos almacenados en el nido a la\\ distancia.\end{tabular}}                                                                                                           & INT-COM2-01                                           & T-INT-COM2-01                                          \\ \cline{4-4} 
-                                                       &                                                                                                                                                                                                                                                        & INT-COM2-02                                           & T-INT-COM2-02                                          \\
-                                                       &                                                                                                                                                                                                                                                        & INT-COM2-03                                           & T-INT-COM2-03                                          \\
-                                                       &                                                                                                                                                                                                                                                        & INT-COM2-04                                           & T-INT-COM2-04                                          \\
-                                                       &                                                                                                                                                                                                                                                        & INT-COM2-05                                           & T-INT-COM2-05                                          \\
-                                                       &                                                                                                                                                                                                                                                        & INT-COM2-06                                           & T-INT-COM2-06                                          \\
-                                                       &                                                                                                                                                                                                                                                        & RAM-SEG-01                                            & T-RAM-SEG-01                                           \\ \hline
-\multirow{2}{*}{Cliente}                               & REQ 08                                                                                                                                                                                                                                                 &                                                       &                                                        \\ \cline{2-2}
-                                                       & \begin{tabular}[c]{@{}l@{}}El producto no debe llamar la atención\\ de humanos desde el nivel del piso.\end{tabular}                                                                                                                                   & RAM-SEG-02                                            & \TBC                                                   \\ \hline
-\multirow{6}{*}{Tácito}                                & REQ 09                                                                                                                                                                                                                                                 & IMP-OPE-01                                            & \TBC                                                   \\ \cline{2-2}
-                                                       & \multirow{5}{*}{\begin{tabular}[c]{@{}l@{}}El producto debe soportar las condiciones\\ meteorológicas del sur Argentino,\\ específicamente los alrededores de\\ Bariloche, Rio Negro.\end{tabular}}                                                    & IMP-OPE-02                                            & \TBC                                                   \\
-                                                       &                                                                                                                                                                                                                                                        & IMP-OPE-03                                            & \TBC                                                   \\
-                                                       &                                                                                                                                                                                                                                                        & IMP-AYT-01                                            & \TBC                                                   \\
-                                                       &                                                                                                                                                                                                                                                        & IMP-AYT-02                                            & \TBC                                                   \\
-                                                       &                                                                                                                                                                                                                                                        & IMP-AYT-03                                            & \TBC                                                   \\ \hline
-\multirow{2}{*}{Tácito}                                & REQ 10                                                                                                                                                                                                                                                 &                                                       &                                                        \\ \cline{2-2}
-                                                       & El costo del producto debe ser menor o igual a \precio USD.                                                                                                                                                                                            & IMP-COS-01                                            & \TBC                                                   \\ \hline
-\multirow{2}{*}{Cliente}                               & REQ 11                                                                                                                                                                                                                                                 & INT-FUN-08                                            & T-INT-FUN-10                                           \\ \cline{2-2}
-                                                       & \begin{tabular}[c]{@{}l@{}}Analizar la factibilidad tecnológica de la recarga inalámbrica \\ de la batería de la mochila del pájaro.\end{tabular}                                                                                                      &                                                       &                                                        \\ \hline
-\multirow{4}{*}{Estado}                                & REQ 12                                                                                                                                                                                                                                                 &                                                       &                                                        \\ \cline{2-2}
-                                                       & \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}El producto desarmado debe soportar las condiciones de \\ translado impuestas por los caminos rurales hasta llegar \\ a la zona de instalación.\end{tabular}}                                               & IMP-AYT-01                                            & \TBC                                                   \\
-                                                       &                                                                                                                                                                                                                                                        & IMP-AYT-02                                            & \TBC                                                   \\
-                                                       &                                                                                                                                                                                                                                                        & IMP-AYT-03                                            & \TBC                                                   \\ \hline
-\multirow{2}{*}{Estado}                                & REQ 13                                                                                                                                                                                                                                                 &                                                       &                                                        \\ \cline{2-2}
-                                                       & La vida útil del producto deberá ser de por lo menos 2 años.                                                                                                                                                                                           & RAM-CON-01                                            & \TBC                                                   \\ \hline
-\multirow{2}{*}{Estado}                                & REQ 14                                                                                                                                                                                                                                                 &                                                       &                                                        \\ \cline{2-2}
-                                                       & \begin{tabular}[c]{@{}l@{}}Se debe garantizar el abastecimiento energético de la \\ mochila del pájaro por una duración de tres a cuatro meses \\ posterior a la intervención en el nido y el pájaro para la \\ instalación del proyecto.\end{tabular} & INT-FUN-09                                            & \TBC                                                   \\ \hline
-\end{tabular}
-\caption{Matriz de trazabilidad (Parte 2).}
+\caption{Matriz de trazabilidad de validación.}
 \end{table}
