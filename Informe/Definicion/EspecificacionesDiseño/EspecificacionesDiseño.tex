@@ -13,87 +13,97 @@
 \caption{Leyendas para las especificaciones.}
 \end{table}
 
-\observacion{\verObs}{VERIFICAR CORRELACIÓN CON REQUERMIENTOS}
-
 \begin{table}[H]
 \centering
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|c|l|c|c|}
 \hline
-ID &
-  \textbf{Descripción} &
+\textbf{ID} &
+  \multicolumn{1}{c|}{\textbf{Descripción}} &
   \textbf{Origen} &
   \textbf{\begin{tabular}[c]{@{}c@{}}Aplicabilidad\\ Validación\end{tabular}} \\ \hline
-\textbf{INT-FUN-01} &
-  \begin{tabular}[c]{@{}c@{}}El dispositivo deberá tener un espacio de almacenamiento de\\ datos de por lo menos 32 GBy, equivalente a la suma de los\\ datos adquiridos en el nido y por la base principal de detección del ave.\end{tabular} &
-  REQ-06 &
+INT-FUN-01 &
+  \begin{tabular}[c]{@{}l@{}}El dispositivo deberá tener un espacio de almacenamiento de\\ datos de por lo menos 32 GBy, equivalente a la suma de los\\ datos adquiridos en el nido y por la base principal de detección del ave.\end{tabular} &
+  REQ-07 &
   P F - D \\ \hline
-\textbf{INT-FUN-02} &
-  \begin{tabular}[c]{@{}c@{}}El producto debe ser capaz de obtener la temperatura del\\ entorno.\end{tabular} &
+INT-FUN-02 &
+  \begin{tabular}[c]{@{}l@{}}El producto debe ser capaz de obtener la temperatura del\\ entorno.\end{tabular} &
   REQ-04 &
   P F - I D T \\ \hline
-\textbf{INT-FUN-03} &
-  \begin{tabular}[c]{@{}c@{}}El producto debe ser capaz de obtener la humedad del\\ entorno.\end{tabular} &
+INT-FUN-03 &
+  \begin{tabular}[c]{@{}l@{}}El producto debe ser capaz de obtener la humedad del\\ entorno.\end{tabular} &
   REQ-04 &
   P F - I D T \\ \hline
-\textbf{INT-FUN-04} &
-  \begin{tabular}[c]{@{}c@{}}El producto debe ser capaz de obtener la intensidad lumínica\\ del interior del nido.\end{tabular} &
+INT-FUN-04 &
+  \begin{tabular}[c]{@{}l@{}}El producto debe ser capaz de obtener la intensidad lumínica\\ del interior del nido.\end{tabular} &
   REQ-04 &
   P F - I D T \\ \hline
-\textbf{INT-FUN-05} &
-  \begin{tabular}[c]{@{}c@{}}El producto debe ser capaz de obtener video del interior\\ del nido.\end{tabular} &
+INT-FUN-05 &
+  \begin{tabular}[c]{@{}l@{}}El producto debe ser capaz de obtener video del interior\\ del nido.\end{tabular} &
   REQ-04 &
   P F - I D T \\ \hline
-\textbf{INT-FUN-06} &
-  \begin{tabular}[c]{@{}c@{}}El producto debe ser capaz de obtener imágenes del interior\\ del nido.\end{tabular} &
+INT-FUN-06 &
+  \begin{tabular}[c]{@{}l@{}}El producto debe ser capaz de obtener imágenes del interior\\ del nido.\end{tabular} &
   REQ-04 &
   P F - I D T \\ \hline
-\textbf{INT-FUN-07} &
+INT-FUN-07 &
   El producto debe ser capaz de detectar la presencia del ave en el nido. &
   REQ-04 &
   P F - I D T \\ \hline
-\textbf{INT-FUN-08} &
-  \begin{tabular}[c]{@{}c@{}}El producto debe poder transmitir de manera inalámbrica\\ los datos almacenados en el nido a un dispositivo según\\ todas las especificaciones de la tabla INT-COM2.\end{tabular} &
-  REQ-07 &
+INT-FUN-08 &
+  \begin{tabular}[c]{@{}l@{}}El producto debe poder transmitir de manera inalámbrica\\ los datos almacenados en el nido a un dispositivo según\\ todas las especificaciones de la tabla INT-COM2.\end{tabular} &
+  REQ-08 &
   P F - I D T \\ \hline
-\textbf{INT-FUN-09} &
-  \begin{tabular}[c]{@{}c@{}}El producto debe poder recibir de manera inalámbrica datos\\ almacenados en un dispositivo ajeno al proyecto según todas las \\ especificaciones de la tabla INT-COM1.\end{tabular} &
-  REQ-05 &
+INT-FUN-09 &
+  \begin{tabular}[c]{@{}l@{}}El producto debe poder recibir de manera inalámbrica datos\\ almacenados en un dispositivo ajeno al proyecto según todas las \\ especificaciones de la tabla INT-COM1.\end{tabular} &
+  REQ-06 &
   P F - I D T \\ \hline
-\textbf{INT-FUN-10} &
-  \begin{tabular}[c]{@{}c@{}}Determinar, dentro de las limitaciones tecnológicas, financieras,\\ legales y morales, además de los requisitos energéticos de la mochila,\\ si es posible la recarga inalámbrica de las baterías de la mochila.\end{tabular} &
-  REQ-11 &
-  P F - I D T \\ \hline
-\textbf{INT-FUN-11} &
-  \begin{tabular}[c]{@{}c@{}}Garantizar el abastecimiento energético de la mochila \\ del pájaro por una duración de cuatro a cinco meses posterior a la\\ intervención en el nido y el pájaro para la instalación del proyecto.\end{tabular} &
-  REQ-14 &
-  P F - I D T \\ \hline
-\textbf{INT-FUN-12} &
-  \begin{tabular}[c]{@{}c@{}}El sistema deberá poder obtener valores del sensor de\\ temperatura entre 5 y 60 minutos.\end{tabular} &
+INT-FUN-10 &
+  \begin{tabular}[c]{@{}l@{}}Determinar, dentro de las limitaciones tecnológicas, financieras,\\ legales y morales, además de los requisitos energéticos de la mochila,\\ si es posible la recarga inalámbrica de las baterías de la mochila.\end{tabular} &
+  REQ-12 &
+  P F - D \\ \hline
+INT-FUN-11 &
+  \begin{tabular}[c]{@{}l@{}}Garantizar el abastecimiento energético de la mochila \\ del pájaro por una duración de cuatro a cinco meses posterior a la\\ intervención en el nido y el pájaro para la instalación del proyecto.\end{tabular} &
+  REQ-15 &
+  P F - D \\ \hline
+INT-FUN-12 &
+  \begin{tabular}[c]{@{}l@{}}El sistema deberá poder obtener valores del sensor de\\ temperatura entre 5 y 60 minutos.\end{tabular} &
   REQ-04 &
   P F - I D T \\ \hline
-\textbf{INT-FUN-13} &
-  \begin{tabular}[c]{@{}c@{}}El sistema deberá poder obtener valores del sensor de\\ humedad entre 5 y 60 minutos.\end{tabular} &
+INT-FUN-13 &
+  \begin{tabular}[c]{@{}l@{}}El sistema deberá poder obtener valores del sensor de\\ humedad entre 5 y 60 minutos.\end{tabular} &
   REQ-04 &
   P F - I D T \\ \hline
-\textbf{INT-FUN-14} &
-  \begin{tabular}[c]{@{}c@{}}El sistema deberá poder obtener valores del sensor de\\ luminosidad entre 5 y 60 minutos.\end{tabular} &
+INT-FUN-14 &
+  \begin{tabular}[c]{@{}l@{}}El sistema deberá poder obtener valores del sensor de\\ luminosidad entre 5 y 60 minutos.\end{tabular} &
   REQ-04 &
   P F - I D T \\ \hline
-\textbf{INT-FUN-15} &
+INT-FUN-15 &
   El sistema deberá poder obtener imágenes entre 5 minutos y 60 minutos. &
   REQ-04 &
   P F - I D T \\ \hline
-\textbf{INT-FUN-16} &
-  \begin{tabular}[c]{@{}c@{}}El sistema deberá poder obtener video del nido en tiempo real transmitido\\ a una persona en la base del nido.\end{tabular} &
+INT-FUN-16 &
+  \begin{tabular}[c]{@{}l@{}}El sistema deberá poder obtener video del nido en tiempo real transmitido\\ a una persona en la base del nido.\end{tabular} &
   REQ-04 &
   P F - I D T \\ \hline
-\textbf{INT-FUN-17} &
-  \begin{tabular}[c]{@{}c@{}}El sistema deberá poder obtener la ubicación del ave al menos\\  cada una hora siempre y cuando el ave se encuentre dentro de\\  una determinada distancia del nido definido por un proyecto ajeno a este.\end{tabular} &
+INT-FUN-17 &
+  \begin{tabular}[c]{@{}l@{}}El sistema deberá poder obtener la ubicación del ave al menos\\ cada una hora siempre y cuando el ave se encuentre dentro de\\ una determinada distancia del nido definido por un proyecto ajeno a este.\end{tabular} &
   REQ-04 &
   P F - I D T \\ \hline
-\textbf{INT-FUN-18} &
-  \begin{tabular}[c]{@{}c@{}}El sistema utilizará paneles solares para cargar una\\ batería de gel de ciclo profundo.\end{tabular} &
+INT-FUN-18 &
+  \begin{tabular}[c]{@{}l@{}}El sistema utilizará paneles solares para cargar una\\ batería de gel de ciclo profundo.\end{tabular} &
   REQ-02 &
+  P F - I D T \\ \hline
+INT-FUN-19 &
+  El producto debe tener un módulo RTC configurable. &
+  REQ-05 &
+  P F - I D \\ \hline
+INT-FUN-20 &
+  \begin{tabular}[c]{@{}l@{}}El producto debe ser capaz de mantener registro de la hora y fecha\\ correcta luego de ser previamente configurada.\end{tabular} &
+  REQ-05 &
+  P F - I D T \\ \hline
+INT-FUN-21 &
+  \begin{tabular}[c]{@{}l@{}}Ante la pérdida total de la alimentación de la unidad de energía y el\\ eventual rebastecimiento de esta, el producto debe ser capaz de \\ mantener registro de la hora y fecha correcta luego de ser previamente \\ configurada.\end{tabular} &
+  REQ-05 &
   P F - I D T \\ \hline
 \end{tabular}
 \caption{Especificaciones funcionales.}
@@ -104,23 +114,23 @@ ID &
 
 \begin{table}[H]
 \centering
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|c|l|c|c|}
 \hline
-ID &
-  \textbf{Descripción} &
+\textbf{ID} &
+  \multicolumn{1}{c|}{\textbf{Descripción}} &
   \textbf{Origen} &
   \textbf{\begin{tabular}[c]{@{}c@{}}Aplicabilidad\\ Validación\end{tabular}} \\ \hline
-\textbf{INT-COM1-01} &
-  \begin{tabular}[c]{@{}c@{}}La transmisión de datos entre el nido y la base principal de detección \\ deberá tener un alcance de entre uno y cinco metros.\end{tabular} &
-  REQ-05 &
+INT-COM1-01 &
+  \begin{tabular}[c]{@{}l@{}}La transmisión de datos entre el nido y la base principal de detección \\ deberá tener un alcance de entre uno y cinco metros.\end{tabular} &
+  REQ-06 &
   P F - I D T \\ \hline
-\textbf{INT-COM1-02} &
-  \begin{tabular}[c]{@{}c@{}}La transmisión de datos se efectuará apenas la base principal de\\ detección reciba un dato de ubicación del ave.\end{tabular} &
-  REQ-05 &
+INT-COM1-02 &
+  \begin{tabular}[c]{@{}l@{}}La transmisión de datos se efectuará apenas la base principal de\\ detección reciba un dato de ubicación del ave.\end{tabular} &
+  REQ-06 &
   P F - I D T \\ \hline
-\textbf{INT-COM1-03} &
-  \begin{tabular}[c]{@{}c@{}}La transmisión de datos deberá efectuarse por\\ medio del protocolo BLE.\end{tabular} &
-  REQ-05 &
+INT-COM1-03 &
+  \begin{tabular}[c]{@{}l@{}}La transmisión de datos deberá efectuarse por\\ medio del protocolo BLE.\end{tabular} &
+  REQ-06 &
   P F - I D T \\ \hline
 \end{tabular}
 \caption{Especificaciones de intefaz COM1.}
@@ -128,15 +138,36 @@ ID &
 
 \begin{table}[H]
 \centering
-\begin{tabular}{|l|l|l|c|}
+\begin{tabular}{|c|l|c|c|}
 \hline
-\multicolumn{1}{|c|}{\textbf{ID}} & \multicolumn{1}{c|}{\textbf{Descripción}}                                                                                                                                                                                                                                                     & \multicolumn{1}{c|}{\textbf{Origen}} & \textbf{\begin{tabular}[c]{@{}c@{}}Aplicabilidad\\ Validación\end{tabular}} \\ \hline
-INT-COM2-01                       & \begin{tabular}[c]{@{}l@{}}La transmisión de datos desde el nido hacia una\\ persona deberá ser del tipo flush, descargándose al\\ dispositivo de la persona todos los datos almacenados\\ en el nido, liberando a la vez todo el espacio de\\ almacenamiento de datos del nido.\end{tabular} & REQ-07                               & P F - I D T                                                                 \\ \hline
-INT-COM2-02                       & \begin{tabular}[c]{@{}l@{}}La transmisión de datos deberá tener un alcance\\ 15 a 20 metros.\end{tabular}                                                                                                                                                                                     & REQ-07                               & P F - I D T                                                                 \\ \hline
-INT-COM2-03                       & \begin{tabular}[c]{@{}l@{}}La transmisión de datos será inicializada en las horas diurnas.\end{tabular}                                                                                                                                                                      & REQ-07                               & P F - I D T                                                                 \\ \hline
-INT-COM2-04                       & \begin{tabular}[c]{@{}l@{}}La transmisión de datos deberá efectuarse por\\ medio del protocolo WiFi.\end{tabular}                                                                                                                                                                             & REQ-07                               & P F - I D T                                                                 \\ \hline
-INT-COM2-05                       & \begin{tabular}[c]{@{}l@{}}El descarte de los datos almacenados en el nido\\ sucederá una vez completa la transmisión sin\\ interrupciones prematuras.\end{tabular}                                                                                                                           & REQ-07                               & P F - I D T                                                                 \\ \hline
-INT-COM2-06                       & \begin{tabular}[c]{@{}l@{}}Se le indicará a la persona que los datos fueron\\ transmitidos al finalizar dicho proceso.\end{tabular}                                                                                                                                                           & REQ-07                               & P F - I D T                                                                 \\ \hline
+\textbf{ID} &
+  \multicolumn{1}{c|}{\textbf{Descripción}} &
+  \textbf{Origen} &
+  \textbf{\begin{tabular}[c]{@{}c@{}}Aplicabilidad\\ Validación\end{tabular}} \\ \hline
+INT-COM2-01 &
+  \begin{tabular}[c]{@{}l@{}}La transmisión de datos desde el nido hacia una\\ persona deberá ser del tipo flush, descargándose al\\ dispositivo de la persona todos los datos seleccionados \\ almacenados en el nido, liberando a la vez todo el espacio de\\ almacenamiento de datos del nido.\end{tabular} &
+  REQ-08 &
+  P F - I D T \\ \hline
+INT-COM2-02 &
+  \begin{tabular}[c]{@{}l@{}}La transmisión de datos deberá tener un alcance\\ 15 a 20 metros.\end{tabular} &
+  REQ-08 &
+  P F - I D T \\ \hline
+INT-COM2-03 &
+  \begin{tabular}[c]{@{}l@{}}La transmisión de datos deberá ser inicializada\\ por la persona de modo manual.\end{tabular} &
+  REQ-08 &
+  P F - I D T \\ \hline
+INT-COM2-04 &
+  \begin{tabular}[c]{@{}l@{}}La transmisión de datos deberá efectuarse por\\ medio del protocolo WiFi.\end{tabular} &
+  REQ-08 &
+  P F - I D T \\ \hline
+INT-COM2-05 &
+  \begin{tabular}[c]{@{}l@{}}El descarte de los datos almacenados en el nido\\ sucederá una vez completa la transmisión sin\\ interrupciones prematuras.\end{tabular} &
+  REQ-08 &
+  P F - I D T \\ \hline
+INT-COM2-06 &
+  \begin{tabular}[c]{@{}l@{}}Se le indicará a la persona que los datos fueron\\ transmitidos al finalizar dicho proceso.\end{tabular} &
+  REQ-08 &
+  P F - I D T \\ \hline
 \end{tabular}
 \caption{Especificaciones de interfaz COM2.}
 \label{tab:esp_com_wifi}
@@ -164,9 +195,9 @@ IMP-DIM-04                        & \begin{tabular}[c]{@{}l@{}}La unidad de ener
 \begin{tabular}{|c|l|l|c|}
 \hline
 \textbf{ID} & \multicolumn{1}{c|}{\textbf{Descripción}}                                                                                                                                                                                                                                                                                                                                                 & \multicolumn{1}{c|}{\textbf{Origen}} & \textbf{\begin{tabular}[c]{@{}c@{}}Aplicabilidad\\ Validación\end{tabular}} \\ \hline
-IMP-OPE-01  & \begin{tabular}[c]{@{}l@{}}El sistema deberá poder operar normalmente cuando la \\ temperatura  ambiente sea -20°C < $\text{T}_{\text{AMB}}$ < 30°C.\end{tabular}                                                                                           & REQ-09                               & F - I D                                                                     \\ \hline
-IMP-OPE-02  & \begin{tabular}[c]{@{}l@{}}Deberá poder operar normalmente cuando la humedad\\ sea: 0\% < RH < 100\%\end{tabular}                                                                                                                                         & REQ-09                               & F - I D                                                                     \\ \hline
-IMP-OPE-03  & \begin{tabular}[c]{@{}l@{}}El dispositivo deberá poder operar normalmente cuando\\ la presión atmosférica sea: 84 kPa < $\text{P}_{\text{ATM}}$ < 90 kPa.\\ Esto equivale a 1500 m de altura para el mínimo de\\ presión, y un máximo de 0 m.\end{tabular} & REQ-09                               & F - I D                                                                     \\ \hline
+IMP-OPE-01  & \begin{tabular}[c]{@{}l@{}}El sistema deberá poder operar normalmente cuando la \\ temperatura  ambiente sea -20°C < $\text{T}_{\text{AMB}}$ < 30°C.\end{tabular}                                                                                           & REQ-10                               & F - I D                                                                     \\ \hline
+IMP-OPE-02  & \begin{tabular}[c]{@{}l@{}}Deberá poder operar normalmente cuando la humedad\\ sea: 0\% < RH < 100\%\end{tabular}                                                                                                                                         & REQ-10                               & F - I D                                                                     \\ \hline
+IMP-OPE-03  & \begin{tabular}[c]{@{}l@{}}El dispositivo deberá poder operar normalmente cuando\\ la presión atmosférica sea: 84 kPa < $\text{P}_{\text{ATM}}$ < 90 kPa.\\ Esto equivale a 1500 m de altura para el mínimo de\\ presión, y un máximo de 0 m.\end{tabular} & REQ-10                               & F - I D                                                                     \\ \hline
 \end{tabular}
 \caption{Especificaciones de operación.}
 \end{table}
@@ -174,13 +205,28 @@ IMP-OPE-03  & \begin{tabular}[c]{@{}l@{}}El dispositivo deberá poder operar nor
 
 \begin{table}[H]
 \centering
-\begin{tabular}{|l|l|l|l|}
+\begin{tabular}{|c|l|c|c|}
 \hline
-\multicolumn{1}{|c|}{\textbf{ID}} & \multicolumn{1}{c|}{\textbf{Descripción}}                                                                                                                                    & \multicolumn{1}{c|}{\textbf{Origen}} & \textbf{\begin{tabular}[c]{@{}c@{}}Aplicabilidad\\ Validación\end{tabular}} \\ \hline
-IMP-AYT-01                        & \begin{tabular}[c]{@{}l@{}}No se deberán sufrir daños cuando, estando\\ desenergizado, la temperatura ambiente\\ sea -20°C < $\text{T}_{\text{AMB}}$ < 40°C.\end{tabular}    & REQ-09                               & P F - I D                                                                   \\ \hline
-IMP-AYT-02                        & \begin{tabular}[c]{@{}l@{}}No se deberán sufrir daños cuando, estando\\ desenergizado, la humedad\\ sea 0\% < RH < 100\%.\end{tabular}                                       & REQ-09                               & P F - I D                                                              \\ \hline
-IMP-AYT-03                        & \begin{tabular}[c]{@{}l@{}}No se deberán sufrir daños cuando, estando\\ desenergizado, la presión atmosférica\\ sea 84 kPa < $\text{P}_{\text{ATM}}$ < 101 kPa.\end{tabular} & REQ-09                               & P F - I D                                                              \\ \hline
+\textbf{ID} & \multicolumn{1}{c|}{\textbf{Descripción}} & \textbf{Origen} & \textbf{\begin{tabular}[c]{@{}c@{}}Aplicabilidad\\ Validación\end{tabular}} \\ \hline
+IMP-AYT-01 &
+  \begin{tabular}[c]{@{}l@{}}No se deberán sufrir daños cuando, estando\\ desenergizado, la temperatura ambiente\\ sea -20°C < $\text{T}_{\text{AMB}}$ < 40°C.\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}REQ-10\\ REQ-13\end{tabular} &
+  P F - I D \\ \hline
+IMP-AYT-02 &
+  \begin{tabular}[c]{@{}l@{}}No se deberán sufrir daños cuando, estando\\ desenergizado, la humedad\\ sea 0\% < RH < 100\%.\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}REQ-10\\ REQ-13\end{tabular} &
+  P F - I D \\ \hline
+IMP-AYT-03 &
+  \begin{tabular}[c]{@{}l@{}}No se deberán sufrir daños cuando, estando\\ desenergizado, la presión atmosférica\\ sea 84 kPa < $\text{P}_{\text{ATM}}$ < 101 kPa.\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}REQ-10\\ REQ-13\end{tabular} &
+  P F - I D \\ \hline
 \end{tabular}
+%\hline
+%\multicolumn{1}{|c|}{\textbf{ID}} & \multicolumn{1}{c|}{\textbf{Descripción}}                                                                                                                                    & \multicolumn{1}{c|}{\textbf{Origen}} & \textbf{\begin{tabular}[c]{@{}c@{}}Aplicabilidad\\ Validación\end{tabular}} \\ \hline
+%IMP-AYT-01                        & \begin{tabular}[c]{@{}l@{}}No se deberán sufrir daños cuando, estando\\ desenergizado, la temperatura ambiente\\ sea -20°C < $\text{T}_{\text{AMB}}$ < 40°C.\end{tabular}    & REQ-10                               & P F - I D                                                                   \\ \hline
+%IMP-AYT-02                        & \begin{tabular}[c]{@{}l@{}}No se deberán sufrir daños cuando, estando\\ desenergizado, la humedad\\ sea 0\% < RH < 100\%.\end{tabular}                                       & REQ-10                               & P F - I D                                                              \\ \hline
+%IMP-AYT-03                        & \begin{tabular}[c]{@{}l@{}}No se deberán sufrir daños cuando, estando\\ desenergizado, la presión atmosférica\\ sea 84 kPa < $\text{P}_{\text{ATM}}$ < 101 kPa.\end{tabular} & REQ-10                               & P F - I D                                                              \\ \hline
+%\end{tabular}
 \caption{Especificaciones de almacenamiento y transporte.}
 \end{table}
 
@@ -190,18 +236,27 @@ IMP-AYT-03                        & \begin{tabular}[c]{@{}l@{}}No se deberán su
 \begin{tabular}{|l|l|l|l|}
 \hline
 \multicolumn{1}{|c|}{\textbf{ID}} & \multicolumn{1}{c|}{\textbf{Descripción}                                                                                                                                                                                } & \multicolumn{1}{c|}{\textbf{Origen}}                       & \textbf{\begin{tabular}[c]{@{}c@{}}Aplicabilidad\\ Validación\end{tabular}} \\ \hline
-RAM-CON-01  & \begin{tabular}[c]{@{}l@{}}El producto deberá tener una vida útil no\\ menor a 2 años.\end{tabular} & REQ-13          & P F - D                                                                     \\ \hline
+RAM-CON-01  & \begin{tabular}[c]{@{}l@{}}El producto deberá tener una vida útil no\\ menor a 2 años.\end{tabular} & REQ-14          & P F - D                                                                     \\ \hline
 \end{tabular}
 \caption{Especificaciones de confiabilidad.}
 \end{table}
 
 \begin{table}[H]
 \centering
-\begin{tabular}{|l|l|l|c|}
+\begin{tabular}{|c|l|c|c|}
 \hline
-\multicolumn{1}{|c|}{\textbf{ID}} & \multicolumn{1}{c|}{\textbf{Descripción}}                                                                                                                        & \multicolumn{1}{c|}{\textbf{Origen}} & \textbf{\begin{tabular}[c]{@{}c@{}}Aplicabilidad\\ Validación\end{tabular}} \\ \hline
-RAM-SEG-01                        & \begin{tabular}[c]{@{}l@{}}El dispositivo contará con un sistema de autenticación\\ ante el pedido de transmisión de datos definido\\ por INT-COM2.\end{tabular} & REQ-07                               & F - I D T                                                                   \\ \hline
-RAM-SEG-02                        & \begin{tabular}[c]{@{}l@{}}El dispositivo no poseerá luces ni elementos reflectantes\\ para no ser percibido.\end{tabular}                                       & REQ-08                               & F - I D T                                                                   \\ \hline
+\textbf{ID} &
+  \multicolumn{1}{c|}{\textbf{Descripción}} &
+  \textbf{Origen} &
+  \textbf{\begin{tabular}[c]{@{}c@{}}Aplicabilidad\\ Validación\end{tabular}} \\ \hline
+RAM-SEG-01 &
+  \begin{tabular}[c]{@{}l@{}}El dispositivo contará con un sistema de autenticación\\ ante el pedido de transmisión de datos definido\\ por INT-COM2.\end{tabular} &
+  REQ-08 &
+  F - I D T \\ \hline
+RAM-SEG-02 &
+  \begin{tabular}[c]{@{}l@{}}El dispositivo no poseerá luces ni elementos reflectantes\\ para no ser percibido.\end{tabular} &
+  REQ-09 &
+  F - I D \\ \hline
 \end{tabular}
 \caption{Especificaciones de seguridad.}
 \end{table}
