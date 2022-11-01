@@ -139,7 +139,9 @@ Por el lado del receptor, se encuentra el integrado P1110B, el cual almacena ene
 	\label{fig:diagrama_hardware_antenas}
 \end{figure}
 
-Para la transmisión de la señal de $915 \ MHz$ se utilizará cable del tipo \textit{RG-213} el cual posee bajas pérdidas de $23.054 \ \nicefrac{dB}{100m}$.\\
+Para la trasmisión de la señal de $915 \ MHZ$ se utiliza un cable del tipo \textit{RG-213}. Este se caracteriza por poseer bajas perdidas de $23.054 \ \nicefrac{dB}{100m}$.
+
+\bigskip
 
 \textbf{Oscilador 915 MHz}
 
@@ -178,13 +180,11 @@ Para el amplificador de potencia de RF, como las unidades a producir serán muy 
 \end{figure}
 
 Para la recepción de la radiofrecuencia se utilizará el power harvester P1110B. Este integrado toma la señal de radiofrecuencia y realiza con esta la carga de un capacitor. Cuando el capacitor llega a un valor de tensión máximo, habilita la salida mediante una etapa DC-DC hasta que el capacitor baja su tensión por debajo de un mínimo para volver a cargarse hasta el máximo.
-
-
 \begin{itemize}
-\item Eficiencia del $70 \ \%$.
-\item Adaptado internamente a $50 \ \Omega$.
-\item Operación por encima de $-5 \ dBm$.
-\item Opción de carga para Li-ion y baterías alcalinas.
+	\item Eficiencia del $70 \ \%$.
+	\item Adaptado internamente a $50 \ \Omega$.
+	\item Operación por encima de $-5 \ dBm$.
+	\item Opción de carga para Li-ion y baterías alcalinas.
 \end{itemize}
 
 \Subsubsubsection{Amplificador de Potencia}
@@ -314,7 +314,9 @@ Para el integrado de energy harvesting se optó por el P1110 debido a su elevada
 
 Por un lado, para el caso de las antenas transmisoras, se descartan APAE915R2540ABDB1-T, APAES915R80C16-T y ARRKP7059-S915B por su baja ganancia, además del alto costo de las últimas dos. También se descarta W3215 por ser de polarización lineal. Por lo que restan la antena \textbf{ISPC.91A.09.0092E} para la etapa de ensayo.
 
-Por otro lado, para las antenas receptoras, se descarta ANT-915-USP410 por baja eficiencia, y FXP290.07.0100A por ser muy grande. Además, se descartan 1513156-1 y ANT1204F005R0915A por ser de polarización lineal. \textbf{ANT-915-CPA} y \textbf{NN01-105} pasan a la etapa de ensayo por más que NN01-105 sea de polarización lineal.
+Por otro lado, para las antenas receptoras, se descarta ANT-915-USP410 por su baja eficiencia. Se quita FXP\-290.07.0100A por ser demasiado grande. Finalmente deja de lado las antenas 1513156-1 y ANT1204F005R0915A por ser ambas de polarización lineal.
+
+Tanto \textbf{ANT-915-CPA} como \textbf{NN01-105} pasan a una etapa de ensayo, a pesar de que NN01-105 es de polarización lineal.
 
 Se tomaron estas antenas y se calculó para cada par Tx-Rx la potencia recibida en la antena receptora en función de la distancia.
 
