@@ -1,23 +1,123 @@
-%Para el plan de pruebas se construyeron dos opciones para la transmisión de energía con las antenas que buscan explorar aspectos distintos del sistema. Por un lado, el CAERCEM del ITBA posee un transmisor en la banda UHF de hasta 20 W que se podría utilizar para aislar al sistema de recepción. Por otro lado, para probar el sistema de transmisión y recepción en conjunto, se utilizará un módulo oscilador HM-TRPW-RS232 en 915 MHz en cascada con un amplificador de potencia apto para radiofrecuencia que será alimentado mediante una etapa DC-DC conectado a la batería de la unidad de energía. La salida del amplificador será llevada hasta la antena transmisora utilizando cable mallado RG-213 apto para radiofrecuencia y de bajas pérdidas.
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=0.9\linewidth]{ImagenesIngenieria de Detalle/planDePruebasAntenasA}	
-%	\caption{Plan de pruebas Antenas A.}
-%	\label{fig:planDePruebasAntenasA}
-%\end{figure}
-%
-%Del lado de la recepción, se conectará la antena receptora a la placa de evaluación del P1110 y se medirá la tensión en el supercapacitor provisto en esta. Conociendo la capacitancia y el valor de tensión a lo largo del tiempo se puede validar la potencia recibida.
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=0.8\linewidth]{ImagenesIngenieria de Detalle/planDePruebasAntenasB}	
-%	\caption{Plan de pruebas Antenas B.}
-%	\label{fig:planDePruebasAntenasB}
-%\end{figure}
 
-En cuanto al plan de pruebas, se comparan los resultados de los sensores del sistema contra unos previamente calibrados.
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\linewidth]{ImagenesIngenieria de Detalle/planDePruebasSensores}	
-	\caption{Plan de pruebas sensores.}
-	\label{fig:planDePruebasSensores}
-\end{figure}
+Test \TBC se utiliza el banco de pruebas \#1:
+\begin{itemize}
+\item se debe conectar la Raspberry Pi a la fuente de tensión mediante el cable de alimentación mini USB
+\item Se debe utilizar la computadora para conectarse para conectarse a la misma red WIFI a la que esté conectada la Raspberry Pi.
+\item Desde la terminal de la computadora se deben insertar las siguientes lineas:
+\begin{lstlisting}[language=Python]
+ssh pi@[IP Raspberry Pi] 
+cd simfs/Python_Scripts/
+python3 getTime.py
+\end{lstlisting}
+\item Verificar que la hora impresa en la terminal coincida con la hora correspondiente al lugar de instalación del producto.
+\end{itemize}
+
+Test \TBC se utiliza el banco de pruebas \#1:
+\begin{itemize}
+\item se debe conectar la Raspberry Pi a la fuente de tensión mediante el cable de alimentación mini USB
+\item Se debe utilizar la computadora para conectarse para conectarse a la misma red WIFI a la que esté conectada la Raspberry Pi.
+\item Desde la terminal de la computadora se deben insertar las siguientes lineas:
+\begin{lstlisting}[language=Python]
+ssh pi@[IP Raspberry Pi] 
+cd simfs/Python_Scripts/Clases
+python3 print_measures.py
+\end{lstlisting}
+\item Verificar que la diferencia horaria impresa en la terminal correspondiente a las mediciones sea la especificada.
+\end{itemize}
+
+
+Test \TBC se utiliza el banco de pruebas \#2:
+\begin{itemize}
+\item se debe conectar la Raspberry Pi a la fuente de tensión mediante el cable de alimentación mini USB
+\item Se debe utilizar la computadora para conectarse para conectarse a la misma red WIFI a la que esté conectada la Raspberry Pi.
+\item Abrir un navegador de internet y conectarse a la página "192.168.0.1:1880"
+\item Prender el sensor de temperatura calibrado y colocarlo próximo al sensor del producto.
+\item Corroborar que la lectura en el sensor calibrada coincida con el provisto por la página con una desviación de como máximo  $ \pm 0.5^\circ C $
+\end{itemize}
+
+Test \TBC se utiliza el banco de pruebas \#2:
+\begin{itemize}
+\item se debe conectar la Raspberry Pi a la fuente de tensión mediante el cable de alimentación mini USB
+\item Se debe utilizar la computadora para conectarse para conectarse a la misma red WIFI a la que esté conectada la Raspberry Pi.
+\item Abrir un navegador de internet y conectarse a la página "192.168.0.1:1880"
+\item Prender el sensor de humedad calibrado y colocarlo próximo al sensor del producto.
+\item Corroborar que la lectura en el sensor calibrada coincida con el provisto por la página con una desviación de como máximo  $ \pm  2\%	 $
+\end{itemize}
+
+Test \TBC se utiliza el banco de pruebas \#2:
+\begin{itemize}
+\item se debe conectar la Raspberry Pi a la fuente de tensión mediante el cable de alimentación mini USB
+\item Se debe utilizar la computadora para conectarse para conectarse a la misma red WIFI a la que esté conectada la Raspberry Pi.
+\item Abrir un navegador de internet y conectarse a la página "192.168.0.1:1880"
+\item Prender el sensor de luminosidad calibrado y colocarlo próximo al sensor del producto.
+\item Corroborar que la lectura en el sensor calibrada coincida con el provisto por la página con una desviación de como máximo  $ \pm 0.5 lux	 $
+\end{itemize}
+
+
+Test \TBC se utiliza el banco de pruebas \#4:
+\begin{itemize}
+\item se debe conectar la Raspberry Pi a la fuente de tensión mediante el cable de alimentación mini USB
+\item Se debe utilizar la computadora para conectarse para conectarse a la misma red WiFi a la que esté conectada la Raspberry Pi.
+\item Abrir un navegador de internet y conectarse a la página "192.168.0.1:1880"
+\item Energizar el módulo BLE previamente configurado
+\item Colocar el módulo a una distancia menor a 60cm del sensor de presencia.
+\item Corroborar que el estado de presencia mostrado en la página web coincida la presencia del módulo.
+\end{itemize}
+
+Test \TBC se utiliza el banco de pruebas \#2: 	
+\begin{itemize}
+\item se debe conectar la Raspberry Pi a la fuente de tensión mediante el cable de alimentación mini USB
+\item Se debe utilizar la computadora para conectarse para conectarse a la misma red WIFI a la que esté conectada la Raspberry Pi.
+\item Abrir un navegador de internet y conectarse a la página "192.168.0.1:1880"
+\item Seleccionar un rango de fechas que abarquen todos los datos y descargarlos.
+\item Desde la terminal de la computadora se deben insertar las siguientes lineas:
+\begin{lstlisting}[language=Python]
+ssh pi@[IP Raspberry Pi] 
+cd simfs/Python_Scripts/Clases
+python3 print_measures.py
+\end{lstlisting}
+
+\item Corroborar que la lectura de la terminal coincida con los archivos descargados.
+\end{itemize}
+
+
+Test \TBC se utiliza el banco de pruebas \#3:
+
+\begin{itemize}
+\item Se conectan todos los módulos del producto, y se pone en funcionamiento.
+\TBC
+\end{itemize}
+Test \TBC se utiliza el banco de pruebas \#5:
+\begin{itemize}
+\item Se toma le producto junto a la cinta métrica
+\item Se miden las dimensiones del producto, todos sus componentes y se anotan por separado.
+\item Se coloca las partes del producto en una balanza, para pesarlos por separado.
+\item Se cotejan los resultados con las especificaciones 
+\end{itemize}
+
+Test \TBC se utiliza el banco de pruebas \#1:
+\begin{itemize}
+\item se debe conectar la Raspberry Pi a la fuente de tensión mediante el cable de alimentación mini USB
+\item Se debe utilizar la computadora para conectarse para conectarse a la misma red WIFI a la que esté conectada la Raspberry Pi.
+\item Desde la terminal de la computadora se deben insertar las siguientes lineas:
+\begin{lstlisting}[language=Python]
+ssh pi@[IP Raspberry Pi] 
+cd simfs/Python_Scripts/
+python3 getTime.py
+\end{lstlisting}
+\item Anotar el valor que se encuentra en la terminal
+\item Desde la terminal de la computadora se deben insertar las siguientes lineas:
+\begin{lstlisting}[language=Python]
+sudo shutdown -h now
+\end{lstlisting}
+\item Esperar 1 minuto
+\item Renergizar la Rapsberry Pi
+\item Desde la terminal de la computadora se deben insertar las siguientes lineas:
+\begin{lstlisting}[language=Python]
+ssh pi@[IP Raspberry Pi] 
+cd simfs/Python_Scripts/
+python3 getTime.py
+\end{lstlisting}
+\item Verificar que la hora impresa en la terminal coincida con la hora correspondiente al lugar de instalación del producto.
+\end{itemize}
+
