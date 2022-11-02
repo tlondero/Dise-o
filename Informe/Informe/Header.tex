@@ -3,7 +3,7 @@
 \usepackage[spanish, es-tabla, es-noshorthands]{babel}
 \usepackage[table,xcdraw,dvipsnames]{xcolor}
 \usepackage[a4paper, footnotesep=1.25cm, headheight=1.25cm, top=2.54cm, left=2.54cm,
- bottom=2.54cm, right=2.54cm, twoside=true]{geometry}
+ bottom=2.54cm, right=2.54cm, twoside=false]{geometry}
 %\geometry{showframe}
 \usepackage[normalem]{ulem}
 \useunder{\uline}{\ul}{}
@@ -77,7 +77,7 @@
 %Esto arregla el error del footer del index (junto con \thispagestyle{fancy} en el comando de MyIndex)
 \fancypagestyle{plain}{
   \fancyhf{}% clear all fields
-  \fancyfoot[LE,RO]{\thepage}%
+  \fancyfoot[RO]{\thepage}%
   \fancyfoot[C]{}%
   \renewcommand{\headrulewidth}{0pt}%
 }

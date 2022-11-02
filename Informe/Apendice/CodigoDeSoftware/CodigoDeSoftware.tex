@@ -447,3 +447,27 @@ if __name__ == "__main__":
     print(isBirdInNest)
 \end{lstlisting}
 \end{minipage}}
+
+\Subsubsection{printMeasures}
+
+\vspace{1mm}
+\noindent{\begin{minipage}{\linewidth}
+\begin{lstlisting}[language=Python]
+import Database_TyH
+import Database_Lum
+
+db_TyH = Database_TyH.Database_TyH(using_file = True,foldername = '../db')
+data = db_TyH.get_all_meas();
+print("========Temperature and Humidity measures========")
+print(data)
+db_Lum = Database_Lum.Database_Lum(using_file = True,foldername = '../db')
+data = db_Lum.get_all_meas();
+print("========Luminosity measures========")
+print(data)
+db_Pres = Database_Pres.Database_Pres(using_file = True,
+	foldername = '../db')
+data = db_Pres.get_all_meas();
+print("========Presence measures========")
+print(data)
+\end{lstlisting}
+\end{minipage}}
