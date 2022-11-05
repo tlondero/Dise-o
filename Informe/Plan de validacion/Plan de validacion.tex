@@ -2,7 +2,6 @@
 %
 %\begin{document}
 
-
 \Subsection{Diseño de Banco de Pruebas}
 \label{sec:BancoDePruebas}
 %\input{../Plan de validacion/BancoDePruebas/BancoDePruebasTablas.tex}
@@ -12,10 +11,32 @@
 \label{sec:PlanValidacion}
 \input{../Plan de validacion/PlanValidacion/Tabla-PlanDeValidacion.tex}
 
+\Subsubsection{Test de Funcionalidad}
+\textbf{Precondiciones:}
+Para realizar la prueba T-INT-FUN-11 las anteriores deben haberse realizado satisfactoriamente.
+
+\textbf{Procedimiento general:}
+Conectar la Raspberry Pi a la alimentación de tensión mediante el cable de alimentación mini USB.
+
 \defaultstyle
 \input{../Plan de validacion/PlanValidacion/Tabla-TestFuncionalidad-1.tex}
 \input{../Plan de validacion/PlanValidacion/Tabla-TestFuncionalidad-2.tex}
 \input{../Plan de validacion/PlanValidacion/Tabla-TestFuncionalidad-3.tex}
+
+\Subsubsection{Test de Comunicación}
+\textbf{Precondiciones:} Se debe tener un conjunto de datos conocidos para enviar por BLE. Una subrutina para transmisión de datos en el módulo BLE de pruebas.
+
+\textbf{Procedimiento general:} Se debe energizar el módulo BLE. Se debe energizar la Raspberry Pi y conectarse a ella utilizando una computadora conectada a la red
+SIMFS\_HOTSPOT. En la terminal de la computadora colocar:
+\begin{lstlisting}[language=Python]
+ssh pi@[IP Raspberry Pi] 
+cd simfs/PythonScripts/
+\end{lstlisting}
+
+\input{../Plan de validacion/PlanValidacion/Tabla-TestComunicacion.tex}
+
+\Subsubsection{Test de Peso, Dimensión y Seguridad}
+\input{../Plan de validacion/PlanValidacion/Tabla-TestPesoSegDim.tex}
 
 \Subsection{Matriz de Trazabilidad de Validación}
 \label{sec:MatrizTrazabilidad}
