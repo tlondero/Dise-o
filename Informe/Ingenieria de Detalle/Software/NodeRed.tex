@@ -13,17 +13,18 @@ Dado que este servidor se encuentra corriendo en la R-Pi, al conectarse a la red
 La interfaz gráfica a la cual el usuario tiene acceso posee distintas pestañas, donde cada una brinda un parámetro diferente. En la primer pestaña es posible ver las mediciones realizadas de luminosidad, temperatura y humedad en tiempo real. Además como el sistema detecta la presencia del ave, se muestra si este se encuentra dentro del nido o no. Por último se brinda al usuario la posibilidad de ver la una trasmisión en tiempo real del nido por dentro.
 \begin{figure}[H]
 \centering
-    	\minipage{0.49\textwidth}
+    	\begin{subfigure}{0.49\textwidth}
         	\centering
         	\includegraphics[width=\linewidth]{ImagenesIngenieria de Detalle/Node-Red-Live-Dark}		
 			\caption{Interfaz con usuario versión oscura.}
 			\label{fig:front_end_dark}
-        \endminipage\hfill
-        \minipage{0.49\textwidth}
+        \end{subfigure}\hfill
+        \begin{subfigure}{0.49\textwidth}
         	\centering
-        	\includegraphics[width=\linewidth]{ImagenesIngenieria de Detalle/Node-Red-Live-Light}				\caption{Interfaz con usuario versión clara.}
+        	\includegraphics[width=\linewidth]{ImagenesIngenieria de Detalle/Node-Red-Live-Light}				
+        	\caption{Interfaz con usuario versión clara.}
 			\label{fig:front_end_light}
-        \endminipage
+        \end{subfigure}
 	\caption{Página del servidor a la cual accede el usuario.}
 	\label{fig:node_red_live}
 \end{figure}
@@ -57,17 +58,18 @@ La cuarta y última pestaña le brinda al usuario cierto margen de configuració
 También es posible determinar si se desea o no emplear un filtro en la cámara al momento tomar fotos, considerando el nivel luminosidad. En caso de que dicha variable posea un valor bajo se emplea el filtro mejorando así la luminosidad de la foto.
 \begin{figure}[H]
 \centering
-    	\minipage{0.49\textwidth}
+    	\begin{subfigure}{0.49\textwidth}
         	\centering
         	\includegraphics[width=\linewidth]{ImagenesIngenieria de Detalle/ImagenDevSF_2}		
 			\caption{Foto tomada sin filtro de luminosidad.}
 			\label{fig:foto_camara_sf}
-        \endminipage\hfill
-        \minipage{0.49\textwidth}
+        \end{subfigure}\hfill
+        \begin{subfigure}{0.49\textwidth}
         	\centering
-        	\includegraphics[width=\linewidth]{ImagenesIngenieria de Detalle/ImagenDevCF_2}					\caption{Foto tomada con filtro de luminosidad.}
+        	\includegraphics[width=\linewidth]{ImagenesIngenieria de Detalle/ImagenDevCF_2}
+        	\caption{Foto tomada con filtro de luminosidad.}
 			\label{fig:foto_camara_cf}
-        \endminipage
+        \end{subfigure}
 	\caption{Comparación entre el uso del filtro de luminosidad.}
 	\label{fig:foto_camara_filtro}
 \end{figure}

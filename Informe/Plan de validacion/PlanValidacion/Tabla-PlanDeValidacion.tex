@@ -1,0 +1,45 @@
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|c|}
+\hline
+\textbf{ID del test} &
+  \textbf{Aspecto} &
+  \textbf{Dependencia} &
+  \textbf{\begin{tabular}[c]{@{}c@{}}Banco de\\ pruebas\end{tabular}} \\ \hline
+\textbf{T-INT-FUN-01}                  & Adquisicion de datos de temperatura                                                 & T-INT-FUN-09  & 2                  \\ \hline
+\textbf{T-INT-FUN-02}                  & Adquisicion de datos de humedad                                                     & T-INT-FUN-09  & 2                  \\ \hline
+\textbf{T-INT-FUN-03}                  & Adquisicion de datos de luminosidad                                                 & T-INT-FUN-09  & 2                  \\ \hline
+\textbf{T-INT-FUN-04}                  & Adquisicion de video                                                                & T-INT-FUN-09  & 2                  \\ \hline
+\textbf{T-INT-FUN-05}                  & Adquisicion de imágenes                                                             & T-INT-FUN-09  & 2                  \\ \hline
+\textbf{T-INT-FUN-06}                  & Adquisición de datos de presencia                                                   & T-INT-FUN-09  & 4                  \\ \hline
+\multirow{5}{*}{\textbf{T-INT-FUN-07}} & \multirow{5}{*}{Periodo activación sensores}                                        & T-INT-FUN-01  & \multirow{5}{*}{1} \\ \cline{3-3}
+                                       &                                                                                     & T-INT-FUN-02  &                    \\ \cline{3-3}
+                                       &                                                                                     & T-INT-FUN-03  &                    \\ \cline{3-3}
+                                       &                                                                                     & T-INT-FUN-04  &                    \\ \cline{3-3}
+                                       &                                                                                     & T-INT-FUN-05  &                    \\ \hline
+\textbf{T-INT-FUN-08}                  & Validación de fecha y hora cierta                                                   &               & 1                  \\ \hline
+\textbf{T-INT-FUN-09} &
+  \begin{tabular}[c]{@{}l@{}}Validación de fecha y hora cierta tras\\ pérdida de alimentación\end{tabular} &
+  T-INT-FUN-08 &
+  1 \\ \hline
+\textbf{T-INT-FUN-10} &
+  \begin{tabular}[c]{@{}l@{}}Recolección de energía en condiciones\\ similares a las de instalación\end{tabular} &
+   &
+  3 \\ \hline
+\textbf{T-INT-FUN-11}                  & \begin{tabular}[c]{@{}l@{}}Recuperación ante pérdida de\\ alimentación\end{tabular} & T-INT-FUN-10  & 3                  \\ \hline
+\multirow{2}{*}{\textbf{T-INT-FUN-12}} &
+  \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}Transmisión de video en tiempo\\ real de dentro del nido\end{tabular}} &
+  T-INT-FUN-04 &
+  \multirow{2}{*}{2} \\ \cline{3-3}
+                                       &                                                                                     & T-INT-FUN-05  &                    \\ \hline
+\textbf{T-INT-COM1-01}                 & Validación transmisión COM1                                                         &               & 4                  \\ \hline
+\textbf{T-INT-COM1-02}                 & Alcance transmisión COM1                                                            & T-INT-COM1-01 & 4                  \\ \hline
+\textbf{T-INT-COM2-01}                 & Validación descarga de datos COM2                                                   &               & 1                  \\ \hline
+\textbf{T-INT-COM2-02}                 & Alcance transmisión COM2                                                            & T-INT-COM2-01 & 1                  \\ \hline
+\textbf{T-INT-COM2-03}                 & \begin{tabular}[c]{@{}l@{}}Descarte de datos desconexión WiFi\\ COM2\end{tabular}   & T-INT-COM2-01 & 1                  \\ \hline
+\textbf{T-IMP-DIM-01}                  & Validación dimensiones totales                                                      &               & 5                  \\ \hline
+\textbf{T-IMP-DIM-02}                  & Validación peso total                                                               &               & 5                  \\ \hline
+\textbf{T-RAM-SEG-01}                  & Autorización transmisión nido-persona                                               & T-INT-COM2-01 & 1                  \\ \hline
+\end{tabular}
+\caption{Tabla de plan de validación.}
+\end{table}
