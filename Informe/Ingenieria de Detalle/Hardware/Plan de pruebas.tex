@@ -1,96 +1,16 @@
-
-Test \TBC se utiliza el banco de pruebas \#1:
+El plan de pruebas corresponde a las descritas en [\ref{sec:BancoDePruebas}].
+Para el uso correcto de los módulos se tuvieron en cuenta los siguientes aspectos:
 \begin{itemize}
-\item se debe conectar la Raspberry Pi a la fuente de tensión mediante el cable de alimentación mini USB
-\item Se debe utilizar la computadora para conectarse para conectarse a la misma red WIFI a la que esté conectada la Raspberry Pi.
-\item Desde la terminal de la computadora se deben insertar las siguientes lineas:
-\begin{lstlisting}[language=Python]
-ssh pi@[IP Raspberry Pi] 
-cd simfs/Python_Scripts/
-python3 getTime.py
-\end{lstlisting}
-\item Verificar que la hora impresa en la terminal coincida con la hora correspondiente al lugar de instalación del producto.
-\end{itemize}
-
-Test \TBC se utiliza el banco de pruebas \#1:
-\begin{itemize}
-\item se debe conectar la Raspberry Pi a la fuente de tensión mediante el cable de alimentación mini USB
-\item Se debe utilizar la computadora para conectarse para conectarse a la misma red WIFI a la que esté conectada la Raspberry Pi.
-\item Desde la terminal de la computadora se deben insertar las siguientes lineas:
-\begin{lstlisting}[language=Python]
-ssh pi@[IP Raspberry Pi] 
-cd simfs/Python_Scripts/Clases
-python3 print_measures.py
-\end{lstlisting}
-\item Verificar que la diferencia horaria impresa en la terminal correspondiente a las mediciones sea la especificada.
-\end{itemize}
-
-
-
-Test \TBC se utiliza el banco de pruebas \#4:
-\begin{itemize}
-\item se debe conectar la Raspberry Pi a la fuente de tensión mediante el cable de alimentación mini USB
-\item Se debe utilizar la computadora para conectarse para conectarse a la misma red WiFi a la que esté conectada la Raspberry Pi.
-\item Abrir un navegador de internet y conectarse a la página "192.168.0.1:1880"
-\item Energizar el módulo BLE previamente configurado
-\item Colocar el módulo a una distancia menor a 60cm del sensor de presencia.
-\item Corroborar que el estado de presencia mostrado en la página web coincida la presencia del módulo.
-\end{itemize}
-
-Test \TBC se utiliza el banco de pruebas \#2: 	
-\begin{itemize}
-\item se debe conectar la Raspberry Pi a la fuente de tensión mediante el cable de alimentación mini USB
-\item Se debe utilizar la computadora para conectarse para conectarse a la misma red WIFI a la que esté conectada la Raspberry Pi.
-\item Abrir un navegador de internet y conectarse a la página "192.168.0.1:1880"
-\item Seleccionar un rango de fechas que abarquen todos los datos y descargarlos.
-\item Desde la terminal de la computadora se deben insertar las siguientes lineas:
-\begin{lstlisting}[language=Python]
-ssh pi@[IP Raspberry Pi] 
-cd simfs/Python_Scripts/Clases
-python3 print_measures.py
-\end{lstlisting}
-
-\item Corroborar que la lectura de la terminal coincida con los archivos descargados.
-\end{itemize}
-
-
-Test \TBC se utiliza el banco de pruebas \#3:
-
-\begin{itemize}
-\item Se conectan todos los módulos del producto, y se pone en funcionamiento.
-\TBC
-\end{itemize}
-Test \TBC se utiliza el banco de pruebas \#5:
-\begin{itemize}
-\item Se toma le producto junto a la cinta métrica
-\item Se miden las dimensiones del producto, todos sus componentes y se anotan por separado.
-\item Se coloca las partes del producto en una balanza, para pesarlos por separado.
-\item Se cotejan los resultados con las especificaciones 
-\end{itemize}
-
-Test \TBC se utiliza el banco de pruebas \#1:
-\begin{itemize}
-\item se debe conectar la Raspberry Pi a la fuente de tensión mediante el cable de alimentación mini USB
-\item Se debe utilizar la computadora para conectarse para conectarse a la misma red WIFI a la que esté conectada la Raspberry Pi.
-\item Desde la terminal de la computadora se deben insertar las siguientes lineas:
-\begin{lstlisting}[language=Python]
-ssh pi@[IP Raspberry Pi] 
-cd simfs/Python_Scripts/
-python3 getTime.py
-\end{lstlisting}
-\item Anotar el valor que se encuentra en la terminal
-\item Desde la terminal de la computadora se deben insertar las siguientes lineas:
-\begin{lstlisting}[language=Python]
-sudo shutdown -h now
-\end{lstlisting}
-\item Esperar 1 minuto
-\item Renergizar la Rapsberry Pi
-\item Desde la terminal de la computadora se deben insertar las siguientes lineas:
-\begin{lstlisting}[language=Python]
-ssh pi@[IP Raspberry Pi] 
-cd simfs/Python_Scripts/
-python3 getTime.py
-\end{lstlisting}
-\item Verificar que la hora impresa en la terminal coincida con la hora correspondiente al lugar de instalación del producto.
+\item Definir un estado predetermiando del Bus $I^2C$ mediante pullups.
+\item El uso de capacitores de desacople
+\item Para el módulo RTC, el integrado DS1307 requiere $5 \ V$ para funcionar correctamente, por lo que para que sea compatible con la lógica de $3.3 \ V$ de la raspberry pi, se realiza un cambio en el esquemático al remover dos resistores del módulo.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth,page=1]{ImagenesIngenieria de detalle/rtcTinySchematic}
+	\caption{Esquemático RTC-Tiny.}
+		\label{fig:RTCSchematic}
+\end{figure}
+Con este cambio se quita la referencia a $5 \ V$ del bus en el módulo. Por lo que la lógica queda en el rango de [$3.3 \ V \ \sim \ 5 \ V$].
+Cabe destacar que utilizar los niveles lógicos de $3.3 \ V$ son compatibles con el integrado $DS1307$
 \end{itemize}
 
