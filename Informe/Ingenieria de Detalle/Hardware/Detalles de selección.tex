@@ -1,29 +1,25 @@
 \Subsubsubsection{Cálculo Potencias}
 
-Se asumen las siguientes variables para los cálculos de potencias, obtenidas de estadísticas propias de la zona donde se realiza el estudio \cite{ref:weather_bariloche}
+Se asumen las siguientes variables para los cálculos de potencias, obtenidas de estadísticas propias de la zona donde se realiza el estudio \cite{ref:weather_bariloche}.
 \begin{enumerate}
 	\item Duración noche = 12.8 horas.
 	\item Duración día = 11.2 horas.
 	\item Horas de sol efectivas = 8 horas.
 \end{enumerate}
 
-Para el caso de la R-Pi, se tiene que su consumo mínimo normal es de $P_{rpi_{min}} = 1.2 \ W$. Sin embargo, para reducir este consumo, se desactivan los puertos de ethernet y HDMI ya que no se utilizará un entorno gráfico. Esto permite reducir aún más el consumo mínimo. Se estima que la R-Pi consumirá como máximo alrededor de $P_{rpi_{est}} = 1.75 \ W$ en su funcionamiento normal \cite{ref:pot_rpi}.
-Luego, se tiene que el consumo energético por día será de
-
+Para el caso de la R-Pi, se tiene que su consumo mínimo normal es de $P_{rpi_{min}} = 1.2 \ W$. Sin embargo, para reducir este consumo, se desactivan los puertos de Ethernet y HDMI ya que no se utilizará un entorno gráfico. Esto permite reducir aún más el consumo mínimo. Se estima que la R-Pi consumirá como máximo alrededor de $P_{rpi_{est}} = 1.75 \ W$ en su funcionamiento normal \cite{ref:pot_rpi}. Luego, se tiene que el consumo energético por día será de
 \begin{equation}
-E_{sist} = P_{rpi_{est}}\cdot 24 \ hs = 151.2 \ kJ
+	E_{sist} = P_{rpi_{est}}\cdot 24 \ hs = 151.2 \ kJ
 \end{equation}
 
-Teniendo en cuenta que la batería de $V_{bat} = 12 \ V$ debe tener una capacidad de almacenamiento equivalente a $T_{reserva} = 4 \ d\acute{\imath}as$ sin recarga \cite{ref:weather_bariloche} y utilizando un coeficiente de seguridad de $\gamma_{bat} = 1.5$, se obtiene
-
+Teniendo en cuenta que la batería tiene una tensión de $V_{bat} = 12 \ V$ debe tener una capacidad de almacenamiento equivalente a $T_{reserva} = 4 \ d\acute{\imath}as$ sin recarga \cite{ref:weather_bariloche} y utilizando un coeficiente de seguridad de $\gamma_{bat} = 1.5$, se obtiene
 \begin{equation}
-Capacidad_{bat} = \frac{E_{sist}\cdot T_{reserva}\cdot 1000}{V_{bat}\cdot 3600}\cdot \gamma_{bat} = 21 \ Ah
+	Capacidad_{bat} = \frac{E_{sist}\cdot T_{reserva}\cdot 1000}{V_{bat}\cdot 3600}\cdot \gamma_{bat} = 21 \ Ah
 \end{equation}
 
 Por otro lado, para los cálculos del panel solar, teniendo en cuenta que se quiere que en un día de sol promedio se logre abastecer al sistema de su consumo energético normal diario y recargar un $\rho = 0.2$ de la capacidad total de la batería, y además teniendo en cuenta un coeficiente de seguridad de $\gamma_{panel} = 2$, se tiene que
-
 \begin{equation}
-Pot_{panel} = \left( E_{sist} + \frac{Capacidad_{bat}\cdot V_{bat}\cdot 3600\cdot \rho}{1000}\right)\cdot \gamma_{panel} \cdot  \frac{1000}{60\cdot 60\cdot 8 \ hs} = 23.1 \ W
+	Pot_{panel} = \left( E_{sist} + \frac{Capacidad_{bat}\cdot V_{bat}\cdot 3600\cdot \rho}{1000}\right)\cdot \gamma_{panel} \cdot  \frac{1000}{60\cdot 60\cdot 8 \ hs} = 23.1 \ W
 \end{equation}
 
 \Subsubsubsection{Cálculo resistencias}
@@ -57,4 +53,4 @@ De esta forma se tiene el tamaño de las mediciones durante un período de 14 d�
 
 Si a esto se le suma el espacio dedicado al sistema operativo, programas y bibliotecas, se obtiene que el tamaño total de memoria necesaria es de aproximadamente 9 GBy.
 
-Ademas de lo mencionado en las cuentas, se tiene en cuenta el espacio utilizado por el overhead de la base de datos, así también un espacio adicional por si no se visita al nido en el tiempo pactado. Es así que con una memoria de 32 GBy basta para el proyecto.
+Ademas de lo mencionado en las cuentas, se tiene en cuenta el espacio utilizado por el \textit{overhead} de la base de datos, así también un espacio adicional por si no se visita al nido en el tiempo pactado. Es así que con una memoria de 32 GBy basta para el proyecto.
