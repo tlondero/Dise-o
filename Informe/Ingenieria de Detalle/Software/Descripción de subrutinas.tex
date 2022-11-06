@@ -6,7 +6,7 @@ El nodo \textit{Inicio} es el principal. Si bien es el más simple, es el más i
 	\item \textit{Init And F5:} esta es una combinación de las dos anteriores. El objetivo de esta es simplificar el esquema del sistema al momento de conectar los distintos estados y manejar su comunicación.
 \end{itemize}
 
-El siguiente estado en cuando a importancia es el de \textit{Actualización RTC}. Este es un nodo que se ocupa de leer el periférico de RTC y actualizar el valor dentro de Node-Red de manera periódica.
+El siguiente estado en cuando a importancia es el de \textit{Actualización RTC}. Este es un nodo que se ocupa de leer el periférico de RTC y actualizar el valor dentro de \nodered de manera periódica.
 
 Con una de sus salidas se ocupa de inicializar las demás variables que se emplean en el servidor llamando a \textit{Inicio de Variables del Flow}. Es importante aclarar que las variables del flow son del tipo globales, es decir, cada nodo puede leerlas y modificarlas. Por cuestión de orden se asignó un estado propio para asignar valores por defecto y garantizar un correcto funcionamiento desde el arranque.
 
