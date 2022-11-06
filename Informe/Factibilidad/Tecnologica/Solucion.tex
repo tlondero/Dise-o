@@ -22,7 +22,7 @@ El BJ-1750 cuenta con una salida digital con el protocolo de comunicación I2C. 
 
 Luego para el modulo RTC se tom\'o un  m\'odulo que tenga I2C, y que cuyo rango de alimentación se encuentre entre 3.3 y 5 V, por lo que se opta por el DS3231.
 
-Para la detección de presencia se descarta el uso de la R-Pi 3B y el módulo NRF24L01 por no ser compatible con Bluetooth 5.0. Se decide utilizar el ESP32-S3-WROOM-1 por el menor costo y mayor sensibilidad de recepción de la antena.
+Para la detección de presencia se descarta el uso de la \rpi 3B y el módulo NRF24L01 por no ser compatible con Bluetooth 5.0. Se decide utilizar el ESP32-S3-WROOM-1 por el menor costo y mayor sensibilidad de recepción de la antena.
 
 %%%%%%IAMGENES%%%%%%
 Finalmente, para la cámara que obtendrá las imágenes, se tuvo en cuenta fundamentalmente la relación precio-resolución de la cámara, al igual que la integración con Linux y el factor de contar con una API para el lenguaje C. Por lo que la R-Pi-CMOD-V2 fue la cámara seleccionada.
@@ -39,16 +39,16 @@ Se recolectará un volumen de datos del que no se tiene una gran certeza, ya que
 
 \Subsubsubsection{Unidades de procesamiento}
 
-Para este módulo se opta por la Raspberry Pi 3B, ya que posee Bluetooth BLE (Bluetooth Low Energy), es el dispositivo más económico, más pequeño y cuenta con soporte para micro SD.
+Para este módulo se opta por la \rspi 3B, ya que posee Bluetooth BLE (Bluetooth Low Energy), es el dispositivo más económico, más pequeño y cuenta con soporte para micro SD.
 
-En cuanto las temperaturas de funcionamiento, este dispositivo se encuentra dentro del rango necesario. Además, los módulos Raspberry Pi trabajan entre 20 °C y 30 °C por encima de la temperatura ambiente debido a su autocalentamiento. También es sabido que los integrados R-Pi pueden llegar a soportar temperaturas extremas, tales como las que se dan en la Antártida \cite{ref:Penguin}.
+En cuanto las temperaturas de funcionamiento, este dispositivo se encuentra dentro del rango necesario. Además, los módulos \rspi trabajan entre 20 °C y 30 °C por encima de la temperatura ambiente debido a su autocalentamiento. También es sabido que los integrados \rpi pueden llegar a soportar temperaturas extremas, tales como las que se dan en la Antártida \cite{ref:Penguin}.
 
 Además, este dispositivo seleccionado se caracteriza por ser compatible con la cámara seleccionada sin la necesidad de utilizar adaptadores.
 
 \Subsubsubsection{Comunicación}
 
 En cuanto a la comunicación se utilizará BLE para la comunicación con la base principal de seguimiento y la detección del ave en el nido, y WiFi para la comunicación con un tercero.
-Ambos de estos se encuentran disponibles para su uso en el módulo Raspberry Pi 3B.
+Ambos de estos se encuentran disponibles para su uso en el módulo \rspi 3B.
 
 
 \Subsubsubsection{Batería}
@@ -57,7 +57,7 @@ La batería a emplear queda determinada en función del consumo del sistema y de
 
 Los consumos de potencia de las partes del sistema se detallan en la Sección \ref{sec:calc_potencias}.
 
-Para alimentar tanto a los sensores como a la R-Pi en un día se requieren $151.2 \ kJ$. Con una batería de $21 \ Ah$ de capacidad se consigue la especificación mencionada, por lo que se opta por la batería UL24-12 de Ultracell ya que la batería de Probattery es mucho más pesada.
+Para alimentar tanto a los sensores como a la \rpi en un día se requieren $151.2 \ kJ$. Con una batería de $21 \ Ah$ de capacidad se consigue la especificación mencionada, por lo que se opta por la batería UL24-12 de Ultracell ya que la batería de Probattery es mucho más pesada.
 
 Cabe notar que los $24 \ Ah$ de la batería seleccionada son nominales, por lo que se debe calcular la capacidad real (la cual será ligeramente menor debido a condiciones del entorno y calidad de esta). Para obtener la capacidad real de la batería se utiliza la información proporcionada en la hoja de datos. En la Figura (\ref{fig:ctemp}) se puede observar como a una temperatura de trabajo de $10°C$ y una razón de descarga de $0.05CA$ (descarga total en $20 \ hs$) la capacidad efectiva restante de la batería es del $90\% $. Por otro lado, en la Figura (\ref{fig:cdod}) se observa como teniendo en cuenta una vida útil de $540$ ciclos (es decir, 2 años de uso ininterrumpido) la capacidad efectiva restante sigue siendo del $100\%$.
  
