@@ -201,6 +201,8 @@ Para el amplificador de potencia se tuvieron en cuenta distintos módulos armado
 \textbf{Dimensiones [cm]}                                                        & 7x3                                                                                                                                                                                                                                                 & 5x5                                                                                                                                                                                                                                                   & 3.7x5.6                                                                                                                                                                                                         & 4x8                                                                                                                                                                                                                              \\ \hline
 \textbf{Imagen}                                                                  & \includeintable{.1}{ImagenesIngenieria de Detalle/nwdz}                                                                                                                                                                                             & \includeintable{.1}{ImagenesIngenieria de Detalle/unbranded}                                                                                                                                                                                          & \includeintable{.1}{ImagenesIngenieria de Detalle/DH-RF-V2017}                                                                                                                                                  & \includeintable{.1}{ImagenesIngenieria de Detalle/s-l1600}                                                                                                                                                                       \\ \hline
 \end{tabular}
+\caption{Comparativa amplificadores de potencia.}
+\label{comp:potamp}
 \end{table}
 
 \Subsubsubsection{Integrado de Energy Harvesting}
@@ -244,6 +246,7 @@ Debido a que la aplicación es de una distancia que cae en el rango del campo le
 \textbf{Lóbulo}                                                             & \includeintable{.1}{ImagenesFactibilidad/LOB1}                                       & \includeintable{.1}{ImagenesFactibilidad/LOB2}                                              & \includeintable{.1}{ImagenesFactibilidad/LOB3}                                     \\ \hline
 \end{tabular}
 \caption{Comparación entre antenas transmisoras (Parte 1).}
+\label{comp:tx1}
 \end{table}
 
 \begin{table}[H]
@@ -262,6 +265,7 @@ Debido a que la aplicación es de una distancia que cae en el rango del campo le
 \textbf{Lóbulo}                                                             & \includeintable{.1}{ImagenesFactibilidad/LOB4}                                 & \includeintable{.1}{ImagenesFactibilidad/LOB5}                             \\ \hline
 \end{tabular}
 \caption{Comparación entre antenas transmisoras (Parte 2).}
+\label{comp:tx2}
 \end{table}
 
 \begin{table}[H]
@@ -282,6 +286,7 @@ Debido a que la aplicación es de una distancia que cae en el rango del campo le
 \textbf{Lóbulo}                                                             & \includeintable{.1}{ImagenesFactibilidad/LOBR1}                                                    & \includeintable{.1}{ImagenesFactibilidad/LOBR2}                                         & \multicolumn{1}{c|}{\quotes{Omnidireccional}}                                                 		                                    \\ \hline
 \end{tabular}
 \caption{Comparación entre antenas receptoras (Parte 1).}
+\label{comp:rx1}
 \end{table}
 
 \begin{table}[H]
@@ -302,6 +307,7 @@ Debido a que la aplicación es de una distancia que cae en el rango del campo le
 \textbf{Lóbulo}                                                             & \includeintable{.1}{ImagenesFactibilidad/LOBR4}                                                                                            & \includeintable{.1}{ImagenesFactibilidad/LOBR5}                                                                                                		& \multicolumn{1}{c|}{\includeintable{.1}{ImagenesFactibilidad/LOBR6}}                                                          \\ \hline
 \end{tabular}
 \caption{Comparación entre antenas receptoras (Parte 2).}
+\label{comp:rx2}
 \end{table}
 
 \Subsubsubsection{Conclusión Factibilidad de la Carga Inalámbrica}
@@ -319,8 +325,8 @@ Se tomaron estas antenas y se calculó para cada par Tx-Rx la potencia recibida 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{ImagenesFactibilidad/pot_recibida_teorica}
-	\label{fig:pot_recibida_teorica}
 	\caption{Potencia recibida en la antena Rx en función de la distancia entre antena Tx y antena Rx.}
+	\label{fig:pot_recibida_teorica}
 \end{figure}
 
 Se puede observar que con $4 \ W$ en la antena transmisora, todas las combinaciones de antenas cumplen con la potencia necesaria para el mejor y peor caso. Tomando el mejor par Rx-Tx, y al tener en cuenta la eficiencia de aproximadamente $70\%$ del P1110, la potencia a la salida de este permanece por encima del peor caso hasta la máxima distancia de transmisión.
@@ -328,8 +334,8 @@ Se puede observar que con $4 \ W$ en la antena transmisora, todas las combinacio
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{ImagenesFactibilidad/pot_baterias_teorica}
-	\label{fig:pot_baterias_teorica}
 	\caption{Potencia a la salida del P1110 en función de la distancia entre antena Tx y antena Rx.}
+	\label{fig:pot_baterias_teorica}
 \end{figure}
 
 Sin embargo, si se toma en consideración la restricción más estricta de $4.5 \  \frac{W}{m^2}$ impuesta en la Sección (\ref{sec:legal}) dada por la fórmula

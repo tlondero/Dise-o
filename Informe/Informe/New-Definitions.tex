@@ -15,7 +15,7 @@
 %IMAGE IN TABLE:			%Ejemplo: \includeintable{.3}{ImagenesFactibilidad/pend}
 \renewcommand\fbox{\fcolorbox{white}{white}}
 \setlength{\fboxrule}{0pt}	%padding thickness
-\setlength{\fboxsep}{4pt}	%border thickness
+\setlength{\fboxsep}{0pt}	%border thickness
 \newcommand{\includeintable}[2]{	
 	\fbox{
 		\begin{minipage}{#1\textwidth}
@@ -24,6 +24,19 @@
 	}
 }
 
+
+%IMAGE IN TESTBENCH:			%Ejemplo: \includetestbench{.3}{1}{ImagenesFactibilidad/pend}
+%esta pensado apra usarse con pdf		
+\newcommand{\includetestbench}[4]{	
+	\fbox{
+
+		\begin{minipage}[c][#2][c]{#1}
+			\begin{adjustwidth}{-5pt}{0pt}
+        	\includegraphics[width=1.1\linewidth,page= #3]{#4}
+        		\end{adjustwidth}
+    	\end{minipage}
+	}
+}
 %LINK IN REF
 \newcommand{\reflink}[1]{		%LINK
 	\href{#1}{#1}
