@@ -1,42 +1,27 @@
-\textbf{Banco de pruebas 1:}
-\begin{itemize}
-	\item El producto.	
-	\item Fuente de tensión de $5V$ y capacidad de proveer $500mA$ junto a un cable de alimentación mini-USB.
-	\item Una computadora capaz de comunicarse con el producto mediante SSH y Wifi.
-	\item Un reloj.
-\end{itemize}
-
-\textbf{Banco de pruebas 2:}
-\begin{itemize}
-	\item El producto.	
-	\item Fuente de tensión de $5V$ y capacidad de proveer $500mA$ junto a un cable de alimentación mini-USB.
-	\item Una computadora capaz de comunicarse por Wifi con el producto.
-	\item Sensor de Humedad calibrado.
-	\item Sensor de temperatura calibrado.
-	\item Sensor de luminosidad calibrado.
-\end{itemize}
-
-\textbf{Banco de pruebas 3:}
-\begin{itemize}
-	\item El producto.
-	\item \textit{Solar Array Simulator DC Power Supply}.
-	\item Dos multímetros.
-	\item Un reloj.
-\end{itemize}
-
-\textbf{Banco de pruebas 4:}
-\begin{itemize}
-	\item El producto.	
-	\item Fuente de tensión de $5V$ y capacidad de proveer $500mA$ junto a un cable de alimentación mini-USB.
-	\item Una computadora capaz de comunicarse por SSH con el producto.
-	\item Un reloj.
-	\item Módulo BLE.
-\end{itemize}
 
 
-\textbf{Banco de pruebas 5:}
-\begin{itemize}
-	\item El producto.
-	\item Cinta métrica.
-	\item Balanza.
-\end{itemize}
+% 
+ % Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|ll|}
+\hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Banco \\ Número\end{tabular}} & \multicolumn{2}{l|}{\textbf{Detalle}}                                                                                                                                                                                                                                                                                                                                                                              \\ \hline
+\rowcolor[HTML]{A8DCFF} 
+BP1             
+                                                 &
+
+\includetestbench{0.4\linewidth}{\height}{1}{ImagenesPlan de validacion/Bancos de prueba}    & \begin{tabular}[c]{@{}l@{}}\tabitem El producto.        \\ \tabitem Fuente de tensión de $5 \ V$ y \\ capacidad de proveer $500 \ mA$\\ junto a un cable de\\ alimentación mini-USB.\\ \tabitem Una computadora capaz de \\ comunicarse con el producto\\ mediante SSH y Wifi.\\ \tabitem Un reloj.\end{tabular}                                                                                              \\ \hline
+\rowcolor[HTML]{C5E8FF} 
+BP2                                                              & \includetestbench{0.4\linewidth}{\height}{2}{ImagenesPlan de validacion/Bancos de prueba}  & \begin{tabular}[c]{@{}l@{}}\tabitem El producto.        \\ \tabitem Fuente de tensión de $5 \ V$ y \\ capacidad de proveer $500 \ mA$\\ junto a un cable de\\ alimentación mini-USB.\\ \tabitem Una computadora capaz de \\ comunicarse por Wifi con el\\ producto.\\ \tabitem Sensor de Humedad calibrado.\\ \tabitem Sensor de temperatura calibrado.\\ \tabitem Sensor de luminosidad calibrado.\end{tabular} \\ \hline
+\rowcolor[HTML]{A8DCFF} 
+BP3                                                              & \includetestbench{0.4\linewidth}{\height}{3}{ImagenesPlan de validacion/Bancos de prueba} & \begin{tabular}[c]{@{}l@{}}\tabitem El producto.\\ \tabitem \textit{Solar Array Simulator DC}\\ \textit{Supply}.\\ \tabitem Dos multímetros.\\ \tabitem Un reloj.\\ \tabitem Una computadora capaz de\\ comunicarse por WiFi con el\\ producto.\end{tabular}                                                                                                                                                   \\ \hline
+\rowcolor[HTML]{C5E8FF} 
+BP4                                                              & \includetestbench{0.4\linewidth}{\height}{4}{ImagenesPlan de validacion/Bancos de prueba}  & \begin{tabular}[c]{@{}l@{}}\tabitem El producto.        \\ \tabitem Fuente de tensión de $5 \ V$ y \\ capacidad de proveer $500 \ mA$\\ junto a un cable de\\ alimentación mini-USB.\\ \tabitem Una computadora capaz de \\ comunicarse por SSH y WiFi con\\ el producto.\\ \tabitem Un reloj.\\ \tabitem Módulo BLE de pruebas.\end{tabular}                                                                    \\ \hline
+\rowcolor[HTML]{A8DCFF} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{A8DCFF}BP5}                & \includetestbench{0.4\linewidth}{\height}{5}{ImagenesPlan de validacion/Bancos de prueba}  & \begin{tabular}[c]{@{}l@{}}\tabitem El producto.\\ \tabitem Cinta métrica.\\ \tabitem Balanza.\end{tabular}                                                                                                                                                                                                                                                                                             \\ \hline
+\end{tabular}
+\caption{Tabla de diseño de los bancos de prueba.}
+\end{table}
