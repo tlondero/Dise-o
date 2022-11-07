@@ -20,7 +20,7 @@ El estado \textit{Generación de Links} se encarga de cargar los archivos adecua
 
 \textit{Datos del Ave} obtiene los datos que se encuentran en la mochila del ave, para luego facilitárselos a \textit{Almacenamiento}. De una forma similar, \textit{Presencia del Ave} se ocupa de detectar si el ave se encuentra en el entorno del nido, mostrarlo en pantalla.
 
-Su conexión con el estado de \textit{Almacenamiento} se da a que se guarda esta base de datos en la memoria de la R-Pi para aliviar el peso que debe soportar el servidor. Es por ello que estos a pesar de que el nodo que se ocupa de almacenar datos no brinda estos a \textit{Administrador de Archivos} ya que no es de interés que el usuario tenga acceso a la descarga de estos.
+Su conexión con el estado de \textit{Almacenamiento} se da a que se guarda esta base de datos en la memoria de la \rpi para aliviar el peso que debe soportar el servidor. Es por ello que estos a pesar de que el nodo que se ocupa de almacenar datos no brinda estos a \textit{Administrador de Archivos} ya que no es de interés que el usuario tenga acceso a la descarga de estos.
 
 El nodo de \textit{Transmisión de Video} muestra en pantalla una transmisión en tiempo real del nido. Este se activa cuando el usuario lo solicite. Si bien es posible reiniciarlo y finalizarlo a voluntad, para evitar un uso excedido de dicha cualidad, y así evitar también una sobrecarga, el video se termina luego de 5 minutos de transmisión.
 
