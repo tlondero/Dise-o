@@ -5,7 +5,7 @@
 Para esta sección se analiza la confiabilidad de los elementos de hardware y de software en cada caso exponiendo los criterios utilizados.
 
 \Subsection{Hardware}	
-El estudio se lleva a cabo según la norma HDBK-217F, la cual estima la cantidad de fallas en unidad de tiempo para diferentes tipos de componentes electrónicos, teniendo en cuenta factores como las condiciones de uso, temperatura y trayectoria del fabricante.
+El estudio se lleva a cabo según la norma MIL-HDBK-217F, la cual estima la cantidad de fallas en unidad de tiempo para diferentes tipos de componentes electrónicos, teniendo en cuenta factores como las condiciones de uso, temperatura y trayectoria del fabricante.
 
 El primer paso consiste en realizar un gráfico de todos los módulos considerados críticos que garantizan las funcionalidades fundamentales del producto. Esto se presenta en la Figura (\ref{fig:criticos}).
 
@@ -15,5 +15,114 @@ El primer paso consiste en realizar un gráfico de todos los módulos considerad
 	\caption{Módulos críticos de funcionamiento.}
 	\label{fig:criticos}
 \end{figure}
+Se calcula una estimación de la confiabilidad de cada módulo utilizando una estrategia \quotes{Top-Down} donde se encuentra la tasa de falla de cada sub-módulo mediante un proceso multiplicativo a la tasa de fallos base provista por las distintas cargas a la cual son sometidos los componentes.
+No se cuenta con redundancias, por lo que el valor de confiabilidad del módulo estará dado por la confiabilidad en serie de cada uno de sus componentes.
 
+\begin{table}[H]
+\centering
+\begin{tabular}{cc}
+\hline
+\multicolumn{1}{|c|}{\textbf{Tipo de componente}}                & \multicolumn{1}{c|}{\textbf{Cálculo de tasa de fallos $\left[\frac{\text{failures}}{10^6 \cdot \text{hour}}\right]$}}                                                       \\ \hline
+\multicolumn{1}{|c|}{\textbf{Resistencia}}                       & \multicolumn{1}{c|}{$\lambda_p \ = \ \lambda_b \ \cdot \  \pi_T \ \cdot \ \pi_P \ \cdot \ \pi_S \ \cdot \ \pi_Q \ \cdot \ \pi_E$}                                           \\ \hline
+\multicolumn{1}{|c|}{\textbf{Capacitor}}                         & \multicolumn{1}{c|}{$\lambda_p \ = \ \lambda_b \ \cdot \  \pi_T \ \cdot \ \pi_C \ \cdot \ \pi_V \ \cdot \ \pi_{SR} \ \cdot \ \pi_Q \ \cdot \ \pi_E  $}                      \\ \hline
+\multicolumn{1}{|c|}{\textbf{IC DHT-22}}                         & \multicolumn{1}{c|}{$\lambda_p \ = \  (C_1 \ \cdot \ \pi_T \ + \ C_2 \ \cdot \ \pi_E ) \cdot \ \pi_Q \ \cdot \ \pi_L  $}                                                    \\ \hline
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFFF}\textbf{IC BH1750}} & \multicolumn{1}{c|}{$\lambda_p \ = \lambda_{BD} \ \cdot \ \pi_{MFG} \ \cdot \ \pi_T \ \cdot \ \pi_{CD} \ + \ \lambda_{BP} \ \cdot \ \pi_E \ \cdot \ \pi_Q + \lambda_{EOS}$} \\ \hline
+\multicolumn{1}{|c|}{\textbf{Shield}}                            & \multicolumn{1}{c|}{$\lambda_p \ = \ \lambda_b \ \cdot \  \pi_T \ \cdot \ \pi_K  \ \cdot \ \pi_Q \ \cdot \ \pi_E $}                                                         \\ \hline
+\multicolumn{1}{|c|}{\textbf{Conexionado Sensores}}              & \multicolumn{1}{c|}{$\lambda_p \ = \ \lambda_b \ \cdot \  \pi_T \ \cdot \ \pi_K  \ \cdot \ \pi_Q \ \cdot \ \pi_E $}                                                         \\ \hline
+\multicolumn{1}{|c|}{\textbf{IC DS1307}}                         & \multicolumn{1}{c|}{$\lambda_p \ = \lambda_{BD} \ \cdot \ \pi_{MFG} \ \cdot \ \pi_T \ \cdot \ \pi_{CD} \ + \ \lambda_{BP} \ \cdot \ \pi_E \ \cdot \ \pi_Q + \lambda_{EOS}$} \\ \hline
+\multicolumn{1}{|c|}{\textbf{Diodo}}                             & \multicolumn{1}{c|}{$\lambda_p \ = \ \lambda_b \ \cdot \  \pi_T \ \cdot \ \pi_S  \ \cdot \ \pi_C \ \cdot \ \pi_Q \ \cdot \ \pi_E $}                                         \\ \hline
+\multicolumn{1}{|c|}{\textbf{Regulador de Tension}}              & \multicolumn{1}{c|}{$\lambda_p \ = \ \lambda_b \ \cdot \  \pi_T \ \cdot \ \pi_S  \ \cdot \ \pi_C \ \cdot \ \pi_Q \ \cdot \ \pi_E $}                                         \\ \hline
+\textbf{\rspi}                                                   & Documentación                                                                                                                                                              
+\end{tabular}
+\caption{Ecuaciones para obtener la tasa de fallos de cada módulo acorde a MIL-HDBK-217F.}
+\label{tasadefallos}
+\end{table}
+
+\Subsubsection{\rspi}
+Para el módulo \rspi se utiliza la documentación de la misma para obtener el valor de la tasa de fallos.
+\begin{equation}
+\lambda_p = 3 
+\end{equation}
+\Subsubsection{Regulador de Energía}
+\Subsubsection{Paneles Solares}
+\Subsubsection{Baterías}
+\Subsubsection{Conector Shield}
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|crc|}
+\hline
+\textbf{Componente}     & \multicolumn{1}{c|}{\textbf{Cantidad}} & \multicolumn{1}{c|}{$\mathbf{\lambda_p}$}           & \textbf{$\lambda_{Tot}$}   \\ \hline
+\textbf{Conectores PCB} & \multicolumn{1}{c|}{1}                 & \multicolumn{1}{r|}{\cellcolor[HTML]{FFFFFF}0.00182} & 0.00182                      \\ \hline
+\textbf{Conector Molex} & \multicolumn{1}{c|}{1}                 & \multicolumn{1}{r|}{0.00182}                         & 0.00182                      \\ \hline
+\textbf{Total}          & \multicolumn{1}{l}{}                   & \multicolumn{1}{l}{}                                 & \multicolumn{1}{r|}{0.00364} \\ \hline
+\end{tabular}
+\end{table}
+
+\Subsubsection{RTC}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|ccc|}
+\hline
+\textbf{Componente} & \multicolumn{1}{c|}{\textbf{Cantidad}} & \multicolumn{1}{c|}{\textbf{$\lambda_p$}} & \textbf{$\lambda_{Tot}$} \\ \hline
+\textbf{Capacitor}  & \multicolumn{1}{c|}{3}                 & \multicolumn{1}{c|}{0.00356}              & 0.01068                    \\ \hline
+\textbf{Resistor}   & \multicolumn{1}{c|}{5}                 & \multicolumn{1}{c|}{0.00267}              & 0.01335                    \\ \hline
+\textbf{Diodo}      & \multicolumn{1}{c|}{1}                 & \multicolumn{1}{c|}{0.0007}               & 0.0007                     \\ \hline
+\textbf{DS1307}     & \multicolumn{1}{c|}{1}                 & \multicolumn{1}{c|}{1.106}                & 1.106                      \\ \hline
+\textbf{Total}      &                                        &                                           & 1.13073                    \\ \hline
+\end{tabular}
+\caption{Confiabilidad RTC.}
+\label{confRTC}
+\end{table}
+\Subsubsection{Sensor de Presencia}
+\Subsubsection{Cámara}
+\Subsubsection{Conector Sensores}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|clc|}
+\hline
+\textbf{Componente}     & \multicolumn{1}{c|}{\textbf{Cantidad}} & \multicolumn{1}{c|}{\textbf{$\lambda_p$}} & \textbf{$\lambda_{Tot}$}   \\ \hline
+\textbf{Conector Molex} & \multicolumn{1}{c|}{1}                 & \multicolumn{1}{r|}{0.00182}              & 0.00182                      \\ \hline
+\textbf{Total}          & \multicolumn{1}{l}{}                   &                                           & \multicolumn{1}{r|}{0.00182} \\ \hline
+\end{tabular}
+\caption{Confiabilidad Conector Placa de Sensores}
+\label{confsensores}
+\end{table}
+\Subsubsection{Sensor Humedad y Temperatura}
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|crc|}
+\hline
+\textbf{Componente} & \multicolumn{1}{c|}{\textbf{Cantidad}} & \multicolumn{1}{c|}{\textbf{$\lambda_p$}}            & \textbf{$\lambda_{Tot}$}   \\ \hline
+\textbf{Capacitor}  & \multicolumn{1}{c|}{2}                 & \multicolumn{1}{r|}{0.00356}                         & 0.00712                      \\ \hline
+\textbf{Resistor}   & \multicolumn{1}{c|}{1}                 & \multicolumn{1}{r|}{\cellcolor[HTML]{FFFFFF}0.00267} & 0.00267                      \\ \hline
+\textbf{IC-DHT22}   & \multicolumn{1}{c|}{1}                 & \multicolumn{1}{r|}{\cellcolor[HTML]{FFFFFF}3.036}   & 3.036                        \\ \hline
+\textbf{Total}      & \multicolumn{1}{l}{}                   & \multicolumn{1}{l}{}                                 & \multicolumn{1}{r|}{3.04579} \\ \hline
+\end{tabular}
+\caption{Confiabilidad Sensor de Temperatura y Humedad.}
+\label{tab:conftemphum}
+\end{table}
+\Subsubsection{Sensor Luminosidad}
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|crc|}
+\hline
+\textbf{Componente}           & \multicolumn{1}{c|}{\textbf{Cantidad}} & \multicolumn{1}{c|}{\textbf{$\lambda_p$}}            & \textbf{$\lambda_{Tot}$}   \\ \hline
+\textbf{Capacitor}            & \multicolumn{1}{c|}{4}                 & \multicolumn{1}{r|}{0.00356}                         & 0.01424                      \\ \hline
+\textbf{Resistor}             & \multicolumn{1}{c|}{3}                 & \multicolumn{1}{r|}{\cellcolor[HTML]{FFFFFF}0.00267} & 0.00801                      \\ \hline
+\textbf{Regulador de tensión} & \multicolumn{1}{c|}{1}                 & \multicolumn{1}{r|}{\cellcolor[HTML]{FFFFFF}0.00059} & 0.00059                      \\ \hline
+\textbf{IC-BH1750}            & \multicolumn{1}{c|}{1}                 & \multicolumn{1}{r|}{1.106}                           & 1.106                        \\ \hline
+\textbf{Total}                & \multicolumn{1}{l}{}                   & \multicolumn{1}{l}{}                                 & \multicolumn{1}{r|}{1.12884} \\ \hline
+\end{tabular}
+\caption{Confiabilidad Sensore de Luminosidad}
+\label{tab:conflum}
+\end{table}
 %\end{document}
