@@ -93,9 +93,11 @@ Para el prototipo del sistema de potencia del nido, se cuenta con la batería \h
 
 Se utiliza el \textit{Solar Power Manager} \href{https://wiki.dfrobot.com/Solar_Power_Manager_For_12V_Lead-Acid_Battery_SKU__DFR0580}{DFR0580} que se encarga de extraer eficientemente la energía generada por el panel solar mediante el algoritmo de MPPT, cargar la batería y proveer las salidas de alimentación acondicionadas para la \rpi.
 
-Alternativamente, para disminuir el tamaño del prototipo, se reemplaza la fuente de alimentación del sistema. Se opta por utilizar un \textit{Power Bank} (batería externa portátil) que cumpla con los requisitos de tensión y corriente necesarios. 
+Alternativamente, para disminuir el tamaño del prototipo, se reemplaza la fuente de alimentación del sistema. Este cambio se realiza únicamente en aquellos procesos en los cuales no influya utilizar otro sistema como batería, como son los bancos de prueba o el uso del prototipo en ambientes de desarrollo que no abarcan el sistema de abastecimiento, entre otros.
 
-Las razones por las cuales se decidió utilizar dicha tecnología como reemplazo es porque posee alta portabilidad, un tamaño reducido, es independiente de la red eléctrica, brinda la señal de alimentación estable y es fácilmente recargable. El dispositivo elegido para esta tarea es el cargador \href{https://www.sony.com/electronics/support/res/manuals/W000/W0002536M.pdf}{CP-V3} de la empresa \textit{Sony}.
+Se opta por utilizar un \textit{Power Bank} (batería externa) que cumpla con los requisitos de tensión y corriente necesarios. El dispositivo elegido para esta tarea es el cargador \href{https://www.sony.com/electronics/support/res/manuals/W000/W0002536M.pdf}{CP-V3} de la empresa \textit{Sony}.
+
+Las razones por las cuales se decidió utilizar dicha tecnología como alternativa es porque posee alta portabilidad, un tamaño reducido, es independiente de la red eléctrica, brinda una señal de alimentación estable y es fácilmente recargable. 
 
 Como se mencionó en la Sección (\ref{subsection:nido-sustrato}), este elemento se adosa al nido artificial mediante el soporte presentado en la Figura (\ref{fig:Charger}). 
 
