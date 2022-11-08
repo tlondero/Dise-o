@@ -1,4 +1,5 @@
 \Subsection{Prototipo Nido-Sustrato}
+\label{subsection:nido-sustrato}
 Para la construcción del prototipo del nido se tuvo en cuenta que el sustrato debe ser madera. Para las medidas se tuvieron en cuenta las dimensiones promedio de un nido de carpintero \cite{ref:PaperValeriaOjeda}.
 
 Por otro lado para alojar y proteger la electrónica se contempló el desarrollo de encapsulados. Primero se trabajó con la \rspi y sus complementos. Se adaptó un diseño existente agrandando su tamaño para que puedan introducirse las placas requeridas, se extendieron y fabricaron ranuras para el conexionado y se agregó un soporte que permita atornillar el conjunto. Para los sensores, se diseñó otro contenedor el cual contempla ranuras para que la cámara y los demás componentes estén en contacto con el exterior y ranuras para el conexionado con la \rpi.
@@ -71,10 +72,9 @@ En cuanto a los sensores se diseña una placa que se ubica en la bóveda del nid
 
 \Subsection{Prototipo Nido-Potencia}
 \label{subsection:nido-potencia}
-Para el prototipo del sistema de potencia del nido, se cuenta con la batería \href{https://enertik.ar/taiyo-tyd12-33-bateria-electrolito-absorbido-ciclo-profundo-12v-33ah}{TAIYO TYD12-33} de plomo-ácido de ciclo profundo AGM de 33 $Ah$ y la fuente de tensión \href{https://www.itech.sh/en/product/dc-power-supply/IT6500.html}{ITECH IT6536C} con capacidad de simular la curva de tensión-corriente de un panel solar.
-
+Para el prototipo del sistema de potencia del nido, se cuenta con la batería \href{https://enertik.ar/taiyo-tyd12-33-bateria-electrolito-absorbido-ciclo-profundo-12v-33ah}{TAIYO TYD12-33} de plomo-ácido de ciclo profundo AGM de $33 \ Ah$ y la fuente de tensión \href{https://www.itech.sh/en/product/dc-power-supply/IT6500.html}{ITECH IT6536C} con capacidad de simular la curva de tensión-corriente de un panel solar.
 \begin{figure}[H]
-\centering
+	\centering
     	\begin{subfigure}{0.3\textwidth}
         	\centering
         	\includegraphics[width=\linewidth]{ImagenesConstruccion del prototipo/bateria_prototipo}		
@@ -92,6 +92,12 @@ Para el prototipo del sistema de potencia del nido, se cuenta con la batería \h
 \end{figure}
 
 Se utiliza el \textit{Solar Power Manager} \href{https://wiki.dfrobot.com/Solar_Power_Manager_For_12V_Lead-Acid_Battery_SKU__DFR0580}{DFR0580} que se encarga de extraer eficientemente la energía generada por el panel solar mediante el algoritmo de MPPT, cargar la batería y proveer las salidas de alimentación acondicionadas para la \rpi.
+
+Alternativamente, para disminuir el tamaño del prototipo, se reemplaza la fuente de alimentación del sistema. Se opta por utilizar un \textit{Power Bank} (batería externa portátil) que cumpla con los requisitos de tensión y corriente necesarios. 
+
+Las razones por las cuales se decidió utilizar dicha tecnología como reemplazo es porque posee alta portabilidad, un tamaño reducido, es independiente de la red eléctrica, brinda la señal de alimentación estable y es fácilmente recargable. El dispositivo elegido para esta tarea es el cargador \href{https://www.sony.com/electronics/support/res/manuals/W000/W0002536M.pdf}{CP-V3} de la empresa \textit{Sony}.
+
+Como se mencionó en la Sección (\ref{subsection:nido-sustrato}), este elemento se adosa al nido artificial mediante el soporte presentado en la Figura (\ref{fig:Charger}). 
 
 \Subsection{Prototipo Nido-Comunicaciones }
 Existen dos tipos de comunicación que se realiza en el prototipo: la encargada de \nodered para la comunicación con usuarios y la comunicación con la base principal de seguimiento para la recolección de datos del ave.
