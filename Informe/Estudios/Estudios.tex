@@ -95,9 +95,6 @@ Para determinar a tasa de fallas de las baterías se utiliza la documentación.
 \end{table}
 
 \Subsubsection{RTC}
-% Please add the following required packages to your document preamble:
-% \usepackage[table,xcdraw]{xcolor}
-% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|ccc|}
@@ -113,9 +110,6 @@ Para determinar a tasa de fallas de las baterías se utiliza la documentación.
 \label{confRTC}
 \end{table}
 \Subsubsection{Sensor de Presencia}
-% Please add the following required packages to your document preamble:
-% \usepackage[table,xcdraw]{xcolor}
-% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|ccc|}
@@ -145,9 +139,6 @@ Para determinar la tasa de fallas del módulo de cámara se recurre a la hoja de
 \label{confsensores}
 \end{table}
 \Subsubsection{Sensor Humedad y Temperatura}
-% Please add the following required packages to your document preamble:
-% \usepackage[table,xcdraw]{xcolor}
-% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|crc|}
@@ -179,67 +170,47 @@ Para determinar la tasa de fallas del módulo de cámara se recurre a la hoja de
 \end{table}
 
 \Subsection{Software}
-Para el estudio de confiabilidad de software se utilizó un modelo de estimación de tipo exponencial. Este modelo asume que todas las fallas que se presentan son independientes entre sí. Más específicamente se utilizará el modelo de Shooman.
-
-El modelo de Shooman, que normaliza las fallas por la cantidad de líneas de código $I_T$ sigue:
-
+Para el estudio de confiabilidad de software se utilizó un modelo de estimación de tipo exponencial. Este modelo asume que todas las fallas que se presentan son independientes entre sí. Más específicamente se utilizará el modelo de Shooman, el cual normaliza las fallas por la cantidad de líneas de código $I_T$ sigue:
 \begin{equation}
-R(t) = e^{-\lambda t}
+	R(t) = e^{-\lambda t}
+\end{equation}
+donde se toma
+\begin{equation}
+	\lambda = -k \left[ \epsilon_T - \epsilon(\zeta) \right]t
 \end{equation}
 
-donde se define
-
-\begin{equation}
-\lambda = -k(\epsilon_T - \epsilon(\zeta))t
-\end{equation}
-
-siendo $\epsilon_T$ la tasa de errores totales, $\epsilon(\zeta)$ la tasa de errores corregidos hasta un tiempo de corrección $\zeta$ y k una constante del modelo de estimación.
-
+Además, se define $\epsilon_T$ como la tasa de errores totales, $\epsilon(\zeta)$ la tasa de errores corregidos hasta un tiempo de corrección $\zeta$ y $k$ una constante del modelo de estimación.
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
 \hline
-Semanas &
-  $E_{totales}$ &
-  $E_{corregidos}$ &
-  $E_{residuales}$ &
-  \textbf{H (hrs)} &
-  \textbf{$\lambda_i$} &
-  \textbf{$\frac{\lambda_i}{\lambda_{i-1}}$} &
-  $\mathbf{\hat{E}_{tot}}$ &
-  $\mathbf{\hat{k}}$ \\ \hline
-1 &  &  & \tbc &  &  &  &  &  \\ \hline
-2 &  &  &  &  &  &  &  &  \\ \hline
-3 &  &  &  &  &  &  &  &  \\ \hline
-4 &  &  &  &  &  &  &  &  \\ \hline
-5 &  &  &  &  &  &  &  &  \\ \hline
-6 &  &  &  &  &  &  &  &  \\ \hline
-7 &  &  &  &  &  &  &  &  \\ \hline
-8 &  &  &  &  &  &  &  &  \\ \hline
-  &  &  & Valores adoptados &  &  &  & xx & xx \\ \hline
+\textbf{Semanas} & \boldmathcol{E_t}  		  & \boldmathcol{E_c}  			  & \boldmathcol{E_r}  			  & \textbf{H [hrs]} & \boldmathcol{\lambda_i}  & \boldmathcol{\frac{\lambda_i}{\lambda_{i-1}}}  & \boldmathcol{\hat{E}_{tot}}    & \boldmathcol{\hat{k}}    \\ \hline
+1                & 20                         & 17                            & 3                             & 168              & 0.11905                  & -                                              & -                              & -                       \\ \hline
+2                & 37                         & 33                            & 4                             & 336              & 0.05060                  & 0.42500                                        & 11.82609                       & 32.32474                \\ \hline
+3                & 50                         & 43                            & 7                             & 504              & 0.02579                  & 0.50980                                        & 10.40000                       & 37.93184                \\ \hline
+4                & 61                         & 52                            & 9                             & 672              & 0.01637                  & 0.63462                                        & 15.63158                       & 12.34174                \\ \hline
+5                & 74                         & 65                            & 9                             & 840              & 0.01548                  & 0.94545                                        & 225.33333                      & 0.35769                 \\ \hline
+6                & 89                         & 80                            & 9                             & 1008             & 0.01488                  & 0.96154                                        & 375.00000                      & 0.20329                 \\ \hline
+7                & 105                        & 96                            & 9                             & 1176             & 0.01361                  & 0.91429                                        & 170.66667                      & 0.42079                 \\ \hline
+8                & 115                        & 105                           & 10                            & 1344             & 0.00744                  & 0.54688                                        & 10.86207                       & 43.15476                \\ \hline
 \end{tabular}
-\caption{Fallas durante el periodo de testing del software.}
+\caption{Fallas durante el periodo de \textit{testing} del \textit{software}.}
 \label{tab:confsoft}
 \end{table}
 
-La Tabla (\ref{tab:confsoft}) presenta a lo largo del periodo de \textit{testing} la cantidad acumulada de errores $E_{totales}$, la cantidad acumulada de errores corregidos $E_{corregidos}$, la cantidad acumulada resultante de errores residuales $E_{residuales}$, las horas de \textit{testing} acumuladas \textbf{H(hrs)}, la tasa de fallos $\lambda$, y los parámetros invariables del modelo $\hat{E}_{tot}$ y $\hat{k}$, que pueden ser calculados según
-
+La Tabla (\ref{tab:confsoft}) presenta la cantidad acumulada de errores $E_t$, la cantidad acumulada de corregidos $E_c$, la cantidad acumulada resultante de los residuales $E_r$, las horas de \textit{testing} acumuladas \textbf{H [hrs]}, la tasa de fallos $\lambda$ y los parámetros invariables del modelo $\hat{E}_{tot}$ y $\hat{k}$ a lo largo del periodo de \textit{testing}. Estos son calculados mediante la formula:
 \begin{equation}
-\hat{E}_{tot} = \frac{ \frac{\lambda_i}{\lambda_{i-1}} E_c(\tau_{i-1})-E_c(\tau_i)}{\frac{\lambda_i}{\lambda_{i-1}}-1}
+	\hat{E}_{tot} = \frac{ \frac{\lambda_i}{\lambda_{i-1}} E_c(\tau_{i-1})-E_c(\tau_i)}{\frac{\lambda_i}{\lambda_{i-1}}-1}
 \end{equation}
-
 y
-
 \begin{equation}
-\hat{k} = \lambda_i\frac{I_T}{\hat{E}_{tot}-E_c(\tau_i)}
+	\hat{k} = \lambda_i\frac{I_T}{\hat{E}_{tot}-E_c(\tau_i)}
 \end{equation}
 
-Finalmente, se adoptan los valores $\hat{E}_{tot} = $ y $\hat{k} = $. Aproximando según
-
+Finalmente, se adoptan los valores $\hat{E}_{tot} = 1$, $I_T = 5000$  y $\hat{k} = 43.15476$. Aproximando según
 \begin{equation}
-\lambda = k\frac{E_r}{I_T}
+	\lambda = k\frac{E_r}{I_T}
 \end{equation}
-
-se obtiene $\lambda = $ que, tomando el inverso de este valor se obtiene el $TMEF$, que resulta ser de xx $hs$.
+se obtiene $\lambda = 0.00863$ que, tomando el inverso de este valor se obtiene el $TMEF$, que resulta ser de $ 116 \ hs$.
 
 %\end{document}
