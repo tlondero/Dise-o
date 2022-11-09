@@ -127,4 +127,71 @@ Para el módulo \rspi se utiliza la documentación de la misma para obtener el v
 \caption{Confiabilidad Sensor de Luminosidad}
 \label{tab:conflum}
 \end{table}
+
+\Subsection{Software}
+Para el estudio de confiabilidad de software se utilizó un modelo de estimación de tipo exponencial. Este modelo asume que todas las fallas que se presentan son independientes entre sí. Más específicamente se utilizará el modelo de Shooman.
+
+El modelo de Shooman, que normaliza las fallas por la cantidad de líneas de código $I_T$ sigue:
+
+\begin{equation}
+R(t) = e^{-\lambda t}
+\end{equation}
+
+donde se define
+
+\begin{equation}
+\lambda = -k(\epsilon_T - \epsilon(\zeta))t
+\end{equation}
+
+siendo $\epsilon_T$ la tasa de errores totales, $\epsilon(\zeta)$ la tasa de errores corregidos hasta un tiempo de corrección $\zeta$ y k una constante del modelo de estimación.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+Semanas &
+  $E_{totales}$ &
+  $E_{corregidos}$ &
+  $E_{residuales}$ &
+  \textbf{H (hrs)} &
+  \textbf{$\lambda_i$} &
+  \textbf{$\frac{\lambda_i}{\lambda_{i-1}}$} &
+  $\mathbf{\hat{E}_{tot}}$ &
+  $\mathbf{\hat{k}}$ \\ \hline
+1 &  &  & \tbc &  &  &  &  &  \\ \hline
+2 &  &  &  &  &  &  &  &  \\ \hline
+3 &  &  &  &  &  &  &  &  \\ \hline
+4 &  &  &  &  &  &  &  &  \\ \hline
+5 &  &  &  &  &  &  &  &  \\ \hline
+6 &  &  &  &  &  &  &  &  \\ \hline
+7 &  &  &  &  &  &  &  &  \\ \hline
+8 &  &  &  &  &  &  &  &  \\ \hline
+  &  &  & Valores adoptados &  &  &  & xx & xx \\ \hline
+\end{tabular}
+\caption{Fallas durante el periodo de testing del software.}
+\label{tab:confsoft}
+\end{table}
+
+La Tabla (\ref{tab:confsoft}) presenta a lo largo del periodo de \textit{testing} la cantidad acumulada de errores $E_{totales}$, la cantidad acumulada de errores corregidos $E_{corregidos}$, la cantidad acumulada resultante de errores residuales $E_{residuales}$, las horas de \textit{testing} acumuladas \textbf{H(hrs)}, la tasa de fallos $\lambda$, y los parámetros invariables del modelo $\hat{E}_{tot}$ y $\hat{k}$, que pueden ser calculados según
+
+\begin{equation}
+\hat{E}_{tot} = \frac{ \frac{\lambda_i}{\lambda_{i-1}} E_c(\tau_{i-1})-E_c(\tau_i)}{\frac{\lambda_i}{\lambda_{i-1}}-1}
+\end{equation}
+
+y
+
+\begin{equation}
+\hat{k} = \lambda_i\frac{I_T}{\hat{E}_{tot}-E_c(\tau_i)}
+\end{equation}
+
+Finalmente, se adoptan los valores $\hat{E}_{tot} = $ y $\hat{k} = $. Aproximando según
+
+\begin{equation}
+\lambda = k\frac{E_r}{I_T}
+\end{equation}
+
+se obtiene $\lambda = $ que, tomando el inverso de este valor se obtiene el $TMEF$, que resulta ser de xx $hs$.
+
+
+
 %\end{document}
