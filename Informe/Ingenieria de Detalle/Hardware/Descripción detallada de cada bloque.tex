@@ -1,13 +1,12 @@
 \Subsubsubsection{Potencia}
 
-Para la unidad de potencia se utilizan paneles solares y una batería de gel de ciclo profundo conectados a la placa DFR0580, la cual se ocupa de cargar la batería. De esta se obtienen 4 salidas de tensión:
+Para la unidad de potencia se utilizan paneles solares y una batería de gel de ciclo profundo conectados a la placa DFR0580, la cual se ocupa de cargar la batería. De esta se obtienen cuatro salidas de tensión:
 \begin{itemize}
-	\item Dos salidas de 5 $V$ y 2.5 $A$ [USB].
-	\item Una salida de 5 $V$ y 5 $A$.
-	\item Una salida de 12 $V$ y 8 $A$.
+	\item Dos salidas de $5 \ V$ y $2.5 \ A$ [USB].
+	\item Una salida de $5 \ V$ y $5 \ A$.
+	\item Una salida de $12 \ V$ y $8 \ A$.
 \end{itemize}
-De estas salidas solo es necesaria aquella que posee 5 $V$. En cuanto a la corriente, si bien es indistinto, se emplea la de 5 $A$ para evitar problemas de falta de corriente.
-%Con estas salidas se alimentan todos los módulos, a excepción del oscilador de potencia. Este módulo necesita una etapa DC-DC la cual eleva la tensión. Para ello se emplea una fuente \textit{switching} de topología \textit{Boost}.
+De estas salidas solo es necesaria aquella que posee $5 \ V$. En cuanto a la corriente, si bien es indistinto, se emplea la de $5 \ A$ para evitar problemas de falta de corriente.
 
 \Subsubsubsection{Medición}
 Para el conexionado de los sensores se diseñó una placa de soporte para la \rspi, la cual se denomina \textit{shield}. En esta se encuentra:
@@ -19,7 +18,7 @@ Para el conexionado de los sensores se diseñó una placa de soporte para la \rs
 	\item Un conector para los sensores, que abarca al de humedad, temperatura, luminosidad.
 \end{itemize}
 
-La placa de sensores utiliza alimentación de 3.3 $V$, la referencia de tierra, un pin GPIO para comunicación serial y el bus $I^2C$ de la \rpi. Este último se emplea para administrar la comunicación con el sensor de luminosidad y el módulo RTC, ya que ambos emplean el respectivo protocolo de comunicación del bus, en modo \textit{multi-slave}. Por otro lado, el pin serial GPIO corresponde a la comunicación del sensor de temperatura y humedad DHT-22. 
+La placa de sensores utiliza alimentación de $3.3 \ V$, la referencia de tierra, un pin GPIO para comunicación serial y el bus $I^2C$ de la \rpi. Este último se emplea para administrar la comunicación con el sensor de luminosidad y el módulo RTC, ya que ambos emplean el respectivo protocolo de comunicación del bus, en modo \textit{multi-slave}. Por otro lado, el pin serial GPIO corresponde a la comunicación del sensor de temperatura y humedad DHT-22. 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\linewidth,page=1]{ImagenesIngenieria de Detalle/RPI}		
@@ -35,7 +34,7 @@ Por fuera del \textit{shield}, la \rspi cuenta tanto con un conector destinado a
 	\label{fig:rpiFront}
 \end{figure}
 
-Además cuenta con una ranura para una tarjeta SD. Esta es usada no solo para la imagen de sistema operativo, sino que también para el almacenamiento de datos.
+Además, cuenta con una ranura para una tarjeta SD. Esta es usada no solo para la imagen de sistema operativo, sino que también para el almacenamiento de datos.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\linewidth,page=2]{ImagenesIngenieria de Detalle/RPI}		

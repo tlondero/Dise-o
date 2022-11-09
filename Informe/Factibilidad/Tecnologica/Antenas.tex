@@ -1,21 +1,16 @@
-La primera solución planteada para el abastecimiento de energía de la UBM se basa en la transferencia de energía al dispositivo del ave por medio de radiación electromagnética. A continuación se detalla el análisis de factibilidad tecnológica realizado y las conclusiones tomadas de esta propuesta.
+La primera solución planteada para el abastecimiento de energía de la UBM se basa en la transferencia de energía al dispositivo del ave por medio de radiación electromagnética. A continuación, se detalla el análisis de factibilidad tecnológica realizado y las conclusiones tomadas de esta propuesta.
 
 \Subsubsubsection{Planteamiento del Problema}
 
-La morfología del nido plantea la necesidad de recargar la UBM a distancias de entre 32 y 64 cm. Esto es dictado por las mínimas y máximas dimensiones medidas del nido entre la bóveda, donde se puede colocar electrónica, y el fondo, donde duerme el ave \cite{ref:PaperValeriaOjeda}.
+La morfología del nido plantea la necesidad de recargar la UBM a distancias de entre $32$ y $64 \ cm$. Esto es dictado por las mínimas y máximas dimensiones medidas del nido entre la bóveda, donde se puede colocar electrónica, y el fondo, donde duerme el ave \cite{ref:PaperValeriaOjeda}.
 
 En el mejor de los casos, el pájaro carpintero permanece por ocho horas en el nido mientras duerme, y luego cuida a las crías turnándose con la hembra durante el día. Por lo tanto, este permanecería un total de aproximadamente doce horas en el nido.
 
-En el peor de los casos, el ave únicamente permanece seis horas dentro del nido para dormir.
-
-Como la UBM tiene un consumo diario de
-
+En el peor de los casos, el ave únicamente permanece seis horas dentro del nido para dormir. La UBM tiene un consumo diario de
 \begin{equation}
 2.5 \ V \cdot 1 \ mA \cdot 24 \ hs = 60 \ mWh
 \end{equation}
-
 por lo que, tomando ambos casos, se obtiene un requerimiento de transmisión de potencia de
-
 \begin{equation}
 	\begin{cases} 
        \frac{60 \ mWh}{11 \ hs}= 5.5 \ mW & \text{Mejor caso} \\
@@ -47,11 +42,11 @@ donde $M$ es el coeficiente de mutua-inductancia entre las bobinas y $L_1$ y $L_
 
 La eficiencia en la transmisión de energía de este método es alta \cite{ref:wpteff}, pero depende en gran medida por el factor de acople entre ambas bobinas. Este factor de acople disminuye considerablemente con la distancia y la desalineación entre bobinas \cite{ref:wirelesschargingkeyelements} \cite{ref:couplingfactor_1}.
 
-Como las distancias a las que la transmisión se debe efectuar son de entre 32 y 64 cm y no se puede garantizar alineación entre bobinas al estar sujeto al comportamiento impredecible del ave, se descarta este método como solución.
+Como las distancias a las que la transmisión se debe efectuar son de entre $32$ y $64 \ cm$ y no se puede garantizar alineación entre bobinas al estar sujeto al comportamiento impredecible del ave, se descarta este método como solución.
 
 \Subsubsubsection{Carga por Radiofrecuencia}
 
-Si se parte de la ecuación del campo magnético en el eje azimutal de un dipolo de hertz, se tiene que
+Si se parte de la ecuación del campo magnético en el eje azimutal de un dipolo de Hertz, se tiene que
 \begin{equation}
 E_\theta = -\frac{\eta}{4\pi}I \cdot \Delta L \cdot k^2 \cdot sin\theta \cdot e^{-jkr} \left[ \frac{1}{jkr}+\left( \frac{1}{jkr}\right)^2 + \left(\frac{1}{jkr}\right)^3 \right]
 \end{equation}
@@ -74,7 +69,7 @@ En la zona reactiva la relación entre los campos eléctricos y magnéticos no e
 
 En el caso de la zona radiativa o de Fresnel, toda la energía es radiada. Sin embargo, la relación entre el campo eléctrico y magnético sigue siendo impredecible.
 
-A una distancia entre una y dos longitudes de onda, los efectos de campo cercano comienzan a cesar, mientras que los efectos de campo lejano comienzan a aparecer. Es en esta zona por lo tanto, que ambos efectos están presentes y tienen importancia \cite{ref:NearFieldVsFarField}. Los dispositivos RFID suelen operar en esta zona \cite{ref:NearFieldUHFRFID}.
+A una distancia entre una y dos longitudes de onda, los efectos de campo cercano comienzan a cesar, mientras que los efectos de campo lejano comienzan a aparecer. Por lo tanto, es en esta zona que ambos efectos están presentes y tienen importancia \cite{ref:NearFieldVsFarField}. Los dispositivos RFID suelen operar en esta zona \cite{ref:NearFieldUHFRFID}.
 
 Por otro lado, el campo lejano es el utilizado para realizar todo tipo de telecomunicaciones hoy en día. En esta zona, el campo eléctrico y campo magnético son ortogonales y la razón entre ambos es la impedancia del medio. Además, el vector de Poynting, definido como $\vec{S} = \vec{E}\times \vec{H}$, provee una medida de la energía electromagnética radiada \cite{ref:PhysicsOscillations}.
 
@@ -99,11 +94,11 @@ mientras que el resto de los datos se puede obtener por medio de las hojas de da
 
 \Subsubsubsection{Banda de Frecuencia Adoptada}
 
-Se puede observar que las pérdidas de espacio libre aumentan mediante crece la frecuencia de la onda electromagnética emitida. Esto plantea una situación de compromiso. Si la frecuencia es muy alta, las pérdidas por espacio libre serán muy grandes. Mientras que si la frecuencia es muy baja, la longitud de onda será muy grande, por lo que se estaría trabajando en el campo reactivo. Esto no es deseado debido a la imposibilidad de determinar con precisión la densidad de potencia.
+Se puede observar que las pérdidas de espacio libre aumentan mediante crece la frecuencia de la onda electromagnética emitida. Esto plantea una situación de compromiso. Si la frecuencia es muy alta, las pérdidas por espacio libre serán muy grandes. Mientras que, si es muy baja, la longitud de onda será muy grande, por lo que se estaría trabajando en el campo reactivo. Esto no es deseado debido a la imposibilidad de determinar con precisión la densidad de potencia.
 
-Se decidió utilizar la banda de 915 MHz por las siguientes razones:
+Se decidió utilizar la banda de $915 \ MHz$ por las siguientes razones:
 \begin{itemize}
-\item La zona de transición ocurre entre 32.8 y 65.6 cm que concuerda con las distancias mínimas y máximas entre emisor y receptor. Si bien no estaremos trabajando en campo lejano, esto no acarrea problemas, ya que hay basta cantidad de antecedentes del uso de los efectos de campo cercano en dispositivos comerciales \cite{ref:NearFieldUHFRFID} \cite{ref:Humavox}.
+\item La zona de transición ocurre entre $32.8$ y $64.6 \ cm$ que concuerda con las distancias mínimas y máximas entre emisor y receptor. Si bien no estaremos trabajando en campo lejano, esto no acarrea problemas, ya que hay basta cantidad de antecedentes del uso de los efectos de campo cercano en dispositivos comerciales \cite{ref:NearFieldUHFRFID} \cite{ref:Humavox}.
 \item Esta frecuencia pertenece a la banda ISM, la cual está reservada para propósitos industriales, científicos o médicos, excluyendo las aplicaciones de telecomunicaciones \cite{ref:ITUISM}, atribuidas a la Región 2 definida por la ITU como América \cite{ref:ITUREGION}.
 \end{itemize}
  
@@ -111,17 +106,19 @@ Se decidió utilizar la banda de 915 MHz por las siguientes razones:
 
 Para realizar las comparaciones entre antenas transmisoras, se tuvieron en cuenta los siguientes criterios:
 \begin{itemize}
-\item \textbf{Dimensiones:} La antena transmisora deberá ser colocada en la bóveda del nido, dado que ese es el único lugar donde se puede colocar electrónica sin que esta sea perturbada por las aves y vice versa. El volumen de la bóveda se puede aproximar al de un cilindro macizo chato de diámetro entre 7.9 y 9.7 cm y aproximadamente 5 cm de altura, por lo que las dimensiones de la antena emisora estarán acotadas por estos valores.
+\item \textbf{Dimensiones:} La antena transmisora deberá ser colocada en la bóveda del nido, dado que ese es el único lugar donde se puede colocar electrónica sin que esta sea perturbada por las aves y viceversa. El volumen de la bóveda se puede aproximar al de un cilindro macizo chato de diámetro entre $7.9$ y $9.7 \ cm$ y aproximadamente $5 \ cm$ de altura, por lo que las dimensiones de la antena emisora estarán acotadas por estos valores.
+
 \item \textbf{Directividad:} Se quiere que la potencia enviada a la antena se transforme en radiación electromagnética que llegue a la mochila del ave, por lo que radiación que no sea dirigida directamente hacia el fondo del nido será potencia desperdiciada. Es por esto que se quiere una alta directividad en la antena emisora. También hay un límite máximo en la directividad de la antena. Sin embargo, esta limitación no se alcanzará, dado que la tecnología a utilizar será de antenas del tipo planas, más cortas eléctricamente que media longitud de onda por cuestiones de limitaciones en las dimensiones. 
-\item \textbf{Potencia Máxima:} Como las pérdidas en el circuito electromagnético son grandes, una muy baja parte de la potencia enviada a la antena transmisora formará parte de la potencia entregada a las baterías de la mochila, por lo que para recibir la potencia necesaria, se debe transmitir en el orden de los watts. Es por esto que la potencia máxima es una especificación relevante al momento de decidir entre soluciones.
+
+\item \textbf{Potencia Máxima:} Como las pérdidas en el circuito electromagnético son grandes, una muy baja parte de la potencia enviada a la antena transmisora formará parte de la potencia entregada a las baterías de la mochila, por lo que, para recibir la potencia necesaria, se debe transmitir en el orden de los watts. Es por esto que la potencia máxima es una especificación relevante al momento de decidir entre soluciones.
 \end{itemize}
 
 Mientras que para el caso de las antenas receptoras, se tuvieron en cuenta los siguientes criterios:
 \begin{itemize}
 \item \textbf{Eficiencia:} Esta será la especificación más importante y es la que determinará la factibilidad de la solución. Se buscará la mayor eficiencia posible para lograr transmitir a las baterías la potencia recibida por el campo electromagnético.
-\item \textbf{Lóbulo isotrópico:} Como se desconoce cuál será la posición del ave dentro del nido, se requiere que el lóbulo de radiación de la antena receptora sea lo más isotrópico posible, garantizando una recepción de potencia uniforme sin importar la posición del ave. Se buscará una ganancia menor a 2 dBi.
+\item \textbf{Lóbulo isotrópico:} Como se desconoce cuál será la posición del ave dentro del nido, se requiere que el lóbulo de radiación de la antena receptora sea lo más isotrópico posible, garantizando una recepción de potencia uniforme sin importar la posición del ave. Se buscará una ganancia menor a $2 \ dBi$.
 \item \textbf{Peso:} El ave no puede cargar con más de un cierto porcentaje de su propio peso, por lo que minimizar esta especificación es crucial.
-\item \textbf{Dimensiones:} Es necesario no perturbar al ave con la mochila. Esto requiere que la antena receptora posea las mínimas dimensiones posibles. Sin embargo, como la banda a utilizar será la de 915 MHz y un cuarto de onda en esta frecuencia es alrededor de 8 cm, existe una relación de compromiso entre las dimensiones de la antena receptora y la eficiencia de esta.
+\item \textbf{Dimensiones:} Es necesario no perturbar al ave con la mochila. Esto requiere que la antena receptora posea las mínimas dimensiones posibles. Sin embargo, como la banda a utilizar será la de $915 \ MHz$ y un cuarto de onda en esta frecuencia es alrededor de $8 \ cm$, existe una relación de compromiso entre las dimensiones de la antena receptora y la eficiencia de esta.
 \end{itemize}
 
 Finalmente, una restricción a tener en cuenta para ambas antenas será el costo.
@@ -139,11 +136,11 @@ Por el lado del receptor, se encuentra el integrado P1110B, el cual almacena ene
 	\label{fig:diagrama_hardware_antenas}
 \end{figure}
 
-Para la trasmisión de la señal de $915 \ MHZ$ se utiliza un cable del tipo \textit{RG-213}. Este se caracteriza por poseer bajas perdidas de $23.054 \ \nicefrac{dB}{100m}$.
+Para la trasmisión de la señal de $915 \ MHZ$ se utiliza un cable del tipo \textit{RG-213}. Este se caracteriza por poseer bajas pérdidas de $23.054 \ \nicefrac{dB}{100m}$.
 
 \bigskip
 
-\textbf{Oscilador 915 MHz}
+\textbf{Oscilador $915 \ MHz$}
 
 \begin{figure}[H]
 	\centering	
@@ -171,11 +168,11 @@ Para el amplificador de potencia de RF, como las unidades a producir serán muy 
 \begin{figure}[H]
 	\centering	
 	\includegraphics[width=0.5\textwidth, page=8]{ImagenesIngenieria de Detalle/p1110b}
-	\caption{Módulo utilizado como power harvester.}
+	\caption{Módulo utilizado como \textit{power harvester}.}
 	\label{fig:p1110b}
 \end{figure}
 
-Para la recepción de la radiofrecuencia se utilizará el power harvester P1110B. Este integrado toma la señal de radiofrecuencia y realiza con esta la carga de un capacitor. Cuando el capacitor llega a un valor de tensión máximo, habilita la salida mediante una etapa DC-DC hasta que el capacitor baja su tensión por debajo de un mínimo para volver a cargarse hasta el máximo.
+Para la recepción de la radiofrecuencia se utiliza el \textit{power harvester} P1110B. Este integrado toma la señal de radiofrecuencia y realiza con esta la carga de un capacitor. Cuando el capacitor llega a un valor de tensión máximo, habilita la salida mediante una etapa DC-DC hasta que el capacitor baja su tensión por debajo de un mínimo para volver a cargarse hasta el máximo.
 \begin{itemize}
 	\item Eficiencia del $70 \ \%$.
 	\item Adaptado internamente a $50 \ \Omega$.
@@ -209,8 +206,7 @@ Para el amplificador de potencia se tuvieron en cuenta distintos módulos armado
 
 Se investigaron diversos métodos de transmisión de energía inalámbrica a través de campos electromagnéticos. Dentro de estos se en cuenta el campo cercano y el de radiofrecuencia. El primero se caracteriza por ser puramente imaginario y por poseer una caída proporcional al cuadrado de la distancia, mientras que el segundo (radiación) cae linealmente.
 
-Debido a que la aplicación es de una distancia que cae en el rango del campo lejano, se optó por la radiofrecuencia. Es así que surgieron los integrados IC-P2110 y IC-P1110 de PowerCast, los cuales permiten la recolección de energía de radio frecuencia almacenando esta en capacitores o con la opción de directamente cargar una batería (P1110). A continuación se comparan los dos IC.
-
+Debido a que la aplicación es de una distancia que cae en el rango del campo lejano, se optó por la radiofrecuencia. Es así que surgieron los integrados IC-P2110 y IC-P1110 de PowerCast, los cuales permiten la recolección de energía de radio frecuencia almacenando está en capacitores o con la opción de directamente cargar una batería (P1110). Se analiza a modo comparativo ambos IC en la Tabla (\ref{tab:cagadores_comp}).
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|}
@@ -221,12 +217,13 @@ Debido a que la aplicación es de una distancia que cae en el rango del campo le
 \textbf{\begin{tabular}[c]{@{}c@{}}Frecuencia de\\ trabajo [MHz]\end{tabular}}                    	& 910 $\sim$ 928                                                                                     			& 910 $\sim$ 928                                                                                        \\ \hline
 \textbf{\begin{tabular}[c]{@{}c@{}}Eficiencia del PH\\ para RFin = 11 dBm\end{tabular}}            	& 60 \%                                                                                               			& 45 \%                                                                                                 \\ \hline
 \textbf{\begin{tabular}[c]{@{}c@{}}Corriente de salida\\ para RFin = 11 dBm\end{tabular}}           & 3 mA                                                                                                			& -                                                                                                     \\ \hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Timepo de carga \\ inicial del capacitor [s]\end{tabular}} 	  	& -                                                                                                   			& < 5                                                                                           		\\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Tiempo de carga \\ inicial del capacitor [s]\end{tabular}} 	  	& -                                                                                                   			& < 5                                                                                           		\\ \hline
 \textbf{\begin{tabular}[c]{@{}c@{}}Posee placa\\ de evaluación\end{tabular}}                  		& Sí                                                                                                  			& Sí                                                                                                    \\ \hline
 \textbf{\begin{tabular}[c]{@{}c@{}}Impedancia de\\ entrada  [$\Omega$] \end{tabular}}             	& 50                                                                                                  			& 50                                                                                                    \\ \hline
 \textbf{\begin{tabular}[c]{@{}c@{}}Temperatura de\\ operación [°C]\end{tabular}}                  	& -40 $\sim$ 85                                                                                       			& -40 $\sim$ 85                                                                                         \\ \hline
 \end{tabular}
 \caption{Comparación entre cargadores.}
+\label{tab:cagadores_comp}
 \end{table}
 
 \Subsubsubsection{Comparación entre Antenas}
@@ -312,7 +309,7 @@ Debido a que la aplicación es de una distancia que cae en el rango del campo le
 
 \Subsubsubsection{Conclusión Factibilidad de la Carga Inalámbrica}
 
-Para el integrado de energy harvesting se optó por el P1110 debido a su elevada eficiencia en la zona donde se transmitirá potencia.
+Para el integrado de \textit{energy harvesting} se optó por el P1110 debido a su elevada eficiencia en la zona donde se transmitirá potencia.
 
 Por un lado, para el caso de las antenas transmisoras, se descartan APAE915R2540ABDB1-T, APAES915R80C16-T y ARRKP7059-S915B por su baja ganancia, además del alto costo de las últimas dos. También se descarta W3215 por ser de polarización lineal. Por lo que restan la antena \textbf{ISPC.91A.09.0092E} para la etapa de ensayo.
 
@@ -329,7 +326,7 @@ Se tomaron estas antenas y se calculó para cada par Tx-Rx la potencia recibida 
 	\label{fig:pot_recibida_teorica}
 \end{figure}
 
-Se puede observar que con $4 \ W$ en la antena transmisora, todas las combinaciones de antenas cumplen con la potencia necesaria para el mejor y peor caso. Tomando el mejor par Rx-Tx, y al tener en cuenta la eficiencia de aproximadamente $70\%$ del P1110, la potencia a la salida de este permanece por encima del peor caso hasta la máxima distancia de transmisión.
+Se puede observar que, con $4 \ W$ en la antena transmisora, todas las combinaciones de antenas cumplen con la potencia necesaria para el mejor y peor caso. Tomando el mejor par Rx-Tx, y al tener en cuenta la eficiencia de aproximadamente $70\%$ del P1110, la potencia a la salida de este permanece por encima del peor caso hasta la máxima distancia de transmisión.
 
 \begin{figure}[H]
 	\centering

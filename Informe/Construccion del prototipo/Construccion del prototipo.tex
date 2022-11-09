@@ -2,11 +2,11 @@
 \label{subsection:nido-sustrato}
 Para la construcción del prototipo del nido se tuvo en cuenta que el sustrato debe ser madera. Para las medidas se tuvieron en cuenta las dimensiones promedio de un nido de carpintero \cite{ref:PaperValeriaOjeda}.
 
-Por otro lado para alojar y proteger la electrónica se contempló el desarrollo de encapsulados. Primero se trabajó con la \rspi y sus complementos. Se adaptó un diseño existente agrandando su tamaño para que puedan introducirse las placas requeridas, se extendieron y fabricaron ranuras para el conexionado y se agregó un soporte que permita atornillar el conjunto. Para los sensores, se diseñó otro contenedor el cual contempla ranuras para que la cámara y los demás componentes estén en contacto con el exterior y ranuras para el conexionado con la \rpi.
+Por otro lado, para alojar y proteger la electrónica se contempló el desarrollo de encapsulados. Primero se trabajó con la \rspi y sus complementos. Se adaptó un diseño existente agrandando su tamaño para que puedan introducirse las placas requeridas, se extendieron y fabricaron ranuras para el conexionado y se agregó un soporte que permita atornillar el conjunto. Para los sensores, se diseñó otro contenedor el cual contempla ranuras para que la cámara y los demás componentes estén en contacto con el exterior y ranuras para el conexionado con la \rpi.
 
 Es así que el diseño del prototipo de nido se puede observar en los planos especificados en las Figuras (\ref{fig:base_nido_plano}), (\ref{fig:tapa_nido_plano}) y (\ref{fig:explotado_nido_plano}), mientras que los encapsulados se encuentran en las Figuras (\ref{fig:RpiCasingBottom}), (\ref{fig:RpiCasingTop}), (\ref{fig:BasePlano}) y (\ref{fig:TapaPlano}).
 
-Finalmente en la Figura (\ref{fig:caja_prototipo}) se puede observar el prototipo del producto montado sobre un nido artificial construido con madera. En dicha imagen se puede observar un elemento extra cerca del encapsulado de la \rspi. Este complemento puede ser observado con mayor detalle en la Figura (\ref{fig:Charger}). La justificación del elemento se explica más adelante.
+Finalmente, en la Figura (\ref{fig:caja_prototipo}) se puede observar el prototipo del producto montado sobre un nido artificial construido con madera. En dicha imagen se puede observar un elemento extra cerca del encapsulado de la \rspi. Este complemento puede ser observado con mayor detalle en la Figura (\ref{fig:Charger}). La justificación del elemento se explica más adelante.
 \begin{figure}[H]
 	\centering	\includegraphics[width=0.4\linewidth,page=1]{ImagenesConstruccion del prototipo/caja_prototipo_2}		
 	\caption{Prototipo del producto montado sobre un nido artificial construido con madera.}
@@ -18,25 +18,30 @@ Finalmente en la Figura (\ref{fig:caja_prototipo}) se puede observar el prototip
 \Subsubsection{\rspi}
 Para el prototipo se utiliza una \rspi 3B, sobre la cual se desarrollan los \textit{drivers} de comunicación con los diversos sensores. Además se confeccionó un \textit{shield} (encapsulado), el cuál realiza el acondicionamiento de las señales e interfaz para la placa de sensores, como se observa en la Figura (\ref{fig:shield}).
 \begin{figure}[H]
-	\centering	\includegraphics[width=0.6\linewidth,page=1]{ImagenesConstruccion del prototipo/shieldSensor}		
-	\caption{\rspi y su \textit{shield}.}
-	\label{fig:shield}
+    \centering
+    \begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth,page=1]{ImagenesConstruccion del prototipo/shieldSensor}		
+		\caption{Esquemático de la \rspi y su \textit{shield}.}
+		\label{fig:shield}
+	\end{subfigure}
+    \caption*{}
 \end{figure}
-
 \begin{figure}[H]
-\centering
-    	\begin{subfigure}{0.4\textwidth}
-        	\centering
-        	\includegraphics[width=\linewidth]{ImagenesConstruccion del prototipo/rpiyshield_prototipo}		
-			\caption{\rspi y su shield implementado.}
-			\label{fig:rpiyshield_prototipo}
-        \end{subfigure}\hspace*{2cm}
-        \begin{subfigure}{0.4\textwidth}
-        	\centering
-        	\includegraphics[width=\linewidth]{ImagenesConstruccion del prototipo/rpiyshield_encapsulado_prototipo}
-        	\caption{Encapsulado de la \rspi y su \textit{shield} implementado.}
-			\label{fig:casing_rpi}
-        \end{subfigure}
+	\ContinuedFloat
+	\centering
+    \begin{subfigure}{0.3\textwidth}
+    	\centering
+     	\includegraphics[width=\linewidth]{ImagenesConstruccion del prototipo/rpiyshield_prototipo}		
+		\caption{\rspi y su shield implementado.}
+		\label{fig:rpiyshield_prototipo}
+    \end{subfigure}\hspace*{2cm}
+    \begin{subfigure}{0.3\textwidth}
+    	\centering
+        \includegraphics[width=\linewidth]{ImagenesConstruccion del prototipo/rpiyshield_encapsulado_prototipo}
+        \caption{Encapsulado de la \rspi y su \textit{shield}.}
+		\label{fig:casing_rpi}
+    \end{subfigure}
 	\caption{Construcción de la unidad de procesamiento del prototipo.}
 	\label{fig:up_prototipo}
 \end{figure}
@@ -44,26 +49,30 @@ Para el prototipo se utiliza una \rspi 3B, sobre la cual se desarrollan los \tex
 \Subsubsection{Sensores}
 En cuanto a los sensores se diseña una placa que se ubica en la bóveda del nido, la cual reúne todos los sensores necesarios, y ofrece una interfaz con la placa \textit{shield}.
 \begin{figure}[H]
-	\centering
-	\includegraphics[width=0.6\linewidth,page=2]{ImagenesConstruccion del prototipo/shieldSensor}		
-	\caption{Placa de sensores.}
-	\label{fig:sens}
+    \centering
+    \begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth,page=2]{ImagenesConstruccion del prototipo/shieldSensor}		
+		\caption{Esquemático de la placa de sensores.}
+		\label{fig:sens}
+	\end{subfigure}
+    \caption*{}
 \end{figure}
-
 \begin{figure}[H]
-\centering
-    	\begin{subfigure}{0.3\textwidth}
-        	\centering
-        	\includegraphics[width=\linewidth]{ImagenesConstruccion del prototipo/sensores_prototipo}		
-			\caption{Placa de sensores implementada.}
-			\label{fig:sensores_prototipo}
-        \end{subfigure}\hspace*{2cm}
-        \begin{subfigure}{0.3\textwidth}
-        	\centering
-        	\includegraphics[width=\linewidth]{ImagenesConstruccion del prototipo/sensores_encapsulado_prototipo_alt}
-        	\caption{Encapsulado de la placa de sensores implementada.}
-			\label{fig:sensores_encapsulado_prototipo_alt}
-        \end{subfigure}
+	\ContinuedFloat
+	\centering
+	\begin{subfigure}{0.25\textwidth}
+    	\centering
+        \includegraphics[width=\linewidth]{ImagenesConstruccion del prototipo/sensores_prototipo}		
+		\caption{Placa de sensores implementada.}
+		\label{fig:sensores_prototipo}
+    \end{subfigure}\hspace*{2cm}
+    \begin{subfigure}{0.25\textwidth}
+    	\centering
+        \includegraphics[width=\linewidth]{ImagenesConstruccion del prototipo/sensores_encapsulado_prototipo_alt}
+        \caption{Encapsulado de la placa de sensores.}
+		\label{fig:sensores_encapsulado_prototipo_alt}
+	\end{subfigure}
 	\caption{Construcción de la placa de sensores y su encapsulado para el prototipo.}
 	\label{fig:sensores_prototipado}
 \end{figure}
@@ -95,9 +104,9 @@ Alternativamente, para disminuir el tamaño del prototipo, se reemplaza la fuent
 
 Se opta por utilizar un \textit{Power Bank} (batería externa) que cumpla con los requisitos de tensión y corriente necesarios. El dispositivo elegido para esta tarea es el cargador \href{https://www.sony.com/electronics/support/res/manuals/W000/W0002536M.pdf}{CP-V3} de la empresa \textit{Sony}.
 
-Las razones por las cuales se decidió utilizar dicha tecnología como alternativa es porque posee alta portabilidad, un tamaño reducido, es independiente de la red eléctrica, brinda una señal de alimentación estable y es fácilmente recargable. 
+Las razones por las cuales se decidió utilizar dicha tecnología como alternativa son porque posee alta portabilidad, un tamaño reducido, es independiente de la red eléctrica, brinda una señal de alimentación estable y es fácilmente recargable. 
 
 Como se mencionó en la Sección (\ref{subsection:nido-sustrato}), este elemento se adosa al nido artificial mediante el soporte presentado en la Figura (\ref{fig:Charger}). 
 
-\Subsection{Prototipo Nido-Comunicaciones }
-Existen dos tipos de comunicación que se realiza en el prototipo: la encargada de \nodered para la comunicación con usuarios y la comunicación con la base principal de seguimiento para la recolección de datos del ave.
+%\Subsection{Prototipo Nido-Comunicaciones }
+%Existen dos tipos de comunicación que se realiza en el prototipo: la encargada de \nodered para la comunicación con usuarios y la comunicación con la base principal de seguimiento para la recolección de datos del ave.
