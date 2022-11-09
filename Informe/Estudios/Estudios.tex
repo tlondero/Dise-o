@@ -14,7 +14,7 @@ El primer paso consiste en realizar un gráfico de todos los módulos considerad
 	\caption{Módulos críticos de funcionamiento.}
 	\label{fig:criticos}
 \end{figure}
-Se calcula una estimación de la confiabilidad de cada módulo utilizando una estrategia \quotes{Top-Down}. Se encuentra la tasa de falla de cada sub-módulo mediante un proceso multiplicativo a la tasa de fallos base provista por las distintas cargas a las que son sometidos los componentes.
+Se calcula una estimación de la confiabilidad de cada módulo utilizando una estrategia \quotes{Top-Down}. Se encuentra la tasa de falla de cada submódulo mediante un proceso multiplicativo a la tasa de fallos base provista por las distintas cargas a las que son sometidos los componentes.
 No se cuenta con redundancias, por lo que el valor de confiabilidad del módulo estará dado por la confiabilidad en serie de cada uno de sus componentes.
 
 \begin{table}[H]
@@ -30,7 +30,7 @@ No se cuenta con redundancias, por lo que el valor de confiabilidad del módulo 
 \textbf{Conexionado Sensores} & $\lambda_p \ = \ \lambda_b \ \cdot \  \pi_T \ \cdot \ \pi_K  \ \cdot \ \pi_Q \ \cdot \ \pi_E $                                                                                 \\ \hline
 \textbf{IC DS1307}            & $\lambda_p \ = \lambda_{BD} \ \cdot \ \pi_{MFG} \ \cdot \ \pi_T \ \cdot \ \pi_{CD} \ + \ \lambda_{BP} \ \cdot \ \pi_E \ \cdot \ \pi_Q + \lambda_{EOS}$                         \\ \hline
 \textbf{Diodo}                & $\lambda_p \ = \ \lambda_b \ \cdot \  \pi_T \ \cdot \ \pi_S  \ \cdot \ \pi_C \ \cdot \ \pi_Q \ \cdot \ \pi_E $                                                                 \\ \hline
-\textbf{Regulador de Tension} & $\lambda_p \ = \ \lambda_b \ \cdot \  \pi_T \ \cdot \ \pi_S  \ \cdot \ \pi_C \ \cdot \ \pi_Q \ \cdot \ \pi_E $                                                                 \\ \hline
+\textbf{Regulador de Tensión} & $\lambda_p \ = \ \lambda_b \ \cdot \  \pi_T \ \cdot \ \pi_S  \ \cdot \ \pi_C \ \cdot \ \pi_Q \ \cdot \ \pi_E $                                                                 \\ \hline
 \textbf{Transistor Mosfet}    & $\lambda_p \ = \ \lambda_b \ \cdot \  \pi_T \ \cdot \ \pi_A  \ \cdot \ \pi_R \ \cdot \ \pi_S \ \cdot \ \pi_Q \ \cdot \ \pi_E $                                                 \\ \hline
 \textbf{VHSIC}                & \cellcolor[HTML]{FFFFFF}$\lambda_p \ = \lambda_{BD} \ \cdot \ \pi_{MFG} \ \cdot \ \pi_T \ \cdot \ \pi_{CD} \ + \ \lambda_{BP} \ \cdot \ \pi_E \ \cdot \ \pi_Q + \lambda_{EOS}$ \\ \hline
 \textbf{Batería}              & \multicolumn{1}{c|}{Documentación}                                                                                                                                             \\ \hline
@@ -45,14 +45,11 @@ No se cuenta con redundancias, por lo que el valor de confiabilidad del módulo 
 \end{table}
 
 \Subsubsection{\rspi}
-Para el módulo \rspi se utiliza la documentación de la misma para obtener el valor de la tasa de fallos.
+Para el módulo \rspi se utiliza la documentación de esta para obtener el valor de la tasa de fallos.
 \begin{equation}
 \lambda_p = 3 
 \end{equation}
 \Subsubsection{Regulador de Energía}
-% Please add the following required packages to your document preamble:
-% \usepackage[table,xcdraw]{xcolor}
-% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|ccc|}
@@ -73,7 +70,7 @@ Para el módulo \rspi se utiliza la documentación de la misma para obtener el v
 \end{table}
 
 \Subsubsection{Paneles Solares}
-Para determinar a tasa de fallas de los paneles soalres se utiliza la documentación de los mismos.
+Para determinar a tasa de fallas de los paneles solares se utiliza la documentación de estos.
 \begin{equation}
 \lambda_p = 0.057 
 \end{equation}
@@ -84,9 +81,6 @@ Para determinar a tasa de fallas de las baterías se utiliza la documentación.
 \lambda_p = 0.005 
 \end{equation}
 \Subsubsection{Conector Shield}
-% Please add the following required packages to your document preamble:
-% \usepackage[table,xcdraw]{xcolor}
-% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|ccc|}
@@ -185,7 +179,7 @@ Para determinar la tasa de fallas del módulo de cámara se recurre a la hoja de
 \end{table}
 
 \Subsubsection{Tasa de fallas total}
-Utilizando los valores finales obtenidos en las anteriores tablas se calcula el $\lambda_{Total}$ de al siguiente manera:
+Utilizando los valores finales obtenidos en las anteriores tablas se calcula el $\lambda_{Total}$ de la siguiente manera:
 \begin{equation}
 \lambda_{Total} \ = \  \sum_{Modulos} \  \lambda_{Totn}  \  =  \ 18.8174 \  \frac{\text{fallas}}{10^6 \ \text{horas}}
 \end{equation}
@@ -197,7 +191,7 @@ Con esto definido se obtiene el tiempo medio a la falla para todo el sistema:
 \begin{equation}
 MTTF \ = \ \int_0^\infty \ R(t)\ dt \ \approx \ 53142.19 \ \text{horas} \ \approx \ 6.066 \ \text{años}
 \end{equation}
-Ademas se calcula valores para R(T) con un paso de 3 meses (Duración base del proyecto) hasta 3 años.
+Ademas, se calcula valores para R(T) con un paso de 3 meses (Duración base del proyecto) hasta 3 años.
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|c|c|c|c|}
@@ -210,5 +204,6 @@ Ademas se calcula valores para R(T) con un paso de 3 meses (Duración base del p
 \caption{Probabilidad de confiabilidad cada períodos de 3 meses.}
 \label{probConf}
 \end{table}
-Teniendo en cuenta que el tiempo de vida del producto esta estimado en 3 años y que la duración del estudio es de 3 meses. Que el tiempo medio a la falla sea de 6 años, resulta satisfactorio.
+
+Teniendo en cuenta que el tiempo de vida del producto está estimado en 3 años y que la duración del estudio es de 3 meses. Que el tiempo medio a la falla sea de 6 años, resulta satisfactorio.
 %\end{document}

@@ -1,7 +1,7 @@
 Para las distintas mediciones se tuvieron en cuenta diversas tecnologías que existen. Se evaluaron parámetros que definen la performance, tales como la linealidad de salida, el costo, el rango de operación, la precisión, el tipo de salida, aplicación, entre otras tantas variables.
 
 \Subsubsubsection{Temperatura}
-En el caso de la medición de temperatura, se valoraron diversas tecnologías que existen, siendo por ejemplo la RTD cuyo funcionamiento se basa en el cambio de la resistencia en función de la temperatura bajo al ecuación $R(T)=R_0 + \alpha \cdot \Delta T$. También se consideró la tecnología TC, cuyo funcionamiento se basa en el efecto seebek. Finalmente, el uso de un IC, el cual se basa en propiedades de dispositivos semiconductores extrínsecos.
+En el caso de la medición de temperatura, se valoraron diversas tecnologías que existen, siendo por ejemplo la RTD cuyo funcionamiento se basa en el cambio de la resistencia en función de la temperatura bajo al ecuación $R(T)=R_0 + \alpha \cdot \Delta T$. También se consideró la tecnología TC, cuyo funcionamiento se basa en el efecto Seebek. Finalmente, el uso de un IC, el cual se basa en propiedades de dispositivos semiconductores extrínsecos.
 
 \begin{table}[H]
 \centering
@@ -13,7 +13,7 @@ En el caso de la medición de temperatura, se valoraron diversas tecnologías qu
 
 \textbf{\begin{tabular}[c]{@{}c@{}}Temperatura de\\ operación [°C]\end{tabular}}                                              & -40 $\sim$ 1200                                                                        & -50 $\sim$ 200  & -10 $\sim$ 85 & -40 $\sim$ 80 \\ \hline
 \textbf{\begin{tabular}[c]{@{}c@{}}Interfaz de\\ conexionado\end{tabular}}                                                      & \begin{tabular}[c]{@{}c@{}}Se debe\\ proporcionar\\ un circuito\\ amplificador\end{tabular} & \begin{tabular}[c]{@{}c@{}}Se debe \\ proporcionar\\  un circuito\\  convertidor\\  de resistencia\\  a tensión\end{tabular} & -                                                                & -                \\ \hline
-\textbf{Presición [°C]}                                                       & $\pm$ 1.5	& $\pm$ 0.1	& $\pm$ 0.5	& $\pm$ 0.5	\\ \hline
+\textbf{Precisión [°C]}                                                       & $\pm$ 1.5	& $\pm$ 0.1	& $\pm$ 0.5	& $\pm$ 0.5	\\ \hline
 
 \textbf{Estabilidad}                                                     & Tienden a envejecer                                                                       & -                                                                                                                            & -                                                                & -                \\ \hline
 \textbf{Autocalentamiento}                                               & -                                                                                         & \begin{tabular}[c]{@{}c@{}}Depende de\\  la corriente\\  de medición.\end{tabular}                                           & Bajo                                                             & Bajo             \\ \hline
@@ -24,7 +24,7 @@ En el caso de la medición de temperatura, se valoraron diversas tecnologías qu
 \end{table}
 
 \Subsubsubsection{Humedad}
-Existen varias maneras de medir la magnitud física de la humedad, dentro de estas la mas común se basa en utilizar la dependencia que existe entre la humedad y la capacidad. Es por esto que se utilizan capacitores con un dieléctrico, el cual cambia constante con la humedad. Además existen sensores que se aprovechan de como cambia la resistencia en función de la temperatura, pero estas tecnologías son menos frecuentes.
+Existen varias maneras de medir la magnitud física de la humedad, dentro de estas la más común se basa en utilizar la dependencia que existe entre la humedad y la capacidad. Es por esto que se utilizan capacitores con un dieléctrico, el cual cambia constante con la humedad. Además, existen sensores que se aprovechan de cómo cambia la resistencia en función de la temperatura, pero estas tecnologías son menos frecuentes.
 
 \begin{table}[H]
 \centering
@@ -33,7 +33,7 @@ Existen varias maneras de medir la magnitud física de la humedad, dentro de est
 \textbf{\begin{tabular}[c]{@{}c@{}}Aspectos\\ comparativos\end{tabular}} & \textbf{\href{https://www.mouser.com/datasheet/2/758/DHT11-Technical-Data-Sheet-Translated-Version-1143054.pdf}{DHT-11}}   & \textbf{\href{http://codigoelectronica.com/blog/am2301-datasheet}{AM-2301}}  & \textbf{\href{https://www.sparkfun.com/datasheets/Sensors/Temperature/DHT22.pdf}{DHT-22}}   & \textbf{\href{https://datasheetspdf.com/pdf/1298922/AOSONG/AM1001/1}{AM-1001}}  \\ \hline
 \textbf{Costo [USD]}                                                           & 1.3           & 7 & 4.93 & 5.6	\\ \hline
 \textbf{\begin{tabular}[c]{@{}c@{}}Rango de\\ operación [\%RH]\end{tabular}}                                              & 20 $\sim$ 90 & 0 $\sim$ 100 & 0 $\sim$ 100 & 20 $\sim$ 90 \\ \hline
-\textbf{Presición [\%RH]}                                                       & $\pm$4	& $\pm$3	 & $\pm$2	& $\pm$5	\\ \hline
+\textbf{Precisión [\%RH]}                                                       & $\pm$4	& $\pm$3	 & $\pm$2	& $\pm$5	\\ \hline
 \textbf{Tipo de salida}                                                  & Digital           & Digital           & Digital           & Analógica         \\ \hline
 \textbf{Imagen}                                                          & \includeintable{.1}{ImagenesFactibilidad/DHT-11}                 & \includeintable{.1}{ImagenesFactibilidad/AM-2301}                 & \includeintable{.1}{ImagenesFactibilidad/DHT-22}                 & \includeintable{.1}{ImagenesFactibilidad/AM-1001} \\ \hline
 \end{tabular}
@@ -88,8 +88,7 @@ Para la obtención de captura imágenes como de video, teniendo en cuenta la tec
 
 
 \Subsubsubsection{Tiempo}
-Es fundamental contar con un m\'etodo para conocer la fecha y hora de manera confiable. Tanto como para saber en que momento fueron tomadas las mediciones.
-Teniendo esto en cuenta se proponen los siguientes m\'odulos RTC:
+Es fundamental contar con un m\'etodo para conocer la fecha y hora de manera confiable. Tanto como para saber en qué momento fueron tomadas las mediciones. Teniendo esto en cuenta se proponen los siguientes módulos RTC:
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|c|}
@@ -107,7 +106,7 @@ Teniendo esto en cuenta se proponen los siguientes m\'odulos RTC:
 \end{table}
 
 \Subsubsubsection{Presencia}
-Se desea conocer cuándo está presente el ave dentro del nido. Para esto, se decide utilizar BLE por su baja utilización de recursos energéticos. Una opción es utilizar la \rpi como receptora. Otras opciones que se exploran involucran utilizar un transceptor bluetooth.
+Se desea conocer cuándo está presente el ave dentro del nido. Para esto, se decide utilizar BLE por su baja utilización de recursos energéticos. Una opción es utilizar la \rpi como receptora. Otras opciones que se exploran involucran utilizar un transceptor\footnote{Un tranceptor es aquel cuyo se encuentra compuesto con un transmisor y un receptor, compartiendo circuito y/o encapsulado.} \textit{Bluetooth}.
 
 \begin{table}[H]
 \centering

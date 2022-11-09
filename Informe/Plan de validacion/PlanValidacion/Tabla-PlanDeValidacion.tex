@@ -6,44 +6,44 @@
   \multicolumn{1}{c|}{\textbf{Aspecto}} &
   \multicolumn{1}{c|}{\textbf{Dependencia}} &
   \textbf{\begin{tabular}[c]{@{}c@{}}Banco de\\ pruebas\end{tabular}} \\ \hline
-T-BASIC-01                    & Validación encendido \rpi                                                                  &               & 1                  \\ \hline
-T-BASIC-02                    & Validación placas manufacturadas                                                           & T-BASIC-01    & 3                  \\ \hline
-T-BASIC-03                    & Validación panel solar en correcto estado                                                  &               & 3                  \\ \hline
-T-BASIC-04                    & \begin{tabular}[c]{@{}l@{}}Validación regulador de carga en correcto\\ estado\end{tabular} & T-BASIC-03    & 3                  \\ \hline
-T-INT-FUN-01                  & Adquisicion de datos de temperatura                                                        & T-INT-FUN-09  & 2                  \\ \hline
-T-INT-FUN-02                  & Adquisicion de datos de humedad                                                            & T-INT-FUN-09  & 2                  \\ \hline
-T-INT-FUN-03                  & Adquisicion de datos de luminosidad                                                        & T-INT-FUN-09  & 2                  \\ \hline
-T-INT-FUN-04                  & Adquisicion de video                                                                       & T-INT-FUN-09  & 2                  \\ \hline
-T-INT-FUN-05                  & Adquisicion de imágenes                                                                    & T-INT-FUN-09  & 2                  \\ \hline
-T-INT-FUN-06                  & Adquisición de datos de presencia                                                          & T-INT-FUN-09  & 4                  \\ \hline
-\multirow{5}{*}{T-INT-FUN-07} & \multirow{5}{*}{Periodo activación sensores}                                               & T-INT-FUN-01  & \multirow{5}{*}{1} \\ \cline{3-3}
-                              &                                                                                            & T-INT-FUN-02  &                    \\ \cline{3-3}
-                              &                                                                                            & T-INT-FUN-03  &                    \\ \cline{3-3}
-                              &                                                                                            & T-INT-FUN-04  &                    \\ \cline{3-3}
-                              &                                                                                            & T-INT-FUN-05  &                    \\ \hline
-T-INT-FUN-08                  & Validación de fecha y hora cierta                                                          & T-BASIC-02    & 1                  \\ \hline
+T-BASIC-01                    & Validación encendido \rpi.                                                                  &               & 1                  \\ \hline
+T-BASIC-02                    & Validación placas manufacturadas.                                                           & T-BASIC-01    & 3                  \\ \hline
+T-BASIC-03                    & Validación panel solar en correcto estado.                                                  &               & 3                  \\ \hline
+T-BASIC-04                    & \begin{tabular}[c]{@{}l@{}}Validación del regulador de carga en\\ correcto estado.\end{tabular} & T-BASIC-03    & 3                  \\ \hline
+T-INT-FUN-01                  & Adquisición de datos de temperatura.                                                        & T-INT-FUN-09  & 2                  \\ \hline
+T-INT-FUN-02                  & Adquisición de datos de humedad.                                                            & T-INT-FUN-09  & 2                  \\ \hline
+T-INT-FUN-03                  & Adquisición de datos de luminosidad.                                                        & T-INT-FUN-09  & 2                  \\ \hline
+T-INT-FUN-04                  & Adquisición de video.                                                                       & T-INT-FUN-09  & 2                  \\ \hline
+T-INT-FUN-05                  & Adquisición de imágenes.                                                                    & T-INT-FUN-09  & 2                  \\ \hline
+T-INT-FUN-06                  & Adquisición de datos de presencia.                                                          & T-INT-FUN-09  & 4                  \\ \hline
+\multirow{5}{*}{T-INT-FUN-07} & \multirow{5}{*}{Periodo activación sensores.}                                               & T-INT-FUN-01  & \multirow{5}{*}{1} \\ \cline{3-3}
+                              &                                                                                             & T-INT-FUN-02  &                    \\ \cline{3-3}
+                              &                                                                                             & T-INT-FUN-03  &                    \\ \cline{3-3}
+                              &                                                                                             & T-INT-FUN-04  &                    \\ \cline{3-3}
+                              &                                                                                             & T-INT-FUN-05  &                    \\ \hline
+T-INT-FUN-08                  & Validación de fecha y hora cierta.                                                          & T-BASIC-02    & 1                  \\ \hline
 T-INT-FUN-09 &
-  \begin{tabular}[c]{@{}l@{}}Validación de fecha y hora cierta tras\\ pérdida de alimentación\end{tabular} &
+  \begin{tabular}[c]{@{}l@{}}Validación de fecha y hora cierta tras\\ pérdida de alimentación.\end{tabular} &
   T-INT-FUN-08 &
   1 \\ \hline
 T-INT-FUN-10 &
-  \begin{tabular}[c]{@{}l@{}}Recolección de energía en condiciones\\ similares a las de instalación\end{tabular} &
+  \begin{tabular}[c]{@{}l@{}}Recolección de energía en condiciones\\ similares a las de instalación.\end{tabular} &
   T-BASIC-04 &
   3 \\ \hline
-T-INT-FUN-11                  & \begin{tabular}[c]{@{}l@{}}Recuperación ante pérdida de\\ alimentación\end{tabular}        & T-INT-FUN-10  & 3                  \\ \hline
+T-INT-FUN-11                  & \begin{tabular}[c]{@{}l@{}}Recuperación ante pérdida de\\ alimentación.\end{tabular}        & T-INT-FUN-10  & 3                  \\ \hline
 \multirow{2}{*}{T-INT-FUN-12} &
-  \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}Transmisión de video en tiempo\\ real de dentro del nido\end{tabular}} &
+  \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}Transmisión de video en tiempo\\ real de dentro del nido.\end{tabular}} &
   T-INT-FUN-04 &
   \multirow{2}{*}{2} \\ \cline{3-3}
-                              &                                                                                            & T-INT-FUN-05  &                    \\ \hline
-T-INT-COM1-01                 & Validación transmisión COM1                                                                & T-BASIC-02    & 4                  \\ \hline
-T-INT-COM1-02                 & Alcance transmisión COM1                                                                   & T-INT-COM1-01 & 4                  \\ \hline
-T-INT-COM2-01                 & Validación descarga de datos COM2                                                          & T-BASIC-02    & 1                  \\ \hline
-T-INT-COM2-02                 & Alcance transmisión COM2                                                                   & T-INT-COM2-01 & 1                  \\ \hline
-T-INT-COM2-03                 & \begin{tabular}[c]{@{}l@{}}Descarte de datos desconexión WiFi\\ COM2\end{tabular}          & T-INT-COM2-01 & 1                  \\ \hline
-T-IMP-DIM-01                  & Validación dimensiones totales                                                             & T-INT-FUN-11  & 5                  \\ \hline
-T-IMP-DIM-02                  & Validación peso total                                                                      & T-INT-FUN-11  & 5                  \\ \hline
-T-RAM-SEG-01                  & Autorización transmisión nido-persona                                                      & T-INT-COM2-01 & 1                  \\ \hline
+                              &                                                                                             & T-INT-FUN-05  &                    \\ \hline
+T-INT-COM1-01                 & Validación transmisión COM.1                                                                & T-BASIC-02    & 4                  \\ \hline
+T-INT-COM1-02                 & Alcance transmisión COM1.                                                                   & T-INT-COM1-01 & 4                  \\ \hline
+T-INT-COM2-01                 & Validación descarga de datos COM2.                                                          & T-BASIC-02    & 1                  \\ \hline
+T-INT-COM2-02                 & Alcance transmisión COM2.                                                                   & T-INT-COM2-01 & 1                  \\ \hline
+T-INT-COM2-03                 & \begin{tabular}[c]{@{}l@{}}Descarte de datos desconexión WiFi\\ COM2.\end{tabular}          & T-INT-COM2-01 & 1                  \\ \hline
+T-IMP-DIM-01                  & Validación dimensiones totales.                                                             & T-INT-FUN-11  & 5                  \\ \hline
+T-IMP-DIM-02                  & Validación peso total.                                                                      & T-INT-FUN-11  & 5                  \\ \hline
+T-RAM-SEG-01                  & Autorización transmisión nido-persona.                                                      & T-INT-COM2-01 & 1                  \\ \hline
 \end{tabular}
 \caption{Tabla de plan de validación.}
 \label{esp:planValidacion}
