@@ -5,7 +5,7 @@
 Para esta sección se analiza la confiabilidad de los elementos de hardware y de software en cada caso exponiendo los criterios utilizados.
 
 \Subsection{Hardware}	
-El estudio se lleva a cabo según la norma MIL-HDBK-217F, la cual estima la cantidad de fallas en unidad de tiempo para diferentes tipos de componentes electrónicos, teniendo en cuenta factores como las condiciones de uso, temperatura y trayectoria del fabricante.
+El estudio se lleva a cabo según la norma MIL-HDBK-217F, la cual estima la cantidad de fallas en unidad de tiempo para diferentes tipos de componentes electrónicos. La norma tiene en cuenta factores como las condiciones de uso, temperatura y trayectoria del fabricante.
 
 El primer paso consiste en realizar un gráfico de todos los módulos considerados críticos que garantizan las funcionalidades fundamentales del producto. Esto se presenta en la Figura (\ref{fig:criticos}).
 
@@ -15,7 +15,7 @@ El primer paso consiste en realizar un gráfico de todos los módulos considerad
 	\caption{Módulos críticos de funcionamiento.}
 	\label{fig:criticos}
 \end{figure}
-Se calcula una estimación de la confiabilidad de cada módulo utilizando una estrategia \quotes{Top-Down} donde se encuentra la tasa de falla de cada sub-módulo mediante un proceso multiplicativo a la tasa de fallos base provista por las distintas cargas a la cual son sometidos los componentes.
+Se calcula una estimación de la confiabilidad de cada módulo utilizando una estrategia \quotes{Top-Down}. Se encuentra la tasa de falla de cada sub-módulo mediante un proceso multiplicativo a la tasa de fallos base provista por las distintas cargas a las que son sometidos los componentes.
 No se cuenta con redundancias, por lo que el valor de confiabilidad del módulo estará dado por la confiabilidad en serie de cada uno de sus componentes.
 
 \begin{table}[H]
@@ -32,7 +32,8 @@ No se cuenta con redundancias, por lo que el valor de confiabilidad del módulo 
 \multicolumn{1}{|c|}{\textbf{IC DS1307}}                         & \multicolumn{1}{c|}{$\lambda_p \ = \lambda_{BD} \ \cdot \ \pi_{MFG} \ \cdot \ \pi_T \ \cdot \ \pi_{CD} \ + \ \lambda_{BP} \ \cdot \ \pi_E \ \cdot \ \pi_Q + \lambda_{EOS}$} \\ \hline
 \multicolumn{1}{|c|}{\textbf{Diodo}}                             & \multicolumn{1}{c|}{$\lambda_p \ = \ \lambda_b \ \cdot \  \pi_T \ \cdot \ \pi_S  \ \cdot \ \pi_C \ \cdot \ \pi_Q \ \cdot \ \pi_E $}                                         \\ \hline
 \multicolumn{1}{|c|}{\textbf{Regulador de Tension}}              & \multicolumn{1}{c|}{$\lambda_p \ = \ \lambda_b \ \cdot \  \pi_T \ \cdot \ \pi_S  \ \cdot \ \pi_C \ \cdot \ \pi_Q \ \cdot \ \pi_E $}                                         \\ \hline
-\textbf{\rspi}                                                   & Documentación                                                                                                                                                              
+\multicolumn{1}{|c|}{\textbf{\rspi}}              & \multicolumn{1}{c|}{Documentación}                                         \\ \hline
+%\textbf{\rspi}                                                   %& Documentación                                                                                                                                                              
 \end{tabular}
 \caption{Ecuaciones para obtener la tasa de fallos de cada módulo acorde a MIL-HDBK-217F.}
 \label{tasadefallos}
@@ -59,6 +60,7 @@ Para el módulo \rspi se utiliza la documentación de la misma para obtener el v
 \textbf{Conector Molex} & \multicolumn{1}{c|}{1}                 & \multicolumn{1}{r|}{0.00182}                         & 0.00182                      \\ \hline
 \textbf{Total}          & \multicolumn{1}{l}{}                   & \multicolumn{1}{l}{}                                 & \multicolumn{1}{r|}{0.00364} \\ \hline
 \end{tabular}
+\caption{Confiabilidad de la placa \textit{shield}.}
 \end{table}
 
 \Subsubsection{RTC}
@@ -122,7 +124,7 @@ Para el módulo \rspi se utiliza la documentación de la misma para obtener el v
 \textbf{IC-BH1750}            & \multicolumn{1}{c|}{1}                 & \multicolumn{1}{r|}{1.106}                           & 1.106                        \\ \hline
 \textbf{Total}                & \multicolumn{1}{l}{}                   & \multicolumn{1}{l}{}                                 & \multicolumn{1}{r|}{1.12884} \\ \hline
 \end{tabular}
-\caption{Confiabilidad Sensore de Luminosidad}
+\caption{Confiabilidad Sensor de Luminosidad}
 \label{tab:conflum}
 \end{table}
 %\end{document}
