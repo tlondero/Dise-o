@@ -198,14 +198,14 @@ Ademas, se calcula valores para R(T) con un paso de 3 meses (Duración base del 
 \textbf{Tiempo} & \textbf{3 Meses}                                                    & \textbf{6 Meses} & \textbf{9 Meses}                                                    & \textbf{1 Año}                                                      & \textbf{\begin{tabular}[c]{@{}c@{}}1 Año y\\ 3 Meses\end{tabular}}   & \textbf{\begin{tabular}[c]{@{}c@{}}1 Año y\\ 6 Meses\end{tabular}} \\ \hline
 \textbf{$R(t)$} & 0.96                                                                & 0.922            & 0.885                                                               & 0.850                                                               & 0.816                                                                & 0.786                                                              \\ \hline
 \textbf{Tiempo} & \textbf{\begin{tabular}[c]{@{}c@{}}1 Año y \\ 9 Meses\end{tabular}} & \textbf{2 Años}  & \textbf{\begin{tabular}[c]{@{}c@{}}2 Años y\\ 3 Meses\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}2 Años y\\ 6 Meses\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}2 Años y \\ 9 Meses\end{tabular}} & \textbf{3 Años}                                                    \\ \hline
-\textbf{$R(t)$} & 0.752                                                               & 0.722            & 0.694                                                               & 0.667                                                               & 0.64                                                                 & 0.614                                                              \\ \hline
+\textbf{$R(t)$} & 0.752                                                               & 0.722            & 0.70 & 0.677                                                               & 0.647                                                                & 0.622                                                            \\ \hline
 \end{tabular}
 \caption{Probabilidad de confiabilidad cada períodos de 3 meses.}
 \label{probConf}
 \end{table}
 
 Teniendo en cuenta que el tiempo de vida del producto está estimado en 3 años y que la duración del estudio es de 3 meses. Que el tiempo medio a la falla sea de 6 años, resulta satisfactorio.
-
+Finalmente cabe mencionar que luego de cada uso se recomienda una revisión técnica para asegurar un correcto funcionamiento de todos los módulos así aumentando la confiabilidad del sistema.
 \Subsection{Software}
 Para el estudio de confiabilidad de software se utilizó un modelo de estimación de tipo exponencial. Este modelo asume que todas las fallas que se presentan son independientes entre sí. Más específicamente se utilizará el modelo de Shooman, el cual normaliza las fallas por la cantidad de líneas de código $I_T$ sigue:
 \begin{equation}
