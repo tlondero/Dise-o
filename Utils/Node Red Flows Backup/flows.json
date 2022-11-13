@@ -30,8 +30,6 @@
             "0ff5e6377e477a97",
             "c75ffc16e51f4c85",
             "763c9b5233441649",
-            "a261db631a9f278d",
-            "a66dc15b26fac9d5",
             "5cbb54f590a041ac",
             "ec08b5cb0ee33eaa",
             "3c15dcd6616e0995",
@@ -46,7 +44,7 @@
         ],
         "x": 344,
         "y": 1199,
-        "w": 1082,
+        "w": 1042,
         "h": 442
     },
     {
@@ -164,7 +162,8 @@
             "b0324bc31c51dfa5",
             "bc430912b533d2cc",
             "ba56abc75de9eade",
-            "de89378993b205b2"
+            "de89378993b205b2",
+            "d7a2aace29f312f5"
         ],
         "x": 2634,
         "y": 1359,
@@ -225,7 +224,7 @@
         ],
         "x": 1468,
         "y": 1313,
-        "w": 1124,
+        "w": 1104,
         "h": 334
     },
     {
@@ -366,7 +365,6 @@
         "nodes": [
             "4789b2a4961fd39c",
             "487302c17ac70c69",
-            "41303a729b281d8c",
             "009eb7a08b8f1d4f",
             "5359da4031524f2e",
             "0a6f3b8e1ebb393c",
@@ -374,9 +372,9 @@
             "7347cb65ebc131db",
             "63b8d6ff13f59204"
         ],
-        "x": 344,
+        "x": 174,
         "y": 1673,
-        "w": 1258,
+        "w": 1428,
         "h": 414
     },
     {
@@ -582,7 +580,8 @@
             "f8dab95a90ac6799",
             "50da0b27953103d8",
             "6dfdf11c017fee5f",
-            "2b1bbe4391992523"
+            "2b1bbe4391992523",
+            "7020010520d8f782"
         ],
         "x": 2534,
         "y": 719,
@@ -658,7 +657,7 @@
         ],
         "x": 1794,
         "y": 1499,
-        "w": 772,
+        "w": 752,
         "h": 122
     },
     {
@@ -703,11 +702,17 @@
             "a5ea1275479e4107",
             "e43b37cc9f8b7107",
             "055bef59dda0482c",
-            "209647a33910046e"
+            "209647a33910046e",
+            "74c8bb53ce65ad64",
+            "4d854c68ba7333b5",
+            "756c67eb0e046f80",
+            "fc1d4bb9453fffe1",
+            "f0d022a1d2b7534d",
+            "0e2a492811240d7b"
         ],
-        "x": 544,
+        "x": 394,
         "y": 1739,
-        "w": 192,
+        "w": 342,
         "h": 322
     },
     {
@@ -852,7 +857,7 @@
         "z": "4bd3f7a138ab9bf8",
         "g": "a5289a68db4611d8",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1244,17 +1249,18 @@
         "z": "4bd3f7a138ab9bf8",
         "g": "153fc0026305c5a8",
         "position": "top right",
-        "displayTime": "3",
+        "displayTime": "5",
         "highlight": "",
         "sendall": true,
         "outputs": 0,
         "ok": "OK",
         "cancel": "",
         "raw": false,
+        "className": "",
         "topic": "",
         "name": "",
         "x": 1270,
-        "y": 1520,
+        "y": 1460,
         "wires": []
     },
     {
@@ -1374,8 +1380,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1060,
-        "y": 1280,
+        "x": 1020,
+        "y": 1320,
         "wires": [
             [
                 "763c9b5233441649"
@@ -1398,8 +1404,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "Python3 Make CSV",
-        "x": 1310,
-        "y": 1280,
+        "x": 1270,
+        "y": 1320,
         "wires": [
             [
                 "6d2322b1bf89e5d8"
@@ -1425,7 +1431,7 @@
         "y": 1380,
         "wires": [
             [
-                "a66dc15b26fac9d5"
+                "f6d6bd93484967cf"
             ],
             [],
             []
@@ -1448,7 +1454,7 @@
         "y": 1320,
         "wires": [
             [
-                "a261db631a9f278d"
+                "3b3f9f9888431d82"
             ],
             [],
             []
@@ -1466,62 +1472,14 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1060,
-        "y": 1420,
+        "x": 1020,
+        "y": 1380,
         "wires": [
             [
                 "763c9b5233441649"
             ],
             [
                 "5cbb54f590a041ac"
-            ]
-        ]
-    },
-    {
-        "id": "a261db631a9f278d",
-        "type": "ui_template",
-        "z": "4bd3f7a138ab9bf8",
-        "g": "153fc0026305c5a8",
-        "group": "c63655b8f7450c5c",
-        "name": "Delete Lum",
-        "order": 6,
-        "width": 0,
-        "height": 0,
-        "format": "<script>\n(function(scope) {\n  scope.$watch('msg', function(msg) {\n    if (msg) {\n      let menu_lum = document.getElementById('Lum_list');\n      while (menu_lum.firstChild) {\n        menu_lum.removeChild(menu_lum.firstChild);\n      }\n    }    \n  });\n})(scope);\n</script>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 1030,
-        "y": 1320,
-        "wires": [
-            [
-                "3b3f9f9888431d82"
-            ]
-        ]
-    },
-    {
-        "id": "a66dc15b26fac9d5",
-        "type": "ui_template",
-        "z": "4bd3f7a138ab9bf8",
-        "g": "153fc0026305c5a8",
-        "group": "c63655b8f7450c5c",
-        "name": "Delete TyH",
-        "order": 7,
-        "width": 0,
-        "height": 0,
-        "format": "<script>\n(function(scope) {\n  scope.$watch('msg', function(msg) {\n    if (msg) {\n      let menu_tyh = document.getElementById('tyh_list');\n      while (menu_tyh.firstChild) {\n        menu_tyh.removeChild(menu_tyh.firstChild);\n      }\n    }    \n  });\n})(scope);\n</script>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 1030,
-        "y": 1380,
-        "wires": [
-            [
-                "f6d6bd93484967cf"
             ]
         ]
     },
@@ -1684,7 +1642,7 @@
         "z": "4bd3f7a138ab9bf8",
         "g": "d8498c485785607b",
         "position": "top right",
-        "displayTime": "3",
+        "displayTime": "5",
         "highlight": "",
         "sendall": true,
         "outputs": 0,
@@ -1704,7 +1662,7 @@
         "z": "4bd3f7a138ab9bf8",
         "g": "d8498c485785607b",
         "name": "Set Stream URL",
-        "func": "msg.payload = \"http://192.168.0.10:8000/\";\nreturn msg;",
+        "func": "msg.payload = \"http://192.168.0.17:8000/\";\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1799,8 +1757,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1310,
-        "y": 1420,
+        "x": 1270,
+        "y": 1380,
         "wires": [
             [
                 "14532f7c737dafcf"
@@ -1893,7 +1851,7 @@
         "order": 3,
         "width": 8,
         "height": 6,
-        "format": "<ul id='Lum_list'>\n    \n</ul>\n<script>\n(function(scope) {\n  scope.$watch('msg', function(msg) {\n    \n    let newContent = document.createElement(\"li\", style = \"color:red;\");    \n    let list = document.getElementById('Lum_list');   \n\n    while (list.childElementCount) {\n      list.removeChild(list.firstChild);\n    }\n\n    let link = document.createElement(\"a\", style = \"color:red;\");\n    newContent.appendChild(link);\n    \n    if (msg.payload == 'Empty Folder') {\n      link.textContent = \"No hay archivos CSV disponibles para descargar. Refrescar la página.\";\n      list.appendChild(newContent);\n    } else {\n      link.href = \"/files/\" + msg.payload;\n      link.textContent = \"Descargar \" + msg.payload;\n      list.appendChild(newContent);\n    }\n    \n  });\n})(scope);\n</script>",
+        "format": "<ul id='Lum_list'>\n    \n</ul>\n\n<style>\n  .blink {\n    animation: blinker 1.5s linear 2;\n    color: red;\n  }\n\n  @keyframes blinker {\n    50% {\n      opacity: 0;\n    }\n  }\n</style>\n\n<script>\n(function(scope) {\n  scope.$watch('msg', function(msg) {\n    \n    let newContent = document.createElement(\"li\", style = \"color:red;\");    \n    let list = document.getElementById('Lum_list');\n\n    if (list.textContent == \"Descargar \" + msg.payload) {\n      //Avoid blink\n      return;\n    }\n\n    while (list.childElementCount) {\n      list.removeChild(list.firstChild);\n    }   \n\n    let link = document.createElement(\"a\", style = \"color:red;\");    \n    newContent.appendChild(link);\n    \n    if (msg.payload == 'Empty Folder') {\n      link.textContent = \"No hay archivos CSV disponibles para descargar. Refrescar la página.\";\n      list.appendChild(newContent);\n    } else {\n      link.className += \" blink\";\n      link.href = \"/files/\" + msg.payload;\n      link.textContent = \"Descargar \" + msg.payload;\n      list.appendChild(newContent);\n    }\n    \n  });\n})(scope);\n</script>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": false,
@@ -1915,7 +1873,7 @@
         "order": 3,
         "width": 8,
         "height": 6,
-        "format": "<ul id='tyh_list'>\n    \n</ul>\n<script>\n(function(scope) {\n  scope.$watch('msg', function(msg) {        \n    let newContent = document.createElement(\"li\", style = \"color:red;\");\n    let list = document.getElementById('tyh_list');\n    \n    while (list.childElementCount) {\n      list.removeChild(list.firstChild);\n    }\n    \n    let link = document.createElement(\"a\", style = \"color:red;\");\n    newContent.appendChild(link);\n    \n    if(msg.payload == 'Empty Folder'){\n      link.textContent = \"No hay archivos CSV disponibles para descargar. Refrescar la página.\";\n      list.appendChild(newContent);\n    } else {\n      link.href = \"/files/\" + msg.payload;\n      link.textContent = \"Descargar \" + msg.payload;\n      list.appendChild(newContent);\n    }\n\n  });\n})(scope);\n</script>",
+        "format": "<ul id='tyh_list'>\n    \n</ul>\n\n<style>\n  .blink {\n    animation: blinker 1.5s linear 2;\n    color: red;\n  }\n\n  @keyframes blinker {\n    50% {\n      opacity: 0;\n    }\n  }\n</style>\n\n<script>\n(function(scope) {\n  scope.$watch('msg', function(msg) {        \n    let newContent = document.createElement(\"li\", style = \"color:red;\");\n    let list = document.getElementById('tyh_list');\n\n    if (list.textContent == \"Descargar \" + msg.payload) {\n      //Avoid blink\n      return;\n    }\n    \n    while (list.childElementCount) {\n      list.removeChild(list.firstChild);\n    }\n    \n    let link = document.createElement(\"a\", style = \"color:red;\");\n    newContent.appendChild(link);\n    \n    if(msg.payload == 'Empty Folder'){\n      link.textContent = \"No hay archivos CSV disponibles para descargar. Refrescar la página.\";\n      list.appendChild(newContent);\n    } else {\n      link.className += \" blink\";\n      link.href = \"/files/\" + msg.payload;\n      link.textContent = \"Descargar \" + msg.payload;\n      list.appendChild(newContent);\n    }\n\n  });\n})(scope);\n</script>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": false,
@@ -1953,7 +1911,7 @@
         "z": "4bd3f7a138ab9bf8",
         "g": "7263e044f37728bd",
         "name": "Filter TyH CSV",
-        "func": "var null_msg = { payload: 'Empty Folder' };\n\nvar temp_invalid_date = false;\nvar array = [];\narray = msg.payload;\nfor (let i = 0; i < array.length; i++) {\n    var current = array[i];\n    if (current.includes('Temp')) {\n        var fileFrom = current.split(\"_\")[1];\n        var fileTo = current.split(\"_\")[2];\n        fileTo = fileTo.split(\".\")[0];\n        var calendarFrom = flow.get('lum_from_date') || 0;\n        var calendarTo = flow.get('lum_to_date') || 0;\n        var checkFrom = checkTimes(calendarFrom, fileFrom);\n        var checkTo = checkTimes(fileTo, calendarTo);\n\n        if (checkFrom && checkTo) {\n            return { payload: current };\n        } else {\n            return { payload: 'Empty Folder' };\n        }\n    }\n}\n\nfunction checkTimes(first_string, second_string) {\n    //Returns True if second >= first\n\n    var first = new Date(first_string);\n    var second = new Date(second_string);\n\n    var difference = second.getTime() - first.getTime();\n    return difference >= 0;\n}",
+        "func": "//TemperaturaYHumedad_2022-10-23_2022-10-31.csv\nvar array = [];\narray = msg.payload;\n\nfor (let i = 0; i < array.length; i++) {\n    var current = array[i];\n    if (current.includes('Temp')) {\n        var fileFrom = current.split(\"_\")[1];\n        var fileTo = current.split(\"_\")[2];\n        fileTo = fileTo.split(\".\")[0];\n\n        var calendarFrom = flow.get('tyh_from_date') || 0;\n        var calendarTo = flow.get('tyh_to_date') || 0;\n\n        var checkFrom = checkTimes(calendarFrom, fileFrom);\n        var checkTo = checkTimes(fileTo, calendarTo);\n\n        if (checkFrom && checkTo) {\n            return { payload: current };\n        } else {\n            return { payload: 'Empty Folder' };\n        }\n    }\n}\n\nreturn { payload: 'Empty Folder' }\n\nfunction checkTimes(first_string, second_string) {\n    //Returns True if second >= first\n\n    var first = new Date(first_string);\n    var second = new Date(second_string);\n\n    var difference = second.getTime() - first.getTime();\n    return difference >= 0;\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -2047,7 +2005,7 @@
         "depth": 0,
         "stat": false,
         "showWarnings": false,
-        "x": 2090,
+        "x": 2070,
         "y": 1580,
         "wires": [
             [
@@ -2078,7 +2036,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2270,
+        "x": 2250,
         "y": 1580,
         "wires": [
             [
@@ -2096,13 +2054,13 @@
         "order": 3,
         "width": 8,
         "height": 6,
-        "format": "<ol id='png_list'>\n    \n</ol>\n<script>\n(function(scope) {\n  scope.$watch('msg', function(msg) {    \n    let array = [];\n    array = msg.payload;\n\n    let list = document.getElementById('png_list');\n    while (list.firstChild) {\n      list.removeChild(list.firstChild);\n    }\n\n    for (let i = 0; i < array.length; i++) {\n      let newContent = document.createElement(\"li\", style = \"color:red;\");\n      let link = document.createElement(\"a\", style = \"color:red;\");\n      newContent.appendChild(link);\n      //let list = document.getElementById('png_list');\n\n      if (array[i] == 'Empty Folder') {\n        link.textContent = \"No hay archivos PNG disponibles para descargar. Refrescar la página.\";\n        list.appendChild(newContent);\n      } else if (array[i] != \"Empty Folder\") {\n        link.href = \"/files/\" + array[i];\n        link.textContent = \"Descargar \" + array[i];\n        list.appendChild(newContent);        \n      }\n      \n    }\n  });\n})(scope);\n</script>",
+        "format": "<ol id='png_list'>\n    \n</ol>\n\n<style>\n  .blink {\n    animation: blinker 1.5s linear 2;\n    color: red;\n  }\n\n  @keyframes blinker {\n    50% {\n      opacity: 0;\n    }\n  }\n</style>\n\n<script>\n(function(scope) {\n  scope.$watch('msg', function(msg) {    \n    let array = [];\n    array = msg.payload;\n\n    let list = document.getElementById('png_list');\n    while (list.firstChild) {\n      list.removeChild(list.firstChild);\n    }\n\n    for (let i = 0; i < array.length; i++) {\n      let newContent = document.createElement(\"li\", style = \"color:red;\");\n      let link = document.createElement(\"a\", style = \"color:red;\");\n      newContent.appendChild(link);\n      //let list = document.getElementById('png_list');\n\n      if (array[i] == 'Empty Folder') {\n        link.textContent = \"No hay archivos PNG disponibles para descargar. Refrescar la página.\";\n        list.appendChild(newContent);\n      } else if (array[i] != \"Empty Folder\") {\n        link.className += \" blink\";\n        link.href = \"/files/\" + array[i];\n        link.textContent = \"Descargar \" + array[i];\n        list.appendChild(newContent);        \n      }\n      \n    }\n  });\n})(scope);\n</script>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": false,
         "templateScope": "local",
         "className": "",
-        "x": 2450,
+        "x": 2430,
         "y": 1580,
         "wires": [
             []
@@ -2448,7 +2406,7 @@
         "drop": true,
         "allowrate": false,
         "outputs": 1,
-        "x": 1610,
+        "x": 1630,
         "y": 1360,
         "wires": [
             [
@@ -2581,7 +2539,6 @@
         "name": "Init",
         "mode": "link",
         "links": [
-            "009eb7a08b8f1d4f",
             "096ab37867f77f7f",
             "69f11c096294323f",
             "3eb236bbd6ebf2f1"
@@ -2667,7 +2624,8 @@
             "b0e30bd948caf516",
             "d0eece487dd898ae",
             "919b936bbb8109c5",
-            "3a2542022481af0f"
+            "3a2542022481af0f",
+            "009eb7a08b8f1d4f"
         ],
         "x": 1835,
         "y": 820,
@@ -2861,13 +2819,14 @@
         "z": "4bd3f7a138ab9bf8",
         "g": "153fc0026305c5a8",
         "position": "top right",
-        "displayTime": "1",
+        "displayTime": "3",
         "highlight": "",
         "sendall": false,
         "outputs": 0,
         "ok": "OK",
         "cancel": "",
         "raw": true,
+        "className": "",
         "topic": "",
         "name": "",
         "x": 1270,
@@ -2957,7 +2916,7 @@
         "z": "4bd3f7a138ab9bf8",
         "g": "9fa822970d0e02a2",
         "name": "Flow Variables",
-        "func": "//Get RTC Time\nvar timeRTC = flow.get('timeRTC') || 0;\n\n// Video Stream and Make Zip\nflow.set('pyCamera', true);\nflow.set('makingZip', true);\n\n// Error RTC\nflow.set('handleRTCError', true);\n\n// Set RTC Calendar Days\nflow.set('lum_from_date', timeRTC.split(\"_\")[0]);\nflow.set('lum_to_date', timeRTC.split(\"_\")[0]);\n\nflow.set('tyh_from_date', timeRTC.split(\"_\")[0]);\nflow.set('tyh_to_date', timeRTC.split(\"_\")[0]);\n\nflow.set('png_from_date', timeRTC.split(\"_\")[0]);\nflow.set('png_to_date', timeRTC.split(\"_\")[0]);\n\nflow.set(\"presenceDate\", timeRTC.split(\"_\")[0]);\n\n// Calendar Dates\nflow.set('lum_valid_date', true);\nflow.set('tyh_valid_date', true);\nflow.set('png_valid_date', true);\n\n// Update Data \nflow.set('interval_photo', 5 * 60 * 1000);    //In ms\nflow.set('interval_tyh', 5 * 60 * 1000);      //In ms\nflow.set('interval_lum', 5 * 60 * 1000);      //In ms\nflow.set('photoNight', true);",
+        "func": "//Get RTC Time\nvar timeRTC = flow.get('timeRTC') || 0;\n\n// Video Stream and Make Zip\nflow.set('pyCamera', true);\nflow.set('makingZip', true);\n\n// Error RTC\nflow.set('handleRTCError', true);\n\n// Set RTC Calendar Days\nflow.set('lum_from_date', timeRTC.split(\"_\")[0]);\nflow.set('lum_to_date', timeRTC.split(\"_\")[0]);\n\nflow.set('tyh_from_date', timeRTC.split(\"_\")[0]);\nflow.set('tyh_to_date', timeRTC.split(\"_\")[0]);\n\nflow.set('png_from_date', timeRTC.split(\"_\")[0]);\nflow.set('png_to_date', timeRTC.split(\"_\")[0]);\n\nflow.set(\"presenceDate\", timeRTC.split(\"_\")[0]);\n\n// Calendar Dates\nflow.set('lum_valid_date', true);\nflow.set('tyh_valid_date', true);\nflow.set('png_valid_date', true);\n\n// Update Data \nflow.set('interval_photo', 60 * 60 * 1000);    //In ms\nflow.set('interval_tyh', 5 * 60 * 1000);      //In ms\nflow.set('interval_lum', 5 * 60 * 1000);      //In ms\nflow.set('photoNight', true);",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3542,7 +3501,7 @@
         "z": "4bd3f7a138ab9bf8",
         "g": "5359da4031524f2e",
         "name": "Set Lum Date From",
-        "func": "var aux = removeOffset(msg.payload);\nvar toSet = aux.toISOString().split('T')[0];\n\nflow.set('lum_from_date', toSet);\nreturn msg;\n\nfunction removeOffset(adate) {\n    var now = new Date();\n    var timeoffset = now.getTimezoneOffset() * 60000  // Get time zone info\n    var utcdate;  // UTC time for database query\n    if (timeoffset > 0) {\n        utcdate = adate - 86400000 + timeoffset;\n    } else if (timeoffset < 0) {\n        utcdate = adate + 86400000 + timeoffset;\n    } else {\n        utcdate = adate;\n    }\n\n    return new Date(utcdate);\n}",
+        "func": "var aux = removeOffset(msg.payload);\n//var aux = new Date(msg.payload + 180 * 60000);\nvar toSet = aux.toISOString().split('T')[0];\n\nvar toSet = fuckit(msg.payload);\nflow.set('lum_from_date', toSet);\nreturn msg;\n\nfunction removeOffset(adate) {\n    var now = new Date();\n    var timeoffset = now.getTimezoneOffset() * 60000  // Get time zone info\n    var utcdate;  // UTC time for database query\n    if (timeoffset > 0) {\n        utcdate = adate - 86400000 + timeoffset;\n    } else if (timeoffset < 0) {\n        utcdate = adate + 86400000 + timeoffset;\n    } else {\n        utcdate = adate;\n    }\n\n    return new Date(utcdate);\n}\n\nfunction fuckit(adate) {\n    var date_string = new Date(adate);\n    date_string = date_string.toString();\n\n    let day = date_string.substring(8, 10);\n    let year = date_string.substring(11, 15);\n    var month = date_string.substring(4, 7);\n    switch (month) {\n        case 'Jan':\n            month = \"01\";\n            break;\n        case 'Feb':\n            month = \"02\";\n            break;\n        case 'Mar':\n            month = \"03\";\n            break;\n        case 'Apr':\n            month = \"04\";\n            break;\n        case 'May':\n            month = \"05\";\n            break;\n        case 'Jun':\n            month = \"06\";\n            break;\n        case 'Jul':\n            month = \"07\";\n            break;\n        case 'Aug':\n            month = \"08\";\n            break;\n        case 'Sep':\n            month = \"09\";\n            break;\n        case 'Oct':\n            month = \"10\";\n            break;\n        case 'Nov':\n            month = \"11\";\n            break;\n        case 'Dec':\n            month = \"12\";\n            break;\n        default:\n            month = \"01\";\n    }\n\n    return year + \"-\" + month + \"-\" + day;\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3562,7 +3521,7 @@
         "z": "4bd3f7a138ab9bf8",
         "g": "5359da4031524f2e",
         "name": "Set Lum Date To",
-        "func": "var aux = removeOffset(msg.payload);\nvar toSet = aux.toISOString().split('T')[0];\n\nflow.set('lum_to_date', toSet);\nreturn msg;\n\nfunction removeOffset(adate) {\n    var now = new Date();\n    var timeoffset = now.getTimezoneOffset() * 60000  // Get time zone info\n    var utcdate;  // UTC time for database query\n    if (timeoffset > 0) {\n        utcdate = adate - 86400000 + timeoffset;\n    } else if (timeoffset < 0) {\n        utcdate = adate + 86400000 + timeoffset;\n    } else {\n        utcdate = adate;\n    }\n\n    return new Date(utcdate);\n}",
+        "func": "var aux = removeOffset(msg.payload);\n//var aux = new Date(msg.payload + 180 * 60000);\nvar toSet = aux.toISOString().split('T')[0];\n\nvar toSet = fuckit(msg.payload);\nflow.set('lum_to_date', toSet);\nreturn msg;\n\nfunction removeOffset(adate) {\n    var now = new Date();\n    var timeoffset = now.getTimezoneOffset() * 60000  // Get time zone info\n    var utcdate;  // UTC time for database query\n    if (timeoffset > 0) {\n        utcdate = adate - 86400000 + timeoffset;\n    } else if (timeoffset < 0) {\n        utcdate = adate + 86400000 + timeoffset;\n    } else {\n        utcdate = adate;\n    }\n\n    return new Date(utcdate);\n}\n\nfunction fuckit(adate) {\n    var date_string = new Date(adate);\n    date_string = date_string.toString();\n\n    let day = date_string.substring(8, 10);\n    let year = date_string.substring(11, 15);\n    var month = date_string.substring(4, 7);\n    switch (month) {\n        case 'Jan':\n            month = \"01\";\n            break;\n        case 'Feb':\n            month = \"02\";\n            break;\n        case 'Mar':\n            month = \"03\";\n            break;\n        case 'Apr':\n            month = \"04\";\n            break;\n        case 'May':\n            month = \"05\";\n            break;\n        case 'Jun':\n            month = \"06\";\n            break;\n        case 'Jul':\n            month = \"07\";\n            break;\n        case 'Aug':\n            month = \"08\";\n            break;\n        case 'Sep':\n            month = \"09\";\n            break;\n        case 'Oct':\n            month = \"10\";\n            break;\n        case 'Nov':\n            month = \"11\";\n            break;\n        case 'Dec':\n            month = \"12\";\n            break;\n        default:\n            month = \"01\";\n    }\n\n    return year + \"-\" + month + \"-\" + day;\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3582,7 +3541,7 @@
         "z": "4bd3f7a138ab9bf8",
         "g": "5359da4031524f2e",
         "name": "Set PNG Date From",
-        "func": "var aux = removeOffset(msg.payload);\nvar toSet = aux.toISOString().split('T')[0];\n\nflow.set('png_from_date', toSet);\nreturn msg;\n\nfunction removeOffset(adate) {\n    var now = new Date();\n    var timeoffset = now.getTimezoneOffset() * 60000  // Get time zone info\n    var utcdate;  // UTC time for database query\n    if (timeoffset > 0) {\n        utcdate = adate - 86400000 + timeoffset;\n    } else if (timeoffset < 0) {\n        utcdate = adate + 86400000 + timeoffset;\n    } else {\n        utcdate = adate;\n    }\n\n    return new Date(utcdate);\n}",
+        "func": "var aux = removeOffset(msg.payload);\nvar toSet = aux.toISOString().split('T')[0];\n\nvar toSet = fuckit(msg.payload);\nflow.set('png_from_date', toSet);\nreturn msg;\n\nfunction removeOffset(adate) {\n    var now = new Date();\n    var timeoffset = now.getTimezoneOffset() * 60000  // Get time zone info\n    var utcdate;  // UTC time for database query\n    if (timeoffset > 0) {\n        utcdate = adate - 86400000 + timeoffset;\n    } else if (timeoffset < 0) {\n        utcdate = adate + 86400000 + timeoffset;\n    } else {\n        utcdate = adate;\n    }\n\n    return new Date(utcdate);\n}\n\nfunction fuckit(adate) {\n    var date_string = new Date(adate);\n    date_string = date_string.toString();\n\n    let day = date_string.substring(8, 10);\n    let year = date_string.substring(11, 15);\n    var month = date_string.substring(4, 7);\n    switch (month) {\n        case 'Jan':\n            month = \"01\";\n            break;\n        case 'Feb':\n            month = \"02\";\n            break;\n        case 'Mar':\n            month = \"03\";\n            break;\n        case 'Apr':\n            month = \"04\";\n            break;\n        case 'May':\n            month = \"05\";\n            break;\n        case 'Jun':\n            month = \"06\";\n            break;\n        case 'Jul':\n            month = \"07\";\n            break;\n        case 'Aug':\n            month = \"08\";\n            break;\n        case 'Sep':\n            month = \"09\";\n            break;\n        case 'Oct':\n            month = \"10\";\n            break;\n        case 'Nov':\n            month = \"11\";\n            break;\n        case 'Dec':\n            month = \"12\";\n            break;\n        default:\n            month = \"01\";\n    }\n\n    return year + \"-\" + month + \"-\" + day;\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3602,7 +3561,7 @@
         "z": "4bd3f7a138ab9bf8",
         "g": "5359da4031524f2e",
         "name": "Set PNG Date To",
-        "func": "var aux = removeOffset(msg.payload);\nvar toSet = aux.toISOString().split('T')[0];\n\nflow.set('png_to_date', toSet);\nreturn msg;\n\nfunction removeOffset(adate) {\n    var now = new Date();\n    var timeoffset = now.getTimezoneOffset() * 60000  // Get time zone info\n    var utcdate;  // UTC time for database query\n    if (timeoffset > 0) {\n        utcdate = adate - 86400000 + timeoffset;\n    } else if (timeoffset < 0) {\n        utcdate = adate + 86400000 + timeoffset;\n    } else {\n        utcdate = adate;\n    }\n\n    return new Date(utcdate);\n}",
+        "func": "var aux = removeOffset(msg.payload);\n//var aux = new Date(msg.payload + 180 * 60000);\nvar toSet = aux.toISOString().split('T')[0];\n\nvar toSet = fuckit(msg.payload);\nflow.set('png_to_date', toSet);\nreturn msg;\n\nfunction removeOffset(adate) {\n    var now = new Date();\n    var timeoffset = now.getTimezoneOffset() * 60000  // Get time zone info\n    var utcdate;  // UTC time for database query\n    if (timeoffset > 0) {\n        utcdate = adate - 86400000 + timeoffset;\n    } else if (timeoffset < 0) {\n        utcdate = adate + 86400000 + timeoffset;\n    } else {\n        utcdate = adate;\n    }\n\n    return new Date(utcdate);\n}\nfunction fuckit(adate) {\n    var date_string = new Date(adate);\n    date_string = date_string.toString();\n\n    let day = date_string.substring(8, 10);\n    let year = date_string.substring(11, 15);\n    var month = date_string.substring(4, 7);\n    switch (month) {\n        case 'Jan':\n            month = \"01\";\n            break;\n        case 'Feb':\n            month = \"02\";\n            break;\n        case 'Mar':\n            month = \"03\";\n            break;\n        case 'Apr':\n            month = \"04\";\n            break;\n        case 'May':\n            month = \"05\";\n            break;\n        case 'Jun':\n            month = \"06\";\n            break;\n        case 'Jul':\n            month = \"07\";\n            break;\n        case 'Aug':\n            month = \"08\";\n            break;\n        case 'Sep':\n            month = \"09\";\n            break;\n        case 'Oct':\n            month = \"10\";\n            break;\n        case 'Nov':\n            month = \"11\";\n            break;\n        case 'Dec':\n            month = \"12\";\n            break;\n        default:\n            month = \"01\";\n    }\n\n    return year + \"-\" + month + \"-\" + day;\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3622,7 +3581,7 @@
         "z": "4bd3f7a138ab9bf8",
         "g": "5359da4031524f2e",
         "name": "Set TyH Date From",
-        "func": "var aux = removeOffset(msg.payload);\nvar toSet = aux.toISOString().split('T')[0];\n\nflow.set('tyh_from_date', toSet);\nreturn msg;\n\nfunction removeOffset(adate) {\n    var now = new Date();\n    var timeoffset = now.getTimezoneOffset() * 60000  // Get time zone info\n    var utcdate;  // UTC time for database query\n    if (timeoffset > 0) {\n        utcdate = adate - 86400000 + timeoffset;\n    } else if (timeoffset < 0) {\n        utcdate = adate + 86400000 + timeoffset;\n    } else {\n        utcdate = adate;\n    }\n\n    return new Date(utcdate);\n}",
+        "func": "var aux = removeOffset(msg.payload);\n//var aux = new Date(msg.payload + 180 * 60000);\nvar toSet = aux.toISOString().split('T')[0];\n\nvar toSet = fuckit(msg.payload);\nflow.set('tyh_from_date', toSet);\nreturn msg;\n\nfunction removeOffset(adate) {\n    var now = new Date();\n    var timeoffset = now.getTimezoneOffset() * 60000  // Get time zone info\n    var utcdate;  // UTC time for database query\n    if (timeoffset > 0) {\n        utcdate = adate - 86400000 + timeoffset;\n    } else if (timeoffset < 0) {\n        utcdate = adate + 86400000 + timeoffset;\n    } else {\n        utcdate = adate;\n    }\n\n    return new Date(utcdate);\n}\n\nfunction fuckit(adate) {\n    var date_string = new Date(adate);\n    date_string = date_string.toString();\n\n    let day = date_string.substring(8, 10);\n    let year = date_string.substring(11, 15);\n    var month = date_string.substring(4, 7);\n    switch (month) {\n        case 'Jan':\n            month = \"01\";\n            break;\n        case 'Feb':\n            month = \"02\";\n            break;\n        case 'Mar':\n            month = \"03\";\n            break;\n        case 'Apr':\n            month = \"04\";\n            break;\n        case 'May':\n            month = \"05\";\n            break;\n        case 'Jun':\n            month = \"06\";\n            break;\n        case 'Jul':\n            month = \"07\";\n            break;\n        case 'Aug':\n            month = \"08\";\n            break;\n        case 'Sep':\n            month = \"09\";\n            break;\n        case 'Oct':\n            month = \"10\";\n            break;\n        case 'Nov':\n            month = \"11\";\n            break;\n        case 'Dec':\n            month = \"12\";\n            break;\n        default:\n            month = \"01\";\n    }\n\n    return year + \"-\" + month + \"-\" + day;\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3642,7 +3601,7 @@
         "z": "4bd3f7a138ab9bf8",
         "g": "5359da4031524f2e",
         "name": "Set TyH Date To",
-        "func": "var aux = removeOffset(msg.payload);\nvar toSet = aux.toISOString().split('T')[0];\n\nflow.set('tyh_to_date', toSet);\nreturn msg;\n\nfunction removeOffset(adate) {\n    var now = new Date();\n    var timeoffset = now.getTimezoneOffset() * 60000  // Get time zone info\n    var utcdate;  // UTC time for database query\n    if (timeoffset > 0) {\n        utcdate = adate - 86400000 + timeoffset;\n    } else if (timeoffset < 0) {\n        utcdate = adate + 86400000 + timeoffset;\n    } else {\n        utcdate = adate;\n    }\n\n    return new Date(utcdate);\n}",
+        "func": "var aux = removeOffset(msg.payload);\n//var aux = new Date(msg.payload + 180 * 60000);\nvar toSet = aux.toISOString().split('T')[0];\n\nvar toSet = fuckit(msg.payload);\nflow.set('tyh_to_date', toSet);\nreturn msg;\n\nfunction removeOffset(adate) {\n    var now = new Date();\n    var timeoffset = now.getTimezoneOffset() * 60000  // Get time zone info\n    var utcdate;  // UTC time for database query\n    if (timeoffset > 0) {\n        utcdate = adate - 86400000 + timeoffset;\n    } else if (timeoffset < 0) {\n        utcdate = adate + 86400000 + timeoffset;\n    } else {\n        utcdate = adate;\n    }\n\n    return new Date(utcdate);\n}\n\nfunction fuckit(adate) {\n    var date_string = new Date(adate);\n    date_string = date_string.toString();\n\n    let day = date_string.substring(8, 10);\n    let year = date_string.substring(11, 15);\n    var month = date_string.substring(4, 7);\n    switch (month) {\n        case 'Jan':\n            month = \"01\";\n            break;\n        case 'Feb':\n            month = \"02\";\n            break;\n        case 'Mar':\n            month = \"03\";\n            break;\n        case 'Apr':\n            month = \"04\";\n            break;\n        case 'May':\n            month = \"05\";\n            break;\n        case 'Jun':\n            month = \"06\";\n            break;\n        case 'Jul':\n            month = \"07\";\n            break;\n        case 'Aug':\n            month = \"08\";\n            break;\n        case 'Sep':\n            month = \"09\";\n            break;\n        case 'Oct':\n            month = \"10\";\n            break;\n        case 'Nov':\n            month = \"11\";\n            break;\n        case 'Dec':\n            month = \"12\";\n            break;\n        default:\n            month = \"01\";\n    }\n\n    return year + \"-\" + month + \"-\" + day;\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3810,19 +3769,22 @@
         "type": "ui_toast",
         "z": "4bd3f7a138ab9bf8",
         "g": "462404854100f1af",
-        "position": "top right",
+        "position": "dialog",
         "displayTime": "3",
         "highlight": "",
         "sendall": true,
-        "outputs": 0,
+        "outputs": 1,
         "ok": "OK",
         "cancel": "",
         "raw": false,
+        "className": "",
         "topic": "",
         "name": "",
-        "x": 1440,
+        "x": 1420,
         "y": 1940,
-        "wires": []
+        "wires": [
+            []
+        ]
     },
     {
         "id": "0d76ee4ca04c3dc8",
@@ -3958,42 +3920,16 @@
         "wires": []
     },
     {
-        "id": "41303a729b281d8c",
-        "type": "function",
-        "z": "4bd3f7a138ab9bf8",
-        "g": "38b2e4140c614a54",
-        "name": "Set Date",
-        "func": "let dateRTC = flow.get('timeRTC').split(\"_\")[0];\n\nlet year = parseInt(dateRTC.split(\"-\")[0]);\nlet month = parseInt(dateRTC.split(\"-\")[1]) - 1;\nlet day = parseInt(dateRTC.split(\"-\")[2]);\n\nvar date = new Date(year, month, day);\n\nreturn { payload: date.getTime() };",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "var rtc = flow.get('timeRTC').split(\"_\")[0] + 'T' + flow.get('timeRTC').split(\"_\")[1] + '.000Z';\nvar date = new Date(rtc);\n\nreturn { payload: date.toISOString() };",
-        "finalize": "",
-        "libs": [],
-        "x": 430,
-        "y": 1900,
-        "wires": [
-            [
-                "a5ea1275479e4107",
-                "e43b37cc9f8b7107",
-                "055bef59dda0482c",
-                "209647a33910046e",
-                "7f763d8a1cf9b132",
-                "ca6d33cc46bb1d90",
-                "c43218c63003d980"
-            ]
-        ]
-    },
-    {
         "id": "009eb7a08b8f1d4f",
         "type": "link in",
         "z": "4bd3f7a138ab9bf8",
         "g": "38b2e4140c614a54",
         "name": "Init: Date Manager",
         "links": [
-            "c8caecc46da13eb1"
+            "c1d45c05dcc2f331"
         ],
-        "x": 435,
-        "y": 1820,
+        "x": 275,
+        "y": 1860,
         "wires": [
             [
                 "63b8d6ff13f59204"
@@ -4007,8 +3943,8 @@
         "g": "38b2e4140c614a54",
         "name": "",
         "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "seconds",
+        "timeout": "1500",
+        "timeoutUnits": "milliseconds",
         "rate": "1",
         "nbRateUnits": "1",
         "rateUnits": "second",
@@ -4018,11 +3954,16 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 430,
-        "y": 1860,
+        "x": 280,
+        "y": 1900,
         "wires": [
             [
-                "41303a729b281d8c"
+                "74c8bb53ce65ad64",
+                "4d854c68ba7333b5",
+                "756c67eb0e046f80",
+                "fc1d4bb9453fffe1",
+                "f0d022a1d2b7534d",
+                "0e2a492811240d7b"
             ]
         ]
     },
@@ -4467,7 +4408,7 @@
         "z": "4bd3f7a138ab9bf8",
         "g": "0ee206c8ef765709",
         "name": "Date",
-        "func": "var toReturn = \"\";\n\nif (typeof msg.payload === 'number') {\n    var date = new Date(msg.payload);\n    toReturn = date.toISOString().split('T')[0]\n    flow.set(\"presenceDate\", toReturn);\n} else if (typeof msg.payload === 'string') {\n    toReturn = flow.get(\"presenceDate\");\n}\n\nreturn { calendar: toReturn };",
+        "func": "var toReturn = \"\";\n\nif (typeof msg.payload === 'number') {\n    var date = removeOffset(msg.payload);\n    toReturn = date.toISOString().split('T')[0]\n    flow.set(\"presenceDate\", toReturn);\n} else if (typeof msg.payload === 'string') {\n    toReturn = flow.get(\"presenceDate\");\n}\n\nreturn { calendar: toReturn };\n\nfunction removeOffset(adate) {\n    var now = new Date();\n    var timeoffset = now.getTimezoneOffset() * 60000  // Get time zone info\n    var utcdate;  // UTC time for database query\n    if (timeoffset > 0) {\n        utcdate = adate - 86400000 + timeoffset;\n    } else if (timeoffset < 0) {\n        utcdate = adate + 86400000 + timeoffset;\n    } else {\n        utcdate = adate;\n    }\n\n    return new Date(utcdate);\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4627,20 +4568,22 @@
         "type": "ui_toast",
         "z": "4bd3f7a138ab9bf8",
         "g": "0ee206c8ef765709",
-        "position": "top right",
+        "position": "dialog",
         "displayTime": "3",
         "highlight": "",
         "sendall": true,
-        "outputs": 0,
+        "outputs": 1,
         "ok": "OK",
         "cancel": "",
         "raw": false,
         "className": "",
         "topic": "",
         "name": "",
-        "x": 1270,
+        "x": 1250,
         "y": 2200,
-        "wires": []
+        "wires": [
+            []
+        ]
     },
     {
         "id": "6f3ae68f41a73c5f",
@@ -5700,7 +5643,7 @@
         "z": "4bd3f7a138ab9bf8",
         "g": "7c86f6078e91083c",
         "name": "Refresh",
-        "func": "if (msg.payload == \"OK\") {\n    let toReturn = { url: \"http://192.168.0.10:1880/\", notification_to_user: \"Reiniciando\" };\n    return toReturn;\n}\n\nreturn null;",
+        "func": "if (msg.payload == \"OK\") {\n    let toReturn = { url: \"http://192.168.0.17:1880/\", notification_to_user: \"Reiniciando\" };\n    return toReturn;\n}\n\nreturn null;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -5893,68 +5836,190 @@
         ]
     },
     {
-        "id": "3367ca02c48e4bea",
+        "id": "74c8bb53ce65ad64",
         "type": "function",
         "z": "4bd3f7a138ab9bf8",
+        "g": "0a6f3b8e1ebb393c",
         "name": "Set Date",
-        "func": "let dateRTC = flow.get('timeRTC').split(\"_\")[0];\n\nlet year = parseInt(dateRTC.split(\"-\")[0]);\nlet month = parseInt(dateRTC.split(\"-\")[1]) - 1;\nlet day = parseInt(dateRTC.split(\"-\")[2]);\n\nvar date = new Date(year, month, day);\n\nreturn { payload: date.getTime() };\n\n/*\nlet dateRTC = flow.get('timeRTC').split(\"_\")[0];\nlet year = parseInt(dateRTC.split(\"-\")[0]);\nlet month = parseInt(dateRTC.split(\"-\")[1]);\nlet day = parseInt(dateRTC.split(\"-\")[2]);\n\nvar date = new Date(year, month - 1, day);//.toISOString()\n\nreturn { payload: date };\n*/",
+        "func": "//let date = flow.get('png_from_date').replace(/-/g, '\\/');\n//return { payload: Date.parse(date) };\n\nlet date = flow.get('png_from_date');\nreturn { payload: new Date(fuckitInverse(date)) };\n\nfunction fuckitInverse(adate) {\n    let day = adate.split('-')[2];\n    let year = adate.split('-')[0];\n    var month = adate.split('-')[1];\n    switch (month) {\n        case '01':\n            month = \"Jan\";\n            break;\n        case '02':\n            month = \"Feb\";\n            break;\n        case '03':\n            month = \"Mar\";\n            break;\n        case '04':\n            month = \"Apr\";\n            break;\n        case '05':\n            month = \"May\";\n            break;\n        case '06':\n            month = \"Jun\";\n            break;\n        case '07':\n            month = \"Jul\";\n            break;\n        case '08':\n            month = \"Aug\";\n            break;\n        case '09':\n            month = \"Sep\";\n            break;\n        case '10':\n            month = \"Oct\";\n            break;\n        case '11':\n            month = \"Nov\";\n            break;\n        case '12':\n            month = \"Dec\";\n            break;\n        default:\n            month = \"Jan\";\n    }\n\n    return month + \" \" + day + \", \" + year + \"  00:00:00\";\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "var rtc = flow.get('timeRTC').split(\"_\")[0] + 'T' + flow.get('timeRTC').split(\"_\")[1] + '.000Z';\nvar date = new Date(rtc);\n\nreturn { payload: date.toISOString() };",
         "finalize": "",
         "libs": [],
-        "x": 560,
-        "y": 2700,
+        "x": 480,
+        "y": 1780,
         "wires": [
             [
-                "1a99f58bbfd3dc39"
+                "a5ea1275479e4107"
             ]
         ]
     },
     {
-        "id": "c05c65a2589a5090",
-        "type": "inject",
+        "id": "4d854c68ba7333b5",
+        "type": "function",
         "z": "4bd3f7a138ab9bf8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 400,
-        "y": 2700,
+        "g": "0a6f3b8e1ebb393c",
+        "name": "Set Date",
+        "func": "//let date = flow.get('png_to_date').replace(/-/g, '\\/');\n//return { payload: Date.parse(date) };\n\nlet date = flow.get('png_to_date');\nreturn { payload: new Date(fuckitInverse(date)) };\n\nfunction fuckitInverse(adate) {\n    let day = adate.split('-')[2];\n    let year = adate.split('-')[0];\n    var month = adate.split('-')[1];\n    switch (month) {\n        case '01':\n            month = \"Jan\";\n            break;\n        case '02':\n            month = \"Feb\";\n            break;\n        case '03':\n            month = \"Mar\";\n            break;\n        case '04':\n            month = \"Apr\";\n            break;\n        case '05':\n            month = \"May\";\n            break;\n        case '06':\n            month = \"Jun\";\n            break;\n        case '07':\n            month = \"Jul\";\n            break;\n        case '08':\n            month = \"Aug\";\n            break;\n        case '09':\n            month = \"Sep\";\n            break;\n        case '10':\n            month = \"Oct\";\n            break;\n        case '11':\n            month = \"Nov\";\n            break;\n        case '12':\n            month = \"Dec\";\n            break;\n        default:\n            month = \"Jan\";\n    }\n\n    return month + \" \" + day + \", \" + year + \"  00:00:00\";\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "var rtc = flow.get('timeRTC').split(\"_\")[0] + 'T' + flow.get('timeRTC').split(\"_\")[1] + '.000Z';\nvar date = new Date(rtc);\n\nreturn { payload: date.toISOString() };",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 1820,
         "wires": [
             [
-                "3367ca02c48e4bea"
+                "e43b37cc9f8b7107"
             ]
         ]
     },
     {
-        "id": "1a99f58bbfd3dc39",
-        "type": "debug",
+        "id": "756c67eb0e046f80",
+        "type": "function",
         "z": "4bd3f7a138ab9bf8",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 720,
-        "y": 2700,
+        "g": "0a6f3b8e1ebb393c",
+        "name": "Set Date",
+        "func": "//let date = flow.get('tyh_from_date').replace(/-/g, '\\/');\n//return { payload: Date.parse(date) };\n\nlet date = flow.get('tyh_from_date');\nreturn { payload: new Date(fuckitInverse(date)) };\n\nfunction fuckitInverse(adate) {\n    let day = adate.split('-')[2];\n    let year = adate.split('-')[0];\n    var month = adate.split('-')[1];\n    switch (month) {\n        case '01':\n            month = \"Jan\";\n            break;\n        case '02':\n            month = \"Feb\";\n            break;\n        case '03':\n            month = \"Mar\";\n            break;\n        case '04':\n            month = \"Apr\";\n            break;\n        case '05':\n            month = \"May\";\n            break;\n        case '06':\n            month = \"Jun\";\n            break;\n        case '07':\n            month = \"Jul\";\n            break;\n        case '08':\n            month = \"Aug\";\n            break;\n        case '09':\n            month = \"Sep\";\n            break;\n        case '10':\n            month = \"Oct\";\n            break;\n        case '11':\n            month = \"Nov\";\n            break;\n        case '12':\n            month = \"Dec\";\n            break;\n        default:\n            month = \"Jan\";\n    }\n\n    return month + \" \" + day + \", \" + year + \"  00:00:00\";\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "var rtc = flow.get('timeRTC').split(\"_\")[0] + 'T' + flow.get('timeRTC').split(\"_\")[1] + '.000Z';\nvar date = new Date(rtc);\n\nreturn { payload: date.toISOString() };",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 1880,
+        "wires": [
+            [
+                "055bef59dda0482c"
+            ]
+        ]
+    },
+    {
+        "id": "fc1d4bb9453fffe1",
+        "type": "function",
+        "z": "4bd3f7a138ab9bf8",
+        "g": "0a6f3b8e1ebb393c",
+        "name": "Set Date",
+        "func": "//let date = flow.get('tyh_to_date').replace(/-/g, '\\/');\n//return { payload: Date.parse(date) };\n\nlet date = flow.get('tyh_to_date');\nreturn { payload: new Date(fuckitInverse(date)) };\n\nfunction fuckitInverse(adate) {\n    let day = adate.split('-')[2];\n    let year = adate.split('-')[0];\n    var month = adate.split('-')[1];\n    switch (month) {\n        case '01':\n            month = \"Jan\";\n            break;\n        case '02':\n            month = \"Feb\";\n            break;\n        case '03':\n            month = \"Mar\";\n            break;\n        case '04':\n            month = \"Apr\";\n            break;\n        case '05':\n            month = \"May\";\n            break;\n        case '06':\n            month = \"Jun\";\n            break;\n        case '07':\n            month = \"Jul\";\n            break;\n        case '08':\n            month = \"Aug\";\n            break;\n        case '09':\n            month = \"Sep\";\n            break;\n        case '10':\n            month = \"Oct\";\n            break;\n        case '11':\n            month = \"Nov\";\n            break;\n        case '12':\n            month = \"Dec\";\n            break;\n        default:\n            month = \"Jan\";\n    }\n\n    return month + \" \" + day + \", \" + year + \"  00:00:00\";\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "var rtc = flow.get('timeRTC').split(\"_\")[0] + 'T' + flow.get('timeRTC').split(\"_\")[1] + '.000Z';\nvar date = new Date(rtc);\n\nreturn { payload: date.toISOString() };",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 1920,
+        "wires": [
+            [
+                "209647a33910046e"
+            ]
+        ]
+    },
+    {
+        "id": "f0d022a1d2b7534d",
+        "type": "function",
+        "z": "4bd3f7a138ab9bf8",
+        "g": "0a6f3b8e1ebb393c",
+        "name": "Set Date",
+        "func": "//let date = flow.get('lum_from_date').replace(/-/g, '\\/');\n//return { payload: Date.parse(date) };\n\nlet date = flow.get('lum_from_date');\nreturn { payload: new Date(fuckitInverse(date)) };\n\nfunction fuckitInverse(adate) {\n    let day = adate.split('-')[2];\n    let year = adate.split('-')[0];\n    var month = adate.split('-')[1];\n    switch (month) {\n        case '01':\n            month = \"Jan\";\n            break;\n        case '02':\n            month = \"Feb\";\n            break;\n        case '03':\n            month = \"Mar\";\n            break;\n        case '04':\n            month = \"Apr\";\n            break;\n        case '05':\n            month = \"May\";\n            break;\n        case '06':\n            month = \"Jun\";\n            break;\n        case '07':\n            month = \"Jul\";\n            break;\n        case '08':\n            month = \"Aug\";\n            break;\n        case '09':\n            month = \"Sep\";\n            break;\n        case '10':\n            month = \"Oct\";\n            break;\n        case '11':\n            month = \"Nov\";\n            break;\n        case '12':\n            month = \"Dec\";\n            break;\n        default:\n            month = \"Jan\";\n    }\n\n    return month + \" \" + day + \", \" + year + \"  00:00:00\";\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "var rtc = flow.get('timeRTC').split(\"_\")[0] + 'T' + flow.get('timeRTC').split(\"_\")[1] + '.000Z';\nvar date = new Date(rtc);\n\nreturn { payload: date.toISOString() };",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 1980,
+        "wires": [
+            [
+                "7f763d8a1cf9b132"
+            ]
+        ]
+    },
+    {
+        "id": "0e2a492811240d7b",
+        "type": "function",
+        "z": "4bd3f7a138ab9bf8",
+        "g": "0a6f3b8e1ebb393c",
+        "name": "Set Date",
+        "func": "//let date = flow.get('lum_to_date').replace(/-/g, '\\/');\n//return { payload: Date.parse(date) };\n\nlet date = flow.get('lum_to_date');\nreturn { payload: new Date(fuckitInverse(date)) };\n\nfunction fuckitInverse(adate) {\n    let day = adate.split('-')[2];\n    let year = adate.split('-')[0];\n    var month = adate.split('-')[1];\n    switch (month) {\n        case '01':\n            month = \"Jan\";\n            break;\n        case '02':\n            month = \"Feb\";\n            break;\n        case '03':\n            month = \"Mar\";\n            break;\n        case '04':\n            month = \"Apr\";\n            break;\n        case '05':\n            month = \"May\";\n            break;\n        case '06':\n            month = \"Jun\";\n            break;\n        case '07':\n            month = \"Jul\";\n            break;\n        case '08':\n            month = \"Aug\";\n            break;\n        case '09':\n            month = \"Sep\";\n            break;\n        case '10':\n            month = \"Oct\";\n            break;\n        case '11':\n            month = \"Nov\";\n            break;\n        case '12':\n            month = \"Dec\";\n            break;\n        default:\n            month = \"Jan\";\n    }\n\n    return month + \" \" + day + \", \" + year + \"  00:00:00\";\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "var rtc = flow.get('timeRTC').split(\"_\")[0] + 'T' + flow.get('timeRTC').split(\"_\")[1] + '.000Z';\nvar date = new Date(rtc);\n\nreturn { payload: date.toISOString() };",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 2020,
+        "wires": [
+            [
+                "ca6d33cc46bb1d90"
+            ]
+        ]
+    },
+    {
+        "id": "7020010520d8f782",
+        "type": "comment",
+        "z": "4bd3f7a138ab9bf8",
+        "g": "7c86f6078e91083c",
+        "name": "IP",
+        "info": "",
+        "x": 2990,
+        "y": 800,
         "wires": []
+    },
+    {
+        "id": "d7a2aace29f312f5",
+        "type": "comment",
+        "z": "4bd3f7a138ab9bf8",
+        "g": "d8498c485785607b",
+        "name": "IP",
+        "info": "",
+        "x": 2830,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "a66dc15b26fac9d5",
+        "type": "ui_template",
+        "z": "4bd3f7a138ab9bf8",
+        "d": true,
+        "group": "c63655b8f7450c5c",
+        "name": "Delete TyH",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "format": "<script>\n(function(scope) {\n  scope.$watch('msg', function(msg) {\n    if (msg) {\n      let menu_tyh = document.getElementById('tyh_list');\n      while (menu_tyh.firstChild) {\n        menu_tyh.removeChild(menu_tyh.firstChild);\n      }\n    }    \n  });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1150,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a261db631a9f278d",
+        "type": "ui_template",
+        "z": "4bd3f7a138ab9bf8",
+        "d": true,
+        "group": "c63655b8f7450c5c",
+        "name": "Delete Lum",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "format": "<script>\n(function(scope) {\n  scope.$watch('msg', function(msg) {\n    if (msg) {\n      let menu_lum = document.getElementById('Lum_list');\n      while (menu_lum.firstChild) {\n        menu_lum.removeChild(menu_lum.firstChild);\n      }\n    }    \n  });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1150,
+        "y": 1100,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "e2b8412e38894d84",
@@ -6309,17 +6374,6 @@
         "className": ""
     },
     {
-        "id": "c63655b8f7450c5c",
-        "type": "ui_group",
-        "name": "Code Templates",
-        "tab": "08c443aaea74f446",
-        "order": 5,
-        "disp": false,
-        "width": "1",
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "f44b173abdb7e275",
         "type": "ui_group",
         "name": "Luminosidad",
@@ -6338,6 +6392,17 @@
         "order": 3,
         "disp": true,
         "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c63655b8f7450c5c",
+        "type": "ui_group",
+        "name": "Code Templates",
+        "tab": "08c443aaea74f446",
+        "order": 5,
+        "disp": false,
+        "width": "1",
         "collapse": false,
         "className": ""
     },
