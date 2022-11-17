@@ -306,12 +306,12 @@
             "621f31c2387df55f",
             "a2f33f0decdeeb7e",
             "02bfb4fbc2df5ea5",
-            "a2ec51133add780f"
+            "1c6f4ea212a6f47c"
         ],
-        "x": 1934,
-        "y": 539,
-        "w": 592,
-        "h": 169.5
+        "x": 1914,
+        "y": 559,
+        "w": 712,
+        "h": 149.5
     },
     {
         "id": "3a9c760f97d8aca9",
@@ -398,8 +398,8 @@
             "5799c7c643a4ddd7",
             "3a2542022481af0f"
         ],
-        "x": 1944,
-        "y": 759,
+        "x": 1964,
+        "y": 799,
         "w": 502,
         "h": 162
     },
@@ -448,12 +448,13 @@
             "7c7cf62d4bba59de",
             "a2ed3487bb11f95f",
             "3def40830c4ec2ba",
-            "c1a2cc44f4c758e7"
+            "c1a2cc44f4c758e7",
+            "c75fe63096ac80aa"
         ],
-        "x": 2694,
-        "y": 859,
-        "w": 352,
-        "h": 162
+        "x": 2794,
+        "y": 899,
+        "w": 532,
+        "h": 122
     },
     {
         "id": "55ea67ed8f6efe15",
@@ -1352,7 +1353,7 @@
         "op2": "0",
         "op1type": "str",
         "op2type": "str",
-        "duration": "-11",
+        "duration": "-5",
         "extend": false,
         "overrideDelay": false,
         "units": "s",
@@ -1360,7 +1361,7 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1910,
+        "x": 1900,
         "y": 1720,
         "wires": [
             [
@@ -1662,7 +1663,7 @@
         "z": "4bd3f7a138ab9bf8",
         "g": "d8498c485785607b",
         "name": "Set Stream URL",
-        "func": "msg.payload = \"http://192.168.0.17:8000/\";\nreturn msg;",
+        "func": "//msg.payload = \"http://10.20.30.1:8000/\";\nmsg.payload = \"http://192.168.0.12:8000/\";\n//msg.payload = \"http://192.168.1.101:8000/\";\n//msg.payload = \"http://localhost:8000/\";\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1713,7 +1714,7 @@
         "addpay": "",
         "append": "",
         "useSpawn": "false",
-        "timer": "10",
+        "timer": "4.5",
         "winHide": false,
         "oldrc": false,
         "name": "Update Python Function",
@@ -2101,7 +2102,7 @@
         "addpay": "",
         "append": "",
         "useSpawn": "false",
-        "timer": "29",
+        "timer": "9",
         "winHide": false,
         "oldrc": false,
         "name": "Presence Detector Py",
@@ -2133,7 +2134,7 @@
         "wires": [
             [
                 "63afb30e53636433",
-                "c1a2cc44f4c758e7"
+                "c75fe63096ac80aa"
             ],
             [
                 "669a57d6344b3a51"
@@ -2297,7 +2298,7 @@
         "op2": "0",
         "op1type": "pay",
         "op2type": "str",
-        "duration": "-30",
+        "duration": "-10",
         "extend": false,
         "overrideDelay": false,
         "units": "s",
@@ -2500,8 +2501,8 @@
         "wires": [
             [
                 "c1d45c05dcc2f331",
-                "621f31c2387df55f",
-                "de22f55d806e2135"
+                "de22f55d806e2135",
+                "1c6f4ea212a6f47c"
             ]
         ]
     },
@@ -2762,11 +2763,12 @@
         "links": [
             "c1d45c05dcc2f331"
         ],
-        "x": 3055,
+        "x": 2825,
         "y": 1400,
         "wires": [
             [
-                "40afbc6ab376fe63"
+                "40afbc6ab376fe63",
+                "a8865b9e2ca35101"
             ]
         ]
     },
@@ -2898,7 +2900,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "Get Time",
-        "x": 2240,
+        "x": 2360,
         "y": 660,
         "wires": [
             [
@@ -2916,14 +2918,14 @@
         "z": "4bd3f7a138ab9bf8",
         "g": "9fa822970d0e02a2",
         "name": "Flow Variables",
-        "func": "//Get RTC Time\nvar timeRTC = flow.get('timeRTC') || 0;\n\n// Video Stream and Make Zip\nflow.set('pyCamera', true);\nflow.set('makingZip', true);\n\n// Error RTC\nflow.set('handleRTCError', true);\n\n// Set RTC Calendar Days\nflow.set('lum_from_date', timeRTC.split(\"_\")[0]);\nflow.set('lum_to_date', timeRTC.split(\"_\")[0]);\n\nflow.set('tyh_from_date', timeRTC.split(\"_\")[0]);\nflow.set('tyh_to_date', timeRTC.split(\"_\")[0]);\n\nflow.set('png_from_date', timeRTC.split(\"_\")[0]);\nflow.set('png_to_date', timeRTC.split(\"_\")[0]);\n\nflow.set(\"presenceDate\", timeRTC.split(\"_\")[0]);\n\n// Calendar Dates\nflow.set('lum_valid_date', true);\nflow.set('tyh_valid_date', true);\nflow.set('png_valid_date', true);\n\n// Update Data \nflow.set('interval_photo', 60 * 60 * 1000);    //In ms\nflow.set('interval_tyh', 5 * 60 * 1000);      //In ms\nflow.set('interval_lum', 5 * 60 * 1000);      //In ms\nflow.set('photoNight', true);",
+        "func": "//Get RTC Time\nvar timeRTC = flow.get('timeRTC') || 0;\n\n// Video Stream and Make Zip\nlet pyCamera = flow.get('pyCamera');\nif ((pyCamera == \"\") || (pyCamera == null)) {\n    flow.set('pyCamera', true);\n}\nflow.set('makingZip', true);\n\n// Error RTC\nflow.set('handleRTCError', true);\n\n// Set RTC Calendar Days\nflow.set('lum_from_date', timeRTC.split(\"_\")[0]);\nflow.set('lum_to_date', timeRTC.split(\"_\")[0]);\n\nflow.set('tyh_from_date', timeRTC.split(\"_\")[0]);\nflow.set('tyh_to_date', timeRTC.split(\"_\")[0]);\n\nflow.set('png_from_date', timeRTC.split(\"_\")[0]);\nflow.set('png_to_date', timeRTC.split(\"_\")[0]);\n\nflow.set(\"presenceDate\", timeRTC.split(\"_\")[0]);\n\n// Calendar Dates\nflow.set('lum_valid_date', true);\nflow.set('tyh_valid_date', true);\nflow.set('png_valid_date', true);\n\n// Update Data \nflow.set('interval_photo', 60 * 60 * 1000);    //In ms\nflow.set('interval_tyh', 5 * 60 * 1000);      //In ms\nflow.set('interval_lum', 5 * 60 * 1000);      //In ms\nflow.set('photoNight', true);",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2420,
-        "y": 580,
+        "x": 2300,
+        "y": 600,
         "wires": [
             []
         ]
@@ -2946,12 +2948,11 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 2040,
+        "x": 2180,
         "y": 660,
         "wires": [
             [
-                "3c71823641439b97",
-                "a2ec51133add780f"
+                "3c71823641439b97"
             ]
         ]
     },
@@ -2967,7 +2968,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2420,
+        "x": 2520,
         "y": 640,
         "wires": [
             [
@@ -2988,8 +2989,8 @@
         "g": "9fa822970d0e02a2",
         "name": "",
         "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "seconds",
+        "timeout": "1500",
+        "timeoutUnits": "milliseconds",
         "rate": "1",
         "nbRateUnits": "1",
         "rateUnits": "second",
@@ -2999,11 +3000,11 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 2040,
-        "y": 580,
+        "x": 2020,
+        "y": 600,
         "wires": [
             [
-                "a2ec51133add780f"
+                "c6a9736beb8ca4a1"
             ]
         ]
     },
@@ -4008,8 +4009,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 2120,
-        "y": 800,
+        "x": 2140,
+        "y": 840,
         "wires": [
             [
                 "ab19c6983b4d19d5"
@@ -4029,8 +4030,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 2120,
-        "y": 840,
+        "x": 2140,
+        "y": 880,
         "wires": [
             [
                 "dadd83795049ff57"
@@ -4050,8 +4051,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 2120,
-        "y": 880,
+        "x": 2140,
+        "y": 920,
         "wires": [
             [
                 "5799c7c643a4ddd7"
@@ -4078,8 +4079,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2340,
-        "y": 800,
+        "x": 2360,
+        "y": 840,
         "wires": [
             []
         ]
@@ -4104,8 +4105,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2340,
-        "y": 840,
+        "x": 2360,
+        "y": 880,
         "wires": [
             []
         ]
@@ -4130,8 +4131,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2340,
-        "y": 880,
+        "x": 2360,
+        "y": 920,
         "wires": [
             []
         ]
@@ -4145,8 +4146,8 @@
         "links": [
             "c1d45c05dcc2f331"
         ],
-        "x": 1985,
-        "y": 840,
+        "x": 2005,
+        "y": 880,
         "wires": [
             [
                 "f0f7068830d8bb5a",
@@ -4310,7 +4311,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2970,
+        "x": 3150,
         "y": 1460,
         "wires": [
             [
@@ -4367,7 +4368,7 @@
         "order": 4,
         "width": 0,
         "height": 0,
-        "format": "<!DOCTYPE html>\n<html>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js\"></script>\n\n<div id=\"divCanvas\">\n  <canvas id=\"myChart\" style=\"width:100%;max-width:600px\"></canvas>\n\n  <script>\n\t(function(scope) {\n\t\tscope.$watch('msg', function(msg) {\n\t\t\t\n\t\t\tlet divCanvas = document.getElementById(\"divCanvas\");\n\t\t\tlet canvas_del = document.getElementById(\"myChart\");\n\t\t\tdivCanvas.removeChild(canvas_del);\n\t\t\t\n\t\t\tvar canvas_new = document.createElement('canvas');\n\t\t\tcanvas_new.id = \"myChart\";\n\t\t\tcanvas_new.style = \"width:100%;height:400px\";//\";max-width:600px\";\n\t\t\tdivCanvas.appendChild(canvas_new);\n\n\t\t\tvar data = msg.payload;\n\t\t\tvar xValues = [];\n\t\t\tvar yValues = [];\n\t\t\tvar yValues_n = [];\n\t\t\t\n\t\t\tfor (var i = 0; i < data.length; i++) {\n\t\t\t\tif (msg.calendar == data[i].day ) {\n\t\t\t\t\txValues.push(data[i].hour);\n\t\t\t\t\tyValues.push(data[i].state);\n\t\t\t\t\tyValues_n.push(!data[i].state ? 1 : 0 );\n\t\t\t\t}\n\t\t\t}\n\n\t\t\tnew Chart('myChart', {\n\t\t\t\ttype: \"line\",\n\t\t\t\tdata: {\n\t\t\t\t\tlabels: xValues,\n\t\t\t\t\tdatasets: [{\n\t\t\t\t\t\tlabel: \"Fuera del Nido\",\n\t\t\t\t\t\tfill: true,\n\t\t\t\t\t\tlineTension: 0,\n\t\t\t\t\t\tpointRadius: 0,\n\t\t\t\t\t\tbackgroundColor: \"rgba(255,0,0,0.5)\",\n\t\t\t\t\t\tborderColor: \"rgba(31,119,180,0.0)\",\n\t\t\t\t\t\tdata: yValues,\n\t\t\t\t\t\tsteppedLine: true\n\t\t\t\t\t},{\n\t\t\t\t\t\tlabel: \"Dentro del Nido\",\n\t\t\t\t\t\tfill: true,\n\t\t\t\t\t\tlineTension: 0,\n\t\t\t\t\t\tpointRadius: 0,\n\t\t\t\t\t\tbackgroundColor: \"rgba(0,255,0,0.5)\",\n\t\t\t\t\t\tborderColor: \"rgba(31,119,180,0.0)\",\n\t\t\t\t\t\tdata: yValues_n,\n\t\t\t\t\t\tsteppedLine: true\n\t\t\t\t\t}]\n\t\t\t\t},\n\t\t\t\toptions: {\n\t\t\t\t\tlegend: { display: true },\n\t\t\t\t\tscales: {\n\t\t\t\t\t\tyAxes: [{\n\t\t\t\t\t\t\tticks: {display: false},\n\t\t\t\t\t\t\tgridLines: {color: \"rgba(0, 0, 0, 0)\"}  \n\t\t\t\t\t\t}]\n\t\t\t\t\t},\n\t\t\t\t\tx: {\n\t\t\t\t\t\ttype: 'time'\n\t\t\t\t\t},\n\t\t\t\t\ttooltips: {\n\t\t\t\t\t\tenabled: true,\n\t\t\t\t\t\tintersect: false,\n\t\t\t\t\t\tcustom: function(tooltipModel) {\n\t\t\t\t\t\t\tif (tooltipModel.title == \"\") {\n\t\t\t\t\t\t\t\ttooltipModel.opacity = 0;\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t},\n\t\t\t\t\t\tcallbacks: {\n\t\t\t\t\t\t\ttitle: function (tooltipItem, data) {\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tlet selected = tooltipItem[0].index;\n\t\t\t\t\t\t\t\tlet total = data.labels.length;\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tvar next = total - 1;\n\t\t\t\t\t\t\t\tvar previous = 0;\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tvar actual_value = data.datasets[0].data[selected]; \n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tfor (var i = selected; i < total; i++) {\n\t\t\t\t\t\t\t\t\tvar next_value = data.datasets[0].data[i];\n\t\t\t\t\t\t\t\t\tif (actual_value != next_value) {\n\t\t\t\t\t\t\t\t\t\tif (next_value != data.datasets[0].data[i-1]) {\n\t\t\t\t\t\t\t\t\t\t\tnext = i;\n\t\t\t\t\t\t\t\t\t\t\tbreak;\n\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tfor (var i = selected; i >= 0; i--) { \n\t\t\t\t\t\t\t\t\tvar prev_value = data.datasets[0].data[i];\n\t\t\t\t\t\t\t\t\tif (actual_value != prev_value) {\n\t\t\t\t\t\t\t\t\t\tif (prev_value != data.datasets[0].data[i+1]) {\n\t\t\t\t\t\t\t\t\t\t\tprevious = i + 1;\n\t\t\t\t\t\t\t\t\t\t\tbreak;\n\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t}\n\n\t\t\t\t\t\t\t\tlet d1 = new Date();\n\t\t\t\t\t\t\t\td1.setHours(data.labels[previous].split(\":\")[0]);\n\t\t\t\t\t\t\t\td1.setMinutes(data.labels[previous].split(\":\")[1]);\n\t\t\t\t\t\t\t\td1.setSeconds(data.labels[previous].split(\":\")[2]);\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tlet d2 = new Date();\n\t\t\t\t\t\t\t\td2.setHours(data.labels[next].split(\":\")[0]);\n\t\t\t\t\t\t\t\td2.setMinutes(data.labels[next].split(\":\")[1]);\n\t\t\t\t\t\t\t\td2.setSeconds(data.labels[next].split(\":\")[2]);\n\n\t\t\t\t\t\t\t\tlet diff = new Date(d2 - d1).toISOString().slice(11, 19);\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tif ( (tooltipItem[0].yLabel == 1) && (selected != (total - 1)) ){\n\t\t\t\t\t\t\t\t\treturn \"Intervalo de tiempo:\" + '\\n' + diff;\n\t\t\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\t\t\treturn \"\";\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\tlabel: function(tooltipItem, data) {\n\t\t\t\t\t\t\t\tif (tooltipItem.yLabel == 1) {\n\t\t\t\t\t\t\t\t\treturn \"Dentro del Nido.\";\n\t\t\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\t\t\treturn \"Fuera del Nido.\";\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\tfooter: function (tooltipItem, data) {\n\t\t\t\t\t\t\t\tif (tooltipItem[0].yLabel == 1) { \n\t\t\t\t\t\t\t\t\t//return \"...\";\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\t\t\t\n\t\t\t});\t\t\n\t\t});\t\t\t\t\n\t})(scope);\n  </script>\n\n</div>\n\n</html>",
+        "format": "<!DOCTYPE html>\n<html>\n<!-- <script src=\"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js\"></script> -->\n<!-- <script type='text/javascript' src=\"/home/pi/simfs/NidoImagesFrontEnd/Chart.js\"></script> -->\n\n<script type='text/javascript' src=\"/files/Chart.js\"></script>\n\n<div id=\"divCanvas\">\n  <canvas id=\"myChart\" style=\"width:100%;max-width:600px\"></canvas>\n\n  <script>\n\t(function(scope) {\n\t\tscope.$watch('msg', function(msg) {\n\t\t\t\n\t\t\tlet divCanvas = document.getElementById(\"divCanvas\");\n\t\t\tlet canvas_del = document.getElementById(\"myChart\");\n\t\t\tdivCanvas.removeChild(canvas_del);\n\t\t\t\n\t\t\tvar canvas_new = document.createElement('canvas');\n\t\t\tcanvas_new.id = \"myChart\";\n\t\t\tcanvas_new.style = \"width:100%;height:400px\";//\";max-width:600px\";\n\t\t\tdivCanvas.appendChild(canvas_new);\n\n\t\t\tvar data = msg.payload;\n\t\t\tvar xValues = [];\n\t\t\tvar yValues = [];\n\t\t\tvar yValues_n = [];\n\t\t\t\n\t\t\tfor (var i = 0; i < data.length; i++) {\n\t\t\t\tif (msg.calendar == data[i].day ) {\n\t\t\t\t\txValues.push(data[i].hour);\n\t\t\t\t\tyValues.push(data[i].state);\n\t\t\t\t\tyValues_n.push(!data[i].state ? 1 : 0 );\n\t\t\t\t}\n\t\t\t}\n\n\t\t\tnew Chart('myChart', {\n\t\t\t\ttype: \"line\",\n\t\t\t\tdata: {\n\t\t\t\t\tlabels: xValues,\n\t\t\t\t\tdatasets: [{\n\t\t\t\t\t\tlabel: \"Fuera del Nido\",\n\t\t\t\t\t\tfill: true,\n\t\t\t\t\t\tlineTension: 0,\n\t\t\t\t\t\tpointRadius: 0,\n\t\t\t\t\t\tbackgroundColor: \"rgba(255,0,0,0.5)\",\n\t\t\t\t\t\tborderColor: \"rgba(31,119,180,0.0)\",\n\t\t\t\t\t\tdata: yValues,\n\t\t\t\t\t\tsteppedLine: true\n\t\t\t\t\t},{\n\t\t\t\t\t\tlabel: \"Dentro del Nido\",\n\t\t\t\t\t\tfill: true,\n\t\t\t\t\t\tlineTension: 0,\n\t\t\t\t\t\tpointRadius: 0,\n\t\t\t\t\t\tbackgroundColor: \"rgba(0,255,0,0.5)\",\n\t\t\t\t\t\tborderColor: \"rgba(31,119,180,0.0)\",\n\t\t\t\t\t\tdata: yValues_n,\n\t\t\t\t\t\tsteppedLine: true\n\t\t\t\t\t}]\n\t\t\t\t},\n\t\t\t\toptions: {\n\t\t\t\t\tlegend: { display: true },\n\t\t\t\t\tscales: {\n\t\t\t\t\t\tyAxes: [{\n\t\t\t\t\t\t\tticks: {display: false},\n\t\t\t\t\t\t\tgridLines: {color: \"rgba(0, 0, 0, 0)\"}  \n\t\t\t\t\t\t}]\n\t\t\t\t\t},\n\t\t\t\t\tx: {\n\t\t\t\t\t\ttype: 'time'\n\t\t\t\t\t},\n\t\t\t\t\ttooltips: {\n\t\t\t\t\t\tenabled: true,\n\t\t\t\t\t\tintersect: false,\n\t\t\t\t\t\tcustom: function(tooltipModel) {\n\t\t\t\t\t\t\tif (tooltipModel.title == \"\") {\n\t\t\t\t\t\t\t\ttooltipModel.opacity = 0;\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t},\n\t\t\t\t\t\tcallbacks: {\n\t\t\t\t\t\t\ttitle: function (tooltipItem, data) {\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tlet selected = tooltipItem[0].index;\n\t\t\t\t\t\t\t\tlet total = data.labels.length;\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tvar next = total - 1;\n\t\t\t\t\t\t\t\tvar previous = 0;\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tvar actual_value = data.datasets[0].data[selected]; \n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tfor (var i = selected; i < total; i++) {\n\t\t\t\t\t\t\t\t\tvar next_value = data.datasets[0].data[i];\n\t\t\t\t\t\t\t\t\tif (actual_value != next_value) {\n\t\t\t\t\t\t\t\t\t\tif (next_value != data.datasets[0].data[i-1]) {\n\t\t\t\t\t\t\t\t\t\t\tnext = i;\n\t\t\t\t\t\t\t\t\t\t\tbreak;\n\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tfor (var i = selected; i >= 0; i--) { \n\t\t\t\t\t\t\t\t\tvar prev_value = data.datasets[0].data[i];\n\t\t\t\t\t\t\t\t\tif (actual_value != prev_value) {\n\t\t\t\t\t\t\t\t\t\tif (prev_value != data.datasets[0].data[i+1]) {\n\t\t\t\t\t\t\t\t\t\t\tprevious = i + 1;\n\t\t\t\t\t\t\t\t\t\t\tbreak;\n\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t}\n\n\t\t\t\t\t\t\t\tlet d1 = new Date();\n\t\t\t\t\t\t\t\td1.setHours(data.labels[previous].split(\":\")[0]);\n\t\t\t\t\t\t\t\td1.setMinutes(data.labels[previous].split(\":\")[1]);\n\t\t\t\t\t\t\t\td1.setSeconds(data.labels[previous].split(\":\")[2]);\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tlet d2 = new Date();\n\t\t\t\t\t\t\t\td2.setHours(data.labels[next].split(\":\")[0]);\n\t\t\t\t\t\t\t\td2.setMinutes(data.labels[next].split(\":\")[1]);\n\t\t\t\t\t\t\t\td2.setSeconds(data.labels[next].split(\":\")[2]);\n\n\t\t\t\t\t\t\t\tlet diff = new Date(d2 - d1).toISOString().slice(11, 19);\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tif ( (tooltipItem[0].yLabel == 1) && (selected != (total - 1)) ){\n\t\t\t\t\t\t\t\t\treturn \"Intervalo de tiempo:\" + '\\n' + diff;\n\t\t\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\t\t\treturn \"\";\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\tlabel: function(tooltipItem, data) {\n\t\t\t\t\t\t\t\tif (tooltipItem.yLabel == 1) {\n\t\t\t\t\t\t\t\t\treturn \"Dentro del Nido.\";\n\t\t\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\t\t\treturn \"Fuera del Nido.\";\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\tfooter: function (tooltipItem, data) {\n\t\t\t\t\t\t\t\tif (tooltipItem[0].yLabel == 1) { \n\t\t\t\t\t\t\t\t\t//return \"...\";\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\t\t\t\n\t\t\t});\t\t\n\t\t});\t\t\t\t\n\t})(scope);\n  </script>\n\n</div>\n\n</html>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": false,
@@ -4428,14 +4429,14 @@
         "z": "4bd3f7a138ab9bf8",
         "g": "90ef18f8b38770c1",
         "name": "Save State",
-        "func": "if (msg != null) {\n    let timeRTC = flow.get('timeRTC') || 0;\n    let day = timeRTC.split('_')[0];\n    let hour = timeRTC.split('_')[1];\n\n    var array = [];\n    array = msg.payload;\n    array.push({ day: day, hour: hour, state: msg.state });\n    msg.payload = array;\n    \n    return msg;\n}",
+        "func": "if (msg != null) {\n    let timeRTC = flow.get('timeRTC') || 0;\n    let day = timeRTC.split('_')[0];\n    let hour = timeRTC.split('_')[1];\n    \n    var array = [];\n    array = msg.payload;\n\n    let prev_day = array.at(-1).day;\n    let prev_hour = array.at(-1).hour;\n\n//    if ( (day != prev_day) && (hour != prev_hour) ) {\n        array.push({ day: day, hour: hour, state: msg.state });\n        msg.payload = array;\n        \n        return msg;\n  //  }\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2950,
-        "y": 940,
+        "x": 3030,
+        "y": 980,
         "wires": [
             [
                 "3def40830c4ec2ba"
@@ -4455,8 +4456,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 2930,
-        "y": 900,
+        "x": 3210,
+        "y": 940,
         "wires": [
             [
                 "a2ed3487bb11f95f"
@@ -4472,8 +4473,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 2810,
-        "y": 940,
+        "x": 2890,
+        "y": 980,
         "wires": [
             [
                 "21bf379491b3b12b"
@@ -4492,7 +4493,7 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 2930,
+        "x": 3210,
         "y": 980,
         "wires": [
             []
@@ -4510,8 +4511,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2770,
-        "y": 900,
+        "x": 3050,
+        "y": 940,
         "wires": [
             [
                 "7c7cf62d4bba59de"
@@ -4999,7 +5000,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 2760,
+        "x": 2860,
         "y": 1560,
         "wires": [
             [
@@ -5351,32 +5352,6 @@
         ]
     },
     {
-        "id": "a2ec51133add780f",
-        "type": "trigger",
-        "z": "4bd3f7a138ab9bf8",
-        "g": "9fa822970d0e02a2",
-        "name": "",
-        "op1": "connect",
-        "op2": "0",
-        "op1type": "str",
-        "op2type": "str",
-        "duration": "0",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "ms",
-        "reset": "connect",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 2220,
-        "y": 580,
-        "wires": [
-            [
-                "c6a9736beb8ca4a1"
-            ]
-        ]
-    },
-    {
         "id": "626b960698c625cb",
         "type": "exec",
         "z": "4bd3f7a138ab9bf8",
@@ -5643,7 +5618,7 @@
         "z": "4bd3f7a138ab9bf8",
         "g": "7c86f6078e91083c",
         "name": "Refresh",
-        "func": "if (msg.payload == \"OK\") {\n    let toReturn = { url: \"http://192.168.0.17:1880/\", notification_to_user: \"Reiniciando\" };\n    return toReturn;\n}\n\nreturn null;",
+        "func": "if (msg.payload == \"OK\") {\n    let toReturn = { url: \"http://192.168.1.101:1880/\", notification_to_user: \"Reiniciando\" };\n    return toReturn;\n}\n\nreturn null;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -5973,7 +5948,7 @@
         "g": "d8498c485785607b",
         "name": "IP",
         "info": "",
-        "x": 2830,
+        "x": 2710,
         "y": 1400,
         "wires": []
     },
@@ -6019,6 +5994,58 @@
         "y": 1100,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "1c6f4ea212a6f47c",
+        "type": "delay",
+        "z": "4bd3f7a138ab9bf8",
+        "g": "9fa822970d0e02a2",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2010,
+        "y": 660,
+        "wires": [
+            [
+                "621f31c2387df55f"
+            ]
+        ]
+    },
+    {
+        "id": "c75fe63096ac80aa",
+        "type": "delay",
+        "z": "4bd3f7a138ab9bf8",
+        "g": "90ef18f8b38770c1",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2900,
+        "y": 940,
+        "wires": [
+            [
+                "c1a2cc44f4c758e7"
+            ]
         ]
     },
     {
