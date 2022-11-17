@@ -4,7 +4,7 @@
 En esta sección se analiza la confiabilidad de los elementos de \textit{hardware} y \textit{software}, exponiendo en cada caso los criterios utilizados. A su vez se separa la parte de \textit{hardware} observando cada parte de manera individual para luego obtener un resultado en conjunto.
 
 \Subsection{Hardware}	
-El estudio se lleva a cabo según la norma MIL-HDBK-217F, la cual estima la cantidad de fallas en unidad de tiempo para diferentes tipos de componentes electrónicos. Este estándar tiene en cuenta factores como las condiciones de uso, temperatura y trayectoria del fabricante.
+El estudio se lleva a cabo según la norma MIL-HDBK-217F, la cual estima la cantidad de fallas en unidad de tiempo para diferentes tipos de componentes electrónicos. Este estándar tiene en cuenta factores como las condiciones de uso, temperatura.
 
 El primer paso consiste en realizar un gráfico de todos los módulos considerados críticos que garantizan las funcionalidades fundamentales del producto. Esto se presenta en la Figura (\ref{fig:criticos}).
 \begin{figure}[H]
@@ -14,8 +14,7 @@ El primer paso consiste en realizar un gráfico de todos los módulos considerad
 	\label{fig:criticos}
 \end{figure}
 Se calcula una estimación de la confiabilidad de cada módulo utilizando una estrategia \quotes{Top-Down}. Se encuentra la tasa de falla de cada submódulo mediante un proceso multiplicativo a la tasa de fallos base provista por las distintas cargas a las que son sometidos los componentes.
-No se cuenta con redundancias, por lo que el valor de confiabilidad del módulo estará dado por la confiabilidad en serie de cada uno de sus componentes.
-
+No se cuenta con redundancias, por lo que el valor de confiabilidad del módulo estará dado por la confiabilidad en serie de cada uno de sus componentes.Para todos los cálculos se considera una temperatura de 16$^{\circ}$C, la cual es la temperatura media de la zona d estudio en el periodo del mismo.
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|}
