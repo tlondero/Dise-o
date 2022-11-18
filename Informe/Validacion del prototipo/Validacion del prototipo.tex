@@ -1,7 +1,93 @@
 %\input{../Informe/Header.tex}
-%
+%%
 %\begin{document}
+\Subsection{Validación pruebas funcionales.}
+Las siguientes validaciones están relacionadas con el manejo apropiado del tiempo, en particular la siguiente corresponde a \textit{T-INT-FUN-08}
+\begin{figure}[H]
+\centering
+        	\includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/TINTFUN8}
+	\caption{Validación de funcionalidad \textit{T-INT-FUN-08}.}
+\end{figure}
+Se observa que ambos tiempos coinciden por lo que se considera exitosa la prueba.
 
+La siguiente prueba corresponde a \textit{T-INT-FUN-09}. Prueba en la que se desenergiza la \rspi, y luego de esperar el tiempo apropiado se energiza nuevamente y se corrobora que la hora correspondiente al módulo RTC sea correcto.
+\begin{figure}[H]
+\centering
+        	\includegraphics[width=1\linewidth]{ImagenesValidacion del prototipo/TINTFUN9}
+	\caption{Validación de funcionalidad \textit{T-INT-FUN-09}.}
+\end{figure}
+Se observa que el resultado es el esperado.
+
+En esta prueba se valida \textit{T-INT-FUN-11}.
+\begin{figure}[H]
+\centering
+    	\begin{subfigure}{0.49\textwidth}
+        	\centering
+        	\includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/T-INT-FUN11a}		
+			\caption{Beacon fuera del nido.}
+        \end{subfigure}\hfill
+        \begin{subfigure}{0.49\textwidth}
+        	\centering
+        	\includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/T-INT-FUN11b}
+        	\caption{Beacon en el nido.}
+        \end{subfigure}
+	\caption{Validación de comunicación \textit{T-INT-FUN-11}.}
+\end{figure}
+
+Disponiendo del banco de pruebas \#3, se corroboró mediante observación los tests de funcionalidad \textit{T-INT-FUN-04} y \textit{T-INT-FUN-12}. Se garantizó que la imagen mostrada al usuario sea la adecuada y que se vea de manera fidedigna, es decir que la transmisión sea de calidad y fluida.
+
+\begin{figure}[H]
+\centering
+    	\begin{subfigure}{0.49\textwidth}
+        	\centering
+        	\includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/t-int-fun-04-12-1}		
+			\caption{Vista de la transmisión en vivo del nido.}
+        \end{subfigure}\hfill
+        \begin{subfigure}{0.49\textwidth}
+        	\centering
+        	\includegraphics[width=0.5\linewidth]{ImagenesValidacion del prototipo/t-int-fun-04-12-2}
+        	\caption{Imagen del exterior del nido en el momento de la trasmisión.}
+        \end{subfigure}
+	\caption{Validación de funcionalidad \textit{T-INT-FUN-04} y \textit{T-INT-FUN-12}.}
+\end{figure}
+\Subsection{Validación Pruebas de Comunicación 1}
+
+\Subsection{Validación Pruebas de Comunicación 2}
+En esta sección se realizan las pruebas de comunicación con la computadora de un tercero (Biólogo en campo).
+La primer prueba corresponde a \textit{T-INT-COM02-1} la cual corresponde a la capacidad de acceder a  los datos del ave guardados en el nido.
+\begin{figure}[H]
+\centering
+    	\begin{subfigure}{0.49\textwidth}
+        	\centering
+        	\includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/TINTCOM21a}		
+			\caption{Pestaña de descargas.}
+        \end{subfigure}\hfill
+        \begin{subfigure}{0.49\textwidth}
+        	\centering
+        	\includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/TINTCOM21b}
+        	\caption{Botón de descarga.}
+        \end{subfigure}
+	\caption{Validación de comunicación \textit{T-INT-COM02-1}.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+        	\includegraphics[width=1\linewidth]{ImagenesValidacion del prototipo/TINTCOM21}
+	\caption{Validación de comunicación \textit{T-INT-COM02-1}.}
+\end{figure}
+Se observa que los datos descargados que se ven en la izquierda se corresponden con los datos que se encuentran en el nido como se ve a la derecha. Por lo que no hubo una pérdida de datos.
+Adicionalmente se utilizó una función de \textit{hash} para comparar los contenidos de ambos archivos y fehacientemente comprobar que son el mismo archivo. 
+
+Se procede a realizar la validación correspondiente a \textit{T-INT-COM02-3}. En esta prueba se de verificar la existencia del archivo \textit{BirdData} luego descargarlo y al acceder nuevamente a la \rspi comprobar que el archivo \textit{BirdData} fue borrado exitosamente.
+\begin{figure}[H]
+\centering
+        	\includegraphics[width=1\linewidth]{ImagenesValidacion del prototipo/TINTCOM23}
+	\caption{Validación de comunicación \textit{T-INT-COM02-3}.}
+\end{figure}
+
+
+
+\Subsection{Validación pruebas de seguridad}
 Se dispuso del banco de pruebas \#1 para analizar la aplicabilidad de \textit{T-RAM-SEG-01}. El acceso tanto a la interfaz gráfica del usuario como la del administrador se encuentran restringidas para cualquiera que no posea las credenciales adecuadas.
 
 \begin{figure}[H]
@@ -21,20 +107,8 @@ Se dispuso del banco de pruebas \#1 para analizar la aplicabilidad de \textit{T-
 
 Se obtuvo un resultado mejor del esperado ya que el hecho de emplear una red \wifi para conectar la unidad del nido con el usuario también requiere del uso de una contraseña. Esto agrega una capa de seguridad extra al sistema.
 
-De forma análoga, disponiendo del banco de pruebas \#3, se corroboró mediante observación los tests de funcionalidad \textit{T-INT-FUN-04} y \textit{T-INT-FUN-12}. Se garantizó que la imagen mostrada al usuario sea la adecuada y que se vea de manera fidedigna, es decir que la transmisión sea de calidad y fluida.
 
-\begin{figure}[H]
-\centering
-    	\begin{subfigure}{0.49\textwidth}
-        	\centering
-        	\includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/t-int-fun-04-12-1}		
-			\caption{Vista de la transmisión en vivo del nido.}
-        \end{subfigure}\hfill
-        \begin{subfigure}{0.49\textwidth}
-        	\centering
-        	\includegraphics[width=0.5\linewidth]{ImagenesValidacion del prototipo/t-int-fun-04-12-2}
-        	\caption{Imagen del exterior del nido en el momento de la trasmisión.}
-        \end{subfigure}
-	\caption{Validación de funcionalidad \textit{T-INT-FUN-04} y \textit{T-INT-FUN-12}.}
-\end{figure}
 %\end{document}
+
+
+
