@@ -1,32 +1,43 @@
-%\input{../Informe/Header.tex}
-%%
-%\begin{document}
-\Subsection{Validación pruebas funcionales.}
+Para la validación del prototipo se emplean los mismos bancos de prueba mencionados en la Sección (\ref{sec:PlanValidacion}), ya que no existe una diferencia sustancial que implique la necesidad de alterar dichos ensayos.
 
-Para la validación del prototipo se emplean los mismos bancos de prueba mencionados en la Sección (\ref{sec:PlanValidacion}), ya que no existe una diferencia sustancial que implique la necesidad de alterar dichos ensayos. Las siguientes validaciones están relacionadas con el manejo apropiado del tiempo, en particular la siguiente corresponde a \textit{T-INT-FUN-08}.
+\Subsection{Validación pruebas funcionales}
+
+Las siguientes validaciones están relacionadas con el manejo apropiado del tiempo, en particular la siguiente corresponde a \textit{T-INT-FUN-08}.
 \begin{figure}[H]
 	\centering
-    \includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/TINTFUN8}
+    \includegraphics[width=0.8\linewidth]{ImagenesValidacion del prototipo/TINTFUN8}
 	\caption{Validación de funcionalidad \textit{T-INT-FUN-08}.}
 \end{figure}
 
-Se observa que ambos tiempos coinciden por lo que se considera exitosa la prueba.
-
-La siguiente prueba corresponde a \textit{T-INT-FUN-09}. En esta se desenergiza la \rspi, y luego de esperar el tiempo apropiado se la energiza nuevamente, corroborando que la hora correspondiente al módulo RTC sea correcta.
+Se observa que ambos tiempos coinciden, por lo que se considera que la prueba concluyó de manera exitosa. De manera similar se dio con la prueba \textit{T-INT-FUN-6}, donde se varió la posición del módulo BLE, observando los cambios de su presencia.
 \begin{figure}[H]
-\centering
-	\includegraphics[width=1\linewidth]{ImagenesValidacion del prototipo/TINTFUN9}
-	\caption{Validación de funcionalidad \textit{T-INT-FUN-09}.}
+	\centering
+		\begin{subfigure}{0.49\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/T-INT-FUN-6-1}		
+			\caption{\quotes{El pájaro está en el nido}.}
+		\end{subfigure}\hfill
+		\begin{subfigure}{0.49\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/T-INT-FUN-6-2}
+			\caption{\quotes{El pájaro no está en casa}.}
+		\end{subfigure}
+	\caption{Validación de funcionalidad \textit{T-INT-FUN-6}.}
 \end{figure}
 
-El desarrollo de las pruebas de \textit{T-INT-COM2-2} se efectuó sin mayores inconvenientes, logrando la conexión a la distancia necesaria. De manera similar se dio con la prueba \textit{T-INT-FUN-6}, donde se varió la posición del módulo BLE, observando los cambios de su presencia.
+La siguiente prueba corresponde a \textit{T-INT-FUN-09}. En esta se desenergiza la \rspi, y luego de esperar el tiempo apropiado, se la energiza nuevamente corroborando que la hora correspondiente al módulo RTC sea correcta.
+\begin{figure}[H]
+\centering
+	\includegraphics[width=0.8\linewidth]{ImagenesValidacion del prototipo/TINTFUN9}
+	\caption{Validación de funcionalidad \textit{T-INT-FUN-09}.}
+\end{figure}
 
 Luego, se continuó con la prueba que valida la especificación \textit{T-INT-FUN-11}.
 \begin{figure}[H]
 \centering
 	\begin{subfigure}{0.49\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/T-INT-FUN11a}		
+		\includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/T-INT-FUN11a}	
 		\caption{Beacon fuera del nido.}
 	\end{subfigure}\hfill
 	\begin{subfigure}{0.49\textwidth}
@@ -35,6 +46,22 @@ Luego, se continuó con la prueba que valida la especificación \textit{T-INT-FU
 		\caption{Beacon en el nido.}
 	\end{subfigure}
 	\caption{Validación de comunicación \textit{T-INT-FUN-11}.}
+\end{figure}
+
+El test \textit{T-INT-FUN-05} se concluyó de manera satisfactoria. Resultados similares a los obtenidos se encuentran presentes en la Figura (\ref{fig:foto_camara_filtro}), donde se comparan fotos similares con y sin filtro.
+\begin{figure}[H]
+\centering
+    	\begin{subfigure}{0.49\textwidth}
+        	\centering
+        	\includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/t-int-fun-04-12-1}		
+			\caption{Vista de la transmisión en vivo del nido.}
+        \end{subfigure}\hfill
+        \begin{subfigure}{0.49\textwidth}
+        	\centering
+        	\includegraphics[width=0.5\linewidth]{ImagenesValidacion del prototipo/t-int-fun-04-12-2}
+        	\caption{Imagen del exterior del nido en el momento de la trasmisión.}
+        \end{subfigure}
+	\caption{Validación de funcionalidad \textit{T-INT-FUN-04} y \textit{T-INT-FUN-12}.}
 \end{figure}
 
 Disponiendo del banco de pruebas \#3, se corroboró mediante observación los tests de funcionalidad \textit{T-INT-FUN-04} y \textit{T-INT-FUN-12}. Se garantizó que la imagen mostrada al usuario sea la adecuada y que se vea de manera fidedigna, es decir que la transmisión sea de calidad y fluida.
@@ -53,25 +80,12 @@ Disponiendo del banco de pruebas \#3, se corroboró mediante observación los te
 	\caption{Validación de funcionalidad \textit{T-INT-FUN-04} y \textit{T-INT-FUN-12}.}
 \end{figure}
 
-\begin{figure}[H]
-	\centering
-		\begin{subfigure}{0.49\textwidth}
-			\centering
-			\includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/T-INT-FUN-6-1}		
-			\caption{\quotes{El pájaro está en el nido}.}
-		\end{subfigure}\hfill
-		\begin{subfigure}{0.49\textwidth}
-			\centering
-			\includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/T-INT-FUN-6-2}
-			\caption{\quotes{El pájaro no está en casa}.}
-		\end{subfigure}
-	\caption{Validación de funcionalidad \textit{T-INT-FUN-6}.}
-\end{figure}
-
 \Subsection{Validación Pruebas de Comunicación 1}
 
+%El desarrollo de las pruebas de \textit{T-INT-COM2-2} se efectuó sin mayores inconvenientes, logrando la conexión a la distancia necesaria.
+
 \Subsection{Validación Pruebas de Comunicación 2}
-para las pruebas de Comunicación 2 se requiere la computadora de un tercero (viólogo en campo). La primer prueba corresponde a \textit{T-INT-COM02-1} la cual consta en analziar a la capacidad de acceder a los datos del ave guardados en el nido.
+Para las pruebas de Comunicación 2 se requiere la computadora de un tercero (viólogo en campo). La primer prueba corresponde a \textit{T-INT-COM02-1} la cual consta en analziar a la capacidad de acceder a los datos del ave guardados en el nido.
 \begin{figure}[H]
 \centering
 	\begin{subfigure}{0.49\textwidth}
@@ -84,12 +98,16 @@ para las pruebas de Comunicación 2 se requiere la computadora de un tercero (vi
 		\includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/TINTCOM21b}
 		\caption{Botón de descarga.}
 	\end{subfigure}
-	\caption{Validación de comunicación \textit{T-INT-COM02-1}.}
+	\caption*{}
 \end{figure}
-
 \begin{figure}[H]
+	\ContinuedFloat
 	\centering
-	\includegraphics[width=1\linewidth]{ImagenesValidacion del prototipo/TINTCOM21}
+	\begin{subfigure}{\textwidth}
+		\centering
+		\includegraphics[width=0.8\linewidth]{ImagenesValidacion del prototipo/TINTCOM21}
+		\caption{Consola y csv descargado.}
+	\end{subfigure}
 	\caption{Validación de comunicación \textit{T-INT-COM02-1}.}
 \end{figure}
 
@@ -122,22 +140,3 @@ Se dispuso del banco de pruebas \#1 para analizar la aplicabilidad de \textit{T-
 \end{figure}
 
 Se obtuvo un resultado mejor del esperado ya que el hecho de emplear una red WiFi para conectar la unidad del nido con el usuario también requiere del uso de una contraseña. Esto agrega una capa de seguridad extra al sistema.
-
-El test \textit{T-INT-FUN-05} se concluyó de manera satisfactoria. Resultados similares a los obtenidos se encuentran presentes en la Figura (\ref{fig:foto_camara_filtro}), donde se comparan fotos similares con y sin filtro.
-
-\begin{figure}[H]
-\centering
-    	\begin{subfigure}{0.49\textwidth}
-        	\centering
-        	\includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/t-int-fun-04-12-1}		
-			\caption{Vista de la transmisión en vivo del nido.}
-        \end{subfigure}\hfill
-        \begin{subfigure}{0.49\textwidth}
-        	\centering
-        	\includegraphics[width=0.5\linewidth]{ImagenesValidacion del prototipo/t-int-fun-04-12-2}
-        	\caption{Imagen del exterior del nido en el momento de la trasmisión.}
-        \end{subfigure}
-	\caption{Validación de funcionalidad \textit{T-INT-FUN-04} y \textit{T-INT-FUN-12}.}
-\end{figure}
-
-%\end{document}
