@@ -14,7 +14,7 @@ El primer paso consiste en realizar un gráfico de todos los módulos considerad
 	\label{fig:criticos}
 \end{figure}
 Se calcula una estimación de la confiabilidad de cada módulo utilizando una estrategia \quotes{Top-Down}. Se encuentra la tasa de falla de cada submódulo mediante un proceso multiplicativo a la tasa de fallos base provista por las distintas cargas a las que son sometidos los componentes.
-No se cuenta con redundancias, por lo que el valor de confiabilidad del módulo estará dado por la confiabilidad en serie de cada uno de sus componentes.Para todos los cálculos se considera una temperatura de 16$^{\circ}$C, la cual es la temperatura media de la zona d estudio en el periodo del mismo.
+No se cuenta con redundancias, por lo que el valor de confiabilidad del módulo estará dado por la confiabilidad en serie de cada uno de sus componentes. Para todos los cálculos se considera una temperatura de 16$^{\circ}$C, la cual es la temperatura media de la zona d estudio en el periodo del mismo.
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|}
@@ -189,7 +189,7 @@ Con esto definido se obtiene el tiempo medio a la falla para todo el sistema:
 \begin{equation}
 MTTF \ = \ \int_0^\infty \ R(t)\ dt \ \approx \ 53142.19 \ \text{horas} \ \approx \ 6.066 \ \text{años}
 \end{equation}
-Ademas, se calcula valores para R(T) con un paso de 3 meses (Duración base del proyecto) hasta 3 años.
+Además, se calcula valores para R(T) con un paso de 3 meses (Duración base del proyecto) hasta 3 años.
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|c|c|c|c|}
@@ -199,7 +199,7 @@ Ademas, se calcula valores para R(T) con un paso de 3 meses (Duración base del 
 \textbf{Tiempo} & \textbf{\begin{tabular}[c]{@{}c@{}}1 Año y \\ 9 Meses\end{tabular}} & \textbf{2 Años}  & \textbf{\begin{tabular}[c]{@{}c@{}}2 Años y\\ 3 Meses\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}2 Años y\\ 6 Meses\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}2 Años y \\ 9 Meses\end{tabular}} & \textbf{3 Años}                                                    \\ \hline
 \textbf{$R(t)$} & 0.752                                                               & 0.722            & 0.70 & 0.677                                                               & 0.647                                                                & 0.622                                                            \\ \hline
 \end{tabular}
-\caption{Probabilidad de confiabilidad cada períodos de 3 meses.}
+\caption{Probabilidad de confiabilidad con períodos de 3 meses.}
 \label{probConf}
 \end{table}
 
@@ -230,11 +230,11 @@ Además, se define $\epsilon_T$ como la tasa de errores totales, $\epsilon(\zeta
 7                & 105                        & 96                            & 9                             & 1176             & 0.01361                  & 0.91429                                        & 170.66667                      & 0.42079                 \\ \hline
 8                & 115                        & 105                           & 10                            & 1344             & 0.00744                  & 0.54688                                        & 10.86207                       & 43.15476                \\ \hline
 \end{tabular}
-\caption{Fallas durante el periodo de \textit{testing} del \textit{software}.}
+\caption{Fallas durante el periodo de test del \textit{software}.}
 \label{tab:confsoft}
 \end{table}
 
-La Tabla (\ref{tab:confsoft}) presenta la cantidad acumulada de errores $E_t$, la cantidad acumulada de corregidos $E_c$, la cantidad acumulada resultante de los residuales $E_r$, las horas de \textit{testing} acumuladas \textbf{H [hrs]}, la tasa de fallos $\lambda$ y los parámetros invariables del modelo $\hat{E}_{tot}$ y $\hat{k}$ a lo largo del periodo de \textit{testing}. Estos son calculados mediante la formula:
+La Tabla (\ref{tab:confsoft}) presenta la cantidad acumulada de errores $E_t$, la cantidad acumulada de corregidos $E_c$, la cantidad acumulada resultante de los residuales $E_r$, las horas de test acumuladas \textbf{H [hrs]}, la tasa de fallos $\lambda$ y los parámetros invariables del modelo $\hat{E}_{tot}$ y $\hat{k}$ a lo largo del periodo de test. Estos son calculados mediante la formula:
 \begin{equation}
 	\hat{E}_{tot} = \frac{ \frac{\lambda_i}{\lambda_{i-1}} E_c(\tau_{i-1})-E_c(\tau_i)}{\frac{\lambda_i}{\lambda_{i-1}}-1}
 \end{equation}
@@ -247,6 +247,6 @@ Finalmente, se adoptan los valores $\hat{E}_{tot} = 1$, $I_T = 5000$  y $\hat{k}
 \begin{equation}
 	\lambda = k\frac{E_r}{I_T}
 \end{equation}
-se obtiene $\lambda = 0.00863$ que, tomando el inverso de este valor se obtiene el $TMEF$, que resulta ser de $ 116 \ hs$.
+se obtiene $\lambda = 0.00863$ que, tomando el inverso de este valor se obtiene el $TMEF$, que resulta ser de $116 \ hs$.
 
 %\end{document}

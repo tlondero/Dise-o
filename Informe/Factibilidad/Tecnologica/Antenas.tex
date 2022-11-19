@@ -90,7 +90,7 @@ Para el caso de la pérdida por espacio libre, esta se puede calcular como
 \begin{equation}
 L_{bf} = 32.5dB + 20log_{10}f[MHz]+20log_{10}R[km]
 \end{equation}
-mientras que el resto de los datos se puede obtener por medio de las hojas de datos o ensayos de las antenas, exceptuando la potencia a ser calculada y las pérdidas por desacople, las cuales dependen constructivamente del diseño de la líneas de transmisión que conectan con las antenas.
+mientras que el resto de los datos se puede obtener por medio de las hojas de datos o ensayos de las antenas, exceptuando la potencia a ser calculada y las pérdidas por desacople, las cuales dependen constructivamente del diseño de las líneas de transmisión que conectan con las antenas.
 
 \Subsubsubsection{Banda de Frecuencia Adoptada}
 
@@ -113,7 +113,7 @@ Para realizar las comparaciones entre antenas transmisoras, se tuvieron en cuent
 \item \textbf{Potencia Máxima:} Como las pérdidas en el circuito electromagnético son grandes, una muy baja parte de la potencia enviada a la antena transmisora formará parte de la potencia entregada a las baterías de la mochila, por lo que, para recibir la potencia necesaria, se debe transmitir en el orden de los watts. Es por esto que la potencia máxima es una especificación relevante al momento de decidir entre soluciones.
 \end{itemize}
 
-Mientras que para el caso de las antenas receptoras, se tuvieron en cuenta los siguientes criterios:
+Mientras que, para el caso de las antenas receptoras, se tuvieron en cuenta los siguientes criterios:
 \begin{itemize}
 \item \textbf{Eficiencia:} Esta será la especificación más importante y es la que determinará la factibilidad de la solución. Se buscará la mayor eficiencia posible para lograr transmitir a las baterías la potencia recibida por el campo electromagnético.
 \item \textbf{Lóbulo isotrópico:} Como se desconoce cuál será la posición del ave dentro del nido, se requiere que el lóbulo de radiación de la antena receptora sea lo más isotrópico posible, garantizando una recepción de potencia uniforme sin importar la posición del ave. Se buscará una ganancia menor a $2 \ dBi$.
@@ -206,7 +206,7 @@ Para el amplificador de potencia se tuvieron en cuenta distintos módulos armado
 
 Se investigaron diversos métodos de transmisión de energía inalámbrica a través de campos electromagnéticos. Dentro de estos se en cuenta el campo cercano y el de radiofrecuencia. El primero se caracteriza por ser puramente imaginario y por poseer una caída proporcional al cuadrado de la distancia, mientras que el segundo (radiación) cae linealmente.
 
-Debido a que la aplicación es de una distancia que cae en el rango del campo lejano, se optó por la radiofrecuencia. Es así que surgieron los integrados IC-P2110 y IC-P1110 de PowerCast, los cuales permiten la recolección de energía de radio frecuencia almacenando está en capacitores o con la opción de directamente cargar una batería (P1110). Se analiza a modo comparativo ambos IC en la Tabla (\ref{tab:cagadores_comp}).
+Debido a que la aplicación es de una distancia que cae en el rango del campo lejano, se optó por la radiofrecuencia. Es así como surgieron los integrados IC-P2110 y IC-P1110 de PowerCast, los cuales permiten la recolección de energía de radio frecuencia almacenando está en capacitores o con la opción de directamente cargar una batería (P1110). Se analiza a modo comparativo ambos IC en la Tabla (\ref{tab:cagadores_comp}).
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|}

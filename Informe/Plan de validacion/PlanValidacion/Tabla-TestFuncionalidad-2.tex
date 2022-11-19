@@ -1,7 +1,7 @@
 \begin{table}[H]
 \begin{tabular}{|l|l|l|}
 \hline
-\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}T-INT-FUN-07\\ Prototipo, Final\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Se utiliza el banco de pruebas \#1:\\ \tabitem Utilizar la computadora para conectarse\\ a la red WiFi \quotes{SIMFS\_HOTSPOT}.\\ \tabitem Desde la terminal de la computadora se\\ insertar las siguientes lineas:\end{tabular}                         & \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}La diferencia horaria entre las \\ mediciones debe corresponer con\\ lo especificado en la pestaña de \\ \quotes{Configuración}.\end{tabular}}                              \\
+\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}T-INT-FUN-07\\ Prototipo, Final\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Se utiliza el banco de pruebas \#1:\\ \tabitem Utilizar la computadora para conectarse\\ a la red WiFi \quotes{SIMFS\_HOTSPOT}.\\ \tabitem Desde la terminal de la computadora se\\ insertar las siguientes lineas:\end{tabular}                         & \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}La diferencia horaria entre las \\ mediciones debe corresponder con\\ lo especificado en la pestaña de \\ \quotes{Configuración}.\end{tabular}}                              \\
 \multicolumn{1}{|l|}{}                                                                                         & 
 \begin{lstlisting}[language=Python]
 ssh pi@[IP Raspberry Pi]
@@ -9,7 +9,7 @@ cd simfs/Python_Scripts/Clases
 python3 print_measures.py
 \end{lstlisting}
 &                                                                                                                                                                                                                       \multicolumn{1}{|l|}{} \\ \hline
-\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}T-INT-FUN-08\\ Prototipo, Final\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Se utiliza el banco de pruebas \#1:\\ \tabitem Utilizar la computadora para conectarse para \\ conectarse a la red WiFi \quotes{SIMFS\_HOTSPOT}.\\ \tabitem Desde la terminal de la computadora se deben\\  insertar las siguientes lineas:\end{tabular} & \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}La hora impresa en la terminal \\ coincida con la hora correspondie-\\ nte al lugar de instalación del pro-\\ ducto.\end{tabular}}                                          \\
+\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}T-INT-FUN-08\\ Prototipo, Final\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Se utiliza el banco de pruebas \#1:\\ \tabitem Utilizar la computadora para conectarse para \\ conectarse a la red WiFi \quotes{SIMFS\_HOTSPOT}.\\ \tabitem Desde la terminal de la computadora se deben\\  insertar las siguientes líneas:\end{tabular} & \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}La hora impresa en la terminal\\ coincida con la hora\\ correspondiente al lugar de\\ instalación del producto.\end{tabular}}                                          \\
 \multicolumn{1}{|l|}{}                                                                                         & 
 \begin{lstlisting}[language=Python]
 ssh pi@[IP Raspberry Pi]
@@ -17,7 +17,7 @@ cd simfs/Python_Scripts
 python3 getTime.py
 \end{lstlisting}
 &                                                                                                                                                                                                                       \multicolumn{1}{|l|}{} \\ \hline
-\multirow{6}{*}{\begin{tabular}[c]{@{}l@{}}T-INT-FUN-09\\ Prototipo, Final\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Se utiliza el banco de pruebas \#1:\\ \tabitem Se debe utilizar la computadora para\\ conectarse a la red WiFi.\\ \quotes{SIMFS\_HOTSPOT}.\\ \tabitem Desde la terminal de la computadora se\\ deben insertar las siguientes lineas:\end{tabular}        & \multirow{6}{*}{\begin{tabular}[c]{@{}l@{}}La hora impresa en la terminal \\ coincida con la hora correspondie-\\ nte al lugar de instalación del pro-\\ ducto incluso luego de la pérdida\\ de energía.\end{tabular}} \\
+\multirow{6}{*}{\begin{tabular}[c]{@{}l@{}}T-INT-FUN-09\\ Prototipo, Final\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Se utiliza el banco de pruebas \#1:\\ \tabitem Se debe utilizar la computadora para\\ conectarse a la red WiFi.\\ \quotes{SIMFS\_HOTSPOT}.\\ \tabitem Desde la terminal de la computadora se\\ deben insertar las siguientes líneas:\end{tabular}        & \multirow{6}{*}{\begin{tabular}[c]{@{}l@{}}La hora impresa en la terminal \\ coincida con la hora\\ correspondiente al lugar de\\ instalación del producto\\ incluso luego de la pérdida\\ de energía.\end{tabular}} \\
 \multicolumn{1}{|l|}{}                                                                                         & \begin{lstlisting}[language=Python]
 ssh pi@[IP Raspberry Pi]
 cd simfs/Python_Scripts/

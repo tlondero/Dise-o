@@ -1,7 +1,7 @@
 El plan de pruebas corresponde a las descritas en [\ref{sec:BancoDePruebas}].
 Para el uso correcto de los módulos se tuvieron en cuenta los siguientes aspectos:
 \begin{itemize}
-	\item Definir un estado predeterminado del Bus $I^2C$ mediante \textit{pullups}.
+	\item Definir un estado predeterminado del Bus $I^2C$ mediante \textit{pull-ups}.
 	\item El uso de capacitores de desacople
 	\item Para el módulo RTC, el integrado DS1307 requiere $5 \ V$ para funcionar correctamente, por lo que para que sea compatible con la lógica de $3.3 \ V$ de la \rspi, se realiza un cambio en el esquemático al remover dos resistores del módulo.
 \end{itemize}

@@ -3,7 +3,7 @@
 %%%%%%TEMPERTURA%%%%%%
 Para el sensor de temperatura la primera opción a descartar es aquella que no cumple con el rango de temperaturas a medir, por lo que el DS18B20 queda descartado a pesar de su bajo costo. Luego, de las opciones que quedan, todas son de un costo similar. Sin embargo, hay que tener en cuenta que para la termocupla se debe proporcionar una manera de medir la temperatura de referencia, la cual puede ser tanto una RTD como un IC, aumentando el costo de la termocupla. Tanto la TC como la RTD necesitan un circuito convertidor para poder medir directamente el valor de la temperatura con un micro controlador, mientras que los IC ofrecen directamente una salida digital.% La mejor precisión de la medición se da con una RTD, seguido por los IC y finalmente la TC.
 
-Otra desventaja de la TC es que tiende a envejecer rápidamente. Si bien el dispositivo no se usará más de tres meses seguidos, este podrá ser reutilizado, dándole mayor peso al factor del envejecimiento. El autocalentamiento también es contra productivo en la medición de temperatura debido a que puede alterar la misma si no es tenido en cuenta. Las TC no cuentan con este inconveniente debido a su principio de funcionamiento, mientras las otras opciones si lo tienen. Con la RTD este efecto depende directamente de la corriente que se suministra para la medición, y con los IC esto es un aspecto que es considerado por los diseñadores de los mismos.
+Otra desventaja de la TC es que tiende a envejecer rápidamente. Si bien el dispositivo no se usará más de tres meses seguidos, este podrá ser reutilizado, dándole mayor peso al factor del envejecimiento. El autocalentamiento también es contra productivo en la medición de temperatura debido a que puede alterar la misma si no es tenido en cuenta. Las TC no cuentan con este inconveniente debido a su principio de funcionamiento, mientras las otras opciones si lo tienen. Con la RTD este efecto depende directamente de la corriente que se suministra para la medición, y con los IC esto es un aspecto que es considerado por los diseñadores de estos.
 
 Por estas razones los candidatos terminan siendo la DHT-22 y la PT-100. Un punto favorable para la DHT-22 es que no necesita un circuito extra. Adicionalmente, esta unidad cuenta con una medición de humedad, lo que brinda la posibilidad de usarlo también para dicha variable o como un complemento de otro sensor.
 
@@ -24,18 +24,13 @@ Luego para el módulo RTC se tomó uno que tenga I2C, y que cuyo rango de alimen
 
 Para la detección de presencia se descarta el uso de la \rpi 3B y el módulo NRF24L01 por no ser compatible con \textit{Bluetooth} 5.0. Se decide utilizar el ESP32-S3-WROOM-1 por el menor costo y mayor sensibilidad de recepción de la antena.
 
-%%%%%%IAMGENES%%%%%%
 Finalmente, para la cámara que obtendrá las imágenes, se tuvo en cuenta fundamentalmente la relación precio-resolución de la cámara, al igual que la integración con Linux y el factor de contar con una API para el lenguaje C. Por lo que la R-Pi-CMOD-V2 fue la cámara seleccionada.
-
-
-
-
 
 \Subsubsubsection{Almacenamiento}
 
 El factor principal para seleccionar la memoria SD a utilizar es el rango de temperaturas de operación. Es por este factor que se elige la SDSDQAF3-XI, ya que esta se encuentra en un rango seguro (mayor a las demás).
 
-Se recolectará un volumen de datos del que no se tiene una gran certeza, ya que una parte será lo que provenga de la mochila. Se estima en función de los datos del nido y del periodo de activación de los sensores, que una memoria de 16 GBy es suficiente incluso si aumenta el volumen de datos.
+Se recolectará un volumen de datos del que no se tiene una gran certeza, ya que una parte será lo que provenga de la mochila. Se estima en función de los datos del nido y del periodo de activación de los sensores, que una memoria de $16 \ GBy$ es suficiente incluso si aumenta el volumen de datos.
 
 \Subsubsubsection{Unidades de procesamiento}
 
