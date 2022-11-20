@@ -80,10 +80,8 @@ Disponiendo del banco de pruebas \#3, se corroboró mediante observación los te
 
 \Subsection{Validación Pruebas de Comunicación 1}
 
-%El desarrollo de las pruebas de \textit{T-INT-COM2-2} se efectuó sin mayores inconvenientes, logrando la conexión a la distancia necesaria.
-
 \Subsection{Validación Pruebas de Comunicación 2}
-Para las pruebas de Comunicación 2 se requiere la computadora de un tercero (biólogo en campo). La primera prueba corresponde a \textit{T-INT-COM02-1} la cual consta en analizar a la capacidad de acceder a los datos del ave guardados en el nido.
+Para las pruebas de Comunicación 2 se requiere la computadora de un tercero (biólogo en campo). La primera prueba corresponde a \textit{T-INT-COM2-1} la cual consta en analizar a la capacidad de acceder a los datos del ave guardados en el nido.
 \begin{figure}[H]
 \centering
 	\begin{subfigure}{0.49\textwidth}
@@ -106,18 +104,20 @@ Para las pruebas de Comunicación 2 se requiere la computadora de un tercero (bi
 		\includegraphics[width=0.8\linewidth]{ImagenesValidacion del prototipo/TINTCOM21}
 		\caption{Consola y csv descargado.}
 	\end{subfigure}
-	\caption{Validación de comunicación \textit{T-INT-COM02-1}.}
+	\caption{Validación de comunicación \textit{T-INT-COM2-1}.}
 \end{figure}
 
 Se observa que los datos descargados que se ven en la izquierda se corresponden con los datos que se encuentran en el nido como se ve a la derecha. Por lo que no hubo una pérdida de datos.
 Adicionalmente se utilizó una función de \textit{hash} para comparar los contenidos de ambos archivos y fehacientemente comprobar que son el mismo archivo. 
 
-Se procede a realizar la validación correspondiente a \textit{T-INT-COM02-3}. En esta prueba se de verificar la existencia del archivo \textit{BirdData} luego descargarlo y al acceder nuevamente a la \rspi comprobar que el archivo \textit{BirdData} fue borrado exitosamente.
+Se procede a realizar la validación correspondiente a \textit{T-INT-COM2-3}. En esta prueba se de verificar la existencia del archivo \textit{BirdData} luego descargarlo y al acceder nuevamente a la \rspi comprobar que el archivo \textit{BirdData} fue borrado exitosamente.
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth]{ImagenesValidacion del prototipo/TINTCOM23}
-	\caption{Validación de comunicación \textit{T-INT-COM02-3}.}
+	\caption{Validación de comunicación \textit{T-INT-COM2-3}.}
 \end{figure}
+
+Finalmente, el desarrollo de las pruebas de \textit{T-INT-COM2-2} se efectuó sin mayores inconvenientes, logrando la conexión a la distancia necesaria.
 
 \Subsection{Validación pruebas de seguridad}
 
