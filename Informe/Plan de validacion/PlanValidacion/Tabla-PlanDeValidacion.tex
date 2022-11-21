@@ -1,14 +1,14 @@
 \begin{table}[H]
 \centering
-\begin{tabular}{|l|l|l|c|}
+\begin{tabular}{|c|l|c|c|}
 \hline
 \multicolumn{1}{|c|}{\textbf{ID del test}} &
   \multicolumn{1}{c|}{\textbf{Aspecto}} &
   \multicolumn{1}{c|}{\textbf{Dependencia}} &
   \textbf{\begin{tabular}[c]{@{}c@{}}Banco de\\ pruebas\end{tabular}} \\ \hline
-T-BASIC-01                    & Validación encendido \rpi.                                                                  &               & 1                  \\ \hline
+T-BASIC-01                    & Validación encendido \rpi.                                                                  & -             & 1                  \\ \hline
 T-BASIC-02                    & Validación placas manufacturadas.                                                           & T-BASIC-01    & 3                  \\ \hline
-T-BASIC-03                    & Validación panel solar en correcto estado.                                                  &               & 3                  \\ \hline
+T-BASIC-03                    & Validación panel solar en correcto estado.                                                  & -             & 3                  \\ \hline
 T-BASIC-04                    & \begin{tabular}[c]{@{}l@{}}Validación del regulador de carga en\\ correcto estado.\end{tabular} & T-BASIC-03    & 3                  \\ \hline
 T-INT-FUN-01                  & Adquisición de datos de temperatura.                                                        & T-INT-FUN-09  & 2                  \\ \hline
 T-INT-FUN-02                  & Adquisición de datos de humedad.                                                            & T-INT-FUN-09  & 2                  \\ \hline
@@ -36,7 +36,7 @@ T-INT-FUN-11                  & \begin{tabular}[c]{@{}l@{}}Recuperación ante p�
   T-INT-FUN-04 &
   \multirow{2}{*}{2} \\ \cline{3-3}
                               &                                                                                             & T-INT-FUN-05  &                    \\ \hline
-T-INT-COM1-01                 & Validación transmisión COM.1                                                                & T-BASIC-02    & 4                  \\ \hline
+T-INT-COM1-01                 & Validación transmisión COM1.                                                                & T-BASIC-02    & 4                  \\ \hline
 T-INT-COM1-02                 & Alcance transmisión COM1.                                                                   & T-INT-COM1-01 & 4                  \\ \hline
 T-INT-COM2-01                 & Validación descarga de datos COM2.                                                          & T-BASIC-02    & 1                  \\ \hline
 T-INT-COM2-02                 & Alcance transmisión COM2.                                                                   & T-INT-COM2-01 & 1                  \\ \hline
