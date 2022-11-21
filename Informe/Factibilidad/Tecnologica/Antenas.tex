@@ -327,7 +327,6 @@ Se tomaron estas antenas y se calculó para cada par Tx-Rx la potencia recibida 
 \end{figure}
 
 Se puede observar que, con $4 \ W$ en la antena transmisora, todas las combinaciones de antenas cumplen con la potencia necesaria para el mejor y peor caso. Tomando el mejor par Rx-Tx, y al tener en cuenta la eficiencia de aproximadamente $70\%$ del P1110, la potencia a la salida de este permanece por encima del peor caso hasta la máxima distancia de transmisión.
-
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{ImagenesFactibilidad/pot_baterias_teorica}
@@ -342,7 +341,6 @@ Sin embargo, si se toma en consideración la restricción más estricta de $4.5 
 \end{equation}
 
 se observa en la Figura (\ref{fig:densidadradiada}) que para una potencia de $1.6 \ W$ en la antena transmisora esta restricción se cumple a treinta centímetros de la distancia mínima de transmisión.
-
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{ImagenesFactibilidad/densidadradiada}
@@ -351,12 +349,29 @@ se observa en la Figura (\ref{fig:densidadradiada}) que para una potencia de $1.
 \end{figure}
 
 Teniendo esto en cuenta, y recalculando para $1.6 \ W$ se obtiene
-
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{ImagenesFactibilidad/recalculo}
 	\caption{Potencia a la salida del P1110 en función de la distancia entre antena Tx y antena Rx para $1.6 \ W$ en la antena transmisora.}
 	\label{fig:recalculo}
+\end{figure}
+
+Complementando lo analizado, se recopiló información sobre experimentos donde se evalúa las consecuencias de exponer distintos tipos de aves frente a ondas electromagnéticas.
+
+Esta radiación produce dos tipos de efectos sobre los tejidos biológicos, clasificándose en térmicos y no térmicos. Los primeros se manifiestan como un aumento de la temperatura del sistema que recibe la emisión. Dependiendo de la duración y la intensidad de la exposición, se pueden observar respuestas físicas o psicológicas.
+
+Por otro lado, los no térmicos se manifiestan como cambios en el metabolismo celular. Se observan cambios en los comportamientos de los individuos expuestos cuando se comprometen estructuras del sistema nervioso. La principal diferencia entre estos dos procesos se centra en el tiempo de exposición.
+
+Es de esta forma que se corroboró que gallinas expuestas a ondas en un rango de densidad de potencia de 200 a 500 $\nicefrac{W}{{m}^2}$ reaccionaron evitando o escapando de este campo al poco tiempo de exposición \cite{ref:non-termal}.
+
+Otro estudio realizado sobre las especies Cyanocitta Cristata y Haemorhous Mexicanus determina un nivel máximo de densidad de potencia aplicada sobre un ave, siendo este de $230 \ \nicefrac{W}{{m}^2}$. La primer especie tiene un tamaño que oscila entre los 22 y los 30 centímetros, y un peso entre 70 y 100 gramos. Para la segunda especie, su largo varía entre 12.5 y 15 centímetros, mientras que en cuanto a peso varía entre 16 y 27 gramos. Es importante remarcar el tamaño porque aves expuestas a la misma densidad mencionada pueden afrontar mayores riesgos si poseen tamaños superiores, siendo este el caso del Campephilus Magellanicus \cite{ref:thermo-birds}.
+
+Por lo presentado en la Tabla (\ref{tab:medidasNido}), la distancia que existe entre la bóveda y la entrada es de hasta $10 \ cm$, mientras que el largo de la entrada es de entre 11.4 y 20 $cm$. A esto se le suma el tamaño del ave, el cual es de hasta $47 \ cm$. Es por esto que, si bien las densidades de potencia mencionadas se alejan de la requerida al fondo del nido, son valores comparables a las que se encuentran en la parte superior del nido.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{ImagenesFactibilidad/Densidad-Boveda}
+	\caption{Densidad de potencia emitida en función de la distancia para $4.5 \ W$ en la antena transmisora.}
+	\label{fig:densidad-boveda}
 \end{figure}
 
 Por estas razones, se descarta la posibilidad de utilizar la carga inalámbrica para recargar la batería de la mochila del ave y se investigará una solución alternativa.
