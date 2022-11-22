@@ -2,30 +2,23 @@ Para la validación del prototipo se emplean los mismos bancos de prueba mencion
 
 \Subsection{Validación pruebas funcionales}
 
-Las validaciones a continuación están relacionadas a aspectos funcionales de los sensores.
-Comenzaremos con el periodo de muestreo de estos como indica \textit{T-INT-FUN-07}
+Las validaciones a continuación están relacionadas a aspectos funcionales de los sensores. Se comienza con el periodo de muestreo de estos como indica \textit{T-INT-FUN-07}. Se puede corroborar que las mediciones son cada 5 minutos.
 \begin{figure}[H]
 	\centering
     \includegraphics[width=1\linewidth]{ImagenesValidacion del prototipo/T-INT-FUN-07}
 	\caption{Validación de funcionalidad \textit{T-INT-FUN-07}.}
 \end{figure}
 
-Se puede corroborar que las mediciones son cada 5 minutos. Luego se realizan las pruebas acordes a \textit{T-INT-FUN-08}.
+Las siguientes validaciones están relacionadas con el manejo apropiado del tiempo. A continuación se presenta la que corresponde a \textit{T-INT-FUN-08}.
 \begin{figure}[H]
 	\centering
     \includegraphics[width=0.8\linewidth]{ImagenesValidacion del prototipo/TINTFUN8}
 	\caption{Validación de funcionalidad \textit{T-INT-FUN-08}.}
 \end{figure}
 
+Se observa que el tiempo obtenido en consola como el de la computadora, presentado en la parte inferior derecha de la imagen, coinciden. Es por esto que se considera que la prueba concluyó de manera exitosa.
 
-Las siguientes validaciones están relacionadas con el manejo apropiado del tiempo, en particular la siguiente corresponde a \textit{T-INT-FUN-08}.
-\begin{figure}[H]
-	\centering
-    \includegraphics[width=0.8\linewidth]{ImagenesValidacion del prototipo/TINTFUN8}
-	\caption{Validación de funcionalidad \textit{T-INT-FUN-08}.}
-\end{figure}
-
-Se observa que ambos tiempos coinciden, por lo que se considera que la prueba concluyó de manera exitosa. De manera similar se dio con la prueba \textit{T-INT-FUN-6}, donde se varió la posición del módulo BLE, observando los cambios de su presencia.
+Por otro lado, se realiza la prueba \textit{T-INT-FUN-6}, donde se varió la posición del módulo BLE, observando los cambios de su presencia.
 \begin{figure}[H]
 	\centering
 		\begin{subfigure}{0.49\textwidth}
@@ -53,6 +46,7 @@ Se observa que ambos tiempos coinciden, por lo que se considera que la prueba co
 		\caption{Beacon en el nido.}
 	\end{subfigure}
 \end{figure}
+
 La siguiente prueba corresponde a \textit{T-INT-FUN-09}. En esta se desenergiza la \rspi, y luego de esperar el tiempo apropiado, se la energiza nuevamente corroborando que la hora correspondiente al módulo RTC sea correcta.
 \begin{figure}[H]
 \centering
