@@ -1,41 +1,52 @@
 Para la validación del prototipo se emplean los mismos bancos de prueba mencionados en la Sección (\ref{sec:PlanValidacion}), ya que no existe una diferencia sustancial que implique la necesidad de alterar dichos ensayos.
 
 \Subsection{Validación pruebas funcionales}
-Las validaciones a continuación están relacionadas con aspectos funcionales de los sensores. Se comienza con el periodo de muestreo de estos como indica \textit{T-INT-FUN-07}. Se puede corroborar que las mediciones son cada 5 minutos.
+
+Se empieza por las pruebas de \textit{T-INT-FUN-01} y \textit{T-INT-FUN-02}. Amas pruebas se realizan a la par no solo porque comparten el mismo banco de pruebas, sino porque se emplea el mismo sensor calibrado para la corroboración. Este sensor es capaz de medir tanto temperatura como humedad.
 \begin{figure}[H]
 	\centering
-    \includegraphics[width=1\linewidth]{ImagenesValidacion del prototipo/T-INT-FUN-07}
-	\caption{Validación de funcionalidad \textit{T-INT-FUN-07}.}
+    \includegraphics[width=0.7\linewidth]{ImagenesValidacion del prototipo/pend}
+	\caption{Validación de funcionalidad \textit{T-INT-FUN-01} y \textit{T-INT-FUN-02}.}
 \end{figure}
 
-Para \textit{T-INT-FUN-08} se observa que el tiempo obtenido en consola como el de la computadora, presentado en la parte inferior derecha de la imagen, coinciden. Es por esto que se considera que la prueba concluyó de manera exitosa.
+
 \begin{figure}[H]
 	\centering
-    \includegraphics[width=0.8\linewidth]{ImagenesValidacion del prototipo/TINTFUN8}
-	\caption{Validación de funcionalidad \textit{T-INT-FUN-08}.}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-        \begin{subfigure}{0.33\textwidth}
-        	\centering
-        	\includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/TINTFUN3a}
-        	\caption{Apuntado por linterna.}
-        \end{subfigure}
-        \begin{subfigure}{0.33\textwidth}
-        	\centering
-        	\includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/TINTFUN3b}
-        	\caption{Apuntado por linterna.}
-        \end{subfigure}
-        \begin{subfigure}{0.33\textwidth}
-        	\centering
-        	\includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/TINTFUN3c}
-        	\caption{Apuntado por linterna.}
-        \end{subfigure}
+    \begin{subfigure}{0.33\textwidth}
+    	\centering
+        \includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/TINTFUN3a}
+        \caption{Sensor cubierto.}
+	\end{subfigure}\hfill
+    \begin{subfigure}{0.33\textwidth}
+    	\centering
+        \includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/TINTFUN3b}
+        \caption{Sensor descubierto.}
+	\end{subfigure}\hfill
+    \begin{subfigure}{0.33\textwidth}
+    	\centering
+        \includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/TINTFUN3c}
+        \caption{Sensor descubierto y apuntado con una linterna.}
+	\end{subfigure}
 	\caption{Validación de seguridad \textit{T-INT-FUN-03}.}
 \end{figure}
 
-El test de \textit{T-INT-FUN-05} se concluyó de manera satisfactoria. Resultados similares a los obtenidos se encuentran presentes en la Figura (\ref{fig:foto_camara_filtro}), donde se comparan fotos similares con y sin filtro. Por otro lado, se realiza la prueba \textit{T-INT-FUN-6}, donde se varió la posición del módulo BLE, observando los cambios de su presencia.
+Disponiendo del banco de pruebas \#3, se corroboró mediante observación los tests de funcionalidad \textit{T-INT-FUN-04} y \textit{T-INT-FUN-12}. Se garantizó que la imagen mostrada al usuario sea la adecuada y que se vea de manera fidedigna, es decir que la transmisión sea de calidad y fluida.
+\begin{figure}[H]
+	\centering
+    	\begin{subfigure}{0.49\textwidth}
+        	\centering
+        	\includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/t-int-fun-04-12-1}		
+			\caption{Vista de la transmisión en vivo del nido.}
+        \end{subfigure}\hfill
+        \begin{subfigure}{0.49\textwidth}
+        	\centering
+        	\includegraphics[width=0.5\linewidth]{ImagenesValidacion del prototipo/t-int-fun-04-12-2}
+        	\caption{Imagen del exterior del nido en el momento de la trasmisión.}
+        \end{subfigure}
+	\caption{Validación de funcionalidad \textit{T-INT-FUN-04} y \textit{T-INT-FUN-12}.}
+\end{figure}
+
+El test de \textit{T-INT-FUN-05} se concluyó de manera satisfactoria. Resultados similares a los obtenidos se encuentran presentes en la Figura (\ref{fig:foto_camara_filtro}), donde se comparan fotos similares con y sin filtro. Por otro lado, se realiza la prueba \textit{T-INT-FUN-06}, donde se varió la posición del módulo BLE, observando los cambios de su presencia.
 \begin{figure}[H]
 	\centering
 		\begin{subfigure}{0.49\textwidth}
@@ -62,27 +73,25 @@ El test de \textit{T-INT-FUN-05} se concluyó de manera satisfactoria. Resultado
 	\caption{Variación de posición del beacon con respecto al nido.}
 \end{figure}
 
+Las validaciones a continuación están relacionadas con aspectos funcionales de los sensores. Se comienza con el periodo de muestreo de estos como indica \textit{T-INT-FUN-07}. Se puede corroborar que las mediciones son cada 5 minutos.
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/T-INT-FUN-07}
+	\caption{Validación de funcionalidad \textit{T-INT-FUN-07}.}
+\end{figure}
+
+Para \textit{T-INT-FUN-08} se observa que el tiempo obtenido en consola como el de la computadora, presentado en la parte inferior derecha de la imagen, coinciden. Es por esto que se considera que la prueba concluyó de manera exitosa.
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=0.8\linewidth]{ImagenesValidacion del prototipo/TINTFUN8}
+	\caption{Validación de funcionalidad \textit{T-INT-FUN-08}.}
+\end{figure}
+
 La siguiente prueba corresponde a \textit{T-INT-FUN-09}. En esta se desenergiza la \rspi, y luego de esperar el tiempo apropiado, se la energiza nuevamente corroborando que la hora correspondiente al módulo RTC sea correcta.
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.8\linewidth]{ImagenesValidacion del prototipo/TINTFUN9}
 	\caption{Validación de funcionalidad \textit{T-INT-FUN-09}.}
-\end{figure}
-
-Disponiendo del banco de pruebas \#3, se corroboró mediante observación los tests de funcionalidad \textit{T-INT-FUN-04} y \textit{T-INT-FUN-12}. Se garantizó que la imagen mostrada al usuario sea la adecuada y que se vea de manera fidedigna, es decir que la transmisión sea de calidad y fluida.
-\begin{figure}[H]
-	\centering
-    	\begin{subfigure}{0.49\textwidth}
-        	\centering
-        	\includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/t-int-fun-04-12-1}		
-			\caption{Vista de la transmisión en vivo del nido.}
-        \end{subfigure}\hfill
-        \begin{subfigure}{0.49\textwidth}
-        	\centering
-        	\includegraphics[width=0.5\linewidth]{ImagenesValidacion del prototipo/t-int-fun-04-12-2}
-        	\caption{Imagen del exterior del nido en el momento de la trasmisión.}
-        \end{subfigure}
-	\caption{Validación de funcionalidad \textit{T-INT-FUN-04} y \textit{T-INT-FUN-12}.}
 \end{figure}
 
 \Subsection{Validación Pruebas de Comunicación 1}
