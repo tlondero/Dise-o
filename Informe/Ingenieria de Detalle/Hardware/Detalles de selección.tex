@@ -23,13 +23,24 @@ Por otro lado, para los cálculos del panel solar, teniendo en cuenta que se qui
 \Subsubsubsection{Protección para alimentación \rspi}
 Ante la eventual pérdida de energía, en condiciones de funcionamiento normal, es sumamente probable que la memoria SD de la \rspi resulte corrupta, y por consiguiente inutilizable. Esto está contemplado en \textit{T-INT-16}, por lo que se diseña un circuito de detección  de baja batería, que apaga de manera segura la \rspi.
 Para esto se agrega una bornera en la cual se conecta directamente la batería, de esta manera se sensa su nivel de tensión 
-a través de un divisor resistivo. Este nivel es comparado con una tensión de referencia, cuando el nivel de tension de la batería es inferior al 25$\%$ de su capacidad, se cambia cambia el estado de la salida y se apaga la \rspi.
+a través de un divisor resistivo. Este nivel es comparado con una tensión de referencia, cuando el nivel de tension de la batería es inferior al $25\%$ de su capacidad, se cambia cambia el estado de la salida y se apaga la \rspi.
 \begin{figure}[H]
-	\centering
-    \includegraphics[width=0.7\linewidth]{ImagenesIngenieria de Detalle/Comparador}	
-	\caption{Circuito Comparador e interruptores.}
+\centering
+    	\begin{subfigure}{0.7\textwidth}
+        	\centering
+        	\includegraphics[width=\linewidth, page=1]{ImagenesIngenieria de Detalle/CircuitoProteccion}		
+			\caption{Comparador de protección.}
+        \end{subfigure}      
+        
+        \begin{subfigure}{0.5\textwidth}
+        	\centering
+        	\includegraphics[width=\linewidth, page=2]{ImagenesIngenieria de Detalle/CircuitoProteccion}				
+        	\caption{Sección de referencia.}
+        \end{subfigure}
+	\caption{Circuito comparador e interruptores.}
 	\label{fig:Comp}
 \end{figure}
+
 Se realizó la simulación del circuito propuesto, obteniendo los resultados esperados.
 \begin{figure}[H]
 	\centering
@@ -37,6 +48,7 @@ Se realizó la simulación del circuito propuesto, obteniendo los resultados esp
 	\caption{Simulación circuito de protección.}
 	\label{fig:sim}
 \end{figure}
+
 Se observa como al caer la tensión de la batería el circuito comparador lo detecta y activa la señal de apagado.
 
 Adicionalmente se agrega un interruptor para apagado seguro, y uno para prendido seguro, los cuales están destinados para los operarios de instalación y desinstalación, si los necesitasen. 
