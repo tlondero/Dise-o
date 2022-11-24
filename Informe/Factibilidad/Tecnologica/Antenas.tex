@@ -125,7 +125,23 @@ Mientras que, para el caso de las antenas receptoras, se tuvieron en cuenta los 
 
 Finalmente, una restricción a tener en cuenta para ambas antenas será el costo.
 
-\Subsubsubsection{Cargador}
+\Subsubsubsection{Interacción entre las Aves y la Radiación Electromagnética}
+
+Se recopiló información sobre experimentos donde se ha evaluado las consecuencias de exponer distintos tipos de aves frente a ondas electromagnéticas.
+
+Esta radiación produce dos tipos de efectos sobre los tejidos biológicos, clasificándose en térmicos y no térmicos. Los primeros se manifiestan como un aumento de la temperatura del sistema que recibe la emisión. Dependiendo de la duración y la intensidad de la exposición, se pueden observar respuestas físicas o psicológicas. Por otro lado, los no térmicos se manifiestan como cambios en el metabolismo celular. Se observan cambios en los comportamientos de los individuos expuestos cuando se comprometen estructuras del sistema nervioso. La principal diferencia entre estos dos procesos se centra en el tiempo de exposición.
+
+Se ha corroborado que gallinas expuestas a ondas en un rango de densidad de potencia de 200 a 500 $\nicefrac{W}{{m}^2}$ han reaccionado evitando o escapando de este campo al poco tiempo de exposición \cite{ref:non-termal}.
+
+Otro estudio realizado sobre las especies Cyanocitta Cristata y Haemorhous Mexicanus determina un nivel máximo de densidad de potencia aplicada sobre estas aves, siendo este de $230 \ \nicefrac{W}{{m}^2}$. La primer especie tiene un tamaño que oscila entre los 22 y los 30 centímetros, y un peso entre 70 y 100 gramos. Para la segunda especie, su largo varía entre 12.5 y 15 centímetros, mientras que en cuanto a peso varía entre 16 y 27 gramos. Esto se remarca porque las aves expuestas a la misma densidad mencionada pueden afrontar mayores riesgos si poseen tamaños superiores, siendo este el caso del Campephilus Magellanicus \cite{ref:thermo-birds}.
+
+En otro estudio similar se radió a gallinas, palomas y gaviotas con una densidad de 100 a 300 $\nicefrac{W}{{m}^2}$, las cuales se encontraban encerradas dentro de cajas. Se dispuso un arreglo que permitiera posicionar la antena tanto por encima como por debajo del especie de estudio. Además, se repitió la experiencia primero cubriendo la cabeza del ave y luego su cuerpo.
+
+Se observó para las gallinas que, al colocar la antena por encima de ellas, a los pocos segundos los animales comenzaron a realizar movimientos de extensión de todas sus extremidades. Se atribuyó dicha reacción a la penetración directa sobre la médula espinal, ya que al repetir el experimento radiando desde abajo del ave se notaron sobresaltos de los especímenes pero sin tantos signos de disturbios musculares. No se notaron cambios al cubrir la cabeza y el cuerpo.
+
+Para las palomas y gaviotas se obtuvieron resultados similares pero menos dramáticos. Por cuestiones que se mencionan más adelante, es importante remarcar que el tamaño de estas dos últimas es menor al de las gallinas. Todas las aves de estudio mostraron que sus alas no retornaron a su posición normal de retracción por un período mayor o igual a una hora \cite{ref:effect-radiation}.
+
+\Subsubsubsection{Esquema de Conexionado}
 
 El bloque del cargador de la UBM consiste en un receptor y un transmisor de potencia. La transmisión inalámbrica consta, por el lado del transmisor, de un oscilador HM-TRPW-RS232 de $915 \ MHz$ el cual está comandado por la \rpi y se comunica mediante UART; como así también de un amplificador de potencia alimentado por una etapa DC-DC Xl6009 de $12 \ V$ a $15 \ V$.
 
@@ -139,10 +155,6 @@ Por el lado del receptor, se encuentra el integrado P1110B, el cual almacena ene
 \end{figure}
 
 Para la trasmisión de la señal de $915 \ MHZ$ se utiliza un cable del tipo \textit{RG-213}. Este se caracteriza por poseer bajas pérdidas de $23.054 \ \nicefrac{dB}{100m}$.
-
-\bigskip
-
-\textbf{Oscilador $915 \ MHz$}
 
 \begin{figure}[H]
 	\centering	
@@ -161,11 +173,7 @@ Debido a la falta de stock mundial de componentes electrónicos a causa de la pa
 	\item Dimensiones $44.1 \times 30  \times 1.2 \ mm$.
 \end{itemize}
 
-\textbf{Amplificador de Potencia}
-
 Para el amplificador de potencia de RF, como las unidades a producir serán muy pocas, no se justifican las horas necesarias para diseñar el circuito y la placa impresa de un amplificador de RF. Por esta razón, se utilizará uno comercial. 
-
-\textbf{P1110B}
 
 \begin{figure}[H]
 	\centering	
@@ -381,23 +389,7 @@ Si se toma la curva de 45 grados de elevación como referencia, se observa que e
 
 Si se tiene en cuenta el requisito de potencia recibida en el mejor de los casos, la carga inalámbrica sería factible dadas las condiciones impuestas para distancias entre 32 y 51.2 $cm$. Teniendo en cuenta el requisito del peor de los casos este rango se reduce a distancias entre 32 y 44.8 $cm$.
 
-\Subsubsubsection{Interacción entre las Aves y la Radiación Electromagnética}
-
-Se recopiló información sobre experimentos donde se ha evaluado las consecuencias de exponer distintos tipos de aves frente a ondas electromagnéticas.
-
-Esta radiación produce dos tipos de efectos sobre los tejidos biológicos, clasificándose en térmicos y no térmicos. Los primeros se manifiestan como un aumento de la temperatura del sistema que recibe la emisión. Dependiendo de la duración y la intensidad de la exposición, se pueden observar respuestas físicas o psicológicas. Por otro lado, los no térmicos se manifiestan como cambios en el metabolismo celular. Se observan cambios en los comportamientos de los individuos expuestos cuando se comprometen estructuras del sistema nervioso. La principal diferencia entre estos dos procesos se centra en el tiempo de exposición.
-
-Se ha corroborado que gallinas expuestas a ondas en un rango de densidad de potencia de 200 a 500 $\nicefrac{W}{{m}^2}$ han reaccionado evitando o escapando de este campo al poco tiempo de exposición \cite{ref:non-termal}.
-
-Otro estudio realizado sobre las especies Cyanocitta Cristata y Haemorhous Mexicanus determina un nivel máximo de densidad de potencia aplicada sobre estas aves, siendo este de $230 \ \nicefrac{W}{{m}^2}$. La primer especie tiene un tamaño que oscila entre los 22 y los 30 centímetros, y un peso entre 70 y 100 gramos. Para la segunda especie, su largo varía entre 12.5 y 15 centímetros, mientras que en cuanto a peso varía entre 16 y 27 gramos. Esto se remarca porque las aves expuestas a la misma densidad mencionada pueden afrontar mayores riesgos si poseen tamaños superiores, siendo este el caso del Campephilus Magellanicus \cite{ref:thermo-birds}.
-
-En otro estudio similar se radió a gallinas, palomas y gaviotas con una densidad de 100 a 300 $\nicefrac{W}{{m}^2}$, las cuales se encontraban encerradas dentro de cajas. Se dispuso un arreglo que permitiera posicionar la antena tanto por encima como por debajo del especie de estudio. Además, se repitió la experiencia primero cubriendo la cabeza del ave y luego su cuerpo.
-
-Se observó para las gallinas que, al colocar la antena por encima de ellas, a los pocos segundos los animales comenzaron a realizar movimientos de extensión de todas sus extremidades. Se atribuyó dicha reacción a la penetración directa sobre la médula espinal, ya que al repetir el experimento radiando desde abajo del ave se notaron sobresaltos de los especímenes pero sin tantos signos de disturbios musculares. No se notaron cambios al cubrir la cabeza y el cuerpo.
-
-Para las palomas y gaviotas se obtuvieron resultados similares pero menos dramáticos. Por cuestiones que se mencionan más adelante, es importante remarcar que el tamaño de estas dos últimas es menor al de las gallinas. Todas las aves de estudio mostraron que sus alas no retornaron a su posición normal de retracción por un período mayor o igual a una hora \cite{ref:effect-radiation}.
-
-Por lo presentado en la Tabla (\ref{tab:medidasNido}), la distancia que existe entre la bóveda y la entrada es de hasta $10 \ cm$, mientras que el largo de la entrada es de entre 11.4 y 20 $cm$. A esto se le suma el tamaño del ave, el cual es de hasta $47 \ cm$. Es por esto que, si bien las densidades de potencia mencionadas se alejan de la requerida al fondo del nido, son valores comparables a las que se encuentran en la parte superior del nido.
+Otro tema importante que se debe tener en cuenta en análisis cuantitativo es el de la densidad de potencia radiada por el sistema y la necesidad de no perturbar al ave en el nido. Por lo presentado en la Tabla (\ref{tab:medidasNido}), la distancia que existe entre la bóveda y la entrada es de hasta 10 $cm$, mientras que el largo de la entrada es de entre 11.4 y 20 $cm$. A esto se le suma el tamaño del ave, el cual es de hasta 47 $cm$. Esto significa que el ave al entrar o salir del nido se encuentra por lo menos alrededor de los 10 $cm$ de distancia de la antena transmisora.
 
 Tomando las especificaciones de la Tabla (\ref{tab:antenas_calc}) y teniendo en cuenta que la densidad de potencia $P_D$ se puede aproximar para el tipo de antena utilizada como
 
@@ -414,7 +406,7 @@ donde $P_{tx}$ es la potencia emitida en la antena transmisora, $G_{tx}$ es la g
 	\label{fig:antenas_densidad_radiada}
 \end{figure}
 
-Se puede observar que la densidad de potencia radiada a una distancia menor a 11.15 $cm$ es menor que la de 100 $\frac{W}{m^2}$ utilizada en el estudio de gallinas, palomas y gaviotas\cite{ref:effect-radiation}. Por esta razón, no se puede garantizar que el ave no sea perturbada al entrar y salir del nido debido a la radiación electromagnética de la recarga inalámbrica.
+Se puede observar que la densidad de potencia radiada a una distancia menor a 11.15 $cm$ es mayor que la de 100 $\frac{W}{m^2}$ utilizada en el estudio de palomas y gaviotas\cite{ref:effect-radiation}, animales más chicos que el carpintero gigante. Por esta razón, no se puede garantizar que el ave no sea perturbada al entrar y salir del nido debido a la radiación electromagnética de la recarga inalámbrica.
 
 \Subsubsubsection{Conclusiones de la Factibilidad de la Recarga Inalámbrica}
 
