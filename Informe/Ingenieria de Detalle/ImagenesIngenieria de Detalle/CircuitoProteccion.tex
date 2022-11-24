@@ -6,7 +6,7 @@
 	
 	\node [ground](g1){};
 	\draw
-		(g1) ++(0,2) to[V, l_=$Bateria$] ++(0,-2)
+		(g1) ++(0,2) to[battery, l_=$Bateria$] ++(0,-2)
 		(g1) ++(0,2) to[R, l=$R_{1}$] ++(4,0) node[ocirc, label=above:$V_B$](vb){} to[R, l_=$R_{2}$] ++(0,-2) node[ground](){}
 		
 		(vb.east) -- ++(2,0) node[op amp, anchor=+](opamp){}		
@@ -15,8 +15,8 @@
 		(opamp.out) node[npn, anchor=B, label=right:$LM311$](npn){}
 		
 		(npn.E) -- ++ (0,-1.8) node[ground](){}
-		(npn.C) -- ++ (0,1) -- ++ (1,0) node[ocirc, label=north east:$Power \ Off \ Signal$](){}
-		(npn.C) ++ (0,1) to[R, l=$R_{4}$] ++(0,2) node[](aux1){} -| (opamp.up)
+		(npn.C) -- ++ (1,0) node[ocirc, label=north east:$Power \ Off \ Signal$](){}
+		(npn.C) to[R, l=$R_{4}$] ++(0,2) node[](aux1){} -| (opamp.up)
 		(aux1) ++ (-1,0)-- ++(0,0.5) node[vcc, label=east:$5 \ V$](){}		
 	;
 		
@@ -27,7 +27,7 @@
 \begin{page}
 \begin{circuitikz}[american voltages]
 	
-	\ctikzset{diodes/scale=0.75}
+	\ctikzset{diodes/scale=0.65}
 	\node [ground](g1){};
 	\draw
 		(g1) ++(0,2) to[V, l_=$5 \ V$] ++(0,-2)
