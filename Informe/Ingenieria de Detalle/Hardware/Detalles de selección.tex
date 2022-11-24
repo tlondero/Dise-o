@@ -6,7 +6,7 @@ Se asumen las siguientes variables para los cálculos de potencias, obtenidas de
 	\item Horas de sol efectivas = 8 horas.
 \end{enumerate}
 
-Para el caso de la \rpi, se tiene que su consumo mínimo normal es de $P_{rpi_{min}} = 1.2 \ W$. Sin embargo, para reducir este consumo, se desactivan los puertos de Ethernet y HDMI ya que no se utilizará un entorno gráfico. Esto permite reducir aún más el consumo mínimo. Se estima que la \rspi consumirá como máximo alrededor de $P_{rpi_{est}} = 1.75 \ W$ en su funcionamiento normal \cite{ref:pot_rpi}. Luego, se tiene que el consumo energético por día será de
+Para el caso de la \rpi, se tiene que su consumo mínimo normal es de $P_{rpi_{min}} = 1.2 \ W$. Sin embargo, para reducir este consumo, se desactivan los puertos de Ethernet y HDMI ya que no se utiliza un entorno gráfico. Esto permite reducir aún más el consumo mínimo. Se estima que la \rspi consume como máximo alrededor de $P_{rpi_{est}} = 1.75 \ W$ en su funcionamiento normal \cite{ref:pot_rpi}. Luego, se tiene que el consumo energético por día es de
 \begin{equation}
 	E_{sist} = P_{rpi_{est}}\cdot 24 \ hs = 151.2 \ kJ
 \end{equation}
@@ -16,27 +16,29 @@ Teniendo en cuenta que la batería tiene una tensión de $V_{bat} = 12 \ V$ debe
 	Capacidad_{bat} = \frac{E_{sist}\cdot T_{reserva}\cdot 1000}{V_{bat}\cdot 3600}\cdot \gamma_{bat} = 21 \ Ah
 \end{equation}
 
-Por otro lado, para los cálculos del panel solar, teniendo en cuenta que se quiere que en un día de sol promedio se logre abastecer al sistema de su consumo energético normal diario y recargar un $\rho = 0.2$ de la capacidad total de la batería, y además teniendo en cuenta un coeficiente de seguridad de $\gamma_{panel} = 2$, se tiene que
+Por otro lado, para los cálculos del panel solar, se tienen en cuenta que se quiere que en un día de sol promedio se logre abastecer al sistema de su consumo energético normal diario. También, se requiere recargar un $\rho = 0.2$ de la capacidad total de la batería. Además, se considera un coeficiente de seguridad de $\gamma_{panel} = 2$. Es así que se llega a
 \begin{equation}
 	Pot_{panel} = \left( E_{sist} + \frac{Capacidad_{bat}\cdot V_{bat}\cdot 3600\cdot \rho}{1000}\right)\cdot \gamma_{panel} \cdot  \frac{1000}{60\cdot 60\cdot 8 \ hs} = 23.1 \ W
 \end{equation}
+
 \Subsubsubsection{Protección para alimentación \rspi}
-Ante la eventual pérdida de energía, en condiciones de funcionamiento normal, es sumamente probable que la memoria SD de la \rspi resulte corrupta, y por consiguiente inutilizable. Esto está contemplado en \textit{T-INT-16}, por lo que se diseña un circuito de detección  de baja batería, que apaga de manera segura la \rspi.
-Para esto se agrega una bornera en la cual se conecta directamente la batería, de esta manera se sensa su nivel de tensión 
-a través de un divisor resistivo. Este nivel es comparado con una tensión de referencia, cuando el nivel de tension de la batería es inferior al $25\%$ de su capacidad, se cambia cambia el estado de la salida y se apaga la \rspi.
+Ante la eventual pérdida de energía, en condiciones de funcionamiento normal, es sumamente probable que la memoria SD de la \rspi sea corrompida, dejándola inutilizable. Esto está contemplado en \textit{T-INT-16}, por lo que se diseña un circuito de detección de baja batería, que apaga de manera segura la UP.
+
+Para esto se agrega una bornera, la cual se conecta directamente la batería. De esta manera, se logra medir el nivel de tensión de alimentación, mediante un divisor resistivo.
+
+Comparando este nivel con una tensión de referencia, cuando la batería alcanza un valor inferior al $25\%$ de su capacidad, se cambia el estado de la salida y se apaga la \rspi.
 \begin{figure}[H]
 \centering
-    	\begin{subfigure}{0.7\textwidth}
-        	\centering
-        	\includegraphics[width=\linewidth, page=1]{ImagenesIngenieria de Detalle/CircuitoProteccion}		
-			\caption{Comparador de protección.}
-        \end{subfigure}      
+	\begin{subfigure}{0.7\textwidth}
+    	\centering
+        \includegraphics[width=\linewidth, page=1]{ImagenesIngenieria de Detalle/CircuitoProteccion}		
+		\caption{Comparador de protección.}
+	\end{subfigure}      
         
-        \begin{subfigure}{0.5\textwidth}
-        	\centering
-        	\includegraphics[width=\linewidth, page=2]{ImagenesIngenieria de Detalle/CircuitoProteccion}				
-        	\caption{Sección de referencia.}
-        \end{subfigure}
+    \begin{subfigure}{0.5\textwidth}
+    	\centering
+        \includegraphics[width=\linewidth, page=2]{ImagenesIngenieria de Detalle/CircuitoProteccion}				\caption{Sección de referencia.}
+    \end{subfigure}
 	\caption{Circuito comparador e interruptores.}
 	\label{fig:Comp}
 \end{figure}
@@ -45,14 +47,13 @@ Se realizó la simulación del circuito propuesto, obteniendo los resultados esp
 \begin{figure}[H]
 	\centering
     \includegraphics[width=0.9\linewidth]{ImagenesIngenieria de Detalle/Simulation}	
-	\caption{Simulación circuito de protección.}
+	\caption{Simulación del circuito de protección.}
 	\label{fig:sim}
 \end{figure}
 
-Se observa como al caer la tensión de la batería el circuito comparador lo detecta y activa la señal de apagado.
+Se observa como al caer la tensión de la batería, el circuito comparador lo detecta y activa la señal de apagado. Adicionalmente se agregan dos interruptores de apagado y prendido de modo seguro. Estos están destinados para los operarios de instalación y desinstalación, en caso de ser necesarios.
 
-Adicionalmente se agrega un interruptor para apagado seguro, y uno para prendido seguro, los cuales están destinados para los operarios de instalación y desinstalación, si los necesitasen. 
-Finalmente lo último es la configuración de la \rspi para que con el cambio del comparado, se efectúen los cambios.
+Finalmente, se configura la \rspi para que, con el cambio de tensión del comparador, se efectúen los cambios deseados.
 \begin{lstlisting}[language=bash]
 sudo nano /boot/config.txt 
 dtoverlay=gpio-shutdown,gpio_pin=26,active_low=1,gpio_pull=up
@@ -64,7 +65,11 @@ Tanto para el Bus de $I^2C$ como para el DHT22, se calcularon las resistencias d
 	R_p \ = \  \frac{V_{dd}}{I_{R_p}} \ = \ \frac{3.3 \ V}{1 \ mA} \ = \ 3.3 \ k\Omega  
 \end{equation}
 
-Para el circuito de protección, se tiene en cuenta que el nivel de tensión de la batería gradualmente disminuye con el uso, y la tensión regulada de la \rspi no, en el rango de funcionamiento habitual de la batería. Por lo que se decide utilizar esta tensión para realizar una referencia de tensión utilizando una resistencia y un diodo zener de $4.6 \ V$ como el \textit{1N750}, esta tensión de referencia es comparada con la de la  batería. Esta comapración no es directa ya que el nivel de tensión de la batería es mayor a los $5 \ V$ provistos por la \rspi por lo que se emplea un divisor resistivo para bajar esta tensión. Se tuvo en cuenta que la tensión a la que se baje debe ser mayor a la de referencia para el rango de capacidad de la bateria de $[25\% ~ 100\%]$ y menor caso contrario. 
+Para el circuito de protección, se tiene en cuenta que el nivel de tensión de la batería gradualmente disminuye con el uso, mientras que el valor del voltaje regulado de la \rspi no. Esto ocurre siempre y cuando se encuentre en el rango de funcionamiento habitual de la batería.
+
+Es por esto que se decide utilizar esta última tensión para realizar una referencia utilizando una resistencia y un diodo zener de $4.6 \ V$ como el \textit{1N750}. Esta medida es comparada con la de la  batería.
+
+La comparación no es directa, ya que el nivel de tensión de la batería es mayor a los $5 \ V$ provistos por la \rspi. Es así que se emplea un divisor resistivo para bajar el valor. Para ello se tuvo en cuenta que la tensión a la que se baja debe ser mayor a la de referencia para el rango de capacidad de la batería de $25\%$ a $100\%$ y menor caso contrario.
 \begin{equation}
 R_1 \ +\ R_2 \ = R_{tot}
 \end{equation}
@@ -74,10 +79,10 @@ I_{leak} \ = \ \frac{V_{bat}}{R_{tot}}  = 70 \mu A
 \begin{equation}
 R_1 \ = \ \frac{V_{LowBat} \ \cdot \ R_2}{V_{trigger}} \ - \ R_2
 \end{equation}
-Teniendo en cuenta que $V_{LowBat} \ = \ 11.2 \ V$ y $V_{trigger} \ = \ V_{ref} \ = 4.6$
-Con estas ecuaciones se definen los valores de las resistencias.
+
+Con estas ecuaciones y teniendo en cuenta que $V_{LowBat} = 11.2 \ V$ y $V_{trigger} = V_{ref} \ = 4.6$, se definen los valores de las resistencias.
 \begin{equation}
-R_1 \ =100K\Omega  \ \ R_2 \  = \ 68K\Omega 
+R_1 = 100 \ K\Omega  \ \ R_2 = 68 \ K\Omega
 \end{equation}
 Para el valor del resistor utilizado para la referencia de tensión se calcula de la siguiente manera:
 \begin{equation}
