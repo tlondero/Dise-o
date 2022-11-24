@@ -16,6 +16,8 @@ Para el conexionado de los sensores se diseñó una placa de soporte para la \rs
 	\item El conexionado para el abastecimiento de energía para los sensores.
 	\item Un conector exclusivo para la comunicación del sensor de presencia.
 	\item Un conector para los sensores, que abarca al de humedad, temperatura, luminosidad.
+	\item Un sistema de protección ante desabastecimiento de energía.
+	\item Interruptores de prendido y apagado seguro.
 \end{itemize}
 
 La placa de sensores utiliza alimentación de $3.3 \ V$, la referencia de tierra, un pin GPIO para comunicación serial y el bus $I^2C$ de la \rpi. Este último se emplea para administrar la comunicación con el sensor de luminosidad y el módulo RTC, ya que ambos emplean el respectivo protocolo de comunicación del bus, en modo \textit{multi-slave}. Por otro lado, el pin serial GPIO corresponde a la comunicación del sensor de temperatura y humedad DHT-22. 
