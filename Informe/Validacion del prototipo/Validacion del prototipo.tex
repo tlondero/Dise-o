@@ -4,10 +4,21 @@ Para la validación del prototipo se emplean los mismos bancos de prueba mencion
 
 Se empieza por las pruebas de \textit{T-INT-FUN-01} y \textit{T-INT-FUN-02}. Amas pruebas se realizan a la par no solo porque comparten el mismo banco de pruebas, sino porque se emplea el mismo sensor calibrado para la corroboración. Este sensor es capaz de medir tanto temperatura como humedad.
 \begin{figure}[H]
-	\centering
-    \includegraphics[width=0.7\linewidth]{ImagenesValidacion del prototipo/pend}
+\centering
+	\begin{subfigure}{0.39\textwidth}
+    	\centering
+        \includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/T-INT-FUN-1-2-Medicion}		
+		\caption{Sensores de comparación.}
+	\end{subfigure}\hfill
+    \begin{subfigure}{0.6\textwidth}
+    	\centering
+        \includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/T-INT-FUN-1-2}		
+        \caption{Medición obtenida.}
+	\end{subfigure}
 	\caption{Validación de funcionalidad \textit{T-INT-FUN-01} y \textit{T-INT-FUN-02}.}
 \end{figure}
+
+De esta forma se verifica que los sensores se encuentran calibrados con un margen de error menor al máximo permitido (desviación máxima de $\pm 0.5^o \ C$).
 
 Para las validaciones del sensor de luminosidad se desarrollaron las prubas acorde a \textit{T-INT-FUN-03}, obteniendo los resultados esperados para todos los casos, como se observa en la Figura (\ref{fig:valLum})
 \begin{figure}[H]
