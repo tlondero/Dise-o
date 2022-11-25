@@ -22,7 +22,7 @@ El BJ-1750 cuenta con una salida digital con el protocolo de comunicación I2C. 
 
 Luego para el módulo RTC se tomó uno que tenga I2C, y que cuyo rango de alimentación se encuentre entre $3.3$ y $5 \ V$, por lo que se opta por el DS3231.
 
-Para la detección de presencia se descarta el uso de la \rpi 3B y el módulo NRF24L01 por no ser compatible con \textit{Bluetooth} 5.0. Se decide utilizar el ESP32-S3-WROOM-1 por el menor costo y mayor sensibilidad de recepción de la antena.
+Para la detección de presencia se descarta el uso de la \rpi 3B dado que esta debe estar por fuera del nido al no haber suficiente espacio en la bóveda. El módulo NRF24L01 por no ser compatible con \textit{Bluetooth} 5.0 se descarta y finalmente se decide utilizar el ESP32-S3-WROOM-1 por el menor costo y mayor sensibilidad de recepción de la antena.
 
 Finalmente, para la cámara que obtendrá las imágenes, se tuvo en cuenta fundamentalmente la relación precio-resolución de la cámara, al igual que la integración con Linux y el factor de contar con una API para el lenguaje C. Por lo que la R-Pi-CMOD-V2 fue la cámara seleccionada.
 

@@ -10,6 +10,7 @@ De estas salidas solo es necesaria aquella que posee $5 \ V$. En cuanto a la cor
 
 \Subsubsubsection{Medición}
 Para el conexionado de los sensores se diseñó una placa de soporte para la \rspi, la cual se denomina \textit{shield}. En esta se encuentra:
+
 \begin{itemize}
 	\item El módulo RTC.
 	\item El acondicionamiento para la conexión de la cámara.
@@ -19,7 +20,8 @@ Para el conexionado de los sensores se diseñó una placa de soporte para la \rs
 	\item Interruptores de prendido y apagado seguro.
 \end{itemize}
 
-La placa de sensores utiliza alimentación de $3.3 \ V$, la referencia de tierra, un pin GPIO para comunicación serial y el bus $I^2C$ de la \rpi. Este último se emplea para administrar la comunicación con el sensor de luminosidad y el módulo RTC, ya que ambos emplean el respectivo protocolo de comunicación del bus, en modo \textit{multi-slave}. Por otro lado, el pin serial GPIO corresponde a la comunicación del sensor de temperatura y humedad DHT-22. 
+La placa de sensores utiliza alimentación de $3.3 \ V$, la referencia de tierra, dos pines GPIO y el bus $I^2C$ de la \rpi. Este último se emplea para administrar la comunicación con el sensor de luminosidad y el módulo RTC, ya que ambos emplean el respectivo protocolo de comunicación del bus, en modo \textit{multi-slave}. Por otro lado, un pin GPIO corresponde a la comunicación serial del sensor de temperatura y humedad DHT-22; y el otro se utiliza para la comunicación con el detector de presencia. Además, la placa de sensores posee cinco pines denominados "PROG" los cuales se utilizan para programar al ESP32-WROOM-1-N4.
+ 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.75\linewidth,page=1]{ImagenesIngenieria de Detalle/shield}		
@@ -28,17 +30,21 @@ La placa de sensores utiliza alimentación de $3.3 \ V$, la referencia de tierra
 \end{figure}
 
 \begin{figure}[H]
-	\centering
-	\includegraphics[width=0.75\linewidth,page=1]{ImagenesIngenieria de Detalle/sensores_top}		
-	\caption{Vista \textit{top} de la placa de sensores.}
-	\label{fig:sensores_top}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.75\linewidth,page=1]{ImagenesIngenieria de Detalle/sensores_bot}		
-	\caption{Vista \textit{bottom} de la placa de sensores.}
-	\label{fig:sensores_bottom}
+\centering
+	\begin{subfigure}{0.48\textwidth}
+    	\centering
+    	\includegraphics[width=\linewidth,page=5]{ImagenesIngenieria de Detalle/sensores_top}
+  		\caption{Vista \textit{top} de la placa de sensores.}
+  		\label{fig:sensores_top}
+    \end{subfigure}\hfill
+    \begin{subfigure}{0.48\textwidth}
+    	\centering
+    	\includegraphics[width=\linewidth,page=6]{ImagenesIngenieria de Detalle/sensores_bot}
+  		\caption{Vista \textit{bottom} de la placa de sensores.}
+  		\label{fig:sensores_bottom}
+    \end{subfigure}
+	\caption{Placa que contiene a los sensores.}
+	\label{fig:sensores_placa}
 \end{figure}
 
 Por fuera del \textit{shield}, la \rspi cuenta tanto con un conector destinado al uso de una cámara como un conector mini USB por el cual se energiza la unidad. Ambos conectores se muestran en la Figura (\ref{fig:rpiFront}).
