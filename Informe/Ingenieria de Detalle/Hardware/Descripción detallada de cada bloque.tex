@@ -14,8 +14,7 @@ Para el conexionado de los sensores se diseñó una placa de soporte para la \rs
 	\item El módulo RTC.
 	\item El acondicionamiento para la conexión de la cámara.
 	\item El conexionado para el abastecimiento de energía para los sensores.
-	\item Un conector exclusivo para la comunicación del sensor de presencia.
-	\item Un conector para los sensores, que abarca al de humedad, temperatura, luminosidad.
+	\item Un conector para los sensores, que abarca al de humedad, temperatura, luminosidad y presencia.
 	\item Un sistema de protección ante desabastecimiento de energía.
 	\item Interruptores de prendido y apagado seguro.
 \end{itemize}
@@ -23,9 +22,23 @@ Para el conexionado de los sensores se diseñó una placa de soporte para la \rs
 La placa de sensores utiliza alimentación de $3.3 \ V$, la referencia de tierra, un pin GPIO para comunicación serial y el bus $I^2C$ de la \rpi. Este último se emplea para administrar la comunicación con el sensor de luminosidad y el módulo RTC, ya que ambos emplean el respectivo protocolo de comunicación del bus, en modo \textit{multi-slave}. Por otro lado, el pin serial GPIO corresponde a la comunicación del sensor de temperatura y humedad DHT-22. 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.9\linewidth,page=1]{ImagenesIngenieria de Detalle/RPI}		
+	\includegraphics[width=0.75\linewidth,page=1]{ImagenesIngenieria de Detalle/shield}		
 	\caption{Shield \rspi.}
 	\label{fig:conexionado_Rpi}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\linewidth,page=1]{ImagenesIngenieria de Detalle/sensores_top}		
+	\caption{Vista \textit{top} de la placa de sensores.}
+	\label{fig:sensores_top}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\linewidth,page=1]{ImagenesIngenieria de Detalle/sensores_bot}		
+	\caption{Vista \textit{bottom} de la placa de sensores.}
+	\label{fig:sensores_bottom}
 \end{figure}
 
 Por fuera del \textit{shield}, la \rspi cuenta tanto con un conector destinado al uso de una cámara como un conector mini USB por el cual se energiza la unidad. Ambos conectores se muestran en la Figura (\ref{fig:rpiFront}).
