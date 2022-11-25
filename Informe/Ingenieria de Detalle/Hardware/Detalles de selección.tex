@@ -60,6 +60,8 @@ dtoverlay=gpio-shutdown,gpio_pin=26,active_low=1,gpio_pull=up
 \end{lstlisting} 
 
 \Subsubsubsection{Cálculos circuitales}
+Los valores de las resistencias y capacitores utilizados como acondicionamiento de las señales del ESP32-WROOM-S3-1-N4 fueron extraídos de las recomendaciones de las hojas técnicas del dispositivo.
+
 Tanto para el Bus de $I^2C$ como para el DHT22, se calcularon las resistencias de \textit{pull-up}\footnote{En los circuitos digitales, un resistor \textit{pull-up} se utiliza para garantizar que la señal siempre se encuentre en un estado conocido.} de la siguiente manera:
 \begin{equation}
 	R_p \ = \  \frac{V_{dd}}{I_{R_p}} \ = \ \frac{3.3 \ V}{1 \ mA} \ = \ 3.3 \ k\Omega  
