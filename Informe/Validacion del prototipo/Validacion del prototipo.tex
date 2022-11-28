@@ -20,7 +20,7 @@ Se empieza por las pruebas de \textit{T-INT-FUN-01} y \textit{T-INT-FUN-02}. Ama
 
 De esta forma se verifica que los sensores se encuentran calibrados con un margen de error menor al máximo permitido (desviación máxima de $\pm 0.5^o \ C$).
 
-Para las validaciones del sensor de luminosidad se desarrollaron las prubas acorde a \textit{T-INT-FUN-03}, obteniendo los resultados esperados para todos los casos, como se observa en la Figura (\ref{fig:valLum})
+Para las validaciones del sensor de luminosidad se desarrollaron las pruebas acorde a \textit{T-INT-FUN-03}, obteniendo los resultados esperados para todos los casos, como se observa en la Figura (\ref{fig:valLum}).
 \begin{figure}[H]
 	\centering
     \begin{subfigure}{0.33\textwidth}
@@ -34,7 +34,7 @@ Para las validaciones del sensor de luminosidad se desarrollaron las prubas acor
         \caption{Sensor descubierto.}
 	\end{subfigure}\hfill
     \begin{subfigure}{0.33\textwidth}
-    	\centering
+    	\centering \vspace*{2.5mm}
         \includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/TINTFUN3c}
         \caption{Sensor descubierto y apuntado con una linterna.}
 	\end{subfigure}
@@ -51,7 +51,7 @@ Disponiendo del banco de pruebas \#3, se corroboró mediante observación los te
 			\caption{Vista de la transmisión en vivo del nido.}
         \end{subfigure}\hfill
         \begin{subfigure}{0.49\textwidth}
-        	\centering
+        	\centering        	
         	\includegraphics[width=0.5\linewidth]{ImagenesValidacion del prototipo/t-int-fun-04-12-2}
         	\caption{Imagen del exterior del nido en el momento de la trasmisión.}
         \end{subfigure}
@@ -101,15 +101,38 @@ Para \textit{T-INT-FUN-08} se observa que el tiempo obtenido en consola como el 
 
 La siguiente prueba corresponde a \textit{T-INT-FUN-09}. En esta se desenergiza la \rspi, y luego de esperar el tiempo apropiado, se la energiza nuevamente corroborando que la hora correspondiente al módulo RTC sea correcta.
 \begin{figure}[H]
-\centering
+	\centering
 	\includegraphics[width=0.8\linewidth]{ImagenesValidacion del prototipo/TINTFUN9}
 	\caption{Validación de funcionalidad \textit{T-INT-FUN-09}.}
 \end{figure}
 
 \Subsection{Validación Pruebas de Comunicación 1}
-Se realizó la prubea acorde a  \textit{T-INT-COM1-02}, donde se obtuvieron mediciones a distintas distancias, variando entre 1 y 30 metros. Se obtuvieron resultados satisfactorios, por lo que la prueba es superada con especificaciones incluso superiores a las definidas.
+\textit{T-INT-COM1-01} se efectúa disponiendo del banco de pruebas número \#3. Se emplea un dispositivo de comunicación mediante protocolo BLE. Es posible determinar que la transmisión se efectuó ya que se encuentra el archivo de interés entre los datos almacenados de la \rpi.
 \begin{figure}[H]
-\centering
+	\centering
+	\includegraphics[width=0.8\linewidth]{ImagenesValidacion del prototipo/BirdData}
+	\caption{El archivo \quotes{BirdData.csv} se encuentra entre los archivos disponibles de descarga.}
+\end{figure}
+
+De esta forma es posible acceder a esta información mediante la interfaz gráfica del usuario. Se procede descargándolos y comparándolos con los transmitidos. Se observa que la transmisión de datos se realiza sin perdida de paquetes ni resultando con archivos corruptos.
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{0.49\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/Descarga-1}		
+		\caption{Descarga del archivo en la interfaz gráfica.}
+	\end{subfigure}\hfill
+	\begin{subfigure}{0.49\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/Descarga-2}
+		\caption{Archivo descargado exitosamente.}
+	\end{subfigure}
+	\caption{Validación \textit{T-COM1-01}.}
+\end{figure}
+
+Se realizó la prueba acorde a \textit{T-INT-COM1-02}, donde se obtuvieron mediciones a distintas distancias, variando entre 1 y 30 metros. Se obtuvieron resultados satisfactorios, por lo que la prueba es superada con especificaciones incluso superiores a las definidas.
+\begin{figure}[H]
+	\centering
 	\begin{subfigure}{0.3\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/TINTCOM12a}
@@ -117,8 +140,8 @@ Se realizó la prubea acorde a  \textit{T-INT-COM1-02}, donde se obtuvieron medi
 	\end{subfigure}	
 \end{figure}
 \begin{figure}[H]
-\centering
-\ContinuedFloat
+	\centering
+	\ContinuedFloat
 	\begin{subfigure}{0.3\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/TINTCOM12ba}		
@@ -129,13 +152,13 @@ Se realizó la prubea acorde a  \textit{T-INT-COM1-02}, donde se obtuvieron medi
 		\includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/TINTCOM12ca}
 		\caption{Distancia de 30 metros.}
 	\end{subfigure}
-	\caption{Validación \textit{T-COM1-02}}
+	\caption{Validación \textit{T-COM1-02}.}
 \end{figure}
 
 \Subsection{Validación Pruebas de Comunicación 2}
 Para las pruebas de Comunicación 2 se requiere la computadora de un tercero (biólogo en campo). La primera prueba corresponde a \textit{T-INT-COM2-01} la cual consta en analizar a la capacidad de acceder a los datos del ave guardados en el nido.
 \begin{figure}[H]
-\centering
+	\centering
 	\begin{subfigure}{0.49\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/TINTCOM21a}		
