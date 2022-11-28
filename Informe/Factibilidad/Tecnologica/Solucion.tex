@@ -10,7 +10,6 @@ Por estas razones los candidatos terminan siendo la DHT-22 y la PT-100. Un punto
 %%%%%%HUMEDAD%%%%%%
 En la elección de componente para la medición de humedad, como primer criterio, se busca que pueda medir el rango entero de humedad relativa y que cuente con una precisión considerable. Dadas estas consideraciones, se descarta la DHT-11 y AM-1001. Es así que de los dos restantes, se opta por el DHT-22 debido a que por un menor costo se obtienen mejores prestaciones. Teniendo en cuenta esto se utilizará tanto para la medición de temperatura como humedad el DHT-22.
 
-
 %%%%%%LUMINSIDAD%%%%%%
 En cuanto a la luminosidad, principalmente se deberá asegurar el funcionamiento en el rango de temperatura en el cual operará el dispositivo. Por esto, el OPT-101 queda descartado. Además, se tiene en cuenta la potencia utilizada, el rango de medición de los sensores y el tipo de alimentación.
 
@@ -22,7 +21,7 @@ El BJ-1750 cuenta con una salida digital con el protocolo de comunicación I2C. 
 
 Luego para el módulo RTC se tomó uno que tenga I2C, y que cuyo rango de alimentación se encuentre entre $3.3$ y $5 \ V$, por lo que se opta por el DS3231.
 
-Para la detección de presencia se descarta el uso de la \rpi 3B dado que esta debe estar por fuera del nido al no haber suficiente espacio en la bóveda. El módulo NRF24L01 por no ser compatible con \textit{Bluetooth} 5.0 se descarta y finalmente se decide utilizar el ESP32-S3-WROOM-1 por el menor costo y mayor sensibilidad de recepción de la antena.
+Para la detección de presencia se descarta el uso de la \rpi 3B, dado que esta debe estar por fuera del nido al no haber suficiente espacio en la bóveda. De la misma forma, el módulo NRF24L01 por no ser compatible con \textit{Bluetooth} 5.0. Finalmente se decide utilizar el ESP32-S3-WROOM-1 por el menor costo y mayor sensibilidad de recepción de la antena.
 
 Finalmente, para la cámara que obtendrá las imágenes, se tuvo en cuenta fundamentalmente la relación precio-resolución de la cámara, al igual que la integración con Linux y el factor de contar con una API para el lenguaje C. Por lo que la R-Pi-CMOD-V2 fue la cámara seleccionada.
 
