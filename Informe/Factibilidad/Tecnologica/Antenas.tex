@@ -357,51 +357,44 @@ Se puede observar en la Figura (\ref{fig:antenas_preliminar}) que a priori la po
 	\label{fig:antenas_preliminar}
 \end{figure}
 
-Sin embargo, estos cálculos tienen en cuenta que ambas antenas se encuentran perfectamente alineadas siempre. Esto no es así. Como la mochila del ave irá sobre su lomo, la antena receptora no siempre estará completamente horizontal. Es por esto que se debe multiplicar a la potencia recibida por el factor de pérdida por polarización o $PLF$ por sus siglas en inglés. Este factor se puede calcular como
-
+Sin embargo, estos cálculos tienen en cuenta que ambas antenas se encuentran perfectamente alineadas siempre. Esto en la práctica no es así. Como la mochila del ave va sobre su lomo, la antena receptora no siempre esta completamente horizontal. Es por esto que se debe multiplicar a la potencia recibida por el factor de pérdida por polarización o $PLF$ por sus siglas en inglés. Este factor se puede calcular como:
 \begin{equation}
 PLF = cos^2(\phi)
 \end{equation}
 
-En la Figura (\ref{fig:antenas_potrecibida}) se puede observar la potencia recibida en las baterías de la mochila si se tiene el factor de pérdida por polarización en cuenta para todos los ángulos de elevación $\phi$ posibles, siendo estos entre -90 y 90 grados.
-
+En la Figura (\ref{fig:antenas_potrecibida}) se puede observar la potencia recibida en las baterías de la mochila, teniendo en cuenta el factor de pérdida por polarización para todos los ángulos de elevación $\phi$ posibles, siendo estos entre -90 y 90 grados.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{ImagenesFactibilidad/antenas_potrecibida}
-	\caption{Potencia recibida en las baterías de la mochila del pájaro dada la distancia entre esta y la antena transmisora teniendo en cuenta el factor de pérdida por polarización. A los costados de la superficie graficada se observan las curvas de nivel de los distintos ejes del gráficos.}
+	\caption{Potencia recibida en las baterías de la mochila del pájaro, dada la distancia entre esta y la antena transmisora, considerando el factor de pérdida por polarización. A los costados de la superficie graficada se observan las curvas de nivel de los distintos ejes del gráficos.}
 	\label{fig:antenas_potrecibida}
 \end{figure}
 
-Se observa en las curvas de nivel que la potencia recibida decae rápidamente cuando el ángulo de elevación $\phi$ se aleja de su valor nulo. La Figura (\ref{fig:antenas_curva_distancia}) muestra algunas curvas de nivel para ciertos ángulos de elevación. Cabe notar que cuando el ángulo de elevación es nulo, la potencia recibida cumple con el requisito de peor caso para todas las distancias entre 32 y 64 $cm$. Sin embargo, en cuanto el valor de $\phi$ se vuelve no nulo, rápidamente decrece la distancia máxima en la que los requisitos de potencia recibida se cumplen.
-
+Se observa en las curvas de nivel que la potencia recibida decae rápidamente cuando el ángulo de elevación $\phi$ se aleja de su valor nulo. La Figura (\ref{fig:antenas_curva_distancia}) muestra algunas curvas de nivel para ciertos grados de elevación. Cabe notar que cuando el ángulo es nulo, la potencia recibida cumple con el requisito de peor caso para todas las distancias entre 32 y 64 $cm$. Sin embargo, en cuanto el valor de $\phi$ se vuelve distinto de cero, rápidamente decrece la distancia máxima en la que los requisitos de potencia recibida se cumplen.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{ImagenesFactibilidad/antenas_curva_distancia}
-	\caption{Curvas de nivel de la Figura (\ref{fig:antenas_potrecibida}) dados grados de elevación fijos.}
+	\caption{Curvas de nivel de la Figura (\ref{fig:antenas_potrecibida}) para grados de elevación fijos.}
 	\label{fig:antenas_curva_distancia}
 \end{figure}
 
-Si se toma la curva de 45 grados de elevación como referencia, se observa que el rango de distancias en las que se cumple el requisito del peor caso es de 32 a 44.8 $cm$. Esto se puede observar también en la Figura (\ref{fig:antenas_curva_elevacion}), donde aquellas curvas de nivel para distancias fijas que se encuentran fuera de la zona de rechazo son aquellas en las que la distancia es menor a 44.8 $cm$.
-
+Si se toma la curva de 45 grados como referencia, se observa que el rango de distancias en las que se cumple el requisito del peor caso es de 32 a 44.8 $cm$. Esto se puede notar también en la Figura (\ref{fig:antenas_curva_elevacion}), donde aquellas curvas de nivel para distancias fijas que se encuentran fuera de la zona de rechazo, son aquellas en las que la distancia es menor a $44.8 \ cm$.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{ImagenesFactibilidad/antenas_curva_elevacion}
-	\caption{Curvas de nivel de la Figura (\ref{fig:antenas_potrecibida}) dadas distancias entre antena receptora y transmisora fijas.}
+	\caption{Curvas de nivel de la Figura (\ref{fig:antenas_potrecibida}) para distancias entre antena receptora y transmisora fijas.}
 	\label{fig:antenas_curva_elevacion}
 \end{figure}
 
-Si se tiene en cuenta el requisito de potencia recibida en el mejor de los casos, la carga inalámbrica sería factible dadas las condiciones impuestas para distancias entre 32 y 51.2 $cm$. Teniendo en cuenta el requisito del peor de los casos este rango se reduce a distancias entre 32 y 44.8 $cm$.
+Si se tiene en cuenta el requisito de potencia recibida en el mejor de los casos, la carga inalámbrica es factible dadas las condiciones impuestas para distancias entre 32 y 51.2 $cm$. Teniendo en cuenta el requisito del peor de los casos este rango se reduce a distancias entre 32 y 44.8 $cm$.
 
-Otro tema importante que se debe tener en cuenta en análisis cuantitativo es el de la densidad de potencia radiada por el sistema y la necesidad de no perturbar al ave en el nido. Por lo presentado en la Tabla (\ref{tab:medidasNido}), la distancia que existe entre la bóveda y la entrada es de hasta 10 $cm$, mientras que el largo de la entrada es de entre 11.4 y 20 $cm$. A esto se le suma el tamaño del ave, el cual es de hasta 47 $cm$. Esto significa que el ave al entrar o salir del nido se encuentra por lo menos alrededor de los 10 $cm$ de distancia de la antena transmisora.
+Otro factor importante que se debe tener en cuenta en el análisis cuantitativo es el de la densidad de potencia radiada por el sistema y la necesidad de no perturbar al ave en el nido. Por lo presentado en la Tabla (\ref{tab:medidasNido}), la distancia que existe entre la bóveda y la entrada es de hasta $10  \ cm$, mientras que el largo de la entrada es de entre 11.4 y 20 $cm$. A esto se le suma el tamaño del ave, el cual es de hasta $47 \ cm$. Esto significa que el ave al entrar o salir del nido se encuentra por lo menos alrededor de los $10 \ cm$ de distancia de la antena transmisora.
 
 Tomando las especificaciones de la Tabla (\ref{tab:antenas_calc}) y teniendo en cuenta que la densidad de potencia $P_D$ se puede aproximar para el tipo de antena utilizada como
-
 \begin{equation}
 P_D = \frac{P_{tx}G_{tx}}{4\pi d^2}
 \end{equation}
-
 donde $P_{tx}$ es la potencia emitida en la antena transmisora, $G_{tx}$ es la ganancia de esta y $d$ la distancia a la que se quiere evaluar la densidad de potencia, se obtiene el gráfico de la Figura (\ref{fig:antenas_densidad_radiada}). 
-
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{ImagenesFactibilidad/antenas_densidad_radiada}
@@ -409,7 +402,7 @@ donde $P_{tx}$ es la potencia emitida en la antena transmisora, $G_{tx}$ es la g
 	\label{fig:antenas_densidad_radiada}
 \end{figure}
 
-Se puede observar que la densidad de potencia radiada a una distancia menor a 11.15 $cm$ es mayor que la de 100 $\frac{W}{m^2}$ utilizada en el estudio de palomas y gaviotas\cite{ref:effect-radiation}, animales más chicos que el carpintero gigante. Por esta razón, no se puede garantizar que el ave no sea perturbada al entrar y salir del nido debido a la radiación electromagnética de la recarga inalámbrica.
+Se puede observar que la densidad de potencia radiada a una distancia menor a $11.15 \ cm$ es mayor que la de $100 \ \nicefrac{W}{m^2}$ utilizada en el estudio de palomas y gaviotas \cite{ref:effect-radiation}, animales más chicos que el carpintero gigante. Por esta razón, no se puede garantizar que el ave no sea perturbada al entrar y salir del nido debido a la radiación electromagnética de la recarga inalámbrica.
 
 \Subsubsubsection{Conclusiones de la Factibilidad de la Recarga Inalámbrica}
 
