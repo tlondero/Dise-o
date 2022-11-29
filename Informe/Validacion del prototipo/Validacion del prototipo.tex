@@ -107,29 +107,17 @@ La siguiente prueba corresponde a \textit{T-INT-FUN-09}. En esta se desenergiza 
 \end{figure}
 
 \Subsection{Validación Pruebas de Comunicación 1}
-\textit{T-INT-COM1-01} se efectúa disponiendo del banco de pruebas número \#3. Se emplea un dispositivo de comunicación mediante protocolo BLE. Es posible determinar que la transmisión se efectuó ya que se encuentra el archivo de interés entre los datos almacenados de la \rpi.
+\textit{T-INT-COM1-01} se efectúa disponiendo del banco de pruebas número \#3. Se emplea un dispositivo de comunicación mediante protocolo BLE. Se observa en las diversas consolas que no solo se efectúa la transmisión de datos, sino que el archivo no sufre ninguna pérdida de paquetes ya que ambos hash coinciden.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\linewidth]{ImagenesValidacion del prototipo/BirdData2}
-	\caption{El archivo \quotes{BirdData.csv} se encuentra entre los archivos disponibles de descarga.}
+	\caption{Consola del lado del receptor \rspi .}
 \end{figure}
-
-De esta forma es posible acceder a esta información mediante la interfaz gráfica del usuario. Se procede descargándolos y comparándolos con los transmitidos. Se observa que la transmisión de datos se realiza sin perdida de paquetes ni resultando con archivos corruptos.
 \begin{figure}[H]
 	\centering
-	\begin{subfigure}{0.49\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/Descarga-1}		
-		\caption{Descarga del archivo en la interfaz gráfica.}
-	\end{subfigure}\hfill
-	\begin{subfigure}{0.49\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/Descarga-2}
-		\caption{Archivo descargado exitosamente.}
-	\end{subfigure}
-	\caption{Validación \textit{T-COM1-01}.}
+	\includegraphics[width=\linewidth]{ImagenesValidacion del prototipo/T-int-com1-1-Arduino}
+	\caption{Consola del lado del transmisor \textit{BPS}}
 \end{figure}
-
 Se realizó la prueba acorde a \textit{T-INT-COM1-02}, donde se obtuvieron mediciones a distintas distancias, variando entre 1 y 30 metros. Se obtuvieron resultados satisfactorios, por lo que la prueba es superada con especificaciones incluso superiores a las definidas.
 \begin{figure}[H]
 	\centering

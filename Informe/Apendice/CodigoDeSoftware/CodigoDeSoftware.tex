@@ -474,7 +474,7 @@ print(data)
 \end{lstlisting}
 \end{minipage}}
 
-\Subsubsection{Conexión BPS para banco de pruebas}
+\Subsubsection{Conexión BPS para banco de pruebas Alcance}
 \vspace{1mm}
 \noindent{\begin{minipage}{\linewidth}
 \begin{lstlisting}[language=Python]
@@ -531,5 +531,94 @@ if __name__ == "__main__":
             raise SystemExit
         except:
             raise Exception("Error occured")    
+\end{lstlisting}
+\end{minipage}}
+
+\Subsubsection{Conexión BPS para banco de pruebas Recepción-\rspi}
+\vspace{1mm}
+\noindent{\begin{minipage}{\linewidth}
+\begin{lstlisting}[language=Python]
+from bluepy import btle
+import hashlib
+MAC = "8C:AA:B5:87:6F:12"
+SERVICE_UUID = "1825" #Object Transfer service  0x1825
+CHARACTERISTIC_UUID = "2A68" #Navigation 0x2A68
+while True:
+    try:
+        print("Connecting to: "+MAC)
+        dev = btle.Peripheral(MAC)
+        print("Connected")
+        for svc in dev.services:
+            print(str(svc))
+        print("\n ----get service-characteristic----")
+        service = dev.getServiceByUUID(btle.UUID(SERVICE_UUID))
+        print(service)
+        characteristic = service.getCharacteristics()
+        for char in characteristic:
+            if(char.uuid == CHARACTERISTIC_UUID):
+                print(char.read())
+                print("Hash of received file: ",hashlib.sha256(char.read()))
+    except KeyboardInterrupt:
+        print("Raising SystemExit") 
+        raise SystemExit
+    except:
+        raise Exception("Error occured")            
+print("Transmission Ended.")
+\end{lstlisting}
+\end{minipage}}
+\Subsubsection{Conexión BPS para banco de pruebas Transmisión-\textit{BPS}}
+\vspace{1mm}
+\noindent{\begin{minipage}{1.1\linewidth}
+\begin{lstlisting}[language=Python]
+#include <ArduinoBLE.h>
+
+BLEService OTService("1825"); //Object Transfer service  0x1825
+char* BirdData ="Date,longitud,latitud\n 2022-09-01 07:00,-70.99,-44.98..";
+char* hash="FB9774E1965600BC4E706D87816688A1B0C2B0EAE591E9C72504EF4D6C8A7B29";
+// BLE Navigation 0x2A68 Characteristic 
+//- custom 128-bit UUID, read and writable by central
+BLEStringCharacteristic navigationCharacteristic("2A68",BLERead|BLEWrite,15);
+
+void setup() {
+  Serial.begin(9600);
+  while (!Serial);
+  // begin initialization
+  if (!BLE.begin()) {
+    Serial.println("starting Bluetooth® Low Energy failed!");
+    while (1);
+  }
+  // set advertised local name and service UUID:
+  BLE.setLocalName("BPS-BLE");
+  BLE.setAdvertisedService(OTService);
+  // add the characteristic to the service
+  OTService.addCharacteristic(navigationCharacteristic);
+  // add service
+  BLE.addService(OTService);
+  // set the initial value for the characteristic:
+  navigationCharacteristic.writeValue("");
+  // start advertising
+  BLE.advertise();
+  Serial.println("BLE Object transfer Peripheral");
+}
+void loop() {
+  // listen for Bluetooth® Low Energy peripherals to connect:
+  BLEDevice central = BLE.central();
+  // if a central is connected to peripheral:
+  if (central) {
+    Serial.print("Connected to central: ");
+    Serial.println("Device connected");
+    Serial.println(central.address());
+    // while the central is still connected to peripheral:
+    while (central.connected()) {  // Post bird data
+      Serial.println("Publishing Service-Characteristic");
+          Serial.print("Hash of file: ");
+    Serial.println(hash);
+      navigationCharacteristic.writeValue(BirdData);
+    }    // when the central disconnects, print it out:
+    Serial.print(F("Disconnected from central: "));
+    Serial.println(central.address());
+  }
+}
+
 \end{lstlisting}
 \end{minipage}}
