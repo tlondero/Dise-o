@@ -1,7 +1,265 @@
 %\input{../Informe/Header.tex}
 
 %\begin{document}
+En esta sección se analiza la confiabilidad de los elementos de \textit{hardware} y \textit{software}, exponiendo en cada caso los criterios utilizados. A su vez se separa la parte de \textit{hardware} observando cada parte de manera individual para luego obtener un resultado en conjunto.
 
+\Subsection{Hardware}	
+El estudio se lleva a cabo según la norma MIL-HDBK-217F, la cual estima la cantidad de fallas en unidad de tiempo para diferentes tipos de componentes electrónicos. Este estándar tiene en cuenta factores como las condiciones de uso, temperatura.
 
+El primer paso consiste en realizar un gráfico de todos los módulos considerados críticos que garantizan las funcionalidades fundamentales del producto. Esto se presenta en la Figura (\ref{fig:criticos}).
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth,page=1]{ImagenesEstudios/ModulosCriticos}		
+	\caption{Módulos críticos de funcionamiento.}
+	\label{fig:criticos}
+\end{figure}
+Se calcula una estimación de la confiabilidad de cada módulo utilizando una estrategia \quotes{Top-Down}. Se encuentra la tasa de falla de cada submódulo mediante un proceso multiplicativo a la tasa de fallos base provista por las distintas cargas a las que son sometidos los componentes.
+No se cuenta con redundancias, por lo que el valor de confiabilidad del módulo estará dado por la confiabilidad en serie de cada uno de sus componentes. Para todos los cálculos se considera una temperatura de 16$^{\circ}$C, la cual es la temperatura media de la zona d estudio en el periodo del mismo.
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Tipo de componente}   & \textbf{Cálculo de tasa de fallos $\left[\frac{\text{failures}}{10^6 \cdot \text{hour}}\right]$}                                                                               \\ \hline
+\textbf{Resistencia}          & $\lambda_p \ = \ \lambda_b \ \cdot \  \pi_T \ \cdot \ \pi_P \ \cdot \ \pi_S \ \cdot \ \pi_Q \ \cdot \ \pi_E$                                                                   \\ \hline
+\textbf{Capacitor}            & $\lambda_p \ = \ \lambda_b \ \cdot \  \pi_T \ \cdot \ \pi_C \ \cdot \ \pi_V \ \cdot \ \pi_{SR} \ \cdot \ \pi_Q \ \cdot \ \pi_E  $                                              \\ \hline
+\textbf{IC DHT-22}            & $\lambda_p \ = \  (C_1 \ \cdot \ \pi_T \ + \ C_2 \ \cdot \ \pi_E ) \cdot \ \pi_Q \ \cdot \ \pi_L  $                                                                            \\ \hline
+\textbf{IC BH1750}            & $\lambda_p \ = \lambda_{BD} \ \cdot \ \pi_{MFG} \ \cdot \ \pi_T \ \cdot \ \pi_{CD} \ + \ \lambda_{BP} \ \cdot \ \pi_E \ \cdot \ \pi_Q + \lambda_{EOS}$                         \\ \hline
+\textbf{Shield}               & $\lambda_p \ = \ \lambda_b \ \cdot \  \pi_T \ \cdot \ \pi_K  \ \cdot \ \pi_Q \ \cdot \ \pi_E $                                                                                 \\ \hline
+\textbf{Conexionado Sensores} & $\lambda_p \ = \ \lambda_b \ \cdot \  \pi_T \ \cdot \ \pi_K  \ \cdot \ \pi_Q \ \cdot \ \pi_E $                                                                                 \\ \hline
+\textbf{IC DS1307}            & $\lambda_p \ = \lambda_{BD} \ \cdot \ \pi_{MFG} \ \cdot \ \pi_T \ \cdot \ \pi_{CD} \ + \ \lambda_{BP} \ \cdot \ \pi_E \ \cdot \ \pi_Q + \lambda_{EOS}$                         \\ \hline
+\textbf{Diodo}                & $\lambda_p \ = \ \lambda_b \ \cdot \  \pi_T \ \cdot \ \pi_S  \ \cdot \ \pi_C \ \cdot \ \pi_Q \ \cdot \ \pi_E $                                                                 \\ \hline
+\textbf{Regulador de Tensión} & $\lambda_p \ = \ \lambda_b \ \cdot \  \pi_T \ \cdot \ \pi_S  \ \cdot \ \pi_C \ \cdot \ \pi_Q \ \cdot \ \pi_E $                                                                 \\ \hline
+\textbf{Transistor Mosfet}    & $\lambda_p \ = \ \lambda_b \ \cdot \  \pi_T \ \cdot \ \pi_A  \ \cdot \ \pi_R \ \cdot \ \pi_S \ \cdot \ \pi_Q \ \cdot \ \pi_E $                                                 \\ \hline
+\textbf{VHSIC}                & \cellcolor[HTML]{FFFFFF}$\lambda_p \ = \lambda_{BD} \ \cdot \ \pi_{MFG} \ \cdot \ \pi_T \ \cdot \ \pi_{CD} \ + \ \lambda_{BP} \ \cdot \ \pi_E \ \cdot \ \pi_Q + \lambda_{EOS}$ \\ \hline
+\textbf{Batería}              & \multicolumn{1}{c|}{Documentación}                                                                                                                                             \\ \hline
+\textbf{Panel Solar}          & \multicolumn{1}{c|}{Documentación}                                                                                                                                             \\ \hline
+\textbf{Cámara \rspi}          & \multicolumn{1}{c|}{Documentación}                                                                                                                                             \\ \hline
+\textbf{Inductor}             & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}$\lambda_p \ = \ \lambda_b \ \cdot \ \pi_T  \ \pi_Q \ \cdot \ \pi_E$}                                                              \\ \hline
+\textbf{ESP8266}              & $\lambda_p \ = \  (C_1 \ \cdot \ \pi_T \ + \ C_2 \ \cdot \ \pi_E ) \cdot \ \pi_Q \ \cdot \ \pi_L  $                                                                            \\ \hline
+\textbf{\rspi}                & \multicolumn{1}{c|}{Documentación}                                                                                                                                             \\ \hline
+\end{tabular}
+\caption{Ecuaciones para obtener la tasa de fallos de cada módulo acorde a MIL-HDBK-217F.}
+\label{tasadefallos}
+\end{table}
+
+\Subsubsection{\rspi}
+Para el módulo \rspi se utiliza la documentación de esta para obtener el valor de la tasa de fallos.
+\begin{equation}
+\lambda_p = 3 
+\end{equation}
+\Subsubsection{Regulador de Energía}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|ccc|}
+\hline
+\textbf{Componente}          & \multicolumn{1}{c|}{\textbf{Cantidad}} & \multicolumn{1}{c|}{$\boldsymbol{\lambda_p}$}        & $\boldsymbol{\lambda_{Tot}}$ \\ \hline
+\textbf{Capacitor}           & \multicolumn{1}{c|}{9}                 & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}0.00356} & 0.03204                      \\ \hline
+\textbf{Resistor}            & \multicolumn{1}{c|}{36}                & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}0.00267} & 0.09612                      \\ \hline
+\textbf{Diodo}               & \multicolumn{1}{c|}{7}                 & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}0.0007}  & 0.0049                       \\ \hline
+\textbf{Inductor}            & \multicolumn{1}{c|}{2}                 & \multicolumn{1}{c|}{0.06138}                         & 0.12276                      \\ \hline
+\textbf{Transistores MOSFET} & \multicolumn{1}{c|}{13}                & \multicolumn{1}{c|}{0.1776}                          & 2.3088                       \\ \hline
+\textbf{IC Step-Down}        & \multicolumn{1}{c|}{1}                 & \multicolumn{1}{c|}{1.106}                           & 1.106                        \\ \hline
+\textbf{IC MPPT}             & \multicolumn{1}{c|}{1}                 & \multicolumn{1}{c|}{1.017}                           & 1.017                        \\ \hline
+\textbf{IC Protocolo USB}    & \multicolumn{1}{c|}{1}                 & \multicolumn{1}{c|}{1.004}                           & 1.004                        \\ \hline
+\textbf{Total}               & \multicolumn{1}{l}{}                   & \multicolumn{1}{l}{}                                 & \multicolumn{1}{r|}{5.69162} \\ \hline
+\end{tabular}
+\caption{Confiabilidad regulador de energía.}
+\label{confReg}
+\end{table}
+
+\Subsubsection{Paneles Solares}
+Para determinar a tasa de fallas de los paneles solares se utiliza la documentación de estos.
+\begin{equation}
+\lambda_p = 0.057 
+\end{equation}
+
+\Subsubsection{Baterías}
+Para determinar a tasa de fallas de las baterías se utiliza la documentación.
+\begin{equation}
+\lambda_p = 0.005 
+\end{equation}
+\Subsubsection{Conector Shield}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|ccc|}
+\hline
+\textbf{Componente}     & \multicolumn{1}{c|}{\textbf{Cantidad}} & \multicolumn{1}{c|}{$\boldsymbol{\lambda_p}$}        & $\boldsymbol{\lambda_{Tot}}$ \\ \hline
+\textbf{Conectores PCB} & \multicolumn{1}{c|}{1}                 & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}0.00182} & 0.00182                      \\ \hline
+\textbf{Conector Molex} & \multicolumn{1}{c|}{1}                 & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}0.00182} & 0.00182                      \\ \hline
+\textbf{Total}          & \multicolumn{1}{l}{}                   & \multicolumn{1}{l}{\cellcolor[HTML]{FFFFFF}}         & \multicolumn{1}{r|}{0.00364} \\ \hline
+\end{tabular}
+\caption{Confiabilidad de la placa \textit{shield}.}
+\label{confshield}
+\end{table}
+
+\Subsubsection{RTC}
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|ccc|}
+\hline
+\textbf{Componente} & \multicolumn{1}{c|}{\textbf{Cantidad}} & \multicolumn{1}{c|}{$\boldsymbol{\lambda_p}$}        & $\boldsymbol{\lambda_{Tot}}$ \\ \hline
+\textbf{Capacitor}  & \multicolumn{1}{c|}{3}                 & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}0.00356} & 0.01068                      \\ \hline
+\textbf{Resistor}   & \multicolumn{1}{c|}{5}                 & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}0.00267} & 0.01335                      \\ \hline
+\textbf{Diodo}      & \multicolumn{1}{c|}{1}                 & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}0.0007}  & 0.0007                       \\ \hline
+\textbf{DS1307}     & \multicolumn{1}{c|}{1}                 & \multicolumn{1}{c|}{1.106}                           & 1.106                        \\ \hline
+\textbf{Total}      & \multicolumn{1}{l}{}                   & \multicolumn{1}{l}{}                                 & \multicolumn{1}{r|}{1.13073} \\ \hline
+\end{tabular}
+\caption{Confiabilidad RTC.}
+\label{confRTC}
+\end{table}
+\Subsubsection{Sensor de Presencia}
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|ccc|}
+\hline
+\textbf{Componente}     & \multicolumn{1}{c|}{\textbf{Cantidad}} & \multicolumn{1}{c|}{$\boldsymbol{\lambda_p}$}     & $\boldsymbol{\lambda_{Tot}}$ \\ \hline
+\textbf{ESP32 WROOM S3} & \multicolumn{1}{c|}{1}                 & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}1.08} & 1.08                         \\ \hline
+\textbf{Total}          & \multicolumn{1}{l}{}                   & \multicolumn{1}{l}{\cellcolor[HTML]{FFFFFF}}      & \multicolumn{1}{r|}{1.08}    \\ \hline
+\end{tabular}
+\caption{Confiabilidad sensor de presencia.}
+\label{tab:confpres}
+\end{table}
+\Subsubsection{Cámara \rspi}
+Para determinar la tasa de fallas del módulo de cámara se recurre a la hoja de datos.
+\begin{equation}
+\lambda_p = 3.16
+\end{equation}
+\Subsubsection{Conector Sensores}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|clc|}
+\hline
+\textbf{Componente}     & \multicolumn{1}{c|}{\textbf{Cantidad}} & \multicolumn{1}{c|}{$\boldsymbol{\lambda_p}$} & $\boldsymbol{\lambda_{Tot}}$  \\ \hline
+\textbf{Conector Molex} & \multicolumn{1}{c|}{1}                 & \multicolumn{1}{r|}{0.00182}              & 0.00182                      \\ \hline
+\textbf{Total}          & \multicolumn{1}{l}{}                   &                                           & \multicolumn{1}{r|}{0.00182} \\ \hline
+\end{tabular}
+\caption{Confiabilidad Conector Placa de Sensores}
+\label{confsensores}
+\end{table}
+\Subsubsection{Sensor Humedad y Temperatura}
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|crc|}
+\hline
+\textbf{Componente}         & \multicolumn{1}{c|}{\textbf{Cantidad}} & \multicolumn{1}{c|}{$\boldsymbol{\lambda_p}$}        & $\boldsymbol{\lambda_{Tot}}$ \\ \hline
+\textbf{Capacitor} & \multicolumn{1}{c|}{2}                 & \multicolumn{1}{r|}{0.00356}                         & 0.00712                      \\ \hline
+\textbf{Resistor}  & \multicolumn{1}{c|}{1}                 & \multicolumn{1}{r|}{\cellcolor[HTML]{FFFFFF}0.00267} & 0.00267                      \\ \hline
+\textbf{IC-DHT22}  & \multicolumn{1}{c|}{1}                 & \multicolumn{1}{r|}{3.036}                           & 3.036                        \\ \hline
+\textbf{Total}     & \multicolumn{1}{l}{}                   & \multicolumn{1}{l}{}                                 & \multicolumn{1}{r|}{3.04579} \\ \hline
+\end{tabular}
+\caption{Confiabilidad Sensor de Temperatura y Humedad.}
+\label{tab:conftemphum}
+\end{table}
+\Subsubsection{Sensor Luminosidad}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|crc|}
+\hline
+\textbf{Componente}           & \multicolumn{1}{c|}{\textbf{Cantidad}} & \multicolumn{1}{c|}{$\boldsymbol{\lambda_p}$}        & $\boldsymbol{\lambda_{Tot}}$ \\ \hline
+\textbf{Capacitor}            & \multicolumn{1}{c|}{4}                 & \multicolumn{1}{r|}{0.00356}                         & 0.01424                      \\ \hline
+\textbf{Resistor}             & \multicolumn{1}{c|}{3}                 & \multicolumn{1}{r|}{\cellcolor[HTML]{FFFFFF}0.00267} & 0.00801                      \\ \hline
+\textbf{Regulador de tensión} & \multicolumn{1}{c|}{1}                 & \multicolumn{1}{r|}{\cellcolor[HTML]{FFFFFF}0.00059} & 0.00059                      \\ \hline
+\textbf{IC-BH1750}            & \multicolumn{1}{c|}{1}                 & \multicolumn{1}{r|}{1.106}                           & 1.106                        \\ \hline
+\textbf{Total}                & \multicolumn{1}{l}{}                   & \multicolumn{1}{l}{}                                 & \multicolumn{1}{r|}{1.12884} \\ \hline
+\end{tabular}
+\caption{Confiabilidad Sensor de Luminosidad}
+\label{tab:conflum}
+\end{table}
+
+\Subsubsection{Tasa de fallas total}
+Utilizando los valores finales obtenidos en las anteriores tablas se calcula el $\lambda_{Total}$ de la siguiente manera:
+\begin{equation}
+\lambda_{Total} \ = \  \sum_{Modulos} \  \lambda_{Totn}  \  =  \ 18.8174 \  \frac{\text{fallas}}{10^6 \ \text{horas}}
+\end{equation}
+Luego asumiendo que $\lambda$ es constante y la función de confiabilidad definida como:
+\begin{equation}
+R(t) \ = \ e^{-\frac{\lambda_{Total}}{10^6}\ \cdot t}
+\end{equation}
+Con esto definido se obtiene el tiempo medio a la falla para todo el sistema:
+\begin{equation}
+MTTF \ = \ \int_0^\infty \ R(t)\ dt \ \approx \ 53142.19 \ \text{horas} \ \approx \ 6.066 \ \text{años}
+\end{equation}
+Además, se calcula valores para R(T) con un paso de 3 meses (Duración base del proyecto) hasta 3 años.
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\textbf{Tiempo} & \textbf{3 Meses}                                                    & \textbf{6 Meses} & \textbf{9 Meses}                                                    & \textbf{1 Año}                                                      & \textbf{\begin{tabular}[c]{@{}c@{}}1 Año y\\ 3 Meses\end{tabular}}   & \textbf{\begin{tabular}[c]{@{}c@{}}1 Año y\\ 6 Meses\end{tabular}} \\ \hline
+\textbf{$R(t)$} & 0.96                                                                & 0.922            & 0.885                                                               & 0.850                                                               & 0.816                                                                & 0.786                                                              \\ \hline
+\textbf{Tiempo} & \textbf{\begin{tabular}[c]{@{}c@{}}1 Año y \\ 9 Meses\end{tabular}} & \textbf{2 Años}  & \textbf{\begin{tabular}[c]{@{}c@{}}2 Años y\\ 3 Meses\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}2 Años y\\ 6 Meses\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}2 Años y \\ 9 Meses\end{tabular}} & \textbf{3 Años}                                                    \\ \hline
+\textbf{$R(t)$} & 0.752                                                               & 0.722            & 0.70 & 0.677                                                               & 0.647                                                                & 0.622                                                            \\ \hline
+\end{tabular}
+\caption{Probabilidad de confiabilidad con períodos de 3 meses.}
+\label{probConf}
+\end{table}
+
+Teniendo en cuenta que el tiempo de vida del producto está estimado en 3 años y que la duración del estudio es de 3 meses. Que el tiempo medio a la falla sea de 6 años, resulta satisfactorio.
+Finalmente cabe mencionar que luego de cada uso se recomienda una revisión técnica para asegurar un correcto funcionamiento de todos los módulos así aumentando la confiabilidad del sistema.
+\Subsection{Software}
+Para el estudio de confiabilidad de software se utilizó un modelo de estimación de tipo exponencial. Este modelo asume que todas las fallas que se presentan son independientes entre sí. Más específicamente se utilizará el modelo de Shooman, el cual normaliza las fallas por la cantidad de líneas de código $I_T$ sigue:
+\begin{equation}
+	R(t) = e^{-\lambda t}
+\end{equation}
+donde se toma
+\begin{equation}
+	\lambda = -k \left[ \epsilon_T - \epsilon(\zeta) \right]t
+\end{equation}
+
+Además, se define $\epsilon_T$ como la tasa de errores totales, $\epsilon(\zeta)$ la tasa de errores corregidos hasta un tiempo de corrección $\zeta$ y $k$ una constante del modelo de estimación.
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Semanas} & \boldmathcol{E_t}  		  & \boldmathcol{E_c}  			  & \boldmathcol{E_r}  			  & \textbf{H [hrs]} & \boldmathcol{\lambda_i}  & \boldmathcol{\frac{\lambda_i}{\lambda_{i-1}}}  & \boldmathcol{\hat{E}_{tot}}    & \boldmathcol{\hat{k}}    \\ \hline
+1                & 20                         & 17                            & 3                             & 168              & 0.11905                  & -                                              & -                              & -                       \\ \hline
+2                & 37                         & 33                            & 4                             & 336              & 0.05060                  & 0.42500                                        & 11.82609                       & 32.32474                \\ \hline
+3                & 50                         & 43                            & 7                             & 504              & 0.02579                  & 0.50980                                        & 10.40000                       & 37.93184                \\ \hline
+4                & 61                         & 52                            & 9                             & 672              & 0.01637                  & 0.63462                                        & 15.63158                       & 12.34174                \\ \hline
+5                & 74                         & 65                            & 9                             & 840              & 0.01548                  & 0.94545                                        & 225.33333                      & 0.35769                 \\ \hline
+6                & 89                         & 80                            & 9                             & 1008             & 0.01488                  & 0.96154                                        & 375.00000                      & 0.20329                 \\ \hline
+7                & 105                        & 96                            & 9                             & 1176             & 0.01361                  & 0.91429                                        & 170.66667                      & 0.42079                 \\ \hline
+8                & 115                        & 105                           & 10                            & 1344             & 0.00744                  & 0.54688                                        & 10.86207                       & 43.15476                \\ \hline
+\end{tabular}
+\caption{Fallas durante el periodo de test del \textit{software}.}
+\label{tab:confsoft}
+\end{table}
+
+La Tabla (\ref{tab:confsoft}) presenta la cantidad acumulada de errores $E_t$, la cantidad acumulada de corregidos $E_c$, la cantidad acumulada resultante de los residuales $E_r$, las horas de test acumuladas \textbf{H [hrs]}, la tasa de fallos $\lambda$ y los parámetros invariables del modelo $\hat{E}_{tot}$ y $\hat{k}$ a lo largo del periodo de test. Estos son calculados mediante la formula:
+\begin{equation}
+	\hat{E}_{tot} = \frac{ \frac{\lambda_i}{\lambda_{i-1}} E_c(\tau_{i-1})-E_c(\tau_i)}{\frac{\lambda_i}{\lambda_{i-1}}-1}
+\end{equation}
+y
+\begin{equation}
+	\hat{k} = \lambda_i\frac{I_T}{\hat{E}_{tot}-E_c(\tau_i)}
+\end{equation}
+
+Finalmente, se adoptan los valores $\hat{E}_{tot} = 1$, $I_T = 5000$  y $\hat{k} = 43.15476$. Aproximando según
+\begin{equation}
+	\lambda = k\frac{E_r}{I_T}
+\end{equation}
+se obtiene $\lambda = 0.00863$ que, tomando el inverso de este valor se obtiene el $TMEF$, que resulta ser de $116 \ hs$. La tasa media entre fallos es pequeña, y se debe a dos errores a la hora de realizar el estudio de confiabilidad. Si bien este se realizó en una etapa tardía del desarrollo como postula la hipótesis del modelo, uno de los errores corregidos en la última etapa del \textit{testeo} redujo la frecuencia de aparición de errores subsiguientes significativamente. Además, la mayoría de los errores que surgieron eran de carácter visual y no impedían el correcto uso del programa. En la Tabla (\ref{tab:confsoft2}) se pueden observar valores de la función R(t).
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\textbf{Tiempo} & \textbf{8 Horas} & \textbf{24 Horas} & \textbf{50 Horas} & \textbf{100 Horas} & \textbf{200 Horas} \\ \hline
+$R(t)$          & 0.933            & 0.813             & 0.65              & 0.422              & 0.178              \\ \hline
+\end{tabular}
+\caption{Valores de la función probabilidad de confiabilidad de software.}
+\label{probConf}
+\end{table}
+
+Otra cosa que cabe notar es que varios de los errores surgidos en la etapa de desarrollo eran de carácter acumulativo y tenían mayor probabilidad de aparición cuanto más tiempo se encuentre activo el software. Es por esto que se realiza cada ocho horas un reinicio del programa disminuyendo significativamente la tasa de apariencia de errores.
 
 %\end{document}

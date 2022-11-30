@@ -1,46 +1,27 @@
-\observacion{\verObs}{Creo que esto recién lo vamos a poder definir cuando esté más claro que hay que medir. Sacar todos los TBDs}
 
-\textbf{Banco de pruebas 1:}
-\begin{itemize}
-	\item El dispositivo contará con una manera de desacoplar la alimentación principal y permitir la alimentación de los módulos a través de una fuente regulable de \TBD V.% $\pm$ \TBD mV que pueda suministrar por lo menos \TBD mA.
-	\item Se contará con un banco de datos conocidos que puedan ser constatados en el receptor (nido).	
-	\item Se acercará un dispositivo que emula la mochila que permita activar la comunicación COM2.
-	\item Se analizará la memoria del nido para constatar la correcta transmisión.
-\end{itemize}
 
-\textbf{Banco de pruebas 2:}
-\begin{itemize}
-	\item El dispositivo contará con una manera de desacoplar la alimentación principal y permitir la alimentación de los módulos a través de una fuente regulable de \TBD V.% $\pm$ \TBD mV que pueda suministrar por lo menos \TBD mA.
-	\item Se contará con un banco de datos conocidos que puedan ser constatados en el receptor (persona).	
-	\item Se acercará un dispositivo que que permita activar la comunicación COM1.
-	\item Se verificará la memoria del dispositivo de la persona para constatar la correcta transmisión.
-\end{itemize}
+% 
+ % Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|ll|}
+\hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Banco \\ Número\end{tabular}} & \multicolumn{2}{l|}{\textbf{Detalle}}                                                                                                                                                                                                                                                                                                                                                                              \\ \hline
+\rowcolor[HTML]{A8DCFF} 
+BP1             
+                                                 &
 
-\textbf{Banco de pruebas 3:}
-\begin{itemize}
-	\item El dispositivo contará con una manera de desacoplar la alimentación principal y permitir la alimentación de los módulos a través de una fuente regulable de \TBD V.% $\pm$ \TBD mV que pueda suministrar por lo menos \TBD mA.
-	\item Se tendrá un osciloscopio para medir el nivel de carga de la batería al igual que medirla potencia suministrada, para obtener la eficiencia, al igual que cronometrar el tiempo de carga.
-	%\item \TBC
-\end{itemize}
-
-\textbf{Banco de pruebas 4:}
-\begin{itemize}
-	\item El dispositivo contará con una manera de desacoplar la alimentación principal y permitir la alimentación de los módulos a través de una fuente regulable de \TBD V.% $\pm$ \TBD mV que pueda suministrar por lo menos \TBD mA.
-	\item Se tendrán sensores calibrados para las magnitudes físicas a medir para comparar la precisión de estos.
-	\item Se analizará la memoria del nido para constatar la correcta medición de los datos, comparando los intervalos de tiempo entre los datos.
-\end{itemize}
-
-\textbf{Banco de pruebas 5:}
-\begin{itemize}
-	\item Se podrá regular la carga con la que se quitará energía del sistema.
-	\item Se podrá desacoplar la alimentación para simular una perdida de energía
-	\item Se podrá alimentar el sistema con una tension mínima menor a la optima, en un rango de tensiones determinado para comprobar su correcto funcionamiento.
-	\item \TBC
-\end{itemize}
-
-\textbf{Banco de pruebas 6:}
-\begin{itemize}
-	\item Se medirá el espacio que ocupe el sistema.
-	\item Se medirá el peso total del sistema.
-	\item \TBC
-\end{itemize}
+\includetestbench{0.4\linewidth}{\height}{1}{ImagenesPlan de validacion/Bancos de prueba}    & \begin{tabular}[c]{@{}l@{}}\tabitem El producto.        \\ \tabitem Fuente de tensión de $5 \ V$ y \\ capacidad de proveer $500 \ mA$\\ junto a un cable de\\ alimentación mini-USB.\\ \tabitem Una computadora capaz de \\ comunicarse con el producto\\ mediante SSH y Wifi.\\ \tabitem Un reloj.\end{tabular}                                                                                              \\ \hline
+\rowcolor[HTML]{C5E8FF} 
+BP2                                                              & \includetestbench{0.4\linewidth}{\height}{2}{ImagenesPlan de validacion/Bancos de prueba}  & \begin{tabular}[c]{@{}l@{}}\tabitem El producto.        \\ \tabitem Fuente de tensión de $5 \ V$ y \\ capacidad de proveer $500 \ mA$\\ junto a un cable de\\ alimentación mini-USB.\\ \tabitem Una computadora capaz de \\ comunicarse por Wifi con el\\ producto.\\ \tabitem Sensor de Humedad calibrado.\\ \tabitem Sensor de temperatura calibrado.\end{tabular} \\ \hline
+\rowcolor[HTML]{A8DCFF} 
+BP3                                                              & \includetestbench{0.4\linewidth}{\height}{3}{ImagenesPlan de validacion/Bancos de prueba} & \begin{tabular}[c]{@{}l@{}}\tabitem El producto.\\ \tabitem \textit{Solar Array Simulator DC}\\ \textit{Supply}.\\ \tabitem Dos multímetros.\\ \tabitem Un reloj.\\ \tabitem Una computadora capaz de\\ comunicarse por WiFi con el\\ producto.\end{tabular}                                                                                                                                                   \\ \hline
+\rowcolor[HTML]{C5E8FF} 
+BP4                                                              & \includetestbench{0.4\linewidth}{\height}{4}{ImagenesPlan de validacion/Bancos de prueba}  & \begin{tabular}[c]{@{}l@{}}\tabitem El producto.        \\ \tabitem Fuente de tensión de $5 \ V$ y \\ capacidad de proveer $500 \ mA$\\ junto a un cable de\\ alimentación mini-USB.\\ \tabitem Una computadora capaz de \\ comunicarse por SSH y WiFi con\\ el producto.\\ \tabitem Un reloj.\\ \tabitem Módulo BLE de pruebas.\end{tabular}                                                                    \\ \hline
+\rowcolor[HTML]{A8DCFF} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{A8DCFF}BP5}                & \includetestbench{0.4\linewidth}{\height}{5}{ImagenesPlan de validacion/Bancos de prueba}  & \begin{tabular}[c]{@{}l@{}}\tabitem El producto.\\ \tabitem Cinta métrica.\\ \tabitem Balanza.\end{tabular}                                                                                                                                                                                                                                                                                             \\ \hline
+\end{tabular}
+\caption{Tabla de diseño de los bancos de prueba, mostrando en naranja el DUT.}
+\end{table}

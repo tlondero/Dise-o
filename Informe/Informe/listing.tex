@@ -1,0 +1,88 @@
+%% IMPORTANTE:
+% Verificar que esté \usepackage[dvipsnames]{xcolor}
+
+%\usepackage{listingsutf8}
+\usepackage{listings}
+
+\renewcommand{\lstlistingname}{Código}
+
+%LSTSET: Pone un recuadro y contador de linea en el codigo
+\newcommand{\boxstyle}{
+	\lstset{
+		basicstyle=\sffamily\color{black},
+		frame=single,
+		numbers=left,
+		numbersep=5pt,
+		numberstyle=\color{gray},
+		showspaces=false,
+		showstringspaces=false
+	}
+}
+
+\newcommand{\defaultstyle}{
+	\lstset{
+		basicstyle=\sffamily\color{black},
+		frame=none,
+		numbers=none,
+		numbersep=5pt,
+		numberstyle=\color{gray},
+		showspaces=false,
+		showstringspaces=false
+	}
+}
+
+\lstdefinelanguage{bash}{
+  captionpos=b,
+  comment=[l]{//},
+  commentstyle={\color{gray}\ttfamily},
+  emph={pi},
+  emphstyle={\color{OrangeRed}},
+  identifierstyle=\color{black},
+  keywords={case, ssh, coproc, do, done, elif, else, esac, fi, for, function, if, in, select, then, until, while, cd, time, sudo},
+  keywordstyle={\color{NavyBlue}\bfseries},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]",
+  morestring=[b]\',
+  morestring=[s]{"""*}{*"""},
+  ndkeywords={@Deprecated, shutwodn, @JvmField, @JvmName, @JvmOverloads, @JvmStatic, @JvmSynthetic, Array, Byte, Double, Float, python3, Int, Integer, Iterable, Long, Runnable, Short, String, Any, Unit, Nothing},
+  ndkeywordstyle={\color{BurntOrange}\bfseries},
+  sensitive=true,
+  stringstyle={\color{ForestGreen}\ttfamily},
+}
+
+\lstdefinelanguage{Python}{
+  captionpos=b,
+  comment=[l]{//},
+  commentstyle={\color{gray}\ttfamily},
+  emph={self, print, round, dumps, format, strip, str, range},
+  emphstyle={\color{OrangeRed}},
+  identifierstyle=\color{black},
+  keywords={False, None, True, and, as, assert, async, await, break, class, continue, def, del, elif, else, except, finally, for, from, global, if, import, in, is, lambda, nonlocal, not, or, pass, raise, return, try, while, with, yield},
+  keywordstyle={\color{NavyBlue}\bfseries},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]",
+  morestring=[b]\',
+  morestring=[s]{"""*}{*"""},
+  ndkeywords={@Deprecated, @JvmField, @JvmName, @JvmOverloads, @JvmStatic, @JvmSynthetic, Array, Byte, Double, Float, Int, Integer, Iterable, Long, Runnable, Short, String, Any, Unit, Nothing},
+  ndkeywordstyle={\color{BurntOrange}\bfseries},
+  sensitive=true,
+  stringstyle={\color{ForestGreen}\ttfamily},
+}
+
+%Como usarlo:
+
+%\begin{lstlisting}[caption={Simple code listing.}, label={lst:example1}, language=Kotlin]
+%// this is a simple code listing:
+%println("hello kotlin from latex")
+%\end{lstlisting}
+
+%Si se corta en 2 páginas distintas:
+
+%\vspace{1mm}
+%\noindent{\begin{minipage}{\linewidth}
+%\begin{lstlisting}[...]
+%...
+%\end{lstlisting}
+%\end{minipage}}
+
+

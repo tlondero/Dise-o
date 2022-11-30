@@ -2,21 +2,19 @@
 
 \begin{document}
 
-\def\verObs{0}
-\def\precio{1000 }
+\def\verObs{1}
+\def\fechadeentrega{30/11/2022}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %		Caratula		%
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\setmainfont{Avenir LT Std 55 Roman}
-\setmainfont{AvenirLTStd-Roman}
+\setmainfont{AvenirLTStd-Roman}[Path = ./Utils/, Extension = .otf, BoldFont=AvenirLTStd-95Black]
 
 \input{Utils/Caratula_1.tex}
 
-\input{Utils/Caratula_2.tex}
+\setmainfont{calibri-regular}[Path = ./Utils/, Extension = .ttf, BoldFont=calibrib, ItalicFont=calibrii, BoldItalicFont=calibriz]
 
-\setmainfont{Calibri}
 \input{Utils/Caratula_3.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -41,9 +39,10 @@
 %			Informe				%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\Section{Acrónimos y definiciones}
+\Section{Acrónimos y Definiciones}
 \input{../Acronimos/Acronimos.tex}
-
+\newpage
+  
 \Section{Resumen}
 \input{../Resumen/Resumen.tex}
 
@@ -69,9 +68,9 @@
 \input{../Construccion del prototipo/Construccion del prototipo.tex}
 
 \Section{Validación del Prototipo}
-%\input{../Validacion del prototipo/Validacion del prototipo.tex}
+\input{../Validacion del prototipo/Validacion del prototipo.tex}
 
-\Section{Estudios de Confiabilidad de Hardware y de Software}
+\Section{Estudios de Confiabilidad}
 \input{../Estudios/Estudios.tex}
 
 \Section{Conclusiones}

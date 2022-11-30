@@ -1,121 +1,82 @@
 \Subsubsubsection{Sensores}
 
 %%%%%%TEMPERTURA%%%%%%
-Para el sensor de temperatura la primer opción a descartar es aquella que no cumple con el rango de temperaturas a medir, por lo que el Ds18b20 queda descartado a pesar de su bajo costo. Luego, de las opciones que quedan, todas son de un costo similar, sin embargo hay que tener en cuenta que para la termocupla se debe proporcionar una manera de medir la temperatura de referencia, la cual puede ser tanto una RTD como un IC, aumentando el costo de la termocupla. Tanto la TC como la RTD necesitan un circuito convertidor para poder medir directamente el valor de la temperatura con un micro controlador, mientras que los IC ofrecen directamente una salida digital.% La mejor precisión de la medición se da con una RTD, seguido por los IC y finalmente la TC.
+Para el sensor de temperatura la primera opción a descartar es aquella que no cumple con el rango de temperaturas a medir, por lo que el DS18B20 queda descartado a pesar de su bajo costo. Luego, de las opciones que quedan, todas son de un costo similar. Sin embargo, hay que tener en cuenta que para la termocupla se debe proporcionar una manera de medir la temperatura de referencia, la cual puede ser tanto una RTD como un IC, aumentando el costo de la termocupla. Tanto la TC como la RTD necesitan un circuito convertidor para poder medir directamente el valor de la temperatura con un micro controlador, mientras que los IC ofrecen directamente una salida digital.% La mejor precisión de la medición se da con una RTD, seguido por los IC y finalmente la TC.
 
-Una desventaja de la TC es que tiende a envejecer rápidamente. Si bien el dispositivo no se usará más de 3 meses seguidos, este podrá ser reutilizado, dándole mayor peso al factor del envejecimiento. El autocalientamiento también es contraproductivo en la medición de temperatura debido a que este puede alterar la misma si no es tenido en cuenta. Las TC no cuentan con este inconveniente debido a su principio de funcionamiento, mientras que con las otras opciones si lo es. Con la RTD este efecto depende directamente con la corriente que se suministra para la medición, y con los IC es un aspecto que es considerado por los diseñadores de los mismos.
+Otra desventaja de la TC es que tiende a envejecer rápidamente. Si bien el dispositivo no se usará más de tres meses seguidos, este podrá ser reutilizado, dándole mayor peso al factor del envejecimiento. El autocalentamiento también es contra productivo en la medición de temperatura debido a que puede alterar la misma si no es tenido en cuenta. Las TC no cuentan con este inconveniente debido a su principio de funcionamiento, mientras las otras opciones si lo tienen. Con la RTD este efecto depende directamente de la corriente que se suministra para la medición, y con los IC esto es un aspecto que es considerado por los diseñadores de estos.
 
-Por estas razones los candidatos a terminan siendo DHT-22 y la PT-100. Un punto favorable para la DHT-22 es que no necesita un circuito extra. Adicionalmente esta unidad cuenta con una medición de humedad, lo que brinda la posibilidad de usarlo también para dicha variable o como un complemento de otro sensor.
+Por estas razones los candidatos terminan siendo la DHT-22 y la PT-100. Un punto favorable para la DHT-22 es que no necesita un circuito extra. Adicionalmente, esta unidad cuenta con una medición de humedad, lo que brinda la posibilidad de usarlo también para dicha variable o como un complemento de otro sensor.
 
 %%%%%%HUMEDAD%%%%%%
-En la elección para la medición de humedad, como primer criterio, se busca que pueda medir el rango entero de la humedad relativa y que cuente con una precisión considerable. Dadas estas consideraciones, se descarta el DHT-11 y AM-1001. Es así que de los dos restantes, se opta por el DHT-22 debido a que por un menor costo se obtienen mejores prestaciones. Teniendo en cuenta esto se utilizará tanto para la medición de temperatura y humedad el DHT-22.
-
+En la elección de componente para la medición de humedad, como primer criterio, se busca que pueda medir el rango entero de humedad relativa y que cuente con una precisión considerable. Dadas estas consideraciones, se descarta la DHT-11 y AM-1001. Es así que de los dos restantes, se opta por el DHT-22 debido a que por un menor costo se obtienen mejores prestaciones. Teniendo en cuenta esto se utilizará tanto para la medición de temperatura como humedad el DHT-22.
 
 %%%%%%LUMINSIDAD%%%%%%
-En cuanto a la luminosidad, principalmente se deberá asegurar el funcionamiento en el rango de temperatura en el cual operará el dispositivo, por lo cual el OPT-101 queda descartado. Además, se tiene en cuenta la potencia utilizada, el rango de medición de los sensores y el tipo de alimentación.
+En cuanto a la luminosidad, principalmente se deberá asegurar el funcionamiento en el rango de temperatura en el cual operará el dispositivo. Por esto, el OPT-101 queda descartado. Además, se tiene en cuenta la potencia utilizada, el rango de medición de los sensores y el tipo de alimentación.
 
-La comunicación puede ser analógica en corriente para el TEMT-6000, pero este necesitará un amplificador de corriente o un convertidor para esta corriente a un nivel medible.
+La comunicación puede ser analógica en corriente para el TEMT-6000, pero este necesitará un amplificador de corriente o un convertidor, para llevar a esta corriente a un nivel medible.
 
-Existen también otros sensores que tienen una salida analógica de tensión como el GL55-LM393 con un rango entre 0 y $V_{dd}$. Este también provee con una salida digital, pero esta funciona como un schmitt trigger.
+Existen también otros sensores que tienen una salida analógica de tensión como el GL55-LM393, con un rango entre 0 y $V_{dd}$. Este también provee una salida digital que funciona con un \textit{Schmitt Trigger}\footnote{Un \textit{Schmitt Trigger} es un circuito comparador con histéresis. Convierte una señal analógica a una digital, y se le dice \textit{trigger} debido a que la salida retiene su valor hasta que la entrada cambie lo suficiente como para que se dé un cambio.}.
 
-Por último el BJ-1750 cuanta con una salida digital con el protocolo de comunicación I2C. Teniendo en cuenta esto se opta por utilizar este último sensor. 
+El BJ-1750 cuenta con una salida digital con el protocolo de comunicación I2C. Teniendo en cuenta esto se opta por utilizar este último sensor. 
 
-Luego para el modulo RTC se tom\'o un  m\'odulo que tenga I2C, y que cuyo rango de almimentacion se encuentre entre 3.3 y 5 V, por lo que se opta por el DS3231.
-%%%%%%IAMGENES%%%%%%
-Finalmente, para la cámara que obtendrá las imágenes, se tuvo en cuenta fundamentalmente la relación precio-resolución de la cámara, al igual que la integración con Linux y el factor de contar con una API para el lenguaje C. Por lo que la RPi-CMOD-V2 fue la cámara seleccionada.
+Luego para el módulo RTC se tomó uno que tenga I2C, y que cuyo rango de alimentación se encuentre entre $3.3$ y $5 \ V$, por lo que se opta por el DS3231.
 
+Para la detección de presencia se descarta el uso de la \rpi 3B, dado que esta debe estar por fuera del nido al no haber suficiente espacio en la bóveda. De la misma forma, el módulo NRF24L01 por no ser compatible con \textit{Bluetooth} 5.0. Finalmente se decide utilizar el ESP32-S3-WROOM-1 por el menor costo y mayor sensibilidad de recepción de la antena.
+
+Finalmente, para la cámara que obtendrá las imágenes, se tuvo en cuenta fundamentalmente la relación precio-resolución de la cámara, al igual que la integración con Linux y el factor de contar con una API para el lenguaje C. Por lo que la R-Pi-CMOD-V2 fue la cámara seleccionada.
 
 \Subsubsubsection{Almacenamiento}
 
-El factor principal para seleccionar la memoria SD a utilizar es el rango de temperaturas de operación. Es por este factor que se elije la SDSDQAF3-XI, ya que esta se encuentra en un rango seguro (mayor a las demás).
+El factor principal para seleccionar la memoria SD a utilizar es el rango de temperaturas de operación. Es por este factor que se elige la SDSDQAF3-XI, ya que esta se encuentra en un rango seguro (mayor a las demás).
 
-Dado que se recolectará un volumen de datos del que no se tiene una gran certeza, debido a que una parte será lo que provenga de la mochila, se estima en función de los datos del nido y del periodo de activación de los sensores, que una memoria de 16 GBy es suficiente incluso si aumenta el volumen de datos.
+Se recolectará un volumen de datos del que no se tiene una gran certeza, ya que una parte será lo que provenga de la mochila. Se estima en función de los datos del nido y del periodo de activación de los sensores, que una memoria de $16 \ GBy$ es suficiente incluso si aumenta el volumen de datos.
 
 \Subsubsubsection{Unidades de procesamiento}
 
-Para este módulo se opta por la Raspberry Pi 3B, ya que posee Bluetooth BLE (Bluetooth Low Energy), es el dispositivo más económico, más pequeño y cuenta con soporte para micro SD.
+Para este módulo se opta por la \rspi 3B, ya que posee \textit{Bluetooth} BLE, es el dispositivo más económico, más pequeño y cuenta con soporte para micro SD.
 
-En cuanto las temperaturas de funcionamiento, este dispositivo se encuentra dentro del rango necesario. Además, los módulos Raspberry Pi trabajan entre 20 °C y 30 °C por encima de la temperatura ambiente debido a su autocalentamiento. También es sabido que los integrados R-Pi pueden llegar a soportar temperaturas extremas, tales como las que se dan en la Antártida \cite{ref:Penguin}.
+En cuanto las temperaturas de funcionamiento, este dispositivo se encuentra dentro del rango necesario. Además, los módulos \rspi trabajan entre 20 °C y 30 °C por encima de la temperatura ambiente debido a su autocalentamiento. También es sabido que los integrados \rpi pueden llegar a soportar temperaturas extremas, tales como las que se dan en la Antártida \cite{ref:Penguin}.
 
-Además, este dispositivo seleccionada se caracteriza por ser compatible con la cámara seleccionada sin  de adaptadores.
+Además, este dispositivo seleccionado se caracteriza por ser compatible con la cámara seleccionada sin la necesidad de utilizar adaptadores.
 
 \Subsubsubsection{Comunicación}
 
-En cuanto a la comunicación se utilizará BLE para la conexión con el ave, y WiFi para la comunicación con un tercero.
-Ambos de estos se encuentran disponibles para su uso en el módulo Raspberry Pi 3B.
+En cuanto a la comunicación se utilizará BLE para la comunicación con la base principal de seguimiento y la detección del ave en el nido, y WiFi para la comunicación con un tercero.
+Ambos de estos se encuentran disponibles para su uso en el módulo \rspi 3B.
 
-\Subsubsubsection{Cargador}
-
-Para el integrado de energy harvesting se optó por el P1110 debido a su elevada eficiencia en la zona donde se transmitirá potencia.
 
 \Subsubsubsection{Batería}
 
 La batería a emplear queda determinada en función del consumo del sistema y de la energía que se deba almacenar en caso de emergencias. 
 
-Los consumos de potencia de las partes del sistema corresponden a:
-\observacion{\verObs}{VER ESTO DENUEVO POENCIAS RANCIAS}
-\begin{itemize}
-	\item Sensor temperatura y humedad: $1.5 \ mW$.
-	\item Sensor luminosidad: $5 \ mW$.
-	\item R-pi zero W + Camara: $1.5 \ W$.
-	\item Transmisor de potencia: \TBD W.
-\end{itemize}
+Los consumos de potencia de las partes del sistema se detallan en la Sección (\ref{sec:calc_potencias}).
 
-De esta forma, para alimentar tanto a los sensores como a la R-Pi se requieren \TBD W. Con la batería \TBD se consigue la especificación mencionada.
+Para alimentar tanto a los sensores como a la \rpi en un día se requieren $151.2 \ kJ$. Con una batería de $21 \ Ah$ de capacidad se consigue la especificación mencionada, por lo que se opta por la batería UL24-12 de Ultracell ya que la batería de Probattery es mucho más pesada.
+
+Cabe notar que los $24 \ Ah$ de la batería seleccionada son nominales, por lo que se debe calcular la capacidad real (la cual será ligeramente menor debido a condiciones del entorno y calidad de esta). Para obtener la capacidad real de la batería se utiliza la información proporcionada en la hoja de datos. En la Figura (\ref{fig:ctemp}) se puede observar como a una temperatura de trabajo de $10°C$ y una razón de descarga de $0.05CA$ (descarga total en $20 \ hs$) la capacidad efectiva restante de la batería es del $90\% $. Por otro lado, en la Figura (\ref{fig:cdod}) se observa como teniendo en cuenta una vida útil de $540$ ciclos (es decir, 2 años de uso ininterrumpido) la capacidad efectiva restante sigue siendo del $100\%$.
+ 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{ImagenesFactibilidad/UL24-12_Ctemp}	
+	\caption{Efectos de la temperatura en relación con la capacidad de la batería.}
+	\label{fig:ctemp}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{ImagenesFactibilidad/UL24-12_Cdod}	
+	\caption{Ciclos de vida en relación con la profundidad de descarga.}
+	\label{fig:cdod}
+\end{figure}
+
+Por ende, la capacidad efectiva, calculada como:
+\begin{equation}
+C_{ef} = C_{nom} \cdot 0.9 \cdot 1 = 21.6 \ Ah
+\end{equation}
+por lo que la batería elegida es apta para el proyecto.
 
 \Subsubsubsection{Alimentación}
 
-Para poder abastecer a la batería seleccionada, con un panel \TBD se puede proveer la potencia requerida.
+Para poder abastecer a la batería seleccionada, con un panel de $23.1 \ W$ o más se puede proveer la potencia requerida. Por esta razón, se decide utilizar el panel solar DSP-30M de $30 \ W$.
 
-En cuanto a la etapa de carga, para el cargador MPPT de la batería principal se optó por la DFR0580  debido a la tecnología de la batería a usar.
-\Subsubsubsection{Antenas}
-
-Por un lado, para el caso de las antenas transmisoras, se descartan APAE915R2540ABDB1-T, APAES915R80C16-T y ARRKP7059-S915B por su baja ganancia, además del alto costo de las últimas dos. También se descarta W3215 por ser de polarización lineal. Por lo que restan la antena \textbf{ISPC.91A.09.0092E} para la etapa de ensayo.
-
-Por otro lado, para las antenas receptoras, se descarta ANT-915-USP410 por baja eficiencia, y FXP290.07.0100A por ser muy grande. Además, se descartan 1513156-1 y ANT1204F005R0915A por ser de polarización lineal. \textbf{ANT-915-CPA} y \textbf{NN01-105} pasan a la etapa de ensayo por más que NN01-105 sea de polarización lineal.
-
-Se tomaron estas antenas y se calculó para cada par Tx-Rx la potencia recibida en la antena receptora en función de la distancia.
-
-\observacion{\verObs}{actualizar foto}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\linewidth]{ImagenesFactibilidad/pot_recibida_teorica}
-	\label{fig:pot_recibida_teorica}
-	\caption{Potencia recibida en la antena Rx en función de la distancia entre antena Tx y antena Rx.}
-\end{figure}
-
-Se puede observar que con $4 \ W$ en la antena transmisora, todas las combinaciones de antenas cumplen con la potencia necesaria para el mejor y peor caso. Tomando el mejor par Rx-Tx, y al tener en cuenta la eficiencia de aproximadamente $70\%$ del P1110, la potencia a la salida de este permanece por encima del peor caso hasta la máxima distancia de transmisión.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\linewidth]{ImagenesFactibilidad/pot_baterias_teorica}
-	\label{fig:pot_baterias_teorica}
-	\caption{Potencia a la salida del P1110 en función de la distancia entre antena Tx y antena Rx.}
-\end{figure}
-
-Sin embargo, si se toma en consideración la restricción más estricta de $4.5 \  \frac{W}{m^2}$ impuesta en la Sección (\ref{sec:legal}) dada por la fórmula
-
-\begin{equation}
-	p = \frac{P_TG_T}{4\pi R^2}
-\end{equation}
-
-se observa en la Figura (\ref{fig:densidadradiada}) que para una potencia de $1.6 \ W$ en la antena transmisora esta restricción se cumple a treinta centímetros de la distancia mínima de transmisión.
-
-\observacion{\verObs}{actualizar foto}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\linewidth]{ImagenesFactibilidad/densidadradiada}
-	\caption{Densidad de potencia radiada con $1.6 \ W$ en la antena transmisora según la fórmula de Friis.}
-	\label{fig:densidadradiada}
-\end{figure}
-
-Teniendo esto en cuenta, y recalculando para $1.6 \ W$ se obtiene
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\linewidth]{ImagenesFactibilidad/recalculo}
-	\caption{Potencia a la salida del P1110 en función de la distancia entre antena Tx y antena Rx para $1.6 \ W$ en la antena transmisora.}
-	\label{fig:recalculo}
-\end{figure}
-
-Por estas razones, se deberá complementar la recarga de la UBM utilizando un panel solar.
+En cuanto a la etapa de carga, para el cargador MPPT de la batería principal se optó por la DFR0580 debido al precio, la documentación clara y la tecnología de la batería a usar.

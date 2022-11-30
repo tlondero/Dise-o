@@ -1,7 +1,7 @@
 Para las distintas mediciones se tuvieron en cuenta diversas tecnologías que existen. Se evaluaron parámetros que definen la performance, tales como la linealidad de salida, el costo, el rango de operación, la precisión, el tipo de salida, aplicación, entre otras tantas variables.
 
 \Subsubsubsection{Temperatura}
-En el caso de la medición de temperatura, se valoraron diversas tecnologías que existen, siendo por ejemplo la RTD cuyo funcionamiento se basa en el cambio de la resistencia en función de la temperatura bajo al ecuación $R(T)=R_0 + \alpha \cdot \Delta T$. También se consideró la tecnología TC, cuyo funcionamiento se basa en el efecto seebek. Finalmente, el uso de un IC, el cual se basa en propiedades de dispositivos semiconductores extrínsecos.
+En el caso de la medición de temperatura, se valoraron diversas tecnologías que existen, siendo por ejemplo la RTD cuyo funcionamiento se basa en el cambio de la resistencia en función de la temperatura bajo al ecuación $R(T)=R_0 + \alpha \cdot \Delta T$. También se consideró la tecnología TC, cuyo funcionamiento se basa en el efecto Seebek. Finalmente, el uso de un IC, el cual se basa en propiedades de dispositivos semiconductores extrínsecos.
 
 \begin{table}[H]
 \centering
@@ -13,17 +13,18 @@ En el caso de la medición de temperatura, se valoraron diversas tecnologías qu
 
 \textbf{\begin{tabular}[c]{@{}c@{}}Temperatura de\\ operación [°C]\end{tabular}}                                              & -40 $\sim$ 1200                                                                        & -50 $\sim$ 200  & -10 $\sim$ 85 & -40 $\sim$ 80 \\ \hline
 \textbf{\begin{tabular}[c]{@{}c@{}}Interfaz de\\ conexionado\end{tabular}}                                                      & \begin{tabular}[c]{@{}c@{}}Se debe\\ proporcionar\\ un circuito\\ amplificador\end{tabular} & \begin{tabular}[c]{@{}c@{}}Se debe \\ proporcionar\\  un circuito\\  convertidor\\  de resistencia\\  a tensión\end{tabular} & -                                                                & -                \\ \hline
-\textbf{Presición [°C]}                                                       & $\pm$ 1.5	& $\pm$ 0.1	& $\pm$ 0.5	& $\pm$ 0.5	\\ \hline
+\textbf{Precisión [°C]}                                                       & $\pm$ 1.5	& $\pm$ 0.1	& $\pm$ 0.5	& $\pm$ 0.5	\\ \hline
 
 \textbf{Estabilidad}                                                     & Tienden a envejecer                                                                       & -                                                                                                                            & -                                                                & -                \\ \hline
 \textbf{Autocalentamiento}                                               & -                                                                                         & \begin{tabular}[c]{@{}c@{}}Depende de\\  la corriente\\  de medición.\end{tabular}                                           & Bajo                                                             & Bajo             \\ \hline
 \textbf{Imagen}                &  \includeintable{.1}{ImagenesFactibilidad/TC}                                                                                          &  \includeintable{.1}{ImagenesFactibilidad/PT100}                                                                                                                    & \includeintable{.1}{ImagenesFactibilidad/IC1}  &  \includeintable{.1}{ImagenesFactibilidad/DHT-22}                 \\ \hline
 \end{tabular}
 \caption{Comparación entre sensores de temperatura.}
+\label{comp:temp}
 \end{table}
 
 \Subsubsubsection{Humedad}
-Existen varias maneras de medir la magnitud física de la humedad, dentro de estas la mas común se basa en utilizar la dependencia que existe entre la humedad y la capacidad. Es por esto que se utilizan capacitores con un dieléctrico, el cual cambia constante con la humedad. Además existen sensores que se aprovechan de como cambia la resistencia en función de la temperatura, pero estas tecnologías son menos frecuentes.
+Existen varias maneras de medir la magnitud física de la humedad, dentro de estas la más común se basa en utilizar la dependencia que existe entre la humedad y la capacidad. Es por esto que se utilizan capacitores con un dieléctrico, el cual cambia constante con la humedad. Además, existen sensores que se aprovechan de cómo cambia la resistencia en función de la temperatura, pero estas tecnologías son menos frecuentes.
 
 \begin{table}[H]
 \centering
@@ -32,11 +33,12 @@ Existen varias maneras de medir la magnitud física de la humedad, dentro de est
 \textbf{\begin{tabular}[c]{@{}c@{}}Aspectos\\ comparativos\end{tabular}} & \textbf{\href{https://www.mouser.com/datasheet/2/758/DHT11-Technical-Data-Sheet-Translated-Version-1143054.pdf}{DHT-11}}   & \textbf{\href{http://codigoelectronica.com/blog/am2301-datasheet}{AM-2301}}  & \textbf{\href{https://www.sparkfun.com/datasheets/Sensors/Temperature/DHT22.pdf}{DHT-22}}   & \textbf{\href{https://datasheetspdf.com/pdf/1298922/AOSONG/AM1001/1}{AM-1001}}  \\ \hline
 \textbf{Costo [USD]}                                                           & 1.3           & 7 & 4.93 & 5.6	\\ \hline
 \textbf{\begin{tabular}[c]{@{}c@{}}Rango de\\ operación [\%RH]\end{tabular}}                                              & 20 $\sim$ 90 & 0 $\sim$ 100 & 0 $\sim$ 100 & 20 $\sim$ 90 \\ \hline
-\textbf{Presición [\%RH]}                                                       & $\pm$4	& $\pm$3	 & $\pm$2	& $\pm$5	\\ \hline
+\textbf{Precisión [\%RH]}                                                       & $\pm$4	& $\pm$3	 & $\pm$2	& $\pm$5	\\ \hline
 \textbf{Tipo de salida}                                                  & Digital           & Digital           & Digital           & Analógica         \\ \hline
 \textbf{Imagen}                                                          & \includeintable{.1}{ImagenesFactibilidad/DHT-11}                 & \includeintable{.1}{ImagenesFactibilidad/AM-2301}                 & \includeintable{.1}{ImagenesFactibilidad/DHT-22}                 & \includeintable{.1}{ImagenesFactibilidad/AM-1001} \\ \hline
 \end{tabular}
 \caption{Comparación de sensores de humedad.}
+\label{comp:hum}
 \end{table}
 
 \Subsubsubsection{Luminosidad}
@@ -57,35 +59,36 @@ En la medición del nivel de luminosidad se puede optar por diversos caminos. Ex
 \textbf{Imagen}                                                                       & \includeintable{.1}{ImagenesFactibilidad/BH-1750} & \includeintable{.1}{ImagenesFactibilidad/TEMT-6000}                                                                               & \includeintable{.1}{ImagenesFactibilidad/OPT-101} & \includeintable{.1}{ImagenesFactibilidad/GL55-LM393}                   \\ \hline
 \end{tabular}
 \caption{Comparación de sensores de luminosidad.}
+\label{comp:lum}
 \end{table}
 
 
-\Subsubsubsection{Imágenes}
-Para la obtención de captura imágenes y teniendo en cuenta la tecnología utilizada para la unidad de procesamiento, se encontraron diversos módulos de cámara que se pueden usar:
+\Subsubsubsection{Imágenes y video}
+Para la obtención de captura imágenes como de video, teniendo en cuenta la tecnología utilizada para la unidad de procesamiento, se encontraron diversos módulos de cámara que se pueden usar:
 
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|c|c|}
 \hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Aspectos\\ comparativos\end{tabular}} 					& \textbf{\href{https://cdn.sparkfun.com/datasheets/Dev/RaspberryPi/ov5647_full.pdf}{RPi-CMOD-V1}}      & \textbf{\href{https://www.arducam.com/sony/imx477/}{RPi-CMOD-V2}}     & \textbf{\href{http://www.opensourceinstruments.com/Electronics/Data/IMX219PQ.pdf}{RPi-HQC}}  		& \textbf{\href{https://www.digikey.com/catalog/es/partgroup/zero-spy-camera-for-raspberry-pi-zero-board/70309}{RPi-ZEROC}}     \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Aspectos\\ comparativos\end{tabular}} 					& \textbf{\href{https://cdn.sparkfun.com/datasheets/Dev/RaspberryPi/ov5647_full.pdf}{RPi-CMOD-V1}}      & \textbf{\href{https://www.arducam.com/sony/imx477/}{RPi-CMOD-V2}}     & \textbf{\href{http://www.opensourceinstruments.com/Electronics/Data/IMX219PQ.pdf}{RPi-HQC}}   		& \textbf{\href{https://www.digikey.com/catalog/es/partgroup/zero-spy-camera-for-raspberry-pi-zero-board/70309}{RPi-ZEROC}}     \\ \hline
 \textbf{Costo [USD]}                                                     					& 25		                        																	& 25 	                           										& 50 																								& 20                          																									\\ \hline
 \textbf{Tamaño [mm]}                                                 	 					& 25 x 24 x 9                      																		& 25 x 24 x 9                      										& 38 x 38 x 18.4     																				& 8.6 x 8.6 x 5.2            																									\\ \hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Resolución de la\\ cámara [MP]\end{tabular}}             & 5	                               																		& 8	                               										& 12.3   																							& 5                          																									\\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Resolución de la\\ cámara [MP]\end{tabular}}             & 5	                               																		& 8	                               										& 12   																							& 5                          																									\\ \hline
 \textbf{Integración Linux}                                               					& V4L2 driver                     																		& V4L2 driver                      										& V4L2 driver																						& V4L2 driver                      																								\\ \hline
-\textbf{C API}                                                           					& OpenMAX IL y otras              																		& OpenMAX IL y otras               										& -         																						& -                       																										\\ \hline
-\textbf{Peso [g]}                                                        					& 3                               																		& 3.4                              										& 53                           																		& 1.1    																														\\ \hline
-\textbf{Sensor}                                                          					& OmniVision OV5647                																		& Sony IMX219                      										& Sony IMX477  																						& OV5647                    																									\\ \hline
+\textbf{Capacidad nocturna}                                                           					& No              																		& Filtro               										& No         																						& No                       																										\\ \hline
+\textbf{Peso [g]}                                                        					& 3                               																		& 3.4                              										& 12                           																		& 1.1    																														\\ \hline
+\textbf{Sensor}                                                          					& OmniVision OV5647                																		& Sony IMX219                      										& Sony IMX219  																						& OV5647                    																									\\ \hline
 \textbf{\begin{tabular}[c]{@{}c@{}}Temperatura de\\ operación [°C]\end{tabular}}            & \multicolumn{1}{c|}{-25$\sim$80} 																		& \multicolumn{1}{c|}{-25$\sim$80} 										& \multicolumn{1}{c|}{-25$\sim$80} 																	& \multicolumn{1}{c|}{-25$\sim$80} 																								\\ \hline
 \textbf{Imagen}                                                          					& \includeintable{.1}{ImagenesFactibilidad/RPICAMV1}                  									& \includeintable{.1}{ImagenesFactibilidad/RPICAMV2}                    & \includeintable{.1}{ImagenesFactibilidad/RPIHQCAM}         &
 \includeintable{.1}{ImagenesFactibilidad/RPIZEROCAM}       \\ \hline
 \end{tabular}
 \caption{Comparación entre cámaras.}
+\label{comp:cam}
 \end{table}
 
 
-\Subsubsubsection{Modulo RTC}
-Es fundamental contar con un m\'etodo para conocer la fecha y hora de manera confiable. Tanto como para saber en que momento fueron tomadas las mediciones como as\'i tambi\'en saber en que momentos habilitar el hotspot wifi.
-Teniendo esto en cuenta se proponen los siguientes m\'odulos:
+\Subsubsubsection{Tiempo}
+Es fundamental contar con un m\'etodo para conocer la fecha y hora de manera confiable. Tanto como para saber en qué momento fueron tomadas las mediciones. Teniendo esto en cuenta se proponen los siguientes módulos RTC:
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|c|}
@@ -98,6 +101,49 @@ Teniendo esto en cuenta se proponen los siguientes m\'odulos:
 \textbf{Precisión}                                                            & 3.5ppm         & -              & -              \\ \hline
 \textbf{Imagen}                                                               & \includeintable{.1}{ImagenesFactibilidad/DS3231} & \includeintable{.1}{ImagenesFactibilidad/ds1302} & \includeintable{.1}{ImagenesFactibilidad/ds1307} \\ \hline
 \end{tabular}
+\caption{Comparación entre módulos RTC.}
+\label{comp:Rtc}
 \end{table}
 
+\Subsubsubsection{Presencia}
+Se desea conocer cuándo está presente el ave dentro del nido. Para esto, se decide utilizar BLE por su baja utilización de recursos energéticos. Una opción es utilizar la \rpi como receptora. Otras opciones que se exploran involucran utilizar un transceptor\footnote{Un tranceptor es aquel cuyo se encuentra compuesto con un transmisor y un receptor, compartiendo circuito y/o encapsulado.} \textit{Bluetooth}.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Aspectos\\ comparativos\end{tabular}} &
+  \textbf{\textbf{\href{https://static.raspberrypi.org/files/product-briefs/Raspberry-Pi-Model-Bplus-Product-Brief.pdf}{RPi 3B}}} &
+  \textbf{\textbf{\href{https://www.seeedstudio.com/document/pdf/DS\_nRF24L01.pdf}{NRF24L01}}} &
+  \textbf{\textbf{\href{https://cdn.shopify.com/s/files/1/0496/1153/8592/files/WIM2480\_v1.4.pdf?v=1633424704.pdf}{WIM2480}}} &
+  \textbf{\textbf{\href{https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf}{ESP32-S3-WROOM-1-N4}}} \\ \hline
+\textbf{Costo [USD]} &
+  - &
+  3 &
+  10.77 &
+  3.25 \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Compatibilidad\\ Bluetooth\end{tabular}} &
+  Bluetooth 4.1 &
+  Bluetooth 4.1 &
+  Bluetooth 5.2 &
+  Bluetooth 5.0 \\ \hline
+\textbf{BLE} &
+  Sí &
+  Sí &
+  Sí &
+  Sí \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Sensibilidad\\ Rx [dBm]\end{tabular}} &
+  - &
+  -85 &
+  -92 &
+  –103.5 \\ \hline
+\textbf{Imagen} &
+  \includeintable{.1}{ImagenesFactibilidad/RPICM} &
+  \includeintable{.1}{ImagenesFactibilidad/NRF24L01} &
+  \includeintable{.1}{ImagenesFactibilidad/WIM2480} &
+  \includeintable{.1}{ImagenesFactibilidad/ESP32-S3-WROOM-1} \\ \hline
+\end{tabular}
+\caption{Comparación de módulos para la detección de presencia.}
+\label{comp:bt}
+\end{table}
 

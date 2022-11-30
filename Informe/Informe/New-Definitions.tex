@@ -3,6 +3,8 @@
 \definecolor{AzulInfo}{rgb}{0.180,0.455,0.710}	%RGB	%{46,116,181}
 \definecolor{AzulTable}{rgb}{0.302,0.507,0.871}	%RGB	%{68,114,196}
 \definecolor{PName}{rgb}{0.353,0.353,0.353}		%RGB	%{90,90,90}
+\definecolor{mygreen}{rgb}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{rgb}{170,55,241}
 
 %Change Font Size
 
@@ -13,13 +15,31 @@
 %IMAGE IN TABLE:			%Ejemplo: \includeintable{.3}{ImagenesFactibilidad/pend}
 \renewcommand\fbox{\fcolorbox{white}{white}}
 \setlength{\fboxrule}{0pt}	%padding thickness
-\setlength{\fboxsep}{4pt}	%border thickness
+\setlength{\fboxsep}{0pt}	%border thickness
 \newcommand{\includeintable}[2]{	
 	\fbox{
 		\begin{minipage}{#1\textwidth}
         	\includegraphics[width=\linewidth]{#2}
     	\end{minipage}
 	}
+}
+
+
+%IMAGE IN TESTBENCH:			%Ejemplo: \includetestbench{.3}{1}{ImagenesFactibilidad/pend}
+%esta pensado apra usarse con pdf		
+\newcommand{\includetestbench}[4]{	
+	\fbox{
+
+		\begin{minipage}[c][#2][c]{#1}
+			\begin{adjustwidth}{-5pt}{0pt}
+        	\includegraphics[width=1.1\linewidth,page= #3]{#4}
+        		\end{adjustwidth}
+    	\end{minipage}
+	}
+}
+%LINK IN REF
+\newcommand{\reflink}[1]{		%LINK
+	\href{#1}{#1}
 }
 
 %NOTAS:
@@ -33,10 +53,32 @@
 
 \newcommand{\observacion}[2]{  \ifnumequal{1}{#1}{ { \todo[inline,backgroundcolor=red!25,bordercolor=red!100]{\textbf{Observación: #2}} } }{  }  }
 
-\newcommand{\TBD}{\textcolor{red}{(TBD) }}
-\newcommand{\tbd}{\textcolor{red}{(TBD) }}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
 
-\newcommand{\TBC}{\textcolor{red}{(TBC) }}
-\newcommand{\tbc}{\textcolor{red}{(TBC) }}
+\newcommand{\TBD}{\textcolor{red}{(TBD)\xspace}}
+\newcommand{\tbd}{\textcolor{red}{(TBD)\xspace}}
+
+\newcommand{\TBC}{\textcolor{red}{(TBC)\xspace}}
+\newcommand{\tbc}{\textcolor{red}{(TBC)\xspace}}
 
 \newcommand{\quotes}[1]{``#1''}
+\newcommand{\q}[1]{``#1''}
+
+\newcommand{\ip}{192.168.1.101:1880\xspace}
+\newcommand{\ipadmin}{192.168.1.101:1880/admin\xspace}
+\newcommand{\nodered}{\textit{Node Red}\xspace}
+\newcommand{\rspi}{Raspberry Pi\xspace}
+\newcommand{\rpi}{R-Pi\xspace}
+
+\def\precio{1000\xspace} %precio del producto 
+\def\unidadespostfin{quince\xspace} %cuantos productos se podrian hacer luego de finalizar el proyecto
+
+
+% Comandos para agregar elementos en tablas de acronimos y definiciones
+\newcommand{\addacronym}[2]{\textbf{#1} & \begin{tabular}[l]{@{}l@{}}#2\end{tabular} \\ \hline}
+
+% tabItem
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
+% Para tabla: negrita matematica
+\newcommand{\boldmathcol}[1]{\multicolumn{1}{c|}{$\boldsymbol{#1}$}}

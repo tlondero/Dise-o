@@ -1,21 +1,16 @@
-
+La primera solución planteada para el abastecimiento de energía de la UBM se basa en la transferencia de energía al dispositivo del ave por medio de radiación electromagnética. A continuación, se detalla el análisis de factibilidad tecnológica realizado y las conclusiones tomadas de esta propuesta.
 
 \Subsubsubsection{Planteamiento del Problema}
 
-La morfología del nido plantea la necesidad de recargar la UBM a distancias de entre 32 y 64 cm. Esto es dictado por las mínimas y máximas dimensiones medidas del nido entre la bóveda, donde se puede colocar electrónica, y el fondo, donde duerme el ave \cite{ref:PaperValeriaOjeda}.
+La morfología del nido plantea la necesidad de recargar la UBM a distancias de entre $32$ y $64 \ cm$. Esto es dictado por las mínimas y máximas dimensiones medidas del nido entre la bóveda, donde se puede colocar electrónica, y el fondo, donde duerme el ave \cite{ref:PaperValeriaOjeda}.
 
 En el mejor de los casos, el pájaro carpintero permanece por ocho horas en el nido mientras duerme, y luego cuida a las crías turnándose con la hembra durante el día. Por lo tanto, este permanecería un total de aproximadamente doce horas en el nido.
 
-En el peor de los casos, el ave únicamente permanece seis horas dentro del nido para dormir.
-
-Como la UBM tiene un consumo diario de
-
+En el peor de los casos, el ave únicamente permanece seis horas dentro del nido para dormir. La UBM tiene un consumo diario de
 \begin{equation}
 2.5 \ V \cdot 1 \ mA \cdot 24 \ hs = 60 \ mWh
 \end{equation}
-
 por lo que, tomando ambos casos, se obtiene un requerimiento de transmisión de potencia de
-
 \begin{equation}
 	\begin{cases} 
        \frac{60 \ mWh}{11 \ hs}= 5.5 \ mW & \text{Mejor caso} \\
@@ -47,11 +42,11 @@ donde $M$ es el coeficiente de mutua-inductancia entre las bobinas y $L_1$ y $L_
 
 La eficiencia en la transmisión de energía de este método es alta \cite{ref:wpteff}, pero depende en gran medida por el factor de acople entre ambas bobinas. Este factor de acople disminuye considerablemente con la distancia y la desalineación entre bobinas \cite{ref:wirelesschargingkeyelements} \cite{ref:couplingfactor_1}.
 
-Como las distancias a las que la transmisión se debe efectuar son de entre 32 y 64 cm y no se puede garantizar alineación entre bobinas al estar sujeto al comportamiento impredecible del ave, se descarta este método como solución.
+Como las distancias a las que la transmisión se debe efectuar son de entre $32$ y $64 \ cm$ y no se puede garantizar alineación entre bobinas al estar sujeto al comportamiento impredecible del ave, se descarta este método como solución.
 
 \Subsubsubsection{Carga por Radiofrecuencia}
 
-Si se parte de la ecuación del campo magnético en el eje azimutal de un dipolo de hertz, se tiene que
+Si se parte de la ecuación del campo magnético en el eje azimutal de un dipolo de Hertz, se tiene que
 \begin{equation}
 E_\theta = -\frac{\eta}{4\pi}I \cdot \Delta L \cdot k^2 \cdot sin\theta \cdot e^{-jkr} \left[ \frac{1}{jkr}+\left( \frac{1}{jkr}\right)^2 + \left(\frac{1}{jkr}\right)^3 \right]
 \end{equation}
@@ -74,7 +69,7 @@ En la zona reactiva la relación entre los campos eléctricos y magnéticos no e
 
 En el caso de la zona radiativa o de Fresnel, toda la energía es radiada. Sin embargo, la relación entre el campo eléctrico y magnético sigue siendo impredecible.
 
-A una distancia entre una y dos longitudes de onda, los efectos de campo cercano comienzan a cesar, mientras que los efectos de campo lejano comienzan a aparecer. Es en esta zona por lo tanto, que ambos efectos están presentes y tienen importancia \cite{ref:NearFieldVsFarField}. Los dispositivos RFID suelen operar en esta zona \cite{ref:NearFieldUHFRFID}.
+A una distancia entre una y dos longitudes de onda, los efectos de campo cercano comienzan a cesar, mientras que los efectos de campo lejano comienzan a aparecer. Por lo tanto, es en esta zona que ambos efectos están presentes y tienen importancia \cite{ref:NearFieldVsFarField}. Los dispositivos RFID suelen operar en esta zona \cite{ref:NearFieldUHFRFID}.
 
 Por otro lado, el campo lejano es el utilizado para realizar todo tipo de telecomunicaciones hoy en día. En esta zona, el campo eléctrico y campo magnético son ortogonales y la razón entre ambos es la impedancia del medio. Además, el vector de Poynting, definido como $\vec{S} = \vec{E}\times \vec{H}$, provee una medida de la energía electromagnética radiada \cite{ref:PhysicsOscillations}.
 
@@ -88,6 +83,7 @@ reescribiendo esta fórmula para utilizar las ganancias de las antenas en vez de
 \begin{equation}
 P_r[dBm] = P_t[dBm] + Gt[dB] + G_r[dB] - L_{bf}[dB] - L_{cab}[dB] - L_{roe}[dB] - L_{r}[dB]
 \end{equation}
+\label{eq:balance_potencias}
 donde $P_r$ es la potencia recibida en la antena receptora, $P_t$ la potencia emitida por la antena transmisora, $G_t$ la ganancia de la antena transmisora, $G_r$ la ganancia de la antena receptora, $L_{bf}$ las pérdidas por espacio libre, $L_{cab}$ las pérdidas en los cables de ambas antenas, $L_{roe}$ las pérdidas por retorno en ambas antenas, y $L_{r}$ las pérdidas por desacople entre las líneas de transmisión y las antenas.
 
 Para el caso de la pérdida por espacio libre, esta se puede calcular como
@@ -95,15 +91,16 @@ Para el caso de la pérdida por espacio libre, esta se puede calcular como
 \begin{equation}
 L_{bf} = 32.5dB + 20log_{10}f[MHz]+20log_{10}R[km]
 \end{equation}
-mientras que el resto de los datos se puede obtener por medio de las hojas de datos o ensayos de las antenas, exceptuando la potencia a ser calculada y las pérdidas por desacople, las cuales dependen constructivamente del diseño de la líneas de transmisión que conectan con las antenas.
+\label{eq:perdidas_potencias}
+mientras que el resto de los datos se puede obtener por medio de las hojas de datos o ensayos de las antenas, exceptuando la potencia a ser calculada y las pérdidas por desacople, las cuales dependen constructivamente del diseño de las líneas de transmisión que conectan con las antenas.
 
 \Subsubsubsection{Banda de Frecuencia Adoptada}
 
-Se puede observar que las pérdidas de espacio libre aumentan mediante crece la frecuencia de la onda electromagnética emitida. Esto plantea una situación de compromiso. Si la frecuencia es muy alta, las pérdidas por espacio libre serán muy grandes. Mientras que si la frecuencia es muy baja, la longitud de onda será muy grande, por lo que se estaría trabajando en el campo reactivo. Esto no es deseado debido a la imposibilidad de determinar con precisión la densidad de potencia.
+Se puede observar que las pérdidas de espacio libre aumentan mediante crece la frecuencia de la onda electromagnética emitida. Esto plantea una situación de compromiso. Si la frecuencia es muy alta, las pérdidas por espacio libre serán muy grandes. Mientras que, si es muy baja, la longitud de onda será muy grande, por lo que se estaría trabajando en el campo reactivo. Esto no es deseado debido a la imposibilidad de determinar con precisión la densidad de potencia, y la gran pérdida de potencia con la distancia.
 
-Se decidió utilizar la banda de 915 MHz por las siguientes razones:
+Se decidió utilizar la banda de $915 \ MHz$ por las siguientes razones:
 \begin{itemize}
-\item La zona de transición ocurre entre 32.8 y 65.6 cm que concuerda con las distancias mínimas y máximas entre emisor y receptor. Si bien no estaremos trabajando en campo lejano, esto no acarrea problemas, ya que hay basta cantidad de antecedentes del uso de los efectos de campo cercano en dispositivos comerciales \cite{ref:NearFieldUHFRFID} \cite{ref:Humavox}.
+\item La zona de transición ocurre entre $32.8$ y $64.6 \ cm$ que concuerda con las distancias mínimas y máximas entre emisor y receptor. Si bien no estaremos trabajando en campo lejano, esto no acarrea problemas, ya que hay basta cantidad de antecedentes del uso de los efectos de esta zona en dispositivos comerciales \cite{ref:NearFieldUHFRFID} \cite{ref:Humavox}.
 \item Esta frecuencia pertenece a la banda ISM, la cual está reservada para propósitos industriales, científicos o médicos, excluyendo las aplicaciones de telecomunicaciones \cite{ref:ITUISM}, atribuidas a la Región 2 definida por la ITU como América \cite{ref:ITUREGION}.
 \end{itemize}
  
@@ -111,20 +108,133 @@ Se decidió utilizar la banda de 915 MHz por las siguientes razones:
 
 Para realizar las comparaciones entre antenas transmisoras, se tuvieron en cuenta los siguientes criterios:
 \begin{itemize}
-\item \textbf{Dimensiones:} La antena transmisora deberá ser colocada en la bóveda del nido, dado que ese es el único lugar donde se puede colocar electrónica sin que esta sea perturbada por las aves y vice versa. El volumen de la bóveda se puede aproximar a el de un cilindro macizo chato de diámetro entre 7.9 y 9.7 cm y aproximadamente 5 cm de altura, por lo que las dimensiones de la antena emisora estarán acotadas por estos valores.
+\item \textbf{Dimensiones:} La antena transmisora deberá ser colocada en la bóveda del nido, dado que ese es el único lugar donde se puede colocar electrónica sin que esta sea perturbada por las aves y viceversa. El volumen de la bóveda se puede aproximar al de un cilindro macizo chato de diámetro entre $7.9$ y $9.7 \ cm$ y aproximadamente $5 \ cm$ de altura, por lo que las dimensiones de la antena emisora estarán acotadas por estos valores.
+
 \item \textbf{Directividad:} Se quiere que la potencia enviada a la antena se transforme en radiación electromagnética que llegue a la mochila del ave, por lo que radiación que no sea dirigida directamente hacia el fondo del nido será potencia desperdiciada. Es por esto que se quiere una alta directividad en la antena emisora. También hay un límite máximo en la directividad de la antena. Sin embargo, esta limitación no se alcanzará, dado que la tecnología a utilizar será de antenas del tipo planas, más cortas eléctricamente que media longitud de onda por cuestiones de limitaciones en las dimensiones. 
-\item \textbf{Potencia Máxima:} Como las pérdidas en el circuito electromagnético son grandes, una muy baja parte de la potencia enviada a la antena transmisora formará parte de la potencia entregada a las baterías de la mochila, por lo que para recibir la potencia necesaria, se debe transmitir en el orden de los watts. Es por esto que la potencia máxima es una especificación relevante al momento de decidir entre soluciones.
+
+\item \textbf{Potencia Máxima:} Como las pérdidas en el circuito electromagnético son grandes, una muy baja parte de la potencia enviada a la antena transmisora formará parte de la potencia entregada a las baterías de la mochila, por lo que, para recibir la potencia necesaria, se debe transmitir en el orden de los watts. Es por esto que la potencia máxima es una especificación relevante al momento de decidir entre soluciones.
 \end{itemize}
 
-Mientras que para el caso de las antenas receptoras, se tuvieron en cuenta los siguientes criterios:
+Mientras que, para el caso de las antenas receptoras, se tuvieron en cuenta los siguientes criterios:
 \begin{itemize}
 \item \textbf{Eficiencia:} Esta será la especificación más importante y es la que determinará la factibilidad de la solución. Se buscará la mayor eficiencia posible para lograr transmitir a las baterías la potencia recibida por el campo electromagnético.
-\item \textbf{Lóbulo isotrópico:} Como se desconoce cuál será la posición del ave dentro del nido, se requiere que el lóbulo de radiación de la antena receptora sea lo más isotrópico posible, garantizando una recepción de potencia uniforme sin importar la posición del ave. Se buscará una ganancia menor a 2 dBi.
+\item \textbf{Lóbulo isotrópico:} Como se desconoce cuál será la posición del ave dentro del nido, se requiere que el lóbulo de radiación de la antena receptora sea lo más isotrópico posible, garantizando una recepción de potencia uniforme sin importar la posición del ave. Se buscará una ganancia menor a $2 \ dBi$.
 \item \textbf{Peso:} El ave no puede cargar con más de un cierto porcentaje de su propio peso, por lo que minimizar esta especificación es crucial.
-\item \textbf{Dimensiones:} Es necesario no perturbar al ave con la mochila. Esto requiere que la antena receptora posea las mínimas dimensiones posibles. Sin embargo, como la banda a utilizar será la de 915 MHz y un cuarto de onda en esta frecuencia es alrededor de 8 cm, existe una relación de compromiso entre las dimensiones de la antena receptora y la eficiencia de esta.
+\item \textbf{Dimensiones:} Es necesario no perturbar al ave con la mochila. Esto requiere que la antena receptora posea las mínimas dimensiones posibles. Sin embargo, como la banda a utilizar será la de $915 \ MHz$ y un cuarto de onda en esta frecuencia es alrededor de $8 \ cm$, existe una relación de compromiso entre las dimensiones de la antena receptora y la eficiencia de esta.
 \end{itemize}
 
 Finalmente, una restricción a tener en cuenta para ambas antenas será el costo.
+
+\Subsubsubsection{Interacción entre las Aves y la Radiación Electromagnética}
+
+Se recopiló información sobre experimentos donde se ha evaluado las consecuencias de exponer distintos tipos de aves frente a ondas electromagnéticas.
+
+Esta radiación produce dos tipos de efectos sobre los tejidos biológicos, clasificándose en térmicos y no térmicos. Los primeros se manifiestan como un aumento de la temperatura del sistema que recibe la emisión. Dependiendo de la duración y la intensidad de la exposición, se pueden observar respuestas físicas o psicológicas. Por otro lado, los no térmicos se manifiestan como cambios en el metabolismo celular. Se observan cambios en los comportamientos de los individuos expuestos cuando se comprometen estructuras del sistema nervioso. La principal diferencia entre estos dos procesos se centra en el tiempo de exposición.
+
+Se ha corroborado que gallinas expuestas a ondas en un rango de densidad de potencia de 200 a 500 $\nicefrac{W}{{m}^2}$ han reaccionado evitando o escapando de este campo al poco tiempo de exposición \cite{ref:non-termal}.
+
+En un segundo estudio realizado sobre las especies Cyanocitta Cristata y Haemorhous Mexicanus determina un nivel máximo de densidad de potencia aplicada sobre estas aves, siendo este de $230 \ \nicefrac{W}{{m}^2}$. La primer especie tiene un tamaño que oscila entre los 22 y los 30 centímetros, y un peso entre 70 y 100 gramos. Para la segunda especie, su largo varía entre 12.5 y 15 centímetros, mientras que en cuanto a peso varía entre 16 y 27 gramos. Esto se remarca porque las aves expuestas a la misma densidad mencionada pueden afrontar mayores riesgos si poseen tamaños superiores, siendo este el caso del Campephilus Magellanicus \cite{ref:thermo-birds}.
+
+En otro estudio similar al primero, se radió a gallinas, palomas y gaviotas con una densidad de 100 a 300 $\nicefrac{W}{{m}^2}$, las cuales se encontraban encerradas dentro de cajas. Se dispuso un arreglo que permitiera posicionar la antena tanto por encima como por debajo del especie de estudio. Además, se repitió la experiencia primero cubriendo la cabeza del ave y luego su cuerpo.
+
+Se observó para las gallinas que, al colocar la antena por encima de ellas, a los pocos segundos los animales comenzaron a realizar movimientos de extensión de todas sus extremidades. Se atribuyó dicha reacción a la penetración directa sobre la médula espinal, ya que al repetir el experimento radiando desde abajo del ave se notaron sobresaltos de los especímenes pero sin tantos signos de disturbios musculares. No se notaron cambios al cubrir la cabeza y el cuerpo.
+
+Para las palomas y gaviotas se obtuvieron resultados similares pero menos dramáticos. Es importante remarcar que el tamaño de estas dos últimas es menor al de las gallinas, siendo consistente con los resultados obtenidos en el segundo informe. Todas las aves de estudio mostraron que sus alas no retornaron a su posición normal de retracción por un período mayor o igual a una hora \cite{ref:effect-radiation}.
+
+\Subsubsubsection{Esquema de Conexionado}
+
+El bloque del cargador de la UBM consiste en un receptor y un transmisor de potencia. La transmisión inalámbrica consta, por el lado del transmisor, de un oscilador HM-TRPW-RS232 de $915 \ MHz$ el cual está comandado por la \rpi y se comunica mediante UART; como así también de un amplificador de potencia alimentado por una etapa DC-DC Xl6009 de $12 \ V$ a $15 \ V$.
+
+Por el lado del receptor, se encuentra el integrado P1110B, el cual almacena energía temporalmente en un capacitor para realizar posteriormente la carga de la UBM.
+
+\begin{figure}[H]
+	\centering	
+	\includegraphics[width=0.9\textwidth, page=8]{ImagenesIngenieria de Detalle/FlowChart.pdf}
+	\caption{Diagrama en bloques cargador.}
+	\label{fig:diagrama_hardware_antenas}
+\end{figure}
+
+Para la trasmisión de la señal de $915 \ MHZ$ se utiliza un cable del tipo \textit{RG-213}. Este se caracteriza por poseer bajas pérdidas de $23.054 \ \nicefrac{dB}{100m}$.
+
+\begin{figure}[H]
+	\centering	
+	\includegraphics[width=0.5\textwidth, page=8]{ImagenesIngenieria de Detalle/hmtrpwrs232}
+	\caption{Módulo utilizado como oscilador HM-TRPW-RS232.}
+	\label{fig:oscilador}
+\end{figure}
+
+Debido a la falta de stock mundial de componentes electrónicos a causa de la pandemia, se utilizó un módulo transciever FSK que opera en la banda de 915MHz. Este módulo HM-TRPW-RS232 puede generar la señal carrier de hasta $20 \ dBm$ y posee interfaz RS-232 para la comunicación UART.
+
+\begin{itemize}
+	\item Potencia máxima de $20 \ dBm$.
+	\item Alimentación $100 \ mA@20 \ dBm$.
+	\item Corriente suspendido $1 \ \mu A$.
+	\item Velocidad de comunicación $1.2 \ kbps - 115.2 \ kbps$.
+	\item Dimensiones $44.1 \times 30  \times 1.2 \ mm$.
+\end{itemize}
+
+Para el amplificador de potencia de RF, como las unidades a producir serán muy pocas, no se justifican las horas necesarias para diseñar el circuito y la placa impresa de un amplificador de RF. Por esta razón, se utilizará uno comercial. 
+
+\begin{figure}[H]
+	\centering	
+	\includegraphics[width=0.5\textwidth, page=8]{ImagenesIngenieria de Detalle/p1110b}
+	\caption{Módulo utilizado como \textit{power harvester}.}
+	\label{fig:p1110b}
+\end{figure}
+
+Para la recepción de la radiofrecuencia se utiliza el \textit{power harvester} P1110B. Este integrado toma la señal de radiofrecuencia y realiza con esta la carga de un capacitor. Cuando el capacitor llega a un valor de tensión máximo, habilita la salida mediante una etapa DC-DC hasta que el capacitor baja su tensión por debajo de un mínimo para volver a cargarse hasta el máximo.
+\begin{itemize}
+	\item Eficiencia del $60 \ \%$.
+	\item Adaptado internamente a $50 \ \Omega$.
+	\item Operación por encima de $-5 \ dBm$.
+	\item Opción de carga para Li-ion y baterías alcalinas.
+\end{itemize}
+
+\Subsubsubsection{Amplificador de Potencia}
+
+Para el amplificador de potencia se tuvieron en cuenta distintos módulos armados.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Aspectos\\ comparativos\end{tabular}}         & \textbf{\begin{tabular}[c]{@{}c@{}}\href{https://www.ebay.com/itm/133414335638}{NWDZ RF PA}\\ \href{https://www.ebay.com/itm/133414335638}{V2.0}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\href{https://www.ebay.com/itm/284470793842}{Unbranded Broadband}\\ \href{https://www.ebay.com/itm/284470793842}{RF Amplifier}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\href{https://www.ebay.com/itm/124120749418}{DH-RF}\\ \href{https://www.ebay.com/itm/124120749418}{V2017}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\href{https://www.ebay.com/itm/283538071937}{JP-2Y560895}\\ \href{https://www.ebay.com/itm/283538071937}{RF Amplifier}\end{tabular}} \\ \hline
+\textbf{Costo [USD]}                                                             & 18.59                                                                                                                                                                                                                                               & 9.82                                                                                                                                                                                                                                                  & 23                                                                                                                                                                                                              & 69.31                                                                                                                                                                                                                            \\ \hline
+\textbf{Alimentación [V]}                                                        & 12-15                                                                                                                                                                                                                                               & 12                                                                                                                                                                                                                                                    & 15                                                                                                                                                                                                              & 24-28                                                                                                                                                                                                                            \\ \hline
+\textbf{Frecuencia [MHz]}                                                        & 2-700                                                                                                                                                                                                                                               & 1-930                                                                                                                                                                                                                                                 & 1-1000                                                                                                                                                                                                          & 915 +- 25                                                                                                                                                                                                                        \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Potencia salida\\ máxima [dBm]\end{tabular}}  & 34.8                                                                                                                                                                                                                                                & 29                                                                                                                                                                                                                                                    & 35                                                                                                                                                                                                              & 42                                                                                                                                                                                                                               \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Potencia entrada\\ máxima [dBm]\end{tabular}} & 10                                                                                                                                                                                                                                                  & 0                                                                                                                                                                                                                                                     & 0                                                                                                                                                                                                               & 23                                                                                                                                                                                                                               \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Ganancia de\\ potencia [dB]\end{tabular}}     & 35                                                                                                                                                                                                                                                  & 29                                                                                                                                                                                                                                                    & 32                                                                                                                                                                                                              & Ajustable                                                                                                                                                                                                                        \\ \hline
+\textbf{Dimensiones [cm]}                                                        & 7x3                                                                                                                                                                                                                                                 & 5x5                                                                                                                                                                                                                                                   & 3.7x5.6                                                                                                                                                                                                         & 4x8                                                                                                                                                                                                                              \\ \hline
+\textbf{Imagen}                                                                  & \includeintable{.1}{ImagenesIngenieria de Detalle/nwdz}                                                                                                                                                                                             & \includeintable{.1}{ImagenesIngenieria de Detalle/unbranded}                                                                                                                                                                                          & \includeintable{.1}{ImagenesIngenieria de Detalle/DH-RF-V2017}                                                                                                                                                  & \includeintable{.1}{ImagenesIngenieria de Detalle/s-l1600}                                                                                                                                                                       \\ \hline
+\end{tabular}
+\caption{Comparativa amplificadores de potencia.}
+\label{comp:potamp}
+\end{table}
+
+\Subsubsubsection{Integrado de Energy Harvesting}
+
+Se investigaron diversos métodos de transmisión de energía inalámbrica a través de campos electromagnéticos. Dentro de estos se en cuenta el campo cercano y el de radiofrecuencia. El primero se caracteriza por ser puramente imaginario y por poseer una caída proporcional al cuadrado de la distancia, mientras que el segundo (radiación) cae linealmente.
+
+Debido a que la aplicación es de una distancia que cae en el rango del campo lejano, se optó por la radiofrecuencia. Es así como surgieron los integrados IC-P2110 y IC-P1110 de PowerCast, los cuales permiten la recolección de energía de radio frecuencia almacenando está en capacitores o con la opción de directamente cargar una batería (P1110). Se analiza a modo comparativo ambos IC en la Tabla (\ref{tab:cagadores_comp}).
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Aspectos\\ comparativos\end{tabular}}                          	&  \textbf{\href{https://www.powercastco.com/documentation/p1110-evb-datasheet/}{IC-P1110}}  	&\textbf{\href{https://www.powercastco.com/wp-content/uploads/2016/12/P2110B-Datasheet-Rev-3.pdf}{IC-P2110}}                 \\ \hline
+\textbf{Costo [USD]}                                                                              	& 48.33	                                                                                           				& 32                                                                                              		\\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Funcionalidad\\ principal\end{tabular}}                          & \begin{tabular}[c]{@{}c@{}}Recolección y almacenamiento\\ de energía para uso variado\end{tabular} 			& \begin{tabular}[c]{@{}c@{}}Recolección de energía para carga\\ de baterías/Capacitores\end{tabular} 	\\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Frecuencia de\\ trabajo [MHz]\end{tabular}}                    	& 910 $\sim$ 928                                                                                     			& 910 $\sim$ 928                                                                                        \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Eficiencia del PH\\ para RFin = 11 dBm\end{tabular}}            	& 60 \%                                                                                               			& 45 \%                                                                                                 \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Corriente de salida\\ para RFin = 11 dBm\end{tabular}}           & 3 mA                                                                                                			& -                                                                                                     \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Tiempo de carga \\ inicial del capacitor [s]\end{tabular}} 	  	& -                                                                                                   			& < 5                                                                                           		\\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Posee placa\\ de evaluación\end{tabular}}                  		& Sí                                                                                                  			& Sí                                                                                                    \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Impedancia de\\ entrada  [$\Omega$] \end{tabular}}             	& 50                                                                                                  			& 50                                                                                                    \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Temperatura de\\ operación [°C]\end{tabular}}                  	& -40 $\sim$ 85                                                                                       			& -40 $\sim$ 85                                                                                         \\ \hline
+\end{tabular}
+\caption{Comparación entre cargadores.}
+\label{tab:cagadores_comp}
+\end{table}
 
 \Subsubsubsection{Comparación entre Antenas}
 \begin{table}[H]
@@ -143,6 +253,7 @@ Finalmente, una restricción a tener en cuenta para ambas antenas será el costo
 \textbf{Lóbulo}                                                             & \includeintable{.1}{ImagenesFactibilidad/LOB1}                                       & \includeintable{.1}{ImagenesFactibilidad/LOB2}                                              & \includeintable{.1}{ImagenesFactibilidad/LOB3}                                     \\ \hline
 \end{tabular}
 \caption{Comparación entre antenas transmisoras (Parte 1).}
+\label{comp:tx1}
 \end{table}
 
 \begin{table}[H]
@@ -161,6 +272,7 @@ Finalmente, una restricción a tener en cuenta para ambas antenas será el costo
 \textbf{Lóbulo}                                                             & \includeintable{.1}{ImagenesFactibilidad/LOB4}                                 & \includeintable{.1}{ImagenesFactibilidad/LOB5}                             \\ \hline
 \end{tabular}
 \caption{Comparación entre antenas transmisoras (Parte 2).}
+\label{comp:tx2}
 \end{table}
 
 \begin{table}[H]
@@ -181,6 +293,7 @@ Finalmente, una restricción a tener en cuenta para ambas antenas será el costo
 \textbf{Lóbulo}                                                             & \includeintable{.1}{ImagenesFactibilidad/LOBR1}                                                    & \includeintable{.1}{ImagenesFactibilidad/LOBR2}                                         & \multicolumn{1}{c|}{\quotes{Omnidireccional}}                                                 		                                    \\ \hline
 \end{tabular}
 \caption{Comparación entre antenas receptoras (Parte 1).}
+\label{comp:rx1}
 \end{table}
 
 \begin{table}[H]
@@ -201,4 +314,96 @@ Finalmente, una restricción a tener en cuenta para ambas antenas será el costo
 \textbf{Lóbulo}                                                             & \includeintable{.1}{ImagenesFactibilidad/LOBR4}                                                                                            & \includeintable{.1}{ImagenesFactibilidad/LOBR5}                                                                                                		& \multicolumn{1}{c|}{\includeintable{.1}{ImagenesFactibilidad/LOBR6}}                                                          \\ \hline
 \end{tabular}
 \caption{Comparación entre antenas receptoras (Parte 2).}
+\label{comp:rx2}
 \end{table}
+
+\Subsubsubsection{Selección de Componentes}
+
+Para el integrado de \textit{energy harvesting} se optó por el P1110 debido a su elevada eficiencia en la zona donde se transmitirá potencia.
+
+Por un lado, para el caso de las antenas transmisoras, se descartan APAE915R2540ABDB1-T, APAES915R80C16-T y ARRKP7059-S915B por su baja ganancia, además del alto costo de las últimas dos. También se descarta W3215 por ser de polarización lineal. Por lo que resta la antena \textbf{ISPC.91A.09.0092E}.
+
+Por otro lado, para las antenas receptoras, se descarta ANT-915-USP410 y ANT-915-CPA por su baja eficiencia. Se quita FXP\-290.07.0100A por ser demasiado grande. Se descarta ANT1204F005R0915A por especificaciones poco claras. Entre las restantes se escoge \textbf{NN01-105} por su tamaño a pesar de ser de polarización lineal, lo cual se deberá tener en cuenta en los cálculos, además de tener una potencia máxima de 5 $W$.
+
+\Subsubsubsection{Análisis Cuantitativo de la Recarga Inalámbrica}
+
+Utilizando las antenas ISPC.91A.09.0092E como transmisora y NN01-105 como receptora, así como el \textit{energy harvester} elegido, y siguiendo el esquema de conexionado planteado anteriormente, se calcula la potencia recibida en las baterías de la mochila del ave según las Ecuaciones (\ref{eq:balance_potencias}) y (\ref{eq:perdidas_potencias}). Se tiene en cuenta que la potencia en la antena transmisora es la máxima que esta admite de $5 \ W$.%, pérdidas de 2 $dB$ por acoples y las ganancias y eficiencias correspondientes de las antenas.
+
+Además, debido a que la antena transmisora es de polarización circular derecha y la antena receptora es de polarización lineal, se debe tener en cuenta que la eficiencia equivalente de la antena receptora será la mitad. Estas especificaciones se resumen en la Tabla (\ref{tab:antenas_calc}).
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|}
+\hline
+\multicolumn{1}{|c|}{Especificación} & Valor            \\ \hline
+Potencia transmitida                 & 5 $W$           \\ \hline
+Ganancia Tx                          & 5 $dBi$          \\ \hline
+Ganancia Rx                          & 1.7 $dBi$      \\ \hline
+Eficiencia Tx                        & 0.73             \\ \hline
+Eficiencia Rx                        & 0.82 $\cdot$ 0.5 = 0.41 \\ \hline
+Eficiencia Harvester                 & 0.6              \\ \hline
+%Pérdidas acoples                     & 2 $dB$           \\ \hline
+\end{tabular}
+\caption{Especificaciones de los cálculos realizados para el análisis cualitativo de la recarga inalámbrica.}
+\label{tab:antenas_calc}
+\end{table}
+
+Se puede observar en la Figura (\ref{fig:antenas_preliminar}) que a priori la potencia a la salida del \textit{energy harvester} es superior a la del peor caso para todas las distancias comprendidas entre los 32 y 64 $cm$. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{ImagenesFactibilidad/antenas_preliminar}
+	\caption{Cálculos preliminares de la potencia recibida en las baterías de la mochila del pájaro dada la distancia entre esta y la antena transmisora.}
+	\label{fig:antenas_preliminar}
+\end{figure}
+
+Sin embargo, estos cálculos tienen en cuenta que ambas antenas se encuentran perfectamente alineadas siempre. Esto en la práctica no es así. Como la mochila del ave va sobre su lomo, la antena receptora no siempre esta completamente horizontal. Es por esto que se debe multiplicar a la potencia recibida por el factor de pérdida por polarización o $PLF$ por sus siglas en inglés. Este factor se puede calcular como:
+\begin{equation}
+PLF = cos^2(\phi)
+\end{equation}
+
+En la Figura (\ref{fig:antenas_potrecibida}) se puede observar la potencia recibida en las baterías de la mochila, teniendo en cuenta el factor de pérdida por polarización para todos los ángulos de elevación $\phi$ posibles, siendo estos entre -90 y 90 grados.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{ImagenesFactibilidad/antenas_potrecibida}
+	\caption{Potencia recibida en las baterías de la mochila del pájaro, dada la distancia entre esta y la antena transmisora, considerando el factor de pérdida por polarización. A los costados de la superficie graficada se observan las curvas de nivel de los distintos ejes del gráficos.}
+	\label{fig:antenas_potrecibida}
+\end{figure}
+
+Se observa en las curvas de nivel que la potencia recibida decae rápidamente cuando el ángulo de elevación $\phi$ se aleja de su valor nulo. La Figura (\ref{fig:antenas_curva_distancia}) muestra algunas curvas de nivel para ciertos grados de elevación. Cabe notar que cuando el ángulo es nulo, la potencia recibida cumple con el requisito de peor caso para todas las distancias entre 32 y 64 $cm$. Sin embargo, en cuanto el valor de $\phi$ se vuelve distinto de cero, rápidamente decrece la distancia máxima en la que los requisitos de potencia recibida se cumplen.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{ImagenesFactibilidad/antenas_curva_distancia}
+	\caption{Curvas de nivel de la Figura (\ref{fig:antenas_potrecibida}) para grados de elevación fijos.}
+	\label{fig:antenas_curva_distancia}
+\end{figure}
+
+Si se toma la curva de 45 grados como referencia, se observa que el rango de distancias en las que se cumple el requisito del peor caso es de 32 a 44.8 $cm$. Esto se puede notar también en la Figura (\ref{fig:antenas_curva_elevacion}), donde aquellas curvas de nivel para distancias fijas que se encuentran fuera de la zona de rechazo, son aquellas en las que la distancia es menor a $44.8 \ cm$.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{ImagenesFactibilidad/antenas_curva_elevacion}
+	\caption{Curvas de nivel de la Figura (\ref{fig:antenas_potrecibida}) para distancias entre antena receptora y transmisora fijas.}
+	\label{fig:antenas_curva_elevacion}
+\end{figure}
+
+Si se tiene en cuenta el requisito de potencia recibida en el mejor de los casos, la carga inalámbrica es factible dadas las condiciones impuestas para distancias entre 32 y 51.2 $cm$. Teniendo en cuenta el requisito del peor de los casos este rango se reduce a distancias entre 32 y 44.8 $cm$.
+
+Otro factor importante que se debe tener en cuenta en el análisis cuantitativo es el de la densidad de potencia radiada por el sistema y la necesidad de no perturbar al ave en el nido. Por lo presentado en la Tabla (\ref{tab:medidasNido}), la distancia que existe entre la bóveda y la entrada es de hasta $10  \ cm$, mientras que el largo de la entrada es de entre 11.4 y 20 $cm$. A esto se le suma el tamaño del ave, el cual es de hasta $47 \ cm$. Esto significa que el ave al entrar o salir del nido se encuentra por lo menos alrededor de los $10 \ cm$ de distancia de la antena transmisora.
+
+Tomando las especificaciones de la Tabla (\ref{tab:antenas_calc}) y teniendo en cuenta que la densidad de potencia $P_D$ se puede aproximar para el tipo de antena utilizada como
+\begin{equation}
+P_D = \frac{P_{tx}G_{tx}}{4\pi d^2}
+\end{equation}
+donde $P_{tx}$ es la potencia emitida en la antena transmisora, $G_{tx}$ es la ganancia de esta y $d$ la distancia a la que se quiere evaluar la densidad de potencia, se obtiene el gráfico de la Figura (\ref{fig:antenas_densidad_radiada}). 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{ImagenesFactibilidad/antenas_densidad_radiada}
+	\caption{Densidad de potencia radiada a distintas distancias de la antena transmisora dentro del nido.}
+	\label{fig:antenas_densidad_radiada}
+\end{figure}
+
+Se puede observar que la densidad de potencia radiada a una distancia menor a $11.15 \ cm$ es mayor que la de $100 \ \nicefrac{W}{m^2}$ utilizada en el estudio de palomas y gaviotas \cite{ref:effect-radiation}, animales más chicos que el carpintero gigante. Por esta razón, no se puede garantizar que el ave no sea perturbada al entrar y salir del nido debido a la radiación electromagnética de la recarga inalámbrica.
+
+\Subsubsubsection{Conclusiones de la Factibilidad de la Recarga Inalámbrica}
+
+Tanto por el rango de distancias en las que los requisitos de potencia recibida en el peor de los casos se cumplen, como la restricción de no perturbar al ave a causa de la radiación electromagnética, se concluye inviable la carga inalámbrica para la batería de la mochila del ave dadas las condiciones planteadas y se investigará una solución alternativa.

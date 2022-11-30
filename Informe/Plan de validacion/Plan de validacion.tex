@@ -2,7 +2,6 @@
 %
 %\begin{document}
 
-
 \Subsection{Diseño de Banco de Pruebas}
 \label{sec:BancoDePruebas}
 %\input{../Plan de validacion/BancoDePruebas/BancoDePruebasTablas.tex}
@@ -10,18 +9,52 @@
 
 \Subsection{Especificaciones de Test}
 \label{sec:PlanValidacion}
-\input{../Plan de validacion/PlanValidacion/PlanValidacion.tex}
+\input{../Plan de validacion/PlanValidacion/Tabla-PlanDeValidacion.tex}
+
+\Subsubsection{Tests Básicos}
+\input{../Plan de validacion/PlanValidacion/Tabla-TestsBasicos-1.tex}
+
+\Subsubsection{Test de Funcionalidad}
+\textbf{Precondiciones:}
+Para realizar la prueba T-INT-FUN-11 las anteriores deben haberse realizado satisfactoriamente.
+
+\textbf{Procedimiento general:}
+Conectar la \rspi a la alimentación de tensión mediante el cable de alimentación mini USB.
+
+\defaultstyle
+\input{../Plan de validacion/PlanValidacion/Tabla-TestFuncionalidad-1.tex}
+\input{../Plan de validacion/PlanValidacion/Tabla-TestFuncionalidad-2.tex}
+\input{../Plan de validacion/PlanValidacion/Tabla-TestFuncionalidad-3.tex}
+
+\Subsubsection{Test de Comunicación}
+\textbf{Precondiciones:} Se debe tener un conjunto de datos conocidos para enviar por BLE. Una subrutina para transmisión de datos en el módulo BLE de pruebas.
+
+\textbf{Procedimiento general:} Se debe energizar el módulo BLE. Se debe energizar la \rspi y conectarse a ella utilizando una computadora conectada a la red
+SIMFS\_HOTSPOT. En la terminal de la computadora colocar:
+\begin{lstlisting}[language=Python]
+ssh pi@[IP Raspberry Pi] 
+cd simfs/PythonScripts/
+\end{lstlisting}
+
+\input{../Plan de validacion/PlanValidacion/Tabla-TestComunicacion.tex}
+
+\Subsubsection{Test de Peso, Dimensión y Seguridad}
+\input{../Plan de validacion/PlanValidacion/Tabla-TestPesoSegDim.tex}
 
 \Subsection{Matriz de Trazabilidad de Validación}
 \label{sec:MatrizTrazabilidad}
 \input{../Plan de validacion/MatrizTrazabilidad/MatrizTrazabilidad.tex}
 
 \Subsection{Plan de Verificación y Validación}
+
+Las pruebas de verificación y validación se realizan con el propósito de verificar que los conceptos de interés pueden ser llevados adelante de manera satisfactoria. Se emplean también para verificar que un módulo o sistema cumpla con todos los requerimientos, necesidades y especificaciones requeridas.
+
+En la Figura (\ref{fig:diagrama_plan_validacion}) se presenta dicho plan, mostrando además las dependencias entre las distintas pruebas realizadas, con sus respectivos bancos de prueba. Además, se distinguen las tres etapas de validación, siendo estas las \quotes{Pruebas básicas}, las \quotes{Pruebas de Prototipo} y las \quotes{Pruebas de Producto Final}.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.9\linewidth]{ImagenesPlan de validacion/Diagrama de Dependencias de Validacion}
-	\label{fig:diagrama_plan_validacion}
+	\includegraphics[width=0.9\linewidth,page=1]{ImagenesPlan de validacion/Diagrama de Dependencias de Validacion}
 	\caption{Diagrama de dependencias del plan de validación.}
+	\label{fig:diagrama_plan_validacion}
 \end{figure}
 
 %\end{document}

@@ -1,20 +1,22 @@
 %\input{../Informe/Header.tex}
 %
-%\def\verObs{1}
 %\begin{document}
 
 \Subsection{Factibilidad Tecnológica}
 
 \Subsubsection{Esquema Modular}
 
-A continuación se presentan los distintos módulos. Luego, en las siguientes subseciones, se presentan las distintas alternativas evaluadas para la implementación.
-
+A continuación, se presentan los distintos módulos que integran el proyecto. Estos fueron agrupados de forma tal que se puedan comunicar de manera ordenada y precisa entre sí.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\linewidth]{ImagenesFactibilidad/EsquemaModular}
-	\label{fig:esquema_modular}
 	\caption{Diagrama modular del sistema.}
+	\label{fig:esquema_modular}
 \end{figure}
+
+Además, para un mejor entendimiento, se subdivido el módulo de \quotes{Sensores}, ya que de esta forma se interpreta mejor su funcionamiento.
+
+Existen distintas alternativas al momento del desarrollar e implementar los nodos empleados en el trabajo. Estas variedades de implementación se analizan con más profundidad en las siguientes secciones.
 
 \Subsubsection{Propuesta de Sensores}
 \input{../Factibilidad/Tecnologica/Sensores.tex}
@@ -26,19 +28,19 @@ A continuación se presentan los distintos módulos. Luego, en las siguientes su
 %\input{../Factibilidad/Tecnologica/Comunicacion.tex}
 
 \Subsubsection{Propuesta de Unidad de Procesamiento}
+\label{sec:antenas}
 \input{../Factibilidad/Tecnologica/Micro.tex}
 
 \Subsubsection{Propuesta de Batería}
 \input{../Factibilidad/Tecnologica/Bateria.tex}
 
-\Subsubsection{Propuesta de Cargador}
-\input{../Factibilidad/Tecnologica/Cargador.tex}
-
-\Subsubsection{Propuesta de Alimentación}
+\Subsubsection{Propuesta de Paneles solares}
 \input{../Factibilidad/Tecnologica/Alimentación.tex}
 
-\Subsubsection{Propuesta de Carga de UBM}
+\Subsubsection{Primer Propuesta de Abastecimiento de Energía de UBM}
 \input{../Factibilidad/Tecnologica/Antenas.tex}
+\Subsubsection{Propuesta Final de Abastecimiento de Energía de UBM}
+\input{../Factibilidad/Tecnologica/Beacon.tex}
 
 \Subsubsection{Elección de una Solución}
 \input{../Factibilidad/Tecnologica/Solucion.tex}
@@ -49,7 +51,7 @@ A continuación se presentan los distintos módulos. Luego, en las siguientes su
 \Subsection{Factibilidad de Tiempos}
 
 \Subsubsection{Consideraciones}
-Para el desarrollo de las siguientes secciones, se tiene en cuenta un equipo de trabajo de 4 personas, con días laborales de 8 horas. Además se consideran 15 días de vacaciones en la primera quincena de enero.
+Para el desarrollo de las siguientes secciones, se tiene en cuenta un equipo de trabajo de 4 personas, con días laborales de 8 horas. Además, se consideran 15 días de vacaciones en la primera quincena de enero.
 
 \Subsubsection{Planificación}
 \input{../Factibilidad/Tiempos/Planificacion.tex}

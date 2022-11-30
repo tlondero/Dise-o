@@ -1,95 +1,64 @@
 \Subsubsubsection{Potencia}
 
-Para la unidad de potencia se utilizarán paneles solares y una batería de gel de ciclo profundo conectados a la placa DFR0580, la cual se ocupa de cargar la batería. De esta se obtienen 4 salidas de tensión:
+Para la unidad de potencia se utilizan paneles solares y una batería de gel de ciclo profundo conectados a la placa DFR0580, la cual se ocupa de cargar la batería. De esta se obtienen cuatro salidas de tensión:
 \begin{itemize}
-	\item Dos salidas de 5 V y 2.5 A [USB].
-	\item Una salida de 5 V y 5 A.
-	\item Una salida de 12 V y 8 A.
+	\item Dos salidas de $5 \ V$ y $2.5 \ A$ [USB].
+	\item Una salida de $5 \ V$ y $5 \ A$.
+	\item Una salida de $12 \ V$ y $8 \ A$.
 \end{itemize}
+De estas salidas solo es necesaria aquella que posee $5 \ V$. En cuanto a la corriente, si bien es indistinto, se emplea la de $5 \ A$ para evitar problemas de falta de corriente.
 
-Con estas salidas se alimentarán todos los módulos, a excepción del oscilador de potencia, ya que esta necesita una etapa DC-DC para así la cual eleva la tensión. Para ello se emplea una fuente switching de topología Boost.
-
-\Subsubsubsection{Cargador}
-
-El bloque del cargador de la UBM consiste en un receptor y un transmisor de potencia. La transmisión inalámbrica consta, por el lado del transmisor, de un oscilador HM-TRPW-RS232 de $915 \ MHz$ el cual está comandado por la R-Pi y se comunica mediante UART; como así también de un amplificador de potencia de $3 \ W$ máximos alimentado por una etapa DC-DC Xl6009 de $12 \ V$ a $15 \ V$.
-
-Por el lado del receptor, se encuentra el integrado P1110B, el cual almacena energía temporalmente en un capacitor para realizar posteriormente la carga de la UBM.
-
-\begin{figure}[H]
-	\centering	
-	\includegraphics[width=0.9\textwidth, page=8]{ImagenesIngenieria de Detalle/FlowChart.pdf}
-	\caption{Diagrama en bloques cargador.}
-	\label{fig:diagrama_hardware_antenas}
-\end{figure}
-
-Para la transmisión de la señal de $915 \ MHz$ se utilizará cable del tipo \textit{RG-213} el cual posee bajas pérdidas de $23.054 \ \nicefrac{dB}{100m}$.\\
-
-\textbf{Oscilador 915 MHz}
-
-\begin{figure}[H]
-	\centering	
-	\includegraphics[width=0.5\textwidth, page=8]{ImagenesIngenieria de Detalle/hmtrpwrs232}
-	\caption{Módulo utilizado como oscilador HM-TRPW-RS232.}
-	\label{fig:oscilador}
-\end{figure}
-
-Debido a la falta de stock mundial de componentes electrónicos a causa de la pandemia, se utilizó un módulo transciever FSK que opera en la banda de 915MHz. Este módulo HM-TRPW-RS232 puede generar la señal carrier de hasta $20 \ dBm$ y posee interfaz RS-232 para la comunicación UART.
+\Subsubsubsection{Medición}
+Para el conexionado de los sensores se diseñó una placa de soporte para la \rspi, la cual se denomina \textit{shield}. En esta se encuentra:
 
 \begin{itemize}
-	\item Potencia máxima de $20 \ dBm$.
-	\item Alimentación $100 \ mA@20 \ dBm$.
-	\item Corriente suspendido $1 \ \mu A$.
-	\item Velocidad de comunicación $1.2 \ kbps - 115.2 \ kbps$.
-	\item Dimensiones $44.1 \times 30  \times 1.2 \ mm$.
+	\item El módulo RTC.
+	\item El acondicionamiento para la conexión de la cámara.
+	\item El conexionado para el abastecimiento de energía para los sensores.
+	\item Un conector para los sensores, que abarca al de humedad, temperatura, luminosidad y presencia.
+	\item Un sistema de protección ante desabastecimiento de energía.
+	\item Interruptores de prendido y apagado seguro.
 \end{itemize}
 
-\textbf{Amplificador de Potencia}
-
-Para el amplificador de potencia de RF, como las unidades a producir serán muy pocas, no se justifican las horas necesarias para diseñar el circuito y la placa impresa de un amplificador de RF. Por esta razón, se utilizará uno comercial. 
-
-\textbf{DC-DC}
-
-\tbc
-
-\textbf{P1110B}
-
-\begin{figure}[H]
-	\centering	
-	\includegraphics[width=0.5\textwidth, page=8]{ImagenesIngenieria de Detalle/p1110b}
-	\caption{Módulo utilizado como power harvester.}
-	\label{fig:p1110b}
-\end{figure}
-
-Para la recepción de la radiofrecuencia se utilizará el power harvester P1110B. Este integrado toma la señal de radiofrecuencia y realiza con esta la carga de un capacitor. Cuando el capacitor llega a un valor de tensión máximo, habilita la salida mediante una etapa DC-DC hasta que el capacitor baja su tensión por debajo de un mínimo para volver a cargarse hasta el máximo.
-
-
-\begin{itemize}
-\item Eficiencia del $70 \ \%$.
-\item Adaptado internamente a $50 \ \Omega$.
-\item Operación por encima de $-5 \ dBm$.
-\item Opción de carga para Li-ion y baterías alcalinas.
-\end{itemize}
-
-\Subsubsubsection{Sensado}
-
-En esta sección, ademas del conexionado de los sensores, se hace detalle en los pines de la R-Pi que serán utilizados.
-
+La placa de sensores utiliza alimentación de $3.3 \ V$, la referencia de tierra, dos pines GPIO y el bus $I^2C$ de la \rpi. Este último se emplea para administrar la comunicación con el sensor de luminosidad y el módulo RTC, ya que ambos emplean el respectivo protocolo de comunicación del bus, en modo \textit{multi-slave}. Por otro lado, un pin GPIO corresponde a la comunicación serial del sensor de temperatura y humedad DHT-22; y el otro se utiliza para la comunicación con el detector de presencia. Además, la placa de sensores posee cinco pines denominados "PROG" los cuales se utilizan para programar al ESP32-WROOM-1-N4.
+ 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.9\linewidth]{ImagenesIngenieria de Detalle/Conexionado_rpi}		
-	\caption{Conexionado Raspberry Pi.}
+	\includegraphics[width=0.75\linewidth,page=1]{ImagenesIngenieria de Detalle/shield}		
+	\caption{Shield \rspi.}
 	\label{fig:conexionado_Rpi}
 \end{figure}
 
-El sensor de humedad y temperatura (DHT-22) se comunica de manera serial a través de un pin de GPIO. Para que esto sea posible, el sensor necesita alimentación de $3.3 \ V$, tierra y el pin de GPIO por donde se realiza la comunicación, teniendo en cuenta que es necesario una resistencia de pull-up entre la linea de datos y $3.3 \ V$.
+\begin{figure}[H]
+\centering
+	\begin{subfigure}{0.48\textwidth}
+    	\centering
+    	\includegraphics[width=\linewidth,page=5]{ImagenesIngenieria de Detalle/sensores_top}
+  		\caption{Vista \textit{top} de la placa de sensores.}
+  		\label{fig:sensores_top}
+    \end{subfigure}\hfill
+    \begin{subfigure}{0.48\textwidth}
+    	\centering
+    	\includegraphics[width=\linewidth,page=6]{ImagenesIngenieria de Detalle/sensores_bot}
+  		\caption{Vista \textit{bottom} de la placa de sensores.}
+  		\label{fig:sensores_bottom}
+    \end{subfigure}
+	\caption{Placa que contiene a los sensores.}
+	\label{fig:sensores_placa}
+\end{figure}
 
-El oscilador necesita de una señal de alimentación, tierra y su comunicación utilizá el protocolo UART. Por otro lado, la cámara simplemente se conecta al zócalo destinado para este propósito en la placa. Para el conexionado con el sensor de luminosidad y RTC se utilizará el protocolo de comunicación $I^2C$ en modo multi-slave.
-
-Finalmente, se cuenta con un pin de GPIO el cual indicará el momento de prendido del cargador.
-
+Por fuera del \textit{shield}, la \rspi cuenta tanto con un conector destinado al uso de una cámara como un conector mini USB por el cual se energiza la unidad. Ambos conectores se muestran en la Figura (\ref{fig:rpiFront}).
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{ImagenesIngenieria de Detalle/I2C_conexionado}	
-	\caption{Conexionado $I^2C$ Multi-slave.}
-	\label{fig:conexionado_i2c}
+	\includegraphics[width=\linewidth,page=3]{ImagenesIngenieria de Detalle/RPI}		
+	\caption{Conexionado cámara.}
+	\label{fig:rpiFront}
+\end{figure}
+
+Además, cuenta con una ranura para una tarjeta SD. Esta es usada no solo para la imagen de sistema operativo, sino que también para el almacenamiento de datos.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth,page=2]{ImagenesIngenieria de Detalle/RPI}		
+	\caption{Conexionado tarjeta SD.}
+	\label{fig:rpiBack}
 \end{figure}

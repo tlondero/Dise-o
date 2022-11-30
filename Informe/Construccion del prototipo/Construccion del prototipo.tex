@@ -1,59 +1,112 @@
-%\input{../Informe/Header.tex}
+\Subsection{Prototipo Nido-Sustrato}
+\label{subsection:nido-sustrato}
+Para la construcción del prototipo del nido se tuvo en cuenta que el sustrato debe ser madera. Para las medidas se tuvieron en cuenta las dimensiones promedio de un nido de carpintero \cite{ref:PaperValeriaOjeda}.
 
-\Subsection{Prototipo Nido- Carga Bater\'ia}
-Al momento de comenzar la construcci\'on del prototipo de nido, en el cual se validar\'a la carga inal\'ambrica se propusieron 4 requerimientos que deb\'ia cubrir.
-\begin{enumerate}
-\item Condiciones an\'alogas a las del nido real:
-Para este item el enfoque que se toma es una visi\'on electromagnetica.
-Un parámetro fundamental a definir es el ancho que tienen las paredes del nido prototipo. Se sabe que el menor valor que tiene la cavidad real es de 65mm \cite{ref:PaperValeriaOjeda}.
+Por otro lado, para alojar y proteger la electrónica se contempló el desarrollo de encapsulados. Primero se trabajó con la \rspi y sus complementos. Se adaptó un diseño existente agrandando su tamaño para que puedan introducirse las placas requeridas, se extendieron y fabricaron ranuras para el conexionado y se agregó un soporte que permita atornillar el conjunto. Para los sensores, se diseñó otro contenedor el cual contempla ranuras para que la cámara y los demás componentes estén en contacto con el exterior y ranuras para el conexionado con la \rpi.
 
-Mediante el uso de la Equación (\ref{eq:penetracion}) se calcula la profundidad de penetración de la onda electromagnética.
-\begin{equation}
-\delta \ = \ \frac{1}{\alpha} \ =\ \frac{1}{\sqrt{\pi f \mu \sigma}}
-\label{eq:penetracion}
-\end{equation}
-Este valor simboliza la distancia que penetra la onda electromagn\'etica hasta ser atenuada en un 63$\%$
-Para ello se sabe que los valores de las constantes son los siguientes:
-\begin{itemize}
-	\item Frecuencia $f = 915 \ MHz$.
-	\item Permeabilidad magnética de la madera \cite{ref:permeabilidad_madera}: $\mu_{Madera} = 1.25663760 \ \mu \frac{Hy}{m}$.
-	\item Conductividad de la madera \cite{ref:conductividad_madera}:$\sigma \approx 1 \ m\frac{S}{m}$.
-\end{itemize}
+Es así que el diseño del prototipo de nido se puede observar en los planos especificados en las Figuras (\ref{fig:base_nido_plano}), (\ref{fig:tapa_nido_plano}) y (\ref{fig:explotado_nido_plano}), mientras que los encapsulados se encuentran en las Figuras (\ref{fig:RpiCasingBottom}), (\ref{fig:RpiCasingTop}), (\ref{fig:BasePlano}) y (\ref{fig:TapaPlano}).
 
-Con los valores mencionados, reemplazando en la Ecuación (\ref{eq:penetracion}) se obtiene que $\delta = 526 \ mm$.
-De este resultado se concluye que independientemente del espesor del proptipo, siempre que sea menor al real. La onda electromang\'etica no es atenuada a un 63$\%$ de su amplitud. Por lo que atraviesa tanto el arbol como el proptipo sin problemas.(Pensando en las paredes.)
+Finalmente, en la Figura (\ref{fig:caja_prototipo}) se puede observar el prototipo del producto montado sobre un nido artificial construido con madera. En dicha imagen se puede observar un elemento extra cerca del encapsulado de la \rspi. Este complemento puede ser observado con mayor detalle en la Figura (\ref{fig:Charger}). La justificación del elemento se explica más adelante.
+\begin{figure}[H]
+	\centering	\includegraphics[width=0.4\linewidth,page=1]{ImagenesConstruccion del prototipo/caja_prototipo_2}		
+	\caption{Prototipo del producto montado sobre un nido artificial construido con madera.}
+	\label{fig:caja_prototipo}
+\end{figure}
 
-Luego se procede a calcular el coeficiente de reflexión de la onda electromagnética. Para ello se sabe también que las permitividades de la madera y aire son:
-\begin{itemize}
-	\item $\varepsilon_{Madera} = 17.7 10^{-12} \ \frac{F}{m}$ \cite{ref:varepsilon_madera}.
-	\item $\varepsilon_{Aire} = 8.8595003 10^{-12} \ \frac{F}{m}$
-	\item $\mu_{Aire} = 1.25663753 \ \mu \frac{ Hy}{m}$ 
-\end{itemize}
+\Subsection{Prototipo Nido-Electrónica}
 
-También se calcula la impedancia de la madera como:
-\begin{equation}
-	\eta_{Madera}=\sqrt{\frac{\mu_{Madera}}{\varepsilon_{Madera}}}
-\end{equation}
+\Subsubsection{\rspi}
+Para el prototipo se utiliza una \rspi 3B, sobre la cual se desarrollan los \textit{drivers} de comunicación con los diversos sensores. Además se confeccionó un \textit{shield} (encapsulado), el cuál realiza el acondicionamiento de las señales e interfaz para la placa de sensores, como se observa en la Figura (\ref{fig:shield}).
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth,page=1]{ImagenesConstruccion del prototipo/shieldSensor}		
+		\caption{Esquemático de la \rspi y su \textit{shield}.}
+		\label{fig:shield}
+	\end{subfigure}
+    \caption*{}
+\end{figure}
+\begin{figure}[H]
+	\ContinuedFloat
+	\centering
+    \begin{subfigure}{0.3\textwidth}
+    	\centering
+     	\includegraphics[width=\linewidth]{ImagenesConstruccion del prototipo/rpiyshield_prototipo}		
+		\caption{\rspi y su shield implementado.}
+		\label{fig:rpiyshield_prototipo}
+    \end{subfigure}\hspace*{2cm}
+    \begin{subfigure}{0.3\textwidth}
+    	\centering
+        \includegraphics[width=\linewidth]{ImagenesConstruccion del prototipo/rpiyshield_encapsulado_prototipo}
+        \caption{Encapsulado de la \rspi y su \textit{shield}.}
+		\label{fig:casing_rpi}
+    \end{subfigure}
+	\caption{Construcción de la unidad de procesamiento del prototipo.}
+	\label{fig:up_prototipo}
+\end{figure}
 
-Es así que el coeficiente de reflexión se calcula de la siguiente forma:
-\begin{equation}
-	\Gamma = \frac{\eta_2 - \eta_1  }{\eta_2 + \eta_1} = -0.1714
-	\label{eq:reflexion_madera}
-\end{equation}
+\Subsubsection{Sensores}
+En cuanto a los sensores se diseña una placa que se ubica en la bóveda del nido, la cual reúne todos los sensores necesarios, y ofrece una interfaz con la placa \textit{shield}.
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth,page=2]{ImagenesConstruccion del prototipo/shieldSensor}		
+		\caption{Esquemático de la placa de sensores.}
+		\label{fig:sens}
+	\end{subfigure}
+    \caption*{}
+\end{figure}
+\begin{figure}[H]
+	\ContinuedFloat
+	\centering
+	\begin{subfigure}{0.25\textwidth}
+    	\centering
+        \includegraphics[width=\linewidth]{ImagenesConstruccion del prototipo/sensores_prototipo}		
+		\caption{Placa de sensores implementada.}
+		\label{fig:sensores_prototipo}
+    \end{subfigure}\hspace*{2cm}
+    \begin{subfigure}{0.25\textwidth}
+    	\centering
+        \includegraphics[width=\linewidth]{ImagenesConstruccion del prototipo/sensores_encapsulado_prototipo_alt}
+        \caption{Encapsulado de la placa de sensores.}
+		\label{fig:sensores_encapsulado_prototipo_alt}
+	\end{subfigure}
+	\caption{Construcción de la placa de sensores y su encapsulado para el prototipo.}
+	\label{fig:sensores_prototipado}
+\end{figure}
 
-Se observa en la Ecuación (\ref{eq:reflexion_madera}) que el resultado presenta un valor negativo. Lo que esto implica es una inversión de fase en la onda electromagnética reflejada respecto de la incidente. Esto implica una interferencia destructiva, para determinar las implicancias de esta interferencai se calcula la potencia de la onda reflejada, siendo esta $P_{ref} = |\Gamma|^2 = 0.029$. Es así que se nota que menos de un $3\%$ de la potencia sera reflejada. De esta forma se puede afirmar que no habrá una interferencia significativa con la transmisión original.
-Finalmente cabe notar que el resultado del coeficiente de reflexi\'pm no depende del espesor. \'Unicamente de la impedancia de los medios. Por lo que de aqu\'i se concluye que el espesor de la madera no juega un papel significativo en el prototipo de nido.
-\item Altura regulable:
-La altura entre el receptor de potencia y el transmisor debe ser variable ebntre 30 y 64 cm debido a que no todos los nidos tienen la misma altura y asi se podra simular eso.
-\item Sujeci\'on instrumental:
-El proptipo debe brindar alguna manera de asegurar la electr\'onica al prototipo.
-\item Conicimiento de la distancia entre el receptor y el transmisor de potencia:
-Para ello utilizamos un sensor ultrasónico que estará montado en la parte interior de la tapa, con un display en la parte exterior. las mediciones y control del display se hará con un pequeño microcontrolador.(Cabe mencionar que este modulo de ultrasonido ser\'a utilizada \'unicamente en el prototipo, no con un ave real, debido a que se sabe que las aves son alteradas por dichas ondas de ultrasonido)
-\end{enumerate} 
-Con estos requerimientos cumplidos se diseño el prototipo de nido, con los planos especificados en (\ref{fig:Base_nido_plano}) (\ref{fig:Base_electronica_plano}) (\ref{fig:tapa_nido_plano}) y (\ref{fig:explotado_nido_plano})
-\Subsection{Prototipo Mochila - Carga}
+\Subsection{Prototipo Nido-Potencia}
+\label{subsection:nido-potencia}
+Para el prototipo del sistema de potencia del nido, se cuenta con la batería \href{https://enertik.ar/taiyo-tyd12-33-bateria-electrolito-absorbido-ciclo-profundo-12v-33ah}{TAIYO TYD12-33} de plomo-ácido de ciclo profundo AGM de $33 \ Ah$ y la fuente de tensión \href{https://www.itech.sh/en/product/dc-power-supply/IT6500.html}{ITECH IT6536C} con capacidad de simular la curva de tensión-corriente de un panel solar.
+\begin{figure}[H]
+	\centering
+    	\begin{subfigure}{0.3\textwidth}
+        	\centering
+        	\includegraphics[width=\linewidth]{ImagenesConstruccion del prototipo/bateria_prototipo}		
+			\caption{Batería utilizada en la construcción del prototipo.}
+			\label{fig:bateria_prototipo}
+        \end{subfigure}\hspace*{2cm}
+        \begin{subfigure}{0.3\textwidth}
+        	\centering
+        	\includegraphics[width=\linewidth]{ImagenesConstruccion del prototipo/fuente_prototipo}
+        	\caption{Fuente de tensión con capacidad de simular la curva tensión-corriente de un panel solar utilizado en el prototipo.}
+			\label{fig:fuente_prototipo}
+        \end{subfigure}
+	\caption{Comparación entre el uso del filtro de luminosidad.}
+	\label{fig:elementos_prototipo}
+\end{figure}
 
-\Subsection{Prototipo Mochila - Comunicaci\'on}
-Para esto se utilizar\'a un m\'odulo BLE para transmitir un set de datos GPS de aproximadamente un peso de 2KBy y un pin l\'ogico que permita activar la recepci\'on de datos del lado del nido.
+Se utiliza el \textit{Solar Power Manager} \href{https://wiki.dfrobot.com/Solar_Power_Manager_For_12V_Lead-Acid_Battery_SKU__DFR0580}{DFR0580} que se encarga de extraer eficientemente la energía generada por el panel solar mediante el algoritmo de MPPT, cargar la batería y proveer las salidas de alimentación acondicionadas para la \rpi.
 
+Alternativamente, para disminuir el tamaño del prototipo, se reemplaza la fuente de alimentación del sistema. Este cambio se realiza únicamente en aquellos procesos en los cuales no influya utilizar otro sistema como batería, como son los bancos de prueba o el uso del prototipo en ambientes de desarrollo que no abarcan el sistema de abastecimiento, entre otros.
 
+Se opta por utilizar un \textit{Power Bank} (batería externa) que cumpla con los requisitos de tensión y corriente necesarios. El dispositivo elegido para esta tarea es el cargador \href{https://www.sony.com/electronics/support/res/manuals/W000/W0002536M.pdf}{CP-V3} de la empresa \textit{Sony}.
+
+Las razones por las cuales se decidió utilizar dicha tecnología como alternativa son porque posee alta portabilidad, un tamaño reducido, es independiente de la red eléctrica, brinda una señal de alimentación estable y es fácilmente recargable. 
+
+Como se mencionó en la Sección (\ref{subsection:nido-sustrato}), este elemento se adosa al nido artificial mediante el soporte presentado en la Figura (\ref{fig:Charger}). 
+
+%\Subsection{Prototipo Nido-Comunicaciones }
+%Existen dos tipos de comunicación que se realiza en el prototipo: la encargada de \nodered para la comunicación con usuarios y la comunicación con la base principal de seguimiento para la recolección de datos del ave.

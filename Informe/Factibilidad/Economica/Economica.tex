@@ -1,13 +1,10 @@
 %(Mercado, costos, ciclo de vida, %VAN, TIR)
-Para poder estudiar la viabilidad financiera de todo emprendimiento es necesario hacer un balance cuidado acerca de los diferentes costos en los que se va a incurrir. Se debe analizar cuales serán la fuentes de ingresos que hagan del modelo de negocio planteado un negocio sostenible en el tiempo. 
-En este caso en particular estamos analizando el caso de un proyecto único. Sin embargo, no deseamos descartar la posibilidad de realizar más unidades en el futuro por fuera del marco del proyecto. Es por esto que presentamos aquí debajo el modelo de negocios planteado para referencia futura. 
+Para poder estudiar la viabilidad financiera de todo emprendimiento es necesario hacer un balance cuidadoso de los diferentes costos en los que se va a incurrir. Se debe analizar cuáles son las fuentes de ingresos que hacen del modelo de negocio planteado un negocio sostenible en el tiempo.
+
+En el caso de este diseño en particular, se enfrenta el desarrollo de una única unidad. Sin embargo, no se descarta la posibilidad de realizar más unidades en el futuro por fuera del marco del proyecto. Es por esto que se realiza un modelo de negocios, basado en el planteo de una referencia futura. 
+
 \Subsubsection{Modelo de Negocios}
-
-Este diseño se trata de un proyecto único, con posibilidad de realizar hasta \TBD unidades adicionales posteriores a su finalización.
-
-Para dar una visión global se planteo el siguiente modelo de Canvas.
- 
-
+Este diseño se trata de un proyecto único, con posibilidad de realizar hasta \unidadespostfin unidades adicionales posteriores a su finalización. Para dar una visión global se planteó el siguiente modelo de \textit{Canvas}:
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.7]{../Factibilidad/ImagenesFactibilidad/ModeloDeCanvas}
@@ -15,48 +12,46 @@ Para dar una visión global se planteo el siguiente modelo de Canvas.
 	\label{fig:modelodecanvas}
 \end{figure}
 
-
-
 \Subsubsection{Investigación y Desarrollo}
-Este proyecto contiene un gran componente de diseño. Según que lo establecido en la programación del proyecto el tiempo invertido en horas de diseño esta estimado en  \TBD. 
-Una vez completada la etapa de diseño el equipo se abocara a la implementación del primer prototipo, es decir a la integración del hardware a utilizar y el desarrollo del software que controlara al nido que permitirá la interacción con el mismo. 
+Este proyecto contiene una gran componente de diseño. Según lo establecido en la programación del proyecto, el tiempo invertido de diseño estimado es de 5472 horas. %todas las horas hasta "integracion a nivel modulos" sin incluir
+Una vez completada la etapa de diseño el equipo se aboca a la implementación del primer prototipo, es decir a la integración del \textit{hardware} a utilizar y el desarrollo del \textit{software} que controla al nido, permitiendo la interacción con el mismo. 
 
-Realizando la estimación sobre un sueldo de $30 \ \frac{USD}{hora}$ y multiplicándolo por la cantidad de horas de ingeniería esperada por persona se obtiene un total de: $$Costo \ mano \ de \ obra = 7100 \ hora \ \cdot 30 \ \frac{USD}{hora} = 213.000,00 \ USD$$
-
+Realizando la estimación sobre un sueldo de $30 \ \nicefrac{USD}{hora}$ y multiplicándolo por la cantidad de horas de ingeniería esperada por persona se obtiene un total de: $$Costo \ mano \ de \ obra = 7100 \ hora \ \cdot 30 \ \frac{USD}{hora} = 213.000,00 \ USD$$
 
 \Subsubsection{Gastos fijos por unidad}
+Los gastos principales considerados son $257.34 \ USD$, considerando el valor de los insumos de \textit{hardware} y de montaje:
+%Para la compra de los componentes, se suman los costos estimados previamente, más el resto de los componentes misceláneos (resistores, capacitores, etc.) para el diseño de los circuitos involucrados.
+%Se estima de este modo un costo de componentes de \TBD USD, a contabilizar una única vez por unidad.
 
-Los gastos principales considerados son \TBD. %Para la compra de los componentes, se suman los costos estimados previamente, más el resto de los componentes misceláneos (resistores, capacitores, etc.) para el diseño de los circuitos involucrados.
-Se estima de este modo un costo de componentes de \TBD USD, a contabilizar una única vez por unidad.
-
-Se presenta el valor de los insumos de hardware y de montaje:
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|}
 \hline
-\textbf{Item}                                                         & \textbf{Precio [USD]}				  \\ \hline
+\textbf{Ítem}                                                         & \textbf{Precio [USD]}				  \\ \hline
 Sensor humedad-temperatura 											  & 4.9                                   \\ \hline
-Sensor luminosidad                                                    & 1.54                                  \\ \hline
-M\'odulo RTC                                                     & 2.33                                  \\ \hline
-Cámara                                                                & 20                                    \\ \hline
-SDI 16GBy                                                             & 16                                    \\ \hline
-R-Pi Zero W                                                           & 25.5                                  \\ \hline
-Batería                                                               & \TBD                   				  \\ \hline
-Panel solar                                                           & \TBD                   				  \\ \hline
-P1110B                                                                 & 32                                    \\ \hline
-Antena RX                                                             & \TBD                   				  \\ \hline
-Antena TX                                                             & \TBD                   				  \\ \hline
-MPPT                                                                  & 33                                    \\ \hline
-Encapsulado                                                           & 16                                    \\ \hline
-Montaje                                                               & 31                                    \\ \hline
+Sensor luminosidad                                                    & $1.54$                              \\ \hline
+ESP32-S3-WROOM-1-N4                                                   & $3.25$                              \\ \hline
+Módulo RTC                                                     & $2.33$                                  \\ \hline
+Cámara                                                                & $20$                                    \\ \hline
+SDI 32GBy                                                             & $32$                                    \\ \hline
+\rpi 3B
+ & $25.5$                                  \\ \hline
+Batería                                                               & $86  $                 				  \\ \hline
+Panel solar                                                           & $25$ 				  \\ \hline
+MPPT                                                                  & $18$                                    \\ \hline
+Encapsulado                                                           & $16$                                    \\ \hline
+Módulo \textit{Bluetooth} 5.0                                                           & $3.82 $                                   \\ \hline
+Montaje                                                               & $31$                                    \\ \hline
+Extras
+& $15$									\\ \hline
+\textbf{Total}
+&\textbf{$257.34$} \\ \hline
 \end{tabular}
 \caption{Valores de insumos.}
 \end{table}
 
-
 \Subsubsection{Reserva de Contingencia}
-Dado que este proyecto cuenta con un alto grado de investigación es necesario contar con un cierto margen de seguridad en caso de que ocurra un cambio de planes necesario para alcanzar el objetivo del proyecto. Es por eso que se decidió incluir en nuestro análisis un adicional del 5\% sobre el costo total del proyecto. Esta suma sera devuelta al cliente en caso de no necesitarla.
+Dado que este proyecto cuenta con un alto grado de investigación es necesario contar con un cierto margen de seguridad en caso de que ocurra un cambio de planes necesario para alcanzar el objetivo del proyecto. Es por eso que se decidió incluir en el análisis un adicional del $5\%$ sobre el costo total del proyecto. Esta suma es devuelta al cliente en caso de no necesitarla. De esta forma, la reserva de contingencia se valúa en $11.000 \ USD$.
 
-La reserva de contingencia se ubicara en  USD 11.000
-\Subsubsection{Escenario de escala}
-Se contempla que en el caso de que la producción sea de \TBD unidades sera posible conseguir los insumos necesarios para el ensamblado de las unidades a precio de venta al por mayor. 
+\Subsubsection{Escenario de Escala}
+Se contempla que, en el caso de que la producción sea de \unidadespostfin unidades, sea posible conseguir los insumos necesarios para el ensamblado de los dispositivos a precio de venta al por mayor.
