@@ -1,4 +1,6 @@
-Para realizar la medición de las magnitudes de interés se opto por utilizar la utilidad nativa de Linux, los cronjobs. Los cronjobs son tareas programables que el propio OS se encarga de ejecutar según un cronograma pre-establecido en la llamada crontab. Esta una opción mucho más segura ante la alternativa de realizar un polleo continuo mediante un cronograma de sensado programado por nosotros.
+Durante la duración del proyecto la base de control deberá ejecutar una serie de acciones que se repetirán en el tiempo a intervalos de regulares. Para poder orquestrar estas actividades se hace uso de la utilidad nativa de Linux, los cronjobs. 
+Utilizar esta actividad es ventajosa por sobre el método clásico de generar un unico script que se encargue de todo. De esta forma evitamos un punto de falla que pondría en riesgo la ejecuciones de las demás acciones. 
+
 % TODO: \usepackage{graphicx} required
 \begin{figure}[H]
 	\centering
@@ -9,7 +11,7 @@ Para realizar la medición de las magnitudes de interés se opto por utilizar la
 
 Por lo tanto, según los intervalos pre-establecidos se ejecutaran diferentes tareas.
 
-Además se utilizara esta metodología para activar y desactivar los diferentes modos de ahorro de energía como así el borrado periódico de archivos.
+Además se utilizara esta metodología para activar y desactivar los diferentes modos de ahorro de energía como así el borrado periódico de archivos y reinicios programados.
 
 A continuación se detallan las acciones que se ejecutaran de forma periódica  
 \begin{itemize}
@@ -23,6 +25,7 @@ A continuación se detallan las acciones que se ejecutaran de forma periódica
 	\item Encendido de node-red durante el día
 	\item Encendido de la antena wifi durante el día
 	\item Encendido de la antena BLE durante el día
+	\item Reinicio periódico cada 6 horas.
 \end{itemize}
 
 

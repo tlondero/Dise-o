@@ -1,5 +1,5 @@
-La configuración de la RPI se realiza de forma remota mediante SSH (secure shell).
-Dado que el proyecto apunta a ser escalable, tener más de un nido operativo, se busco una forma de configurar la RPI manera automática y replicable. Para ello utilizaremos la herramienta  de automatización llamada Ansible. Esta nos permite de volcar sobre archivos de texto las configuraciones que necesita la RPI.
+La configuración de la RPI se realiza de forma remota mediante SSH (secure shell). Esto permite ejecutar comandos sobre la computadora remota sin la necesidad de un entorno gráfico. 
+El proyecto apunta será escalado a más de un nido. Se busco una forma de configurar la RPI de manera automática y replicable para agilizar el proceso de desarrollo. Para ello utilizamos la herramienta  de automatización llamada Ansible. Esta nos permite empaquetar diferentes configuraciones que deben ser aplicadas como por ejemplo: configuraciones de ahorro de energía, conectivad, entre otras. 
 
 % TODO: \usepackage{graphicx} required
 \begin{figure}[H]
@@ -9,8 +9,6 @@ Dado que el proyecto apunta a ser escalable, tener más de un nido operativo, se
 	\label{fig:ansiblelogo}
 \end{figure}
 
-
-Se desarrollo la lógica de control utilizando el lenguaje de programación Python. Su rico ecosistema de paquetes nos permiten utilizar los diversos sensores y manejar las bases de datos.
 
 
 
